@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Criar amigo secreto online · Sorteio grátis por email | Sapatinho</title>
+<meta name="description" content="Cria o sorteio do amigo secreto em dois minutos: escreve os nomes e os emails, define o limite da prenda e quem não se pode tirar. Grátis e sem registo.">
+<link rel="canonical" href="https://sapatinho-natal.pt/criar">
+<meta name="theme-color" content="#0f2a22">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sapatinho">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:title" content="Criar um amigo secreto · Sapatinho">
+<meta property="og:description" content="Escreve os nomes e os emails, carrega em sortear e cada pessoa recebe o convite. Grátis e sem registo.">
+<meta property="og:url" content="https://sapatinho-natal.pt/criar">
+<meta property="og:image" content="https://sapatinho-natal.pt/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sapatinho, o amigo secreto da família sem papelinhos">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://sapatinho-natal.pt/#organizacao","name":"Sapatinho","url":"https://sapatinho-natal.pt/","logo":{"@type":"ImageObject","url":"https://sapatinho-natal.pt/logo.png","width":512,"height":512},"email":"ajuda@sapatinho-natal.pt"},{"@type":"WebSite","@id":"https://sapatinho-natal.pt/#site","url":"https://sapatinho-natal.pt/","name":"Sapatinho","alternateName":"Sapatinho · Amigo secreto online","inLanguage":"pt-PT","publisher":{"@id":"https://sapatinho-natal.pt/#organizacao"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://sapatinho-natal.pt/"},{"@type":"ListItem","position":2,"name":"Criar sorteio","item":"https://sapatinho-natal.pt/criar"}]}]}</script>
+<style>
+.page{max-width:720px;margin:0 auto;padding-block:16px 0;display:flex;flex-direction:column;gap:28px}
+.intro h1{font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.05;margin-top:10px}
+.intro p{color:var(--soft);margin-top:12px;max-width:52ch}
+.panel{padding:30px 28px 28px;display:flex;flex-direction:column;gap:18px}
+.panel h2{font-size:1.5rem;color:var(--ink)}
+.step-h{display:flex;align-items:baseline;gap:12px}
+.step-h .n{font-family:var(--display);color:var(--ember);font-size:1.5rem;line-height:1}
+.hint{font-size:.88rem;color:var(--muted)}
+.grid3{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}
+label{display:flex;flex-direction:column;gap:6px;font-size:.82rem;font-weight:600;color:var(--ink);min-width:0}
+input,select{font:500 1rem var(--body);padding:12px 12px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink);width:100%;min-width:0}
+input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
+.people{display:flex;flex-direction:column;gap:10px}
+.prow{display:grid;grid-template-columns:1.6em minmax(0,1fr) minmax(0,1.4fr) 38px;gap:6px;align-items:center}
+.prow span{font-variant-numeric:tabular-nums;color:var(--muted);font-size:.85rem;text-align:right}
+.sent{display:flex;flex-direction:column;gap:0}
+.sent div{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-block:10px;font-size:.95rem;color:var(--ink)}
+.sent div span{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.ok{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:999px;background:#e5efe8;color:#2d5c45}
+.orgbox{display:flex;gap:8px;flex-wrap:wrap}
+.orgbox input{flex:1 1 240px}
+.x{flex:none;width:38px;height:44px;border:1px solid var(--line);background:transparent;border-radius:4px;color:var(--muted);font-size:1.1rem;cursor:pointer}
+.x:hover{color:var(--ember);border-color:var(--ember)}
+.link-btn{align-self:flex-start;background:none;border:0;color:var(--ember);font:600 .95rem var(--body);cursor:pointer;padding:4px 0}
+.link-btn:hover{text-decoration:underline}
+.pairs{display:flex;flex-direction:column;gap:10px}
+.pair{display:grid;grid-template-columns:1fr auto 1fr 38px;gap:8px;align-items:center}
+.pair em{font-style:normal;color:var(--muted);font-size:.85rem}
+.err{background:#fbe6e1;color:#8a2a17;border-radius:4px;padding:12px 14px;font-size:.92rem}
+.results{display:flex;flex-direction:column;gap:12px}
+.res{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;border-top:1px solid var(--line);padding-top:12px}
+.res b{font-family:var(--display);font-weight:400;font-size:1.25rem;color:var(--ink)}
+.res code{display:block;font-size:.78rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sbtn{font:600 .85rem var(--body);padding:10px 12px;border-radius:4px;border:1px solid var(--line);background:var(--paper-2);color:var(--ink);cursor:pointer;white-space:nowrap}
+.sbtn:hover{border-color:var(--ink)}
+.warn{display:flex;gap:10px;align-items:flex-start;background:var(--paper-2);border-radius:4px;padding:12px 14px;font-size:.9rem;color:var(--ink)}
+.row-actions{display:flex;flex-wrap:wrap;gap:10px}
+.ghostbtn{font:600 1rem var(--body);background:transparent;color:var(--ink);border:1px solid var(--ink);border-radius:4px;padding:13px 18px;cursor:pointer}
+@media (max-width:640px){
+  .grid3{grid-template-columns:1fr 1fr}.grid3 label:first-child{grid-column:1/-1}
+  .prow{grid-template-columns:1.6em minmax(0,1fr) 38px}.prow input[type=email]{grid-column:2/3}
+  .pair{grid-template-columns:1fr 38px}.pair em{display:none}
+  .res{grid-template-columns:1fr 1fr}.res>div{grid-column:1/-1}
+  .panel{padding:26px 18px 22px}
+}
+</style>
+</head>
+<body>
+<canvas id="snow" aria-hidden="true"></canvas>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="/"><img src="/favicon.svg" alt="" width="34" height="34"><b>Sapatinho<span>.</span></b></a>
+    <nav aria-label="Principal"><a href="/#como-funciona">Como funciona</a><a href="/regras-do-amigo-secreto/">Regras</a><a href="/ideias-de-prendas-amigo-secreto/">Ideias de prendas</a><a href="/#entrar">Entrar no sorteio</a></nav>
+  </header>
+
+  <main class="page">
+    <div class="intro">
+      <div class="eyebrow">Criar amigo secreto online</div>
+      <h1>O amigo secreto do teu grupo, em dois minutos</h1>
+      <p>Escreve os nomes e os emails, carrega em sortear e cada pessoa recebe o convite no email. Tu não ficas a saber quem tirou quem.</p>
+    </div>
+
+    <form id="f" novalidate>
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <section class="card panel">
+          <div class="step-h"><span class="n">1</span><h2>O grupo</h2></div>
+          <div class="grid3">
+            <label for="g">Nome do grupo<input id="g" type="text" maxlength="60" placeholder="Natal dos primos"></label>
+            <label for="l">Limite (€)<input id="l" type="number" min="1" max="1000" step="1" inputmode="numeric" placeholder="20"></label>
+            <label for="d">Troca de prendas<input id="d" type="date"></label>
+          </div>
+        </section>
+
+        <section class="card panel">
+          <div class="step-h"><span class="n">2</span><h2>Quem participa</h2></div>
+          <p class="hint">Entre 3 e 30 pessoas. Cada nome e cada email têm de ser diferentes. Não te esqueças de ti, se também participas.</p>
+          <div class="people" id="people"></div>
+          <button type="button" class="link-btn" id="addP">+ Adicionar pessoa</button>
+        </section>
+
+        <section class="card panel">
+          <div class="step-h"><span class="n">3</span><h2>Quem não se pode tirar</h2></div>
+          <p class="hint">Opcional. Útil para casais ou irmãos que já trocam prendas entre si.</p>
+          <div class="pairs" id="pairs"></div>
+          <button type="button" class="link-btn" id="addX">+ Adicionar par</button>
+        </section>
+
+        <div class="err" id="err" hidden></div>
+        <button class="btn wide" type="submit" id="go">Fazer o sorteio e enviar convites</button>
+      </div>
+    </form>
+
+    <section class="card panel" id="out" hidden>
+      <div class="step-h"><span class="n">4</span><h2>Convites enviados</h2></div>
+      <p class="hint">Cada pessoa recebeu um email com o seu link pessoal. Depois de sortear, recebe outro com o nome que lhe saiu. Se alguém não encontrar o email, deve procurar no spam.</p>
+      <div class="sent" id="sent"></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h2 style="font-size:1.25rem">O teu link de organizador</h2>
+        <p class="hint">Guarda este link. Serve para reenviares o convite a quem o perder. Não abras os links dos outros participantes, ou ficas a saber quem lhes saiu.</p>
+        <div class="orgbox"><input id="orgLink" type="text" readonly aria-label="Link de organizador"><button type="button" class="sbtn" id="copyOrg">Copiar link</button></div>
+      </div>
+      <div class="row-actions"><a class="ghostbtn" href="/criar" style="text-decoration:none">Criar outro sorteio</a></div>
+    </section>
+  </main>
+
+  <footer class="foot rich">
+    <div class="brand-col"><a class="logo" href="/"><img src="/favicon.svg" alt="" width="28" height="28"><b style="font-size:1.3rem">Sapatinho<span>.</span></b></a>
+      <p>Amigo secreto online, grátis e por email. Cada pessoa recebe o seu link e descobre quem lhe saiu.</p></div>
+    <div><h3>Sapatinho</h3><ul>
+      <li><a href="/criar">Criar sorteio</a></li>
+      <li><a href="/#entrar">Entrar no sorteio</a></li>
+      <li><a href="/#como-funciona">Como funciona</a></li>
+      <li><a href="/privacidade/">Privacidade</a></li>
+    </ul></div>
+    <div><h3>Guias</h3><ul>
+      <li><a href="/regras-do-amigo-secreto/">Regras do amigo secreto</a></li>
+      <li><a href="/ideias-de-prendas-amigo-secreto/">Ideias de prendas</a></li>
+      <li><a href="/amigo-secreto-a-distancia/">Amigo secreto à distância</a></li>
+      <li><a href="/amigo-secreto-na-empresa/">Amigo secreto na empresa</a></li>
+    </ul></div>
+    <div class="legal"><span>© 2026 Sapatinho · sapatinho-natal.pt</span><span>Ajuda: ajuda@sapatinho-natal.pt</span></div>
+  </footer>
+</div>
+
+<script src="/snow.js"></script>
+<script src="/sapatinho.js"></script>
+<script>
+(function(){
+  var people = document.getElementById("people"), pairs = document.getElementById("pairs");
+  var err = document.getElementById("err"), out = document.getElementById("out"), form = document.getElementById("f");
+  var go = document.getElementById("go"), uid = 0;
+
+  function rows(){
+    return Array.prototype.map.call(people.children, function(r){
+      var i = r.querySelectorAll("input");
+      return { n: i[0].value.trim().replace(/\s+/g," "), e: i[1].value.trim().toLowerCase() };
+    }).filter(function(p){ return p.n || p.e; });
+  }
+  function names(){ return rows().map(function(p){ return p.n; }).filter(Boolean); }
+  function renumber(){ Array.prototype.forEach.call(people.children, function(r,i){ r.querySelector("span").textContent = (i+1) + "."; }); }
+  function addPerson(){
+    var id = "p" + (++uid), r = document.createElement("div"); r.className = "prow";
+    r.innerHTML = '<span></span><input id="'+id+'n" type="text" maxlength="30" placeholder="Nome" aria-label="Nome" autocomplete="off">'+
+      '<input id="'+id+'e" type="email" maxlength="120" placeholder="email@exemplo.pt" aria-label="Email" autocomplete="off" inputmode="email">'+
+      '<button type="button" class="x" aria-label="Remover pessoa">×</button>';
+    r.querySelector("input").addEventListener("input", refreshPairs);
+    r.querySelector(".x").addEventListener("click", function(){ if (people.children.length > 3){ r.remove(); renumber(); refreshPairs(); } });
+    people.appendChild(r); renumber();
+    return r.querySelector("input");
+  }
+  function options(sel){
+    var cur = sel.value, ns = names();
+    sel.innerHTML = '<option value="">Escolher…</option>' + ns.map(function(n){ return '<option'+(n===cur?' selected':'')+'>'+Sap.esc(n)+'</option>'; }).join("");
+  }
+  function refreshPairs(){ Array.prototype.forEach.call(pairs.querySelectorAll("select"), options); }
+  function addPair(){
+    var id = "x" + (++uid), r = document.createElement("div"); r.className = "pair";
+    r.innerHTML = '<select id="'+id+'a" aria-label="Pessoa A"></select><em>e</em><select id="'+id+'b" aria-label="Pessoa B"></select><button type="button" class="x" aria-label="Remover par">×</button>';
+    r.querySelector(".x").addEventListener("click", function(){ r.remove(); });
+    pairs.appendChild(r); refreshPairs();
+  }
+  for (var k=0;k<4;k++) addPerson();
+  document.getElementById("addP").addEventListener("click", function(){ addPerson().focus(); });
+  document.getElementById("addX").addEventListener("click", addPair);
+
+  function fail(msg){ err.textContent = msg; err.hidden = false; err.scrollIntoView({behavior:"smooth", block:"center"}); }
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault(); err.hidden = true;
+    var ps = rows();
+    for (var i=0;i<ps.length;i++){
+      if (!ps[i].n) return fail("Falta o nome de quem tem o email " + ps[i].e + ".");
+      if (!emailRe.test(ps[i].e)) return fail("Falta ou não é válido o email de " + ps[i].n + ".");
+    }
+    if (ps.length < 3) return fail("Precisas de pelo menos 3 participantes.");
+    if (ps.length > 30) return fail("O máximo é 30 participantes.");
+    var lower = ps.map(function(p){ return p.n.toLowerCase(); });
+    var dup = lower.filter(function(n,i){ return lower.indexOf(n) !== i; });
+    if (dup.length) return fail("Há nomes repetidos: " + ps[lower.indexOf(dup[0])].n + ". Junta um apelido ou inicial para os distinguir.");
+    var em = ps.map(function(p){ return p.e; });
+    var dupE = em.filter(function(x,i){ return em.indexOf(x) !== i; });
+    if (dupE.length) return fail("O email " + dupE[0] + " aparece mais do que uma vez.");
+    var pr = [];
+    Array.prototype.forEach.call(pairs.children, function(r){
+      var s = r.querySelectorAll("select"); if (s[0].value && s[1].value && s[0].value !== s[1].value) pr.push([s[0].value, s[1].value]);
+    });
+    var body = { g: document.getElementById("g").value, l: document.getElementById("l").value, d: document.getElementById("d").value || null, people: ps, pairs: pr };
+
+    go.disabled = true; go.textContent = "A sortear e a enviar os convites…";
+    fetch("/api/create", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(body) })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { ok:r.ok, j:j }; }); })
+      .then(function(res){
+        if (!res.ok || !res.j.ok) throw new Error(res.j.error || "Não foi possível fazer o sorteio. Tenta outra vez daqui a pouco.");
+        var links = res.j.links;
+        document.getElementById("sent").innerHTML = links.map(function(x){
+          return '<div><b>'+Sap.esc(x.n)+'</b><span>'+Sap.esc(x.e)+'</span><span class="ok">Enviado</span></div>';
+        }).join("");
+        var org = location.origin + "/org#" + Sap.encode({ v:"org", g: body.g || "Amigo secreto", links: links });
+        var oi = document.getElementById("orgLink"); oi.value = org;
+        document.getElementById("copyOrg").onclick = function(){ Sap.copy(org, this); };
+        form.hidden = true; out.hidden = false;
+        window.scrollTo({ top: out.getBoundingClientRect().top + scrollY - 20, behavior:"smooth" });
+      })
+      .catch(function(ex){ fail(ex.message || "Não foi possível ligar ao Sapatinho. Verifica a ligação e tenta outra vez."); })
+      .then(function(){ go.disabled = false; go.textContent = "Fazer o sorteio e enviar convites"; });
+  });
+})();
+</script>
+</body>
+</html>

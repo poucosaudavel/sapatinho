@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /r/
+Disallow: /r$
+Disallow: /org
+Disallow: /api/
+
+Sitemap: https://sapatinho-natal.pt/sitemap.xml
