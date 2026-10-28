@@ -3,6 +3,7 @@
 # Each page: slug, title (<title>), h1, dek, description, sections HTML, faq list, related slugs.
 
 PUBLISHED = "2026-10-26"
+MODIFIED = "2026-10-28"
 
 PAGES = []
 
@@ -92,6 +93,7 @@ related=["ideias-de-prendas-amigo-secreto", "amigo-secreto-a-distancia"],
 # ---------------------------------------------------------------- ideias
 PAGES.append(dict(
 slug="ideias-de-prendas-amigo-secreto",
+modified="2026-10-28",
 nav="Ideias de prendas",
 short="Ideias de prendas",
 card="Sugestões até 5, 10, 15, 20 e 50 €, e para cada tipo de pessoa.",
@@ -171,6 +173,7 @@ body="""
 <li>Um cesto com produtos gourmet</li>
 <li>Um mês de assinatura de um serviço que a pessoa já use</li>
 </ul>
+<p>Se a prenda for tecnologia, como uma coluna de som ou uns auscultadores, os <a href="https://valeapena.info/tecnologia">guias de tecnologia do Vale a Pena</a> comparam modelos por preço e ajudam a escolher sem gastar mais do que o limite.</p>
 
 <h2 id="por-pessoa">Ideias por tipo de pessoa</h2>
 <div class="tbl"><table>
@@ -331,4 +334,271 @@ faq=[
 ("E se alguém faltar no dia da troca?", "Combinem antes: a prenda pode ficar guardada até a pessoa voltar ou ser entregue por quem a ofereceu noutro dia."),
 ],
 related=["ideias-de-prendas-amigo-secreto", "amigo-secreto-a-distancia"],
+))
+
+# ================================================================ lote 2 (28 out 2026)
+
+# ---------------------------------------------------------------- como fazer o sorteio
+PAGES.append(dict(
+slug="como-fazer-sorteio-amigo-secreto",
+date="2026-10-28",
+nav="Como fazer o sorteio",
+short="Como fazer o sorteio",
+card="Papelinhos, WhatsApp ou online: as vantagens e os problemas de cada forma.",
+title="Como fazer o sorteio do amigo secreto: 4 formas | Sapatinho",
+h1="Como fazer o sorteio do amigo secreto",
+dek="Papelinhos num saco, uma mensagem no grupo ou um sorteio online. Comparamos as formas mais comuns e explicamos como evitar o clássico «saiu-me a mim próprio».",
+description="Como fazer o sorteio do amigo secreto: com papelinhos, por mensagem ou online por email. Vantagens, problemas de cada método e como evitar que alguém se tire a si próprio.",
+body="""
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#papelinhos">Com papelinhos</a></li>
+<li><a href="#organizador">Um organizador que sorteia por todos</a></li>
+<li><a href="#mensagem">Por mensagem no grupo</a></li>
+<li><a href="#online">Online, por email</a></li>
+<li><a href="#comparacao">Comparação rápida</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<p>Um bom sorteio de amigo secreto tem de cumprir três regras: ninguém se tira a si próprio, cada pessoa só sabe quem lhe saiu e o resultado não se perde até ao dia da troca. Nem todas as formas de sortear cumprem as três.</p>
+
+<h2 id="papelinhos">1. Com papelinhos</h2>
+<p>É a forma tradicional: escreve-se cada nome num papel, dobra-se, mistura-se num saco ou numa taça e cada pessoa tira um.</p>
+<ul>
+<li><strong>Vantagens:</strong> não precisa de nada além de papel e caneta, e tem o seu encanto.</li>
+<li><strong>Problemas:</strong> toda a gente tem de estar no mesmo sítio. Quando alguém tira o próprio nome, é preciso devolver o papel e repetir, e quem tira a seguir fica com pistas sobre o que sobra. Os papéis perdem-se, e há sempre quem se esqueça do nome que tirou.</li>
+</ul>
+<p class="note">Truque: se alguém tirar o próprio nome, repitam o sorteio do início para todos, em vez de só essa pessoa voltar a tirar. Assim ninguém fica a saber nada pelos papéis que sobraram.</p>
+
+<h2 id="organizador">2. Um organizador que sorteia por todos</h2>
+<p>Uma pessoa faz o sorteio sozinha e diz a cada participante, em privado, quem lhe saiu.</p>
+<ul>
+<li><strong>Vantagens:</strong> é rápido e funciona à distância.</li>
+<li><strong>Problemas:</strong> o organizador fica a saber tudo e não pode participar a sério. E se se enganar ao enviar uma mensagem, o segredo vai-se.</li>
+</ul>
+
+<h2 id="mensagem">3. Por mensagem no grupo</h2>
+<p>Há quem faça o sorteio numa conversa de grupo, com números atribuídos a cada pessoa ou com sorteadores em formato de mensagem.</p>
+<ul>
+<li><strong>Vantagens:</strong> toda a gente já está no grupo.</li>
+<li><strong>Problemas:</strong> é difícil manter o resultado secreto numa conversa partilhada, e a mensagem perde-se no meio de centenas de outras até ao Natal.</li>
+</ul>
+
+<h2 id="online">4. Online, por email</h2>
+<p>Num <a href="/criar">sorteio online como o do Sapatinho</a>, quem organiza escreve os nomes e os emails. Cada pessoa recebe um convite com um link só seu, sorteia no telemóvel e recebe um segundo email com o nome que lhe saiu.</p>
+<ul>
+<li><strong>Vantagens:</strong> ninguém se tira a si próprio, quem organiza também pode participar, funciona à distância e o resultado fica guardado no email. Dá para indicar pares que não se podem tirar, como casais.</li>
+<li><strong>Problemas:</strong> é preciso o email de cada pessoa. Os convites podem ir parar ao spam, por isso convém avisar o grupo.</li>
+</ul>
+
+<h2 id="comparacao">Comparação rápida</h2>
+<div class="tbl"><table>
+<thead><tr><th></th><th>Papelinhos</th><th>Organizador</th><th>Mensagem</th><th>Online</th></tr></thead>
+<tbody>
+<tr><td>Ninguém se tira a si próprio</td><td>Só repetindo</td><td>Sim</td><td>Depende</td><td>Sim</td></tr>
+<tr><td>O organizador pode jogar</td><td>Sim</td><td>Não</td><td>Depende</td><td>Sim</td></tr>
+<tr><td>Funciona à distância</td><td>Não</td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+<tr><td>O resultado fica guardado</td><td>Não</td><td>Na mensagem</td><td>Perde-se</td><td>No email</td></tr>
+<tr><td>Permite exclusões (casais)</td><td>Não</td><td>Sim</td><td>Não</td><td>Sim</td></tr>
+</tbody>
+</table></div>
+""",
+faq=[
+("Como evitar que alguém se tire a si próprio nos papelinhos?", "Se acontecer, o mais seguro é repetir o sorteio para todos. Num sorteio online o problema não existe, porque o nome de cada pessoa nunca entra no seu próprio sorteio."),
+("Dá para fazer o sorteio do amigo secreto sem estar todos juntos?", "Sim. Com um sorteio por email cada pessoa sorteia no seu telemóvel, quando quiser, e só vê o seu resultado."),
+("Quantas pessoas são precisas para fazer amigo secreto?", "A partir de três. Abaixo disso, cada pessoa saberia automaticamente quem a tirou."),
+],
+related=["regras-do-amigo-secreto", "amigo-secreto-a-distancia"],
+))
+
+# ---------------------------------------------------------------- pistas e mensagens
+PAGES.append(dict(
+slug="pistas-e-mensagens-amigo-secreto",
+date="2026-10-28",
+nav="Pistas e mensagens",
+short="Pistas e mensagens",
+card="Ideias de pistas para a revelação e frases para o postal da prenda.",
+title="Pistas e mensagens para o amigo secreto | Sapatinho",
+h1="Pistas e mensagens para o amigo secreto",
+dek="A revelação é o melhor momento da troca. Ideias de pistas para pôr toda a gente a adivinhar, e frases para escrever no postal que acompanha a prenda.",
+description="Ideias de pistas para revelar o amigo secreto e mensagens para o postal da prenda: divertidas, carinhosas e para o trabalho.",
+body="""
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#pistas">Como dar boas pistas</a></li>
+<li><a href="#exemplos">Exemplos de pistas</a></li>
+<li><a href="#postal">Mensagens para o postal</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<h2 id="pistas">Como dar boas pistas</h2>
+<p>Na revelação em cadeia, cada pessoa descreve o seu amigo secreto até alguém adivinhar. Quem recebe a prenda revela o seu e a cadeia continua. Para correr bem:</p>
+<ul>
+<li><strong>Começa vago e vai afunilando.</strong> A primeira pista deve servir a várias pessoas e a última só a uma.</li>
+<li><strong>Usa histórias do grupo,</strong> não características físicas. «Foi quem se perdeu a caminho do jantar do ano passado» é mais divertido e não ofende ninguém.</li>
+<li><strong>Três a cinco pistas chegam.</strong> Mais do que isso e a sala perde a paciência.</li>
+</ul>
+
+<h2 id="exemplos">Exemplos de pistas</h2>
+<h3>Para a família</h3>
+<ul>
+<li>«É a pessoa que liga sempre à hora do almoço.»</li>
+<li>«Nunca chega a um jantar sem trazer sobremesa.»</li>
+<li>«Tem mais fotografias do cão do que da família.»</li>
+<li>«Foi quem ensinou metade desta sala a jogar às cartas.»</li>
+<li>«Diz todos os anos que este Natal não vai comer tanto.»</li>
+</ul>
+<h3>Para os amigos</h3>
+<ul>
+<li>«É quem organiza sempre as férias do grupo, e nunca no prazo.»</li>
+<li>«Sabe a letra de todas as músicas, mesmo das que não conhece.»</li>
+<li>«Responde às mensagens três dias depois, mas com muitos emojis.»</li>
+<li>«Nunca perdeu uma discussão, pelo menos segundo ela própria.»</li>
+</ul>
+<h3>Para o trabalho</h3>
+<ul>
+<li>«É a pessoa a quem toda a gente pede ajuda com a impressora.»</li>
+<li>«Tem sempre café a sair antes de toda a gente chegar.»</li>
+<li>«Nas reuniões, é quem pergunta "então, o que ficou decidido?"»</li>
+<li>«Tem a secretária mais arrumada do piso, ou a menos.»</li>
+</ul>
+<p class="note">No trabalho, fica-te por hábitos e momentos partilhados. Evita pistas sobre aparência, idade ou vida pessoal.</p>
+
+<h2 id="postal">Mensagens para o postal da prenda</h2>
+<p>Um postal com duas linhas escritas à mão faz toda a diferença, sobretudo quando a prenda é simples. Se ainda não queres revelar quem és, assina «O teu amigo secreto».</p>
+<h3>Divertidas</h3>
+<ul>
+<li>«Tive meses para escolher e escolhi na véspera. Feliz Natal!»</li>
+<li>«Se não gostares, a culpa é do sorteio.»</li>
+<li>«Prometo que não fui eu que escolhi o embrulho.»</li>
+</ul>
+<h3>Carinhosas</h3>
+<ul>
+<li>«Calhaste-me a ti e não podia ter tido mais sorte.»</li>
+<li>«Uma pequena prenda para quem torna os nossos Natais maiores.»</li>
+<li>«Que este ano te traga tudo o que não cabe num embrulho.»</li>
+</ul>
+<h3>Para colegas</h3>
+<ul>
+<li>«Obrigado por um ano a aguentar-me nas reuniões. Boas festas!»</li>
+<li>«Para recarregar energias antes de janeiro.»</li>
+<li>«Votos de boas festas e de uma caixa de email vazia.»</li>
+</ul>
+""",
+faq=[
+("Como revelar o amigo secreto de forma divertida?", "Uma das formas mais populares é a revelação em cadeia: cada pessoa dá pistas sobre o seu amigo secreto até alguém adivinhar, e quem recebe a prenda continua. Explicamos outras formas nas regras do amigo secreto."),
+("Devo assinar o postal da prenda?", "Depende de como fazem a revelação. Se a ideia é adivinhar, assina «O teu amigo secreto» e revela-te só depois."),
+],
+related=["regras-do-amigo-secreto", "amigo-secreto-na-empresa"],
+))
+
+# ---------------------------------------------------------------- black friday
+PAGES.append(dict(
+slug="amigo-secreto-black-friday",
+date="2026-10-28",
+nav="Black Friday",
+short="Prendas na Black Friday",
+card="Como aproveitar a Black Friday para a prenda do amigo secreto, sem cair em falsos descontos.",
+title="Prendas de amigo secreto na Black Friday 2026 | Sapatinho",
+h1="Prendas de amigo secreto na Black Friday: como aproveitar sem cair em armadilhas",
+dek="A Black Friday calha antes do Natal e pode esticar o limite do amigo secreto. Mas nem todos os descontos são o que parecem.",
+description="Como comprar a prenda do amigo secreto na Black Friday 2026: quando fazer o sorteio, como confirmar se um desconto é real e o que fazer com os prazos de entrega e de troca.",
+body="""
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#calendario">Faz o sorteio antes da Black Friday</a></li>
+<li><a href="#desconto">Confirma se o desconto é real</a></li>
+<li><a href="#limite">O limite é o preço que pagas</a></li>
+<li><a href="#entregas">Entregas e trocas</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<p>Em 2026 a Black Friday é a <strong>27 de novembro</strong>, quase um mês antes do Natal. Para o amigo secreto é uma boa oportunidade: com o mesmo limite consegues uma prenda melhor, desde que saibas o que estás a comprar.</p>
+
+<h2 id="calendario">1. Faz o sorteio antes da Black Friday</h2>
+<p>Se o sorteio só acontece em dezembro, ninguém sabe a quem vai oferecer quando os descontos aparecem. Fazer o sorteio na primeira quinzena de novembro dá a toda a gente tempo para pensar na prenda e comprar com calma.</p>
+<p>Um <a href="/criar">sorteio online</a> resolve-se numa tarde, mesmo que o grupo só se junte no Natal.</p>
+
+<h2 id="desconto">2. Confirma se o desconto é real</h2>
+<p>Há lojas que sobem o preço nas semanas anteriores para depois anunciar um desconto maior. Antes de comprar:</p>
+<ul>
+<li><strong>Vê o histórico de preços</strong> do produto, não só o preço riscado.</li>
+<li><strong>Compara em mais do que uma loja.</strong></li>
+<li><strong>Desconfia de percentagens muito altas</strong> em produtos que raramente baixam de preço.</li>
+</ul>
+<p>O Vale a Pena tem um guia prático sobre <a href="https://valeapena.info/black-friday-desconto-real">como saber se um desconto da Black Friday é real</a>, e uma página com as <a href="https://valeapena.info/black-friday">promoções da Black Friday 2026</a> em tecnologia e casa.</p>
+
+<h2 id="limite">3. O limite é o preço que pagas</h2>
+<p>Se o limite é 20 € e encontras algo que custava 35 € por 20 €, a prenda está dentro do limite. O que conta é o que pagas, não o preço antes do desconto. Combinem isto no grupo se houver dúvidas, para ninguém se sentir em desvantagem.</p>
+
+<h2 id="entregas">4. Entregas e trocas</h2>
+<ul>
+<li><strong>Conta com atrasos.</strong> Nas semanas da Black Friday as transportadoras estão sobrecarregadas.</li>
+<li><strong>Vê o prazo de devolução.</strong> Comprando no final de novembro, um prazo curto pode acabar antes do Natal. Muitas lojas alargam o prazo de trocas na época natalícia; confirma antes de comprar.</li>
+<li><strong>Pede talão de oferta</strong>, para quem recebe poder trocar sem saber o preço.</li>
+</ul>
+""",
+faq=[
+("Quando é a Black Friday em 2026?", "A 27 de novembro de 2026, a sexta-feira a seguir ao Dia de Ação de Graças nos Estados Unidos. Muitas lojas começam as promoções dias antes."),
+("Uma prenda com desconto conta pelo preço original?", "Não. O limite do amigo secreto refere-se ao que pagas. Se o grupo preferir outra regra, combinem antes do sorteio."),
+("Como sei se um desconto é verdadeiro?", "Compara o preço com o histórico do produto e com outras lojas. Há guias como o do Vale a Pena que explicam o processo passo a passo."),
+],
+related=["ideias-de-prendas-amigo-secreto", "como-fazer-sorteio-amigo-secreto"],
+))
+
+# ---------------------------------------------------------------- crianças
+PAGES.append(dict(
+slug="amigo-secreto-criancas",
+date="2026-10-28",
+nav="Com crianças",
+short="Amigo secreto com crianças",
+card="Como adaptar as regras para miúdos, em família ou na escola, e ideias de prendas.",
+title="Amigo secreto com crianças: regras e prendas | Sapatinho",
+h1="Amigo secreto com crianças: como adaptar as regras",
+dek="Para os miúdos, guardar um segredo durante semanas é o desafio maior. Algumas adaptações simples tornam o amigo secreto divertido para todas as idades.",
+description="Como organizar o amigo secreto com crianças, em família ou na escola: regras adaptadas, limite de preço, quem trata do sorteio e ideias de prendas por idade.",
+body="""
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#grupos">Um sorteio só para os miúdos</a></li>
+<li><a href="#regras">Regras adaptadas</a></li>
+<li><a href="#escola">Na escola ou no ATL</a></li>
+<li><a href="#prendas">Ideias de prendas por idade</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<h2 id="grupos">Um sorteio só para os miúdos</h2>
+<p>Em famílias grandes, o mais simples é fazer dois sorteios: um para os adultos e outro para as crianças. Assim os miúdos oferecem a outros miúdos, escolhem prendas de que eles próprios gostariam, e nenhum adulto tem de adivinhar o que quer uma criança de 7 anos que vê duas vezes por ano.</p>
+<p>No Sapatinho basta criar dois sorteios separados, com os mesmos dados da troca.</p>
+
+<h2 id="regras">Regras adaptadas</h2>
+<ul>
+<li><strong>Um adulto acompanha cada criança</strong> no sorteio e nas compras. Os convites podem ir para o email dos pais.</li>
+<li><strong>Prazos curtos.</strong> Para os mais novos, fazer o sorteio uma ou duas semanas antes da troca torna o segredo mais fácil de guardar.</li>
+<li><strong>Limite baixo e igual,</strong> para nenhuma criança comparar prendas e sair a perder.</li>
+<li><strong>Uma lista de desejos simples:</strong> três coisas de que gostam (uma cor, um herói, um jogo) ajudam quem compra a acertar.</li>
+<li><strong>Prendas feitas à mão também contam.</strong> Um desenho ou uma pulseira feita pela criança são muitas vezes as prendas de que os outros miúdos mais gostam.</li>
+</ul>
+
+<h2 id="escola">Na escola ou no ATL</h2>
+<p>Se o amigo secreto for organizado pela turma, ficam algumas regras práticas:</p>
+<ul>
+<li>A participação deve ser opcional e combinada com os encarregados de educação.</li>
+<li>O limite deve ser baixo, para não pesar no orçamento das famílias.</li>
+<li>Um adulto deve garantir que nenhuma criança fica sem prenda no dia, mesmo que alguém falte.</li>
+</ul>
+
+<h2 id="prendas">Ideias de prendas por idade</h2>
+<div class="tbl"><table>
+<thead><tr><th>Idade</th><th>Ideias</th></tr></thead>
+<tbody>
+<tr><td>3 a 5 anos</td><td>Livros com muitas imagens, plasticina, puzzles de peças grandes, um peluche pequeno</td></tr>
+<tr><td>6 a 8 anos</td><td>Livros de banda desenhada, jogos de cartas simples, material de desenho, kits de experiências</td></tr>
+<tr><td>9 a 12 anos</td><td>Livros de aventuras, jogos de tabuleiro rápidos, kits de pulseiras ou de construção, um caderno especial</td></tr>
+</tbody>
+</table></div>
+<p>Para mais sugestões, vê as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+""",
+faq=[
+("A partir de que idade uma criança pode participar no amigo secreto?", "A partir dos 4 ou 5 anos, com ajuda de um adulto. O mais difícil para os mais novos é guardar o segredo, por isso convém fazer o sorteio poucos dias antes da troca."),
+("As crianças precisam de email para o sorteio online?", "Não. Os convites podem ser enviados para o email de um dos pais, que mostra o resultado à criança."),
+("Qual é um bom limite para prendas de crianças?", "Um valor baixo, por exemplo entre 5 e 10 €, é suficiente para livros, jogos e material de desenho."),
+],
+related=["ideias-de-prendas-amigo-secreto", "pistas-e-mensagens-amigo-secreto"],
 ))

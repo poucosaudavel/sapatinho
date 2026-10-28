@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Builds the Sapatinho guide pages, sitemap and structured data into ../../site."""
 import json, os, re, html
-from content import PAGES, PUBLISHED
+from content import PAGES, PUBLISHED, MODIFIED
 
 import pathlib
 SITE = str(pathlib.Path(__file__).resolve().parents[2] / "site")
@@ -65,10 +65,7 @@ FOOTER = """<footer class="foot rich">
       <li><a href="/privacidade/">Privacidade</a></li>
     </ul></div>
     <div><h3>Guias</h3><ul>
-      <li><a href="/regras-do-amigo-secreto/">Regras do amigo secreto</a></li>
-      <li><a href="/ideias-de-prendas-amigo-secreto/">Ideias de prendas</a></li>
-      <li><a href="/amigo-secreto-a-distancia/">Amigo secreto à distância</a></li>
-      <li><a href="/amigo-secreto-na-empresa/">Amigo secreto na empresa</a></li>
+""" + "\n".join(f'      <li><a href="/{p["slug"]}/">{p["short"]}</a></li>' for p in PAGES) + """
     </ul></div>
     <div class="legal"><span>© 2026 Sapatinho · sapatinho-natal.pt</span><span>Ajuda: ajuda@sapatinho-natal.pt</span></div>
   </footer>"""
@@ -116,11 +113,16 @@ def crumbs_ld(items):
 
 BYSLUG = {p["slug"]: p for p in PAGES}
 
+MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
+def fmt_date(iso):
+    y, m, d = iso.split("-")
+    return f"{int(d)} de {MESES[int(m)-1]} de {y}"
+
 def build_guide(p):
     url = f"{BASE}/{p['slug']}/"
     graph = [ORG, WEBSITE,
              {"@type": "Article", "@id": url + "#artigo", "headline": p["h1"], "description": p["description"],
-              "inLanguage": "pt-PT", "datePublished": PUBLISHED, "dateModified": PUBLISHED,
+              "inLanguage": "pt-PT", "datePublished": p.get("date", PUBLISHED), "dateModified": p.get("modified", p.get("date", PUBLISHED)),
               "author": {"@id": ORG_ID}, "publisher": {"@id": ORG_ID}, "image": BASE + "/og.jpg",
               "mainEntityOfPage": url, "isPartOf": {"@id": SITE_ID}},
              crumbs_ld([("Início", BASE + "/"), (p["short"], url)])]
@@ -134,7 +136,7 @@ def build_guide(p):
       <div class="eyebrow">Guia do amigo secreto</div>
       <h1>{p['h1']}</h1>
       <p class="dek">{p['dek']}</p>
-      <p class="meta">Atualizado a 26 de outubro de 2026</p>
+      <p class="meta">Atualizado a {fmt_date(p.get("modified", p.get("date", PUBLISHED)))}</p>
     </div>
     <article class="card article">
 {p['body']}
@@ -235,6 +237,9 @@ def patch_home():
 
 """
         h = h.replace('    <section id="perguntas">', guides + '    <section id="perguntas">', 1)
+    else:
+        cards = "".join(f'<a href="/{p["slug"]}/"><b>{p["short"]}</b><span>{p["card"]}</span></a>' for p in PAGES)
+        h = re.sub(r'(<nav class="related" style="max-width:none;margin:0" aria-label="Guias">).*?(</nav>)', lambda m: m.group(1) + cards + m.group(2), h, count=1, flags=re.S)
     h = h.replace(".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}",
                   ".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}\n.faq details p a{color:var(--paper)}")
     open(f, "w").write(h)
@@ -277,10 +282,10 @@ def write_404():
     open(f"{SITE}/404.html", "w").write(page_shell(h, main))
 
 def write_sitemap():
-    urls = [("/", "1.0", "weekly"), ("/criar", "0.9", "monthly")]
-    urls += [(f"/{p['slug']}/", "0.8", "monthly") for p in PAGES]
-    urls += [("/privacidade/", "0.3", "yearly")]
-    body = "\n".join(f"  <url><loc>{BASE}{u}</loc><lastmod>{PUBLISHED}</lastmod><changefreq>{c}</changefreq><priority>{pr}</priority></url>" for u, pr, c in urls)
+    urls = [("/", "1.0", "weekly", MODIFIED), ("/criar", "0.9", "monthly", PUBLISHED)]
+    urls += [(f"/{p['slug']}/", "0.8", "monthly", p.get("modified", p.get("date", PUBLISHED))) for p in PAGES]
+    urls += [("/privacidade/", "0.3", "yearly", PUBLISHED)]
+    body = "\n".join(f"  <url><loc>{BASE}{u}</loc><lastmod>{lm}</lastmod><changefreq>{c}</changefreq><priority>{pr}</priority></url>" for u, pr, c, lm in urls)
     open(f"{SITE}/sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n')
     open(f"{SITE}/robots.txt", "w").write(f"""User-agent: *
 Allow: /
