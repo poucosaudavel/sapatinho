@@ -24,6 +24,7 @@ export default {
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
     const json = (obj, status = 200) => new Response(JSON.stringify(obj), { status, headers: { ...cors, "Content-Type": "application/json; charset=utf-8" } });
 
+    if (req.method === "GET" && url.pathname.endsWith("/api/stats")) return stats(req, env, json);
     if (req.method !== "POST") return json({ error: "Método não permitido." }, 405);
     if (origin && !ALLOWED_ORIGINS.includes(origin)) return json({ error: "Origem não permitida." }, 403);
     if (!env.BREVO_API_KEY) return json({ error: "O envio de emails ainda não está configurado." }, 503);
@@ -77,7 +78,7 @@ async function create(b, env) {
 
   const links = [];
   for (const p of ps) {
-    const code = await sign(encode({ v: 2, g, l, d, n: p.n, t: m[p.n], p: names, e: p.e }), env);
+    const code = await sign(encode({ v: 2, g, l, d, n: p.n, t: m[p.n], p: names, x: await sealEmail(p.e, env) }), env);
     links.push({ n: p.n, e: p.e, link: `${SITE}/r/${code}` });
   }
 
@@ -88,6 +89,7 @@ async function create(b, env) {
     textContent: inviteText({ n: x.n, g, l, d, link: x.link }),
   }));
   await sendBatch(messages, env);
+  await count(env, { sorteios: 1, convites: names.length, ["limite_" + bucket(l)]: 1, ["grupo_" + size(names.length)]: 1, ["exclusoes_" + (Object.keys(blocked).length ? "sim" : "nao")]: 1 });
   return { ok: true, links };
 }
 
@@ -95,13 +97,17 @@ async function create(b, env) {
 async function confirm(b, env) {
   const code = String(b.code || "");
   const o = await verify(code, env);
-  if (!o || !o.e) throw fail("Link inválido.", 400);
+  if (!o || !(o.x || o.e)) throw fail("Link inválido.", 400);
+  // o.x = email cifrado (links novos); o.e = email em claro (links criados antes de 29 out 2026)
+  const email = o.x ? await openEmail(o.x, env) : o.e;
+  if (!email) throw fail("Link inválido.", 400);
   await sendBatch([{
-    to: [{ email: o.e, name: o.n }],
+    to: [{ email, name: o.n }],
     subject: `${o.n}, já sabes quem te saiu · ${o.g}`,
     htmlContent: confirmHtml(o, `${SITE}/r/${code}`),
     textContent: confirmText(o, `${SITE}/r/${code}`),
   }], env);
+  await count(env, { sorteados: 1 });
   return { ok: true };
 }
 
@@ -151,6 +157,27 @@ async function verify(code, env) {
   return decode(enc);
 }
 
+/* ---------- email cifrado dentro do link (AES-GCM) ----------
+   O email só serve para enviar o segundo email. Vai cifrado no próprio link:
+   só este servidor o consegue ler, e não fica guardado em lado nenhum. */
+async function emailKey(env) {
+  const raw = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("sapatinho-email:" + env.BREVO_API_KEY));
+  return crypto.subtle.importKey("raw", raw, { name: "AES-GCM" }, false, ["encrypt", "decrypt"]);
+}
+async function sealEmail(email, env) {
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const ct = new Uint8Array(await crypto.subtle.encrypt({ name: "AES-GCM", iv }, await emailKey(env), new TextEncoder().encode(email)));
+  const out = new Uint8Array(12 + ct.length); out.set(iv, 0); out.set(ct, 12);
+  return toB64url(out);
+}
+async function openEmail(sealed, env) {
+  try {
+    const b = fromB64url(sealed);
+    const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b.slice(0, 12) }, await emailKey(env), b.slice(12));
+    return new TextDecoder().decode(pt);
+  } catch { return null; }
+}
+
 /* ---------- Brevo ---------- */
 async function sendBatch(messages, env) {
   for (const msg of messages) {
@@ -196,10 +223,42 @@ function confirmHtml(o, link) {
 <div style="font-family:Georgia,serif;font-size:40px;line-height:1.1;color:#c8452c;margin:0 0 16px">${esc(o.t)}</div>
 <p style="margin:0">${details(o.l, o.d)}</p>
 ${button(link, "Ver o meu sorteio")}
-<p style="margin:0;font-size:13px;color:#5f6d66">Guarda segredo! Guarda este email para confirmares quando precisares.</p>`);
+<p style="margin:0;font-size:13px;color:#5f6d66">Guarda segredo! Guarda este email para confirmares quando precisares.</p>
+<div style="margin:24px 0 0;padding:16px 18px;background:#efe6d4;border-radius:4px">
+<div style="font-family:Georgia,serif;font-size:19px;margin:0 0 6px">Sem ideias para a prenda?</div>
+<p style="margin:0 0 8px;font-size:14px">Juntámos sugestões ${o.l ? `até ${esc(o.l)} €` : "por preço"} e por tipo de pessoa.</p>
+<a href="${esc(ideasUrl(o.l))}" style="color:#c8452c;font-weight:bold;font-size:14px">Ver ideias de prendas →</a>
+</div>`);
+}
+function ideasUrl(l) {
+  const n = parseFloat(l) || 0;
+  const tier = !n ? "" : n <= 5 ? "#ate-5" : n <= 10 ? "#ate-10" : n <= 15 ? "#ate-15" : n <= 20 ? "#ate-20" : "#ate-50";
+  return `${SITE}/ideias-de-prendas-amigo-secreto/?utm_source=email&utm_medium=confirmacao${tier}`;
 }
 function confirmText(o, link) {
-  return `${o.n}, o teu amigo secreto é: ${o.t}\n\nGrupo: ${o.g}${o.l ? `\nLimite da prenda: ${o.l} €` : ""}${o.d ? `\nTroca de prendas: ${fmtDate(o.d)}` : ""}\n\nVer o teu sorteio: ${link}\n\nGuarda segredo!\n\nSapatinho · sapatinho-natal.pt`;
+  return `${o.n}, o teu amigo secreto é: ${o.t}\n\nGrupo: ${o.g}${o.l ? `\nLimite da prenda: ${o.l} €` : ""}${o.d ? `\nTroca de prendas: ${fmtDate(o.d)}` : ""}\n\nVer o teu sorteio: ${link}\n\nGuarda segredo!\n\nSem ideias para a prenda? ${ideasUrl(o.l)}\n\nSapatinho · sapatinho-natal.pt`;
+}
+
+/* ---------- anonymous counters (no names, no emails) ---------- */
+const bucket = (l) => !l ? "sem" : l <= 5 ? "5" : l <= 10 ? "10" : l <= 15 ? "15" : l <= 20 ? "20" : l <= 30 ? "30" : "mais";
+const size = (n) => n <= 5 ? "3a5" : n <= 10 ? "6a10" : n <= 20 ? "11a20" : "21a30";
+async function count(env, inc) {
+  if (!env.STATS) return;
+  try {
+    const key = "d:" + new Date().toISOString().slice(0, 10);
+    const cur = (await env.STATS.get(key, "json")) || {};
+    for (const [k, v] of Object.entries(inc)) cur[k] = (cur[k] || 0) + v;
+    await env.STATS.put(key, JSON.stringify(cur));
+  } catch (e) { /* counting must never break a draw */ }
+}
+async function stats(req, env, json) {
+  const auth = (req.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "");
+  if (!env.STATS_TOKEN || !env.STATS || auth !== env.STATS_TOKEN) return json({ error: "Sem acesso." }, 401);
+  const list = await env.STATS.list({ prefix: "d:" });
+  const days = [];
+  for (const k of list.keys) days.push({ dia: k.name.slice(2), ...((await env.STATS.get(k.name, "json")) || {}) });
+  days.sort((a, b) => a.dia.localeCompare(b.dia));
+  return json({ days });
 }
 
 export { create, confirm, encode, decode, sign, verify, draw };

@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css?v=20261029b">
 <style>
 .stage{display:flex;flex-direction:column;align-items:center;padding-block:24px 0}
 .draw{width:100%;max-width:440px;padding:32px 28px 28px;display:flex;flex-direction:column;gap:20px}
@@ -96,7 +96,13 @@ function showResult(o, mailing){
     '<div class="result"><div class="who">'+esc(o.t)+'</div></div>'+
     facts(o) + lock +
     '<p class="note">'+(o.l ? 'Escolhe uma prenda até '+o.l+' €. ' : '')+(o.d ? 'A troca é a '+esc(Sap.fmtDate(o.d))+'. ' : '')+'Bom Natal!</p>'+
-    (mailing ? '<p class="note" id="mailnote">A enviar-te um email com o nome…</p>' : '');
+    (mailing ? '<p class="note" id="mailnote">A enviar-te um email com o nome…</p>' : '') +
+    '<a class="btn ghost wide" href="'+ideasHref(o.l)+'">Ver ideias de prendas'+(o.l ? ' até '+esc(o.l)+' €' : '')+'</a>';
+}
+function ideasHref(l){
+  var n = parseFloat(l) || 0;
+  var t = !n ? "" : n <= 5 ? "#ate-5" : n <= 10 ? "#ate-10" : n <= 15 ? "#ate-15" : n <= 20 ? "#ate-20" : "#ate-50";
+  return "/ideias-de-prendas-amigo-secreto/?utm_source=sorteio&utm_medium=resultado" + t;
 }
 
 function showDraw(o, key, code){
@@ -121,7 +127,7 @@ function showDraw(o, key, code){
     var dur = reduce ? 600 : 4200;
     strip.style.transition = "transform "+dur+"ms cubic-bezier(.12,.72,.18,1)";
     requestAnimationFrame(function(){ strip.style.transform = "translateY("+end+"px)"; });
-    setTimeout(function(){ Sap.setS(key,"1"); showResult(o, !!(o.e && code)); if (o.e && code) sendConfirm(code); }, dur + 700);
+    setTimeout(function(){ Sap.setS(key,"1"); showResult(o, !!((o.x || o.e) && code)); if ((o.x || o.e) && code) sendConfirm(code); }, dur + 700);
   });
 }
 
@@ -142,6 +148,13 @@ function invalid(){
   var o = null, key = null, code = null;
   var pm = location.pathname.match(/\/r\/([A-Za-z0-9_.-]+)/);
   var h = pm ? pm[1] : (location.hash || "").replace(/^#/,"").trim();
+  // Privacidade: o código sai do endereço logo ao abrir (fica só "/r"), para não ficar
+  // nas estatísticas de visitas nem no histórico. Guarda-se apenas nesta aba do navegador.
+  if (!h) { try { h = sessionStorage.getItem("sap-r") || ""; } catch (e) {} }
+  if (h && h.indexOf(".") > 0 && history.replaceState) {
+    try { sessionStorage.setItem("sap-r", h); } catch (e) {}
+    try { history.replaceState(null, "", "/r"); } catch (e) {}
+  }
   if (h){ o = Sap.decode(h); key = "sapr-" + Sap.hash(h); code = h.indexOf(".") > 0 ? h : null; }
   if (!o) return invalid();
   if (Sap.getS(key) === "1") showResult(o); else showDraw(o, key, code);

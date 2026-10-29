@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Painel · Sapatinho</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0f2a22">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/styles.css?v=20261029b">
+<style>
+.pn{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:22px;padding-block:12px 40px}
+.pn h1{font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.05}
+.box{background:var(--paper);color:var(--ink);border-radius:6px;padding:22px}
+.box h2{font-family:var(--display);font-weight:400;font-size:1.35rem;margin:0 0 12px}
+.login{display:flex;gap:10px;flex-wrap:wrap}
+.login input{flex:1;min-width:200px;font:inherit;padding:12px;border:1px solid var(--line);border-radius:4px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{background:var(--paper);color:var(--ink);border-radius:6px;padding:16px}
+.kpi b{display:block;font-family:var(--display);font-weight:400;font-size:2.1rem;line-height:1;font-variant-numeric:tabular-nums}
+.kpi span{font-size:.85rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:.92rem;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line)}
+th{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td.n,th.n{text-align:right}
+.bars{display:flex;flex-direction:column;gap:8px}
+.bar{display:grid;grid-template-columns:110px minmax(0,1fr) 40px;gap:10px;align-items:center;font-size:.9rem}
+.bar i{display:block;height:12px;border-radius:3px;background:var(--ember)}
+.bar em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums}
+.note{font-size:.88rem;color:var(--muted);margin:0}
+.err{color:var(--ember);font-weight:600}
+.tbl{overflow-x:auto}
+</style>
+</head>
+<body>
+<canvas id="snow" aria-hidden="true"></canvas>
+<div class="wrap">
+  <header class="top"><a class="logo" href="/"><img src="/favicon.svg" alt=""><b>Sapatinho<span>.</span></b></a></header>
+  <main class="pn">
+    <div><div class="eyebrow">Privado</div><h1>Painel do Sapatinho</h1></div>
+    <section class="box" id="loginbox">
+      <h2>Entrar</h2>
+      <form class="login" id="f"><label for="pw" class="sr-only" style="position:absolute;left:-9999px">Palavra-passe do painel</label><input id="pw" type="password" autocomplete="current-password" placeholder="Palavra-passe do painel"><button class="btn" type="submit">Ver números</button></form>
+      <p class="note" id="msg" style="margin-top:10px">Os números são anónimos: o Sapatinho conta sorteios e participantes, sem guardar nomes nem emails.</p>
+    </section>
+    <div id="out" hidden></div>
+  </main>
+</div>
+<script src="/snow.js"></script>
+<script>
+(function(){
+  var f=document.getElementById("f"), pw=document.getElementById("pw"), msg=document.getElementById("msg"), out=document.getElementById("out");
+  try{ pw.value=localStorage.getItem("sap-painel")||""; }catch(e){}
+  var LIM=[["5","até 5 €"],["10","até 10 €"],["15","até 15 €"],["20","até 20 €"],["30","até 30 €"],["mais","mais de 30 €"],["sem","sem limite"]];
+  var GR=[["3a5","3 a 5"],["6a10","6 a 10"],["11a20","11 a 20"],["21a30","21 a 30"]];
+  function sum(days,k){return days.reduce(function(s,d){return s+(d[k]||0)},0)}
+  function bars(days,list,prefix){var tot=list.reduce(function(s,x){return s+sum(days,prefix+x[0])},0)||1;
+    return '<div class="bars">'+list.map(function(x){var v=sum(days,prefix+x[0]);return '<div class="bar"><span>'+x[1]+'</span><i style="width:'+Math.max(2,Math.round(v/tot*100))+'%"></i><em>'+v+'</em></div>'}).join("")+'</div>'}
+  function render(days){
+    var s=sum(days,"sorteios"), c=sum(days,"convites"), d=sum(days,"sorteados");
+    var rate=c?Math.round(d/c*100):0, avg=s?(c/s).toFixed(1).replace(".",","):"0";
+    var ex=sum(days,"exclusoes_sim");
+    out.innerHTML='<div class="kpis">'+
+      '<div class="kpi"><b>'+s+'</b><span>sorteios criados</span></div>'+
+      '<div class="kpi"><b>'+c+'</b><span>convites enviados</span></div>'+
+      '<div class="kpi"><b>'+d+'</b><span>pessoas que já sortearam</span></div>'+
+      '<div class="kpi"><b>'+rate+'%</b><span>dos convidados já sortearam</span></div>'+
+      '<div class="kpi"><b>'+avg+'</b><span>pessoas por sorteio</span></div></div>'+
+      '<section class="box"><h2>Por dia</h2><div class="tbl"><table><thead><tr><th>Dia</th><th class="n">Sorteios</th><th class="n">Convites</th><th class="n">Sortearam</th></tr></thead><tbody>'+
+      days.slice().reverse().map(function(x){return '<tr><td>'+x.dia.split("-").reverse().join("/")+'</td><td class="n">'+(x.sorteios||0)+'</td><td class="n">'+(x.convites||0)+'</td><td class="n">'+(x.sorteados||0)+'</td></tr>'}).join("")+
+      '</tbody></table></div></section>'+
+      '<section class="box"><h2>Limite da prenda</h2>'+bars(days,LIM,"limite_")+'</section>'+
+      '<section class="box"><h2>Tamanho dos grupos</h2>'+bars(days,GR,"grupo_")+'<p class="note" style="margin-top:12px">'+ex+' de '+s+' sorteios usaram exclusões (casais, irmãos).</p></section>'+
+      '<section class="box"><h2>Antes do painel</h2><p class="note">Os registos do servidor mostram, até 29 de outubro às 22h: 6 sorteios criados (2 deles testes da configuração) e 30 pessoas que sortearam. As visitas ao site estão no Cloudflare Web Analytics.</p></section>';
+    out.hidden=false;
+  }
+  f.addEventListener("submit",function(e){e.preventDefault(); msg.textContent="A carregar…"; msg.className="note";
+    fetch("/api/stats",{headers:{Authorization:"Bearer "+pw.value}}).then(function(r){
+      if(r.status===401){msg.textContent="Palavra-passe errada.";msg.className="note err";return}
+      if(!r.ok){msg.textContent="Não foi possível carregar os números. Tenta outra vez.";msg.className="note err";return}
+      return r.json().then(function(j){try{localStorage.setItem("sap-painel",pw.value)}catch(e){} msg.textContent="Atualizado agora. Os números são anónimos."; render(j.days||[])});
+    }).catch(function(){msg.textContent="Sem ligação. Tenta outra vez.";msg.className="note err"});
+  });
+  if(pw.value) f.requestSubmit();
+})();
+</script>
+</body>
+</html>

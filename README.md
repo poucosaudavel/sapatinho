@@ -26,6 +26,8 @@ Navegador ──► Cloudflare Pages (site estático: site/)
 
 - **Sem base de dados.** O resultado de cada participante vai no próprio link, codificado e assinado com HMAC-SHA256. Um link alterado à mão é rejeitado pelo servidor.
 - **Privacidade por desenho.** Cada link só revela o resultado do seu dono. Quem organiza não vê quem tirou quem.
+- **Email cifrado dentro do link.** O email de cada participante só serve para enviar o segundo email e vai no próprio link cifrado com AES-GCM: só o servidor o consegue ler. Ao abrir o link, a página tira o código do endereço (fica só `/r`), para não ficar no histórico nem nas estatísticas.
+- **Só contagens anónimas.** O Worker guarda, num Workers KV, contagens por dia (sorteios, convites, quem já sorteou, faixa do limite, tamanho do grupo), sem nomes nem emails. Uma página privada (`/painel`) mostra-as através de `GET /api/stats`, protegido por um segredo.
 - **Proteção contra abusos:**
   - origem dos pedidos verificada no Worker
   - limite de 3 a 30 participantes por sorteio
@@ -35,7 +37,7 @@ Navegador ──► Cloudflare Pages (site estático: site/)
 
 ## SEO
 
-- Guias em português de Portugal: regras do amigo secreto, ideias de prendas por preço, amigo secreto à distância e na empresa
+- 11 guias em português de Portugal: regras, como fazer o sorteio, roleta, ideias de prendas por preço (até 5 € e até 10 €), pistas, Black Friday, crianças, à distância e na empresa
 - Dados estruturados schema.org: `WebApplication`, `Organization`, `Article`, `FAQPage` e `BreadcrumbList`
 - `sitemap.xml` e `robots.txt`, com as páginas privadas dos sorteios fora do índice
 - Imagem e texto de pré-visualização para WhatsApp e redes sociais
@@ -47,7 +49,7 @@ Os guias são gerados a partir de `tools/seo/content.py`.
 | Pasta | Conteúdo |
 |---|---|
 | `site/` | Site estático: página inicial, criar sorteio, página do sorteio, link de organizador e guias |
-| `worker/worker.js` | API: `POST /api/create` (sorteio e convites) e `POST /api/confirm` (email com o resultado) |
+| `worker/worker.js` | API: `POST /api/create` (sorteio e convites), `POST /api/confirm` (email com o resultado) e `GET /api/stats` (contagens anónimas) |
 | `tools/seo/` | Gerador dos guias, do sitemap, dos dados estruturados e dos ícones |
 
 ## Correr localmente
@@ -58,7 +60,7 @@ python3 -m http.server 8000
 # abre http://localhost:8000
 ```
 
-Criar sorteios precisa do Worker com o segredo `BREVO_API_KEY` configurado. A chave nunca fica neste repositório.
+Criar sorteios precisa do Worker com o segredo `BREVO_API_KEY` configurado. O painel precisa também do segredo `STATS_TOKEN` e de um namespace KV ligado como `STATS`. Nenhuma chave fica neste repositório.
 
 ## Tecnologia
 

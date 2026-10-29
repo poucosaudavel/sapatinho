@@ -4,5 +4,6 @@ Disallow: /r/
 Disallow: /r$
 Disallow: /org
 Disallow: /api/
+Disallow: /painel
 
 Sitemap: https://sapatinho-natal.pt/sitemap.xml

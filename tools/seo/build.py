@@ -2,6 +2,8 @@
 """Builds the Sapatinho guide pages, sitemap and structured data into ../../site."""
 import json, os, re, html
 from content import PAGES, PUBLISHED, MODIFIED
+import os as _os
+PAGES = [p for p in PAGES if not p.get("draft") or _os.environ.get("SHOW_DRAFTS")]
 
 import pathlib
 SITE = str(pathlib.Path(__file__).resolve().parents[2] / "site")
@@ -15,6 +17,29 @@ def ld(obj):
 
 def text(h):
     return html.unescape(re.sub(r"<[^>]+>", "", h)).strip()
+
+# ---------------------------------------------------------------- afiliados
+# Preenche depois da aprovação em afiliados.amazon.es (ex.: "sapatinho-21").
+# Vazio = links normais, sem comissão.
+AMAZON_TAG = os.environ.get("AMAZON_TAG", "")
+AFF_NOTE = ('<p class="aff-note">Alguns links desta página são de afiliados: se comprares através deles, '
+            'o Sapatinho pode receber uma pequena comissão, sem custo extra para ti. '
+            'Como Associado da Amazon, o Sapatinho recebe por compras qualificadas.</p>')
+
+def amz_url(q):
+    from urllib.parse import quote_plus
+    u = "https://www.amazon.es/s?k=" + quote_plus(q)
+    return u + ("&tag=" + AMAZON_TAG if AMAZON_TAG else "")
+
+def affiliate(body):
+    """[[amz:termo de pesquisa|texto]] -> link Amazon de afiliado."""
+    found = [False]
+    def rep(m):
+        found[0] = True
+        q, label = m.group(1), m.group(2) or m.group(1)
+        return f'<a href="{html.escape(amz_url(q))}" rel="sponsored nofollow noopener" target="_blank">{label}</a>'
+    out = re.sub(r"\[\[amz:([^|\]]+)(?:\|([^\]]+))?\]\]", rep, body)
+    return out, found[0]
 
 def head(title, desc, canonical, og_title=None, og_desc=None, og_type="website", robots=None, jsonld=None, extra=""):
     og_title = og_title or title
@@ -44,7 +69,7 @@ def head(title, desc, canonical, og_title=None, og_desc=None, og_type="website",
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css?v=20261029b">
 {j}{extra}"""
 
 NAV = ('<nav aria-label="Principal"><a href="/#como-funciona">Como funciona</a>'
@@ -130,6 +155,9 @@ def build_guide(p):
         graph.append(faq_ld(p["faq"]))
     h = head(p["title"], p["description"], url, og_title=p["h1"], og_type="article",
              jsonld={"@context": "https://schema.org", "@graph": graph})
+    body, has_aff = affiliate(p["body"])
+    if has_aff:
+        body = AFF_NOTE + "\n" + body
     rel = "".join(f'<a href="/{s}/"><b>{BYSLUG[s]["short"]}</b><span>{BYSLUG[s]["card"]}</span></a>' for s in p["related"])
     main = f"""    <nav class="crumbs" aria-label="Estás aqui"><a href="/">Início</a><span aria-hidden="true">›</span><span>{p['short']}</span></nav>
     <div class="article-head">
@@ -139,7 +167,7 @@ def build_guide(p):
       <p class="meta">Atualizado a {fmt_date(p.get("modified", p.get("date", PUBLISHED)))}</p>
     </div>
     <article class="card article">
-{p['body']}
+{body}
 {faq_html(p['faq']) if p.get('faq') else ''}
 {CTA}
     </article>
@@ -166,6 +194,7 @@ PRIVACY_BODY = """
 
 <h2>Cookies</h2>
 <p>O Sapatinho não usa cookies de publicidade nem de análise. Para saber quantas pessoas visitam o site usamos o Cloudflare Web Analytics, que não usa cookies e não identifica visitantes individualmente. Os nossos fornecedores podem usar cookies estritamente necessários para segurança.</p>
+<p>Guardamos também contagens anónimas por dia (número de sorteios, de convites e de pessoas que já sortearam, faixa do limite da prenda e tamanho do grupo), sem nomes, emails nem resultados, para sabermos como o serviço é usado.</p>
 
 <h2>Responsabilidade de quem organiza</h2>
 <p>Quem cria um sorteio indica os emails de outras pessoas. Ao fazê-lo, confirma que essas pessoas aceitam participar e receber os emails do Sapatinho.</p>
@@ -191,7 +220,10 @@ def build_privacy():
 # ---------------------------------------------------------------- existing pages
 HOME_FAQ = [
 ("O que é o amigo secreto?", 'É uma troca de prendas em que cada pessoa tira à sorte o nome de outra e lhe oferece uma única prenda, sem revelar quem lhe saiu até ao dia da troca. Explicamos tudo nas <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a>.'),
-("Quanto custa?", "Nada. Cria quantos sorteios quiseres, sem registo."),
+("Como funciona o amigo secreto online por email?", 'Quem organiza escreve os nomes e os emails do grupo, o limite da prenda e a data. O Sapatinho faz o sorteio e envia a cada pessoa um convite com um link só seu. Cada um abre o link, roda a roleta e recebe um segundo email com o nome que lhe saiu. <a href="/criar">Criar sorteio</a>.'),
+("O amigo secreto online é mesmo grátis?", "Sim. Criar o sorteio e enviar os convites não custa nada, não precisa de registo e não há versão paga."),
+("Tem roleta?", 'Tem. Cada pessoa roda a sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel e só ela vê o nome em que a roleta pára.'),
+("Dá para impedir que casais ou irmãos se tirem um ao outro?", "Sim. Ao criar o sorteio, indicas os pares que não se podem tirar e o sorteio respeita-os."),
 ("Posso fazer o sorteio mais do que uma vez?", "Não. O sorteio é feito uma única vez para cada participante. Se voltares a abrir o link, vês o mesmo resultado."),
 ("Quem organiza fica a saber os resultados?", "Não, desde que não abra os links dos outros. Cada resultado só aparece a quem abre o seu link."),
 ("Posso sair-me a mim próprio?", "Não. O teu nome nunca entra no teu sorteio."),
@@ -203,7 +235,7 @@ HOME_FAQ = [
 def patch_home():
     f = f"{SITE}/index.html"
     h = open(f).read()
-    title = "Amigo secreto online grátis · Sorteio por email | Sapatinho"
+    title = "Amigo secreto online grátis, por email · Sapatinho"
     desc = "Faz o sorteio do amigo secreto online, grátis e sem registo. Cada pessoa recebe por email o seu link pessoal e descobre quem lhe saiu. Ninguém se tira a si próprio."
     graph = [ORG, WEBSITE,
              {"@type": "WebApplication", "@id": BASE + "/#app", "name": "Sapatinho", "url": BASE + "/criar",
@@ -289,11 +321,11 @@ def write_sitemap():
     open(f"{SITE}/sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n')
     open(f"{SITE}/robots.txt", "w").write(f"""User-agent: *
 Allow: /
-Disallow: /s/
 Disallow: /r/
 Disallow: /r$
 Disallow: /org
 Disallow: /api/
+Disallow: /painel
 
 Sitemap: {BASE}/sitemap.xml
 """)
