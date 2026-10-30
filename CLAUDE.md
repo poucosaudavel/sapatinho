@@ -58,6 +58,6 @@ Antes da primeira vez, o Diogo corre `npx wrangler@4 login` (o Claude nunca faz 
 
 ## Pendentes conhecidos
 
-- Brevo: desligar o registo de cliques (links reescritos para `sendibt3.com` podem atirar os emails para o spam) e pôr o histórico de emails a apagar ao fim de 1 mês. Depois publicar o artigo técnico de privacidade (`como-funciona-o-sapatinho-privacidade` em `content.py`, hoje `draft=True`).
+- Brevo: o histórico de emails apaga-se ao fim de 1 mês e as pré-visualizações (conteúdo) não são guardadas. O registo de cliques (links reescritos para `sendibt3.com`) não se pode desligar no plano grátis; pode contribuir para os emails irem para o spam.
 - Os limites guardados no KV não são atómicos. Já existe a regra de limite de pedidos do Cloudflare «Limite envio Sapatinho» (caminho contém `/api/`, 4 pedidos por 10 s por IP, bloqueio de 10 s; é a única permitida no plano grátis), que trava rajadas de um só IP. Rajadas de muitos IPs ao mesmo tempo ainda podem passar a quota; a solução completa seria um Durable Object.
 - Separar a chave dos links de `BREVO_API_KEY` (novo secret `LINK_SECRET`, aceitando a chave antiga para verificar).

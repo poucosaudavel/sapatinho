@@ -189,7 +189,7 @@ PRIVACY_BODY = """
 <p>Usamos os nomes e os emails apenas para fazer o sorteio e enviar a cada participante o convite e, depois de sortear, o email com o resultado. Não enviamos publicidade, não vendemos dados e não os partilhamos com terceiros para fins comerciais.</p>
 
 <h2>Onde ficam guardados</h2>
-<p>O Sapatinho não tem uma base de dados com os sorteios. O resultado de cada participante fica codificado no seu link pessoal. Para enviar os emails usamos a Brevo, um serviço de envio de email, que guarda registos técnicos dos envios durante um período limitado. O site está alojado na Cloudflare.</p>
+<p>O Sapatinho não tem uma base de dados com os sorteios. O resultado de cada participante fica codificado no seu link pessoal. Para enviar os emails usamos a Brevo, um serviço de envio de email, que guarda o registo de cada envio (destinatário, assunto, entrega, aberturas e cliques) durante um mês e não guarda o conteúdo dos emails. O site está alojado na Cloudflare. Explicamos tudo, com o código, em <a href="/como-funciona-o-sapatinho-privacidade/">como funciona o Sapatinho por dentro</a>.</p>
 <p>No teu navegador, a página do sorteio guarda uma pequena indicação de que já sorteaste, para não repetir a animação. Essa informação fica só no teu dispositivo.</p>
 
 <h2>Cookies</h2>

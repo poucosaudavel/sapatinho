@@ -892,11 +892,10 @@ faq=[
 related=["prendas-amigo-secreto-ate-5-euros", "amigo-secreto-na-empresa"],
 ))
 
-# ---------------------------------------------------------------- privacidade técnica (rascunho até o Brevo ficar com retenção de 1 mês)
+# ---------------------------------------------------------------- privacidade técnica
 PAGES.append(dict(
 slug="como-funciona-o-sapatinho-privacidade",
 date="2026-10-30",
-draft=True,
 nav="Como funciona por dentro",
 short="Privacidade, por dentro",
 card="O código do sorteio explicado: porque não temos base de dados de emails.",
@@ -905,7 +904,7 @@ h1="Como funciona o Sapatinho por dentro",
 dek="O Sapatinho não tem base de dados de emails nem de resultados. Explicamos, com o código, o caminho de um sorteio do teu navegador até ao email, e o que fica guardado em cada sítio.",
 description="Como funciona o sorteio do amigo secreto do Sapatinho, com o código: sem base de dados, emails cifrados dentro do link, resultados assinados e só contagens anónimas. O que guardamos e o que não guardamos.",
 body="""
-<p class="lead-answer"><strong>O Sapatinho não tem base de dados.</strong> Os nomes e os emails passam pelo nosso servidor só durante o pedido que cria o sorteio. O resultado de cada pessoa vai assinado dentro do seu próprio link, e o email vai cifrado nesse link, só para enviarmos o segundo email. Não guardamos emails, nomes nem resultados. Guardamos apenas contagens anónimas por dia.</p>
+<p class="lead-answer"><strong>O Sapatinho não tem base de dados.</strong> Os nomes e os emails passam pelo nosso servidor só durante o pedido que cria o sorteio. O resultado de cada pessoa vai assinado dentro do seu próprio link, e o email vai cifrado nesse link, só para enviarmos o segundo email. Não guardamos emails, nomes nem resultados. Guardamos apenas contagens anónimas por dia e, durante umas horas, códigos irreversíveis que servem para travar abusos.</p>
 
 <nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
 <li><a href="#caminho">O caminho de um sorteio</a></li>
@@ -937,7 +936,7 @@ body="""
       const j = rnd(i + 1); [r[i], r[j]] = [r[j], r[i]];
     }
     if (names.every((g, i) =&gt; g !== r[i] &amp;&amp; !(blocked[g] &amp;&amp; blocked[g].has(r[i])))) {
-      const m = {}; names.forEach((g, i) =&gt; (m[g] = r[i])); return m;
+      const m = Object.create(null); names.forEach((g, i) =&gt; (m[g] = r[i])); return m;
     }
   }
   return null;  // não há sorteio possível com estas exclusões
@@ -978,9 +977,10 @@ body="""
 <thead><tr><th>Sítio</th><th>O que fica</th><th>Durante quanto tempo</th></tr></thead>
 <tbody>
 <tr><td>Servidor do Sapatinho</td><td>Nada sobre as pessoas. Só contagens anónimas por dia: número de sorteios, de convites e de pessoas que já sortearam, faixa do limite e tamanho do grupo</td><td>As contagens ficam; não têm dados pessoais</td></tr>
+<tr><td>Servidor do Sapatinho (contra abusos)</td><td>Um código irreversível calculado a partir do IP de quem cria um sorteio, só para contar quantos sorteios esse IP criou no dia; e um código irreversível de cada link que já pediu o segundo email, para não o enviar repetidamente</td><td>24 horas e 12 horas, e depois apagam-se sozinhos</td></tr>
 <tr><td>Links de cada participante</td><td>O resultado dessa pessoa e o seu email cifrado</td><td>Enquanto a pessoa guardar o email</td></tr>
 <tr><td>Link de quem organiza</td><td>Os nomes, os emails e os links de todos, para poder reenviar convites</td><td>Só no navegador de quem organiza; nunca é enviado ao servidor</td></tr>
-<tr><td>Brevo (envio dos emails)</td><td>O registo de cada email enviado: destinatário, assunto e conteúdo</td><td>1 mês, o mínimo que o Brevo permite</td></tr>
+<tr><td>Brevo (envio dos emails)</td><td>O registo de cada email enviado: destinatário, assunto, entrega, aberturas e cliques. O conteúdo dos emails não é guardado (desligámos as pré-visualizações)</td><td>1 mês, o mínimo que o Brevo permite</td></tr>
 <tr><td>Cloudflare Web Analytics</td><td>Visitas às páginas, sem cookies e sem identificar pessoas. As páginas dos sorteios aparecem só como <code>/r</code></td><td>Segundo as regras da Cloudflare</td></tr>
 <tr><td>O teu navegador</td><td>Uma marca a dizer que já sorteaste, para mostrar o resultado e não a roleta</td><td>Até limpares os dados do navegador</td></tr>
 </tbody>
@@ -992,18 +992,18 @@ body="""
 <li><strong>Quem tem o teu link vê o teu resultado.</strong> É assim que o link funciona. Não o reencaminhes.</li>
 <li><strong>Quem organiza tem os links de todos</strong>, para poder reenviar convites. Se os abrir, fica a saber os resultados. Por isso pedimos que não o faça.</li>
 <li><strong>Os nomes no link estão codificados, não cifrados.</strong> Quem souber descodificar o teu link consegue ler o grupo e o nome que te saiu. O email, esse, está cifrado.</li>
-<li><strong>Os emails passam pelo Brevo</strong>, que precisa deles para os entregar e guarda o registo de envio durante um mês.</li>
+<li><strong>Os emails passam pelo Brevo</strong>, que precisa deles para os entregar e guarda o registo de envio durante um mês. O Brevo também troca os links dos emails por links seus, para contar cliques; no plano gratuito isto não se pode desligar.</li>
 </ul>
 
 <h2 id="codigo">O código é público</h2>
-<p>Todo o código do servidor e do site está no GitHub, em <a href="https://github.com/poucosaudavel/sapatinho" rel="noopener">github.com/poucosaudavel/sapatinho</a>. O ficheiro do servidor é o <code>worker/worker.js</code>: tem pouco mais de 250 linhas e não tem nenhuma ligação a uma base de dados.</p>
+<p>Todo o código do servidor e do site está no GitHub, em <a href="https://github.com/poucosaudavel/sapatinho" rel="noopener">github.com/poucosaudavel/sapatinho</a>. O ficheiro do servidor é o <code>worker/worker.js</code>: tem cerca de 300 linhas e não tem nenhuma ligação a uma base de dados.</p>
 """,
 faq=[
 ("O Sapatinho guarda os emails dos participantes?", "Não. O servidor recebe os emails só para enviar os convites e esquece-os no fim do pedido. O email de cada pessoa vai cifrado dentro do seu próprio link, para enviarmos o segundo email, e o serviço de envio (Brevo) guarda o registo de envio durante um mês."),
 ("O Sapatinho sabe quem saiu a quem?", "Não guarda essa informação. O resultado de cada pessoa só existe dentro do link dessa pessoa."),
 ("Alguém pode alterar o link para mudar o nome que lhe saiu?", "Não. Cada link tem uma assinatura criada com uma chave secreta do servidor. Um link alterado deixa de ser válido."),
 ("Quem organiza vê os resultados?", "Só se abrir os links dos outros participantes, que recebe para poder reenviar convites. O Sapatinho nunca lhe mostra os resultados diretamente."),
-("Posso pedir para apagar os meus dados?", "O Sapatinho não tem dados teus para apagar. Para o registo de envio no Brevo, escreve para ajuda@sapatinho-natal.pt."),
+("Posso pedir para apagar os meus dados?", "O Sapatinho não tem dados teus para apagar. O registo de envio no Brevo apaga-se sozinho ao fim de um mês; se quiseres que seja apagado antes, escreve para ajuda@sapatinho-natal.pt."),
 ],
 related=["como-fazer-sorteio-amigo-secreto", "roleta-amigo-secreto"],
 ))
