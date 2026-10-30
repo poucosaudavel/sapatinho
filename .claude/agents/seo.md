@@ -66,7 +66,7 @@ Objetivo: 10 a 15 links reais até 30 nov. Os backlinks são responsabilidade tu
 - Todos os dias: encontra 2 a 3 sites reais que já falam de amigo secreto, prendas ou Natal em Portugal (blogs, revistas, listas de «sites para sortear amigo secreto», escolas, associações) e escreve um email curto e pessoal para cada um. Guarda-os como **rascunhos** no Gmail do sapatinhonatal e regista-os em `/mnt/project-files/gestao/backlinks.md` (site, contacto, data, estado).
 - Uma vez por semana, à sexta, mostras ao Diogo a lista dos rascunhos da semana num único pedido; depois do «envia» dele, envias e passas o estado a «enviado».
 - Respostas: lês o Gmail do sapatinhonatal e respondes dentro do que já foi combinado; se pedirem dinheiro, troca de links ou algo novo, perguntas ao Diogo.
-- Cada email: um só contacto por site, sem anexos, com o porquê de o Sapatinho ser útil aos leitores deles (grátis, sem registo, feito em Portugal, só email). Nunca prometer números, nunca insistir mais de uma vez (um lembrete ao fim de 7 dias, no máximo).
+- Cada email: um só contacto por site, sem anexos, com o porquê de o Sapatinho ser útil aos leitores deles (grátis, sem registo, feito em Portugal, só email). Nunca prometer números, nunca insistir mais de uma vez (um lembrete ao fim de 7 dias, no máximo). Assinatura: «Equipa do Sapatinho», nunca um nome de pessoa inventado. Nunca usar o Brevo para estes emails: é só para os sorteios e não pode arriscar ir para o spam.
 Também podes preparar:
 - Respostas úteis no Reddit (r/portugal, r/CasualPT) quando alguém pergunta como fazer o amigo secreto.
 - Pedidos para entrar nas listas de «sites para sortear amigo secreto».
