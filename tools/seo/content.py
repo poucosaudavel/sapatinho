@@ -113,7 +113,7 @@ body="""
 </ol></nav>
 
 <p>Os preços variam de loja para loja, por isso usa estas listas como ponto de partida e confirma o valor antes de comprar.</p>
-<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/prendas-engracadas-amigo-secreto/">engraçadas</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
+<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/prendas-amigo-secreto-ate-20-euros/">até 20 €</a> · <a href="/prendas-engracadas-amigo-secreto/">engraçadas</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
 
 <h2 id="ate-5">Prendas até 5 €</h2>
 <p>Mais 30 ideias na página <a href="/prendas-amigo-secreto-ate-5-euros/">prendas para amigo secreto até 5 €</a>.</p>
@@ -158,6 +158,7 @@ body="""
 <p class="shop">Procurar na Amazon: [[amz:juego de mesa de viaje|jogos de viagem]] · [[amz:botella termica|garrafas térmicas]] · [[amz:kit de manicura|kits de manicure]] · [[amz:marco de fotos|molduras]]</p>
 
 <h2 id="ate-20">Prendas até 20 €</h2>
+<p>Mais 34 ideias, por tipo de pessoa, na página <a href="/prendas-amigo-secreto-ate-20-euros/">prendas para amigo secreto até 20 €</a>.</p>
 <ul>
 <li>Um jogo de tabuleiro para jogar em família</li>
 <li>Uma seleção de produtos regionais portugueses: queijo, enchidos, doces ou conservas</li>
@@ -883,7 +884,7 @@ body="""
 <li>Um postal bem escrito com uma lembrança partilhada</li>
 </ul>
 
-<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; se é mais alto, as <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
 """,
 faq=[
 ("O que oferecer no amigo secreto com 10 euros?", "Uma caneca com piada, um livro de bolso, um jogo de cartas, chás ou cafés diferentes, um gorro ou umas luvas são apostas seguras. Escolhe pelo que a pessoa gosta de fazer."),
@@ -991,6 +992,108 @@ faq=[
 ("Que prenda engraçada dar a um colega de trabalho?", 'Algo ligado ao escritório ou ao café, como um carimbo «aprovado» ou uma caneca com piada. Há mais ideias no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.'),
 ],
 related=["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-ate-10-euros", "amigo-secreto-na-empresa"],
+))
+
+# ---------------------------------------------------------------- até 20 €
+PAGES.append(dict(
+slug="prendas-amigo-secreto-ate-20-euros",
+date="2026-10-30",
+nav="Prendas até 20 €",
+short="Prendas até 20 €",
+card="34 ideias para um limite mais folgado, por tipo de pessoa.",
+title="Prendas para amigo secreto até 20 €: 34 ideias | Sapatinho",
+h1="Prendas para amigo secreto até 20 euros",
+dek="Com 20 euros já dá para uma prenda mais completa, que a pessoa use durante o ano. Trinta e quatro ideias, por tipo de pessoa, com o preço aproximado de cada uma.",
+description="34 ideias de prendas para amigo secreto até 20 euros, com preço aproximado: para quem gosta de cozinhar, de ler, de jogos, colegas de trabalho, quem gosta de estar em casa e quem tem tudo.",
+body="""
+<p class="lead-answer"><strong>As melhores prendas para amigo secreto até 20 €</strong> são um jogo de tabuleiro pequeno, um livro acabado de sair, um cabaz de produtos portugueses, uma garrafa térmica boa ou um pijama quente. Com este limite dá para escolher algo que a pessoa use durante o ano, e não só no dia da troca.</p>
+
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#cozinha">Para quem gosta de cozinhar</a></li>
+<li><a href="#ler">Para quem gosta de ler</a></li>
+<li><a href="#jogos">Para quem gosta de jogos</a></li>
+<li><a href="#colega">Para um colega de trabalho</a></li>
+<li><a href="#casa">Para quem gosta de estar em casa</a></li>
+<li><a href="#tudo">Para quem «tem tudo»</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<p>Os preços entre parênteses são aproximados e mudam de loja para loja e com as promoções. Confirma o valor antes de comprar.</p>
+
+<h2 id="cozinha">Para quem gosta de cozinhar</h2>
+<ul>
+<li>Uma garrafa de azeite virgem extra de um produtor português (8 a 15 €)</li>
+<li>Uma caixa de flor de sal com sais aromatizados (8 a 15 €)</li>
+<li>Um livro de receitas portuguesas ou de cozinha rápida (12 a 20 €)</li>
+<li>Uma tábua de servir em madeira de oliveira (12 a 20 €)</li>
+<li>Um moinho de pimenta com pimenta em grão (10 a 20 €)</li>
+<li>Um termómetro de cozinha digital, para carne e doces (10 a 18 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:tabla de servir madera de olivo|tábuas de oliveira]] · [[amz:molinillo de pimienta|moinhos de pimenta]] · [[amz:termometro de cocina digital|termómetros de cozinha]]</p>
+
+<h2 id="ler">Para quem gosta de ler</h2>
+<ul>
+<li>Um livro acabado de sair, em capa mole (15 a 20 €)</li>
+<li>Uma luz de leitura recarregável, de mola ou de pescoço (12 a 20 €)</li>
+<li>Um vale de livraria de 20 €, para a pessoa escolher</li>
+<li>Um suporte de livros em madeira, para ler à mesa ou na cozinha (10 a 18 €)</li>
+<li>Um diário de leitura, com espaço para notas e citações (10 a 15 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:luz lectura recargable|luzes de leitura]] · [[amz:atril para libros madera|suportes de livros]] · [[amz:diario de lectura|diários de leitura]]</p>
+
+<h2 id="jogos">Para quem gosta de jogos</h2>
+<ul>
+<li>Um jogo de tabuleiro pequeno, para 2 a 6 pessoas e rápido de aprender (12 a 20 €)</li>
+<li>Um jogo de perguntas de cultura geral para jogar em família (15 a 20 €)</li>
+<li>Um puzzle de 1000 peças com uma imagem bonita (12 a 20 €)</li>
+<li>Um quebra-cabeças de madeira em 3D para montar (10 a 18 €)</li>
+<li>Um conjunto de póquer pequeno, com cartas e fichas numa lata (12 a 20 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:juego de mesa familiar|jogos de tabuleiro]] · [[amz:puzzle 1000 piezas|puzzles de 1000 peças]] · [[amz:puzzle 3d madera|quebra-cabeças de madeira]]</p>
+
+<h2 id="colega">Para um colega de trabalho</h2>
+<ul>
+<li>Uma garrafa térmica de aço inoxidável de 500 ml (12 a 20 €)</li>
+<li>Uma caneca térmica para levar o café (10 a 18 €)</li>
+<li>Um caderno A5 de capa rija com uma caneta boa (12 a 20 €)</li>
+<li>Uma planta de interior num vaso bonito (10 a 20 €)</li>
+<li>Um organizador de secretária em bambu (12 a 20 €)</li>
+<li>Uma bateria portátil pequena para o telemóvel (15 a 20 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:botella termica acero inoxidable 500ml|garrafas térmicas]] · [[amz:taza termica cafe|canecas térmicas]] · [[amz:organizador escritorio bambu|organizadores]] · [[amz:bateria externa pequeña|baterias portáteis]]</p>
+<p>Mais ideias para colegas no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
+
+<h2 id="casa">Para quem gosta de estar em casa</h2>
+<ul>
+<li>Um pijama quente ou umas pantufas boas (15 a 20 €)</li>
+<li>Uma manta polar para o sofá (15 a 20 €)</li>
+<li>Uma vela grande em frasco de vidro (12 a 20 €)</li>
+<li>Um difusor de varetas com um cheiro de inverno (10 a 18 €)</li>
+<li>Uma caixa de chás de inverno com uma caneca (12 a 20 €)</li>
+<li>Um par de meias de lã grossas de boa qualidade (10 a 18 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:pijama invierno|pijamas]] · [[amz:manta polar sofa|mantas]] · [[amz:difusor de varillas|difusores]] · [[amz:calcetines de lana|meias de lã]]</p>
+
+<h2 id="tudo">Para quem «tem tudo»</h2>
+<ul>
+<li>Um cabaz pequeno de produtos regionais: queijo, compota e um enchido (15 a 20 €)</li>
+<li>Uma caixa de conservas portuguesas com latas bonitas (10 a 20 €)</li>
+<li>Uma garrafa de vinho do Douro ou do Porto, se souberes que a pessoa bebe (10 a 20 €)</li>
+<li>Dois bilhetes de cinema, para levar quem quiser (14 a 20 €)</li>
+<li>Um vale de 20 € para o café ou a pastelaria preferida da pessoa</li>
+<li>Um kit para cultivar ervas aromáticas na janela (10 a 18 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:kit cultivo hierbas aromaticas|kits de ervas aromáticas]] · [[amz:cesta gourmet regalo|cestos gourmet]]</p>
+
+<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite de 20 € escrito no convite.</p>
+""",
+faq=[
+("O que oferecer no amigo secreto com 20 euros?", "Um jogo de tabuleiro pequeno, um livro acabado de sair, um cabaz de produtos portugueses, uma garrafa térmica ou um pijama quente são apostas seguras. Escolhe pelo que a pessoa gosta de fazer."),
+("20 euros é muito para o amigo secreto?", "Depende do grupo. Em família e entre amigos próximos dá para uma prenda mais completa; no trabalho, um valor mais baixo deixa toda a gente mais à vontade. O que importa é ser igual para todos."),
+("Posso juntar duas prendas mais pequenas?", "Podes, desde que combinem e o total não passe dos 20 €. Um livro com um marcador, ou uma caneca com uma caixa de chás, ficam bem juntos."),
+("Uma prenda com desconto conta pelo preço original?", 'Não. O limite é o que pagas. Vê as dicas para a <a href="/amigo-secreto-black-friday/">Black Friday</a>.'),
+],
+related=["prendas-amigo-secreto-ate-10-euros", "ideias-de-prendas-amigo-secreto", "amigo-secreto-na-empresa"],
 ))
 
 # ---------------------------------------------------------------- privacidade técnica
