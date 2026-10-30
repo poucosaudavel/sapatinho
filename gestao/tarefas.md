@@ -45,6 +45,6 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 
 ## Notas do gestor
 
-- 30 out: quadro criado a partir do plano de rentabilização até 20 dez.
 - 30 out: página «Prendas até 20 €» feita (antecipada de 6 nov); pesquisa de afiliados feita; publicações de 3 a 9 nov ajustadas às páginas novas. Tudo num PR à espera do Diogo.
 - 30 out: KPIs e objetivos criados em `gestao/kpis.md`, a pedido do Diogo.
+- 30 out: quadro criado a partir do plano de rentabilização até 20 dez.
