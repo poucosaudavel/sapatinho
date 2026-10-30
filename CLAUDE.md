@@ -35,7 +35,7 @@ Antes da primeira vez, o Diogo corre `npx wrangler@4 login` (o Claude nunca faz 
 - Site: `scripts/deploy-site.sh` (gera as páginas, aplica `private/` e publica). **Se `private/` não existir antes de 26 dez 2026, o script recusa**: publicar sem ela apagava páginas privadas que estão online.
 - API: corre primeiro `node --test tests/*.test.mjs`, depois `scripts/deploy-worker.sh`.
 - Depois de um deploy, confirma no site real (página alterada, `/r` com um link de teste, `/api/create` com nome inválido devolve 400).
-- Faz deploy só quando o Diogo pedir ou aprovar.
+- Faz deploy só quando o Diogo pedir ou aprovar. **Exceção:** o `/gestor` tem aprovação permanente do Diogo (30 out 2026) para juntar PRs e publicar o site e a API sozinho, seguindo as verificações de `.claude/commands/gestor.md`.
 
 ## Regras que não se quebram
 

@@ -7,10 +7,10 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 
 | Quem | Responsabilidade | Não faz |
 | --- | --- | --- |
-| Gestor (`/gestor`) | Decide as tarefas da semana, entrega-as aos agentes, revê o trabalho contra as regras do `CLAUDE.md`, mantém este quadro e diz ao Diogo o que precisa dele. Trata do que não é de nenhum agente (pesquisa de afiliados, contas do Brevo, metas). | Não publica, não faz deploy, não junta PR sem o Diogo. |
+| Gestor (`/gestor`) | Decide as tarefas da semana, entrega-as aos agentes, revê o trabalho contra as regras do `CLAUDE.md`, mantém este quadro e diz ao Diogo o que precisa dele. Trata do que não é de nenhum agente (pesquisa de afiliados, contas do Brevo, metas). | Junta PRs e publica o site e a API sozinho, só depois das verificações; nunca publica nas redes nem mexe em chaves. |
 | `seo` | Páginas do site (guias, prendas, FAQ), títulos e descrições, sitemap, rotina do Search Console, textos para pedir links. | Não mexe em `worker/` nem em `private/`. |
 | `social-media` | Publicações e stories do Facebook e Instagram até 20 dez, imagens, plano da semana, leitura das métricas. | Não publica nada em nome do Diogo. |
-| Diogo | Aprova, publica no PC (`scripts/deploy-site.sh`), agenda no Meta, pede indexação, envia números do Search Console e do `/painel`, inscreve-se em afiliados. | |
+| Diogo | Corre o `/gestor` no PC, agenda no Meta, pede indexação, envia números do Search Console e do `/painel`, inscreve-se em afiliados. | |
 
 ## Tarefas
 
@@ -42,3 +42,4 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 ## Notas do gestor
 
 - 30 out: quadro criado a partir do plano de rentabilização até 20 dez.
+- 30 out: o Diogo deu ao gestor autonomia para juntar PRs e publicar o site e a API.

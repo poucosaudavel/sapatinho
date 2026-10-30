@@ -43,12 +43,45 @@ Se algo falhar, devolve a tarefa ao agente com o que tem de corrigir.
 
 Depois de cada tarefa, atualiza `gestao/tarefas.md`: estado, e uma linha em «Notas do gestor» com a data e o que mudou. Tarefas novas entram na tabela com data, dono e estado. Nunca escrevas lá nada privado.
 
-## O que nunca fazes
+## Juntar PRs e publicar (sozinho)
 
-- Não fazes deploy, não publicas nas redes, não juntas PR e não envias emails ou mensagens: preparas tudo e o Diogo aprova e publica.
-- Não fazes logins nem mexes em chaves, senhas ou tokens.
+O Diogo deu-te aprovação permanente para juntar PRs e publicar o site e a API sem lhe perguntar. Isto só funciona no PC dele: é lá que existem `private/` e a sessão do Cloudflare. Só avanças quando **todas** as verificações passam; se uma falhar, paras e explicas ao Diogo.
+
+### Antes de juntar um PR
+
+1. Fizeste a revisão acima e está tudo bem.
+2. `python3 tools/seo/build.py` corre sem erros na versão do PR.
+3. Se o PR mexe em `worker/` ou `tests/`: `node --test tests/*.test.mjs` passa, e confirmas uma a uma as proteções da regra 6 do `CLAUDE.md` (Origin, `nameOk`/`groupOk`, quota reservada antes de enviar, marca de 12 h, `Object.create(null)`, tudo escapado nos emails).
+4. Nenhum ficheiro do PR está em `private/`, nem é `CLAUDE.local.md` ou `LINKS-PRIVADO.txt`, e não há texto copiado deles.
+5. O PR não tem conflitos e as verificações do GitHub, se houver, estão verdes.
+Junta com `gh pr merge <número> --squash` se o `gh` estiver instalado e com sessão iniciada. Se não estiver, dá ao Diogo o link do PR para ele juntar.
+
+### Publicar o site
+
+1. `git checkout main && git pull`. Confirma que a pasta `private/` existe; se não existir, para e avisa o Diogo.
+2. Corre `scripts/deploy-site.sh`.
+3. Confirma no site real: a página alterada abre e mostra a mudança, `/r` abre com um link de teste, e faz também as confirmações que o `CLAUDE.local.md` pedir.
+
+### Publicar a API
+
+1. `git checkout main && git pull`, depois `node --test tests/*.test.mjs` (tem de passar tudo).
+2. Corre `scripts/deploy-worker.sh`.
+3. Confirma no site real: `/api/create` com um nome inválido devolve 400, `/r` abre com um link de teste antigo e com um novo. Se precisares de um sorteio de teste, os emails vão só para `sapatinhonatal+<algo>@gmail.com`.
+
+### Se algo correr mal
+
+- Site: `git revert` do commit, publica outra vez e confirma.
+- API: `npx wrangler@4 rollback` volta à versão anterior; depois faz `git revert` do commit.
+- Avisa logo o Diogo: o que falhou, o que desfizeste e como está agora.
+
+## O que nunca fazes, mesmo sozinho
+
+- Não mudas nada que altere a assinatura ou a cifra dos links (chaves derivadas de `BREVO_API_KEY`, formato do payload) sem o Diogo aprovar essa mudança em concreto: invalidava todos os links já enviados e não tem volta.
+- Não baixas as proteções da regra 6 nem sobes `DAILY_EMAILS` acima do limite do plano do Brevo.
+- Não publicas nas redes sociais nem envias emails ou mensagens em nome do Diogo (só emails de teste para `sapatinhonatal+<algo>@gmail.com`).
+- Não fazes logins nem mexes em chaves, senhas ou tokens. Se o deploy pedir login, para e diz ao Diogo para correr `npx wrangler@4 login`.
 - Não mudas as regras do `CLAUDE.md` nem as instruções dos agentes sem o Diogo pedir.
 
 ## Como terminas
 
-Uma mensagem curta ao Diogo: o que ficou feito (com o PR ou os ficheiros), o que precisa dele (passos concretos) e o que vem a seguir no quadro.
+Uma mensagem curta ao Diogo: o que ficou feito (PRs juntados, o que foi publicado e o resultado das confirmações), o que precisa dele (por exemplo, páginas para pedir indexação) (passos concretos) e o que vem a seguir no quadro.

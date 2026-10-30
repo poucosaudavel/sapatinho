@@ -45,7 +45,7 @@ Nas pesquisas pela ferramenta, os primeiros resultados são sites brasileiros ou
 4. FAQ curta e factual no fim (vira dados estruturados FAQPage).
 5. Ligações: para o guia de ideias, para as páginas de preço vizinhas e para /criar. Atualiza o guia de ideias para ligar à página nova.
 6. Corre `python3 tools/seo/build.py` e verifica: a página está no `sitemap.xml`, o JSON-LD é válido, não há ligações partidas (`grep -o 'href="/[^"]*"'` e confirma que existem).
-7. Mostra ao Diogo o título, a descrição e um resumo antes de publicar. O deploy é com `scripts/deploy-site.sh`, só com aprovação.
+7. Entrega o título, a descrição e um resumo: ao gestor, se foi ele que te deu a tarefa (ele decide a publicação), ou ao Diogo, se trabalhas sem o gestor. Sem o gestor, o deploy (`scripts/deploy-site.sh`) é só com aprovação do Diogo.
 8. Depois do deploy, lembra o Diogo de pedir a indexação no Search Console (propriedade da conta sapatinhonatal@gmail.com).
 
 ## Rotina semanal (segunda-feira; em dezembro, segunda e quinta)
