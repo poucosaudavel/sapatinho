@@ -68,4 +68,4 @@ Criar sorteios precisa do Worker com o segredo `BREVO_API_KEY` configurado. O pa
 
 ## Tecnologia
 
-HTML, CSS e JavaScript sem frameworks · Cloudflare Pages, Workers, KV e Email Routing · Brevo (email transacional) · Python (gerador de páginas)
+HTML, CSS e JavaScript sem frameworks · Cloudflare Pages, Workers, KV, Email Routing e Rate Limiting · Brevo (email transacional) · Python (gerador de páginas)
