@@ -18,10 +18,14 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | --- | --- | --- | --- |
 | 3 nov | seo | /criar: título e descrição; guia de ideias liga às páginas de preço (PR #1) | à espera do Diogo: publicar e pedir indexação |
 | 4 nov | seo | Página de prendas engraçadas (PR #2) | à espera do Diogo: publicar e pedir indexação |
-| até 2 nov | gestor | Pesquisar programas de afiliados em Portugal (vales de experiências, lojas) | por fazer |
+| até 2 nov | gestor | Pesquisar programas de afiliados em Portugal (vales de experiências, lojas) | feito (`gestao/afiliados.md`) |
 | 2 nov | Diogo | Agendar no Meta o resto de novembro | por fazer |
-| 3 a 9 nov | social-media | Publicações que levam às páginas novas de prendas | por fazer |
-| 6 nov | seo | Prendas até 20 € | por fazer |
+| todas as segundas | Diogo | Enviar os números da semana (Search Console, `/painel`, Amazon, Meta); ver `gestao/kpis.md` | por fazer |
+| todas as segundas | gestor | Atualizar `gestao/kpis.md` e criar tarefas para o que estiver em risco | por fazer |
+| 16 nov | gestor | Pôr número nas metas «a definir» dos KPIs | por fazer |
+| até 8 nov | Diogo | Registar-se na Awin e mandar a lista de lojas portuguesas que aparecem (ver `gestao/afiliados.md`) | por fazer |
+| 3 a 9 nov | social-media | Publicações que levam às páginas novas de prendas | feito: à espera do Diogo (agendar no Meta a 2 nov) |
+| 6 nov | seo | Prendas até 20 € | à espera do Diogo: publicar e pedir indexação |
 | 9 nov | seo | Prendas até 15 € | por fazer |
 | 9 nov | gestor | Decidir que afiliados compensam e dizer ao Diogo | por fazer |
 | 11 nov | seo | Guia da empresa: 20 ideias para colegas | por fazer |
@@ -42,3 +46,5 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 ## Notas do gestor
 
 - 30 out: quadro criado a partir do plano de rentabilização até 20 dez.
+- 30 out: página «Prendas até 20 €» feita (antecipada de 6 nov); pesquisa de afiliados feita; publicações de 3 a 9 nov ajustadas às páginas novas. Tudo num PR à espera do Diogo.
+- 30 out: KPIs e objetivos criados em `gestao/kpis.md`, a pedido do Diogo.

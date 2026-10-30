@@ -13,6 +13,8 @@ Páginas do site para links (usar exatamente estes URLs):
 - Criar sorteio: https://sapatinho-natal.pt/criar
 - Regras: https://sapatinho-natal.pt/regras-do-amigo-secreto/
 - Ideias de prendas por preço: https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/ (âncoras #ate-5 #ate-10 #ate-15 #ate-20 #ate-50 #por-pessoa)
+- Prendas engraçadas: https://sapatinho-natal.pt/prendas-engracadas-amigo-secreto/ (âncoras #ate-5 #ate-10 #ate-20 #trabalho #feito #regras)
+- Prendas até 20 €: https://sapatinho-natal.pt/prendas-amigo-secreto-ate-20-euros/ (online a partir de 6 nov; âncoras #cozinha #ler #jogos #colega #casa #tudo)
 - À distância: https://sapatinho-natal.pt/amigo-secreto-a-distancia/
 - Na empresa: https://sapatinho-natal.pt/amigo-secreto-na-empresa/
 - Como fazer o sorteio (papelinhos vs online): https://sapatinho-natal.pt/como-fazer-sorteio-amigo-secreto/

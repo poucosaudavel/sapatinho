@@ -26,7 +26,7 @@
       },
       {
        "template": "statement",
-       "title": "Ninguém se tira a si próprio. E a página de quem organiza não mostra os resultados.",
+       "title": "A página de quem organiza não mostra os resultados.",
        "body": "Dá ainda para impedir que casais ou irmãos se tirem um ao outro."
       },
       {
@@ -159,7 +159,7 @@
       },
       {
        "template": "statement",
-       "title": "No Sapatinho, ninguém se tira a si próprio. E não há papelinhos para espreitar.",
+       "title": "Ninguém se tira a si próprio. E não há papelinhos para espreitar.",
        "body": "Cada pessoa descobre o seu nome sozinha, no próprio telemóvel, quando quiser."
       },
       {
@@ -219,11 +219,11 @@
      "slides": [
       {
        "template": "statement",
-       "title": "Quem organiza também joga. E também não sabe quem tirou quem.",
+       "title": "Quem organiza também joga. A página dele não mostra quem tirou quem.",
        "body": "O link de organizador serve para reenviar convites, não para espreitar resultados."
       }
      ],
-     "caption": "Organizar o amigo secreto tinha um problema: quem organizava ficava a saber tudo. 🤫\n\nCom papelinhos ou listas feitas à mão, alguém acabava sempre por ver os resultados. E lá se ia a surpresa.\n\nNo Sapatinho, quem organiza tem um link próprio para acompanhar o grupo e reenviar convites a quem não os encontrou. Essa página não mostra quem tirou quem: cada pessoa só descobre o seu próprio nome.\n\nOu seja: podes organizar e participar como os outros, sem saber nada antes do tempo.\n\nProntos para organizar sem spoilers? O link está na bio.",
+     "caption": "Organizar o amigo secreto tinha um problema: quem organizava ficava a saber tudo. 🤫\n\nCom papelinhos ou listas feitas à mão, alguém acabava sempre por ver os resultados. E lá se ia a surpresa.\n\nNo Sapatinho, quem organiza tem um link próprio para acompanhar o grupo e reenviar convites a quem não os encontrou. Essa página não mostra quem tirou quem: cada pessoa só descobre o seu próprio nome.\n\nOu seja: podes organizar e participar como os outros, sem a tua página te estragar a surpresa.\n\nProntos para organizar sem spoilers? O link está na bio.",
      "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #privacidade #natalemfamilia #portugal",
      "link": "https://sapatinho-natal.pt/criar"
     },
@@ -304,28 +304,63 @@
     {
      "id": "2026-11-04-a",
      "time": "20:30",
-     "pillar": "dicas",
+     "pillar": "ideias",
      "slides": [
       {
+       "template": "cover",
+       "kicker": "Prendas engraçadas",
+       "title": "Prendas que fazem rir e ainda servem para alguma coisa"
+      },
+      {
+       "template": "list",
+       "title": "Até 5 €",
+       "items": [
+        "Orelhas de rena para usar ao jantar",
+        "Pato de borracha «para os dias difíceis»",
+        "Bigode postiço com um postal a condizer",
+        "Caderno de capa absurda para «ideias geniais»"
+       ]
+      },
+      {
+       "template": "list",
+       "title": "Até 10 €",
+       "items": [
+        "Meias com pizzas, abacates ou bichos",
+        "Caneca com uma frase que diz tudo",
+        "Jogo de cartas para jogar no próprio jantar",
+        "Porta-chaves que apita quando assobias"
+       ]
+      },
+      {
+       "template": "list",
+       "title": "Até 20 €",
+       "items": [
+        "Pijama de Natal que ninguém compraria",
+        "Pantufas em forma de bicho",
+        "Kit para cultivar malaguetas em casa",
+        "Avental sobre os dotes culinários"
+       ]
+      },
+      {
        "template": "tip",
-       "kicker": "Dica de organizador",
-       "title": "Combina o limite e a data antes de sortear",
-       "body": "Assim ninguém compra uma prenda de 40 € para quem lhe vai dar um porta-chaves. E toda a gente sabe até quando tem para tratar do assunto."
+       "kicker": "Regra de ouro",
+       "title": "A piada é com a pessoa, nunca sobre ela.",
+       "body": "Nada sobre o peso, a idade ou a aparência. E junta uma parte útil: uma caneca com piada usa-se todos os dias, um objeto só para rir vai para a gaveta."
       }
      ],
-     "caption": "O amigo secreto corre mal quase sempre pelo mesmo motivo: ninguém combinou nada.\n\nUm gasta 40 €, outro aparece com um íman de frigorífico. Um acha que a troca é na consoada, outro jura que era no almoço do dia 25. E alguém só descobre que havia limite quando já embrulhou a prenda.\n\nDuas decisões resolvem quase tudo:\n• o limite da prenda (um valor, não um intervalo)\n• a data e o local da troca\n\nNo Sapatinho, o limite e a data ficam definidos logo quando crias o sorteio.\n\nJuntámos as regras todas no site, link na bio. E tu, já te aconteceu dar muito mais do que recebeste?",
-     "hashtags": "#amigosecreto #regrasdoamigosecreto #natal2026 #dicasdenatal #natalemfamilia #portugal",
-     "link": "https://sapatinho-natal.pt/regras-do-amigo-secreto/"
+     "caption": "Há prendas que se abrem em silêncio. E há prendas que põem a mesa inteira a rir. 😂\n\nUma prenda engraçada não tem de ser cara nem inútil. Um pato de borracha «para os dias difíceis», umas meias com abacates ou um pijama de Natal que ninguém teria coragem de comprar para si: faz rir na hora e continua a servir depois.\n\nSó há uma regra: a piada é com a pessoa, nunca sobre ela. Nada de peso, idade ou aparência, e pensa em quem vai estar a ver quando ela abrir a prenda.\n\nJuntámos ideias engraçadas até 5 €, até 10 € e até 20 €, e outras para colegas de trabalho, no site. Link na bio.\n\nQual foi a prenda que mais vos fez rir num amigo secreto?",
+     "hashtags": "#amigosecreto #prendasengracadas #ideiasdeprendas #prendasdenatal #natal2026 #humor #portugal",
+     "link": "https://sapatinho-natal.pt/prendas-engracadas-amigo-secreto/"
     }
    ],
    "stories": [
     {
      "time": "10:00",
      "type": "ideia",
-     "item": "Postal à mão e um chocolate bom",
+     "item": "Pato de borracha «para os dias difíceis»",
      "price": "até 5 €",
-     "text": "Pouco dinheiro, muito carinho. Mais ideias até 5 € no nosso guia.",
-     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-5"
+     "text": "Para desabafar com alguém que nunca te interrompe. Mais ideias engraçadas no guia.",
+     "link": "https://sapatinho-natal.pt/prendas-engracadas-amigo-secreto/#ate-5"
     },
     {
      "time": "14:00",
@@ -335,7 +370,7 @@
     {
      "time": "20:45",
      "type": "partilha",
-     "text": "Duas decisões que evitam dramas",
+     "text": "Prendas que fazem rir a mesa toda",
      "post": "2026-11-04-a"
     }
    ]
@@ -385,11 +420,10 @@
     {
      "time": "09:30",
      "type": "ideia",
-     "item": "Luz de leitura para livros",
+     "item": "Caneca com uma frase que diz tudo",
      "price": "até 10 €",
-     "text": "Para quem lê na cama e não quer acordar ninguém. Link de afiliado.",
-     "link": "https://www.amazon.es/s?k=luz+lectura+libro",
-     "afiliado": true
+     "text": "Uma piada que só vocês percebem e que se usa todos os dias. Mais ideias no guia.",
+     "link": "https://sapatinho-natal.pt/prendas-engracadas-amigo-secreto/#ate-10"
     },
     {
      "time": "15:00",
@@ -433,10 +467,10 @@
     {
      "time": "10:00",
      "type": "ideia",
-     "item": "Suculenta num vaso giro",
-     "price": "até 10 €",
-     "text": "Para o colega que mata todas as plantas. Esta aguenta. Mais ideias no guia.",
-     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-10"
+     "item": "Planta de interior num vaso bonito",
+     "price": "até 20 €",
+     "text": "Para o colega que mal conheces. Mais ideias até 20 € para colegas no guia.",
+     "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-20-euros/#colega"
     },
     {
      "time": "13:00",
@@ -564,49 +598,58 @@
      "slides": [
       {
        "template": "cover",
-       "kicker": "Até 10 €",
-       "title": "Prendas baratas que não parecem baratas"
+       "kicker": "Até 20 €",
+       "title": "Prendas para usar o ano todo, não só no dia da troca"
       },
       {
        "template": "list",
-       "title": "Para quem gosta de casa",
+       "title": "Para quem gosta de cozinhar",
        "items": [
-        "Vela aromática de inverno",
-        "Caneca com uma piada só vossa",
-        "Panos de cozinha bonitos",
-        "Frasco de bolachas caseiras"
+        "Azeite de um pequeno produtor português",
+        "Tábua de servir em madeira de oliveira",
+        "Flor de sal com sais aromatizados",
+        "Termómetro de cozinha digital"
        ]
       },
       {
        "template": "list",
-       "title": "Para quem gosta de rir",
+       "title": "Para quem gosta de jogos",
        "items": [
-        "Jogo de cartas para depois do jantar",
-        "Meias com um padrão absurdo",
-        "Livro de anedotas secas",
-        "Baralho de perguntas para a mesa"
+        "Jogo de tabuleiro pequeno e rápido",
+        "Jogo de perguntas para jogar em família",
+        "Quebra-cabeças de madeira em 3D",
+        "Conjunto de póquer numa lata"
+       ]
+      },
+      {
+       "template": "list",
+       "title": "Para quem «tem tudo»",
+       "items": [
+        "Cabaz com queijo, compota e um enchido",
+        "Caixa de conservas portuguesas",
+        "Dois bilhetes de cinema",
+        "Kit de ervas aromáticas para a janela"
        ]
       },
       {
        "template": "statement",
-       "title": "O segredo não é o preço. É mostrar que pensaste na pessoa.",
-       "body": "Um bilhete escrito à mão vale mais do que meia hora a escolher entre dois cachecóis iguais."
+       "title": "O limite é o que pagas. E é igual para todos.",
+       "body": "Podes juntar duas prendas pequenas, desde que combinem e o total não passe dos 20 €."
       }
      ],
-     "caption": "Dez euros chegam para uma prenda com pinta. Prometemos. 🎁\n\nO truque está em escolher para a pessoa, não para a prateleira. Uma caneca qualquer é só uma caneca. Uma caneca com aquela piada que só vocês os dois percebem é a prenda de que se fala no jantar seguinte.\n\nNesta lista há ideias para quem gosta de casa e para quem gosta de rir. E há muitas mais, organizadas por preço, no nosso guia de prendas: até 5 €, até 10 €, até 20 € e por aí fora. Link na bio.\n\nGuarda para mais tarde e diz-nos: qual foi a melhor prenda barata que já recebeste?",
-     "hashtags": "#amigosecreto #ideiasdeprendas #prendasdenatal #prendasbaratas #natal2026 #portugal",
-     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-10"
+     "caption": "Com 20 € já dá para uma prenda que a pessoa use durante o ano, e não só no dia da troca. 🎁\n\nUm azeite bom de um produtor português, um jogo de tabuleiro para o fim do jantar, um cabaz com queijo e compota para quem diz que tem tudo. Escolhe pelo que a pessoa gosta de fazer, não pelo que está na prateleira.\n\nE se te apetecer juntar duas coisas pequenas, força: uma caneca com uma caixa de chás fica bem. O total é que não passa dos 20 €. O limite é o que pagas, com ou sem desconto.\n\nNo site há uma página só com ideias até 20 €, por tipo de pessoa e com o preço aproximado de cada uma. Link na bio.\n\nQual é o limite no teu grupo este ano?",
+     "hashtags": "#amigosecreto #ideiasdeprendas #prendasdenatal #prendasate20 #natal2026 #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-20-euros/"
     }
    ],
    "stories": [
     {
      "time": "10:00",
      "type": "ideia",
-     "item": "Puzzle de 1000 peças",
-     "price": "até 15 €",
-     "text": "Para o domingo à tarde de quem tem paciência (ou quer ter). Link de afiliado.",
-     "link": "https://www.amazon.es/s?k=puzzle+1000+piezas",
-     "afiliado": true
+     "item": "Jogo de tabuleiro pequeno e rápido",
+     "price": "até 20 €",
+     "text": "Para jogar no fim do jantar, com a família toda à mesa. Mais ideias no guia.",
+     "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-20-euros/#jogos"
     },
     {
      "time": "13:00",
@@ -622,7 +665,7 @@
     {
      "time": "20:45",
      "type": "partilha",
-     "text": "Prendas até 10 € com pinta",
+     "text": "Ideias até 20 € para usar o ano todo",
      "post": "2026-11-08-a"
     }
    ]
@@ -977,7 +1020,7 @@
      ],
      "caption": "\"Não quero nada, a sério.\" Todos conhecemos alguém assim. E esse alguém vai sair a alguém. 🎁\n\nPara facilitar, separámos ideias até 20 € por tipo de pessoa: para quem vive no sofá, para quem nunca para quieto e para o clássico \"não preciso de nada\". Para este último, a regra é simples: oferece uma coisa que se gasta ou uma coisa que se vive. Um bom café, um chocolate a sério, um pequeno-almoço fora.\n\nNo nosso guia há muitas mais ideias por preço, de 5 € a 50 €. Link na bio.\n\nGuarda esta publicação para o dia em que souberes quem te saiu. Qual destes três tipos te calhou o ano passado?",
      "hashtags": "#amigosecreto #ideiasdeprendas #prendasdenatal #prendasate20 #natal2026 #portugal",
-     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-20"
+     "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-20-euros/"
     },
     {
      "id": "2026-11-14-b",

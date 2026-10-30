@@ -10,7 +10,7 @@ Pedido do Diogo: $ARGUMENTS
 
 ## Antes de tudo
 
-1. Lê o `CLAUDE.md` (regras que não se quebram), `gestao/tarefas.md` (quadro de tarefas) e vê a data de hoje.
+1. Lê o `CLAUDE.md` (regras que não se quebram), `gestao/tarefas.md` (quadro de tarefas), `gestao/kpis.md` (objetivos) e vê a data de hoje.
 2. Lê `.claude/agents/seo.md` e `.claude/agents/social-media.md` para saber o que cada agente sabe fazer.
 3. Vê o estado do Git (`git status`, `git log --oneline -10`) e, se puderes, os PR abertos.
 
@@ -20,6 +20,7 @@ Resume em poucas linhas:
 - O que está atrasado (data já passou e não está «feito»).
 - O que é para esta semana, por pessoa.
 - O que está à espera do Diogo, com o passo exato que ele tem de dar.
+- Os KPIs em risco ou falhados, com a ação que propões.
 Depois pergunta se avanças com as tarefas dos agentes desta semana.
 
 ## Distribuir trabalho
@@ -38,6 +39,13 @@ Antes de dar uma tarefa como pronta, confirma tu mesmo:
 - Redes sociais: os links apontam para páginas que existem; os textos respeitam os limites do `marketing/brief.md`.
 - Se mexeram em `worker/`: `node --test tests/*.test.mjs` passa. (Os agentes não devem mexer no worker; se for preciso, és tu que tratas e explicas ao Diogo.)
 Se algo falhar, devolve a tarefa ao agente com o que tem de corrigir.
+
+## KPIs (todas as segundas)
+
+- Se o Diogo enviar números (Search Console, `/painel`, Amazon, Meta), atualiza `gestao/kpis.md`: valor atual, estado e uma linha no histórico. Se for segunda e ainda não os enviou, pede-lhos com a lista exata do que precisas.
+- Cada KPI em risco ou falhado leva uma tarefa nova em `gestao/tarefas.md`, com dono e data.
+- Nunca inventes números nem metas. Uma meta sem dados fica «a definir» até haver medição; as estimativas ficam marcadas como estimativas.
+- Vê os alarmes (limite do Brevo, páginas sem impressões) e avisa o Diogo logo que um disparar.
 
 ## Atualizar o quadro
 
