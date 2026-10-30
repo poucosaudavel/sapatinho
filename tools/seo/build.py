@@ -284,8 +284,8 @@ def patch_home():
 def patch_criar():
     f = f"{SITE}/criar.html"
     h = open(f).read()
-    title = "Criar amigo secreto online · Sorteio grátis por email | Sapatinho"
-    desc = "Cria o sorteio do amigo secreto em dois minutos: escreve os nomes e os emails, define o limite da prenda e quem não se pode tirar. Grátis e sem registo."
+    title = "Sorteio do amigo secreto online, grátis e por email | Sapatinho"
+    desc = "Faz o sorteio do amigo secreto online em dois minutos: nomes, emails, limite da prenda e quem não se pode tirar. Cada pessoa recebe o seu link. Grátis e sem registo."
     graph = [ORG, WEBSITE, crumbs_ld([("Início", BASE + "/"), ("Criar sorteio", BASE + "/criar")])]
     newhead = head(title, desc, BASE + "/criar", og_title="Criar um amigo secreto · Sapatinho",
                    og_desc="Escreve os nomes e os emails, carrega em sortear e cada pessoa recebe o convite. Grátis e sem registo.",
