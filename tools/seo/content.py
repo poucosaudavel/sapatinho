@@ -113,7 +113,7 @@ body="""
 </ol></nav>
 
 <p>Os preços variam de loja para loja, por isso usa estas listas como ponto de partida e confirma o valor antes de comprar.</p>
-<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
+<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/prendas-engracadas-amigo-secreto/">engraçadas</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
 
 <h2 id="ate-5">Prendas até 5 €</h2>
 <p>Mais 30 ideias na página <a href="/prendas-amigo-secreto-ate-5-euros/">prendas para amigo secreto até 5 €</a>.</p>
@@ -891,6 +891,106 @@ faq=[
 ("Uma prenda com desconto conta pelo preço original?", 'Não. O limite é o que pagas. Vê as dicas para a <a href="/amigo-secreto-black-friday/">Black Friday</a>.'),
 ],
 related=["prendas-amigo-secreto-ate-5-euros", "amigo-secreto-na-empresa"],
+))
+
+# ---------------------------------------------------------------- engraçadas
+PAGES.append(dict(
+slug="prendas-engracadas-amigo-secreto",
+date="2026-10-30",
+nav="Prendas engraçadas",
+short="Prendas engraçadas",
+card="30 prendas para fazer rir o grupo, por preço, sem ofender ninguém.",
+title="Prendas engraçadas para amigo secreto: 30 ideias | Sapatinho",
+h1="Prendas engraçadas para o amigo secreto",
+dek="Uma prenda engraçada é a que faz rir o grupo inteiro e ainda serve para alguma coisa. Trinta ideias, de 5 a 20 euros.",
+description="30 prendas engraçadas para amigo secreto, até 5, 10 e 20 €: para o jantar de Natal, para o escritório e feitas por ti. Ideias que fazem rir sem ofender ninguém.",
+body="""
+<p class="lead-answer"><strong>As melhores prendas engraçadas para o amigo secreto</strong> fazem rir na hora e continuam a ser úteis depois: uma caneca com piada, meias ridículas, um jogo de cartas para o jantar ou um vale feito por ti. A regra é simples: a piada é com a pessoa, nunca sobre ela.</p>
+
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#ate-5">Engraçadas até 5 €</a></li>
+<li><a href="#ate-10">Engraçadas até 10 €</a></li>
+<li><a href="#ate-20">Engraçadas até 20 €</a></li>
+<li><a href="#trabalho">Para colegas de trabalho</a></li>
+<li><a href="#feito">Feitas por ti</a></li>
+<li><a href="#regras">Como não correr mal</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<p>Os preços variam de loja para loja e mudam com as promoções. Usa as listas como ponto de partida e confirma o valor antes de comprar.</p>
+
+<h2 id="ate-5">Engraçadas até 5 €</h2>
+<ul>
+<li>Umas orelhas de rena ou um gorro de Natal para usar durante o jantar</li>
+<li>Um pato de borracha «para os dias difíceis»</li>
+<li>Óculos de sol de plástico enormes, «para o verão que vem»</li>
+<li>Rebuçados ou pastilhas de sabores estranhos</li>
+<li>Um bigode postiço com um postal: «para quando precisares de passar despercebido»</li>
+<li>Um caderno com uma capa absurda, para «ideias geniais»</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:diadema reno navidad|orelhas de rena]] · [[amz:pato de goma|patos de borracha]] · [[amz:bigotes postizos|bigodes postiços]]</p>
+
+<h2 id="ate-10">Engraçadas até 10 €</h2>
+<ul>
+<li>Meias com um padrão ridículo: pizzas, abacates ou a cara de um animal</li>
+<li>Uma caneca com uma frase que diga tudo sobre a pessoa</li>
+<li>Um jogo de cartas de perguntas ou desafios para jogar no próprio jantar</li>
+<li>Um porta-chaves que faz um barulho quando assobias</li>
+<li>Um puzzle pequeno com uma imagem improvável, como uma tosta mista</li>
+<li>Um livro de anedotas ou de factos inúteis</li>
+<li>Um sabonete em forma de coisa que não é sabonete</li>
+<li>Um tapete de rato com uma piada interna do grupo</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:calcetines divertidos|meias divertidas]] · [[amz:taza divertida|canecas com piada]] · [[amz:juego de cartas para fiestas|jogos de cartas]] · [[amz:llavero silbato encuentra llaves|porta-chaves que apita]]</p>
+
+<h2 id="ate-20">Engraçadas até 20 €</h2>
+<ul>
+<li>Um pijama de Natal ou um robe que ninguém teria coragem de comprar para si</li>
+<li>Um jogo de tabuleiro rápido e barulhento, para jogar no fim do jantar</li>
+<li>Um kit para cultivar algo inesperado em casa, como malaguetas ou cogumelos</li>
+<li>Uma almofada com a cara de um animal de estimação ou de uma figura do grupo</li>
+<li>Umas pantufas em forma de bicho</li>
+<li>Uma lâmpada ou candeeiro com uma forma divertida</li>
+<li>Um avental de cozinha com uma frase sobre os dotes culinários da pessoa</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:pijama navidad divertido|pijamas de Natal]] · [[amz:juego de mesa rapido fiesta|jogos rápidos]] · [[amz:zapatillas de casa animales|pantufas de bicho]] · [[amz:kit cultivo guindillas|kits de cultivo]]</p>
+
+<h2 id="trabalho">Para colegas de trabalho</h2>
+<p>No trabalho, a piada tem de funcionar com toda a gente a ver. Fica pelo escritório, pelo café e pelas reuniões, e deixa de fora a vida pessoal da pessoa.</p>
+<ul>
+<li>Um carimbo com «aprovado» ou «visto», para a secretária</li>
+<li>Uma caneca «não falo antes do primeiro café»</li>
+<li>Um botão vermelho que diz uma frase quando se carrega</li>
+<li>Um mini cesto de basquetebol para o caixote do papel</li>
+<li>Um bloco de notas «coisas que podiam ter sido um email»</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:boton rojo frases|botões com frases]] · [[amz:mini canasta papelera|mini cestos de basquetebol]] · [[amz:sello personalizado aprobado|carimbos]]</p>
+<p>Mais ideias para colegas no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
+
+<h2 id="feito">Feitas por ti</h2>
+<ul>
+<li>Um vale feito à mão: «vale uma vez em que te dou razão»</li>
+<li>Um frasco de «remédio para a segunda-feira» com rebuçados e uma receita escrita</li>
+<li>Um diploma impresso: «melhor a estacionar do grupo», ou outro talento duvidoso</li>
+<li>Um calendário de 2027 com fotografias engraçadas do grupo</li>
+</ul>
+
+<h2 id="regras">Como não correr mal</h2>
+<ul>
+<li><strong>A piada é com a pessoa, não sobre ela.</strong> Nada sobre o peso, a idade, a aparência ou a vida amorosa.</li>
+<li><strong>Junta uma parte útil.</strong> Uma caneca com piada usa-se todos os dias; um objeto só para rir acaba numa gaveta.</li>
+<li><strong>Conhece o grupo.</strong> O que resulta entre amigos pode não resultar com a família ou no trabalho.</li>
+<li><strong>Respeita o limite.</strong> Uma piada cara deixa os outros desconfortáveis.</li>
+<li><strong>Escreve um postal.</strong> Uma frase a explicar a piada ajuda a pessoa a perceber que foi pensada para ela. Há ideias nas <a href="/pistas-e-mensagens-amigo-secreto/">pistas e mensagens</a>.</li>
+</ul>
+<p>Se preferes algo mais clássico, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+""",
+faq=[
+("Qual é uma boa prenda engraçada para o amigo secreto?", "Uma que faça rir e sirva para alguma coisa: meias ridículas, uma caneca com piada, um jogo de cartas para o jantar ou um pijama de Natal. Funcionam com quase toda a gente."),
+("Uma prenda engraçada pode ofender?", "Pode, se a piada for sobre a pessoa. Evita temas como o peso, a idade ou a aparência, e pensa em quem vai estar a ver quando ela abrir a prenda."),
+("Que prenda engraçada dar a um colega de trabalho?", 'Algo ligado ao escritório ou ao café, como um carimbo «aprovado» ou uma caneca com piada. Há mais ideias no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.'),
+],
+related=["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-ate-10-euros", "amigo-secreto-na-empresa"],
 ))
 
 # ---------------------------------------------------------------- privacidade técnica
