@@ -12,7 +12,7 @@
 2. O servidor faz o sorteio, garantindo que ninguém se tira a si próprio e que as exclusões são respeitadas, e envia a cada pessoa um convite por email.
 3. Cada participante abre o seu link, carrega em "Sortear" e vê o resultado numa roleta animada.
 4. Depois de sortear, recebe um segundo email com o nome que lhe saiu, para confirmar sempre que quiser.
-5. Quem organiza fica com um link próprio para reenviar convites, sem ver os resultados.
+5. Quem organiza fica com um link próprio para reenviar convites. Essa página não mostra os resultados; quem organiza só veria o resultado de alguém se abrisse o link dessa pessoa.
 
 ## Arquitetura
 
@@ -25,7 +25,7 @@ Navegador ──► Cloudflare Pages (site estático: site/)
 ```
 
 - **Sem base de dados.** O resultado de cada participante vai no próprio link, codificado e assinado com HMAC-SHA256. Um link alterado à mão é rejeitado pelo servidor.
-- **Privacidade por desenho.** Cada link só revela o resultado do seu dono. Quem organiza não vê quem tirou quem.
+- **Privacidade por desenho.** Cada link só revela o resultado do seu dono. A página de quem organiza não mostra quem tirou quem (tem os links de todos, para reenviar convites, mas não os abre).
 - **Email cifrado dentro do link.** O email de cada participante só serve para enviar o segundo email e vai no próprio link cifrado com AES-GCM: só o servidor o consegue ler. Ao abrir o link, a página tira o código do endereço (fica só `/r`), para não ficar no histórico nem nas estatísticas.
 - **Só contagens anónimas.** O Worker guarda, num Workers KV, contagens por dia (sorteios, convites, quem já sorteou, faixa do limite, tamanho do grupo), sem nomes nem emails. Uma página privada (`/painel`) mostra-as através de `GET /api/stats`, protegido por um segredo.
 - **Proteção contra abusos:**

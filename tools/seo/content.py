@@ -85,7 +85,7 @@ faq=[
 ("Posso tirar a pessoa que me tirou a mim?", "Pode acontecer e não é um problema: as duas pessoas trocam prendas entre si. Só não te podes tirar a ti próprio."),
 ("Quanto se deve gastar no amigo secreto?", "Depende do grupo. Em família ou entre amigos, um limite entre 10 e 20 € costuma funcionar bem. No trabalho, um valor mais baixo deixa toda a gente à vontade. O importante é ser igual para todos e combinado antes do sorteio."),
 ("O que fazer se alguém desistir depois do sorteio?", "Não é preciso repetir o sorteio. Quem tinha tirado a pessoa que desistiu passa a oferecer a prenda a quem essa pessoa tinha tirado. Assim ninguém fica sem prenda e só uma pessoa tem de mudar de escolha."),
-("A pessoa que organiza também pode participar?", "Pode. No Sapatinho quem organiza não vê os resultados, por isso joga como toda a gente."),
+("A pessoa que organiza também pode participar?", "Pode. A página de quem organiza não mostra os resultados. Quem organiza recebe os links de todos para poder reenviar convites, por isso só veria o resultado de outra pessoa se abrisse o link dela. Basta não o fazer para jogar como toda a gente."),
 ],
 related=["ideias-de-prendas-amigo-secreto", "amigo-secreto-a-distancia"],
 ))
@@ -699,7 +699,7 @@ faq=[
 ("Posso rodar a roleta outra vez se não gostar do nome?", "Não. O sorteio fica feito quando é criado e o teu link mostra sempre o mesmo nome. É isso que garante que cada pessoa tem um amigo secreto diferente."),
 ("A roleta pode parar no meu nome?", "Não. O teu nome nunca entra no teu sorteio."),
 ("Preciso de instalar alguma app?", "Não. A roleta abre no navegador do telemóvel ou do computador, a partir do link do email."),
-("Quem organiza vê o resultado da roleta dos outros?", "Não. Cada resultado só aparece a quem abre o seu link. Quem organiza tem um link próprio para reenviar convites, sem ver quem saiu a quem."),
+("Quem organiza vê o resultado da roleta dos outros?", "A página de quem organiza não mostra os resultados. Cada resultado aparece a quem abre o link correspondente. Quem organiza tem os links de todos para poder reenviar convites, por isso só veria o resultado de outra pessoa se abrisse o link dela."),
 ],
 related=["como-fazer-sorteio-amigo-secreto", "regras-do-amigo-secreto"],
 ))

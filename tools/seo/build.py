@@ -195,6 +195,7 @@ PRIVACY_BODY = """
 <h2>Cookies</h2>
 <p>O Sapatinho não usa cookies de publicidade nem de análise. Para saber quantas pessoas visitam o site usamos o Cloudflare Web Analytics, que não usa cookies e não identifica visitantes individualmente. Os nossos fornecedores podem usar cookies estritamente necessários para segurança.</p>
 <p>Guardamos também contagens anónimas por dia (número de sorteios, de convites e de pessoas que já sortearam, faixa do limite da prenda e tamanho do grupo), sem nomes, emails nem resultados, para sabermos como o serviço é usado.</p>
+<p>Para evitar abusos (por exemplo, alguém usar o site para enviar emails em massa), guardamos durante 24 horas um código irreversível calculado a partir do endereço IP de quem cria um sorteio, só para contar quantos sorteios esse endereço criou nesse dia. Também guardamos durante 12 horas um código irreversível de cada link que pediu o email com o resultado, para não enviar o mesmo email repetidamente. Nenhum destes códigos permite saber o IP, o nome ou o email.</p>
 
 <h2>Responsabilidade de quem organiza</h2>
 <p>Quem cria um sorteio indica os emails de outras pessoas. Ao fazê-lo, confirma que essas pessoas aceitam participar e receber os emails do Sapatinho.</p>
@@ -225,7 +226,7 @@ HOME_FAQ = [
 ("Tem roleta?", 'Tem. Cada pessoa roda a sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel e só ela vê o nome em que a roleta pára.'),
 ("Dá para impedir que casais ou irmãos se tirem um ao outro?", "Sim. Ao criar o sorteio, indicas os pares que não se podem tirar e o sorteio respeita-os."),
 ("Posso fazer o sorteio mais do que uma vez?", "Não. O sorteio é feito uma única vez para cada participante. Se voltares a abrir o link, vês o mesmo resultado."),
-("Quem organiza fica a saber os resultados?", "Não, desde que não abra os links dos outros. Cada resultado só aparece a quem abre o seu link."),
+("Quem organiza fica a saber os resultados?", "A página de quem organiza não mostra os resultados. Quem organiza recebe os links de todos para poder reenviar convites, por isso só veria o resultado de outra pessoa se abrisse o link dela."),
 ("Posso sair-me a mim próprio?", "Não. O teu nome nunca entra no teu sorteio."),
 ("Dá para fazer amigo secreto à distância?", 'Sim. O sorteio é por email, por isso ninguém precisa de estar junto. Vê o guia do <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a>.'),
 ("Não recebi o email. E agora?", "Procura na pasta de spam ou promoções por um email do Sapatinho. Se não estiver lá, pede a quem organizou para te reenviar o convite. O teu resultado não se perde."),
