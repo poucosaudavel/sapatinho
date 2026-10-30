@@ -51,6 +51,10 @@ Os guias são gerados a partir de `tools/seo/content.py`.
 | `site/` | Site estático: página inicial, criar sorteio, página do sorteio, link de organizador e guias |
 | `worker/worker.js` | API: `POST /api/create` (sorteio e convites), `POST /api/confirm` (email com o resultado) e `GET /api/stats` (contagens anónimas) |
 | `tools/seo/` | Gerador dos guias, do sitemap, dos dados estruturados e dos ícones |
+| `marketing/` | Conteúdo das redes sociais (publicações e stories) e gerador das imagens |
+| `tests/` | Testes da API, sem rede: `node --test tests/*.test.mjs` |
+| `scripts/` | Deploy do site e da API com Wrangler |
+| `.claude/` | Agentes do Claude Code: `seo` e `social-media` (ver `CLAUDE.md`) |
 
 ## Correr localmente
 
@@ -64,4 +68,4 @@ Criar sorteios precisa do Worker com o segredo `BREVO_API_KEY` configurado. O pa
 
 ## Tecnologia
 
-HTML, CSS e JavaScript sem frameworks · Cloudflare Pages, Workers, Email Routing e Rate Limiting · Brevo (email transacional) · Python (gerador de páginas)
+HTML, CSS e JavaScript sem frameworks · Cloudflare Pages, Workers, KV e Email Routing · Brevo (email transacional) · Python (gerador de páginas)

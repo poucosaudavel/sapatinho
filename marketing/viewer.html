@@ -1,0 +1,301 @@
+<title>Calendário Sapatinho</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a date rail across the top, then the day as two columns: feed posts (wide) and the stories run (narrow). */
+:root{
+  --bg:#f4efe4; --surface:#fffdf8; --sunk:#ebe3d2; --ink:#1d2a25; --muted:#5f6d66; --line:#ddd3bf;
+  --brand:#0f2a22; --brand-ink:#f7f1e6; --ember:#c8452c; --ember-ink:#fff; --gold:#b9861f; --gold-soft:#f1dfb4;
+  --ok:#2f7a4f; --ok-soft:#d8ecdd;
+  --p1:#2f7a4f; --p2:#c8452c; --p3:#b9861f; --p4:#5a4a8a;
+  --display:"Gloock",Georgia,serif; --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c211b; --surface:#13322a; --sunk:#0f2a22; --ink:#eef0ea; --muted:#a9bbb1; --line:#24493d;
+  --brand:#081812; --brand-ink:#f7f1e6; --ember:#e0624a; --ember-ink:#fff; --gold:#e2b456; --gold-soft:#3d3416;
+  --ok:#6cc08f; --ok-soft:#1b3d2c; --p1:#6cc08f; --p2:#e0624a; --p3:#e2b456; --p4:#a596de; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c211b; --surface:#13322a; --sunk:#0f2a22; --ink:#eef0ea; --muted:#a9bbb1; --line:#24493d;
+  --brand:#081812; --brand-ink:#f7f1e6; --ember:#e0624a; --ember-ink:#fff; --gold:#e2b456; --gold-soft:#3d3416;
+  --ok:#6cc08f; --ok-soft:#1b3d2c; --p1:#6cc08f; --p2:#e0624a; --p3:#e2b456; --p4:#a596de; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--body)}
+.pad{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.in{max-width:1180px;margin:0 auto}
+header.top{background:var(--brand);color:var(--brand-ink);padding-block:22px 0}
+.hrow{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px}
+h1{font:400 clamp(1.7rem,4vw,2.3rem)/1.05 var(--display);margin:0;text-wrap:balance}
+h1 span{color:#d9a441}
+.sub{opacity:.75;margin:6px 0 0;font-size:.92rem}
+nav.tabs{display:flex;gap:4px;margin-top:18px}
+nav.tabs a{color:var(--brand-ink);text-decoration:none;padding:10px 16px;border-radius:8px 8px 0 0;font-weight:600;opacity:.75}
+nav.tabs a[aria-current="page"]{background:var(--bg);color:var(--ink);opacity:1}
+nav.tabs a:focus-visible,button:focus-visible,label:focus-within{outline:3px solid #d9a441;outline-offset:2px}
+.stats{display:flex;gap:18px;font-size:.85rem;opacity:.85;flex-wrap:wrap}
+.stats b{font:400 1.35rem var(--display);display:block;line-height:1}
+/* date rail */
+.rail-wrap{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.rail-row{display:flex;align-items:center;gap:8px;padding-block:10px}
+.rail{display:flex;gap:6px;overflow-x:auto;scroll-behavior:smooth;scrollbar-width:thin;flex:1;min-width:0;padding-bottom:4px}
+.chip{flex:none;width:58px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:6px 0 7px;text-align:center;cursor:pointer;font:inherit;position:relative}
+.chip small{display:block;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.chip b{display:block;font:400 1.3rem/1.1 var(--display)}
+.chip i{display:block;height:4px;border-radius:2px;margin:5px 9px 0;background:var(--sunk);overflow:hidden;font-style:normal}
+.chip i u{display:block;height:100%;background:var(--ok);text-decoration:none}
+.chip:before{content:"";position:absolute;left:8px;right:8px;top:-1px;height:3px;border-radius:0 0 3px 3px;background:var(--ph)}
+.chip[aria-current="date"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip[aria-current="date"] small{color:inherit;opacity:.7}
+.chip.today b:after{content:"•";color:var(--ember);font-size:.8rem;vertical-align:top}
+.nav-btn{flex:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:1.1rem;cursor:pointer}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);padding-bottom:8px}
+.legend span:before{content:"";display:inline-block;width:10px;height:3px;border-radius:2px;background:var(--c);margin-right:6px;vertical-align:middle}
+/* day */
+main{padding-block:22px 48px}
+.dayhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 20px;margin-bottom:18px}
+.dayhead h2{font:400 clamp(1.5rem,3.4vw,2rem)/1.1 var(--display);margin:0}
+.dayhead p{margin:4px 0 0;color:var(--muted)}
+.phase{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ph);margin-right:6px}
+.cols{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:860px){.cols{grid-template-columns:minmax(0,1fr)}}
+.sec-t{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;display:flex;justify-content:space-between}
+.stack{display:flex;flex-direction:column;gap:18px}
+.post{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.post.done{border-color:var(--ok)}
+.ph{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.time{font:600 .95rem var(--body);font-variant-numeric:tabular-nums}
+.tag{font-size:.74rem;font-weight:600;border-radius:999px;padding:3px 10px;background:var(--sunk);color:var(--muted)}
+.tag.pil{background:var(--gold-soft);color:var(--ink)}
+.chk{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;cursor:pointer;border-radius:6px;padding:2px 4px}
+.chk input{width:18px;height:18px;accent-color:var(--ok)}
+.pb{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:16px;padding:14px}
+@media (max-width:620px){.pb{grid-template-columns:minmax(0,1fr)}}
+.viewer img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;background:var(--sunk);max-width:100%}
+.thumbs{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.thumbs button{width:44px;padding:0;border:2px solid transparent;border-radius:4px;background:none;cursor:pointer;opacity:.6}
+.thumbs button[aria-pressed="true"]{border-color:var(--ember);opacity:1}
+.thumbs img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.cap{white-space:pre-wrap;font-size:.92rem;line-height:1.55;max-height:300px;overflow:auto;background:var(--bg);border-radius:6px;padding:12px 14px;margin:0}
+.hash{color:var(--gold);font-size:.85rem;margin:8px 0 0;word-break:break-word}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn{font:600 .84rem var(--body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:8px 12px;cursor:pointer}
+.btn:hover{border-color:var(--ink)}
+.btn.main{background:var(--ember);color:var(--ember-ink);border-color:var(--ember)}
+.btn[disabled]{opacity:.5;cursor:default}
+.lnk{font-size:.82rem;color:var(--muted);margin-top:10px;word-break:break-all}
+.lnk a{color:inherit}
+.story{display:grid;grid-template-columns:76px minmax(0,1fr);gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px}
+.story.done{border-color:var(--ok)}
+.story img,.story .noimg{width:76px;aspect-ratio:9/16;object-fit:cover;border-radius:5px;display:block;background:var(--sunk);cursor:zoom-in}
+.story .noimg{display:flex;align-items:center;justify-content:center;text-align:center;font-size:.7rem;color:var(--muted);padding:4px;cursor:default}
+.st-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.how{font-size:.86rem;margin:6px 0 0;line-height:1.45}
+.how em{font-style:normal;font-weight:600}
+.story .acts{margin-top:8px}
+.story .btn{padding:6px 10px;font-size:.78rem}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:8px;font-weight:600;font-size:.88rem;z-index:20}
+dialog{border:0;border-radius:10px;padding:0;background:var(--surface);max-width:min(92vw,520px)}
+dialog img{display:block;max-width:100%;max-height:80vh}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog .btn{margin:10px}
+/* profile tab */
+.prof{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+@media (max-width:760px){.prof{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px}
+.card h3{font:400 1.3rem var(--display);margin:0 0 4px}
+.card p.note{color:var(--muted);margin:0 0 12px;font-size:.88rem}
+.card img{max-width:100%;border-radius:6px;display:block}
+.pic{width:160px;border-radius:50%!important}
+.steps{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+@media (prefers-reduced-motion:reduce){.rail{scroll-behavior:auto}}
+</style>
+
+<header class="top pad">
+  <div class="in">
+    <div class="hrow">
+      <div>
+        <h1>Calendário <span>Sapatinho</span></h1>
+        <p class="sub">Facebook e Instagram · 31 de outubro a 20 de dezembro de 2026</p>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <nav class="tabs" aria-label="Secções">
+      <a href="#hoje" id="t-cal" aria-current="page">Calendário</a>
+      <a href="#perfil" id="t-prof">Perfil e contas</a>
+    </nav>
+  </div>
+</header>
+
+<div class="rail-wrap pad" id="railwrap">
+  <div class="in">
+    <div class="rail-row">
+      <button class="nav-btn" id="prev" type="button" aria-label="Dia anterior">‹</button>
+      <div class="rail" id="rail" role="list"></div>
+      <button class="nav-btn" id="next" type="button" aria-label="Dia seguinte">›</button>
+    </div>
+    <div class="legend">
+      <span style="--c:var(--p1)">Lançamento</span><span style="--c:var(--p2)">Organização e Black Friday</span><span style="--c:var(--p3)">Prendas e pistas</span><span style="--c:var(--p4)">Reta final</span>
+    </div>
+  </div>
+</div>
+
+<main class="pad">
+  <div class="in" id="view"><p>A carregar o calendário…</p></div>
+</main>
+<dialog id="dlg"><img id="dlgimg" alt=""><button class="btn" type="button" id="dlgclose">Fechar</button></dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+(function(){
+const PH={F1:["Fase 1 · Lançamento","var(--p1)"],F2:["Fase 2 · Organização e Black Friday","var(--p2)"],F3:["Fase 3 · Prendas e pistas","var(--p3)"],F4:["Fase 4 · Reta final","var(--p4)"]};
+const MES=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+const MS=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+const PIL={produto:"Produto",ideias:"Ideias de prendas",humor:"Humor",dicas:"Dicas e regras","interação":"Interação",datas:"Datas"};
+const TYPE={contagem:"Contagem",partilha:"Partilha do post",sondagem:"Sondagem",quiz:"Quiz",pergunta:"Pergunta",slider:"Slider",ideia:"Ideia do dia",cta:"Criar sorteio"};
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let DATA=null, cur=0, downloads=null;
+let done={}; try{done=JSON.parse(localStorage.getItem("sap-done")||"{}")||{}}catch(e){done={}}
+const saveDone=()=>{try{localStorage.setItem("sap-done",JSON.stringify(done))}catch(e){}};
+const view=document.getElementById("view"), rail=document.getElementById("rail");
+
+function toast(t){const d=document.createElement("div");d.className="toast";d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),1800)}
+function copy(text,btn){
+  const ok=()=>{toast("Copiado");};
+  const fb=()=>{const ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");ok()}catch(e){toast("Seleciona e copia manualmente")}ta.remove()};
+  try{navigator.clipboard.writeText(text).then(ok,fb)}catch(e){fb()}
+}
+async function saveFile(path,name){
+  if(!downloads){toast("Descarregar não está disponível aqui");return}
+  try{const b=await (await fetch(path)).blob();await downloads.save({filename:name,data:b});toast("Guardado")}
+  catch(e){if(e&&e.code==="declined")return;toast("Não foi possível guardar")}
+}
+async function saveZip(paths,name){
+  if(!downloads||!window.JSZip){toast("Descarregar não está disponível aqui");return}
+  toast("A preparar o zip…");
+  try{const z=new JSZip();for(const p of paths){z.file(p.split("/").slice(1).join("-"),await (await fetch(p)).blob())}
+    const blob=await z.generateAsync({type:"blob"});await downloads.save({filename:name,data:blob});toast("Guardado")}
+  catch(e){if(e&&e.code==="declined")return;toast("Não foi possível guardar")}
+}
+function dlabel(d,long){const x=new Date(d.date+"T12:00:00");return long?`${d.dow[0].toUpperCase()+d.dow.slice(1)}, ${x.getDate()} de ${MES[x.getMonth()]}`:x}
+function ids(d){return d.feed.map(p=>p.id).concat(d.stories.map((s,i)=>d.date+"-s"+i))}
+function prog(d){const a=ids(d);return [a.filter(k=>done[k]).length,a.length]}
+
+function renderRail(){
+  const today=new Date().toISOString().slice(0,10);
+  rail.innerHTML=DATA.days.map((d,i)=>{const x=new Date(d.date+"T12:00:00");const [a,b]=prog(d);
+    return `<button class="chip${d.date===today?" today":""}" role="listitem" type="button" data-i="${i}" style="--ph:${PH[d.phase]?PH[d.phase][1]:"var(--line)"}" ${i===cur?'aria-current="date"':""} aria-label="${esc(dlabel(d,true))}, ${a} de ${b} feitas"><small>${d.dow.slice(0,3)}</small><b>${x.getDate()}</b><small>${MS[x.getMonth()]}</small><i><u style="width:${Math.round(a/b*100)}%"></u></i></button>`}).join("");
+  const el=rail.querySelector('[aria-current="date"]'); if(el) rail.scrollLeft=el.offsetLeft-rail.clientWidth/2+29;
+}
+function renderStats(){
+  const all=DATA.days.flatMap(ids), n=all.filter(k=>done[k]).length;
+  const posts=DATA.days.reduce((s,d)=>s+d.feed.length,0), st=DATA.days.reduce((s,d)=>s+d.stories.length,0);
+  document.getElementById("stats").innerHTML=`<div><b>${DATA.days.length}</b>dias</div><div><b>${posts}</b>publicações</div><div><b>${st}</b>stories</div><div><b>${n}</b>feitas</div>`;
+}
+function how(s,d){
+  switch(s.type){
+    case "contagem": return `Publica de manhã. Faltam <em>${s.n}</em> dias.`;
+    case "partilha": {const p=d.feed.find(f=>f.id===s.post); return `Partilha nas stories a publicação das ${esc(p?p.time:"")} e escreve por cima: <em>«${esc(s.text)}»</em>`;}
+    case "sondagem": return `Autocolante <em>Sondagem</em> no espaço vazio: ${s.options.map(o=>"«"+esc(o)+"»").join(" / ")}.`;
+    case "quiz": return `Autocolante <em>Quiz</em>: ${s.options.map((o,i)=>(i===s.answer?"<em>✓ ":"")+esc(o)+(i===s.answer?"</em>":"")).join(" · ")}`;
+    case "pergunta": return `Autocolante <em>Perguntas</em> no espaço vazio. Partilha as melhores respostas no dia seguinte.`;
+    case "slider": return `Autocolante <em>Slider</em> com ${esc(s.emoji||"🎁")} no espaço vazio.`;
+    case "ideia": case "cta": return `Autocolante <em>Link</em> no espaço vazio${s.afiliado?" (link de afiliado)":""}.`;
+  }
+  return "";
+}
+function renderDay(){
+  const d=DATA.days[cur]; if(!d) return;
+  const ph=PH[d.phase]||["",""];
+  const allImgs=d.feed.flatMap(p=>p.images).concat(d.stories.filter(s=>s.image).map(s=>s.image));
+  const x=new Date(d.date+"T12:00:00"), left=Math.round((new Date("2026-12-25T12:00:00")-x)/864e5);
+  let h=`<div class="dayhead"><div><span class="phase" style="--ph:${ph[1]}">${ph[0]}</span><h2>${esc(dlabel(d,true))}</h2><p>Faltam ${left} dias para o Natal · ${d.feed.length} ${d.feed.length>1?"publicações":"publicação"} e ${d.stories.length} stories</p></div>
+    <div class="acts"><button class="btn main" type="button" data-zip>Descarregar imagens do dia (${allImgs.length})</button></div></div>
+    <div class="cols"><section><p class="sec-t"><span>Feed · Instagram e Facebook</span></p><div class="stack">`;
+  d.feed.forEach((p,pi)=>{
+    const full=p.caption+"\n\n"+p.hashtags;
+    h+=`<article class="post${done[p.id]?" done":""}" data-post="${pi}">
+      <div class="ph"><span class="time">${esc(p.time)}</span><span class="tag pil">${esc(PIL[p.pillar]||p.pillar)}</span><span class="tag">${p.format==="carrossel"?"Carrossel · "+p.images.length+" imagens":"Imagem"}</span>
+      <label class="chk"><input type="checkbox" data-done="${esc(p.id)}" ${done[p.id]?"checked":""}> Agendado</label></div>
+      <div class="pb"><div class="viewer"><img src="${esc(p.images[0])}" alt="Imagem 1 da publicação das ${esc(p.time)}" loading="lazy" data-main>
+        ${p.images.length>1?`<div class="thumbs">${p.images.map((im,i)=>`<button type="button" data-th="${i}" aria-pressed="${i===0}" aria-label="Ver imagem ${i+1}"><img src="${esc(im)}" alt="" loading="lazy"></button>`).join("")}</div>`:""}
+        <div class="acts"><button class="btn" type="button" data-save="${pi}">${p.images.length>1?"Descarregar carrossel":"Descarregar imagem"}</button></div></div>
+      <div style="min-width:0"><p class="cap">${esc(p.caption)}</p><p class="hash">${esc(p.hashtags)}</p>
+        <div class="acts"><button class="btn main" type="button" data-copy="${pi}">Copiar legenda e hashtags</button>${p.link?`<button class="btn" type="button" data-copylink="${esc(p.link)}">Copiar link</button>`:""}</div>
+        ${p.link?`<p class="lnk">Link para o Facebook (no Instagram fica «link na bio»): <a href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.link.replace("https://",""))}</a></p>`:""}
+      </div></div></article>`;
+  });
+  h+=`</div></section><section><p class="sec-t"><span>Stories</span><span>${d.stories.length}</span></p><div class="stack" style="gap:10px">`;
+  d.stories.forEach((s,i)=>{const k=d.date+"-s"+i;
+    h+=`<div class="story${done[k]?" done":""}">${s.image?`<img src="${esc(s.image)}" alt="Story das ${esc(s.time)}" loading="lazy" data-zoom="${esc(s.image)}">`:`<div class="noimg">Partilha do post</div>`}
+      <div style="min-width:0"><div class="st-top"><span class="time">${esc(s.time)}</span><span class="tag">${TYPE[s.type]||s.type}</span><label class="chk"><input type="checkbox" data-done="${k}" ${done[k]?"checked":""}> Feita</label></div>
+      <p class="how">${how(s,d)}</p>
+      <div class="acts">${s.image?`<button class="btn" type="button" data-savest="${esc(s.image)}">Descarregar</button>`:""}${s.link?`<button class="btn" type="button" data-copylink="${esc(s.link)}">Copiar link</button>`:""}${s.type==="partilha"?`<button class="btn" type="button" data-copylink="${esc(s.text)}">Copiar texto</button>`:""}</div></div></div>`;
+  });
+  h+=`</div></section></div>`;
+  view.innerHTML=h;
+}
+function renderProfile(){
+  view.innerHTML=`<div class="dayhead"><div><h2>Perfil e contas</h2><p>Tudo o que precisas para criar as páginas antes da primeira publicação, a 31 de outubro.</p></div></div>
+  <div class="prof">
+    <div class="card"><h3>Foto de perfil</h3><p class="note">1080 × 1080. O Instagram e o Facebook cortam em círculo.</p><img class="pic" src="img/perfil/foto-perfil.png" alt="Logótipo do Sapatinho"><div class="acts"><button class="btn" type="button" data-savest="img/perfil/foto-perfil.png">Descarregar</button></div></div>
+    <div class="card"><h3>Capa do Facebook</h3><p class="note">1640 × 624. O texto fica ao centro para não ser cortado no telemóvel.</p><img src="img/perfil/capa-facebook.png" alt="Capa: O amigo secreto sem papelinhos"><div class="acts"><button class="btn" type="button" data-savest="img/perfil/capa-facebook.png">Descarregar</button></div></div>
+    <div class="card"><h3>Instagram</h3><p class="note">Utilizador: <b>@sapatinho.natal</b> (ou @sapatinhonatal, @sapatinho_natal) · Nome: <b>Sapatinho · Amigo Secreto</b> · Link: <b>sapatinho-natal.pt/links</b></p>
+      <p class="cap" id="bio">Amigo secreto online, grátis e por email 🎁
+Sorteio em 2 minutos, sem papelinhos.
+Ideias de prendas por preço 👇</p><div class="acts"><button class="btn main" type="button" data-copyel="bio">Copiar bio</button><button class="btn" type="button" data-copylink="https://sapatinho-natal.pt/links">Copiar link da bio</button></div></div>
+    <div class="card"><h3>Página de Facebook</h3><p class="note">Nome: <b>Sapatinho · Amigo Secreto</b> · Categoria: Site · Email: sapatinhonatal@gmail.com</p>
+      <p class="cap" id="fbd">O amigo secreto sem papelinhos. Escreves os nomes e os emails, o Sapatinho faz o sorteio e cada pessoa recebe o seu amigo secreto por email. Ninguém tira o próprio nome e nem quem organiza fica a saber quem saiu a quem. Grátis e sem registo, em sapatinho-natal.pt.</p><div class="acts"><button class="btn main" type="button" data-copyel="fbd">Copiar descrição</button></div></div>
+    <div class="card" style="grid-column:1/-1"><h3>Como usar este calendário</h3>
+      <ol class="steps"><li>Ao domingo, abre a Meta Business Suite › Planeador e agenda as publicações do feed da semana (Instagram e Facebook juntos): descarrega as imagens, copia a legenda e escolhe a hora indicada.</li>
+      <li>Agenda também as stories de contagem, ideia do dia e criar sorteio; a sondagem, o quiz, a pergunta e o slider publicam-se na app no próprio dia, porque a Business Suite não agenda esses autocolantes.</li>
+      <li>Nas stories, o espaço vazio da imagem é para o autocolante. Nas de link, usa o autocolante Link com o endereço indicado.</li>
+      <li>Marca cada item como feito; o progresso fica guardado neste navegador.</li></ol></div>
+  </div>`;
+}
+function route(){
+  const hsh=location.hash.slice(1);
+  const prof=hsh==="perfil";
+  document.getElementById("t-cal").setAttribute("aria-current",prof?"false":"page");
+  document.getElementById("t-prof").setAttribute("aria-current",prof?"page":"false");
+  document.getElementById("railwrap").hidden=prof;
+  if(prof){renderProfile();return}
+  const m=/^d(\d{4}-\d{2}-\d{2})$/.exec(hsh);
+  if(m){const i=DATA.days.findIndex(d=>d.date===m[1]); if(i>=0) cur=i}
+  renderRail();renderDay();
+}
+function go(i){cur=Math.max(0,Math.min(DATA.days.length-1,i));location.hash="d"+DATA.days[cur].date;window.scrollTo({top:0})}
+
+document.addEventListener("click",e=>{
+  const t=e.target.closest("button,[data-zoom]"); if(!t) return;
+  if(t.dataset.i!==undefined){go(+t.dataset.i);return}
+  const d=DATA&&DATA.days[cur];
+  if(t.dataset.copy!==undefined){const p=d.feed[+t.dataset.copy];copy(p.caption+"\n\n"+p.hashtags);return}
+  if(t.dataset.copylink!==undefined){copy(t.dataset.copylink);return}
+  if(t.dataset.copyel!==undefined){copy(document.getElementById(t.dataset.copyel).textContent);return}
+  if(t.dataset.th!==undefined){const art=t.closest(".post"),p=d.feed[+art.dataset.post];art.querySelector("[data-main]").src=p.images[+t.dataset.th];art.querySelectorAll("[data-th]").forEach(b=>b.setAttribute("aria-pressed",b===t));return}
+  if(t.dataset.save!==undefined){const p=d.feed[+t.dataset.save];if(p.images.length>1)saveZip(p.images,`sapatinho-${p.id}.zip`);else saveFile(p.images[0],`sapatinho-${p.id}.jpg`);return}
+  if(t.dataset.savest!==undefined){const f=t.dataset.savest;saveFile(f,"sapatinho-"+f.split("/").slice(1).join("-"));return}
+  if(t.dataset.zip!==undefined){saveZip(d.feed.flatMap(p=>p.images).concat(d.stories.filter(s=>s.image).map(s=>s.image)),`sapatinho-${d.date}.zip`);return}
+  if(t.dataset.zoom){document.getElementById("dlgimg").src=t.dataset.zoom;document.getElementById("dlg").showModal();return}
+  if(t.id==="dlgclose"){document.getElementById("dlg").close();return}
+  if(t.id==="prev"){go(cur-1);return}
+  if(t.id==="next"){go(cur+1);return}
+});
+document.addEventListener("change",e=>{const k=e.target.dataset&&e.target.dataset.done;if(!k)return;
+  if(e.target.checked)done[k]=1;else delete done[k];saveDone();
+  const box=e.target.closest(".post,.story");if(box)box.classList.toggle("done",e.target.checked);
+  renderStats();const d=DATA.days[cur],[a,b]=prog(d);const u=rail.querySelector(`[data-i="${cur}"] u`);if(u)u.style.width=Math.round(a/b*100)+"%";});
+window.addEventListener("hashchange",route);
+
+fetch("data.json").then(r=>r.json()).then(j=>{
+  DATA=j;
+  const today=new Date().toISOString().slice(0,10);
+  let i=DATA.days.findIndex(d=>d.date===today); cur=i>=0?i:(today>DATA.days.at(-1).date?DATA.days.length-1:0);
+  renderStats();route();
+}).catch(()=>{view.innerHTML="<p>Não foi possível carregar o calendário. Recarrega a página.</p>"});
+function getDl(n){if(window.claude&&window.claude.use){window.claude.use("downloads").then(d=>{downloads=d}).catch(()=>{})}else if(n<20)setTimeout(()=>getDl(n+1),250)}getDl(0);
+})();
+</script>

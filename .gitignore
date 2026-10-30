@@ -4,3 +4,11 @@ node_modules/
 .DS_Store
 LINKS-PRIVADO.txt
 .env
+# Conteúdo privado: NUNCA vai para o GitHub
+private/
+CLAUDE.local.md
+# Saídas geradas
+dist/
+marketing/out/
+marketing/jobs*.json
+.wrangler/

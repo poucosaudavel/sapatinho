@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Gloock;src:url(fonts/gloock-latin-400-normal.woff2)}
+@font-face{font-family:Gloock;src:url(fonts/gloock-latin-ext-400-normal.woff2);unicode-range:U+0100-024F}
+@font-face{font-family:Inst;font-weight:400;src:url(fonts/instrument-sans-latin-400-normal.woff2)}
+@font-face{font-family:Inst;font-weight:500;src:url(fonts/instrument-sans-latin-500-normal.woff2)}
+@font-face{font-family:Inst;font-weight:600;src:url(fonts/instrument-sans-latin-600-normal.woff2)}
+@font-face{font-family:Inst;font-weight:700;src:url(fonts/instrument-sans-latin-700-normal.woff2)}
+:root{--green:#0f2a22;--green2:#16372d;--gold:#d9a441;--ember:#c8452c;--paper:#f7f1e6;--paper2:#efe6d4;--ink:#1d2a25;--muted:#5f6d66;--mint:#b9c7bf}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:Inst,sans-serif}
+#c{position:relative;overflow:hidden}
+.f{width:1080px;height:1350px}
+.s{width:1080px;height:1920px}
+.dk{background:var(--green);background-image:radial-gradient(circle at 25% -10%,#1d4a3b,var(--green) 62%);color:var(--paper)}
+.lt{background:var(--paper);color:var(--ink)}
+.em{background:var(--ember);color:#fff}
+.dots i{position:absolute;border-radius:50%;background:currentColor;opacity:.14}
+.brand{position:absolute;left:84px;bottom:72px;display:flex;align-items:center;gap:18px;font-family:Gloock;font-size:40px}
+.brand svg{width:56px;height:56px;border-radius:13px}
+.brand b{font-weight:400}.brand b span{color:var(--gold)}
+.lt .brand,.lt .url{color:var(--ink)}
+.url{position:absolute;right:84px;bottom:84px;font-size:28px;font-weight:600;letter-spacing:.03em;opacity:.75}
+.pg{position:absolute;right:84px;top:76px;font-size:26px;font-weight:600;letter-spacing:.12em;opacity:.6}
+.box{position:absolute;left:84px;right:84px;top:150px;bottom:200px;display:flex;flex-direction:column;justify-content:center}
+.kick{font-size:34px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:34px}
+.dk .kick{color:var(--gold)}.lt .kick{color:var(--ember)}.em .kick{color:var(--paper)}
+.tt{font-family:Gloock;font-weight:400;line-height:1.06;margin:0}
+.bd{font-size:44px;line-height:1.38;margin-top:40px;font-weight:500}
+.dk .bd{color:var(--mint)}.lt .bd{color:var(--muted)}
+.ribbon{position:absolute;left:0;right:0;top:0;height:22px;background:repeating-linear-gradient(-45deg,var(--ember) 0 26px,var(--paper) 26px 52px)}
+ol.it,ul.it{list-style:none;margin:44px 0 0;padding:0;display:flex;flex-direction:column;gap:22px}
+.it li{display:flex;gap:26px;align-items:baseline;font-size:46px;line-height:1.25;font-weight:500;padding-bottom:22px;border-bottom:2px solid rgba(29,42,37,.12)}
+.dk .it li{border-color:rgba(247,241,230,.14)}
+.it li:last-child{border-bottom:0;padding-bottom:0}
+.it li b{font-family:Gloock;font-weight:400;color:var(--ember);min-width:52px;font-size:50px}
+.dk .it li b{color:var(--gold)}
+.opts{display:flex;flex-wrap:wrap;gap:22px;margin-top:56px}
+.opts span{border:3px solid currentColor;border-radius:999px;padding:18px 36px;font-size:42px;font-weight:600}
+.btn{display:inline-block;margin-top:56px;background:var(--ember);color:#fff;border-radius:10px;padding:30px 46px;font-size:44px;font-weight:600;align-self:flex-start}
+.em .btn{background:var(--paper);color:var(--ember)}
+.card{background:var(--paper);color:var(--ink);border-radius:14px;padding:70px 64px;box-shadow:0 40px 80px rgba(0,0,0,.35);position:relative}
+.card:before{content:"";position:absolute;left:0;right:0;top:0;height:16px;border-radius:14px 14px 0 0;background:repeating-linear-gradient(-45deg,var(--ember) 0 22px,var(--paper) 22px 44px)}
+.price{display:inline-block;background:var(--gold);color:var(--green);font-weight:700;font-size:40px;border-radius:999px;padding:12px 30px;margin-top:30px}
+.stk{margin-top:70px;height:330px;flex:none}
+.big{font-family:Gloock;font-size:420px;line-height:.9;color:var(--gold)}
+.aff{font-size:28px;opacity:.7;margin-top:26px}
+</style></head><body><div id="c"></div>
+<script>
+const LOGO='<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#16372d"/><path d="M18 14h14v22c0 2 1 3 3 3h9a6 6 0 0 1 6 6v5H18z" fill="#c8452c"/><rect x="18" y="12" width="14" height="7" rx="2" fill="#f7f1e6"/><circle cx="46" cy="16" r="3" fill="#d9a441"/></svg>';
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const brand='<div class="brand">'+LOGO+'<b>Sapatinho<span>.</span></b></div><div class="url">sapatinho-natal.pt</div>';
+function dots(n,seed){let s=seed||7,o='<div class="dots">';const r=()=>{s=(s*9301+49297)%233280;return s/233280};for(let i=0;i<n;i++){const z=4+r()*10;o+=`<i style="left:${r()*100}%;top:${r()*100}%;width:${z}px;height:${z}px"></i>`}return o+'</div>'}
+function fit(el,max,min,boxSel){ // shrink title until container fits
+  const box=document.querySelector(boxSel||'.box');let fs=max;el.style.fontSize=fs+'px';
+  while(fs>min && (box.scrollHeight>box.clientHeight+1 || box.scrollWidth>box.clientWidth+1)){fs-=4;el.style.fontSize=fs+'px'}
+  return fs;
+}
+function fitAll(boxSel){ // shrink everything proportionally
+  const box=document.querySelector(boxSel||'.box');let k=1;
+  const els=[...box.querySelectorAll('[data-fs]')];
+  const apply=()=>els.forEach(e=>e.style.fontSize=(+e.dataset.fs*k)+'px');
+  apply();while(k>0.5&&(box.scrollHeight>box.clientHeight+1)){k-=0.03;apply()}
+  return k;
+}
+const SKIN={statement:'dk',meme:'lt',list:'lt',tip:'lt',question:'em',cta:'dk',cover:'dk'};
+function feed(sl,idx,total,seed){
+  const t=sl.template,sk=sl.skin||SKIN[t]||'dk';
+  let h=`<div id="c" class="f ${sk}">`+(sk!=='lt'?dots(40,seed):'')+(t==='cover'||t==='cta'?'<div class="ribbon"></div>':'');
+  if(total>1)h+=`<div class="pg">${idx+1} / ${total}</div>`;
+  h+='<div class="box">';
+  if(sl.kicker)h+=`<div class="kick" data-fs="34">${esc(sl.kicker)}</div>`;
+  const tsz={statement:96,meme:88,list:76,tip:80,question:90,cta:92,cover:110}[t]||90;
+  if(sl.title)h+=`<h1 class="tt" data-fs="${tsz}">${esc(sl.title)}</h1>`;
+  if(sl.items&&t!=='question')h+='<ol class="it">'+sl.items.map((x,i)=>`<li data-fs="46"><b>${i+1}</b><span>${esc(x)}</span></li>`).join('')+'</ol>';
+  if(sl.items&&t==='question')h+='<div class="opts">'+sl.items.map(x=>`<span data-fs="42">${esc(x)}</span>`).join('')+'</div>';
+  if(sl.body)h+=`<div class="bd" data-fs="44">${esc(sl.body)}</div>`;
+  if(t==='cta')h+='<div class="btn" data-fs="44">Criar sorteio grátis →</div>';
+  if(t==='cover'&&total>1)h+='<div class="bd" data-fs="38" style="margin-top:60px;color:var(--gold)">Desliza →</div>';
+  h+='</div>'+brand+'</div>';
+  document.getElementById('c').outerHTML=h;
+  // li children font
+  document.querySelectorAll('.it li').forEach(li=>{li.querySelector('b').dataset.fs=50});
+  fitAll();
+}
+function story(st,seed){
+  const ty=st.type;
+  const sk={contagem:'dk',ideia:'lt',sondagem:'dk',quiz:'em',pergunta:'lt',slider:'dk',cta:'dk'}[ty]||'dk';
+  let h=`<div id="c" class="s ${sk}">`+(sk!=='lt'?dots(60,seed):'')+'<div class="box" style="top:260px;bottom:300px">';
+  if(ty==='contagem'){
+    h+=`<div class="kick" data-fs="40">${esc(st.kicker||'Contagem decrescente')}</div><div class="big" data-fs="420">${st.n}</div><h1 class="tt" data-fs="110">${st.n==1?'dia para o Natal':'dias para o Natal'}</h1>`;
+    if(st.text)h+=`<div class="bd" data-fs="48">${esc(st.text)}</div>`;
+  } else if(ty==='ideia'){
+    h+=`<div class="kick" data-fs="40">Ideia do dia</div><h1 class="tt" data-fs="120">${esc(st.item)}</h1>`;
+    if(st.price)h+=`<div><span class="price" data-fs="40">${esc(st.price)}</span></div>`;
+    if(st.text)h+=`<div class="bd" data-fs="50">${esc(st.text)}</div>`;
+    h+=`<div class="stk"></div>`;
+    if(st.afiliado&&!/afiliado/i.test(st.text||''))h+=`<div class="aff" data-fs="28">Link de afiliado</div>`;
+  } else if(ty==='cta'){
+    h+=`<div class="kick" data-fs="40">Amigo secreto online</div><h1 class="tt" data-fs="116">${esc(st.text)}</h1><div class="stk"></div>`;
+  } else {
+    const lab={sondagem:'Sondagem',quiz:'Quiz',pergunta:'Pergunta',slider:'Diz-nos'}[ty]||'';
+    h+=`<div class="kick" data-fs="40">${lab}</div><h1 class="tt" data-fs="112">${esc(st.text)}</h1><div class="stk"></div>`;
+  }
+  h+='</div>'+brand.replace('class="brand"','class="brand" style="bottom:150px"').replace('class="url"','class="url" style="bottom:162px"')+'</div>';
+  document.getElementById('c').outerHTML=h;
+  fitAll();
+}
+function profile(){
+  document.getElementById('c').outerHTML='<div id="c" style="width:1080px;height:1080px;background:#0f2a22"><svg width="1080" height="1080" viewBox="0 -3 68 68"><path d="M18 14h14v22c0 2 1 3 3 3h9a6 6 0 0 1 6 6v5H18z" fill="#c8452c"/><rect x="18" y="12" width="14" height="7" rx="2" fill="#f7f1e6"/><circle cx="46" cy="16" r="3" fill="#d9a441"/></svg></div>';
+}
+function cover(){
+  document.getElementById('c').outerHTML=`<div id="c" class="dk" style="width:1640px;height:624px">${dots(70,3)}<div class="ribbon"></div>
+  <div style="position:absolute;left:0;right:0;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+  <div class="kick" style="font-size:28px">Grátis · por email</div>
+  <h1 class="tt" style="font-size:96px">O amigo secreto<br><span style="color:var(--gold)">sem papelinhos.</span></h1>
+  <div style="margin-top:30px;font-size:34px;font-weight:600;color:var(--mint)">sapatinho-natal.pt</div></div></div>`;
+}
+</script></body></html>

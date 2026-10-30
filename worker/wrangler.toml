@@ -1,0 +1,20 @@
+# Cloudflare Worker da API do Sapatinho (sapatinho-natal.pt/api/*)
+name = "sapatinho-api"
+main = "worker.js"
+account_id = "b94d6670d0f741d1b6c56bedaa043d9c"
+compatibility_date = "2026-10-25"
+workers_dev = true
+routes = [{ pattern = "sapatinho-natal.pt/api/*", zone_name = "sapatinho-natal.pt" }]
+
+# Contagens anónimas, limites anti-abuso e marcas de confirmação (sem nomes nem emails)
+[[kv_namespaces]]
+binding = "STATS"
+id = "982eafb389b94a8ca92bd8a9b6b82cc8"
+
+# Logs desligados de propósito: os pedidos levam nomes e emails.
+[observability]
+enabled = false
+
+# Secrets (definidos no Cloudflare, nunca neste ficheiro):
+#   BREVO_API_KEY  chave da API do Brevo (também deriva as chaves de assinatura e cifra dos links)
+#   STATS_TOKEN    senha do painel /painel

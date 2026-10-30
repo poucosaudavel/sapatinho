@@ -1,0 +1,1135 @@
+{
+ "days": [
+  {
+   "date": "2026-10-31",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-10-31-a",
+     "time": "12:30",
+     "pillar": "produto",
+     "slides": [
+      {
+       "template": "cover",
+       "kicker": "Novo por cá",
+       "title": "Apresentamos o Sapatinho: amigo secreto sem papelinhos"
+      },
+      {
+       "template": "list",
+       "title": "Como funciona",
+       "items": [
+        "Escreves os nomes e emails do grupo",
+        "Defines o limite da prenda e a data",
+        "Cada pessoa recebe o convite por email",
+        "Carrega em Sortear e vê quem lhe saiu"
+       ]
+      },
+      {
+       "template": "statement",
+       "title": "Ninguém se tira a si próprio. E a página de quem organiza não mostra os resultados.",
+       "body": "Dá ainda para impedir que casais ou irmãos se tirem um ao outro."
+      },
+      {
+       "template": "cta",
+       "title": "Grátis, sem registo e sem app",
+       "body": "Faz hoje o sorteio do teu grupo e risca já uma coisa da lista do Natal."
+      }
+     ],
+     "caption": "Chegou o Sapatinho: o sorteio do amigo secreto feito online, em português e de graça. 🎁\n\nAcabaram-se os papelinhos dobrados dentro do gorro, o primo que se tira a si próprio e o \"repetimos, que alguém viu\".\n\nFunciona assim: quem organiza escreve os nomes e os emails, o limite da prenda e a data da troca. O Sapatinho faz o sorteio e manda um convite a cada pessoa. Cada um abre o seu, carrega em \"Sortear\" e descobre quem lhe saiu.\n\nSem registo, sem app e sem papelinhos à vista. A página de quem organiza não mostra quem tirou quem.\n\nFaltam 55 dias para o Natal. Começa pelo sorteio: link na bio.",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #natalemfamilia #sapatinho #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "id": "2026-10-31-b",
+     "time": "20:30",
+     "pillar": "humor",
+     "slides": [
+      {
+       "template": "meme",
+       "kicker": "Halloween à portuguesa",
+       "title": "Os miúdos pedem doces. A tia pede a data do amigo secreto.",
+       "body": "E não há susto nenhum: com o sorteio feito, tens a resposta na ponta da língua."
+      }
+     ],
+     "caption": "Doçura ou travessura? Na tua família, a pergunta assustadora é outra. 🎃\n\nAinda nem tiraste a abóbora da porta e já há alguém no grupo da família a perguntar quando se faz o amigo secreto, qual é o limite e se o tio Zé \"este ano entra ou não entra\".\n\nBoa notícia: dá para responder a tudo de uma vez. Faz o sorteio no Sapatinho, escolhe o limite e a data, e cada pessoa recebe o convite no email. A tia fica descansada e tu ficas com fama de organizado.\n\nQuem é que na tua família faz sempre esta pergunta primeiro? Identifica aqui em baixo 👇",
+     "hashtags": "#amigosecreto #halloween #natal2026 #natalemfamilia #humorportugues #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "cta",
+     "text": "Já está no ar! Sorteio do amigo secreto online, grátis e sem registo.",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "time": "13:00",
+     "type": "partilha",
+     "text": "Novo por cá: conhece o Sapatinho",
+     "post": "2026-10-31-a"
+    },
+    {
+     "time": "15:00",
+     "type": "sondagem",
+     "text": "Na tua família, o sorteio ainda é feito com papelinhos?",
+     "options": [
+      "Sim, num gorro",
+      "Já é online"
+     ]
+    },
+    {
+     "time": "21:00",
+     "type": "pergunta",
+     "text": "Quem é a pessoa da tua família que pergunta sempre pelo amigo secreto?"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-01",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-01-a",
+     "time": "20:30",
+     "pillar": "datas",
+     "slides": [
+      {
+       "template": "statement",
+       "title": "Hoje há Pão-por-Deus. Daqui a 54 dias há prendas na árvore.",
+       "body": "Feriado com a família junta? É a altura certa para combinar o amigo secreto."
+      }
+     ],
+     "caption": "Bolinhos, romãs, nozes e um saquinho de pano: o Pão-por-Deus ainda anda por aí. 🍂\n\nHoje é feriado e, para muitas famílias, dia de estar junto. É também daqueles almoços em que alguém lança: \"E este ano, como fazemos as prendas?\"\n\nSe a resposta for amigo secreto, aproveitem que estão todos à mesa: juntem os nomes e os emails, combinem o limite e a data. Depois é só fazer o sorteio no Sapatinho, com calma, quando chegarem a casa. Link na bio.\n\nEm vossa casa os miúdos ainda pedem o Pão-por-Deus? Contem-nos como é na vossa terra.",
+     "hashtags": "#amigosecreto #paopordeus #natal2026 #natalemfamilia #tradicoesportuguesas #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Caneca térmica",
+     "price": "até 15 €",
+     "text": "Para quem chega sempre à reunião com o café já frio. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=taza+termica",
+     "afiliado": true
+    },
+    {
+     "time": "14:00",
+     "type": "sondagem",
+     "text": "Em vossa casa ainda há Pão-por-Deus?",
+     "options": [
+      "Sim, sempre!",
+      "Já não se usa"
+     ]
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Família junta hoje? Fica a ideia",
+     "post": "2026-11-01-a"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-02",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-02-a",
+     "time": "20:30",
+     "pillar": "produto",
+     "slides": [
+      {
+       "template": "cover",
+       "kicker": "Papelinhos vs Sapatinho",
+       "title": "Clássicos que só acontecem com papelinhos"
+      },
+      {
+       "template": "list",
+       "title": "O sorteio em papel, em resumo",
+       "items": [
+        "Alguém tira o próprio nome",
+        "O papel do primo que não veio ao jantar",
+        "Letra que ninguém consegue ler",
+        "A tia que viu tudo sem querer",
+        "Repetir o sorteio três vezes"
+       ]
+      },
+      {
+       "template": "statement",
+       "title": "No Sapatinho, ninguém se tira a si próprio. E não há papelinhos para espreitar.",
+       "body": "Cada pessoa descobre o seu nome sozinha, no próprio telemóvel, quando quiser."
+      },
+      {
+       "template": "cta",
+       "title": "Reforma os papelinhos este ano",
+       "body": "Sorteio grátis, convites por email e um link para cada pessoa."
+      }
+     ],
+     "caption": "Os papelinhos tiveram uma bela carreira. Está na hora da reforma. 📝\n\nToda a gente conhece o ritual: cortar papel, dobrar, meter num gorro. Alguém tira o próprio nome, repete-se tudo, o primo que estava a jantar noutro lado fica com o papel \"guardado\" e em fevereiro ainda há quem não saiba a quem tinha de dar a prenda.\n\nCom o sorteio online, cada pessoa recebe o convite no email, abre o seu link e vê quem lhe saiu. Quem não pôde ir ao jantar participa na mesma, e ninguém se tira a si próprio.\n\nExplicámos as diferenças todas no site: link na bio.\n\nQual foi o desastre com papelinhos mais memorável na tua família?",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #sorteio #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/como-fazer-sorteio-amigo-secreto/"
+    }
+   ],
+   "stories": [
+    {
+     "time": "09:30",
+     "type": "ideia",
+     "item": "Torre de blocos de madeira",
+     "price": "até 15 €",
+     "text": "Para o fim do jantar de Natal, quando a tensão sobe. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=juego+torre+bloques+madera",
+     "afiliado": true
+    },
+    {
+     "time": "13:00",
+     "type": "quiz",
+     "text": "Quantos papelinhos são precisos para alguém se tirar a si próprio?",
+     "options": [
+      "Basta um",
+      "Pelo menos dez",
+      "É impossível"
+     ],
+     "answer": 0
+    },
+    {
+     "time": "18:00",
+     "type": "cta",
+     "text": "Reforma os papelinhos: faz o sorteio online, grátis e sem registo.",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Reconheces algum destes clássicos?",
+     "post": "2026-11-02-a"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-03-a",
+     "time": "12:30",
+     "pillar": "produto",
+     "slides": [
+      {
+       "template": "statement",
+       "title": "Quem organiza também joga. E também não sabe quem tirou quem.",
+       "body": "O link de organizador serve para reenviar convites, não para espreitar resultados."
+      }
+     ],
+     "caption": "Organizar o amigo secreto tinha um problema: quem organizava ficava a saber tudo. 🤫\n\nCom papelinhos ou listas feitas à mão, alguém acabava sempre por ver os resultados. E lá se ia a surpresa.\n\nNo Sapatinho, quem organiza tem um link próprio para acompanhar o grupo e reenviar convites a quem não os encontrou. Essa página não mostra quem tirou quem: cada pessoa só descobre o seu próprio nome.\n\nOu seja: podes organizar e participar como os outros, sem saber nada antes do tempo.\n\nProntos para organizar sem spoilers? O link está na bio.",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #privacidade #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "id": "2026-11-03-b",
+     "time": "20:30",
+     "pillar": "humor",
+     "slides": [
+      {
+       "template": "cover",
+       "kicker": "Toda a família tem um",
+       "title": "Os tipos de pessoas no amigo secreto"
+      },
+      {
+       "template": "meme",
+       "kicker": "O apressado",
+       "title": "Comprou a prenda no dia do sorteio e já pergunta quando é a troca."
+      },
+      {
+       "template": "meme",
+       "kicker": "O detetive",
+       "title": "Passa um mês a fazer perguntas inocentes até descobrir quem lhe saiu."
+      },
+      {
+       "template": "meme",
+       "kicker": "O das meias",
+       "title": "Oferece meias. Todos os anos. Com orgulho.",
+       "body": "E, sejamos justos, toda a gente precisa de meias."
+      },
+      {
+       "template": "meme",
+       "kicker": "O de última hora",
+       "title": "Embrulha a prenda dentro do carro, à porta do restaurante."
+      },
+      {
+       "template": "question",
+       "title": "Qual destes és tu? E qual deles é o teu cunhado?"
+      }
+     ],
+     "caption": "Diz a verdade: em qual destes te reconheces? 😅\n\nTodos os amigos secretos têm o seu elenco fixo. O apressado, que já tem a prenda comprada antes de o sorteio acabar. O detetive, que passa dezembro a fazer perguntas \"só por curiosidade\". O das meias, fiel à tradição. E o de última hora, que embrulha a prenda no carro com fita-cola emprestada.\n\nFalta algum? Cada família tem sempre mais um.\n\nMarca aqui a pessoa que é claramente o detetive do teu grupo e diz-nos que tipo nos falta na lista. 👇",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #humor #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    }
+   ],
+   "stories": [
+    {
+     "time": "09:30",
+     "type": "ideia",
+     "item": "Meias divertidas",
+     "price": "até 10 €",
+     "text": "Se vais ser a pessoa das meias, ao menos que tenham piada. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=calcetines+divertidos+navidad",
+     "afiliado": true
+    },
+    {
+     "time": "17:00",
+     "type": "quiz",
+     "text": "No Sapatinho, a página de quem organiza mostra quem tirou quem?",
+     "options": [
+      "Sim, mostra tudo",
+      "Só os primeiros",
+      "Não, não mostra"
+     ],
+     "answer": 2
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Qual destes é o teu cunhado?",
+     "post": "2026-11-03-b"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-04",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-04-a",
+     "time": "20:30",
+     "pillar": "dicas",
+     "slides": [
+      {
+       "template": "tip",
+       "kicker": "Dica de organizador",
+       "title": "Combina o limite e a data antes de sortear",
+       "body": "Assim ninguém compra uma prenda de 40 € para quem lhe vai dar um porta-chaves. E toda a gente sabe até quando tem para tratar do assunto."
+      }
+     ],
+     "caption": "O amigo secreto corre mal quase sempre pelo mesmo motivo: ninguém combinou nada.\n\nUm gasta 40 €, outro aparece com um íman de frigorífico. Um acha que a troca é na consoada, outro jura que era no almoço do dia 25. E alguém só descobre que havia limite quando já embrulhou a prenda.\n\nDuas decisões resolvem quase tudo:\n• o limite da prenda (um valor, não um intervalo)\n• a data e o local da troca\n\nNo Sapatinho, o limite e a data ficam definidos logo quando crias o sorteio.\n\nJuntámos as regras todas no site, link na bio. E tu, já te aconteceu dar muito mais do que recebeste?",
+     "hashtags": "#amigosecreto #regrasdoamigosecreto #natal2026 #dicasdenatal #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/regras-do-amigo-secreto/"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Postal à mão e um chocolate bom",
+     "price": "até 5 €",
+     "text": "Pouco dinheiro, muito carinho. Mais ideias até 5 € no nosso guia.",
+     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-5"
+    },
+    {
+     "time": "14:00",
+     "type": "pergunta",
+     "text": "Qual foi a prenda mais estranha que já recebeste no amigo secreto?"
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Duas decisões que evitam dramas",
+     "post": "2026-11-04-a"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-05",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-05-a",
+     "time": "12:30",
+     "pillar": "produto",
+     "slides": [
+      {
+       "template": "meme",
+       "kicker": "Quando te sai…",
+       "title": "…o teu marido. Pelo terceiro ano seguido.",
+       "body": "Para isso há exclusões: no Sapatinho dá para impedir casais e irmãos de se tirarem."
+      }
+     ],
+     "caption": "Oferecer uma prenda à pessoa com quem partilhas a conta da luz tem pouca graça. 💡\n\nNum grupo de família, é das coisas que mais acontece: o casal tira-se um ao outro, os irmãos tiram-se entre si e no fim parece que cada casa trocou prendas consigo própria.\n\nNo Sapatinho, quem organiza pode definir exclusões antes do sorteio. Dizes quem não pode tirar quem (casais, irmãos, quem vive na mesma casa) e o sorteio respeita isso. O resto continua ao acaso, e ninguém se tira a si próprio.\n\nNa vossa família, os casais podem tirar-se um ao outro ou é proibido? Link na bio para experimentar.",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #casais #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "id": "2026-11-05-b",
+     "time": "20:30",
+     "pillar": "interacao",
+     "slides": [
+      {
+       "template": "question",
+       "title": "Qual é o limite certo para a prenda do amigo secreto?",
+       "items": [
+        "Até 10 €",
+        "Até 20 €",
+        "Até 30 €",
+        "Sem limite (perigo)"
+       ]
+      }
+     ],
+     "caption": "A pergunta que já dividiu mais famílias do que bacalhau ou peru na consoada: quanto se gasta no amigo secreto? 🤔\n\nCom limite baixo, há criatividade e prendas com piada. Com limite alto, há prendas a sério e, às vezes, alguém aflito a fazer contas. E sem limite… há sempre quem apareça com uma bicicleta e quem traga uma vela aromática.\n\nConta-nos nos comentários: qual é o valor no teu grupo, e porquê? Se ainda estão a discutir, mostra-lhes esta publicação.\n\nPara ideias organizadas por preço, temos um guia no site: link na bio.",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #prendasdenatal #ideiasdeprendas #portugal",
+     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/"
+    }
+   ],
+   "stories": [
+    {
+     "time": "09:30",
+     "type": "ideia",
+     "item": "Luz de leitura para livros",
+     "price": "até 10 €",
+     "text": "Para quem lê na cama e não quer acordar ninguém. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=luz+lectura+libro",
+     "afiliado": true
+    },
+    {
+     "time": "15:00",
+     "type": "sondagem",
+     "text": "Casais podem tirar-se um ao outro no amigo secreto?",
+     "options": [
+      "Pode, é giro",
+      "Nem pensar"
+     ]
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Vota nos comentários: quanto gastam?",
+     "post": "2026-11-05-b"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-06",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-06-a",
+     "time": "20:30",
+     "pillar": "humor",
+     "slides": [
+      {
+       "template": "meme",
+       "kicker": "Quando te sai…",
+       "title": "…o colega do 3.º andar com quem só falaste no elevador.",
+       "body": "Pergunta ao colega do lado. Discretamente. Muito discretamente."
+      }
+     ],
+     "caption": "Sabes o nome dele. Sabes que bebe o café sem açúcar. E é tudo. ☕\n\nO amigo secreto do trabalho tem esta graça: às vezes sai-te alguém que mal conheces. E está tudo bem, é mesmo para isso que serve, para conheceres melhor a malta do escritório.\n\nTrês pistas para te safares: repara no que tem em cima da secretária, pergunta (com jeito) a quem trabalha com ele e, na dúvida, escolhe algo bom que se gasta, como café ou chocolate.\n\nE se és tu a organizar o do teu escritório: no Sapatinho cada colega recebe o convite no email, sem papéis a circular pelas mesas. Link na bio.",
+     "hashtags": "#amigosecreto #amigosecretonaempresa #natal2026 #escritorio #humor #portugal",
+     "link": "https://sapatinho-natal.pt/amigo-secreto-na-empresa/"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Suculenta num vaso giro",
+     "price": "até 10 €",
+     "text": "Para o colega que mata todas as plantas. Esta aguenta. Mais ideias no guia.",
+     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-10"
+    },
+    {
+     "time": "13:00",
+     "type": "quiz",
+     "text": "Qual é a regra n.º 1 do amigo secreto?",
+     "options": [
+      "Não contar a ninguém",
+      "Gastar o máximo",
+      "Oferecer meias"
+     ],
+     "answer": 0
+    },
+    {
+     "time": "18:30",
+     "type": "cta",
+     "text": "Sexta à noite, família no sofá? Bom momento para fazer o sorteio.",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Quem é o teu colega do elevador?",
+     "post": "2026-11-06-a"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-07",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-07-a",
+     "time": "12:30",
+     "pillar": "produto",
+     "slides": [
+      {
+       "template": "tip",
+       "kicker": "Link de organizador",
+       "title": "Alguém apagou o convite sem querer? Tu reenvias.",
+       "body": "Quem organiza tem um link próprio para acompanhar o grupo e reenviar convites. Os resultados, esses, continuam secretos."
+      }
+     ],
+     "caption": "Há sempre um. O que diz \"não me chegou nada\" e afinal o email estava no spam. Ou foi para o lixo com a publicidade. 📬\n\nPara isso existe o link de organizador. Quando crias o sorteio no Sapatinho, ficas com um link só teu. Lá podes reenviar o convite a quem precisar, sem refazer o sorteio e sem incomodar o resto do grupo.\n\nO que não podes fazer é ver quem tirou quem. Isso fica entre cada pessoa e o seu telemóvel.\n\nGuarda bem o teu link e vai tranquilo para a próxima reunião de família. Já tens o sorteio criado? Link na bio.",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #organizar #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "id": "2026-11-07-b",
+     "time": "20:30",
+     "pillar": "dicas",
+     "slides": [
+      {
+       "template": "cover",
+       "kicker": "Guarda isto",
+       "title": "As regras de ouro do amigo secreto"
+      },
+      {
+       "template": "list",
+       "title": "Antes do sorteio",
+       "items": [
+        "Um limite, igual para todos",
+        "Uma data e um local para a troca",
+        "Exclusões combinadas (casais, irmãos)",
+        "Os emails de toda a gente bem escritos"
+       ]
+      },
+      {
+       "template": "list",
+       "title": "Depois do sorteio",
+       "items": [
+        "Não contar a ninguém quem te saiu",
+        "Respeitar o limite, para cima e para baixo",
+        "Talão de troca dentro do embrulho",
+        "Aparecer no dia, com a prenda"
+       ]
+      },
+      {
+       "template": "statement",
+       "title": "A regra mais importante: ninguém sabe antes do tempo.",
+       "body": "Nem o teu irmão, nem a tua melhor amiga, nem a tia que pergunta com muito jeitinho."
+      },
+      {
+       "template": "cta",
+       "title": "Organiza o teu com regras claras",
+       "body": "Limite, data e exclusões ficam definidos logo quando crias o sorteio."
+      }
+     ],
+     "caption": "Guarda esta publicação para mostrar ao grupo antes do sorteio. 📌\n\nO amigo secreto é simples, mas só funciona se toda a gente jogar com as mesmas regras. Antes de sortear: um limite igual para todos, uma data e um local, e as exclusões combinadas. Depois de sortear: bico calado, prenda dentro do limite e talão de troca no embrulho.\n\nE, claro, aparecer no dia com a prenda. Sim, primo, estamos a falar contigo.\n\nAs regras completas, com as dúvidas mais comuns, estão no site. Link na bio.\n\nQual é a regra que no teu grupo ninguém cumpre?",
+     "hashtags": "#amigosecreto #regrasdoamigosecreto #natal2026 #dicasdenatal #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/regras-do-amigo-secreto/"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Bateria portátil",
+     "price": "até 20 €",
+     "text": "Para quem anda sempre com o telemóvel nos 3 %. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=bateria+externa+portatil",
+     "afiliado": true
+    },
+    {
+     "time": "15:00",
+     "type": "slider",
+     "text": "Nível de entusiasmo com o Natal já em novembro",
+     "emoji": "🎄"
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Guarda e mostra ao teu grupo",
+     "post": "2026-11-07-b"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-08",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-08-a",
+     "time": "20:30",
+     "pillar": "ideias",
+     "slides": [
+      {
+       "template": "cover",
+       "kicker": "Até 10 €",
+       "title": "Prendas baratas que não parecem baratas"
+      },
+      {
+       "template": "list",
+       "title": "Para quem gosta de casa",
+       "items": [
+        "Vela aromática de inverno",
+        "Caneca com uma piada só vossa",
+        "Panos de cozinha bonitos",
+        "Frasco de bolachas caseiras"
+       ]
+      },
+      {
+       "template": "list",
+       "title": "Para quem gosta de rir",
+       "items": [
+        "Jogo de cartas para depois do jantar",
+        "Meias com um padrão absurdo",
+        "Livro de anedotas secas",
+        "Baralho de perguntas para a mesa"
+       ]
+      },
+      {
+       "template": "statement",
+       "title": "O segredo não é o preço. É mostrar que pensaste na pessoa.",
+       "body": "Um bilhete escrito à mão vale mais do que meia hora a escolher entre dois cachecóis iguais."
+      }
+     ],
+     "caption": "Dez euros chegam para uma prenda com pinta. Prometemos. 🎁\n\nO truque está em escolher para a pessoa, não para a prateleira. Uma caneca qualquer é só uma caneca. Uma caneca com aquela piada que só vocês os dois percebem é a prenda de que se fala no jantar seguinte.\n\nNesta lista há ideias para quem gosta de casa e para quem gosta de rir. E há muitas mais, organizadas por preço, no nosso guia de prendas: até 5 €, até 10 €, até 20 € e por aí fora. Link na bio.\n\nGuarda para mais tarde e diz-nos: qual foi a melhor prenda barata que já recebeste?",
+     "hashtags": "#amigosecreto #ideiasdeprendas #prendasdenatal #prendasbaratas #natal2026 #portugal",
+     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-10"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Puzzle de 1000 peças",
+     "price": "até 15 €",
+     "text": "Para o domingo à tarde de quem tem paciência (ou quer ter). Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=puzzle+1000+piezas",
+     "afiliado": true
+    },
+    {
+     "time": "13:00",
+     "type": "pergunta",
+     "text": "Diz-nos o limite do teu grupo e sugerimos-te uma prenda."
+    },
+    {
+     "time": "17:00",
+     "type": "cta",
+     "text": "Domingo é dia de tratar das coisas. O sorteio trata-se num instante.",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Prendas até 10 € com pinta",
+     "post": "2026-11-08-a"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-09-a",
+     "time": "20:30",
+     "pillar": "dicas",
+     "slides": [
+      {
+       "template": "tip",
+       "kicker": "Família longe",
+       "title": "O primo que vive em Paris também entra no sorteio",
+       "body": "Cada pessoa recebe o convite por email, esteja onde estiver. Só têm de combinar a troca: em mão no Natal, por correio ou numa videochamada."
+      }
+     ],
+     "caption": "Paris, Londres, Genebra, Luxemburgo. Quase todas as famílias portuguesas têm alguém lá fora. 🌍\n\nE o amigo secreto não tem de ficar sem eles por isso. Como o sorteio é online, cada pessoa recebe o convite no email e descobre quem lhe saiu no telemóvel, esteja em Viseu ou em Toronto.\n\nDepois é combinar a troca: há famílias que guardam as prendas para quando o emigrante chega no Natal, outras que enviam por correio com antecedência, e outras que abrem tudo numa videochamada.\n\nTemos dicas para cada caso no site: link na bio.\n\nQuem é que na tua família está longe este ano?",
+     "hashtags": "#amigosecreto #amigosecretoadistancia #natal2026 #emigrantes #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/amigo-secreto-a-distancia/"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Manta para o sofá",
+     "price": "até 20 €",
+     "text": "Para quem passa o inverno a ver séries. Ou seja, toda a gente. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=manta+sofa+suave",
+     "afiliado": true
+    },
+    {
+     "time": "14:00",
+     "type": "sondagem",
+     "text": "Há alguém da tua família longe este Natal?",
+     "options": [
+      "Sim, lá fora",
+      "Estamos todos cá"
+     ]
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "A distância não é desculpa",
+     "post": "2026-11-09-a"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-10",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-10-a",
+     "time": "12:30",
+     "pillar": "dicas",
+     "slides": [
+      {
+       "template": "tip",
+       "kicker": "Com miúdos",
+       "title": "Os miúdos também entram. O convite vai para os pais.",
+       "body": "Os pais abrem o email, sentam-se ao lado e deixam a criança carregar em Sortear. Ver o nome a girar na roleta é metade da diversão."
+      }
+     ],
+     "caption": "Os miúdos levam o amigo secreto mais a sério do que qualquer adulto. 🧒\n\nE podem participar como toda a gente. No Sapatinho, o convite de cada criança vai para o email dos pais. Os pais abrem o link, a criança carrega em \"Sortear\" e vê o nome a aparecer na roleta.\n\nDica: para os mais pequenos, combinem um limite baixo e ajudem na escolha da prenda. E preparem-se, que um miúdo a guardar um segredo é das coisas mais difíceis de gerir em dezembro.\n\nMais ideias para fazer o amigo secreto com crianças no site, link na bio. Na tua família, os miúdos entram no sorteio?",
+     "hashtags": "#amigosecreto #amigosecretocriancas #natal2026 #miudos #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/amigo-secreto-criancas/"
+    },
+    {
+     "id": "2026-11-10-b",
+     "time": "20:30",
+     "pillar": "humor",
+     "slides": [
+      {
+       "template": "meme",
+       "kicker": "Quando dizes…",
+       "title": "\"Este ano organizo eu\" e passas a secretário-geral da família.",
+       "body": "Parabéns pelo cargo. Ao menos o sorteio faz-se sozinho."
+      }
+     ],
+     "caption": "Disseste \"eu trato disso\" e agora és a pessoa a quem toda a gente faz perguntas. Bem-vindo ao cargo. 📋\n\n\"Qual é o limite?\" \"Quando é?\" \"O meu namorado entra?\" \"A avó também joga?\" \"Já fizeste o sorteio?\" \"Já fizeste o sorteio??\"\n\nA boa notícia é que parte do trabalho já não é tua. No Sapatinho escreves os nomes e os emails, defines o limite e a data, e o site trata do sorteio e dos convites. Tu ficas só com as respostas, e essas nunca acabam.\n\nQuem é o secretário-geral do amigo secreto na tua família? Marca-o aqui. Link na bio para lhe aliviar a vida.",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #humor #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    }
+   ],
+   "stories": [
+    {
+     "time": "09:30",
+     "type": "ideia",
+     "item": "Plasticina com moldes",
+     "price": "até 10 €",
+     "text": "Horas de diversão para os miúdos e a mesa da cozinha cheia de cor. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=plastilina+moldes+infantil",
+     "afiliado": true
+    },
+    {
+     "time": "13:30",
+     "type": "quiz",
+     "text": "Para entrar no sorteio, uma criança de 8 anos precisa de…",
+     "options": [
+      "Ter email próprio",
+      "O email dos pais",
+      "Instalar uma app"
+     ],
+     "answer": 1
+    },
+    {
+     "time": "18:00",
+     "type": "cta",
+     "text": "Tens miúdos no grupo? O convite vai para o email dos pais.",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Marca o secretário-geral da família",
+     "post": "2026-11-10-b"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-11",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-11-a",
+     "time": "20:30",
+     "pillar": "datas",
+     "slides": [
+      {
+       "template": "meme",
+       "kicker": "São Martinho",
+       "title": "Castanhas na mesa, água-pé no copo e o sorteio do amigo secreto feito.",
+       "body": "Se a família vai estar toda no magusto, aproveita a deixa."
+      }
+     ],
+     "caption": "Dia de São Martinho: castanhas, água-pé e, com sorte, um verãozinho. 🌰\n\nPara muitas famílias é o primeiro grande encontro antes do Natal. E é a altura perfeita para resolver o amigo secreto: estão todos lá, há tempo para combinar o limite e a data, e ninguém pode dizer que não foi avisado.\n\nFaz assim: entre as castanhas e a sobremesa, recolhe os nomes e os emails de quem entra. Depois crias o sorteio no Sapatinho e cada um recebe o convite no email.\n\nAté ao Natal ainda faltam 44 dias. Tempo de sobra para uma boa prenda. Link na bio.\n\nQuem é que na tua família fica sempre encarregado de assar as castanhas?",
+     "hashtags": "#amigosecreto #saomartinho #magusto #natal2026 #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Garrafa térmica",
+     "price": "até 20 €",
+     "text": "Para o magusto, o passeio ou o escritório. Chá quente o dia todo. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=botella+termica+acero",
+     "afiliado": true
+    },
+    {
+     "time": "13:00",
+     "type": "sondagem",
+     "text": "Castanhas assadas ou cozidas?",
+     "options": [
+      "Assadas",
+      "Cozidas"
+     ]
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Bom São Martinho! Já há sorteio?",
+     "post": "2026-11-11-a"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-12",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-12-a",
+     "time": "12:30",
+     "pillar": "dicas",
+     "slides": [
+      {
+       "template": "cover",
+       "kicker": "No escritório",
+       "title": "Amigo secreto na empresa, sem dramas"
+      },
+      {
+       "template": "tip",
+       "kicker": "Dica 1",
+       "title": "Junta os emails de trabalho e cria o sorteio",
+       "body": "Cada colega recebe o convite, abre o seu link e descobre quem lhe saiu. Sem papéis a circular pelas secretárias nem reuniões para tirar nomes."
+      },
+      {
+       "template": "tip",
+       "kicker": "Dica 2",
+       "title": "Escolhe um limite que sirva a todos",
+       "body": "No trabalho, o limite tem de ser confortável para toda a gente, do estagiário à direção. Um valor baixo e igual para todos evita constrangimentos."
+      },
+      {
+       "template": "tip",
+       "kicker": "Dica 3",
+       "title": "Marca a troca para o jantar de Natal",
+       "body": "É o dia em que estão todos. Se há colegas em teletrabalho ou noutras cidades, combinem a entrega com antecedência."
+      },
+      {
+       "template": "cta",
+       "title": "Organiza o amigo secreto do escritório",
+       "body": "Grátis, sem registo, e quem organiza também fica sem saber quem tirou quem."
+      }
+     ],
+     "caption": "O amigo secreto do escritório é uma tradição bonita. A organização, nem sempre. 💼\n\nHá a folha de Excel que alguém se esquece de apagar, os papelinhos que andam de secretária em secretária e o colega de outra cidade que fica sempre de fora.\n\nCom o Sapatinho, quem organiza escreve os nomes e os emails de trabalho, o limite e a data. Cada colega recebe o convite, descobre quem lhe saiu e pronto. E sim, quem organiza também pode participar: a página de organizador não mostra os resultados.\n\nGuia completo para o amigo secreto na empresa no site: link na bio.\n\nQuem é que no teu trabalho trata sempre disto?",
+     "hashtags": "#amigosecreto #amigosecretonaempresa #natal2026 #jantardenatal #escritorio #portugal",
+     "link": "https://sapatinho-natal.pt/amigo-secreto-na-empresa/"
+    },
+    {
+     "id": "2026-11-12-b",
+     "time": "20:30",
+     "pillar": "interacao",
+     "slides": [
+      {
+       "template": "question",
+       "title": "Prenda que se usa ou prenda que faz rir?",
+       "items": [
+        "Útil, sempre",
+        "Divertida, claro",
+        "As duas, se der"
+       ]
+      }
+     ],
+     "caption": "Debate do dia. Não há respostas erradas, há só as respostas do teu cunhado. 😄\n\nHá quem defenda que uma prenda tem de servir para alguma coisa: um bom cachecol, uma caneca térmica, um livro. E há quem ache que o amigo secreto é para rir: a caneca com a cara do primo, o jogo de cartas mais disparatado, as meias com pinguins.\n\nE depois há os ambiciosos, que querem as duas coisas pelos mesmos 15 €.\n\nDe que lado estás tu? Responde nos comentários e defende a tua posição. Se precisares de argumentos, o nosso guia de ideias de prendas tem dos dois tipos: link na bio.",
+     "hashtags": "#amigosecreto #ideiasdeprendas #prendasdenatal #natal2026 #esteouaquele #portugal",
+     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/"
+    }
+   ],
+   "stories": [
+    {
+     "time": "09:30",
+     "type": "ideia",
+     "item": "Organizador de secretária",
+     "price": "até 15 €",
+     "text": "Para o colega cuja secretária parece um mercado. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=organizador+escritorio+madera",
+     "afiliado": true
+    },
+    {
+     "time": "15:00",
+     "type": "slider",
+     "text": "Quanto gostas do jantar de Natal da empresa?",
+     "emoji": "🥂"
+    },
+    {
+     "time": "18:00",
+     "type": "cta",
+     "text": "Amigo secreto no escritório? Cada colega recebe o convite no email.",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Útil ou divertida? Vota no post",
+     "post": "2026-11-12-b"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-13",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-13-a",
+     "time": "20:30",
+     "pillar": "humor",
+     "slides": [
+      {
+       "template": "statement",
+       "title": "Sexta-feira 13? Assustador é ainda não ter feito o sorteio.",
+       "body": "Faltam 42 dias para o Natal. Mas ninguém está a contar."
+      }
+     ],
+     "caption": "Sexta-feira 13. Há quem evite passar por baixo de escadas. Nós evitamos deixar o amigo secreto para a última semana. 🖤\n\nO azar a sério não é um gato preto. É chegar a 20 de dezembro, descobrir que ninguém fez o sorteio e ter de escolher prenda à pressa numa bomba de gasolina.\n\nA solução não precisa de sorte: cria o sorteio agora, que é coisa rápida. Assim cada pessoa tem semanas para pensar na prenda, encomendar sem stress e embrulhar com calma.\n\nLink na bio. E conta-nos: qual é a tua superstição de Natal?",
+     "hashtags": "#amigosecreto #sextafeira13 #natal2026 #humor #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Vela aromática de inverno",
+     "price": "até 10 €",
+     "text": "Canela, laranja, pinho: a casa a cheirar a Natal. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=vela+aromatica+invierno",
+     "afiliado": true
+    },
+    {
+     "time": "14:00",
+     "type": "pergunta",
+     "text": "Conta-nos a pior desculpa para não ter levado a prenda no dia da troca."
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Sexta-feira 13 e sem sorteio? Credo.",
+     "post": "2026-11-13-a"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-14",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-14-a",
+     "time": "12:30",
+     "pillar": "ideias",
+     "slides": [
+      {
+       "template": "cover",
+       "kicker": "Até 20 €",
+       "title": "Uma prenda para cada tipo de pessoa"
+      },
+      {
+       "template": "list",
+       "title": "Para quem vive no sofá",
+       "items": [
+        "Manta macia para o inverno",
+        "Puzzle de 1000 peças",
+        "Pantufas quentinhas",
+        "Livro de bolso de um autor novo"
+       ]
+      },
+      {
+       "template": "list",
+       "title": "Para quem nunca para quieto",
+       "items": [
+        "Garrafa térmica para o dia todo",
+        "Bateria portátil para o telemóvel",
+        "Bolsa para cabos e carregadores",
+        "Meias de desporto que durem"
+       ]
+      },
+      {
+       "template": "list",
+       "title": "Para quem diz que não quer nada",
+       "items": [
+        "Vale para um pequeno-almoço fora",
+        "Kit de chás ou cafés diferentes",
+        "Uma planta fácil de manter",
+        "Chocolate bom, mas bom mesmo"
+       ]
+      }
+     ],
+     "caption": "\"Não quero nada, a sério.\" Todos conhecemos alguém assim. E esse alguém vai sair a alguém. 🎁\n\nPara facilitar, separámos ideias até 20 € por tipo de pessoa: para quem vive no sofá, para quem nunca para quieto e para o clássico \"não preciso de nada\". Para este último, a regra é simples: oferece uma coisa que se gasta ou uma coisa que se vive. Um bom café, um chocolate a sério, um pequeno-almoço fora.\n\nNo nosso guia há muitas mais ideias por preço, de 5 € a 50 €. Link na bio.\n\nGuarda esta publicação para o dia em que souberes quem te saiu. Qual destes três tipos te calhou o ano passado?",
+     "hashtags": "#amigosecreto #ideiasdeprendas #prendasdenatal #prendasate20 #natal2026 #portugal",
+     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-20"
+    },
+    {
+     "id": "2026-11-14-b",
+     "time": "20:30",
+     "pillar": "produto",
+     "slides": [
+      {
+       "template": "tip",
+       "kicker": "Como é por dentro",
+       "title": "Abres o convite, carregas em Sortear e o nome gira na roleta",
+       "body": "Logo a seguir recebes um segundo email com o nome, para confirmares quando quiseres. Mesmo que te esqueças até dezembro."
+      }
+     ],
+     "caption": "Uma coisa é saber que o sorteio é online. Outra é ver o que acontece quando abres o convite. 🎡\n\nCada pessoa recebe um email com o seu link. Abre-o quando quiser, carrega em \"Sortear\" e vê os nomes a girar numa roleta até parar em quem lhe saiu. Sem ninguém a espreitar por cima do ombro.\n\nLogo a seguir chega um segundo email com o nome, para consultar mais tarde. Dá jeito lá para dezembro, quando já não tens a certeza se era a prima Joana ou a prima Joaninha.\n\nExperimenta com o teu grupo: link na bio. Já alguma vez fizeste o sorteio online?",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #sorteioonline #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Vale de pequeno-almoço fora",
+     "price": "até 20 €",
+     "text": "Para quem diz que não quer nada. Mais ideias até 20 € no nosso guia.",
+     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-20"
+    },
+    {
+     "time": "15:00",
+     "type": "quiz",
+     "text": "Abres o convite e carregas em Sortear. O que acontece?",
+     "options": [
+      "O nome gira na roleta",
+      "Liga o Pai Natal",
+      "Nada, é surpresa"
+     ],
+     "answer": 0
+    },
+    {
+     "time": "18:00",
+     "type": "cta",
+     "text": "Faltam 41 dias para o Natal. O sorteio faz-se hoje, num instante.",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "É assim que se descobre quem te saiu",
+     "post": "2026-11-14-b"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-15",
+   "phase": "F1",
+   "feed": [
+    {
+     "id": "2026-11-15-a",
+     "time": "20:30",
+     "pillar": "datas",
+     "slides": [
+      {
+       "template": "statement",
+       "title": "Faltam 40 dias para o Natal. Quem sorteia hoje tem 40 para pensar.",
+       "body": "Quem sorteia a 22 de dezembro tem uma tarde e um centro comercial cheio."
+      }
+     ],
+     "caption": "Faltam 40 dias para o Natal. Parece muito. Não é. 🗓️\n\nPensa assim: se o sorteio for hoje, cada pessoa tem quase seis semanas para encontrar a prenda certa. Dá para comparar preços, encomendar online sem pagar entregas urgentes e até para fazer algo à mão. Se o sorteio for na semana do Natal, sobra uma tarde, um centro comercial cheio e muita fé.\n\nEste ano, organiza mais cedo. Faz hoje o sorteio, com o grupo todo a receber o convite no email, e esquece o assunto até ao dia da troca.\n\nLink na bio. O vosso grupo já tem data marcada para a troca?",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #contagemdecrescente #natalemfamilia #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Coluna Bluetooth pequena",
+     "price": "até 20 €",
+     "text": "Para a música na cozinha enquanto se faz o jantar. Link de afiliado.",
+     "link": "https://www.amazon.es/s?k=altavoz+bluetooth+portatil",
+     "afiliado": true
+    },
+    {
+     "time": "14:00",
+     "type": "sondagem",
+     "text": "Já fizeram o sorteio do amigo secreto deste ano?",
+     "options": [
+      "Já está feito",
+      "Ainda não"
+     ]
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "40 dias. O relógio está a contar.",
+     "post": "2026-11-15-a"
+    }
+   ]
+  },
+  {
+   "date": "2026-11-16",
+   "phase": "F2",
+   "feed": [
+    {
+     "id": "2026-11-16-a",
+     "time": "20:30",
+     "pillar": "dicas",
+     "slides": [
+      {
+       "template": "list",
+       "title": "Organiza o amigo secreto esta semana",
+       "items": [
+        "Lista de quem entra, com os emails",
+        "Limite da prenda, igual para todos",
+        "Data e local da troca",
+        "Exclusões: quem não pode tirar quem",
+        "Sorteio feito e convites enviados"
+       ]
+      }
+     ],
+     "caption": "Se o vosso amigo secreto ainda está no \"temos de combinar\", esta é a semana. ✅\n\nMeados de novembro é quando os grupos se organizam: o da família, o dos amigos, o do escritório. Quanto mais cedo o sorteio estiver feito, mais tempo há para escolher a prenda com calma.\n\nCinco coisas e está tratado: a lista de quem entra com os emails, um limite igual para todos, a data e o local da troca, as exclusões (casais, irmãos) e o sorteio feito.\n\nE há mais um motivo para despachar: a Black Friday está à porta. Com o sorteio feito, já sabes para quem andas à procura. Falamos disso para a semana.\n\nLink na bio para criar o sorteio.",
+     "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #organizar #blackfriday #portugal",
+     "link": "https://sapatinho-natal.pt/criar"
+    }
+   ],
+   "stories": [
+    {
+     "time": "10:00",
+     "type": "ideia",
+     "item": "Prenda para quem 'não quer nada'",
+     "price": "até 15 €",
+     "text": "O tipo de pessoa mais difícil de todos. Temos ideias por pessoa no guia.",
+     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#por-pessoa"
+    },
+    {
+     "time": "13:00",
+     "type": "pergunta",
+     "text": "O que é que ainda falta para organizar o vosso amigo secreto?"
+    },
+    {
+     "time": "18:00",
+     "type": "cta",
+     "text": "É esta a semana: junta os emails do grupo e faz o sorteio.",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Checklist da semana: guarda já",
+     "post": "2026-11-16-a"
+    }
+   ]
+  }
+ ]
+}
