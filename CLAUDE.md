@@ -48,7 +48,7 @@ Antes da primeira vez, o Diogo corre `npx wrangler@4 login` (o Claude nunca faz 
 
 - Português de Portugal: prenda, telemóvel, "tu". Nunca português do Brasil.
 - Aspas «assim». Frases curtas e concretas, sem jargão de marketing.
-- Links da Amazon (afiliado) com `rel="sponsored nofollow"`. A tag de afiliado (`AMAZON_TAG` em `tools/seo/build.py`) ainda está vazia.
+- Links da Amazon (afiliado) com `rel="sponsored nofollow"`. Tag de afiliado: `sapatinhonata-21` (`AMAZON_TAG` em `tools/seo/build.py`).
 
 ## Datas importantes
 
