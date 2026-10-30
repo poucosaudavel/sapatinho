@@ -97,10 +97,10 @@ modified="2026-10-29",
 nav="Ideias de prendas",
 short="Ideias de prendas",
 card="Sugestões até 5, 10, 15, 20 e 50 €, e para cada tipo de pessoa.",
-title="Prendas para amigo secreto até 5, 10, 20 e 50 € | Sapatinho",
+title="Ideias de prendas para amigo secreto 2026, por preço | Sapatinho",
 h1="Ideias de prendas para o amigo secreto, por preço",
-dek="Dezenas de sugestões organizadas pelo limite que combinaram, e ideias para quando te sai alguém que mal conheces.",
-description="Ideias de prendas para o amigo secreto até 5, 10, 15, 20 e 50 €, e por tipo de pessoa. Sugestões práticas para família, amigos e colegas de trabalho.",
+dek="Não sabes o que oferecer no amigo secreto? Aqui tens 40 ideias de prendas, arrumadas pelo limite que o grupo combinou, e sugestões para quando te sai alguém que mal conheces.",
+description="Ideias de prendas para o amigo secreto até 5, 10, 15, 20 e 50 € e por tipo de pessoa: colegas, família e quem tem tudo. Listas para o Natal de 2026.",
 body="""
 <nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
 <li><a href="#ate-5">Até 5 €</a></li>
@@ -353,11 +353,11 @@ slug="como-fazer-sorteio-amigo-secreto",
 date="2026-10-28",
 nav="Como fazer o sorteio",
 short="Como fazer o sorteio",
-card="Papelinhos, WhatsApp ou online: as vantagens e os problemas de cada forma.",
+card="Papelinhos, mensagem ou online: as vantagens e os problemas de cada forma.",
 title="Como fazer o sorteio do amigo secreto: 4 formas | Sapatinho",
 h1="Como fazer o sorteio do amigo secreto",
 dek="Papelinhos num saco, uma mensagem no grupo ou um sorteio online. Comparamos as formas mais comuns e explicamos como evitar o clássico «saiu-me a mim próprio».",
-description="Como fazer o sorteio do amigo secreto: com papelinhos, por mensagem ou online por email. Vantagens, problemas de cada método e como evitar que alguém se tire a si próprio.",
+description="Como fazer o sorteio do amigo secreto: papelinhos, mensagem ou online por email. Vantagens de cada forma e como evitar que alguém se tire a si.",
 body="""
 <nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
 <li><a href="#papelinhos">Com papelinhos</a></li>
@@ -510,7 +510,7 @@ card="Como aproveitar a Black Friday para a prenda do amigo secreto, sem cair em
 title="Prendas de amigo secreto na Black Friday 2026 | Sapatinho",
 h1="Prendas de amigo secreto na Black Friday: como aproveitar sem cair em armadilhas",
 dek="A Black Friday calha antes do Natal e pode esticar o limite do amigo secreto. Mas nem todos os descontos são o que parecem.",
-description="Como comprar a prenda do amigo secreto na Black Friday 2026: quando fazer o sorteio, como confirmar se um desconto é real e o que fazer com os prazos de entrega e de troca.",
+description="Comprar a prenda do amigo secreto na Black Friday 2026: quando fazer o sorteio, como saber se o desconto é real e os prazos de entrega e troca.",
 body="""
 <nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
 <li><a href="#calendario">Faz o sorteio antes da Black Friday</a></li>
@@ -625,11 +625,11 @@ slug="roleta-amigo-secreto",
 date="2026-10-29",
 nav="Roleta do amigo secreto",
 short="Roleta do amigo secreto",
-card="Cada pessoa roda a sua roleta no telemóvel e só ela vê o nome que lhe saiu.",
+card="Cada pessoa roda a sua roleta no telemóvel e descobre o nome que lhe saiu.",
 title="Roleta do amigo secreto online, grátis | Sapatinho",
 h1="Roleta do amigo secreto online",
-dek="Cada pessoa abre o seu link, carrega em «Sortear» e a roleta pára no nome do seu amigo secreto. Grátis, sem registo e sem ninguém a espreitar.",
-description="Roleta do amigo secreto online e grátis: cada pessoa roda a sua roleta no telemóvel, a partir do link que recebe por email, e só ela vê quem lhe saiu. Ninguém se tira a si próprio.",
+dek="Cada pessoa abre o seu link, carrega em «Sortear» e a roleta pára no nome do seu amigo secreto. Grátis e sem registo, e cada pessoa só vê o seu resultado.",
+description="Roleta do amigo secreto online e grátis: cada pessoa recebe um link por email, roda a roleta no telemóvel e descobre quem lhe saiu.",
 body="""
 <p class="lead-answer"><strong>A roleta do amigo secreto</strong> é a forma de cada pessoa descobrir quem lhe saiu: abre o link que recebeu por email, carrega em «Sortear» e a roleta gira até parar num nome. No Sapatinho é grátis, ninguém se tira a si próprio e cada pessoa só vê a sua roleta.</p>
 
@@ -668,7 +668,7 @@ body="""
 
 <h2 id="revelacao">Como usar a roleta na revelação</h2>
 <ul>
-<li><strong>Todos ao mesmo tempo.</strong> No jantar em que combinam o amigo secreto, cada pessoa abre o seu email e roda a roleta ao mesmo tempo. Ninguém vê o ecrã dos outros.</li>
+<li><strong>Todos ao mesmo tempo.</strong> No jantar em que combinam o amigo secreto, cada pessoa abre o seu email e roda a roleta ao mesmo tempo. Cada um olha só para o seu ecrã.</li>
 <li><strong>Para quem está longe.</strong> O convite chega por email, por isso quem vive noutra cidade ou fora do país roda a roleta quando quiser.</li>
 <li><strong>Com crianças.</strong> O convite pode ir para o email de um dos pais, que roda a roleta com a criança. Vê o guia do <a href="/amigo-secreto-criancas/">amigo secreto com crianças</a>.</li>
 </ul>
@@ -691,7 +691,7 @@ body="""
     var dur=reduce?600:3600, end=-((cur.seq.length-1)*row)+off;
     strip.style.transition="transform "+dur+"ms cubic-bezier(.12,.72,.18,1)";
     requestAnimationFrame(function(){strip.style.transform="translateY("+end+"px)"});
-    setTimeout(function(){res.textContent="Saiu: "+cur.t+". Num sorteio a sério, só tu verias este nome.";go.textContent="Rodar outra vez";go.disabled=false},dur+300);
+    setTimeout(function(){res.textContent="Saiu: "+cur.t+". Num sorteio a sério, este nome aparecia no teu link pessoal.";go.textContent="Rodar outra vez";go.disabled=false},dur+300);
   });
 })();
 </script>
@@ -716,7 +716,7 @@ card="30 ideias baratas que não parecem baratas, para limites de 5 euros.",
 title="Prendas para amigo secreto até 5 €: 30 ideias | Sapatinho",
 h1="Prendas para amigo secreto até 5 euros",
 dek="Com 5 euros dá para acertar, desde que a prenda seja pensada para a pessoa. Trinta ideias que se comem, se usam ou fazem rir.",
-description="30 ideias de prendas para amigo secreto até 5 euros: comestíveis, para casa, divertidas e feitas por ti. Sugestões baratas que não parecem baratas, com dicas para embrulhar.",
+description="30 ideias de prendas para amigo secreto até 5 €: comestíveis, para casa, divertidas e feitas por ti. Prendas baratas que não parecem baratas.",
 body="""
 <p class="lead-answer"><strong>As melhores prendas de amigo secreto até 5 €</strong> são as que se gastam ou se usam todos os dias: chocolate bom, meias de Natal, uma vela pequena, um caderno ou algo feito por ti. Com um embrulho cuidado e um postal, uma prenda de 5 € parece pensada, não barata.</p>
 
@@ -807,7 +807,7 @@ card="32 ideias para o limite mais comum, por tipo de pessoa.",
 title="Prendas para amigo secreto até 10 €: 32 ideias | Sapatinho",
 h1="Prendas para amigo secreto até 10 euros",
 dek="Dez euros é o limite mais comum no amigo secreto do trabalho e entre amigos. Trinta e duas ideias organizadas por tipo de pessoa.",
-description="32 ideias de prendas para amigo secreto até 10 euros, por tipo de pessoa: quem gosta de cozinhar, de ler, de jogos, colegas que mal conheces e quem tem tudo. Sugestões práticas e originais.",
+description="32 ideias de prendas para amigo secreto até 10 €, por tipo de pessoa: quem gosta de cozinhar, de ler, de jogos, colegas e quem tem tudo.",
 body="""
 <p class="lead-answer"><strong>Com 10 € para o amigo secreto</strong>, as apostas mais seguras são uma caneca com piada, um livro de bolso, um jogo de cartas, chás ou cafés diferentes, um gorro ou umas luvas. Escolhe pelo tipo de pessoa que te saiu: em baixo há ideias para cada uma.</p>
 
@@ -1004,7 +1004,7 @@ card="34 ideias para um limite mais folgado, por tipo de pessoa.",
 title="Prendas para amigo secreto até 20 €: 34 ideias | Sapatinho",
 h1="Prendas para amigo secreto até 20 euros",
 dek="Com 20 euros já dá para uma prenda mais completa, que a pessoa use durante o ano. Trinta e quatro ideias, por tipo de pessoa, com o preço aproximado de cada uma.",
-description="34 ideias de prendas para amigo secreto até 20 euros, com preço aproximado: para quem gosta de cozinhar, de ler, de jogos, colegas de trabalho, quem gosta de estar em casa e quem tem tudo.",
+description="34 ideias de prendas para amigo secreto até 20 €, com preço aproximado: para quem cozinha, lê ou joga, colegas de trabalho e quem tem tudo.",
 body="""
 <p class="lead-answer"><strong>As melhores prendas para amigo secreto até 20 €</strong> são um jogo de tabuleiro pequeno, um livro acabado de sair, um cabaz de produtos portugueses, uma garrafa térmica boa ou um pijama quente. Com este limite dá para escolher algo que a pessoa use durante o ano, e não só no dia da troca.</p>
 
@@ -1103,10 +1103,10 @@ date="2026-10-30",
 nav="Como funciona por dentro",
 short="Privacidade, por dentro",
 card="O código do sorteio explicado: porque não temos base de dados de emails.",
-title="Como funciona o Sapatinho por dentro: privacidade e código | Sapatinho",
+title="Como funciona o Sapatinho: privacidade e código | Sapatinho",
 h1="Como funciona o Sapatinho por dentro",
 dek="O Sapatinho não tem base de dados de emails nem de resultados. Explicamos, com o código, o caminho de um sorteio do teu navegador até ao email, e o que fica guardado em cada sítio.",
-description="Como funciona o sorteio do amigo secreto do Sapatinho, com o código: sem base de dados, emails cifrados dentro do link, resultados assinados e só contagens anónimas. O que guardamos e o que não guardamos.",
+description="Como funciona o sorteio do Sapatinho, com o código: sem base de dados, emails cifrados dentro do link e só contagens anónimas.",
 body="""
 <p class="lead-answer"><strong>O Sapatinho não tem base de dados.</strong> Os nomes e os emails passam pelo nosso servidor só durante o pedido que cria o sorteio. O resultado de cada pessoa vai assinado dentro do seu próprio link, e o email vai cifrado nesse link, só para enviarmos o segundo email. Não guardamos emails, nomes nem resultados. Guardamos apenas contagens anónimas por dia e, durante umas horas, códigos irreversíveis que servem para travar abusos.</p>
 

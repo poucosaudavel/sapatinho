@@ -226,7 +226,7 @@ HOME_FAQ = [
 ("O que é o amigo secreto?", 'É uma troca de prendas em que cada pessoa tira à sorte o nome de outra e lhe oferece uma única prenda, sem revelar quem lhe saiu até ao dia da troca. Explicamos tudo nas <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a>.'),
 ("Como funciona o amigo secreto online por email?", 'Quem organiza escreve os nomes e os emails do grupo, o limite da prenda e a data. O Sapatinho faz o sorteio e envia a cada pessoa um convite com um link só seu. Cada um abre o link, roda a roleta e recebe um segundo email com o nome que lhe saiu. <a href="/criar">Criar sorteio</a>.'),
 ("O amigo secreto online é mesmo grátis?", "Sim. Criar o sorteio e enviar os convites não custa nada, não precisa de registo e não há versão paga."),
-("Tem roleta?", 'Tem. Cada pessoa roda a sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel e só ela vê o nome em que a roleta pára.'),
+("Tem roleta?", 'Tem. Cada pessoa roda a sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel e descobre o nome em que a roleta pára.'),
 ("Dá para impedir que casais ou irmãos se tirem um ao outro?", "Sim. Ao criar o sorteio, indicas os pares que não se podem tirar e o sorteio respeita-os."),
 ("Posso fazer o sorteio mais do que uma vez?", "Não. O sorteio é feito uma única vez para cada participante. Se voltares a abrir o link, vês o mesmo resultado."),
 ("Quem organiza fica a saber os resultados?", "A página de quem organiza não mostra os resultados. Quem organiza recebe os links de todos para poder reenviar convites, por isso só veria o resultado de outra pessoa se abrisse o link dela."),
@@ -239,7 +239,7 @@ HOME_FAQ = [
 def patch_home():
     f = f"{SITE}/index.html"
     h = open(f).read()
-    title = "Amigo secreto online grátis, por email · Sapatinho"
+    title = "Amigo secreto online grátis, com roleta e por email | Sapatinho"
     desc = "Faz o sorteio do amigo secreto online, grátis e sem registo. Cada pessoa recebe por email o seu link pessoal e descobre quem lhe saiu. Ninguém se tira a si próprio."
     graph = [ORG, WEBSITE,
              {"@type": "WebApplication", "@id": BASE + "/#app", "name": "Sapatinho", "url": BASE + "/criar",
@@ -254,9 +254,13 @@ def patch_home():
     h = re.sub(r"<head>.*?<style>", "<head>\n" + newhead + "<style>", h, count=1, flags=re.S)
     h = re.sub(r'<header class="top">.*?</header>', HEADER, h, count=1, flags=re.S)
     h = re.sub(r'<footer class="foot.*?</footer>', FOOTER, h, count=1, flags=re.S)
-    h = h.replace('<div class="eyebrow">Amigo secreto · Natal 2026</div>', '<div class="eyebrow">Amigo secreto online · grátis</div>')
-    h = h.replace("Cria o sorteio do teu grupo e cada pessoa recebe por email o seu link pessoal para descobrir quem lhe saiu. Mais ninguém vê.",
-                  "Faz o sorteio do amigo secreto online. Cada pessoa recebe por email o seu link pessoal e descobre quem lhe saiu. Mais ninguém vê.")
+    # hero: H1 with the main search («amigo secreto online»); honest privacy line (CLAUDE.md rule 3)
+    h = re.sub(r'<div class="eyebrow">[^<]*</div>\n(\s*)<h1>.*?</h1>',
+               lambda m: '<div class="eyebrow">O amigo secreto da família, sem papelinhos</div>\n' + m.group(1) + '<h1>Amigo secreto online, <em>grátis e por email.</em></h1>',
+               h, count=1, flags=re.S)
+    h = re.sub(r'<p class="sub">.*?</p>',
+               '<p class="sub">Faz o sorteio do amigo secreto online. Cada pessoa recebe por email o seu link pessoal e descobre quem lhe saiu. A página de quem organiza não mostra quem tirou quem.</p>',
+               h, count=1, flags=re.S)
     # FAQ rebuilt from HOME_FAQ so it matches the structured data
     faq = "\n".join(f"        <details><summary>{html.escape(q)}</summary><p>{a}</p></details>" for q, a in HOME_FAQ)
     h = re.sub(r'<div class="faq">.*?</div>\n    </section>', '<div class="faq">\n' + faq + '\n      </div>\n    </section>', h, count=1, flags=re.S)
