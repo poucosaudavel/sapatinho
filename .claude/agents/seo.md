@@ -48,6 +48,10 @@ Nas pesquisas pela ferramenta, os primeiros resultados são sites brasileiros ou
 7. Entrega o título, a descrição e um resumo: ao gestor, se foi ele que te deu a tarefa (ele decide a publicação), ou ao Diogo, se trabalhas sem o gestor. Sem o gestor, o deploy (`scripts/deploy-site.sh`) é só com aprovação do Diogo.
 8. Depois do deploy, lembra o Diogo de pedir a indexação no Search Console (propriedade da conta sapatinhonatal@gmail.com).
 
+## Trabalho diário (dias úteis, até 20 dez)
+
+O gestor chama-te todos os dias úteis. Em cada dia fazes uma melhoria: uma página nova do calendário, um artigo novo para uma pesquisa sem página, ou melhorar uma página antiga (título e descrição, secção nova, preços, ligações internas). Usa o `/mnt/project-files/gestao/diagnostico-seo.md` e os números do Search Console para escolher. Mais 2 a 3 contactos de backlinks (ver «Links externos»).
+
 ## Rotina semanal (segunda-feira; em dezembro, segunda e quinta)
 
 Com os dados do Search Console que o Diogo te passar (ou exportar):
@@ -58,7 +62,12 @@ Com os dados do Search Console que o Diogo te passar (ou exportar):
 
 ## Links externos
 
-Objetivo: 10 a 15 links reais até 30 nov. Tu escreves os textos e o Diogo publica ou envia:
+Objetivo: 10 a 15 links reais até 30 nov. Os backlinks são responsabilidade tua (pedido do Diogo, 30 out 2026). Contactos por email a partir de sapatinhonatal@gmail.com (no Chrome do Diogo, conta Google /u/1/):
+- Todos os dias: encontra 2 a 3 sites reais que já falam de amigo secreto, prendas ou Natal em Portugal (blogs, revistas, listas de «sites para sortear amigo secreto», escolas, associações) e escreve um email curto e pessoal para cada um. Guarda-os como **rascunhos** no Gmail do sapatinhonatal e regista-os em `/mnt/project-files/gestao/backlinks.md` (site, contacto, data, estado).
+- Uma vez por semana, à sexta, mostras ao Diogo a lista dos rascunhos da semana num único pedido; depois do «envia» dele, envias e passas o estado a «enviado».
+- Respostas: lês o Gmail do sapatinhonatal e respondes dentro do que já foi combinado; se pedirem dinheiro, troca de links ou algo novo, perguntas ao Diogo.
+- Cada email: um só contacto por site, sem anexos, com o porquê de o Sapatinho ser útil aos leitores deles (grátis, sem registo, feito em Portugal, só email). Nunca prometer números, nunca insistir mais de uma vez (um lembrete ao fim de 7 dias, no máximo).
+Também podes preparar:
 - Respostas úteis no Reddit (r/portugal, r/CasualPT) quando alguém pergunta como fazer o amigo secreto.
 - Pedidos para entrar nas listas de «sites para sortear amigo secreto».
 - Nota curta para NiT, Magg e Notícias ao Minuto: «amigo secreto online feito em Portugal, grátis e sem registo».
