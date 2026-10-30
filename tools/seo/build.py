@@ -273,8 +273,9 @@ def patch_home():
     else:
         cards = "".join(f'<a href="/{p["slug"]}/"><b>{p["short"]}</b><span>{p["card"]}</span></a>' for p in PAGES)
         h = re.sub(r'(<nav class="related" style="max-width:none;margin:0" aria-label="Guias">).*?(</nav>)', lambda m: m.group(1) + cards + m.group(2), h, count=1, flags=re.S)
-    h = h.replace(".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}",
-                  ".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}\n.faq details p a{color:var(--paper)}")
+    if ".faq details p a{" not in h:
+        h = h.replace(".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}",
+                      ".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}\n.faq details p a{color:var(--paper)}")
     open(f, "w").write(h)
 
 def patch_criar():
