@@ -23,6 +23,12 @@ def fixq(o):
     if "options" in o: o["options"] = [q(x) for x in o["options"]]
     return o
 
+AMAZON_TAG = "sapatinhonata-21"  # tag de Associado da Amazon.es
+def tagged(u):
+    if u and "amazon.es" in u and "tag=" not in u:
+        return u + ("&" if "?" in u else "?") + "tag=" + AMAZON_TAG
+    return u
+
 jobs, data = [], []
 seed = 1
 for d in days:
@@ -40,7 +46,7 @@ for d in days:
             imgs.append(rel)
         seed += 1
         day["feed"].append({**{k: post[k] for k in ("id", "time", "pillar", "caption", "hashtags")},
-                            "link": post.get("link", ""), "images": imgs, "format": "carrossel" if tot > 1 else "imagem"})
+                            "link": tagged(post.get("link", "")), "images": imgs, "format": "carrossel" if tot > 1 else "imagem"})
     stories = [{"time": "08:30", "type": "contagem", "n": n}] + d["stories"]
     for j, st in enumerate(stories):
         fixq(st)
@@ -48,6 +54,7 @@ for d in days:
         if st["type"] != "partilha":
             img = f"img/{d['date']}/st{j+1}.jpg"
             jobs.append({"out": f"{OUT}/{img}", "kind": "story", "seed": seed + j, "data": st})
+        if st.get("link"): st["link"] = tagged(st["link"])
         day["stories"].append({**st, "image": img})
     day["stories"].sort(key=lambda s: s["time"])
     data.append(day)

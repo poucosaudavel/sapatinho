@@ -21,7 +21,7 @@ def text(h):
 # ---------------------------------------------------------------- afiliados
 # Preenche depois da aprovação em afiliados.amazon.es (ex.: "sapatinho-21").
 # Vazio = links normais, sem comissão.
-AMAZON_TAG = os.environ.get("AMAZON_TAG", "")
+AMAZON_TAG = os.environ.get("AMAZON_TAG", "sapatinhonata-21")  # tag de Associado da Amazon.es
 AFF_NOTE = ('<p class="aff-note">Alguns links desta página são de afiliados: se comprares através deles, '
             'o Sapatinho pode receber uma pequena comissão, sem custo extra para ti. '
             'Como Associado da Amazon, o Sapatinho recebe por compras qualificadas.</p>')
