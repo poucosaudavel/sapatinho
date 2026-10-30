@@ -74,7 +74,7 @@
 </div>
 
 <script src="/snow.js"></script>
-<script src="/sapatinho.js"></script>
+<script src="/sapatinho.js?v=20261030"></script>
 <script>
 /* Each link made on /criar (/r/<payload>) carries its own signed data. */
 var app = document.getElementById("app");
@@ -84,7 +84,7 @@ var esc = Sap.esc;
 
 function facts(o){
   var third = o.d ? '<div><b>'+esc(Sap.shortDate(o.d))+'</b><small>Troca</small></div>' : '<div><b>1</b><small>Prenda</small></div>';
-  return '<div class="facts"><div><b>'+o.p.length+'</b><small>Participantes</small></div><div><b>'+(o.l ? o.l+' €' : '—')+'</b><small>Limite</small></div>'+third+'</div>';
+  return '<div class="facts"><div><b>'+o.p.length+'</b><small>Participantes</small></div><div><b>'+(o.l ? esc(o.l)+' €' : '—')+'</b><small>Limite</small></div>'+third+'</div>';
 }
 var lock = '<div class="secret"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>Não contes a ninguém. Podes voltar a este link sempre que quiseres confirmar quem te saiu.</span></div>';
 function groupLine(o){ return o.g ? '<div class="eyebrow" style="color:var(--ember)">'+esc(o.g)+'</div>' : ''; }
@@ -95,7 +95,7 @@ function showResult(o, mailing){
     '<div><div class="eyebrow">'+esc(o.n)+', o teu amigo secreto é</div></div>'+
     '<div class="result"><div class="who">'+esc(o.t)+'</div></div>'+
     facts(o) + lock +
-    '<p class="note">'+(o.l ? 'Escolhe uma prenda até '+o.l+' €. ' : '')+(o.d ? 'A troca é a '+esc(Sap.fmtDate(o.d))+'. ' : '')+'Bom Natal!</p>'+
+    '<p class="note">'+(o.l ? 'Escolhe uma prenda até '+esc(o.l)+' €. ' : '')+(o.d ? 'A troca é a '+esc(Sap.fmtDate(o.d))+'. ' : '')+'Bom Natal!</p>'+
     (mailing ? '<p class="note" id="mailnote">A enviar-te um email com o nome…</p>' : '') +
     '<a class="btn ghost wide" href="'+ideasHref(o.l)+'">Ver ideias de prendas'+(o.l ? ' até '+esc(o.l)+' €' : '')+'</a>';
 }
@@ -155,7 +155,8 @@ function invalid(){
     try { sessionStorage.setItem("sap-r", h); } catch (e) {}
     try { history.replaceState(null, "", "/r"); } catch (e) {}
   }
-  if (h){ o = Sap.decode(h); key = "sapr-" + Sap.hash(h); code = h.indexOf(".") > 0 ? h : null; }
+  // Só aceitamos links assinados pelo servidor (código.assinatura); um link sem assinatura é inválido.
+  if (h && h.indexOf(".") > 0){ o = Sap.safe(Sap.decode(h)); key = "sapr-" + Sap.hash(h); code = h.indexOf(".") > 0 ? h : null; }
   if (!o) return invalid();
   if (Sap.getS(key) === "1") showResult(o); else showDraw(o, key, code);
 })();

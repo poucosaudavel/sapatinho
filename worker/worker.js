@@ -26,14 +26,15 @@ export default {
 
     if (req.method === "GET" && url.pathname.endsWith("/api/stats")) return stats(req, env, json);
     if (req.method !== "POST") return json({ error: "Método não permitido." }, 405);
-    if (origin && !ALLOWED_ORIGINS.includes(origin)) return json({ error: "Origem não permitida." }, 403);
+    // Só o próprio site pode criar sorteios ou pedir emails (pedidos sem Origin são recusados).
+    if (!ALLOWED_ORIGINS.includes(origin)) return json({ error: "Origem não permitida." }, 403);
     if (!env.BREVO_API_KEY) return json({ error: "O envio de emails ainda não está configurado." }, 503);
 
     let body;
     try { body = await req.json(); } catch { return json({ error: "Pedido inválido." }, 400); }
 
     try {
-      if (url.pathname.endsWith("/api/create")) return json(await create(body, env));
+      if (url.pathname.endsWith("/api/create")) return json(await create(body, env, req));
       if (url.pathname.endsWith("/api/confirm")) return json(await confirm(body, env));
       return json({ error: "Não encontrado." }, 404);
     } catch (e) {
@@ -47,7 +48,7 @@ const clean = (s, max) => String(s ?? "").replace(/[\u0000-\u001f<>]/g, "").repl
 const isEmail = (e) => /^[^\s@<>()",;:]{1,64}@[A-Za-z0-9.-]{1,253}\.[A-Za-z]{2,}$/.test(e);
 
 /* ---------- create ---------- */
-async function create(b, env) {
+async function create(b, env, req) {
   const g = clean(b.g, 60) || "Amigo secreto";
   let l = parseInt(b.l, 10); l = l > 0 && l <= 1000 ? l : null;
   const d = /^\d{4}-\d{2}-\d{2}$/.test(b.d || "") ? b.d : null;
@@ -65,8 +66,12 @@ async function create(b, env) {
     if (seenE.has(p.e)) throw fail(`O email ${p.e} aparece mais do que uma vez.`);
     seen.add(k); seenE.add(p.e);
   }
+  if (hasLink(g) || ps.some((p) => hasLink(p.n))) throw fail("O nome do grupo e os nomes não podem ter endereços de sites.");
+  for (const p of ps) if (!nameOk(p.n)) throw fail(`O nome «${p.n}» só pode ter letras, números, espaços, hífens e apóstrofos.`);
+  if (!groupOk(g)) throw fail("O nome do grupo só pode ter letras, números, espaços e pontuação simples (sem endereços de sites, emails ou telefones).");
   const names = ps.map((p) => p.n);
-  const blocked = {};
+  await guardCreate(env, req, names.length);
+  const blocked = Object.create(null);
   for (const pair of Array.isArray(b.pairs) ? b.pairs.slice(0, 40) : []) {
     const [a, c] = [clean(pair?.[0], 30), clean(pair?.[1], 30)];
     if (names.includes(a) && names.includes(c) && a !== c) {
@@ -89,7 +94,7 @@ async function create(b, env) {
     textContent: inviteText({ n: x.n, g, l, d, link: x.link }),
   }));
   await sendBatch(messages, env);
-  await count(env, { sorteios: 1, convites: names.length, ["limite_" + bucket(l)]: 1, ["grupo_" + size(names.length)]: 1, ["exclusoes_" + (Object.keys(blocked).length ? "sim" : "nao")]: 1 });
+  await count(env, { emails: names.length, sorteios: 1, convites: names.length, ["limite_" + bucket(l)]: 1, ["grupo_" + size(names.length)]: 1, ["exclusoes_" + (Object.keys(blocked).length ? "sim" : "nao")]: 1 });
   return { ok: true, links };
 }
 
@@ -101,13 +106,20 @@ async function confirm(b, env) {
   // o.x = email cifrado (links novos); o.e = email em claro (links criados antes de 29 out 2026)
   const email = o.x ? await openEmail(o.x, env) : o.e;
   if (!email) throw fail("Link inválido.", 400);
+  // O mesmo link só pede o segundo email uma vez em cada 12 horas (evita encher a caixa de alguém).
+  const mark = env.STATS ? "c:" + (await tag("confirm:" + code, env)) : null;
+  if (mark && (await env.STATS.get(mark))) return { ok: true };
+  await reserve(env, 1, CONFIRM_CAP);
+  if (mark) { try { await env.STATS.put(mark, "1", { expirationTtl: 43200 }); } catch {} }
+  try {
   await sendBatch([{
     to: [{ email, name: o.n }],
     subject: `${o.n}, já sabes quem te saiu · ${o.g}`,
     htmlContent: confirmHtml(o, `${SITE}/r/${code}`),
     textContent: confirmText(o, `${SITE}/r/${code}`),
   }], env);
-  await count(env, { sorteados: 1 });
+  } catch (e) { if (mark) { try { await env.STATS.delete(mark); } catch {} } throw e; }
+  await count(env, { emails: 1, sorteados: 1 });
   return { ok: true };
 }
 
@@ -118,7 +130,7 @@ function draw(names, blocked) {
     const r = names.slice();
     for (let i = r.length - 1; i > 0; i--) { const j = rnd(i + 1); [r[i], r[j]] = [r[j], r[i]]; }
     if (names.every((g, i) => g !== r[i] && !(blocked[g] && blocked[g].has(r[i])))) {
-      const m = {}; names.forEach((g, i) => (m[g] = r[i])); return m;
+      const m = Object.create(null); names.forEach((g, i) => (m[g] = r[i])); return m;
     }
   }
   return null;
@@ -251,9 +263,49 @@ async function count(env, inc) {
     await env.STATS.put(key, JSON.stringify(cur));
   } catch (e) { /* counting must never break a draw */ }
 }
+/* ---------- proteção contra abusos ---------- */
+// Endereços de sites no nome do grupo ou nos nomes transformariam os convites em publicidade ou burla.
+const hasLink = (s) => /(https?:|www\.|[a-z0-9-]+\.(pt|com|net|org|io|br|info|xyz|me|co|eu|link|site|shop|app|top|click)\b)/i.test(s);
+const DAILY_EMAILS = 260;      // o plano gratuito do Brevo envia 300 emails por dia; deixamos margem para os segundos emails
+const CONFIRM_CAP = 295;       // os segundos emails podem usar a margem até perto dos 300
+const CREATES_PER_IP = 10;     // sorteios por dia a partir do mesmo endereço IP
+async function tag(text, env) {  // HMAC curto e irreversível, para não guardar o texto original
+  const k = await crypto.subtle.importKey("raw", new TextEncoder().encode("sapatinho-tag:" + env.BREVO_API_KEY), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  return toB64url(new Uint8Array(await crypto.subtle.sign("HMAC", k, new TextEncoder().encode(text))).slice(0, 12));
+}
+async function guardCreate(env, req, n) {
+  if (!env.STATS) return;
+  const day = new Date().toISOString().slice(0, 10);
+  const ip = req.headers.get("CF-Connecting-IP") || "";
+  if (!ip) { await reserve(env, n, DAILY_EMAILS); return; }
+  // Guardamos só um código irreversível do IP, durante 24 horas, para contar sorteios por dia.
+  const key = "ip:" + day + ":" + (await tag(ip + "|" + day, env));
+  const used = parseInt((await env.STATS.get(key)) || "0", 10);
+  if (used >= CREATES_PER_IP) throw fail("Já criaste muitos sorteios hoje. Tenta outra vez amanhã.", 429);
+  await env.STATS.put(key, String(used + 1), { expirationTtl: 86400 });
+  await reserve(env, n, DAILY_EMAILS);
+}
+// Quota diária do Brevo: os emails contam-se ANTES de enviar (reserva), para que um envio que falhe a meio
+// ou pedidos seguidos não passem o limite. Chave "q:<dia>" só com um número; apaga-se sozinha em 2 dias.
+async function reserve(env, n, cap) {
+  if (!env.STATS) return;
+  const key = "q:" + new Date().toISOString().slice(0, 10);
+  const used = parseInt((await env.STATS.get(key)) || "0", 10);
+  if (used + n > cap) throw fail("Hoje já enviámos todos os emails que podemos. Tenta outra vez amanhã.", 429);
+  await env.STATS.put(key, String(used + n), { expirationTtl: 172800 });
+}
+// Nomes: letras (com acentos), números, espaços, hífen, apóstrofo, ponto e emojis. Nada de "/", "@", ":"
+// nem "palavra.palavra" (que o Gmail transforma em link) nem números de telefone.
+const linkish = (s) => /[\p{L}\p{N}][.。．｡][\p{L}\p{N}]{2}/u.test(s) || /\d{6}/.test(s.replace(/[\s.\-()]/g, ""));
+const nameOk = (s) => /^[\p{L}\p{M}\p{N}\p{Extended_Pictographic}\u200d\ufe0f' .\-]{1,30}$/u.test(s) && !linkish(s);
+const groupOk = (s) => /^[\p{L}\p{M}\p{N}\p{Extended_Pictographic}\u200d\ufe0f' .,!?&()ºª:\-]{1,60}$/u.test(s) && !linkish(s);
+async function sameSecret(a, b) {
+  const enc = new TextEncoder(), ha = await crypto.subtle.digest("SHA-256", enc.encode(a)), hb = await crypto.subtle.digest("SHA-256", enc.encode(b));
+  const x = new Uint8Array(ha), y = new Uint8Array(hb); let d = 0; for (let i = 0; i < x.length; i++) d |= x[i] ^ y[i]; return d === 0;
+}
 async function stats(req, env, json) {
   const auth = (req.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "");
-  if (!env.STATS_TOKEN || !env.STATS || auth !== env.STATS_TOKEN) return json({ error: "Sem acesso." }, 401);
+  if (!env.STATS_TOKEN || !env.STATS || !auth || !(await sameSecret(auth, env.STATS_TOKEN))) return json({ error: "Sem acesso." }, 401);
   const list = await env.STATS.list({ prefix: "d:" });
   const days = [];
   for (const k of list.keys) days.push({ dia: k.name.slice(2), ...((await env.STATS.get(k.name, "json")) || {}) });

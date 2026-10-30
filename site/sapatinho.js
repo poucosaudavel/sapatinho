@@ -28,6 +28,19 @@ var Sap = (function(){
       return (o && o.v === 2 && o.n && o.t) ? o : null;
     }catch(e){ return null; }
   }
+  /* Um link pode ser fabricado por qualquer pessoa (a assinatura só o servidor verifica),
+     por isso tudo o que vem do link é validado antes de aparecer na página. */
+  function safe(o){
+    if (!o || typeof o.n !== "string" || typeof o.t !== "string") return null;
+    var str = function(v, max){ return typeof v === "string" ? v.slice(0, max) : ""; };
+    var out = { v:o.v, n:str(o.n,30), t:str(o.t,30), g:str(o.g,60) || null, x:o.x, e:o.e };
+    out.l = (typeof o.l === "number" && isFinite(o.l) && o.l > 0 && o.l <= 1000) ? Math.round(o.l) : null;
+    out.d = (typeof o.d === "string" && /^\d{4}-\d{2}-\d{2}$/.test(o.d)) ? o.d : null;
+    out.p = Array.isArray(o.p) ? o.p.filter(function(x){ return typeof x === "string"; }).slice(0,30).map(function(x){ return x.slice(0,30); }) : [];
+    if (out.p.length < 2) out.p = [out.n, out.t];
+    if (!out.n || !out.t) return null;
+    return out;
+  }
   function rnd(n){ var a = new Uint32Array(1); crypto.getRandomValues(a); return a[0] % n; }
   function shuffle(a){ for (var i=a.length-1;i>0;i--){ var j = rnd(i+1), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   /* names: array; blocked: { name: Set(names it may not draw) } -> { giver: receiver } or null */
@@ -66,5 +79,5 @@ var Sap = (function(){
       document.body.appendChild(t); t.select(); try{ document.execCommand("copy"); finish(); }catch(e){} t.remove();
     }
   }
-  return { encode:encode, decode:decode, draw:draw, esc:esc, fmtDate:fmtDate, shortDate:shortDate, getS:getS, setS:setS, hash:hash, copy:copy };
+  return { safe:safe, encode:encode, decode:decode, draw:draw, esc:esc, fmtDate:fmtDate, shortDate:shortDate, getS:getS, setS:setS, hash:hash, copy:copy };
 })();
