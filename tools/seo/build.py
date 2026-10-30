@@ -88,6 +88,8 @@ FOOTER = """<footer class="foot rich">
       <li><a href="/#entrar">Entrar no sorteio</a></li>
       <li><a href="/#como-funciona">Como funciona</a></li>
       <li><a href="/privacidade/">Privacidade</a></li>
+      <li><a href="https://www.instagram.com/sapatinhonatal/" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.facebook.com/sapatinhonatal" rel="noopener">Facebook</a></li>
     </ul></div>
     <div><h3>Guias</h3><ul>
 """ + "\n".join(f'      <li><a href="/{p["slug"]}/">{p["short"]}</a></li>' for p in PAGES) + """
@@ -99,7 +101,8 @@ CTA = """<div class="cta-box"><p><b>Pronto para sortear?</b>Cria o amigo secreto
 
 ORG = {"@type": "Organization", "@id": ORG_ID, "name": "Sapatinho", "url": BASE + "/",
        "logo": {"@type": "ImageObject", "url": BASE + "/logo.png", "width": 512, "height": 512},
-       "email": "ajuda@sapatinho-natal.pt"}
+       "email": "ajuda@sapatinho-natal.pt",
+       "sameAs": ["https://www.instagram.com/sapatinhonatal/", "https://www.facebook.com/sapatinhonatal", "https://github.com/poucosaudavel/sapatinho"]}
 WEBSITE = {"@type": "WebSite", "@id": SITE_ID, "url": BASE + "/", "name": "Sapatinho",
            "alternateName": "Sapatinho · Amigo secreto online", "inLanguage": "pt-PT", "publisher": {"@id": ORG_ID}}
 
