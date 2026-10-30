@@ -230,6 +230,8 @@ function inviteText({ n, g, l, d, link }) {
   return `Olá, ${n}!\n\nEstás no amigo secreto «${g}».${l ? `\nLimite da prenda: ${l} €.` : ""}${d ? `\nTroca de prendas: ${fmtDate(d)}.` : ""}\n\nAbre o teu link pessoal para sortear:\n${link}\n\nEste link é só teu. Não o reencaminhes.\n\nSapatinho · sapatinho-natal.pt`;
 }
 function confirmHtml(o, link) {
+  const s = suggestions(o.l);
+  const items = s.ideas.map((t) => `<li style="margin:0 0 6px">${esc(t)}</li>`).join("");
   return frame(`<div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#5f6d66;font-weight:bold">${esc(o.g)}</div>
 <p style="margin:10px 0 4px">${esc(o.n)}, o teu amigo secreto é</p>
 <div style="font-family:Georgia,serif;font-size:40px;line-height:1.1;color:#c8452c;margin:0 0 16px">${esc(o.t)}</div>
@@ -237,18 +239,37 @@ function confirmHtml(o, link) {
 ${button(link, "Ver o meu sorteio")}
 <p style="margin:0;font-size:13px;color:#5f6d66">Guarda segredo! Guarda este email para confirmares quando precisares.</p>
 <div style="margin:24px 0 0;padding:16px 18px;background:#efe6d4;border-radius:4px">
-<div style="font-family:Georgia,serif;font-size:19px;margin:0 0 6px">Sem ideias para a prenda?</div>
-<p style="margin:0 0 8px;font-size:14px">Juntámos sugestões ${o.l ? `até ${esc(o.l)} €` : "por preço"} e por tipo de pessoa.</p>
-<a href="${esc(ideasUrl(o.l))}" style="color:#c8452c;font-weight:bold;font-size:14px">Ver ideias de prendas →</a>
+<div style="font-family:Georgia,serif;font-size:19px;margin:0 0 8px">Três ideias ${esc(s.label)}</div>
+<ul style="margin:0 0 10px;padding-left:20px;font-size:14px">${items}</ul>
+<a href="${esc(s.url)}" style="color:#c8452c;font-weight:bold;font-size:14px">Ver mais ideias ${esc(s.label)} →</a>
 </div>`);
 }
-function ideasUrl(l) {
+/* Sugestões de prenda no segundo email: 3 ideias ao acaso dentro do limite do grupo.
+   Os links vão para as páginas do site (nunca diretamente para lojas). As ideias são as mesmas das páginas. */
+const IDEAS = {
+  "5": ["Uma tablete de chocolate de boa qualidade", "Meias de Natal com um padrão divertido", "Um caderno pequeno bonito", "Uma vela perfumada pequena", "Um marcador de livros", "Bolachas feitas em casa, num frasco com laço", "Uma planta suculenta num vaso pequeno", "Um vale feito por ti, como «um jantar cozinhado por mim»"],
+  "10": ["Uma caneca com uma frase que diga algo à pessoa", "Um livro de bolso de um género de que a pessoa goste", "Um jogo de cartas para jogar em grupo", "Luvas, um gorro ou um cachecol", "Uma seleção de chás ou cafés diferentes", "Um creme de mãos ou um bálsamo para os lábios", "Um puzzle pequeno", "Um suporte ou cabo para o telemóvel"],
+  "15": ["Um livro recente de um autor de que a pessoa goste", "Um jogo de tabuleiro pequeno ou de viagem", "Um conjunto de especiarias ou um azeite especial", "Uma garrafa térmica", "Uma planta de interior com um vaso bonito", "Uma moldura com uma fotografia do grupo", "Os ingredientes para um cocktail, com a receita escrita à mão"],
+  "20": ["Um jogo de tabuleiro para jogar em família", "Produtos regionais portugueses: queijo, enchidos ou conservas", "Um vale para o café ou a pastelaria preferida da pessoa", "Um livro de receitas", "Um kit de ervas aromáticas para semear", "Um pijama ou umas meias quentes de boa qualidade", "Um puzzle de 1000 peças"],
+  "50": ["Uma aula de cerâmica ou de cozinha", "Bilhetes para o cinema, um concerto ou o teatro", "Um jogo de tabuleiro mais completo", "Uma coluna de som portátil pequena", "Uma mochila ou uma bolsa de boa qualidade", "Um cesto com produtos gourmet"],
+};
+function suggestions(l) {
   const n = parseFloat(l) || 0;
-  const tier = !n ? "" : n <= 5 ? "#ate-5" : n <= 10 ? "#ate-10" : n <= 15 ? "#ate-15" : n <= 20 ? "#ate-20" : "#ate-50";
-  return `${SITE}/ideias-de-prendas-amigo-secreto/?utm_source=email&utm_medium=confirmacao${tier}`;
+  // a faixa nunca passa do limite do grupo (limite 12 € -> ideias até 10 €)
+  const tier = !n ? null : n < 10 ? "5" : n < 15 ? "10" : n < 20 ? "15" : n < 50 ? "20" : "50";
+  const pool = tier ? IDEAS[tier].slice() : [...IDEAS["10"], ...IDEAS["20"]];
+  const ideas = [];
+  while (ideas.length < 3 && pool.length) ideas.push(pool.splice(rnd(pool.length), 1)[0]);
+  const utm = "?utm_source=email&utm_medium=confirmacao";
+  const url = tier === "5" ? `${SITE}/prendas-amigo-secreto-ate-5-euros/${utm}`
+    : tier === "10" ? `${SITE}/prendas-amigo-secreto-ate-10-euros/${utm}`
+    : `${SITE}/ideias-de-prendas-amigo-secreto/${utm}${tier ? "#ate-" + tier : ""}`;
+  const label = tier ? `até ${tier} €` : "de prendas";
+  return { ideas, url, label };
 }
 function confirmText(o, link) {
-  return `${o.n}, o teu amigo secreto é: ${o.t}\n\nGrupo: ${o.g}${o.l ? `\nLimite da prenda: ${o.l} €` : ""}${o.d ? `\nTroca de prendas: ${fmtDate(o.d)}` : ""}\n\nVer o teu sorteio: ${link}\n\nGuarda segredo!\n\nSem ideias para a prenda? ${ideasUrl(o.l)}\n\nSapatinho · sapatinho-natal.pt`;
+  const s = suggestions(o.l);
+  return `${o.n}, o teu amigo secreto é: ${o.t}\n\nGrupo: ${o.g}${o.l ? `\nLimite da prenda: ${o.l} €` : ""}${o.d ? `\nTroca de prendas: ${fmtDate(o.d)}` : ""}\n\nVer o teu sorteio: ${link}\n\nGuarda segredo!\n\nTrês ideias ${s.label}:\n${s.ideas.map((t) => "- " + t).join("\n")}\nMais ideias: ${s.url}\n\nSapatinho · sapatinho-natal.pt`;
 }
 
 /* ---------- anonymous counters (no names, no emails) ---------- */

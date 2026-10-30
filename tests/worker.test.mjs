@@ -106,3 +106,15 @@ test("painel: só com a senha certa", async () => {
   assert.equal((await get({ Authorization: "Bearer errada" })).status, 401);
   assert.equal((await get({ Authorization: "Bearer senha-do-painel" })).status, 200);
 });
+
+test("segundo email: 3 ideias dentro do limite, com link para o site e nunca para lojas", async () => {
+  for (const [l, label] of [[3, "até 5 €"], [12, "até 10 €"], [25, "até 20 €"], [null, "de prendas"]]) {
+    const s = setup();
+    const code = await sign(encode({ v: 2, g: "G", l, d: null, n: "Ana", t: "Rui", p: ["Ana", "Rui", "Eva"], e: "a@exemplo.pt" }), s.env);
+    await confirm({ code }, s.env);
+    const html = s.sent[0].htmlContent;
+    assert.ok(html.includes("Três ideias " + label), `${l}: ${label}`);
+    assert.equal((html.match(/<li /g) || []).length, 3);
+    assert.ok(!/amazon|tag=/i.test(html), "sem links de lojas no email");
+  }
+});
