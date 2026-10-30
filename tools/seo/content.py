@@ -113,6 +113,7 @@ body="""
 </ol></nav>
 
 <p>Os preços variam de loja para loja, por isso usa estas listas como ponto de partida e confirma o valor antes de comprar.</p>
+<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
 
 <h2 id="ate-5">Prendas até 5 €</h2>
 <p>Mais 30 ideias na página <a href="/prendas-amigo-secreto-ate-5-euros/">prendas para amigo secreto até 5 €</a>.</p>
@@ -210,7 +211,7 @@ faq=[
 ("O que oferecer a alguém que mal conheço?", "Prendas neutras e que se gastam: chocolate, chá ou café, uma vela, uma planta ou uma caneca. Evita roupa e prendas muito pessoais."),
 ("Posso oferecer um vale-oferta?", "Pode, sobretudo se não conheces bem a pessoa. Fica mais pessoal se for para uma loja ou um café de que ela goste, e com um postal escrito por ti."),
 ],
-related=["regras-do-amigo-secreto", "amigo-secreto-na-empresa"],
+related=["prendas-amigo-secreto-ate-5-euros", "prendas-amigo-secreto-ate-10-euros", "amigo-secreto-na-empresa"],
 ))
 
 # ---------------------------------------------------------------- distância
