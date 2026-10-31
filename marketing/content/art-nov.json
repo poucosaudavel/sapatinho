@@ -1,0 +1,637 @@
+{
+ "posts": [
+  {
+   "id": "art-2026-11-02",
+   "date": "2026-11-02",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "prendas-amigo-secreto-ate-5-euros",
+     "kicker": "Prendas até 5 €",
+     "title": "Pouco dinheiro, prenda bem pensada"
+    },
+    {
+     "template": "art-icons",
+     "kicker": "Ideias do guia",
+     "title": "Quatro prendas que cabem em 5 €",
+     "note": "Preços aproximados: confirma o valor antes de comprar.",
+     "items": [
+      {
+       "icon": "chocolate",
+       "name": "Chocolate de boa qualidade",
+       "price": "até 5 €",
+       "note": "Para quem é guloso ou para quem mal conheces."
+      },
+      {
+       "icon": "vela",
+       "name": "Vela perfumada pequena",
+       "price": "até 5 €",
+       "note": "Para quem gosta de estar em casa."
+      },
+      {
+       "icon": "cha",
+       "name": "Caixa pequena de chá",
+       "price": "até 5 €",
+       "note": "Para quem não passa sem uma bebida quente."
+      },
+      {
+       "icon": "pato",
+       "name": "Pato de borracha",
+       "price": "até 5 €",
+       "note": "Para quem precisa de rir no fim do ano."
+      }
+     ]
+    },
+    {
+     "template": "art-figure",
+     "scene": "prendas-amigo-secreto-ate-5-euros",
+     "fig": "para-comer",
+     "vb": "0 120 1200 667",
+     "kicker": "Truque",
+     "title": "Uma coisa boa vale mais do que três pequenas",
+     "body": "Papel kraft, um fio de lã e um postal escrito à mão. Custa cêntimos e muda tudo."
+    }
+   ],
+   "caption": "Limite de 5 €? Dá para acertar na mesma. 🎁\n\nCom pouco dinheiro, a regra é escolher uma coisa boa em vez de três pequenas. Um chocolate de qualidade para quem é guloso. Uma vela perfumada pequena para quem gosta de estar em casa. Uma caixa de chá para quem não passa sem uma bebida quente. E um pato de borracha para quem precisa de rir no fim do ano.\n\nDepois, capricha no embrulho: papel kraft, um fio de lã e um raminho de alecrim custam cêntimos. Junta um postal com uma frase sobre a pessoa, que é o que fica.\n\nNo site há trinta ideias até 5 €: para comer, para casa, para fazer rir e feitas por ti. O guia inclui links de afiliado.\n\nQual destas te fazia sorrir? Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #prendasdenatal #ideiasdeprendas #prendasbaratas #portugal",
+   "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-5-euros/"
+  },
+  {
+   "id": "art-2026-11-04",
+   "date": "2026-11-04",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "roleta-amigo-secreto",
+     "kicker": "Como se descobre o nome",
+     "title": "Cada pessoa roda a sua roleta"
+    },
+    {
+     "template": "art-figure",
+     "scene": "roleta-amigo-secreto",
+     "fig": "telemovel",
+     "vb": "0 40 1200 778",
+     "kicker": "No teu telemóvel",
+     "title": "Abres o link e carregas em «Sortear»",
+     "body": "A roleta passa pelos nomes do grupo e pára no teu amigo secreto. Só tu vês o teu ecrã."
+    },
+    {
+     "template": "art-text",
+     "skin": "dk",
+     "spot": "wheel(235,{rot:20})+g(0,-232,1,0,pointer(44,C.gold))+g(-360,240,1,0,gift({w:160,h:120,c:C.ember,r:C.gold,pat:'dots'}))+g(360,240,1,0,gift({w:140,h:100,c:C.gold,r:C.ember}))",
+     "kicker": "Pergunta frequente",
+     "title": "E se rodar outra vez?",
+     "body": "Sai o mesmo nome. O sorteio fica feito quando o grupo é criado, e o nome chega-te também num segundo email.",
+     "button": "Criar sorteio grátis →"
+    }
+   ],
+   "caption": "Há quem goste de suspense. Para essas pessoas, há a roleta. 🎡\n\nNo Sapatinho, cada pessoa recebe um convite por email com um link só seu. Abre o link, carrega em «Sortear» e a roleta passa pelos nomes do grupo até parar no seu amigo secreto.\n\nRodar outra vez não muda nada: o sorteio ficou feito quando o grupo foi criado e o link mostra sempre o mesmo nome. Para quem se esquece até dezembro, chega também um segundo email com o nome.\n\nDá para rodarem todos ao mesmo tempo no jantar, cada um a olhar só para o seu telemóvel. Ou cada um em sua casa, quando lhe der jeito.\n\nNo site há uma roleta de demonstração, com nomes de exemplo, para experimentares. Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #sorteioonline #roleta #natalemfamilia #portugal",
+   "link": "https://sapatinho-natal.pt/roleta-amigo-secreto/"
+  },
+  {
+   "id": "art-2026-11-06",
+   "date": "2026-11-06",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "prendas-amigo-secreto-homem",
+     "kicker": "Saiu-te um homem?",
+     "title": "Pensa no que ele faz ao fim de semana"
+    },
+    {
+     "template": "art-icons",
+     "kicker": "Ideias do guia",
+     "title": "Uma prenda para cada gosto",
+     "note": "Preços aproximados: confirma o valor antes de comprar.",
+     "items": [
+      {
+       "icon": "termometro",
+       "name": "Termómetro digital para carne",
+       "price": "10 a 20 €",
+       "note": "Para quem manda no churrasco."
+      },
+      {
+       "icon": "cabo",
+       "name": "Cabo de carregamento 3 em 1",
+       "price": "6 a 12 €",
+       "note": "Para quem anda sempre sem bateria."
+      },
+      {
+       "icon": "lanterna",
+       "name": "Lanterna frontal",
+       "price": "12 a 20 €",
+       "note": "Para quem faz caminhadas ou campismo."
+      },
+      {
+       "icon": "termica",
+       "name": "Garrafa térmica de inox",
+       "price": "15 a 20 €",
+       "note": "Para quem passa o dia fora de casa."
+      }
+     ]
+    },
+    {
+     "template": "art-figure",
+     "scene": "prendas-amigo-secreto-homem",
+     "fig": "churrasco",
+     "vb": "0 120 1200 667",
+     "kicker": "Para quem faz churrasco",
+     "title": "Uma pinça comprida e uma mistura de especiarias",
+     "body": "Ou uma tábua pequena para servir petiscos. No guia há ideias para cada limite, de 5 a 20 €."
+    }
+   ],
+   "caption": "Saiu-te o teu sogro e só sabes que ele gosta de futebol? Já é um começo. ⚽\n\nMais do que «ser homem», conta o que ele faz ao fim de semana. Quem manda no churrasco agradece um termómetro digital para carne. Quem anda sempre sem bateria usa um cabo de carregamento 3 em 1 todos os dias. Quem faz caminhadas leva uma lanterna frontal para todo o lado.\n\nNo site há quarenta e oito ideias para homem, arrumadas pelo limite do grupo e por gostos: desporto, cozinha e churrasco, tecnologia, leitura e para quem «tem tudo». Cada uma com o preço aproximado. O guia inclui links de afiliado.\n\nQual foi a melhor prenda que já deste a um homem difícil? Conta nos comentários. Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #prendasdenatal #prendasparahomem #ideiasdeprendas #portugal",
+   "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-homem/"
+  },
+  {
+   "id": "art-2026-11-08",
+   "date": "2026-11-08",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "como-fazer-sorteio-amigo-secreto",
+     "kicker": "Papelinhos, mensagem ou email",
+     "title": "Quatro formas de fazer o sorteio"
+    },
+    {
+     "template": "art-figure",
+     "scene": "como-fazer-sorteio-amigo-secreto",
+     "fig": "por-email",
+     "vb": "0 120 1200 667",
+     "kicker": "Antes de escolher",
+     "title": "Um bom sorteio cumpre três regras",
+     "items": [
+      "Ninguém se tira a si próprio",
+      "Cada pessoa só sabe quem lhe saiu",
+      "O resultado não se perde até à troca"
+     ]
+    },
+    {
+     "template": "art-text",
+     "skin": "dk",
+     "spotH": 420,
+     "spot": "shadow(140,16)+hat()+g(-80,-300,1,-18,slip(110,60))+g(50,-350,1,12,slip(110,60))+g(-10,-235,1,4,slip(110,60))+g(380,0,1,0,envelope(230,150,{c:C.mint,seal:C.ember}))",
+     "kicker": "Comparação rápida",
+     "title": "Como se saem",
+     "items": [
+      "Papelinhos: todos no mesmo sítio",
+      "Um organizador: fica a saber tudo",
+      "Mensagem no grupo: o segredo foge",
+      "Por email: cumpre as três regras"
+     ]
+    }
+   ],
+   "caption": "Papelinhos num saco, um primo que sorteia por todos, uma mensagem no grupo ou um sorteio por email. Já passaste por quantos? 🎩\n\nUm bom sorteio de amigo secreto cumpre três regras: ninguém se tira a si próprio, cada pessoa só sabe quem lhe saiu e o resultado não se perde até ao dia da troca.\n\nOs papelinhos obrigam toda a gente a estar no mesmo sítio. Quem sorteia por todos fica a saber tudo e deixa de poder jogar a sério. Numa conversa de grupo, o segredo é difícil de guardar e a mensagem perde-se até ao Natal.\n\nNo sorteio por email, cada pessoa recebe um link só seu e o nome fica guardado no email. Só precisas do email de cada pessoa.\n\nComo foi o sorteio no teu grupo no ano passado? Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #sorteioonline #papelinhos #natalemfamilia #portugal",
+   "link": "https://sapatinho-natal.pt/como-fazer-sorteio-amigo-secreto/"
+  },
+  {
+   "id": "art-2026-11-10",
+   "date": "2026-11-10",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "como-funciona-o-sapatinho-privacidade",
+     "kicker": "Como funciona por dentro",
+     "title": "O que fica guardado do teu sorteio"
+    },
+    {
+     "template": "art-figure",
+     "scene": "como-funciona-o-sapatinho-privacidade",
+     "fig": "link",
+     "vb": "0 100 1200 689",
+     "kicker": "Sem base de dados",
+     "title": "O resultado viaja dentro do teu link",
+     "body": "O link vai assinado: se alguém mudar uma letra, deixa de funcionar. O teu email vai lá dentro, cifrado."
+    },
+    {
+     "template": "art-text",
+     "skin": "dk",
+     "spotH": 420,
+     "spot": "g(0,0,1.5,0,padlock(1,{c:C.gold}))+g(-300,-60,1.2,-24,key(1,C.goldL))+g(330,0,1,0,envelope(230,150,{c:C.paper}))",
+     "kicker": "Os limites, sem rodeios",
+     "title": "O que convém saber",
+     "items": [
+      "Quem tem o teu link vê o teu resultado",
+      "Quem organiza tem os links de todos",
+      "Não reencaminhes o teu link"
+     ]
+    }
+   ],
+   "caption": "Onde ficam os nomes e os emails do teu amigo secreto? No nosso servidor, não ficam. 🔒\n\nO Sapatinho não tem base de dados. Os nomes e os emails passam pelo servidor só durante o pedido que cria o sorteio. O resultado de cada pessoa vai assinado dentro do seu próprio link, e o email vai lá dentro cifrado, só para enviarmos o segundo email.\n\nDo nosso lado ficam apenas contagens anónimas por dia e, durante umas horas, códigos que servem para travar abusos.\n\nE os limites, sem rodeios: quem tem o teu link vê o teu resultado, por isso não o reencaminhes. Quem organiza tem os links de todos, para poder reenviar convites. A página de quem organiza não mostra quem tirou quem.\n\nExplicamos tudo, com o código, no site. Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #privacidade #sorteioonline #portugal",
+   "link": "https://sapatinho-natal.pt/como-funciona-o-sapatinho-privacidade/"
+  },
+  {
+   "id": "art-2026-11-12",
+   "date": "2026-11-12",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "prendas-engracadas-amigo-secreto",
+     "kicker": "Prendas engraçadas",
+     "title": "Para rir na troca e usar no dia seguinte"
+    },
+    {
+     "template": "art-icons",
+     "kicker": "Ideias do guia",
+     "title": "Quatro prendas para rir",
+     "note": "Preços aproximados: confirma o valor antes de comprar.",
+     "items": [
+      {
+       "icon": "caneca-bigode",
+       "name": "Caneca com piada",
+       "price": "até 10 €",
+       "note": "Para quem não funciona antes do café."
+      },
+      {
+       "icon": "meias",
+       "name": "Meias com padrão ridículo",
+       "price": "até 10 €",
+       "note": "Para quem entra em qualquer brincadeira."
+      },
+      {
+       "icon": "bigode",
+       "name": "Bigode postiço",
+       "price": "até 5 €",
+       "note": "Para quem gosta de se mascarar."
+      },
+      {
+       "icon": "cartas",
+       "name": "Jogo de cartas de desafios",
+       "price": "até 10 €",
+       "note": "Para animar o próprio jantar da troca."
+      }
+     ]
+    },
+    {
+     "template": "art-figure",
+     "scene": "prendas-engracadas-amigo-secreto",
+     "fig": "divertidas",
+     "vb": "0 120 1200 667",
+     "kicker": "Para não correr mal",
+     "title": "A piada é com a pessoa, não sobre ela",
+     "body": "Nada sobre o peso, a idade ou a aparência. E junta uma parte útil, para não acabar numa gaveta."
+    }
+   ],
+   "caption": "A prenda engraçada ideal arranca gargalhadas na troca e no dia seguinte ainda se usa. 😄\n\nUma caneca com piada para quem não funciona antes do café. Umas meias com um padrão ridículo para quem entra em qualquer brincadeira. Um jogo de cartas de desafios, que anima o próprio jantar da troca.\n\nDuas regras para não correr mal: a piada é com a pessoa, não sobre ela (nada sobre o peso, a idade ou a aparência). E conhece o grupo: o que resulta entre amigos pode não resultar no trabalho.\n\nNo site há trinta ideias engraçadas, de 5 a 20 €, e algumas para fazeres tu. O guia inclui links de afiliado.\n\nQual foi a prenda mais engraçada que já recebeste? Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #prendasengracadas #prendasdenatal #ideiasdeprendas #portugal",
+   "link": "https://sapatinho-natal.pt/prendas-engracadas-amigo-secreto/"
+  },
+  {
+   "id": "art-2026-11-14",
+   "date": "2026-11-14",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "amigo-secreto-criancas",
+     "kicker": "Amigo secreto com crianças",
+     "title": "Um sorteio só para os miúdos"
+    },
+    {
+     "template": "art-figure",
+     "scene": "amigo-secreto-criancas",
+     "fig": "por-idade",
+     "vb": "0 140 1200 622",
+     "kicker": "Ideias por idade",
+     "title": "Uma prenda à medida de cada idade",
+     "items": [
+      "3 a 5 anos: plasticina, puzzles grandes",
+      "6 a 8 anos: banda desenhada, desenho",
+      "9 a 12 anos: jogos de tabuleiro rápidos"
+     ]
+    },
+    {
+     "template": "art-text",
+     "skin": "lt",
+     "spotH": 400,
+     "spot": "teddy()+g(-330,0,1,0,shadow(110)+g(-60,0,1,-8,crayon(150,C.ember))+g(-20,0,1,-3,crayon(170,C.gold))+g(20,0,1,3,crayon(160,C.leaf))+g(60,0,1,9,crayon(140,C.blue)))+g(330,0,1,0,shadow(120)+g(-55,0,1,0,block(100,C.ember,'A'))+g(55,0,1,0,block(100,C.blue,'B'))+g(0,-100,1,0,block(100,C.green,'C')))",
+     "kicker": "Regras adaptadas",
+     "title": "Para correr bem",
+     "items": [
+      "Um adulto acompanha cada criança",
+      "Sorteio uma ou duas semanas antes",
+      "Limite baixo e igual para todos",
+      "Três coisas de que gostam, por escrito"
+     ]
+    }
+   ],
+   "caption": "Em famílias grandes há um truque que resolve muita coisa: fazer dois sorteios. 🧸\n\nUm para os adultos e outro para as crianças. Assim os miúdos oferecem a outros miúdos e escolhem prendas de que eles próprios gostavam. E nenhum adulto tem de adivinhar o que quer uma criança de 7 anos que vê duas vezes por ano.\n\nAlgumas regras ajudam: um adulto acompanha cada criança (o convite pode ir para o email dos pais), o sorteio faz-se uma ou duas semanas antes da troca para o segredo aguentar, e o limite é baixo e igual para todos.\n\nNo guia há ideias de prendas para os 3 a 5, os 6 a 8 e os 9 a 12 anos. O guia inclui links de afiliado.\n\nNa tua família, os miúdos guardam o segredo ou contam logo? Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #natalemfamilia #criancas #prendasdenatal #portugal",
+   "link": "https://sapatinho-natal.pt/amigo-secreto-criancas/"
+  },
+  {
+   "id": "art-2026-11-16",
+   "date": "2026-11-16",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "amigo-secreto-na-empresa",
+     "kicker": "Amigo secreto na empresa",
+     "title": "Um convite, não uma obrigação"
+    },
+    {
+     "template": "art-figure",
+     "scene": "amigo-secreto-na-empresa",
+     "fig": "calendario",
+     "vb": "0 100 1200 689",
+     "kicker": "Participação voluntária",
+     "title": "Dá um prazo e não insistas",
+     "body": "Nem toda a gente quer ou pode entrar, e não tem de explicar porquê. Ninguém fica de fora da festa por não entrar no sorteio."
+    },
+    {
+     "template": "art-text",
+     "skin": "lt",
+     "spotH": 380,
+     "spot": "envelope(300,200,{open:true,c:C.mint,letter:letterSheet(220,230,'<rect x=\"-80\" y=\"-200\" width=\"160\" height=\"14\" rx=\"7\" fill=\"#8fa59a\"/><rect x=\"-80\" y=\"-170\" width=\"120\" height=\"14\" rx=\"7\" fill=\"#e3d9c6\"/>')})+g(-330,0,.85,0,plant())+g(330,0,1,0,mug({c:C.ember,deco:'star'}))",
+     "kicker": "Mensagem pronta a enviar",
+     "title": "Copia e adapta",
+     "body": "«Olá a todos! Este ano vamos fazer amigo secreto na equipa. Quem quiser participar, responda a este email até sexta-feira. A participação é voluntária e ninguém fica de fora do almoço por não entrar.»"
+    }
+   ],
+   "caption": "No trabalho, o amigo secreto começa com um convite. E um convite pode ser recusado. 💼\n\nNem toda a gente quer ou pode entrar, por razões que não tem de explicar. Anuncia a iniciativa, dá um prazo para quem quer participar e não insistas com quem não responde. Ninguém deve ficar de fora da festa por não entrar no sorteio.\n\nO limite deve ser baixo e igual para todos, chefias incluídas. Entre 5 e 15 € deixa toda a gente à vontade.\n\nNo guia há uma mensagem pronta a enviar aos colegas: é só copiar, mudar a data e o limite, e enviar. Depois do prazo, cada pessoa recebe por email o seu link para sortear.\n\nNa tua empresa, quem costuma dar o primeiro passo? Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #trabalho #jantardenatal #equipa #portugal",
+   "link": "https://sapatinho-natal.pt/amigo-secreto-na-empresa/"
+  },
+  {
+   "id": "art-2026-11-18",
+   "date": "2026-11-18",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "prendas-amigo-secreto-ate-15-euros",
+     "kicker": "Prendas até 15 €",
+     "title": "Para fugir à caneca e ao chocolate"
+    },
+    {
+     "template": "art-icons",
+     "kicker": "Ideias do guia",
+     "title": "Uma ideia para cada pessoa",
+     "note": "Preços aproximados: confirma o valor antes de comprar.",
+     "items": [
+      {
+       "icon": "molho",
+       "name": "Molho picante artesanal",
+       "price": "6 a 12 €",
+       "note": "Para quem põe picante em tudo."
+      },
+      {
+       "icon": "cartas",
+       "name": "Jogo de cartas para dois",
+       "price": "10 a 15 €",
+       "note": "Para quem joga a dois em casa."
+      },
+      {
+       "icon": "candeeiro",
+       "name": "Candeeiro LED de secretária",
+       "price": "10 a 15 €",
+       "note": "Para um colega de trabalho."
+      },
+      {
+       "icon": "mapa",
+       "name": "Mapa de raspar",
+       "price": "10 a 15 €",
+       "note": "Para quem «tem tudo» e gosta de viajar."
+      }
+     ]
+    },
+    {
+     "template": "art-figure",
+     "scene": "prendas-amigo-secreto-ate-15-euros",
+     "fig": "desporto",
+     "vb": "0 120 1200 667",
+     "kicker": "E há mais",
+     "title": "Ideias para quem não pára quieto",
+     "body": "No guia há trinta e seis ideias até 15 €, por tipo de pessoa, desporto incluído."
+    }
+   ],
+   "caption": "Quinze euros é aquele limite simpático: dá para fugir à caneca e ao chocolate sem gastar demais. 🌶️\n\nPara quem põe picante em tudo, um molho artesanal. Para quem joga a dois em casa, um jogo de cartas para dois. Para o colega da secretária ao lado, um candeeiro LED pequeno. E para quem «tem tudo» e gosta de viajar, um mapa de raspar.\n\nNo site há trinta e seis ideias até 15 €, arrumadas por tipo de pessoa: cozinha, leitura, jogos, colegas, casa, desporto e quem «tem tudo». Cada uma com o preço aproximado, que muda com as promoções. O guia inclui links de afiliado.\n\nNo teu grupo, o limite este ano é quanto? Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #prendasdenatal #ideiasdeprendas #prendasate15euros #portugal",
+   "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-15-euros/"
+  },
+  {
+   "id": "art-2026-11-20",
+   "date": "2026-11-20",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "amigo-secreto-a-distancia",
+     "kicker": "Amigo secreto à distância",
+     "title": "O grupo está longe, a tradição não"
+    },
+    {
+     "template": "art-figure",
+     "scene": "amigo-secreto-a-distancia",
+     "fig": "envio",
+     "vb": "0 120 1200 667",
+     "kicker": "Antes do sorteio",
+     "title": "Três coisas a combinar",
+     "items": [
+      "Os portes contam para o limite?",
+      "Até que dia se envia a prenda",
+      "As moradas, partilhadas antes"
+     ]
+    },
+    {
+     "template": "art-text",
+     "skin": "dk",
+     "spotH": 420,
+     "spot": "laptop(440,300,g(-104,-184,1,0,'<rect x=\"-96\" y=\"-58\" width=\"192\" height=\"116\" rx=\"6\" fill=\"#2f6b55\"/>'+g(0,-10,1,0,avatar(26,C.skin[0],C.hair[2],C.ember)))+g(104,-184,1,0,'<rect x=\"-96\" y=\"-58\" width=\"192\" height=\"116\" rx=\"6\" fill=\"#1d4a3b\"/>'+g(0,-10,1,0,avatar(26,C.skin[2],C.hair[0],C.gold)))+g(-104,-64,1,0,'<rect x=\"-96\" y=\"-58\" width=\"192\" height=\"116\" rx=\"6\" fill=\"#1d4a3b\"/>'+g(0,-10,1,0,avatar(26,C.skin[1],C.hair[1],C.paper)))+g(104,-64,1,0,'<rect x=\"-96\" y=\"-58\" width=\"192\" height=\"116\" rx=\"6\" fill=\"#2f6b55\"/>'+g(0,6,.4,0,gift({w:160,h:120,c:C.ember,r:C.gold,noShadow:true}))))",
+     "kicker": "No dia da troca",
+     "title": "Revelação por videochamada",
+     "body": "Cada pessoa abre a prenda em frente à câmara e tenta adivinhar quem a ofereceu. Atenção aos fusos horários."
+    }
+   ],
+   "caption": "Quando parte da família vive fora, o amigo secreto pede só um bocadinho mais de organização. ✈️\n\nAntes do sorteio, combinem três coisas. Os portes contam para o limite? A regra mais justa costuma ser: o limite é só para a prenda e cada um paga o seu envio. Até que dia se envia, com margem para chegar a tempo? E partilhem as moradas antes do sorteio, para ninguém ter de perguntar e denunciar quem lhe saiu.\n\nPara fora da União Europeia, prefere uma loja que entregue no país de destino. Ou escolhe uma prenda digital, que chega no momento e não paga portes.\n\nNo dia, revelação por videochamada. Quem é que no teu grupo está mais longe? Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #natalemfamilia #emigrantes #videochamada #portugal",
+   "link": "https://sapatinho-natal.pt/amigo-secreto-a-distancia/"
+  },
+  {
+   "id": "art-2026-11-22",
+   "date": "2026-11-22",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "prendas-amigo-secreto-ate-20-euros",
+     "kicker": "Prendas até 20 €",
+     "title": "Para quem cozinha, joga ou adora o sofá"
+    },
+    {
+     "template": "art-figure",
+     "scene": "prendas-amigo-secreto-ate-20-euros",
+     "fig": "cozinhar",
+     "vb": "0 120 1200 667",
+     "kicker": "Para quem gosta de cozinhar",
+     "title": "Azeite de um produtor português",
+     "body": "Ou flor de sal com sais aromatizados, um moinho de pimenta ou uma tábua de oliveira."
+    },
+    {
+     "template": "art-icons",
+     "kicker": "Ideias do guia",
+     "title": "E para os outros gostos",
+     "note": "Preços aproximados: confirma o valor antes de comprar.",
+     "items": [
+      {
+       "icon": "dados",
+       "name": "Jogo de tabuleiro pequeno",
+       "price": "12 a 20 €",
+       "note": "Para famílias e grupos de amigos."
+      },
+      {
+       "icon": "manta",
+       "name": "Manta polar para o sofá",
+       "price": "15 a 20 €",
+       "note": "Para quem gosta de estar em casa."
+      },
+      {
+       "icon": "livro",
+       "name": "Luz de leitura recarregável",
+       "price": "12 a 20 €",
+       "note": "Para quem lê antes de dormir."
+      },
+      {
+       "icon": "planta",
+       "name": "Kit de ervas aromáticas",
+       "price": "10 a 18 €",
+       "note": "Para quem «tem tudo» e gosta de cozinhar."
+      }
+     ]
+    }
+   ],
+   "caption": "Vinte euros dão para escolher com calma. A pergunta é: o que faz essa pessoa quando tem uma tarde livre? 🍳\n\nSe cozinha, uma garrafa de azeite virgem extra de um produtor português ou uma caixa de flor de sal com sais aromatizados. Se junta a família à mesa, um jogo de tabuleiro pequeno e rápido de aprender. Se não sai do sofá em dezembro, uma manta polar. Se lê antes de dormir, uma luz de leitura recarregável.\n\nNo site há trinta e quatro ideias até 20 €, por tipo de pessoa, com o preço aproximado de cada uma. Confirma o valor antes de comprar, porque muda com as promoções. O guia inclui links de afiliado.\n\nE tu, que tipo de pessoa és nesta lista? Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #prendasdenatal #ideiasdeprendas #prendasate20euros #portugal",
+   "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-20-euros/"
+  },
+  {
+   "id": "art-2026-11-24",
+   "date": "2026-11-24",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "regras-do-amigo-secreto",
+     "kicker": "Para animar a troca",
+     "title": "Três variantes do amigo secreto"
+    },
+    {
+     "template": "art-text",
+     "skin": "lt",
+     "spotH": 440,
+     "spot": "bookStack([[260,56,C.blue],[230,50,C.gold,8],[250,54,C.ember,-6],[220,48,C.green,4]])+g(-330,0,1,0,gift({w:150,h:110,c:C.ember,r:C.gold,pat:'dots'}))+g(330,0,1,0,mug({c:C.gold,deco:'star'}))",
+     "kicker": "Variante 1",
+     "title": "Amigo secreto com tema",
+     "body": "Um livro, algo feito à mão, algo comestível ou algo vermelho. O tema ajuda quem não conhece bem a pessoa que lhe saiu."
+    },
+    {
+     "template": "art-text",
+     "skin": "lt",
+     "spotH": 440,
+     "spot": "clipboard(270,340,{rows:3})+g(-300,0,1,0,gift({w:150,h:110,c:C.green,r:C.gold}))+g(300,-40,1,28,pencil(200))",
+     "kicker": "Variante 2",
+     "title": "Com lista de desejos",
+     "body": "Antes do sorteio, cada pessoa escreve três sugestões dentro do limite. Quem compra escolhe uma ou inspira-se."
+    },
+    {
+     "template": "art-text",
+     "skin": "dk",
+     "spotH": 440,
+     "spot": "g(-230,0,1,0,gift({w:210,h:150,c:C.ember,r:C.gold,pat:'dots'}))+g(10,0,1,0,gift({w:160,h:210,c:C.green,r:C.paper,pat:'stripes'}))+g(230,0,1,0,gift({w:180,h:120,c:C.gold,r:C.ember}))",
+     "kicker": "Variante 3",
+     "title": "Troca com «roubo»",
+     "body": "Cada pessoa traz uma prenda embrulhada e, à vez, abre uma nova ou «rouba» uma já aberta. Caótico, e por isso divertido."
+    }
+   ],
+   "caption": "Se o amigo secreto do teu grupo é sempre igual, este ano experimentem mudar uma regra. 🎲\n\nCom tema: toda a gente oferece algo dentro de um tema, como um livro, uma coisa feita à mão ou algo vermelho. Ajuda muito quem não conhece bem a pessoa que lhe saiu.\n\nCom lista de desejos: antes do sorteio, cada pessoa escreve três sugestões dentro do limite. Quem compra escolhe uma ou inspira-se para algo parecido.\n\nTroca com «roubo»: aqui não há sorteio de nomes. Cada pessoa traz uma prenda embrulhada e, à vez, abre uma nova ou «rouba» uma já aberta. Funciona bem em festas de empresa.\n\nQual destas iam experimentar? Mais variantes e as regras todas no site. Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #regras #natalemfamilia #jogosdenatal #portugal",
+   "link": "https://sapatinho-natal.pt/regras-do-amigo-secreto/"
+  },
+  {
+   "id": "art-2026-11-26",
+   "date": "2026-11-26",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "amigo-secreto-black-friday",
+     "kicker": "Amanhã é Black Friday",
+     "title": "Três perguntas antes de comprar a prenda"
+    },
+    {
+     "template": "art-figure",
+     "scene": "amigo-secreto-black-friday",
+     "fig": "desconto",
+     "vb": "0 100 1200 711",
+     "kicker": "Pergunta 1",
+     "title": "O desconto é real?",
+     "body": "Vê o histórico de preços e compara em mais do que uma loja. Desconfia de percentagens muito altas."
+    },
+    {
+     "template": "art-text",
+     "skin": "dk",
+     "spotH": 420,
+     "spot": "bag(260,290,C.paper,txt(0,-100,150,C.ember,'%'))+g(-310,0,1,0,gift({w:170,h:130,c:C.ember,r:C.gold,pat:'stripes'}))+g(300,0,1,0,gift({w:150,h:110,c:C.green,r:C.paper}))",
+     "kicker": "Perguntas 2 e 3",
+     "title": "Cabe no limite? Chega a tempo?",
+     "items": [
+      "Conta o que pagas, não o preço riscado",
+      "Confirma o prazo de entrega",
+      "Pede talão de oferta"
+     ]
+    }
+   ],
+   "caption": "Amanhã os preços riscados vão estar por todo o lado. Para a prenda do amigo secreto, chegam três perguntas. 🛍️\n\nO desconto é real? Há lojas que sobem o preço nas semanas anteriores. Vê o histórico do produto e compara em mais do que uma loja.\n\nCabe no limite? Conta o que pagas, não o preço antes do desconto. Se o limite é 20 € e pagas 20 €, está dentro.\n\nChega a tempo e dá para trocar? Nestas semanas as transportadoras andam sobrecarregadas e alguns prazos de devolução acabam antes do Natal. Confirma antes de pagar e pede talão de oferta.\n\nO guia da Black Friday para o amigo secreto está no site e inclui links de afiliado. Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #blackfriday #blackfriday2026 #prendasdenatal #portugal",
+   "link": "https://sapatinho-natal.pt/amigo-secreto-black-friday/"
+  },
+  {
+   "id": "art-2026-11-28",
+   "date": "2026-11-28",
+   "time": "17:00",
+   "slides": [
+    {
+     "template": "art-cover",
+     "scene": "pistas-e-mensagens-amigo-secreto",
+     "kicker": "Pistas e mensagens",
+     "title": "Como pôr a sala inteira a adivinhar"
+    },
+    {
+     "template": "art-text",
+     "skin": "dk",
+     "spotH": 400,
+     "spot": "g(-230,0,1.3,-6,bubble(150,110,C.gold,txt(0,30,80,C.ink,'?')))+g(60,-60,1.3,8,bubble(130,96,C.ember,txt(0,26,70,C.paper,'?'),'r'))+g(330,40,1,0,gift({w:150,h:110,c:C.green,r:C.gold}))",
+     "kicker": "Para a revelação",
+     "title": "Começa vago e vai afunilando",
+     "body": "«É a pessoa que liga sempre à hora do almoço.» Histórias do grupo, nunca a aparência. Três a cinco pistas chegam."
+    },
+    {
+     "template": "art-figure",
+     "scene": "pistas-e-mensagens-amigo-secreto",
+     "fig": "postal",
+     "vb": "0 120 1200 667",
+     "kicker": "Para o postal",
+     "title": "Duas linhas à mão fazem diferença",
+     "items": [
+      "«Se não gostares, a culpa é do sorteio.»",
+      "«Prometo que não fui eu que escolhi o embrulho.»"
+     ]
+    }
+   ],
+   "caption": "Na revelação, há sempre quem comece com «é uma pessoa simpática». Não ajuda ninguém. 🕵️\n\nNa revelação em cadeia, cada pessoa descreve o seu amigo secreto até alguém adivinhar. As boas pistas começam vagas e vão afunilando: a primeira serve a várias pessoas, a última só a uma. Três a cinco chegam.\n\nUsa histórias do grupo, não a aparência. «É a pessoa que liga sempre à hora do almoço» ou «nunca chega a um jantar sem trazer sobremesa» põem a mesa a pensar e não ofendem ninguém.\n\nPara o postal que vai com a prenda, duas linhas escritas à mão chegam. Se ainda não queres revelar quem és, assina «O teu amigo secreto».\n\nNo site há pistas para a família, para os amigos e para o trabalho. Qual é a pista que te denunciava logo? Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #natalemfamilia #postaldenatal #revelacao #portugal",
+   "link": "https://sapatinho-natal.pt/pistas-e-mensagens-amigo-secreto/"
+  }
+ ]
+}
