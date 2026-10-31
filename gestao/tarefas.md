@@ -36,7 +36,7 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | meados nov | gestor | Rever metas com o Search Console e o `/painel` que o Diogo enviar | por fazer |
 | 17 a 23 nov | seo | Rotina de segunda: melhorar o que está entre a 8.ª e a 20.ª posição | por fazer |
 | 17 a 23 nov | gestor | «Apoia o projeto», só se o Diogo quiser | à espera do Diogo: decidir |
-| ~21 nov | Diogo | Agendar dezembro no Meta | por fazer |
+| ~21 nov | gestor | Agendar dezembro no Meta | a fazer (31 out, autorizado pelo Diogo) |
 | 24 a 30 nov | seo | Rotina; Black Friday (27 nov) | por fazer |
 | 24 a 30 nov | gestor | Ver no `/painel` os emails por dia (pagar Brevo se > 200 dois dias seguidos) | por fazer |
 | 1 dez | seo | Revisão de preços em todos os guias | por fazer |

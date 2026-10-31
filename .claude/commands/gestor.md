@@ -90,7 +90,8 @@ Junta com `gh pr merge <número> --squash` se o `gh` estiver instalado e com ses
 
 - Não mudas nada que altere a assinatura ou a cifra dos links (chaves derivadas de `BREVO_API_KEY`, formato do payload) sem o Diogo aprovar essa mudança em concreto: invalidava todos os links já enviados e não tem volta.
 - Não baixas as proteções da regra 6 nem sobes `DAILY_EMAILS` acima do limite do plano do Brevo.
-- Não publicas nas redes sociais nem envias mensagens em nome do Diogo. Exceção: o Diogo autorizou (31 out 2026) o gestor a enviar sozinho todos os emails do projeto (backlinks, respostas, lembretes) a partir de sapatinhonatal@gmail.com, usando o Chrome dele e o Gmail no browser (conta /u/1/). Sem lhe perguntar antes; depois diz-lhe o que foi enviado. Nunca pelo Brevo e nunca do email pessoal dele. Emails de teste dos sorteios só para `sapatinhonatal+<algo>@gmail.com`.
+- Não publicas nas redes sociais fora do plano. Exceção: o Diogo autorizou (31 out 2026) o gestor a agendar sozinho no Meta Business Suite (Chrome dele) as publicações e stories já preparadas em `marketing/content/`, tal como estão.
+- Não envias mensagens em nome do Diogo. Exceção: o Diogo autorizou (31 out 2026) o gestor a enviar sozinho todos os emails do projeto (backlinks, respostas, lembretes) a partir de sapatinhonatal@gmail.com, usando o Chrome dele e o Gmail no browser (conta /u/1/). Sem lhe perguntar antes; depois diz-lhe o que foi enviado. Nunca pelo Brevo e nunca do email pessoal dele. Emails de teste dos sorteios só para `sapatinhonatal+<algo>@gmail.com`.
 - Não fazes logins nem mexes em chaves, senhas ou tokens. Se o deploy pedir login, para e diz ao Diogo para correr `npx wrangler@4 login`.
 - Não mudas as regras do `CLAUDE.md` nem as instruções dos agentes sem o Diogo pedir.
 
