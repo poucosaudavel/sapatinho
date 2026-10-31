@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-PT"><head><meta charset="utf-8">
+<!-- Molde das publicações ilustradas (feed 1080x1350). Usa os desenhos dos guias do site
+     (tools/seo/images/art.js) e os ícones das «Escolhas rápidas» (site/img/icons/*.svg).
+     Usado por marketing/render/render-art.js. Modelos de slide: art-cover, art-figure, art-icons, art-text. -->
+<style>
+@font-face{font-family:Gloock;src:url(fonts/gloock-latin-400-normal.woff2)}
+@font-face{font-family:Gloock;src:url(fonts/gloock-latin-ext-400-normal.woff2);unicode-range:U+0100-024F}
+@font-face{font-family:Inst;font-weight:400;src:url(fonts/instrument-sans-latin-400-normal.woff2)}
+@font-face{font-family:Inst;font-weight:500;src:url(fonts/instrument-sans-latin-500-normal.woff2)}
+@font-face{font-family:Inst;font-weight:600;src:url(fonts/instrument-sans-latin-600-normal.woff2)}
+@font-face{font-family:Inst;font-weight:700;src:url(fonts/instrument-sans-latin-700-normal.woff2)}
+:root{--green:#0f2a22;--green2:#16372d;--gold:#d9a441;--ember:#c8452c;--paper:#f7f1e6;--paper2:#efe6d4;--line:#e3d9c6;--ink:#1d2a25;--muted:#5f6d66;--mint:#b9c7bf}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:Inst,sans-serif}
+#c{position:relative;overflow:hidden;width:1080px;height:1350px}
+.dk{background:var(--green);color:var(--paper)}
+.lt{background:var(--paper);color:var(--ink)}
+.art{position:absolute;left:0;top:0;width:1080px;display:block}
+.art svg{display:block}
+.ribbon{position:absolute;left:0;right:0;height:20px;background:repeating-linear-gradient(-45deg,var(--ember) 0 26px,var(--paper) 26px 52px)}
+.brand{position:absolute;left:72px;bottom:62px;display:flex;align-items:center;gap:16px;font-family:Gloock;font-size:38px}
+.brand svg{width:52px;height:52px;border-radius:12px}
+.brand b{font-weight:400}.brand b span{color:var(--gold)}
+.url{position:absolute;right:72px;bottom:74px;font-size:27px;font-weight:600;letter-spacing:.03em;opacity:.75}
+.pg{position:absolute;right:40px;top:40px;font-size:24px;font-weight:600;letter-spacing:.1em;padding:8px 18px;border-radius:999px;background:rgba(15,42,34,.55);color:var(--paper)}
+.box{position:absolute;left:72px;right:72px;bottom:170px;display:flex;flex-direction:column;justify-content:center}
+.kick{font-size:30px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px}
+.dk .kick{color:var(--gold)}.lt .kick{color:var(--ember)}
+.tt{font-family:Gloock;font-weight:400;line-height:1.07;margin:0}
+.bd{font-size:38px;line-height:1.38;margin-top:26px;font-weight:500}
+.dk .bd{color:var(--mint)}.lt .bd{color:var(--muted)}
+.swipe{font-size:30px;font-weight:600;color:var(--gold);margin-top:30px}
+ol.it{list-style:none;margin:30px 0 0;padding:0;display:flex;flex-direction:column;gap:18px}
+.it li{display:flex;gap:24px;align-items:baseline;font-size:38px;line-height:1.25;font-weight:500;padding-bottom:18px;border-bottom:2px solid rgba(29,42,37,.12)}
+.dk .it li{border-color:rgba(247,241,230,.14)}
+.it li:last-child{border-bottom:0;padding-bottom:0}
+.it li b{font-family:Gloock;font-weight:400;color:var(--ember);min-width:40px;font-size:42px}
+.dk .it li b{color:var(--gold)}
+.btn{display:inline-block;margin-top:36px;background:var(--ember);color:#fff;border-radius:10px;padding:24px 40px;font-size:38px;font-weight:600;align-self:flex-start}
+/* ideias com ícones */
+.head{position:absolute;left:72px;right:72px;top:84px}
+.grid{position:absolute;left:56px;right:56px;top:330px;bottom:196px;display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.cardi{background:#fff;border:3px solid var(--line);border-radius:22px;padding:22px 26px 24px;display:flex;flex-direction:column;align-items:flex-start;position:relative;overflow:hidden}
+.cardi:before{content:"";position:absolute;left:0;right:0;top:0;height:12px;background:repeating-linear-gradient(-45deg,var(--ember) 0 18px,var(--paper) 18px 36px)}
+.cardi .row{display:flex;width:100%;justify-content:space-between;align-items:flex-end;margin-top:14px}
+.cardi img{width:136px;height:136px;margin-left:-4px}
+.cardi h3{font-family:Gloock;font-weight:400;font-size:38px;line-height:1.08;margin:16px 0 0}
+.cardi .pr{display:inline-block;background:var(--gold);color:var(--green);font-weight:700;font-size:26px;border-radius:999px;padding:6px 18px;white-space:nowrap}
+.cardi p{font-size:27px;line-height:1.3;color:var(--muted);margin:12px 0 0;font-weight:500}
+.note{position:absolute;left:72px;right:72px;bottom:150px;font-size:24px;color:var(--muted);text-align:center}
+</style></head><body><div id="c"></div>
+<script src="../../tools/seo/images/art.js"></script>
+<script>
+const LOGO='<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#16372d"/><path d="M18 14h14v22c0 2 1 3 3 3h9a6 6 0 0 1 6 6v5H18z" fill="#c8452c"/><rect x="18" y="12" width="14" height="7" rx="2" fill="#f7f1e6"/><circle cx="46" cy="16" r="3" fill="#d9a441"/></svg>';
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const BRAND='<div class="brand">'+LOGO+'<b>Sapatinho<span>.</span></b></div><div class="url">sapatinho-natal.pt</div>';
+const ICON_DIR='../../site/img/icons/';
+
+// Desenho de um guia (capa 1200x675 ou ilustração 1200x800), recortado por vb e esticado a 1080 de largura.
+function sceneSvg(slug,name,vb){
+  const inner=SCENES[slug][name]();
+  const [x,y,w,h]=vb.split(/\s+/).map(Number);
+  const H=Math.round(1080*h/w);
+  return {svg:`<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="${H}" viewBox="${vb}">${inner}</svg>`,h:H};
+}
+// Objetos soltos de art.js (expressão JS), centrados numa caixa W x H com fundo opcional.
+function spotSvg(expr,W,H,bg){
+  const tmp=document.createElement('div');tmp.style.cssText='position:absolute;left:-5000px;top:0';
+  tmp.innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="3000"><g id="sp">${eval(expr)}</g></svg>`;
+  document.body.appendChild(tmp);const b=tmp.querySelector('#sp').getBBox();tmp.remove();
+  const pad=.08,k=Math.min(W*(1-2*pad)/b.width,H*(1-2*pad)/b.height);
+  const tx=W/2-(b.x+b.width/2)*k,ty=H/2-(b.y+b.height/2)*k;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">${bg||''}<g transform="translate(${tx.toFixed(1)} ${ty.toFixed(1)}) scale(${k.toFixed(4)})">${eval(expr)}</g></svg>`;
+}
+function fitAll(box,minK){
+  let k=1;const els=[...box.querySelectorAll('[data-fs]')];
+  const apply=()=>els.forEach(e=>e.style.fontSize=(+e.dataset.fs*k)+'px');
+  apply();while(k>(minK||.6)&&(box.scrollHeight>box.clientHeight+1||box.scrollWidth>box.clientWidth+1)){k-=.02;apply()}
+  return k;
+}
+function textBlock(sl,tsz){
+  let h='';
+  if(sl.kicker)h+=`<div class="kick" data-fs="30">${esc(sl.kicker)}</div>`;
+  if(sl.title)h+=`<h1 class="tt" data-fs="${sl.tsize||tsz}">${esc(sl.title)}</h1>`;
+  if(sl.items)h+='<ol class="it">'+sl.items.map((x,i)=>`<li data-fs="38"><b data-fs="42">${i+1}</b><span>${esc(x)}</span></li>`).join('')+'</ol>';
+  if(sl.body)h+=`<div class="bd" data-fs="38">${esc(sl.body)}</div>`;
+  if(sl.button)h+=`<div class="btn" data-fs="38">${esc(sl.button)}</div>`;
+  return h;
+}
+function slide(sl,idx,total){
+  const t=sl.template;let h,boxTop,sk;
+  const pg=''; // o Instagram já mostra a posição no carrossel; a capa diz «Desliza →»
+  if(t==='art-cover'||t==='art-figure'){
+    const cover=t==='art-cover';sk=sl.skin||(cover?'dk':'lt');
+    const s=sceneSvg(sl.scene,sl.fig||'capa',sl.vb||(cover?'60 0 1080 675':'60 40 1080 760'));
+    boxTop=s.h+(cover?70:60);
+    h=`<div id="c" class="${sk}"><div class="art">${s.svg}</div>`+`<div class="ribbon" style="top:${s.h}px"></div>`+pg;
+    h+=`<div class="box" style="top:${boxTop}px">${textBlock(sl,cover?96:76)}`;
+    if(cover&&total>1)h+=`<div class="swipe" data-fs="30">Desliza →</div>`;
+    h+='</div>'+BRAND+'</div>';
+  } else if(t==='art-icons'){
+    sk='lt';
+    h=`<div id="c" class="lt">`+pg+`<div class="head box" style="top:84px;bottom:auto;height:220px">${textBlock({kicker:sl.kicker,title:sl.title},72)}</div>`;
+    h+='<div class="grid">'+sl.items.map(it=>`<div class="cardi"><div class="row"><img src="${ICON_DIR}${esc(it.icon)}.svg" alt=""><span class="pr">${esc(it.price)}</span></div><h3>${esc(it.name)}</h3>${it.note?`<p>${esc(it.note)}</p>`:''}</div>`).join('')+'</div>';
+    if(sl.note)h+=`<div class="note">${esc(sl.note)}</div>`;
+    h+=BRAND+'</div>';
+  } else { // art-text: objeto ilustrado em cima e texto em baixo
+    sk=sl.skin||'dk';const SH=sl.spotH||500;
+    const bg=`<circle cx="540" cy="${SH*.5}" r="${SH*.48}" fill="${sk==='dk'?'#16372d':'#efe6d4'}"/>`;
+    h=`<div id="c" class="${sk}"><div class="art" style="top:40px">${spotSvg(sl.spot,1080,SH,bg)}</div>`+(sk==='dk'?'<div class="ribbon" style="top:0"></div>':'')+pg;
+    h+=`<div class="box" style="top:${SH+70}px">${textBlock(sl,84)}</div>`+BRAND+'</div>';
+  }
+  document.getElementById('c').outerHTML=h;
+  const boxes=[...document.querySelectorAll('#c .box')];
+  window.SHRINK=Math.min(1,...boxes.map(b=>fitAll(b)));
+}
+// Verificação: devolve problemas de texto (caixa a transbordar, cartões cortados).
+function check(){
+  const out=[];
+  if(window.SHRINK<.86)out.push('texto encolhido para '+Math.round(window.SHRINK*100)+'%');
+  document.querySelectorAll('#c .box').forEach(b=>{if(b.scrollHeight>b.clientHeight+2||b.scrollWidth>b.clientWidth+2)out.push('box overflow')});
+  document.querySelectorAll('#c .cardi').forEach(c=>{if(c.scrollHeight>c.clientHeight+2)out.push('card overflow: '+c.querySelector('h3').textContent)});
+  const g=document.querySelector('#c .grid');if(g&&g.scrollHeight>g.clientHeight+2)out.push('grid overflow');
+  return out;
+}
+</script></body></html>
