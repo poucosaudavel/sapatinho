@@ -986,58 +986,58 @@
      "slides": [
       {
        "template": "cover",
-       "kicker": "Dezembro chegou",
-       "title": "Uma ideia de prenda para cada pessoa da família"
+       "kicker": "Limite de 15 €?",
+       "title": "Uma ideia para cada tipo de pessoa"
       },
       {
        "template": "list",
-       "title": "Para os mais velhos",
+       "title": "Para quem cozinha ou lê",
        "items": [
-        "Avó: álbum para fotografias impressas",
-        "Avô: boné ou gorro de lã",
-        "Tia: vela e um livro de receitas",
-        "Sogro: azeite de uma quinta pequena"
+        "Molho picante artesanal ou piri-piri",
+        "Mel de rosmaninho com colher de madeira",
+        "Romance gráfico ou álbum de BD",
+        "Livro de contos de um autor português"
        ]
       },
       {
        "template": "list",
-       "title": "Para os da tua idade",
+       "title": "Para quem joga ou faz desporto",
        "items": [
-        "Cunhado: jogo de tabuleiro para dois",
-        "Prima: caderno e caneta bonitos",
-        "Irmão: garrafa térmica boa",
-        "Amiga: kit de chá ou café de especialidade"
+        "Jogo de cartas de estratégia para dois",
+        "Livro de enigmas ou de sudokus difíceis",
+        "Corda de saltar com contador",
+        "Toalha de microfibra de secagem rápida"
        ]
       },
       {
        "template": "list",
-       "title": "Para os miúdos",
+       "title": "Para o colega e para quem «tem tudo»",
        "items": [
-        "Livro de autocolantes",
-        "Plasticina e moldes",
-        "Jogo de cartas simples",
-        "Lanterna em forma de animal"
+        "Candeeiro LED de secretária, com USB",
+        "Garrafa térmica para chá, com filtro",
+        "Caixa de doces da pastelaria do bairro",
+        "Alecrim ou loureiro num vaso de barro"
        ]
       },
       {
        "template": "cta",
-       "title": "Mais ideias por preço e por pessoa",
-       "body": "O guia do Sapatinho tem sugestões até 5, 10, 15, 20 e 50 euros."
+       "title": "36 ideias até 15 € no site",
+       "body": "Por tipo de pessoa, com o preço aproximado ao lado. Confirma o valor antes de comprar."
       }
      ],
-     "caption": "Começou dezembro e o relógio das prendas começou a contar.\n\nPara ajudar quem já tem o nome mas ainda não tem ideia, juntámos sugestões por pessoa: da avó que guarda todas as fotografias ao cunhado que diz que não gosta de jogos (e depois é o último a sair da mesa).\n\nPara os miúdos, a regra é simples: coisas que se possam usar logo, de preferência sem pilhas. Os pais agradecem.\n\nHá mais ideias, organizadas por preço, no guia de prendas (link na bio). Quem te saiu este ano?",
-     "hashtags": "#amigosecreto #ideiasdeprendas #prendasdenatal #natal2026 #natalemfamilia #amigosecretonatal #portugal",
-     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/"
+     "caption": "Começou dezembro. Se o limite do vosso amigo secreto é 15 €, esta é para ti. 🎁\n\nQuinze euros dá para fugir à caneca e ao chocolate sem gastar demais. Juntámos ideias por tipo de pessoa: para quem manda na cozinha, para quem lê na cama, para o primo que transforma qualquer jogo de cartas numa final, para o colega que mal conheces e para quem diz que «tem tudo».\n\nOs preços são aproximados e mudam de loja para loja. Confirma antes de comprar e lembra-te: o limite é o que pagas.\n\nAs 36 ideias estão no site (link na bio). Para quem é a tua prenda este ano?",
+     "hashtags": "#amigosecreto #ideiasdeprendas #prendasdenatal #natal2026 #amigosecretonatal #prendasate15euros #portugal",
+     "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-15-euros/"
     }
    ],
    "stories": [
     {
      "time": "10:00",
      "type": "ideia",
-     "item": "Avental de cozinha divertido",
+     "item": "Mel de rosmaninho e colher de madeira",
      "price": "até 15 €",
-     "text": "Para quem manda na cozinha na consoada. Há mais ideias no guia.",
-     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-15"
+     "text": "Para quem põe mel em tudo, até no chá. Há mais ideias até 15 € no guia.",
+     "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-15-euros/#cozinha"
     },
     {
      "time": "12:45",
