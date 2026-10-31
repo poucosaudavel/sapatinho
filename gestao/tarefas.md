@@ -19,12 +19,12 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 3 nov | seo | /criar: título e descrição; guia de ideias liga às páginas de preço (PR #1) | à espera do Diogo: publicar e pedir indexação |
 | 4 nov | seo | Página de prendas engraçadas (PR #2) | à espera do Diogo: publicar e pedir indexação |
 | até 2 nov | gestor | Pesquisar programas de afiliados em Portugal (vales de experiências, lojas) | feito (`gestao/afiliados.md`) |
-| 2 nov | Diogo | Agendar no Meta o resto de novembro | por fazer |
+| 2 nov | gestor | Agendar no Meta o que falta de novembro: feed de 28 nov 20:30, 29 nov e 30 nov; stories de 29 e 30 nov (o Meta só aceita até 29 dias à frente) | por fazer |
 | todas as segundas | Diogo | Enviar os números da semana (Search Console, `/painel`, Amazon, Meta); ver `gestao/kpis.md` | por fazer |
 | todas as segundas | gestor | Atualizar `gestao/kpis.md` e criar tarefas para o que estiver em risco | por fazer |
 | 16 nov | gestor | Pôr número nas metas «a definir» dos KPIs | por fazer |
 | até 8 nov | Diogo | Registar-se na Awin e mandar a lista de lojas portuguesas que aparecem (ver `gestao/afiliados.md`) | por fazer |
-| 3 a 9 nov | social-media | Publicações que levam às páginas novas de prendas | feito: à espera do Diogo (agendar no Meta a 2 nov) |
+| 3 a 9 nov | social-media | Publicações que levam às páginas novas de prendas | feito e agendado no Meta (31 out) |
 | 6 nov | seo | Prendas até 20 € | à espera do Diogo: publicar e pedir indexação |
 | 9 nov | seo | Prendas até 15 € | por fazer |
 | 9 nov | gestor | Decidir que afiliados compensam e dizer ao Diogo | por fazer |
@@ -45,6 +45,7 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 
 ## Notas do gestor
 
+- 31 out: Meta reagendado com as versões novas de 2, 3, 4, 8 e 14 nov (feed) e 4 a 8 nov (stories). O gestor passa a ser o único a agendar no Meta (o lembrete do claude.ai foi cancelado). API só com o «sim» do Diogo.
 - 30 out: página «Prendas até 20 €» feita (antecipada de 6 nov); pesquisa de afiliados feita; publicações de 3 a 9 nov ajustadas às páginas novas. Tudo num PR à espera do Diogo.
 - 30 out: KPIs e objetivos criados em `gestao/kpis.md`, a pedido do Diogo.
 - 30 out: quadro criado a partir do plano de rentabilização até 20 dez.
