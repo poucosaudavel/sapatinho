@@ -7,7 +7,7 @@ argument-hint: "[opcional: o que queres, ex. «plano da semana», «faz as taref
 
 ## Regra do Diogo: independência
 
-O Diogo quer o gestor sempre independente. Decides e avanças sozinho: juntar PRs, publicar, pedir indexação, tratar do Search Console e do quadro, e enviar os emails do projeto pelo Gmail do sapatinhonatal no Chrome dele (autorização de 31 out 2026). Só interrompes o Diogo para o que só ele pode fazer (logins, senhas, pagamentos, dados pessoais) e, nesse caso, juntas tudo num único pedido curto. As regras do `CLAUDE.md` e a secção «O que nunca fazes» continuam a valer.
+O Diogo quer o gestor sempre independente. Decides e avanças sozinho: juntar PRs, publicar o site (a API só com o «sim» dele), pedir indexação, tratar do Search Console e do quadro, e enviar os emails do projeto pelo Gmail do sapatinhonatal no Chrome dele (autorização de 31 out 2026). Só interrompes o Diogo para o que só ele pode fazer (logins, senhas, pagamentos, dados pessoais) e, nesse caso, juntas tudo num único pedido curto. As regras do `CLAUDE.md` e a secção «O que nunca fazes» continuam a valer.
 
 Pedido do Diogo: $ARGUMENTS
 (Se vier vazio, faz o «ponto da situação» descrito abaixo.)
@@ -57,7 +57,7 @@ Depois de cada tarefa, atualiza `gestao/tarefas.md`: estado, e uma linha em «No
 
 ## Juntar PRs e publicar (sozinho)
 
-O Diogo deu-te aprovação permanente para juntar PRs e publicar o site e a API sem lhe perguntar. Isto só funciona no PC dele: é lá que existem `private/` e a sessão do Cloudflare. Só avanças quando **todas** as verificações passam; se uma falhar, paras e explicas ao Diogo.
+O Diogo deu-te aprovação permanente para juntar PRs e publicar o site sem lhe perguntar. **A API (`worker/`) é diferente: antes de a publicar, explicas ao Diogo em 2 ou 3 linhas o que muda e esperas o «sim» dele**, porque um erro aí parte os links de toda a gente. Isto só funciona no PC dele: é lá que existem `private/` e a sessão do Cloudflare. Só avanças quando **todas** as verificações passam; se uma falhar, paras e explicas ao Diogo.
 
 ### Antes de juntar um PR
 
@@ -74,8 +74,9 @@ Junta com `gh pr merge <número> --squash` se o `gh` estiver instalado e com ses
 2. Corre `scripts/deploy-site.sh`.
 3. Confirma no site real: a página alterada abre e mostra a mudança, `/r` abre com um link de teste, e faz também as confirmações que o `CLAUDE.local.md` pedir.
 
-### Publicar a API
+### Publicar a API (só com o «sim» do Diogo)
 
+0. Explica ao Diogo o que muda e espera a aprovação dele para esta publicação em concreto.
 1. `git checkout main && git pull`, depois `node --test tests/*.test.mjs` (tem de passar tudo).
 2. Corre `scripts/deploy-worker.sh`.
 3. Confirma no site real: `/api/create` com um nome inválido devolve 400, `/r` abre com um link de teste antigo e com um novo. Se precisares de um sorteio de teste, os emails vão só para `sapatinhonatal+<algo>@gmail.com`.

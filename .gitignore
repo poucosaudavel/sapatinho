@@ -12,3 +12,4 @@ dist/
 marketing/out/
 marketing/jobs*.json
 .wrangler/
+gestao/backlinks.md
