@@ -113,7 +113,7 @@ body="""
 </ol></nav>
 
 <p>Os preços variam de loja para loja, por isso usa estas listas como ponto de partida e confirma o valor antes de comprar.</p>
-<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/prendas-amigo-secreto-ate-15-euros/">até 15 €</a> · <a href="/prendas-amigo-secreto-ate-20-euros/">até 20 €</a> · <a href="/prendas-engracadas-amigo-secreto/">engraçadas</a> · <a href="/prendas-ultima-hora-amigo-secreto/">de última hora</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
+<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/prendas-amigo-secreto-ate-15-euros/">até 15 €</a> · <a href="/prendas-amigo-secreto-ate-20-euros/">até 20 €</a> · <a href="/prendas-engracadas-amigo-secreto/">engraçadas</a> · <a href="/prendas-ultima-hora-amigo-secreto/">de última hora</a> · <a href="/prendas-amigo-secreto-homem/">para homem</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
 
 <h2 id="ate-5">Prendas até 5 €</h2>
 <p>Mais 30 ideias na página <a href="/prendas-amigo-secreto-ate-5-euros/">prendas para amigo secreto até 5 €</a>.</p>
@@ -1309,6 +1309,144 @@ faq=[
 ("Ainda dá para fazer o sorteio hoje?", 'Dá. No <a href="/criar">Sapatinho</a> escreves os nomes e os emails, e cada pessoa recebe por email quem lhe saiu.'),
 ],
 related=["ideias-de-prendas-amigo-secreto", "prendas-engracadas-amigo-secreto", "pistas-e-mensagens-amigo-secreto"],
+))
+
+# ---------------------------------------------------------------- para homem
+PAGES.append(dict(
+slug="prendas-amigo-secreto-homem",
+date="2026-10-31",
+nav="Prendas para homem",
+short="Prendas para homem",
+card="48 ideias até 20 €, por limite e por gostos: desporto, cozinha, tecnologia, leitura.",
+title="Prendas amigo secreto para homem: 48 ideias até 20 € | Sapatinho",
+h1="Prendas de amigo secreto para homem",
+dek="Saiu-te um homem no amigo secreto e não sabes o que lhe dar? Quarenta e oito ideias, arrumadas pelo limite do grupo e pelo que ele gosta de fazer, com o preço aproximado de cada uma.",
+description="48 prendas de amigo secreto para homem até 5, 10, 15 e 20 €, com preço: para quem faz desporto, cozinha, gosta de tecnologia, lê ou tem tudo.",
+body="""
+<p class="lead-answer"><strong>Boas prendas de amigo secreto para homem</strong> são um molho picante ou café de especialidade, umas meias técnicas, um cabo de carregamento 3 em 1, um romance policial, um termómetro para grelhados ou uma caixa de doces da pastelaria. Mais do que «ser homem», conta o que ele gosta de fazer: em baixo há ideias por limite e por gostos.</p>
+
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#ate-5">Até 5 €</a></li>
+<li><a href="#ate-10">Até 10 €</a></li>
+<li><a href="#ate-15">Até 15 €</a></li>
+<li><a href="#ate-20">Até 20 €</a></li>
+<li><a href="#desporto">Para quem faz desporto</a></li>
+<li><a href="#cozinha">Para quem cozinha ou faz churrasco</a></li>
+<li><a href="#tecnologia">Para quem gosta de tecnologia</a></li>
+<li><a href="#leitura">Para quem gosta de ler</a></li>
+<li><a href="#tudo">Para quem «tem tudo»</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<p>Os preços entre parênteses são aproximados e mudam de loja para loja e com as promoções. Confirma o valor antes de comprar. E lembra-te: nem todos os homens gostam de futebol, de cerveja ou de gadgets. Pensa primeiro na pessoa.</p>
+
+<h2 id="ate-5">Prendas para homem até 5 €</h2>
+<ul>
+<li>Um par de meias com um padrão divertido (3 a 5 €)</li>
+<li>Uma tablete de chocolate negro com flor de sal ou com piri-piri (2 a 5 €)</li>
+<li>Uma multiferramenta do tamanho de um cartão, para a carteira (3 a 5 €)</li>
+<li>Um bálsamo para os lábios e um creme de mãos pequeno, para o frio (3 a 5 €)</li>
+<li>Uma lata de conservas portuguesas de boa marca, com papel bonito (2 a 5 €)</li>
+<li>Um baralho de cartas para o café ou para as férias (2 a 5 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:calcetines divertidos hombre|meias divertidas]] · [[amz:tarjeta multiherramienta cartera|multiferramentas de cartão]] · [[amz:baraja de cartas|baralhos de cartas]]</p>
+<p>Mais ideias baratas nas <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>.</p>
+
+<h2 id="ate-10">Prendas para homem até 10 €</h2>
+<ul>
+<li>Um livro de bolso de um género de que ele goste (7 a 10 €)</li>
+<li>Um gorro de malha ou umas luvas que dão para usar o telemóvel (6 a 10 €)</li>
+<li>Um conjunto de três molhos picantes pequenos (7 a 10 €)</li>
+<li>Um suporte de telemóvel para o carro (6 a 10 €)</li>
+<li>Uma lanterna pequena recarregável, de porta-chaves (6 a 10 €)</li>
+<li>Uma caneca de viagem com tampa, para o café a caminho do trabalho (7 a 10 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:guantes tactiles hombre|luvas tácteis]] · [[amz:soporte movil coche|suportes para o carro]] · [[amz:linterna llavero recargable|lanternas de porta-chaves]] · [[amz:taza de viaje con tapa|canecas de viagem]]</p>
+<p>Mais ideias nas <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>.</p>
+
+<h2 id="ate-15">Prendas para homem até 15 €</h2>
+<ul>
+<li>Um óleo para a barba com um pente de madeira, se ele usar barba (10 a 15 €)</li>
+<li>Um pacote de café de especialidade em grão ou moído (8 a 15 €)</li>
+<li>Uma carteira fina ou um porta-cartões (10 a 15 €)</li>
+<li>Um jogo de cartas de estratégia para dois jogadores (10 a 15 €)</li>
+<li>Um porta-chaves de couro com o nome ou as iniciais gravadas (8 a 15 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:kit aceite barba peine madera|kits de barba]] · [[amz:tarjetero minimalista hombre|porta-cartões]] · [[amz:llavero cuero personalizado|porta-chaves de couro]]</p>
+<p>Mais ideias nas <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>.</p>
+
+<h2 id="ate-20">Prendas para homem até 20 €</h2>
+<ul>
+<li>Uma garrafa térmica de inox de boa qualidade (15 a 20 €)</li>
+<li>Um puzzle de 1000 peças com um mapa ou uma fotografia de uma cidade (12 a 20 €)</li>
+<li>Uma seleção de cervejas artesanais portuguesas, se souberes que ele bebe (12 a 20 €)</li>
+<li>Um avental de cozinha em ganga ou lona (15 a 20 €)</li>
+<li>Uma lanterna frontal, para caminhadas ou campismo (12 a 20 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:botella termica acero inoxidable|garrafas térmicas]] · [[amz:puzzle 1000 piezas mapa|puzzles de mapas]] · [[amz:delantal cocina hombre|aventais]] · [[amz:linterna frontal|lanternas frontais]]</p>
+<p>Mais ideias nas <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>.</p>
+
+<h2 id="desporto">Para quem faz desporto</h2>
+<ul>
+<li>Uma toalha de microfibra de secagem rápida (8 a 15 €)</li>
+<li>Uma braçadeira para levar o telemóvel a correr (8 a 14 €)</li>
+<li>Meias técnicas de corrida ou de ciclismo (8 a 15 €)</li>
+<li>Uma bola de massagem ou um rolo de espuma pequeno (6 a 15 €)</li>
+<li>Um cachecol ou uma caneca do clube dele, se souberes qual é (10 a 20 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:toalla microfibra deporte|toalhas de microfibra]] · [[amz:calcetines running|meias de corrida]] · [[amz:rodillo de espuma pequeño|rolos de espuma]] · [[amz:pelota masaje|bolas de massagem]]</p>
+
+<h2 id="cozinha">Para quem cozinha ou faz churrasco</h2>
+<ul>
+<li>Um termómetro digital para carne (10 a 20 €)</li>
+<li>Uma mistura de sal e especiarias para grelhados (5 a 12 €)</li>
+<li>Uma pinça comprida e um pincel de silicone para o grelhador (8 a 15 €)</li>
+<li>Uma tábua de madeira pequena para servir petiscos (10 a 20 €)</li>
+<li>Um livro de receitas de grelhados ou de petiscos (12 a 20 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:termometro digital carne|termómetros de carne]] · [[amz:pinzas barbacoa|pinças de churrasco]] · [[amz:tabla de madera para servir|tábuas de servir]]</p>
+
+<h2 id="tecnologia">Para quem gosta de tecnologia</h2>
+<ul>
+<li>Um cabo de carregamento entrançado 3 em 1 (6 a 12 €)</li>
+<li>Uma bolsa organizadora de cabos, para a mochila (8 a 15 €)</li>
+<li>Um suporte de secretária para o telemóvel ou para o portátil (8 a 18 €)</li>
+<li>Um tapete de rato grande, que cobre a secretária (10 a 15 €)</li>
+<li>Um carregador de parede USB-C rápido (10 a 20 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:cable carga 3 en 1 trenzado|cabos 3 em 1]] · [[amz:organizador cables viaje|organizadores de cabos]] · [[amz:soporte portatil escritorio|suportes de portátil]] · [[amz:cargador usb c rapido|carregadores USB-C]]</p>
+
+<h2 id="leitura">Para quem gosta de ler</h2>
+<ul>
+<li>Um romance policial ou de espionagem em edição de bolso (8 a 12 €)</li>
+<li>Um romance gráfico ou um álbum de banda desenhada (12 a 20 €)</li>
+<li>Uma luz de leitura de mola, recarregável (8 a 15 €)</li>
+<li>Um marcador de livros em pele ou em metal (4 a 10 €)</li>
+<li>Um livro sobre um tema de que ele goste, como música, viagens ou história (12 a 20 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:luz de lectura recargable pinza|luzes de leitura]] · [[amz:marcapaginas cuero|marcadores de pele]]</p>
+
+<h2 id="tudo">Para quem «tem tudo»</h2>
+<ul>
+<li>Uma caixa de pastéis de nata ou de doces da pastelaria do bairro (5 a 15 €)</li>
+<li>Um vale feito por ti, por exemplo «vale um almoço cozinhado por mim» (o preço dos ingredientes)</li>
+<li>Um bilhete de cinema com um saco de pipocas para levar (8 a 15 €)</li>
+<li>Um mapa de raspar, para marcar os sítios por onde já passou (10 a 15 €)</li>
+<li>Uma planta aromática num vaso de barro (5 a 12 €)</li>
+<li>Uma garrafa pequena de ginjinha ou de vinho do Porto, se souberes que ele bebe (8 a 20 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:mapa mundi rascar|mapas de raspar]] · [[amz:maceta barro|vasos de barro]]</p>
+<p>Para algo que faça rir na troca, vê as <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a>.</p>
+
+<p>Para outros valores e tipos de pessoa, vê todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite escrito no convite.</p>
+""",
+faq=[
+("O que oferecer a um homem no amigo secreto?", "Escolhe pelo que ele gosta de fazer: meias técnicas para quem corre, um termómetro de carne para quem faz churrasco, um cabo 3 em 1 para quem gosta de tecnologia, um livro para quem lê. Se não o conheces bem, prefere algo que se gaste, como café ou doces."),
+("O que oferecer a um homem que mal conheço?", "Prendas neutras e úteis: café de especialidade, uma caneca de viagem, uma garrafa térmica, chocolate bom ou uma caixa de doces. Evita roupa com tamanho e prendas muito pessoais."),
+("Que prenda dar a um homem com 10 euros?", "Um livro de bolso, um gorro ou umas luvas tácteis, um conjunto de molhos picantes, um suporte de telemóvel para o carro ou uma caneca de viagem."),
+("Bebidas são boa ideia no amigo secreto?", "Só se souberes que a pessoa bebe. Se tiveres dúvidas, troca por café, chá, doces ou conservas."),
+],
+related=["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-ate-15-euros", "prendas-amigo-secreto-ate-20-euros"],
 ))
 
 # ---------------------------------------------------------------- privacidade técnica
