@@ -781,46 +781,47 @@
       {
        "template": "cover",
        "kicker": "Última hora",
-       "title": "Prendas que não parecem compradas na véspera"
+       "title": "Prendas que se compram hoje e não parecem da véspera"
       },
       {
        "template": "list",
-       "title": "Experiências",
+       "title": "Vales e experiências",
        "items": [
-        "Bilhetes de cinema para dois",
-        "Aula experimental de cerâmica",
-        "Entradas para um museu ou aquário",
-        "Voucher de massagem"
+        "Vale de livraria, com um livro sugerido",
+        "Cartão-oferta de cinema para dois",
+        "Aula experimental de cerâmica ou cozinha",
+        "Entrada num museu, jardim ou aquário"
        ]
       },
       {
        "template": "list",
-       "title": "Vouchers",
+       "title": "Do supermercado e da papelaria",
        "items": [
-        "Cartão-oferta de uma livraria",
-        "Voucher do restaurante do bairro",
-        "Pequeno-almoço na pastelaria preferida"
+        "Cesto com queijo, compota e tostas",
+        "Bolo-rei pequeno ou panettone",
+        "Caderno bonito com uma caneta boa",
+        "Agenda ou calendário de 2027"
        ]
       },
       {
        "template": "list",
-       "title": "Comestíveis",
+       "title": "Prendas digitais",
        "items": [
-        "Compota caseira num frasco bonito",
-        "Azeite e flor de sal numa caixa",
-        "Bombons de uma pastelaria local",
-        "Bolachas feitas em casa, com laço"
+        "Um ou dois meses de séries ou de música",
+        "Audiolivro ou livro digital",
+        "Vale para a loja de aplicações",
+        "Curso curto de fotografia ou guitarra"
        ]
       },
       {
        "template": "cta",
-       "title": "Mais ideias para todos os limites",
-       "body": "Do até 5 € ao até 50 €, com prendas que ainda chegam a tempo do dia da troca."
+       "title": "29 prendas para comprar hoje",
+       "body": "Vales, experiências, supermercado, papelaria e digitais. E como embrulhar um vale."
       }
      ],
-     "caption": "Esqueceste-te. Acontece aos melhores. O importante é que ninguém dê por isso. 🎁\n\nAs melhores prendas de última hora não vêm do corredor das pilhas do supermercado. São experiências, vouchers e coisas boas para comer, que se compram hoje e parecem pensadas há semanas.\n\nTruque: imprime o voucher, mete-o num envelope bonito e escreve a pista por fora. Fica com ar de prenda a sério.\n\nE confirma o preço: a experiência tem de caber no limite combinado.\n\nQual destas escolhias? Mais ideias no link na bio.",
+     "caption": "Esqueceste-te. Acontece aos melhores. O importante é que ninguém dê por isso. 🎁\n\nA troca está aí e a encomenda não chega a tempo? Há prendas que se compram hoje: um vale de livraria, uma experiência, um cesto montado com coisas do supermercado, um caderno da papelaria ou uma prenda digital.\n\nTruque: imprime o vale ou o código num cartão, mete-o numa caixa maior e escreve a pista por fora. Fica com ar de prenda a sério.\n\nNas prendas digitais, confirma antes que o serviço deixa oferecer e que funciona em Portugal. E acerta o valor com o limite combinado.\n\nAs 29 ideias estão no site (link na bio). Qual destas escolhias?",
      "hashtags": "#amigosecreto #prendasdeultimahora #ideiasdeprendas #prendasdenatal #natal2026 #portugal",
-     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/"
+     "link": "https://sapatinho-natal.pt/prendas-ultima-hora-amigo-secreto/"
     }
    ],
    "stories": [
@@ -1132,10 +1133,10 @@
     {
      "time": "10:00",
      "type": "ideia",
-     "item": "Cartão-oferta digital",
+     "item": "Prenda digital num cartão",
      "price": "até 20 €",
-     "text": "Livraria, música ou cinema. Chega por email e salva qualquer esquecimento.",
-     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-20",
+     "text": "Séries, música ou um audiolivro. Compra-se hoje e imprimes o código num cartão.",
+     "link": "https://sapatinho-natal.pt/prendas-ultima-hora-amigo-secreto/#digitais",
      "afiliado": false
     },
     {
