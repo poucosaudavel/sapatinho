@@ -263,6 +263,8 @@ function suggestions(l) {
   const utm = "?utm_source=email&utm_medium=confirmacao";
   const url = tier === "5" ? `${SITE}/prendas-amigo-secreto-ate-5-euros/${utm}`
     : tier === "10" ? `${SITE}/prendas-amigo-secreto-ate-10-euros/${utm}`
+    : tier === "15" ? `${SITE}/prendas-amigo-secreto-ate-15-euros/${utm}`
+    : tier === "20" ? `${SITE}/prendas-amigo-secreto-ate-20-euros/${utm}`
     : `${SITE}/ideias-de-prendas-amigo-secreto/${utm}${tier ? "#ate-" + tier : ""}`;
   const label = tier ? `até ${tier} €` : "de prendas";
   return { ideas, url, label };

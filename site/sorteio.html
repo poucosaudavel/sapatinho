@@ -97,12 +97,21 @@ function showResult(o, mailing){
     facts(o) + lock +
     '<p class="note">'+(o.l ? 'Escolhe uma prenda até '+esc(o.l)+' €. ' : '')+(o.d ? 'A troca é a '+esc(Sap.fmtDate(o.d))+'. ' : '')+'Bom Natal!</p>'+
     (mailing ? '<p class="note" id="mailnote">A enviar-te um email com o nome…</p>' : '') +
-    '<a class="btn ghost wide" href="'+ideasHref(o.l)+'">Ver ideias de prendas'+(o.l ? ' até '+esc(o.l)+' €' : '')+'</a>';
+    '<a class="btn wide" href="'+ideasHref(o.l)+'">Ver ideias de prendas'+(o.l ? ' até '+esc(o.l)+' €' : '')+'</a>' + moreIdeas();
 }
 function ideasHref(l){
   var n = parseFloat(l) || 0;
-  var t = !n ? "" : n <= 5 ? "#ate-5" : n <= 10 ? "#ate-10" : n <= 15 ? "#ate-15" : n <= 20 ? "#ate-20" : "#ate-50";
-  return "/ideias-de-prendas-amigo-secreto/?utm_source=sorteio&utm_medium=resultado" + t;
+  var u = "?utm_source=sorteio&utm_medium=resultado";
+  // a página nunca passa do limite do grupo (limite 12 € -> ideias até 10 €), como no email
+  if (n >= 5 && n < 50){
+    var c = n < 10 ? 5 : n < 15 ? 10 : n < 20 ? 15 : 20;
+    return "/prendas-amigo-secreto-ate-" + c + "-euros/" + u;
+  }
+  return "/ideias-de-prendas-amigo-secreto/" + u + (n >= 50 ? "#ate-50" : "");
+}
+function moreIdeas(){
+  var u = "?utm_source=sorteio&utm_medium=resultado";
+  return '<p class="note">Mais ideias: <a href="/prendas-engracadas-amigo-secreto/'+u+'">prendas engraçadas</a> · <a href="/prendas-amigo-secreto-homem/'+u+'">para homem</a> · <a href="/prendas-ultima-hora-amigo-secreto/'+u+'">de última hora</a></p>';
 }
 
 function showDraw(o, key, code){
