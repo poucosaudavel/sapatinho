@@ -1,0 +1,169 @@
+{
+ "posts": [
+  {
+   "id": "extra-1",
+   "pillar": "produto",
+   "slides": [
+    {
+     "template": "cover",
+     "kicker": "Para quem organiza",
+     "title": "O que precisas para fazer o sorteio (e o que não)"
+    },
+    {
+     "template": "list",
+     "title": "Precisas de",
+     "items": [
+      "Os nomes de quem entra",
+      "Um email para cada pessoa",
+      "Um limite para a prenda",
+      "Uma data para a troca"
+     ]
+    },
+    {
+     "template": "list",
+     "title": "Não precisas de",
+     "items": [
+      "Criar conta",
+      "Instalar uma app",
+      "Juntar todos na mesma sala",
+      "Papel, caneta e um gorro"
+     ]
+    },
+    {
+     "template": "cta",
+     "title": "Tens isto? Então tens sorteio.",
+     "body": "Grátis e sem registo. Cada pessoa recebe o seu convite por email."
+    }
+   ],
+   "caption": "Organizar o amigo secreto parece um trabalhão. Não é. 📝\n\nPara fazer o sorteio no Sapatinho precisas de quatro coisas: os nomes de quem entra, o email de cada pessoa, um limite para a prenda e uma data para a troca. Mais nada.\n\nNão precisas de criar conta, de instalar uma app nem de esperar pelo jantar em que estão todos. Cada pessoa recebe o convite por email e sorteia quando puder, esteja onde estiver.\n\nHá casais ou irmãos que não se devem tirar? Também dá para marcar. E ninguém se tira a si próprio.\n\nJá tens os emails do grupo todos? Link na bio.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #natalemfamilia #sorteioonline #portugal",
+   "link": "https://sapatinho-natal.pt/criar"
+  },
+  {
+   "id": "extra-2",
+   "pillar": "ideias",
+   "slides": [
+    {
+     "template": "cover",
+     "kicker": "Limite de 10 €",
+     "title": "Uma ideia para cada pessoa que te pode sair"
+    },
+    {
+     "template": "list",
+     "title": "Para quem gosta de cozinhar",
+     "items": [
+      "Conjunto de especiarias pequenas",
+      "Azeite aromatizado ou flor de sal",
+      "Formas de silicone para bolachas",
+      "Avental com uma frase divertida"
+     ]
+    },
+    {
+     "template": "list",
+     "title": "Para quem gosta de ler",
+     "items": [
+      "Livro de bolso do género preferido",
+      "Luz de leitura com mola",
+      "Marcador de livros em metal",
+      "Caderno para anotar os livros lidos"
+     ]
+    },
+    {
+     "template": "list",
+     "title": "Para quem «tem tudo»",
+     "items": [
+      "Um queijo ou bombons da pastelaria",
+      "Um bilhete de cinema",
+      "Um vale feito por ti para um programa",
+      "Um postal com uma memória partilhada"
+     ]
+    }
+   ],
+   "caption": "Dez euros parecem pouco até começares a procurar com cabeça. 🎁\n\nO segredo é pensar primeiro na pessoa e só depois na loja. Quem gosta de cozinhar fica contente com especiarias que não costuma comprar. Quem lê usa uma luz de leitura todas as noites. E quem «tem tudo» agradece uma coisa que se come ou um programa a dois.\n\nNo site há 32 ideias até 10 €, arrumadas por tipo de pessoa: cozinha, leitura, jogos, colegas, casa e quem «tem tudo». Os preços mudam com as promoções, por isso confirma o valor antes de comprar. O guia inclui links de afiliado.\n\nGuarda esta publicação para quando souberes quem te saiu. Ideias completas: link na bio.",
+   "hashtags": "#amigosecreto #ideiasdeprendas #prendasdenatal #prendasbaratas #natal2026 #portugal",
+   "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-10-euros/"
+  },
+  {
+   "id": "extra-3",
+   "pillar": "humor",
+   "slides": [
+    {
+     "template": "meme",
+     "kicker": "Limite combinado: 15 €",
+     "title": "A tua mãe: «E se for só um bocadinho mais? Ninguém repara.»",
+     "body": "Repara, mãe. Repara toda a gente."
+    }
+   ],
+   "caption": "Toda a família tem alguém que acha que o limite é só uma sugestão. 😅\n\nCombinam-se 15 €. Na troca aparece um embrulho do tamanho de uma mala de viagem, e alguém olha para a caneca que trouxe e diz «ah, pois». Ninguém fica mal por cumprir o limite. Fica mal quando os outros o passam.\n\nO limite existe para isso: toda a gente sabe o que esperar e ninguém se sente a mais nem a menos. No Sapatinho, o limite vai escrito no convite de cada pessoa, para não haver dúvidas.\n\nQuem é a pessoa da tua família que passa sempre o limite? Marca-a aqui, com carinho.",
+   "hashtags": "#amigosecreto #amigosecretonatal #natalemfamilia #humor #familiaportuguesa #natal2026 #portugal",
+   "link": "https://sapatinho-natal.pt/criar"
+  },
+  {
+   "id": "extra-4",
+   "pillar": "dicas",
+   "slides": [
+    {
+     "template": "cover",
+     "kicker": "Dúvidas de sempre",
+     "title": "Três perguntas que aparecem em todos os grupos"
+    },
+    {
+     "template": "tip",
+     "kicker": "Pergunta 1",
+     "title": "E se formos um número ímpar?",
+     "body": "Não há problema. Cada pessoa oferece uma prenda e recebe uma. O sorteio funciona com qualquer número a partir de três pessoas."
+    },
+    {
+     "template": "tip",
+     "kicker": "Pergunta 2",
+     "title": "Posso tirar quem me tirou a mim?",
+     "body": "Pode acontecer e não faz mal: as duas pessoas trocam prendas entre si. A única regra é ninguém se tirar a si próprio."
+    },
+    {
+     "template": "tip",
+     "kicker": "Pergunta 3",
+     "title": "E se alguém desistir depois do sorteio?",
+     "body": "Não é preciso repetir. Quem tinha tirado essa pessoa passa a oferecer a prenda a quem ela tinha tirado. Só uma pessoa muda."
+    }
+   ],
+   "caption": "Guarda isto para a próxima vez que alguém perguntar ao jantar. 📌\n\nHá três dúvidas que aparecem sempre que se organiza um amigo secreto.\n\nSomos ímpares, dá? Dá: cada pessoa oferece uma prenda e recebe uma.\n\nE se me sair quem me tirou a mim? Não faz mal, trocam prendas entre os dois.\n\nE se alguém desistir depois do sorteio? Não se repete nada: quem tinha tirado essa pessoa passa a oferecer a prenda a quem ela tinha tirado.\n\nAs regras completas, com o passo a passo para organizar e ideias para a revelação, estão no guia. Link na bio.\n\nQue outra dúvida já apareceu no vosso grupo?",
+   "hashtags": "#amigosecreto #amigosecretonatal #regrasdoamigosecreto #natal2026 #natalemfamilia #portugal",
+   "link": "https://sapatinho-natal.pt/regras-do-amigo-secreto/#perguntas"
+  },
+  {
+   "id": "extra-5",
+   "pillar": "dicas",
+   "slides": [
+    {
+     "template": "cover",
+     "kicker": "No trabalho",
+     "title": "Amigo secreto da equipa: o calendário que funciona"
+    },
+    {
+     "template": "list",
+     "title": "Do anúncio à troca",
+     "items": [
+      "4 semanas antes: anunciar e inscrever",
+      "3 semanas antes: sorteio e convites",
+      "1 semana antes: lembrete com o limite",
+      "No dia: troca no almoço ou jantar"
+     ]
+    },
+    {
+     "template": "tip",
+     "kicker": "Equipa grande?",
+     "title": "Faz um sorteio por equipa",
+     "body": "Cada sorteio do Sapatinho aceita até 30 pessoas. Por equipa, conhece-se melhor quem sai e a troca fica mais animada."
+    },
+    {
+     "template": "cta",
+     "title": "Inclui quem está em teletrabalho",
+     "body": "O convite chega por email. Ninguém precisa de estar no escritório para entrar no sorteio."
+    }
+   ],
+   "caption": "No escritório, o amigo secreto corre bem quando há um plano. 💼\n\nO calendário mais simples: quatro semanas antes, anuncia e pede a quem quer participar que se inscreva. Três semanas antes, faz o sorteio. Uma semana antes, manda um lembrete com a data, a hora e o limite. No dia, troca de prendas no almoço ou no jantar de Natal.\n\nSe a empresa é grande, faz um sorteio por equipa: cada um conhece melhor quem lhe sai. E quem está em teletrabalho entra na mesma, porque o convite chega por email.\n\nNo guia há uma mensagem pronta a enviar aos colegas. Link na bio.\n\nQuem organiza o amigo secreto aí no trabalho?",
+   "hashtags": "#amigosecreto #amigosecretonaempresa #jantardenatal #natal2026 #trabalho #portugal",
+   "link": "https://sapatinho-natal.pt/amigo-secreto-na-empresa/"
+  }
+ ]
+}
