@@ -1564,3 +1564,64 @@ faq=[
 ],
 related=["como-fazer-sorteio-amigo-secreto", "roleta-amigo-secreto"],
 ))
+
+# ---------------------------------------------------------------- imagens
+# Ilustrações próprias de cada guia, geradas por tools/seo/images.js (desenhos em tools/seo/images/art.js).
+# cover: site/img/<slug>/capa.webp + capa.jpg (1200x675), no topo do artigo e em og:image.
+# figures: site/img/<slug>/<file>.webp (1200x800), logo a seguir ao <h2 id="after">.
+IMAGES = {
+"regras-do-amigo-secreto": dict(
+    cover="Ilustração de uma prancheta com uma lista de verificação, rodeada de caixas de prenda e um sapatinho de Natal pendurado",
+    figures=[dict(file="passos", after="organizar", alt="Os três passos do amigo secreto: a lista de participantes, o convite por email e a prenda")]),
+"ideias-de-prendas-amigo-secreto": dict(
+    cover="Ilustração de várias caixas de prenda embrulhadas, uma caneca e uma pilha de livros",
+    figures=[dict(file="por-tipo", after="por-pessoa", alt="Seis ideias de prenda por tipo de pessoa: livros, caneca, comando de jogos, bola, planta e auscultadores")]),
+"amigo-secreto-a-distancia": dict(
+    cover="Ilustração de um portátil numa videochamada com três pessoas e uma prenda, com um avião de papel a ligar duas cidades",
+    figures=[dict(file="envio", after="envio", alt="Uma encomenda com laço e uma carrinha de entregas a seguir um percurso até ao destino")]),
+"amigo-secreto-na-empresa": dict(
+    cover="Ilustração de uma secretária de escritório com um monitor, notas autocolantes, uma planta, uma caneca e uma prenda",
+    figures=[dict(file="calendario", after="calendario", alt="Calendário de dezembro com o dia da troca assinalado, ao lado de uma prenda e de uma caneca")]),
+"como-fazer-sorteio-amigo-secreto": dict(
+    cover="Ilustração de papelinhos a sair de uma cartola e de um telemóvel com um email aberto",
+    figures=[dict(file="por-email", after="online", alt="Um envelope aberto com uma carta e um ponto de interrogação, entre dois balões com o símbolo de email")]),
+"pistas-e-mensagens-amigo-secreto": dict(
+    cover="Ilustração de um postal, um lápis e dois balões de conversa com pontos de interrogação, ao lado de uma prenda com etiqueta",
+    figures=[dict(file="postal", after="postal", alt="Uma prenda com uma etiqueta com um coração, ao lado de um postal e de um lápis")]),
+"amigo-secreto-black-friday": dict(
+    cover="Ilustração de um saco de compras com o símbolo de percentagem, uma etiqueta de desconto e caixas de prenda",
+    figures=[dict(file="desconto", after="desconto", alt="Uma etiqueta de preço com o valor antigo riscado e uma lupa a examiná-la")]),
+"amigo-secreto-criancas": dict(
+    cover="Ilustração de um ursinho de peluche com laço, lápis de cera, cubos com letras e uma prenda",
+    figures=[dict(file="por-idade", after="prendas", alt="Três degraus com prendas para várias idades: cubos com letras, um livro com lápis de cera, e uma bola com um comando de jogos")]),
+"roleta-amigo-secreto": dict(
+    cover="Ilustração de uma roleta colorida com um ponteiro dourado, entre duas caixas de prenda",
+    figures=[dict(file="telemovel", after="como-funciona", alt="Um telemóvel com a roleta do sorteio a girar e um ponto de interrogação no centro, entre confetes e prendas")]),
+"prendas-amigo-secreto-ate-5-euros": dict(
+    cover="Ilustração de uma prenda com uma etiqueta de 5 €, uma vela, um prato de bolachas e um frasco de doce",
+    figures=[dict(file="para-comer", after="comer", alt="Prendas para comer: um frasco de doce, um prato de bolachas e uma tablete de chocolate")]),
+"prendas-amigo-secreto-ate-10-euros": dict(
+    cover="Ilustração de uma prenda com uma etiqueta de 10 €, uma pilha de livros e uma caneca",
+    figures=[dict(file="jogos", after="jogos", alt="Prendas para quem gosta de jogos: cartas, dados e um comando de consola")]),
+"prendas-engracadas-amigo-secreto": dict(
+    cover="Ilustração de uns óculos com nariz e bigode, um patinho de borracha e uma prenda, com confetes",
+    figures=[dict(file="divertidas", after="ate-10", alt="Prendas divertidas: um patinho de borracha, meias às riscas e uma caneca com bigode")]),
+"prendas-amigo-secreto-ate-15-euros": dict(
+    cover="Ilustração de uma prenda com uma etiqueta de 15 €, uma planta e uma garrafa de água",
+    figures=[dict(file="desporto", after="desporto", alt="Prendas para quem faz desporto: garrafa de água, haltere e bola de futebol")]),
+"prendas-amigo-secreto-ate-20-euros": dict(
+    cover="Ilustração de uma prenda com uma etiqueta de 20 €, auscultadores, um livro e uma vela",
+    figures=[dict(file="cozinhar", after="cozinha", alt="Prendas para quem gosta de cozinhar: colher de pau, frigideira, frascos de especiarias e avental")]),
+"prendas-ultima-hora-amigo-secreto": dict(
+    cover="Ilustração de um despertador, um vale-oferta e um cartão-oferta com laço",
+    figures=[dict(file="embrulhar-vale", after="embrulhar", alt="Um vale dentro de um envelope vermelho fechado com um laço dourado")]),
+"prendas-amigo-secreto-homem": dict(
+    cover="Ilustração de uma bola de futebol, uma caneca, uma prenda e um comando de jogos",
+    figures=[dict(file="churrasco", after="cozinha", alt="Prendas para quem faz churrasco: um grelhador com salsichas, uma pinça, especiarias e um avental")]),
+"como-funciona-o-sapatinho-privacidade": dict(
+    cover="Ilustração de um envelope fechado com um cadeado, uma chave e um endereço de link do sorteio",
+    figures=[dict(file="link", after="link", alt="Um endereço de link do sorteio com cadeado por cima de um envelope selado, entre uma chave e um cadeado")]),
+}
+for _p in PAGES:
+    if _p["slug"] in IMAGES:
+        _p["images"] = IMAGES[_p["slug"]]

@@ -41,8 +41,11 @@ def affiliate(body):
     out = re.sub(r"\[\[amz:([^|\]]+)(?:\|([^\]]+))?\]\]", rep, body)
     return out, found[0]
 
-def head(title, desc, canonical, og_title=None, og_desc=None, og_type="website", robots=None, jsonld=None, extra=""):
+OG_DEFAULT = dict(url=BASE + "/og.jpg", w=1200, h=630, alt="Sapatinho, o amigo secreto da família sem papelinhos")
+
+def head(title, desc, canonical, og_title=None, og_desc=None, og_type="website", robots=None, jsonld=None, extra="", og_image=None):
     og_title = og_title or title
+    og = og_image or OG_DEFAULT
     og_desc = og_desc or desc
     r = f'<meta name="robots" content="{robots}">\n' if robots else ""
     j = (ld(jsonld) + "\n") if jsonld else ""
@@ -58,18 +61,20 @@ def head(title, desc, canonical, og_title=None, og_desc=None, og_type="website",
 <meta property="og:title" content="{html.escape(og_title)}">
 <meta property="og:description" content="{html.escape(og_desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{BASE}/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Sapatinho, o amigo secreto da família sem papelinhos">
+<meta property="og:image" content="{og['url']}">
+<meta property="og:image:width" content="{og['w']}">
+<meta property="og:image:height" content="{og['h']}">
+<meta property="og:image:alt" content="{html.escape(og['alt'])}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{og['url']}">
+<meta name="twitter:image:alt" content="{html.escape(og['alt'])}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/styles.css?v=20261029b">
+<link rel="stylesheet" href="/styles.css?v=20261031">
 {j}{extra}"""
 
 NAV = ('<nav aria-label="Principal"><a href="/#como-funciona">Como funciona</a>'
@@ -146,19 +151,58 @@ def fmt_date(iso):
     y, m, d = iso.split("-")
     return f"{int(d)} de {MESES[int(m)-1]} de {y}"
 
+# ---------------------------------------------------------------- imagens dos guias
+COVER_W, COVER_H = 1200, 675   # capa 16:9 (também og:image)
+FIG_W, FIG_H = 1200, 800       # ilustrações dentro do texto
+
+def need(path):
+    """Falha o build se uma imagem referida não existir (gera-as com node tools/seo/images.js)."""
+    if not os.path.isfile(f"{SITE}{path}"):
+        raise SystemExit(f"Falta a imagem {path}: corre node tools/seo/images.js")
+    return path
+
+def cover_html(p):
+    im = p.get("images")
+    if not im or not im.get("cover"):
+        return ""
+    base = f"/img/{p['slug']}/capa"
+    webp, jpg = need(base + ".webp"), need(base + ".jpg")
+    return (f'    <figure class="cover"><picture><source srcset="{webp}" type="image/webp">'
+            f'<img src="{jpg}" width="{COVER_W}" height="{COVER_H}" alt="{html.escape(im["cover"])}" decoding="async" fetchpriority="high">'
+            f'</picture></figure>\n')
+
+def add_figures(p, body):
+    for f in (p.get("images") or {}).get("figures", []):
+        src = need(f"/img/{p['slug']}/{f['file']}.webp")
+        tag = (f'<figure class="fig"><img src="{src}" width="{FIG_W}" height="{FIG_H}" alt="{html.escape(f["alt"])}" '
+               f'loading="lazy" decoding="async"></figure>')
+        body, n = re.subn(rf'(<h2 id="{re.escape(f["after"])}">.*?</h2>)', lambda m: m.group(1) + "\n" + tag, body, count=1, flags=re.S)
+        if not n:
+            raise SystemExit(f"{p['slug']}: não encontrei <h2 id=\"{f['after']}\"> para a imagem {f['file']}")
+    return body
+
+def og_for(p):
+    im = p.get("images")
+    if not im or not im.get("cover"):
+        return None
+    return dict(url=BASE + need('/img/' + p['slug'] + '/capa.jpg'), w=COVER_W, h=COVER_H, alt=im["cover"])
+
 def build_guide(p):
     url = f"{BASE}/{p['slug']}/"
+    og = og_for(p)
+    image = ({"@type": "ImageObject", "url": og["url"], "width": COVER_W, "height": COVER_H, "caption": og["alt"]}
+             if og else BASE + "/og.jpg")
     graph = [ORG, WEBSITE,
              {"@type": "Article", "@id": url + "#artigo", "headline": p["h1"], "description": p["description"],
               "inLanguage": "pt-PT", "datePublished": p.get("date", PUBLISHED), "dateModified": p.get("modified", p.get("date", PUBLISHED)),
-              "author": {"@id": ORG_ID}, "publisher": {"@id": ORG_ID}, "image": BASE + "/og.jpg",
+              "author": {"@id": ORG_ID}, "publisher": {"@id": ORG_ID}, "image": image,
               "mainEntityOfPage": url, "isPartOf": {"@id": SITE_ID}},
              crumbs_ld([("Início", BASE + "/"), (p["short"], url)])]
     if p.get("faq"):
         graph.append(faq_ld(p["faq"]))
     h = head(p["title"], p["description"], url, og_title=p["h1"], og_type="article",
-             jsonld={"@context": "https://schema.org", "@graph": graph})
-    body, has_aff = affiliate(p["body"])
+             jsonld={"@context": "https://schema.org", "@graph": graph}, og_image=og)
+    body, has_aff = affiliate(add_figures(p, p["body"]))
     if has_aff:
         body = AFF_NOTE + "\n" + body
     rel = "".join(f'<a href="/{s}/"><b>{BYSLUG[s]["short"]}</b><span>{BYSLUG[s]["card"]}</span></a>' for s in p["related"])
@@ -169,7 +213,7 @@ def build_guide(p):
       <p class="dek">{p['dek']}</p>
       <p class="meta">Atualizado a {fmt_date(p.get("modified", p.get("date", PUBLISHED)))}</p>
     </div>
-    <article class="card article">
+{cover_html(p)}    <article class="card article">
 {body}
 {faq_html(p['faq']) if p.get('faq') else ''}
 {CTA}

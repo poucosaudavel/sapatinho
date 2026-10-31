@@ -150,3 +150,11 @@ p{margin:0}
 .article pre{overflow-x:auto;max-width:100%;background:var(--night);color:var(--paper);padding:14px 16px;border-radius:4px;font-size:.8rem;line-height:1.5;margin:0}
 .article pre code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre}
 .article :not(pre)>code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;background:var(--paper-2);padding:1px 5px;border-radius:3px;overflow-wrap:anywhere}
+/* imagens dos guias */
+.cover{max-width:760px;margin:0 auto 28px}
+.cover img,.article .fig img{display:block;width:100%;height:auto;border-radius:6px}
+.cover img{box-shadow:0 20px 50px rgba(0,0,0,.35);background:var(--night-2)}
+.article .fig{margin:1.2em 0 0}
+.article .fig img{background:var(--paper-2)}
+.article h2 + .fig{margin-top:.8em}
+@media (max-width:760px){.cover{margin-bottom:20px}.article .fig{margin-inline:-6px}}
