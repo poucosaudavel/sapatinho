@@ -42,11 +42,12 @@ Nas pesquisas pela ferramenta, os primeiros resultados são sites brasileiros ou
 1. Acrescenta a página a `PAGES` em `tools/seo/content.py`, seguindo o formato das que já existem (slug, título, descrição, data, corpo HTML, FAQ).
 2. Uma pesquisa principal no título, no H1, no endereço e na primeira frase. A primeira frase responde diretamente à pergunta (ajuda no Resumo de IA do Google).
 3. Páginas de prendas: pelo menos 25 ideias concretas com faixa de preço; linhas «Procurar na Amazon» com `[[amz:termos em espanhol]]`.
-4. FAQ curta e factual no fim (vira dados estruturados FAQPage).
-5. Ligações: para o guia de ideias, para as páginas de preço vizinhas e para /criar. Atualiza o guia de ideias para ligar à página nova.
-6. Corre `python3 tools/seo/build.py` e verifica: a página está no `sitemap.xml`, o JSON-LD é válido, não há ligações partidas (`grep -o 'href="/[^"]*"'` e confirma que existem).
-7. Entrega o título, a descrição e um resumo: ao gestor, se foi ele que te deu a tarefa (ele decide a publicação), ou ao Diogo, se trabalhas sem o gestor. Sem o gestor, o deploy (`scripts/deploy-site.sh`) é só com aprovação do Diogo.
-8. Depois do deploy, lembra o Diogo de pedir a indexação no Search Console (propriedade da conta sapatinhonatal@gmail.com).
+4. Imagens (obrigatório): acrescenta a página a `IMAGES` em `tools/seo/content.py` (capa 1200×675 e pelo menos uma ilustração, com alt em PT-PT) e gera-as com `node tools/seo/images.js <slug>` (desenhos em `tools/seo/images/art.js`). Só imagens nossas; nunca fotos copiadas de lojas ou bancos de imagens.
+5. FAQ curta e factual no fim (vira dados estruturados FAQPage).
+6. Ligações: para o guia de ideias, para as páginas de preço vizinhas e para /criar. Atualiza o guia de ideias para ligar à página nova.
+7. Corre `python3 tools/seo/build.py` e verifica: a página está no `sitemap.xml`, o JSON-LD é válido, não há ligações partidas (`grep -o 'href="/[^"]*"'` e confirma que existem).
+8. Entrega o título, a descrição e um resumo: ao gestor, se foi ele que te deu a tarefa (ele decide a publicação), ou ao Diogo, se trabalhas sem o gestor. Sem o gestor, o deploy (`scripts/deploy-site.sh`) é só com aprovação do Diogo.
+9. Depois do deploy, lembra o Diogo de pedir a indexação no Search Console (propriedade da conta sapatinhonatal@gmail.com).
 
 ## Trabalho diário (dias úteis, até 20 dez)
 
