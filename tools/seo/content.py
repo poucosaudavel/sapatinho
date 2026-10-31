@@ -93,7 +93,7 @@ related=["ideias-de-prendas-amigo-secreto", "amigo-secreto-a-distancia"],
 # ---------------------------------------------------------------- ideias
 PAGES.append(dict(
 slug="ideias-de-prendas-amigo-secreto",
-modified="2026-10-29",
+modified="2026-10-31",
 nav="Ideias de prendas",
 short="Ideias de prendas",
 card="Sugestões até 5, 10, 15, 20 e 50 €, e para cada tipo de pessoa.",
@@ -113,7 +113,7 @@ body="""
 </ol></nav>
 
 <p>Os preços variam de loja para loja, por isso usa estas listas como ponto de partida e confirma o valor antes de comprar.</p>
-<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/prendas-amigo-secreto-ate-20-euros/">até 20 €</a> · <a href="/prendas-engracadas-amigo-secreto/">engraçadas</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
+<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/prendas-amigo-secreto-ate-15-euros/">até 15 €</a> · <a href="/prendas-amigo-secreto-ate-20-euros/">até 20 €</a> · <a href="/prendas-engracadas-amigo-secreto/">engraçadas</a> · <a href="/prendas-ultima-hora-amigo-secreto/">de última hora</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
 
 <h2 id="ate-5">Prendas até 5 €</h2>
 <p>Mais 30 ideias na página <a href="/prendas-amigo-secreto-ate-5-euros/">prendas para amigo secreto até 5 €</a>.</p>
@@ -145,6 +145,7 @@ body="""
 <p class="shop">Procurar na Amazon: [[amz:caneca divertida|canecas com piada]] · [[amz:juego de cartas para grupo|jogos de cartas]] · [[amz:gorro y bufanda|gorros e cachecóis]] · [[amz:puzzle pequeño|puzzles pequenos]]</p>
 
 <h2 id="ate-15">Prendas até 15 €</h2>
+<p>Mais 36 ideias, por tipo de pessoa, na página <a href="/prendas-amigo-secreto-ate-15-euros/">prendas para amigo secreto até 15 €</a>.</p>
 <ul>
 <li>Um livro recente de um autor de que a pessoa goste</li>
 <li>Um jogo de tabuleiro pequeno ou de viagem</li>
@@ -206,6 +207,7 @@ body="""
 <li><strong>Prefere o que se gasta.</strong> Comida, bebida, velas e chás raramente ficam esquecidos numa gaveta.</li>
 <li><strong>Respeita o limite.</strong> Gastar muito mais do que o combinado deixa os outros desconfortáveis.</li>
 </ul>
+<p>Ficaste sem tempo? Há ideias para comprar no próprio dia nas <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a>.</p>
 """,
 faq=[
 ("Qual é um bom limite para o amigo secreto?", "Em família ou entre amigos, valores entre 10 e 20 € costumam funcionar bem. No trabalho, um limite mais baixo deixa toda a gente à vontade. O que importa é ser igual para todos."),
@@ -884,7 +886,7 @@ body="""
 <li>Um postal bem escrito com uma lembrança partilhada</li>
 </ul>
 
-<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; se é mais alto, as <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; se é mais alto, as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a> ou as <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
 """,
 faq=[
 ("O que oferecer no amigo secreto com 10 euros?", "Uma caneca com piada, um livro de bolso, um jogo de cartas, chás ou cafés diferentes, um gorro ou umas luvas são apostas seguras. Escolhe pelo que a pessoa gosta de fazer."),
@@ -984,7 +986,7 @@ body="""
 <li><strong>Respeita o limite.</strong> Uma piada cara deixa os outros desconfortáveis.</li>
 <li><strong>Escreve um postal.</strong> Uma frase a explicar a piada ajuda a pessoa a perceber que foi pensada para ela. Há ideias nas <a href="/pistas-e-mensagens-amigo-secreto/">pistas e mensagens</a>.</li>
 </ul>
-<p>Se preferes algo mais clássico, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+<p>Se preferes algo mais clássico, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se a troca é amanhã, vê as <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a>.</p>
 """,
 faq=[
 ("Qual é uma boa prenda engraçada para o amigo secreto?", "Uma que faça rir e sirva para alguma coisa: meias ridículas, uma caneca com piada, um jogo de cartas para o jantar ou um pijama de Natal. Funcionam com quase toda a gente."),
@@ -992,6 +994,116 @@ faq=[
 ("Que prenda engraçada dar a um colega de trabalho?", 'Algo ligado ao escritório ou ao café, como um carimbo «aprovado» ou uma caneca com piada. Há mais ideias no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.'),
 ],
 related=["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-ate-10-euros", "amigo-secreto-na-empresa"],
+))
+
+# ---------------------------------------------------------------- até 15 €
+PAGES.append(dict(
+slug="prendas-amigo-secreto-ate-15-euros",
+date="2026-10-31",
+nav="Prendas até 15 €",
+short="Prendas até 15 €",
+card="36 ideias para o meio-termo entre 10 e 20 €, por tipo de pessoa.",
+title="Prendas para amigo secreto até 15 €: 36 ideias | Sapatinho",
+h1="Prendas para amigo secreto até 15 euros",
+dek="Quinze euros dá para fugir à caneca e ao chocolate sem gastar demais. Trinta e seis ideias, por tipo de pessoa, com o preço aproximado de cada uma.",
+description="36 ideias de prendas para amigo secreto até 15 €, com preço aproximado: para quem cozinha, lê, joga ou faz desporto, colegas e quem tem tudo.",
+body="""
+<p class="lead-answer"><strong>As melhores prendas para amigo secreto até 15 €</strong> são um molho picante artesanal, um romance gráfico, um jogo de cartas para dois, um candeeiro pequeno de secretária ou uma caixa de doces da pastelaria do bairro. Com este limite dá para escolher algo com a cara da pessoa: em baixo há ideias para cada tipo.</p>
+
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#cozinha">Para quem gosta de cozinhar</a></li>
+<li><a href="#ler">Para quem gosta de ler</a></li>
+<li><a href="#jogos">Para quem gosta de jogos</a></li>
+<li><a href="#colega">Para um colega de trabalho</a></li>
+<li><a href="#casa">Para quem gosta de estar em casa</a></li>
+<li><a href="#desporto">Para quem faz desporto</a></li>
+<li><a href="#tudo">Para quem «tem tudo»</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<p>Os preços entre parênteses são aproximados e mudam de loja para loja e com as promoções. Confirma o valor antes de comprar.</p>
+
+<h2 id="cozinha">Para quem gosta de cozinhar</h2>
+<ul>
+<li>Um molho picante artesanal ou um piri-piri português em frasco (6 a 12 €)</li>
+<li>Um frasco de mel de rosmaninho com uma colher de mel em madeira (8 a 14 €)</li>
+<li>Um vinagre balsâmico ou de figo, numa garrafa bonita (8 a 15 €)</li>
+<li>Um ralador fino, para raspas de limão e queijo (10 a 15 €)</li>
+<li>Um conjunto de colheres e chávenas de medida em inox (8 a 14 €)</li>
+<li>Um pacote de café de especialidade em grão ou moído (8 a 15 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:salsa picante artesanal|molhos picantes]] · [[amz:rallador microplane|raladores finos]] · [[amz:cucharas medidoras acero inoxidable|colheres de medida]]</p>
+
+<h2 id="ler">Para quem gosta de ler</h2>
+<ul>
+<li>Um romance gráfico ou um álbum de banda desenhada (12 a 15 €)</li>
+<li>Um livro de contos ou de poesia de um autor português (10 a 15 €)</li>
+<li>Um conjunto de marcadores magnéticos ilustrados (6 a 12 €)</li>
+<li>Um caderno de capa de tecido, para guardar citações (8 a 14 €)</li>
+<li>Um livro de bolso com uma tablete de chocolate e um chá, num conjunto montado por ti (12 a 15 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:marcapaginas magneticos|marcadores magnéticos]] · [[amz:cuaderno tapa tela|cadernos de tecido]]</p>
+
+<h2 id="jogos">Para quem gosta de jogos</h2>
+<ul>
+<li>Um jogo de cartas de estratégia para dois jogadores (10 a 15 €)</li>
+<li>Um jogo de papéis escondidos para grupos grandes, para o fim do jantar (10 a 15 €)</li>
+<li>Um xadrez ou umas damas magnéticas de viagem (10 a 15 €)</li>
+<li>Um livro de enigmas, de lógica ou de sudokus difíceis (8 a 14 €)</li>
+<li>Um jogo de cartas de desenhar e adivinhar (10 a 15 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:juego de cartas dos jugadores|jogos para dois]] · [[amz:ajedrez magnetico viaje|xadrez de viagem]] · [[amz:libro de acertijos logica|livros de enigmas]]</p>
+
+<h2 id="colega">Para um colega de trabalho</h2>
+<ul>
+<li>Um tapete de rato grande, que cobre a secretária (10 a 15 €)</li>
+<li>Um candeeiro LED pequeno de secretária, com ligação USB (10 a 15 €)</li>
+<li>Uma garrafa térmica para chá, com filtro para as folhas (10 a 15 €)</li>
+<li>Um porta-cartões ou uma carteira fina (10 a 15 €)</li>
+<li>Um conjunto de marcadores fluorescentes e notas autocolantes bonitas (8 a 14 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:alfombrilla raton grande escritorio|tapetes de rato grandes]] · [[amz:lampara led escritorio usb|candeeiros de secretária]] · [[amz:termo te con filtro|garrafas para chá]] · [[amz:tarjetero minimalista|porta-cartões]]</p>
+<p>Mais ideias para colegas no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
+
+<h2 id="casa">Para quem gosta de estar em casa</h2>
+<ul>
+<li>Um par de canecas de cerâmica feitas à mão (10 a 15 €)</li>
+<li>Uma almofada térmica de sementes, que se aquece no micro-ondas (10 a 15 €)</li>
+<li>Um spray de almofada com cheiro a lavanda (8 a 14 €)</li>
+<li>Um sabonete artesanal português com uma toalha de mãos (10 a 15 €)</li>
+<li>Uma vela LED com temporizador, que não tem chama (8 a 15 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:almohadilla termica semillas microondas|almofadas de sementes]] · [[amz:spray almohada lavanda|sprays de almofada]] · [[amz:velas led temporizador|velas LED]]</p>
+
+<h2 id="desporto">Para quem faz desporto</h2>
+<ul>
+<li>Uma toalha de microfibra de secagem rápida (10 a 15 €)</li>
+<li>Uma braçadeira para levar o telemóvel a correr (8 a 14 €)</li>
+<li>Uma corda de saltar com contador (8 a 15 €)</li>
+<li>Um conjunto de bandas elásticas para exercício em casa (10 a 15 €)</li>
+<li>Uma bolsa de cintura para caminhadas (10 a 15 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:toalla microfibra deporte|toalhas de microfibra]] · [[amz:brazalete movil correr|braçadeiras]] · [[amz:bandas elasticas ejercicio|bandas elásticas]] · [[amz:riñonera running|bolsas de cintura]]</p>
+
+<h2 id="tudo">Para quem «tem tudo»</h2>
+<ul>
+<li>Uma caixa de pastéis de nata ou de doces conventuais da pastelaria do bairro (8 a 15 €)</li>
+<li>Uma garrafa pequena de ginjinha ou de licor regional, se souberes que a pessoa bebe (8 a 15 €)</li>
+<li>Um bilhete de cinema com um saco de pipocas para levar (8 a 15 €)</li>
+<li>Um mapa de raspar, para marcar os sítios por onde a pessoa já passou (10 a 15 €)</li>
+<li>Um alecrim ou um loureiro num vaso de barro (8 a 15 €)</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:mapa mundi rascar|mapas de raspar]] · [[amz:maceta barro|vasos de barro]]</p>
+
+<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>; se é um pouco mais alto, as <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite de 15 € escrito no convite.</p>
+""",
+faq=[
+("O que oferecer no amigo secreto com 15 euros?", "Um molho picante artesanal, um romance gráfico, um jogo de cartas para dois, um candeeiro pequeno de secretária ou uma caixa de doces da pastelaria são boas apostas. Escolhe pelo que a pessoa gosta de fazer."),
+("15 euros é um bom limite para o amigo secreto?", "É um meio-termo entre os 10 € do trabalho e os 20 € da família: dá para uma prenda com mais cuidado sem pesar no orçamento de ninguém. O que importa é ser igual para todos."),
+("Posso juntar duas prendas mais pequenas?", "Podes, desde que combinem e o total não passe dos 15 €. Um livro de bolso com um chá, ou um mel com uma colher de madeira, ficam bem juntos."),
+("Uma prenda com desconto conta pelo preço original?", 'Não. O limite é o que pagas. Vê as dicas para a <a href="/amigo-secreto-black-friday/">Black Friday</a>.'),
+],
+related=["prendas-amigo-secreto-ate-10-euros", "prendas-amigo-secreto-ate-20-euros", "ideias-de-prendas-amigo-secreto"],
 ))
 
 # ---------------------------------------------------------------- até 20 €
@@ -1085,7 +1197,7 @@ body="""
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:kit cultivo hierbas aromaticas|kits de ervas aromáticas]] · [[amz:cesta gourmet regalo|cestos gourmet]]</p>
 
-<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite de 20 € escrito no convite.</p>
+<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite de 20 € escrito no convite.</p>
 """,
 faq=[
 ("O que oferecer no amigo secreto com 20 euros?", "Um jogo de tabuleiro pequeno, um livro acabado de sair, um cabaz de produtos portugueses, uma garrafa térmica ou um pijama quente são apostas seguras. Escolhe pelo que a pessoa gosta de fazer."),
@@ -1094,6 +1206,109 @@ faq=[
 ("Uma prenda com desconto conta pelo preço original?", 'Não. O limite é o que pagas. Vê as dicas para a <a href="/amigo-secreto-black-friday/">Black Friday</a>.'),
 ],
 related=["prendas-amigo-secreto-ate-10-euros", "ideias-de-prendas-amigo-secreto", "amigo-secreto-na-empresa"],
+))
+
+# ---------------------------------------------------------------- última hora
+PAGES.append(dict(
+slug="prendas-ultima-hora-amigo-secreto",
+date="2026-10-31",
+nav="Prendas de última hora",
+short="Prendas de última hora",
+card="29 prendas para comprar hoje: vales, supermercado, papelaria e digitais.",
+title="Prendas de última hora para amigo secreto: 29 ideias | Sapatinho",
+h1="Prendas de última hora para o amigo secreto",
+dek="A troca é amanhã e ainda não tens nada? Vinte e nove ideias que se compram hoje, no supermercado, na papelaria, na loja do bairro ou no telemóvel.",
+description="29 prendas de última hora para amigo secreto, para comprar hoje: vales e cartões-oferta, experiências, supermercado, papelaria e prendas digitais.",
+body="""
+<p class="lead-answer"><strong>As melhores prendas de última hora para o amigo secreto</strong> são as que compras hoje sem esperar por entregas: um vale de livraria ou de cinema, uma experiência, algo bom do supermercado, um caderno da papelaria ou uma prenda digital. Com um postal escrito por ti, nenhuma parece feita à pressa.</p>
+
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#vales">Vales e cartões-oferta</a></li>
+<li><a href="#experiencias">Vales de experiências</a></li>
+<li><a href="#supermercado">Do supermercado</a></li>
+<li><a href="#bairro">Da papelaria e da loja do bairro</a></li>
+<li><a href="#digitais">Prendas digitais</a></li>
+<li><a href="#embrulhar">Como embrulhar um vale</a></li>
+<li><a href="#sortear">Ainda não fizeram o sorteio?</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<p>Os preços entre parênteses são aproximados e mudam de loja para loja. Num vale, escolhes tu o valor: acerta-o com o limite que o grupo combinou.</p>
+
+<h2 id="vales">Vales e cartões-oferta</h2>
+<p>Muitas lojas vendem cartões-oferta ao balcão, e alguns supermercados têm um expositor com cartões de várias lojas perto das caixas.</p>
+<ul>
+<li>Um vale de livraria, com um postal a sugerir um livro de que gostaste (10 a 20 €)</li>
+<li>Um cartão-oferta de cinema, para um ou dois bilhetes (7 a 20 €)</li>
+<li>Um vale da pastelaria ou do café preferido da pessoa (5 a 15 €)</li>
+<li>Um vale de uma loja de jogos de tabuleiro, de discos ou de banda desenhada (10 a 20 €)</li>
+<li>Um cartão-oferta de uma loja de desporto (10 a 20 €)</li>
+<li>Um vale de uma loja de plantas ou de uma florista, para a pessoa escolher (10 a 20 €)</li>
+</ul>
+
+<h2 id="experiencias">Vales de experiências</h2>
+<p>Uma experiência compra-se no próprio dia, muitas vezes no site de quem a organiza, e recebes logo o vale para imprimir.</p>
+<ul>
+<li>Uma aula experimental: cerâmica, cozinha, escalada ou dança (15 a 30 €)</li>
+<li>Uma entrada num museu, num jardim botânico ou num aquário (5 a 20 €)</li>
+<li>Um bilhete para uma peça de teatro, um espetáculo de humor ou um concerto pequeno (10 a 25 €)</li>
+<li>Uma entrada numa pista de gelo de Natal ou num parque de trampolins (6 a 15 €)</li>
+<li>Uma caixa de experiências à escolha, vendida em livrarias e hipermercados, para quando o limite é mais alto (20 a 50 €)</li>
+</ul>
+
+<h2 id="supermercado">Do supermercado</h2>
+<ul>
+<li>Um cesto montado por ti: um queijo, uma compota e umas tostas (10 a 20 €)</li>
+<li>Uma garrafa de vinho do Porto ou de espumante, se souberes que a pessoa bebe (6 a 15 €)</li>
+<li>Um bolo-rei pequeno ou um panettone (5 a 12 €)</li>
+<li>Uma lata de chocolate quente, com marshmallows e uma caneca (8 a 15 €)</li>
+<li>Uma caixa de bombons ou uma tablete de chocolate de origem (3 a 10 €)</li>
+<li>Uma estrela-de-natal ou outra planta da secção de flores (4 a 10 €)</li>
+</ul>
+
+<h2 id="bairro">Da papelaria e da loja do bairro</h2>
+<ul>
+<li>Uma agenda ou um calendário de 2027 (5 a 15 €)</li>
+<li>Um caderno bonito com uma caneta boa (8 a 15 €)</li>
+<li>Um puzzle ou um jogo de cartas da prateleira dos jogos (8 a 15 €)</li>
+<li>Um livro de bolso da mesa das novidades (8 a 12 €)</li>
+<li>Umas luvas ou um gorro da retrosaria ou da loja de roupa da esquina (6 a 15 €)</li>
+<li>Uma vela perfumada da drogaria ou da loja de decoração (5 a 12 €)</li>
+</ul>
+
+<h2 id="digitais">Prendas digitais</h2>
+<p>Antes de comprar, confirma que o serviço deixa oferecer e que funciona em Portugal. Algumas subscrições só se oferecem com cartão-oferta.</p>
+<ul>
+<li>Um ou dois meses de uma plataforma de séries e filmes (8 a 20 €)</li>
+<li>Um ou dois meses de um serviço de música (7 a 15 €)</li>
+<li>Um vale para a loja de aplicações do telemóvel (10 a 20 €)</li>
+<li>Um audiolivro ou um livro digital oferecido pela loja online (5 a 15 €)</li>
+<li>Saldo para jogos de consola ou de computador (10 a 20 €)</li>
+<li>Um curso curto online sobre algo de que a pessoa fale muitas vezes: fotografia, guitarra, desenho (10 a 25 €)</li>
+</ul>
+
+<h2 id="embrulhar">Como embrulhar um vale</h2>
+<ul>
+<li><strong>Esconde-o numa caixa.</strong> Um envelope dentro de uma caixa maior não se adivinha logo ao pegar.</li>
+<li><strong>Junta algo pequeno ligado ao vale.</strong> Um saco de pipocas com o vale de cinema, um marcador com o vale de livraria, um saco de chá com a subscrição de audiolivros.</li>
+<li><strong>Imprime as prendas digitais.</strong> Passa o código para um cartão feito por ti, para haver alguma coisa para abrir.</li>
+<li><strong>Escreve porque escolheste.</strong> Uma frase no postal mostra que pensaste na pessoa. Há ideias nas <a href="/pistas-e-mensagens-amigo-secreto/">pistas e mensagens</a>.</li>
+<li><strong>Sem papel de embrulho?</strong> Papel pardo ou de jornal, um cordel e um raminho de alecrim resolvem.</li>
+</ul>
+<p class="shop">Se ainda tens um ou dois dias, procurar na Amazon: [[amz:caja regalo pequeña|caixas pequenas]] · [[amz:sobres tarjeta regalo navidad|envelopes de Natal]] · [[amz:papel kraft regalo|papel pardo]]</p>
+
+<h2 id="sortear">Ainda não fizeram o sorteio?</h2>
+<p>Dá para sortear hoje mesmo. No <a href="/criar">Sapatinho</a> escreves os nomes e os emails do grupo, e cada pessoa recebe por email o nome de quem lhe saiu. É grátis e não precisa de registo. Se o tempo é curto, combinem já o limite e a data da troca no convite.</p>
+
+<p>Se tens mais uns dias, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>, as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>, as <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+""",
+faq=[
+("O que oferecer no amigo secreto à última hora?", "Um vale de livraria ou de cinema, uma experiência, um cesto montado com coisas do supermercado ou uma prenda digital. Tudo se compra no próprio dia, e um postal escrito por ti torna-as mais pessoais."),
+("Oferecer um vale no amigo secreto é falta de jeito?", "Não, sobretudo se não conheces bem a pessoa. Escolhe uma loja ou uma experiência ligada ao que ela gosta e embrulha o vale com algo pequeno que combine."),
+("Posso oferecer uma prenda digital?", "Podes. Confirma que o serviço deixa oferecer e que funciona em Portugal, e entrega o código num cartão impresso, para haver alguma coisa para abrir na troca."),
+("Ainda dá para fazer o sorteio hoje?", 'Dá. No <a href="/criar">Sapatinho</a> escreves os nomes e os emails, e cada pessoa recebe por email quem lhe saiu.'),
+],
+related=["ideias-de-prendas-amigo-secreto", "prendas-engracadas-amigo-secreto", "pistas-e-mensagens-amigo-secreto"],
 ))
 
 # ---------------------------------------------------------------- privacidade técnica
