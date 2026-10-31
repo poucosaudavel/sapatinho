@@ -1622,6 +1622,82 @@ IMAGES = {
     cover="Ilustração de um envelope fechado com um cadeado, uma chave e um endereço de link do sorteio",
     figures=[dict(file="link", after="link", alt="Um endereço de link do sorteio com cadeado por cima de um envelope selado, entre uma chave e um cadeado")]),
 }
+# ---------------------------------------------------------------- escolhas rápidas
+# Cartões com ligação à Amazon, logo a seguir à introdução das páginas de prendas.
+# (ícone em site/img/icons/<ícone>.svg, nome, faixa de preço, para quem, pesquisa na Amazon em espanhol)
+# Os ícones geram-se com: node tools/seo/quick-icons.js
+# Só tipos de produto e faixas de preço que já estão na página: nada de marcas, preços exatos ou avaliações.
+QUICK = {
+"prendas-amigo-secreto-ate-5-euros": dict(items=[
+    ("chocolate", "Chocolate de boa qualidade", "até 5 €", "Para quem é guloso ou para quem mal conheces.", "chocolate negro regalo"),
+    ("meias", "Meias de Natal divertidas", "até 5 €", "Para quem leva o Natal a sério, ou a brincar.", "calcetines navidad divertidos"),
+    ("vela", "Vela perfumada pequena", "até 5 €", "Para quem gosta de estar em casa.", "vela perfumada pequeña"),
+    ("caderno", "Caderno de bolso", "até 5 €", "Para quem anda sempre a apontar coisas.", "libreta bolsillo bonita"),
+    ("cha", "Caixa pequena de chá", "até 5 €", "Para quem não passa sem uma bebida quente.", "te navidad caja"),
+    ("pato", "Pato de borracha", "até 5 €", "Para quem precisa de rir no fim do ano.", "pato de goma"),
+]),
+"prendas-amigo-secreto-ate-10-euros": dict(items=[
+    ("caneca", "Caneca com piada", "até 10 €", "Para o colega que mal conheces.", "taza divertida oficina"),
+    ("cartas", "Jogo de cartas para grupo", "até 10 €", "Para quem gosta de jogar depois do jantar.", "juego de cartas para grupo"),
+    ("livro", "Luz de leitura com mola", "até 10 €", "Para quem lê na cama.", "luz lectura pinza"),
+    ("puzzle", "Puzzle de 500 peças", "até 10 €", "Para quem gosta de uma tarde calma em casa.", "puzzle 500 piezas"),
+    ("especiarias", "Conjunto de especiarias", "até 10 €", "Para quem gosta de cozinhar.", "set especias regalo"),
+    ("garrafa", "Garrafa reutilizável", "até 10 €", "Para quem leva água para todo o lado.", "botella reutilizable"),
+]),
+"prendas-amigo-secreto-ate-15-euros": dict(items=[
+    ("molho", "Molho picante artesanal", "6 a 12 €", "Para quem põe picante em tudo.", "salsa picante artesanal"),
+    ("cartas", "Jogo de cartas para dois", "10 a 15 €", "Para quem joga a dois em casa.", "juego de cartas dos jugadores"),
+    ("candeeiro", "Candeeiro LED de secretária", "10 a 15 €", "Para um colega de trabalho.", "lampara led escritorio usb"),
+    ("termica", "Garrafa térmica para chá", "10 a 15 €", "Para quem bebe chá o dia todo.", "termo te con filtro"),
+    ("vela", "Vela LED com temporizador", "8 a 15 €", "Para quem gosta de estar em casa, sem chama.", "velas led temporizador"),
+    ("mapa", "Mapa de raspar", "10 a 15 €", "Para quem «tem tudo» e gosta de viajar.", "mapa mundi rascar"),
+]),
+"prendas-amigo-secreto-ate-20-euros": dict(items=[
+    ("dados", "Jogo de tabuleiro pequeno", "12 a 20 €", "Para famílias e grupos de amigos.", "juego de mesa familiar"),
+    ("puzzle", "Puzzle de 1000 peças", "12 a 20 €", "Para quem tem paciência e uma mesa livre.", "puzzle 1000 piezas"),
+    ("termica", "Garrafa térmica de inox", "12 a 20 €", "Para o colega que leva café para o trabalho.", "botella termica acero inoxidable 500ml"),
+    ("manta", "Manta polar para o sofá", "15 a 20 €", "Para quem gosta de estar em casa.", "manta polar sofa"),
+    ("livro", "Luz de leitura recarregável", "12 a 20 €", "Para quem lê antes de dormir.", "luz lectura recargable"),
+    ("planta", "Kit de ervas aromáticas", "10 a 18 €", "Para quem «tem tudo» e gosta de cozinhar.", "kit cultivo hierbas aromaticas"),
+]),
+"prendas-engracadas-amigo-secreto": dict(items=[
+    ("caneca-bigode", "Caneca com piada", "até 10 €", "Para quem não funciona antes do café.", "taza divertida"),
+    ("meias", "Meias com padrão ridículo", "até 10 €", "Para quem entra em qualquer brincadeira.", "calcetines divertidos"),
+    ("pato", "Pato de borracha", "até 5 €", "Para quem precisa de ânimo nos dias difíceis.", "pato de goma"),
+    ("cartas", "Jogo de cartas de desafios", "até 10 €", "Para animar o próprio jantar da troca.", "juego de cartas para fiestas"),
+    ("bigode", "Bigode postiço", "até 5 €", "Para quem gosta de se mascarar.", "bigotes postizos"),
+    ("planta", "Kit para cultivar malaguetas", "até 20 €", "Para quem gosta de picante e de plantas.", "kit cultivo guindillas"),
+]),
+"prendas-amigo-secreto-homem": dict(items=[
+    ("termica", "Garrafa térmica de inox", "15 a 20 €", "Para quem passa o dia fora de casa.", "botella termica acero inoxidable"),
+    ("cabo", "Cabo de carregamento 3 em 1", "6 a 12 €", "Para quem anda sempre sem bateria.", "cable carga 3 en 1 trenzado"),
+    ("termometro", "Termómetro digital para carne", "10 a 20 €", "Para quem manda no churrasco.", "termometro digital carne"),
+    ("meias", "Meias técnicas de corrida", "8 a 15 €", "Para quem corre ou anda de bicicleta.", "calcetines running"),
+    ("lanterna", "Lanterna frontal", "12 a 20 €", "Para quem faz caminhadas ou campismo.", "linterna frontal"),
+    ("caneca-viagem", "Caneca de viagem com tampa", "7 a 10 €", "Para quem leva o café para o trabalho.", "taza de viaje con tapa"),
+]),
+"prendas-ultima-hora-amigo-secreto": dict(
+    intro="Se ainda tens um ou dois dias, estas também se encontram online.",
+    items=[
+    ("caderno", "Caderno com uma caneta boa", "8 a 15 €", "Para quem anda sempre a apontar coisas.", "cuaderno tapa dura y boligrafo"),
+    ("cartas", "Jogo de cartas", "8 a 15 €", "Para quem gosta de jogar em grupo.", "juego de cartas para grupo"),
+    ("vela", "Vela perfumada", "5 a 12 €", "Para quem gosta de estar em casa.", "vela perfumada"),
+    ("gorro", "Gorro ou luvas", "6 a 15 €", "Para quem tem sempre frio.", "gorro y guantes invierno"),
+    ("caneca", "Chocolate quente com caneca", "8 a 15 €", "Para as noites frias de dezembro.", "chocolate caliente regalo taza"),
+    ("calendario", "Agenda de 2027", "5 a 15 €", "Para quem gosta de ter tudo planeado.", "agenda 2027"),
+]),
+"ideias-de-prendas-amigo-secreto": dict(items=[
+    ("meias", "Meias de Natal divertidas", "até 5 €", "Para quem leva o Natal a sério, ou a brincar.", "calcetines navidad divertidos"),
+    ("vela", "Vela perfumada pequena", "até 5 €", "Para quem gosta de estar em casa.", "vela perfumada pequeña"),
+    ("caneca", "Caneca com piada", "até 10 €", "Para o colega que mal conheces.", "taza divertida"),
+    ("cartas", "Jogo de cartas para grupo", "até 10 €", "Para quem gosta de jogar depois do jantar.", "juego de cartas para grupo"),
+    ("termica", "Garrafa térmica", "até 15 €", "Para quem leva chá ou café para todo o lado.", "botella termica"),
+    ("dados", "Jogo de tabuleiro", "até 20 €", "Para famílias e grupos de amigos.", "juego de mesa familiar"),
+]),
+}
+for _p in PAGES:
+    if _p["slug"] in QUICK:
+        _p["quick"] = QUICK[_p["slug"]]
 for _p in PAGES:
     if _p["slug"] in IMAGES:
         _p["images"] = IMAGES[_p["slug"]]

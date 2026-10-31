@@ -74,7 +74,7 @@ def head(title, desc, canonical, og_title=None, og_desc=None, og_type="website",
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/styles.css?v=20261031">
+<link rel="stylesheet" href="/styles.css?v=20261031b">
 {j}{extra}"""
 
 NAV = ('<nav aria-label="Principal"><a href="/#como-funciona">Como funciona</a>'
@@ -181,6 +181,35 @@ def add_figures(p, body):
             raise SystemExit(f"{p['slug']}: não encontrei <h2 id=\"{f['after']}\"> para a imagem {f['file']}")
     return body
 
+QUICK_INTRO = "As ideias mais fáceis de encontrar online. Os preços mudam com as promoções: confirma o valor antes de comprar."
+
+def quick_html(p):
+    """Bloco «Escolhas rápidas»: cartões com ícone, preço, para quem e botão para a Amazon."""
+    q = p.get("quick")
+    if not q:
+        return ""
+    cards = []
+    for icon, name, price, who, terms in q["items"]:
+        src = need(f"/img/icons/{icon}.svg")
+        n = html.escape(name, quote=False)
+        cards.append(f'<li class="quick-card"><img src="{src}" width="64" height="64" alt="" decoding="async">'
+                     f'<h3>{n}</h3><p class="quick-price">{html.escape(price)}</p><p class="quick-who">{html.escape(who, quote=False)}</p>'
+                     f'<p class="quick-buy">[[amz:{terms}|Ver na Amazon<span class="vh">: {n}</span>]]</p></li>')
+    if not 4 <= len(cards) <= 6:
+        raise SystemExit(f"{p['slug']}: «Escolhas rápidas» precisa de 4 a 6 cartões (tem {len(cards)})")
+    return (f'<section class="quick" aria-labelledby="escolhas-rapidas"><h2 id="escolhas-rapidas">Escolhas rápidas</h2>'
+            f'<p class="quick-intro">{html.escape(q.get("intro", QUICK_INTRO), quote=False)}</p>'
+            f'<ul class="quick-grid">{"".join(cards)}</ul></section>')
+
+def add_quick(p, body):
+    """Põe as escolhas rápidas logo depois da resposta inicial (ou no início), antes do índice e do primeiro H2."""
+    block = quick_html(p)
+    if not block:
+        return body
+    m = re.match(r'\s*<p class="lead-answer">.*?</p>', body, flags=re.S)
+    i = m.end() if m else 0
+    return body[:i] + "\n\n" + block + "\n" + body[i:]
+
 def og_for(p):
     im = p.get("images")
     if not im or not im.get("cover"):
@@ -202,7 +231,7 @@ def build_guide(p):
         graph.append(faq_ld(p["faq"]))
     h = head(p["title"], p["description"], url, og_title=p["h1"], og_type="article",
              jsonld={"@context": "https://schema.org", "@graph": graph}, og_image=og)
-    body, has_aff = affiliate(add_figures(p, p["body"]))
+    body, has_aff = affiliate(add_quick(p, add_figures(p, p["body"])))
     if has_aff:
         body = AFF_NOTE + "\n" + body
     rel = "".join(f'<a href="/{s}/"><b>{BYSLUG[s]["short"]}</b><span>{BYSLUG[s]["card"]}</span></a>' for s in p["related"])
