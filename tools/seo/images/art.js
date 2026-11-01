@@ -565,6 +565,26 @@ function browserBar(w, h, label) {
     `<text x="${-w / 2 + h * 1.05}" y="${h * .14}" font-family="Inst" font-weight="600" font-size="${h * .36}" fill="${C.ink}">${label}</text>`;
 }
 
+function creamTube(c, cap) {
+  // Bisnaga de creme de mãos, deitada na base.
+  return shadow(90, 10) + `<path d="M-96 -70L60 -78Q70 -78 70 -68V-10Q70 0 60 0L-96 -8Z" fill="${c || C.mint}"/>` +
+    `<path d="M-96 -70L-110 -74V-4L-96 -8Z" fill="${darken(c || C.mint, .2)}"/>` +
+    `<path d="M-60 -64L40 -68V-12L-60 -14Z" fill="${C.paper}" opacity=".9"/>` + g(-10, -40, 1, 0, heart(14, C.ember)) +
+    `<rect x="70" y="-62" width="44" height="46" rx="8" fill="${cap || C.gold}"/><rect x="70" y="-62" width="44" height="10" rx="5" fill="#000" opacity=".1"/>`;
+}
+function scarf(c, c2) {
+  // Cachecol enrolado, com franjas.
+  const id = uid('sc');
+  let st = '';
+  for (let x = -140; x < 140; x += 36) st += `<rect x="${x}" y="-150" width="12" height="160" fill="${c2 || C.paper}" opacity=".45"/>`;
+  let fr = '';
+  for (let i = 0; i < 6; i++) fr += `<path d="M${38 + i * 9} -22V0" stroke="${darken(c, .14)}" stroke-width="5" stroke-linecap="round"/>`;
+  return shadow(120) + `<defs><clipPath id="${id}"><path d="M-130 -60Q-130 -120 -60 -124H70Q130 -120 130 -60V-30Q130 -4 100 -4H-100Q-130 -4 -130 -30Z"/></clipPath></defs>` +
+    `<path d="M-130 -60Q-130 -120 -60 -124H70Q130 -120 130 -60V-30Q130 -4 100 -4H-100Q-130 -4 -130 -30Z" fill="${c}"/>` +
+    `<g clip-path="url(#${id})">${st}<path d="M-130 -64H130" stroke="#000" stroke-width="6" opacity=".12"/></g>` +
+    `<path d="M30 -112H94V-22H30Z" fill="${darken(c, .14)}"/><path d="M30 -112H94V-100H30Z" fill="#000" opacity=".12"/>` + fr;
+}
+
 // ------------------------------------------------------------------ cenas
 // Cada cena desenha sobre o fundo e devolve o SVG interior.
 const W1 = 1200, H1 = 675, W2 = 1200, H2 = 800, G1 = 590, G2 = 640;
@@ -828,6 +848,21 @@ const SCENES = {
       g(1050, G2 - 10, .9, 0, apron(C.green)) +
       g(210, G2, 1, 0, spiceJar(C.ember)) + g(300, G2, 1, 0, spiceJar(C.gold, C.green)) +
       sparkles([[300, 300, 16, C.gold, 's'], [900, 220, 14, C.gold], [1120, 160, 12, C.ember]]),
+  },
+  'prendas-amigo-secreto-mulher': {
+    capa: () => bgDark(W1, H1, 57) +
+      g(210, G1, .95, 0, plant({ pot: C.gold })) +
+      g(420, G1, .85, 0, candle({ c: C.paper, h: 130 })) +
+      g(650, G1, 1, 0, gift({ w: 230, h: 170, c: C.ember, r: C.gold, pat: 'dots' })) +
+      g(900, G1, .85, 0, bookStack([[190, 36, C.green], [170, 32, C.gold, 10], [180, 34, C.blue, -8]])) +
+      g(1080, G1, .8, 0, mug({ c: C.paper, deco: 'heart' })) +
+      sparkles([[320, 150, 14], [600, 110, 18, C.gold, 's'], [1100, 220, 12], [110, 300, 12], [880, 200, 14, C.gold]]),
+    'em-casa': () => bgLight(W2, H2, 58) +
+      g(250, G2, 1.05, 0, candle({ c: C.emberL, h: 150 })) +
+      g(560, G2, 1.15, 0, scarf(C.green, C.goldL)) +
+      g(830, G2, 1.1, 0, mug({ c: C.gold, deco: 'star', st: C.mint2 })) +
+      g(1050, G2, .8, 0, creamTube(C.mint, C.ember)) +
+      sparkles([[400, 260, 16, C.gold, 's'], [720, 300, 14, C.gold], [1100, 200, 12, C.ember], [140, 240, 12, C.ember]]),
   },
   'como-funciona-o-sapatinho-privacidade': {
     capa: () => bgDark(W1, H1, 54) +

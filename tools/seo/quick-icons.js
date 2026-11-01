@@ -68,6 +68,8 @@ function defineIcons() {
         `<rect x="-110" y="-104" width="220" height="10" fill="#000" opacity=".12"/><rect x="-110" y="-54" width="220" height="10" fill="#000" opacity=".12"/></g>`;
     },
     planta: () => plant(),
+    creme: () => creamTube(C.mint, C.ember),
+    lenco: () => scarf(C.green, C.goldL),
     bigode: () => tacheGlasses(1),
     cabo: () => {
       const end = (x, y, r, c) => g(x, y, 1, r, `<rect x="-14" y="-34" width="28" height="40" rx="6" fill="${c}"/><rect x="-8" y="-50" width="16" height="18" rx="3" fill="${C.mint2}"/>`);
