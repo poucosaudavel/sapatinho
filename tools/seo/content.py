@@ -113,7 +113,7 @@ body="""
 </ol></nav>
 
 <p>Os preços variam de loja para loja, por isso usa estas listas como ponto de partida e confirma o valor antes de comprar.</p>
-<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/prendas-amigo-secreto-ate-15-euros/">até 15 €</a> · <a href="/prendas-amigo-secreto-ate-20-euros/">até 20 €</a> · <a href="/prendas-engracadas-amigo-secreto/">engraçadas</a> · <a href="/prendas-ultima-hora-amigo-secreto/">de última hora</a> · <a href="/prendas-amigo-secreto-homem/">para homem</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
+<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/prendas-amigo-secreto-ate-15-euros/">até 15 €</a> · <a href="/prendas-amigo-secreto-ate-20-euros/">até 20 €</a> · <a href="/prendas-engracadas-amigo-secreto/">engraçadas</a> · <a href="/prendas-ultima-hora-amigo-secreto/">de última hora</a> · <a href="/prendas-amigo-secreto-homem/">para homem</a> · <a href="/prendas-amigo-secreto-mulher/">para mulher</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
 
 <h2 id="ate-5">Prendas até 5 €</h2>
 <p>Mais 30 ideias na página <a href="/prendas-amigo-secreto-ate-5-euros/">prendas para amigo secreto até 5 €</a>.</p>
@@ -1436,7 +1436,7 @@ body="""
 <li>Uma garrafa pequena de ginjinha ou de vinho do Porto, se souberes que ele bebe (8 a 20 €)</li>
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:mapa mundi rascar|mapas de raspar]] · [[amz:maceta barro|vasos de barro]]</p>
-<p>Para algo que faça rir na troca, vê as <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a>.</p>
+<p>Para algo que faça rir na troca, vê as <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a>. Se te saiu uma mulher, há outra lista nas <a href="/prendas-amigo-secreto-mulher/">prendas de amigo secreto para mulher</a>.</p>
 
 <p>Para outros valores e tipos de pessoa, vê todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite escrito no convite.</p>
 """,
@@ -1447,6 +1447,164 @@ faq=[
 ("Bebidas são boa ideia no amigo secreto?", "Só se souberes que a pessoa bebe. Se tiveres dúvidas, troca por café, chá, doces ou conservas."),
 ],
 related=["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-ate-15-euros", "prendas-amigo-secreto-ate-20-euros"],
+))
+
+# ---------------------------------------------------------------- para mulher
+PAGES.append(dict(
+slug="prendas-amigo-secreto-mulher",
+date="2026-11-01",
+nav="Prendas para mulher",
+short="Prendas para mulher",
+card="54 ideias até 30 €, por limite e por gostos: casa, cozinha, leitura, desporto.",
+title="Prendas amigo secreto para mulher: 54 ideias até 30 € | Sapatinho",
+h1="Prendas de amigo secreto para mulher",
+dek="Saiu-te uma mulher no amigo secreto e não sabes o que lhe dar? Cinquenta e quatro ideias, arrumadas pelo limite do grupo e pelo que ela gosta de fazer, com o preço aproximado e para quem é cada uma.",
+description="54 prendas de amigo secreto para mulher até 5, 10, 15, 20 e 30 €, com preço e para quem é: casa, cozinha, leitura, desporto e quem tem tudo.",
+body="""
+<p class="lead-answer"><strong>Boas prendas de amigo secreto para mulher</strong> são uma vela perfumada, um creme de mãos, um cachecol macio, uma luz de leitura, um caderno de capa dura, um azeite especial ou um kit para cultivar ervas aromáticas. Mais do que «ser mulher», conta o que ela gosta de fazer: em baixo há ideias por limite e por gostos, cada uma com uma linha a dizer para quem é.</p>
+
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#ate-5">Até 5 €</a></li>
+<li><a href="#ate-10">Até 10 €</a></li>
+<li><a href="#ate-15">Até 15 €</a></li>
+<li><a href="#ate-20">Até 20 €</a></li>
+<li><a href="#ate-30">Até 30 €</a></li>
+<li><a href="#casa">Para quem gosta de estar em casa</a></li>
+<li><a href="#cozinha">Para quem gosta de cozinhar</a></li>
+<li><a href="#leitura">Para quem gosta de ler e escrever</a></li>
+<li><a href="#desporto">Para quem faz desporto</a></li>
+<li><a href="#colega">Para uma colega que mal conheces</a></li>
+<li><a href="#tudo">Para quem «tem tudo»</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<p>Os preços entre parênteses são aproximados e mudam de loja para loja e com as promoções. Confirma o preço antes de comprar. E lembra-te: nem todas as mulheres gostam de velas, de maquilhagem ou de cor-de-rosa. Pensa primeiro na pessoa. Se for roupa, pede talão de troca.</p>
+
+<h2 id="ate-5">Prendas para mulher até 5 €</h2>
+<ul>
+<li>Um creme de mãos pequeno e um bálsamo para os lábios (3 a 5 €): para quem tem as mãos secas no frio.</li>
+<li>Uma tablete de chocolate negro com laranja ou com flor de sal (2 a 5 €): para quem é gulosa, ou para quem mal conheces.</li>
+<li>Uma caixa pequena de chás de ervas (3 a 5 €): para quem bebe uma infusão antes de dormir.</li>
+<li>Um par de meias quentes de inverno (3 a 5 €): para quem tem sempre os pés frios.</li>
+<li>Uma suculenta num vaso pequeno (3 a 5 €): para quem gosta de plantas mas tem pouco tempo para elas.</li>
+<li>Um bloco de notas autocolantes com um desenho divertido (2 a 5 €): para quem enche o monitor de lembretes.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:set crema de manos regalo|cremes de mãos]] · [[amz:calcetines termicos mujer|meias quentes]] · [[amz:notas adhesivas divertidas|notas autocolantes]]</p>
+<p>Mais ideias baratas nas <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>.</p>
+
+<h2 id="ate-10">Prendas para mulher até 10 €</h2>
+<ul>
+<li>Uma vela perfumada num frasco de vidro (6 a 10 €): para quem gosta de estar em casa.</li>
+<li>Um livro de bolso de um género de que ela goste (7 a 10 €): para quem lê nos transportes.</li>
+<li>Umas luvas que dão para usar o telemóvel (6 a 10 €): para quem vai a pé para o trabalho.</li>
+<li>Uma máscara de olhos para dormir, de cetim ou de algodão (5 a 10 €): para quem tem o sono leve ou viaja muito.</li>
+<li>Uma bolsa pequena de tecido para os auriculares e os carregadores (6 a 10 €): para quem anda sempre à procura deles na mala.</li>
+<li>Uma caneca com uma frase que a faça rir (7 a 10 €): para quem não começa o dia sem café.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:vela perfumada tarro cristal|velas em frasco]] · [[amz:guantes tactiles mujer|luvas tácteis]] · [[amz:antifaz para dormir seda|máscaras de dormir]] · [[amz:taza divertida|canecas com piada]]</p>
+<p>Mais ideias nas <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>.</p>
+
+<h2 id="ate-15">Prendas para mulher até 15 €</h2>
+<ul>
+<li>Um caderno de capa dura com uma caneta boa (10 a 15 €): para quem escreve listas, ideias ou um diário.</li>
+<li>Uma garrafa térmica para chá, com filtro (10 a 15 €): para quem bebe chá o dia todo.</li>
+<li>Um kit de manicure num estojo (8 a 15 €): para quem gosta de tratar das unhas em casa.</li>
+<li>Uma moldura com uma fotografia do grupo (8 a 15 €): para quem gosta de guardar recordações.</li>
+<li>Um puzzle de 500 peças com uma ilustração bonita (10 a 15 €): para quem gosta de uma tarde calma.</li>
+<li>Uma bolsa de higiene para viagem (8 a 15 €): para quem está sempre de malas feitas.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:cuaderno tapa dura|cadernos de capa dura]] · [[amz:termo te con filtro|garrafas térmicas para chá]] · [[amz:kit de manicura estuche|kits de manicure]] · [[amz:neceser viaje mujer|bolsas de viagem]]</p>
+<p>Mais ideias nas <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>.</p>
+
+<h2 id="ate-20">Prendas para mulher até 20 €</h2>
+<ul>
+<li>Um cachecol grande e macio (12 a 20 €): para quem tem sempre frio no escritório.</li>
+<li>Uma luz de leitura recarregável (12 a 20 €): para quem lê na cama.</li>
+<li>Um difusor de varetas para a casa (10 a 20 €): para quem gosta da casa a cheirar bem, sem chama.</li>
+<li>Um livro de receitas sobre um tema de que ela goste, como doces ou cozinha vegetariana (12 a 20 €): para quem gosta de experimentar na cozinha.</li>
+<li>Uma seleção de produtos portugueses: doce, queijo, bolachas ou conservas (12 a 20 €): para quem prefere prendas que se comem.</li>
+<li>Um jogo de tabuleiro pequeno (12 a 20 €): para quem junta os amigos ao fim de semana.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:bufanda mujer suave|cachecóis]] · [[amz:luz lectura recargable|luzes de leitura]] · [[amz:difusor de varillas|difusores de varetas]] · [[amz:juego de mesa pequeño|jogos de tabuleiro]]</p>
+<p>Mais ideias nas <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>.</p>
+
+<h2 id="ate-30">Prendas para mulher até 30 €</h2>
+<ul>
+<li>Uma manta de malha ou polar para o sofá (18 a 30 €): para quem gosta de serões em casa.</li>
+<li>Um pijama quente de boa qualidade (20 a 30 €): para quem passa o fim de semana de pijama. Só se souberes o tamanho.</li>
+<li>Dois bilhetes de cinema e um saco de pipocas (15 a 25 €): para quem gosta de sair, e de levar alguém.</li>
+<li>Uma mochila pequena para o dia a dia (20 a 30 €): para quem anda de transportes.</li>
+<li>Um conjunto de aguarelas e pincéis (15 a 30 €): para quem gosta de desenhar ou quer começar.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:manta punto sofa|mantas]] · [[amz:pijama mujer invierno|pijamas]] · [[amz:mochila pequeña mujer|mochilas pequenas]] · [[amz:set acuarelas pinceles|aguarelas]]</p>
+<p>Para limites mais altos, vê as ideias até 50 € no <a href="/ideias-de-prendas-amigo-secreto/#ate-50">guia de ideias de prendas</a>.</p>
+
+<h2 id="casa">Para quem gosta de estar em casa</h2>
+<ul>
+<li>Umas pantufas quentes (10 a 20 €): para quem tira os sapatos logo à porta.</li>
+<li>Chocolate quente em pó numa caixa bonita (6 a 12 €): para as noites frias de dezembro.</li>
+<li>Um saco de água quente com capa de malha (8 a 15 €): para quem tem sempre frio na cama.</li>
+<li>Um conjunto de máscaras faciais de tecido (5 a 10 €): para uma noite calma no sofá.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:zapatillas de casa mujer|pantufas]] · [[amz:bolsa agua caliente funda punto|sacos de água quente]] · [[amz:mascarillas faciales set|máscaras faciais]]</p>
+
+<h2 id="cozinha">Para quem gosta de cozinhar</h2>
+<ul>
+<li>Um azeite especial ou um azeite aromatizado (6 a 15 €): para quem tempera tudo com cuidado.</li>
+<li>Um conjunto de especiarias do mundo (8 a 15 €): para quem gosta de experimentar receitas novas.</li>
+<li>Um avental de linho ou de algodão (12 a 20 €): para quem passa o domingo na cozinha.</li>
+<li>Uma caixa de vidro com tampa para levar o almoço (8 a 15 €): para quem leva comida de casa para o trabalho.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:set especias regalo|especiarias]] · [[amz:delantal lino|aventais de linho]] · [[amz:fiambrera cristal tapa|caixas de vidro]]</p>
+
+<h2 id="leitura">Para quem gosta de ler e escrever</h2>
+<ul>
+<li>Um romance recente de uma autora ou de um autor de que ela goste (12 a 20 €): para quem tem sempre um livro na mala.</li>
+<li>Um marcador de livros em metal ou em pele (4 a 10 €): para quem dobra os cantos das páginas.</li>
+<li>Uma agenda de 2027 (5 a 15 €): para quem gosta de ter tudo planeado.</li>
+<li>Um conjunto de canetas de cores ou de marcadores finos (6 a 12 €): para quem sublinha, desenha ou faz listas bonitas.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:marcapaginas metal|marcadores de livros]] · [[amz:agenda 2027|agendas de 2027]] · [[amz:rotuladores punta fina colores|canetas de cores]]</p>
+
+<h2 id="desporto">Para quem faz desporto</h2>
+<ul>
+<li>Uma cinta de alongamentos ou um conjunto de elásticos de treino (8 a 15 €): para quem faz ioga ou treina em casa.</li>
+<li>Uma garrafa de água reutilizável (8 a 15 €): para quem vai ao ginásio depois do trabalho.</li>
+<li>Uma braçadeira para levar o telemóvel a correr (8 a 14 €): para quem corre ao fim do dia.</li>
+<li>Uma bolsa de cintura (8 a 15 €): para quem faz caminhadas e quer as mãos livres.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:bandas elasticas fitness|elásticos de treino]] · [[amz:botella reutilizable|garrafas reutilizáveis]] · [[amz:brazalete movil running|braçadeiras]] · [[amz:riñonera deporte|bolsas de cintura]]</p>
+
+<h2 id="colega">Para uma colega que mal conheces</h2>
+<ul>
+<li>Uma caixa de bombons ou de bolachas de manteiga (5 a 10 €): para quem gosta de partilhar com a equipa.</li>
+<li>Uma planta pequena para a secretária (5 a 12 €): para quem passa o dia ao computador.</li>
+<li>Um candeeiro LED de secretária (10 a 15 €): para quem trabalha até tarde.</li>
+<li>Um porta-cartões ou uma capa para o passe (5 a 12 €): para quem anda de metro ou de autocarro.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:lampara led escritorio usb|candeeiros de secretária]] · [[amz:tarjetero mujer|porta-cartões]]</p>
+<p>Mais ideias para o trabalho no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
+
+<h2 id="tudo">Para quem «tem tudo»</h2>
+<ul>
+<li>Uma caixa de pastéis de nata ou de doces da pastelaria preferida dela (5 a 15 €): para quem não diz que não a um doce.</li>
+<li>Um vale feito por ti, por exemplo «vale um jantar cozinhado por mim» (o preço dos ingredientes): para quem dá mais valor ao tempo do que às coisas.</li>
+<li>Um kit para cultivar ervas aromáticas na janela (10 a 18 €): para quem gosta de plantas e de cozinhar.</li>
+<li>Um mapa de raspar, para marcar os sítios por onde já passou (10 a 15 €): para quem gosta de viajar.</li>
+<li>Uma garrafa pequena de vinho do Porto ou de ginjinha (8 a 20 €): só se souberes que ela bebe.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:kit cultivo hierbas aromaticas|kits de ervas aromáticas]] · [[amz:mapa mundi rascar|mapas de raspar]]</p>
+<p>Para algo que faça rir na troca, vê as <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a>. Se te saiu um homem, há outra lista nas <a href="/prendas-amigo-secreto-homem/">prendas de amigo secreto para homem</a>.</p>
+
+<p>Para outros valores e tipos de pessoa, vê todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite escrito no convite.</p>
+""",
+faq=[
+("O que oferecer a uma mulher no amigo secreto?", "Escolhe pelo que ela gosta de fazer: uma luz de leitura para quem lê, especiarias ou um azeite especial para quem cozinha, uma garrafa reutilizável para quem vai ao ginásio, uma vela ou uma manta para quem gosta de estar em casa."),
+("O que oferecer a uma mulher que mal conheço?", "Prendas neutras e que se gastam: chocolate, chá, uma vela, um creme de mãos ou uma planta pequena. Evita roupa com tamanho, perfume e prendas muito pessoais."),
+("Que prenda dar a uma mulher com 10 euros?", "Uma vela perfumada em frasco, um livro de bolso, umas luvas tácteis, uma máscara de olhos para dormir ou uma caneca com piada."),
+("Cosmética é boa ideia no amigo secreto?", "Só coisas simples e neutras, como um creme de mãos ou um bálsamo para os lábios. Perfume e maquilhagem dependem muito do gosto de cada pessoa: deixa-os para quando a conheces bem."),
+],
+related=["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-homem", "prendas-amigo-secreto-ate-20-euros"],
 ))
 
 # ---------------------------------------------------------------- privacidade técnica
@@ -1618,6 +1776,9 @@ IMAGES = {
 "prendas-amigo-secreto-homem": dict(
     cover="Ilustração de uma bola de futebol, uma caneca, uma prenda e um comando de jogos",
     figures=[dict(file="churrasco", after="cozinha", alt="Prendas para quem faz churrasco: um grelhador com salsichas, uma pinça, especiarias e um avental")]),
+"prendas-amigo-secreto-mulher": dict(
+    cover="Ilustração de uma planta num vaso, uma vela acesa, uma prenda com laço, uma pilha de livros e uma caneca",
+    figures=[dict(file="em-casa", after="casa", alt="Prendas para quem gosta de estar em casa: uma vela acesa, um cachecol enrolado, uma caneca quente e um creme de mãos")]),
 "como-funciona-o-sapatinho-privacidade": dict(
     cover="Ilustração de um envelope fechado com um cadeado, uma chave e um endereço de link do sorteio",
     figures=[dict(file="link", after="link", alt="Um endereço de link do sorteio com cadeado por cima de um envelope selado, entre uma chave e um cadeado")]),
@@ -1675,6 +1836,14 @@ QUICK = {
     ("meias", "Meias técnicas de corrida", "8 a 15 €", "Para quem corre ou anda de bicicleta.", "calcetines running"),
     ("lanterna", "Lanterna frontal", "12 a 20 €", "Para quem faz caminhadas ou campismo.", "linterna frontal"),
     ("caneca-viagem", "Caneca de viagem com tampa", "7 a 10 €", "Para quem leva o café para o trabalho.", "taza de viaje con tapa"),
+]),
+"prendas-amigo-secreto-mulher": dict(items=[
+    ("vela", "Vela perfumada em frasco", "6 a 10 €", "Para quem gosta de estar em casa.", "vela perfumada tarro cristal"),
+    ("creme", "Creme de mãos e bálsamo", "3 a 5 €", "Para quem tem as mãos secas no frio.", "set crema de manos regalo"),
+    ("lenco", "Cachecol grande e macio", "12 a 20 €", "Para quem tem sempre frio no escritório.", "bufanda mujer suave"),
+    ("livro", "Luz de leitura recarregável", "12 a 20 €", "Para quem lê na cama.", "luz lectura recargable"),
+    ("caderno", "Caderno de capa dura", "10 a 15 €", "Para quem escreve listas ou um diário.", "cuaderno tapa dura"),
+    ("planta", "Kit de ervas aromáticas", "10 a 18 €", "Para quem «tem tudo» e gosta de plantas.", "kit cultivo hierbas aromaticas"),
 ]),
 "prendas-ultima-hora-amigo-secreto": dict(
     intro="Se ainda tens um ou dois dias, estas também se encontram online.",
