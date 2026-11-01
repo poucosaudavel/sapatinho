@@ -71,7 +71,7 @@
 </ol>
 
 <h2 id="sorteio">Como é feito o sorteio</h2>
-<p>O sorteio usa o gerador de números aleatórios criptográfico do servidor (<code>crypto.getRandomValues</code>) para baralhar a lista de nomes. Se alguém ficar com o próprio nome, ou com uma pessoa que não pode tirar (um casal, por exemplo), baralha-se outra vez, até 5000 tentativas.</p>
+<p>O sorteio usa o gerador de números aleatórios criptográfico do servidor (<code>crypto.getRandomValues</code>) para baralhar a lista de nomes. Se alguém ficar com o próprio nome, ou com uma pessoa que não pode tirar (um casal, por exemplo), baralha-se outra vez, até 5000 tentativas. É o mesmo problema dos papelinhos, que comparamos em <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>, mas aqui ninguém vê as repetições.</p>
 <pre><code>function draw(names, blocked) {
   for (let attempt = 0; attempt &lt; 5000; attempt++) {
     const r = names.slice();
@@ -84,7 +84,7 @@
   }
   return null;  // não há sorteio possível com estas exclusões
 }</code></pre>
-<p>O sorteio fica feito neste momento. A roleta que cada pessoa vê depois é só a forma de mostrar um resultado que já está decidido, por isso rodar outra vez dá sempre o mesmo nome.</p>
+<p>O sorteio fica feito neste momento. A <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> que cada pessoa vê depois é só a forma de mostrar um resultado que já está decidido, por isso rodar outra vez dá sempre o mesmo nome.</p>
 
 <h2 id="link">O que está dentro de cada link</h2>
 <figure class="fig"><img src="/img/como-funciona-o-sapatinho-privacidade/link.webp" width="1200" height="800" alt="Um endereço de link do sorteio com cadeado por cima de um envelope selado, entre uma chave e um cadeado" loading="lazy" decoding="async"></figure>
@@ -134,7 +134,7 @@
 <h2 id="limites">Os limites, sem rodeios</h2>
 <ul>
 <li><strong>Quem tem o teu link vê o teu resultado.</strong> É assim que o link funciona. Não o reencaminhes.</li>
-<li><strong>Quem organiza tem os links de todos</strong>, para poder reenviar convites. Se os abrir, fica a saber os resultados. Por isso pedimos que não o faça.</li>
+<li><strong>Quem organiza tem os links de todos</strong>, para poder reenviar convites. Se os abrir, fica a saber os resultados. Por isso pedimos que não o faça. Nas <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a> explicamos como quem organiza pode jogar como toda a gente.</li>
 <li><strong>Os nomes no link estão codificados, não cifrados.</strong> Quem souber descodificar o teu link consegue ler o grupo e o nome que te saiu. O email, esse, está cifrado.</li>
 <li><strong>Os emails passam pelo Brevo</strong>, que precisa deles para os entregar e guarda o registo de envio durante um mês. O Brevo também troca os links dos emails por links seus, para contar cliques; no plano gratuito isto não se pode desligar.</li>
 </ul>
