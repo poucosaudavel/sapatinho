@@ -10,17 +10,21 @@ PAGES = []
 # ---------------------------------------------------------------- regras
 PAGES.append(dict(
 slug="regras-do-amigo-secreto",
+modified="2026-11-01",
 nav="Regras",
 short="Regras do amigo secreto",
 card="Como funciona, como organizar passo a passo e variantes para animar a troca.",
-title="Regras do amigo secreto: guia completo | Sapatinho",
+title="Regras do amigo secreto 2026 (e se forem ímpares?) | Sapatinho",
 h1="Regras do amigo secreto: como funciona e como organizar",
-dek="Tudo o que precisas para organizar o amigo secreto da família, dos amigos ou do trabalho, sem confusões nem prendas repetidas.",
-description="As regras do amigo secreto explicadas: sorteio, limite de preço, segredo e revelação. Como organizar passo a passo, variantes divertidas e erros a evitar.",
+dek="Cada pessoa tira um nome, oferece uma prenda dentro do limite e guarda segredo até à troca. O resto, passo a passo, para a família, os amigos ou o trabalho.",
+description="As regras do amigo secreto em 2026: funciona com número par ou ímpar, a partir de 3 pessoas. Quanto gastar, como fazer o sorteio e a revelação.",
 body="""
+<p class="lead-answer"><strong>As regras do amigo secreto</strong> são simples: cada pessoa tira à sorte o nome de outra, oferece-lhe uma prenda dentro do limite de preço combinado e guarda segredo até ao dia da troca. Ninguém se tira a si próprio. O grupo pode ter um número par ou ímpar de pessoas: basta haver pelo menos três.</p>
+
 <nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
 <li><a href="#o-que-e">O que é o amigo secreto</a></li>
 <li><a href="#regras">As regras básicas</a></li>
+<li><a href="#par-ou-impar">Tem de ser par ou ímpar?</a></li>
 <li><a href="#organizar">Como organizar, passo a passo</a></li>
 <li><a href="#revelacao">Como fazer a revelação</a></li>
 <li><a href="#variantes">Variantes para animar a troca</a></li>
@@ -30,7 +34,7 @@ body="""
 
 <h2 id="o-que-e">O que é o amigo secreto</h2>
 <p>O amigo secreto é uma forma de trocar prendas em grupo. Em vez de toda a gente oferecer uma prenda a toda a gente, cada pessoa tira à sorte o nome de outra e oferece-lhe uma única prenda. Ninguém sabe quem lhe vai oferecer até ao dia da troca.</p>
-<p>Funciona bem em grupos de 4 a 30 pessoas: famílias, grupos de amigos, turmas e equipas de trabalho. Cada pessoa compra só uma prenda, o que poupa tempo e dinheiro, e a surpresa da revelação dá sempre conversa. No Brasil o mesmo jogo chama-se muitas vezes <em>amigo oculto</em>.</p>
+<p>Funciona bem em grupos de 4 a 30 pessoas: famílias, grupos de amigos, turmas e equipas de trabalho. Cada pessoa compra só uma prenda, o que poupa tempo e dinheiro, e a surpresa da revelação dá sempre conversa.</p>
 
 <h2 id="regras">As regras básicas</h2>
 <ul>
@@ -40,6 +44,11 @@ body="""
 <li><strong>Há uma data e um local</strong> para a troca: o jantar de Natal, um almoço de equipa ou uma videochamada.</li>
 <li><strong>Cada pessoa dá uma prenda e recebe uma.</strong> O número de participantes não precisa de ser par.</li>
 </ul>
+
+<h2 id="par-ou-impar">O amigo secreto tem de ser par ou ímpar?</h2>
+<p><strong>Não. O amigo secreto funciona com qualquer número de pessoas a partir de três, par ou ímpar.</strong> Ninguém forma pares: cada pessoa oferece uma prenda a quem lhe saiu e recebe uma de outra pessoa. Com 7 pessoas, há 7 prendas e cada uma recebe exatamente uma.</p>
+<p>O sorteio forma uma roda: a Ana oferece ao Bruno, o Bruno à Carla, a Carla à Ana. Às vezes duas pessoas tiram-se uma à outra, e também não faz mal. É igual no <em>amigo oculto</em>, como o jogo se chama no Brasil: as regras são as mesmas.</p>
+<p>A única coisa que não funciona é um grupo de duas pessoas, porque cada uma sabe logo quem lhe saiu. O <a href="/criar">sorteio online por email</a> do Sapatinho aceita de 3 a 30 pessoas, par ou ímpar, e ninguém se tira a si próprio.</p>
 
 <h2 id="organizar">Como organizar, passo a passo</h2>
 <ol>
@@ -81,7 +90,8 @@ body="""
 </ul>
 """,
 faq=[
-("E se o número de participantes for ímpar?", "Não há problema. Cada pessoa oferece uma prenda e recebe uma, por isso o sorteio funciona com qualquer número a partir de três pessoas."),
+("O amigo secreto tem de ser par ou ímpar?", "Não. Funciona com qualquer número de pessoas a partir de três, par ou ímpar. Ninguém forma pares: cada pessoa oferece uma prenda a quem lhe saiu e recebe uma de outra pessoa."),
+("Quantas pessoas são precisas para o amigo secreto?", "Pelo menos três. Com duas, cada pessoa sabe logo quem lhe saiu. Não há máximo, mas em grupos muito grandes a revelação demora mais. O sorteio online do Sapatinho aceita até 30 pessoas."),
 ("Posso tirar a pessoa que me tirou a mim?", "Pode acontecer e não é um problema: as duas pessoas trocam prendas entre si. Só não te podes tirar a ti próprio."),
 ("Quanto se deve gastar no amigo secreto?", "Depende do grupo. Em família ou entre amigos, um limite entre 10 e 20 € costuma funcionar bem. No trabalho, um valor mais baixo deixa toda a gente à vontade. O importante é ser igual para todos e combinado antes do sorteio."),
 ("O que fazer se alguém desistir depois do sorteio?", "Não é preciso repetir o sorteio. Quem tinha tirado a pessoa que desistiu passa a oferecer a prenda a quem essa pessoa tinha tirado. Assim ninguém fica sem prenda e só uma pessoa tem de mudar de escolha."),
@@ -93,15 +103,40 @@ related=["ideias-de-prendas-amigo-secreto", "amigo-secreto-a-distancia"],
 # ---------------------------------------------------------------- ideias
 PAGES.append(dict(
 slug="ideias-de-prendas-amigo-secreto",
-modified="2026-10-31",
+modified="2026-11-01",
 nav="Ideias de prendas",
 short="Ideias de prendas",
 card="Sugestões até 5, 10, 15, 20 e 50 €, e para cada tipo de pessoa.",
-title="Ideias de prendas para amigo secreto 2026, por preço | Sapatinho",
-h1="Ideias de prendas para o amigo secreto, por preço",
+title="Ideias de prendas amigo secreto 2026, por preço e pessoa | Sapatinho",
+h1="Ideias de prendas para amigo secreto 2026: por preço e por pessoa",
 dek="Não sabes o que oferecer no amigo secreto? Aqui tens 40 ideias de prendas, arrumadas pelo limite que o grupo combinou, e sugestões para quando te sai alguém que mal conheces.",
-description="Ideias de prendas para o amigo secreto até 5, 10, 15, 20 e 50 € e por tipo de pessoa: colegas, família e quem tem tudo. Listas para o Natal de 2026.",
+description="Prendas para amigo secreto 2026: ideias até 5, 10, 15, 20 e 50 €, e por pessoa: homem, mulher, colegas e crianças. Engraçadas e de última hora.",
 body="""
+<p class="lead-answer"><strong>As melhores prendas para amigo secreto</strong> respeitam o limite do grupo e servem para alguma coisa: chocolate bom ou meias de Natal até 5 €, uma caneca com piada ou um jogo de cartas até 10 €, um livro ou uma garrafa térmica até 15 €, um jogo de tabuleiro até 20 €. Escolhe primeiro o preço, depois a pessoa que te saiu.</p>
+
+<h2 id="escolher">Prendas para amigo secreto por preço e por pessoa</h2>
+<p>Cada página tem uma lista completa, com preço aproximado e para quem é cada ideia.</p>
+<h3>Por preço</h3>
+<ul>
+<li><a href="/prendas-amigo-secreto-ate-5-euros/">Prendas para amigo secreto até 5 €</a>: comestíveis, para casa e feitas por ti</li>
+<li><a href="/prendas-amigo-secreto-ate-10-euros/">Prendas para amigo secreto até 10 €</a>: o limite mais comum no trabalho e entre amigos</li>
+<li><a href="/prendas-amigo-secreto-ate-15-euros/">Prendas para amigo secreto até 15 €</a>: para quem cozinha, lê, joga ou faz desporto</li>
+<li><a href="/prendas-amigo-secreto-ate-20-euros/">Prendas para amigo secreto até 20 €</a>: jogos, mantas, produtos regionais</li>
+</ul>
+<h3>Por pessoa</h3>
+<ul>
+<li><a href="/prendas-amigo-secreto-homem/">Prendas de amigo secreto para homem</a></li>
+<li><a href="/prendas-amigo-secreto-mulher/">Prendas de amigo secreto para mulher</a></li>
+<li><a href="/amigo-secreto-na-empresa/">Prendas para colegas de trabalho</a>, no guia do amigo secreto na empresa</li>
+<li><a href="/amigo-secreto-criancas/">Prendas para crianças</a>, por idade</li>
+</ul>
+<h3>Por tipo de prenda</h3>
+<ul>
+<li><a href="/prendas-engracadas-amigo-secreto/">Prendas engraçadas para amigo secreto</a>, até 5, 10 e 20 €</li>
+<li><a href="/prendas-ultima-hora-amigo-secreto/">Prendas de última hora</a>, para comprar no próprio dia</li>
+<li><a href="/amigo-secreto-black-friday/">Prendas na Black Friday</a>: como saber se o desconto é real</li>
+</ul>
+
 <nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
 <li><a href="#ate-5">Até 5 €</a></li>
 <li><a href="#ate-10">Até 10 €</a></li>
@@ -112,8 +147,7 @@ body="""
 <li><a href="#dicas">Dicas para acertar</a></li>
 </ol></nav>
 
-<p>Os preços variam de loja para loja, por isso usa estas listas como ponto de partida e confirma o valor antes de comprar.</p>
-<p><b>Páginas com mais ideias:</b> <a href="/prendas-amigo-secreto-ate-5-euros/">até 5 €</a> · <a href="/prendas-amigo-secreto-ate-10-euros/">até 10 €</a> · <a href="/prendas-amigo-secreto-ate-15-euros/">até 15 €</a> · <a href="/prendas-amigo-secreto-ate-20-euros/">até 20 €</a> · <a href="/prendas-engracadas-amigo-secreto/">engraçadas</a> · <a href="/prendas-ultima-hora-amigo-secreto/">de última hora</a> · <a href="/prendas-amigo-secreto-homem/">para homem</a> · <a href="/prendas-amigo-secreto-mulher/">para mulher</a> · <a href="/amigo-secreto-na-empresa/">para colegas de trabalho</a> · <a href="/amigo-secreto-criancas/">para crianças</a> · <a href="/amigo-secreto-black-friday/">na Black Friday</a></p>
+<p>Em baixo, as 40 ideias mais seguras de cada limite. Os preços variam de loja para loja, por isso usa estas listas como ponto de partida e confirma o valor antes de comprar.</p>
 
 <h2 id="ate-5">Prendas até 5 €</h2>
 <p>Mais 30 ideias na página <a href="/prendas-amigo-secreto-ate-5-euros/">prendas para amigo secreto até 5 €</a>.</p>
@@ -192,8 +226,10 @@ body="""
 <tr><td>Alguém que gosta de cozinhar</td><td>Especiarias, um avental, um azeite especial, um livro de receitas</td></tr>
 <tr><td>Um leitor</td><td>Um livro, um marcador, uma luz de leitura</td></tr>
 <tr><td>Alguém que faz desporto</td><td>Uma garrafa térmica, uma toalha de microfibra, meias técnicas</td></tr>
-<tr><td>Um colega que mal conheces</td><td>Chocolate, uma caneca, uma planta, uma vela. Prendas neutras são uma aposta segura</td></tr>
-<tr><td>Uma criança</td><td>Um livro ilustrado, um jogo, material de desenho</td></tr>
+<tr><td>Um colega que mal conheces</td><td>Chocolate, uma caneca, uma planta, uma vela. Prendas neutras são uma aposta segura. Mais no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a></td></tr>
+<tr><td>Um homem</td><td>Depende do que ele gosta de fazer: há ideias por gosto nas <a href="/prendas-amigo-secreto-homem/">prendas para homem</a></td></tr>
+<tr><td>Uma mulher</td><td>O mesmo: escolhe pelo que ela faz, não pelo género. Ideias nas <a href="/prendas-amigo-secreto-mulher/">prendas para mulher</a></td></tr>
+<tr><td>Uma criança</td><td>Um livro ilustrado, um jogo, material de desenho. Mais no <a href="/amigo-secreto-criancas/">amigo secreto com crianças</a></td></tr>
 <tr><td>Alguém que «tem tudo»</td><td>Uma experiência, algo comestível, um vale feito por ti</td></tr>
 </tbody>
 </table></div>
@@ -210,6 +246,7 @@ body="""
 <p>Ficaste sem tempo? Há ideias para comprar no próprio dia nas <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a>.</p>
 """,
 faq=[
+("Quais são as melhores prendas para amigo secreto?", "As que respeitam o limite e servem para alguma coisa: chocolate ou meias de Natal até 5 €, uma caneca ou um jogo de cartas até 10 €, um livro ou uma garrafa térmica até 15 €, um jogo de tabuleiro até 20 €. Se não conheces bem a pessoa, prefere algo que se gaste."),
 ("Qual é um bom limite para o amigo secreto?", "Em família ou entre amigos, valores entre 10 e 20 € costumam funcionar bem. No trabalho, um limite mais baixo deixa toda a gente à vontade. O que importa é ser igual para todos."),
 ("O que oferecer a alguém que mal conheço?", "Prendas neutras e que se gastam: chocolate, chá ou café, uma vela, uma planta ou uma caneca. Evita roupa e prendas muito pessoais."),
 ("Posso oferecer um vale-oferta?", "Pode, sobretudo se não conheces bem a pessoa. Fica mais pessoal se for para uma loja ou um café de que ela goste, e com um postal escrito por ti."),
@@ -312,7 +349,7 @@ body="""
 <li>Prendas com conotação política ou religiosa</li>
 <li>Álcool, a não ser que saibas que a pessoa bebe e que a empresa não se importa</li>
 </ul>
-<p>Para mais sugestões, vê as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+<p>Para mais sugestões, vê as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
 
 <h2 id="equipas">Equipas grandes ou remotas</h2>
 <ul>
@@ -609,7 +646,7 @@ body="""
 </tbody>
 </table></div>
 <p class="shop">Procurar na Amazon: [[amz:plastilina niños|plasticina]] · [[amz:puzzle infantil piezas grandes|puzzles para os mais novos]] · [[amz:kit experimentos niños|kits de experiências]] · [[amz:kit pulseras niñas|kits de pulseiras]] · [[amz:juego de mesa niños 8 años|jogos de tabuleiro rápidos]]</p>
-<p>Para mais sugestões, vê as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+<p>Para mais sugestões, vê as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
 """,
 faq=[
 ("A partir de que idade uma criança pode participar no amigo secreto?", "A partir dos 4 ou 5 anos, com ajuda de um adulto. O mais difícil para os mais novos é guardar o segredo, por isso convém fazer o sorteio poucos dias antes da troca."),
@@ -789,7 +826,7 @@ body="""
 <li><strong>Escreve um postal.</strong> Uma frase sobre a pessoa é o que fica. Há ideias nas <a href="/pistas-e-mensagens-amigo-secreto/">pistas e mensagens</a>.</li>
 <li><strong>Pensa na pessoa, não no preço.</strong> Saber que alguém gosta de chá de menta vale mais do que um orçamento maior.</li>
 </ul>
-<p>Se o vosso limite é um pouco mais alto, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+<p>Se o vosso limite é um pouco mais alto, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
 """,
 faq=[
 ("5 euros chega para uma boa prenda de amigo secreto?", "Chega, sobretudo para coisas que se comem ou se usam todos os dias. Um bom chocolate, umas meias de Natal ou algo feito por ti, com um embrulho cuidado, funcionam muito bem."),
@@ -886,7 +923,7 @@ body="""
 <li>Um postal bem escrito com uma lembrança partilhada</li>
 </ul>
 
-<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; se é mais alto, as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a> ou as <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; se é mais alto, as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a> ou as <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
 """,
 faq=[
 ("O que oferecer no amigo secreto com 10 euros?", "Uma caneca com piada, um livro de bolso, um jogo de cartas, chás ou cafés diferentes, um gorro ou umas luvas são apostas seguras. Escolhe pelo que a pessoa gosta de fazer."),
@@ -900,18 +937,19 @@ related=["prendas-amigo-secreto-ate-5-euros", "amigo-secreto-na-empresa"],
 PAGES.append(dict(
 slug="prendas-engracadas-amigo-secreto",
 date="2026-10-30",
+modified="2026-11-01",
 nav="Prendas engraçadas",
 short="Prendas engraçadas",
-card="30 prendas para fazer rir o grupo, por preço, sem ofender ninguém.",
-title="Prendas engraçadas para amigo secreto: 30 ideias | Sapatinho",
+card="34 prendas para fazer rir o grupo, até 5, 10 e 20 €, sem ofender ninguém.",
+title="Prendas engraçadas para amigo secreto até 5, 10 e 20 € | Sapatinho",
 h1="Prendas engraçadas para o amigo secreto",
-dek="Uma prenda engraçada é a que faz rir o grupo inteiro e ainda serve para alguma coisa. Trinta ideias, de 5 a 20 euros.",
-description="30 prendas engraçadas para amigo secreto, até 5, 10 e 20 €: para o jantar de Natal, para o escritório e feitas por ti. Ideias que fazem rir sem ofender ninguém.",
+dek="Uma prenda engraçada é a que faz rir o grupo inteiro e ainda serve para alguma coisa. Trinta e quatro ideias, de 5 a 20 euros.",
+description="34 prendas engraçadas para amigo secreto: 10 ideias até 5 €, mais até 10 e 20 €, para colegas e feitas por ti. Fazem rir sem ofender ninguém.",
 body="""
 <p class="lead-answer"><strong>As melhores prendas engraçadas para o amigo secreto</strong> fazem rir na hora e continuam a ser úteis depois: uma caneca com piada, meias ridículas, um jogo de cartas para o jantar ou um vale feito por ti. A regra é simples: a piada é com a pessoa, nunca sobre ela.</p>
 
 <nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
-<li><a href="#ate-5">Engraçadas até 5 €</a></li>
+<li><a href="#ate-5-euros">Engraçadas até 5 €</a></li>
 <li><a href="#ate-10">Engraçadas até 10 €</a></li>
 <li><a href="#ate-20">Engraçadas até 20 €</a></li>
 <li><a href="#trabalho">Para colegas de trabalho</a></li>
@@ -922,16 +960,22 @@ body="""
 
 <p>Os preços variam de loja para loja e mudam com as promoções. Usa as listas como ponto de partida e confirma o valor antes de comprar.</p>
 
-<h2 id="ate-5">Engraçadas até 5 €</h2>
+<h2 id="ate-5-euros">Prendas engraçadas até 5 €</h2>
+<p>Com 5 € a piada tem de fazer o trabalho todo, e é por isso que estas prendas resultam tão bem. Encontras quase todas em bazares, papelarias e supermercados. Junta um postal a explicar a piada: é o que faz a prenda parecer pensada.</p>
 <ul>
-<li>Umas orelhas de rena ou um gorro de Natal para usar durante o jantar</li>
-<li>Um pato de borracha «para os dias difíceis»</li>
+<li>Umas orelhas de rena ou um gorro de Natal, para a pessoa usar durante o próprio jantar</li>
+<li>Um pato de borracha «para os dias difíceis», com um postal a explicar que ele ouve tudo sem interromper</li>
 <li>Óculos de sol de plástico enormes, «para o verão que vem»</li>
-<li>Rebuçados ou pastilhas de sabores estranhos</li>
+<li>Rebuçados ou pastilhas de sabores estranhos, para provar à mesa</li>
 <li>Um bigode postiço com um postal: «para quando precisares de passar despercebido»</li>
 <li>Um caderno com uma capa absurda, para «ideias geniais»</li>
+<li>Uma bola antistress com uma cara engraçada, para apertar nas reuniões</li>
+<li>Uma caneta com um formato ridículo, como uma pena gigante ou uma cenoura</li>
+<li>Um íman de frigorífico com a piada interna do grupo</li>
+<li>Um bingo de Natal feito por ti, com as frases que se ouvem sempre no jantar: «este ano não comi tanto», «para o ano faço eu o bacalhau»</li>
 </ul>
-<p class="shop">Procurar na Amazon: [[amz:diadema reno navidad|orelhas de rena]] · [[amz:pato de goma|patos de borracha]] · [[amz:bigotes postizos|bigodes postiços]]</p>
+<p class="shop">Procurar na Amazon: [[amz:diadema reno navidad|orelhas de rena]] · [[amz:pato de goma|patos de borracha]] · [[amz:bigotes postizos|bigodes postiços]] · [[amz:pelota antiestres divertida|bolas antistress]] · [[amz:boligrafo divertido|canetas divertidas]]</p>
+<p>Se o limite é 5 € e preferes algo menos brincalhão, há mais 30 ideias nas <a href="/prendas-amigo-secreto-ate-5-euros/">prendas para amigo secreto até 5 €</a>.</p>
 
 <h2 id="ate-10">Engraçadas até 10 €</h2>
 <ul>
@@ -986,9 +1030,10 @@ body="""
 <li><strong>Respeita o limite.</strong> Uma piada cara deixa os outros desconfortáveis.</li>
 <li><strong>Escreve um postal.</strong> Uma frase a explicar a piada ajuda a pessoa a perceber que foi pensada para ela. Há ideias nas <a href="/pistas-e-mensagens-amigo-secreto/">pistas e mensagens</a>.</li>
 </ul>
-<p>Se preferes algo mais clássico, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se a troca é amanhã, vê as <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a>.</p>
+<p>Se preferes algo mais clássico, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se a troca é amanhã, vê as <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a>.</p>
 """,
 faq=[
+("Que prenda engraçada dar no amigo secreto até 5 €?", "Umas orelhas de rena para usar no jantar, um pato de borracha «para os dias difíceis», um bigode postiço com um postal ou um bingo de Natal feito por ti. Com 5 €, um postal a explicar a piada faz toda a diferença."),
 ("Qual é uma boa prenda engraçada para o amigo secreto?", "Uma que faça rir e sirva para alguma coisa: meias ridículas, uma caneca com piada, um jogo de cartas para o jantar ou um pijama de Natal. Funcionam com quase toda a gente."),
 ("Uma prenda engraçada pode ofender?", "Pode, se a piada for sobre a pessoa. Evita temas como o peso, a idade ou a aparência, e pensa em quem vai estar a ver quando ela abrir a prenda."),
 ("Que prenda engraçada dar a um colega de trabalho?", 'Algo ligado ao escritório ou ao café, como um carimbo «aprovado» ou uma caneca com piada. Há mais ideias no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.'),
@@ -1095,7 +1140,7 @@ body="""
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:mapa mundi rascar|mapas de raspar]] · [[amz:maceta barro|vasos de barro]]</p>
 
-<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>; se é um pouco mais alto, as <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite de 15 € escrito no convite.</p>
+<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>; se é um pouco mais alto, as <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite de 15 € escrito no convite.</p>
 """,
 faq=[
 ("O que oferecer no amigo secreto com 15 euros?", "Um molho picante artesanal, um romance gráfico, um jogo de cartas para dois, um candeeiro pequeno de secretária ou uma caixa de doces da pastelaria são boas apostas. Escolhe pelo que a pessoa gosta de fazer."),
@@ -1197,7 +1242,7 @@ body="""
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:kit cultivo hierbas aromaticas|kits de ervas aromáticas]] · [[amz:cesta gourmet regalo|cestos gourmet]]</p>
 
-<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite de 20 € escrito no convite.</p>
+<p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite de 20 € escrito no convite.</p>
 """,
 faq=[
 ("O que oferecer no amigo secreto com 20 euros?", "Um jogo de tabuleiro pequeno, um livro acabado de sair, um cabaz de produtos portugueses, uma garrafa térmica ou um pijama quente são apostas seguras. Escolhe pelo que a pessoa gosta de fazer."),
@@ -1300,7 +1345,7 @@ body="""
 <h2 id="sortear">Ainda não fizeram o sorteio?</h2>
 <p>Dá para sortear hoje mesmo. No <a href="/criar">Sapatinho</a> escreves os nomes e os emails do grupo, e cada pessoa recebe por email o nome de quem lhe saiu. É grátis e não precisa de registo. Se o tempo é curto, combinem já o limite e a data da troca no convite.</p>
 
-<p>Se tens mais uns dias, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>, as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>, as <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>.</p>
+<p>Se tens mais uns dias, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>, as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>, as <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
 """,
 faq=[
 ("O que oferecer no amigo secreto à última hora?", "Um vale de livraria ou de cinema, uma experiência, um cesto montado com coisas do supermercado ou uma prenda digital. Tudo se compra no próprio dia, e um postal escrito por ti torna-as mais pessoais."),
@@ -1438,7 +1483,7 @@ body="""
 <p class="shop">Procurar na Amazon: [[amz:mapa mundi rascar|mapas de raspar]] · [[amz:maceta barro|vasos de barro]]</p>
 <p>Para algo que faça rir na troca, vê as <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a>. Se te saiu uma mulher, há outra lista nas <a href="/prendas-amigo-secreto-mulher/">prendas de amigo secreto para mulher</a>.</p>
 
-<p>Para outros valores e tipos de pessoa, vê todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite escrito no convite.</p>
+<p>Para outros valores e tipos de pessoa, vê todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite escrito no convite.</p>
 """,
 faq=[
 ("O que oferecer a um homem no amigo secreto?", "Escolhe pelo que ele gosta de fazer: meias técnicas para quem corre, um termómetro de carne para quem faz churrasco, um cabo 3 em 1 para quem gosta de tecnologia, um livro para quem lê. Se não o conheces bem, prefere algo que se gaste, como café ou doces."),
@@ -1596,7 +1641,7 @@ body="""
 <p class="shop">Procurar na Amazon: [[amz:kit cultivo hierbas aromaticas|kits de ervas aromáticas]] · [[amz:mapa mundi rascar|mapas de raspar]]</p>
 <p>Para algo que faça rir na troca, vê as <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a>. Se te saiu um homem, há outra lista nas <a href="/prendas-amigo-secreto-homem/">prendas de amigo secreto para homem</a>.</p>
 
-<p>Para outros valores e tipos de pessoa, vê todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite escrito no convite.</p>
+<p>Para outros valores e tipos de pessoa, vê todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite escrito no convite.</p>
 """,
 faq=[
 ("O que oferecer a uma mulher no amigo secreto?", "Escolhe pelo que ela gosta de fazer: uma luz de leitura para quem lê, especiarias ou um azeite especial para quem cozinha, uma garrafa reutilizável para quem vai ao ginásio, uma vela ou uma manta para quem gosta de estar em casa."),
