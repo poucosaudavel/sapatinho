@@ -53,9 +53,9 @@ body="""
 <h2 id="organizar">Como organizar, passo a passo</h2>
 <ol>
 <li><strong>Faz a lista de participantes.</strong> Confirma quem quer entrar e junta o email de cada pessoa.</li>
-<li><strong>Combina o limite e a data.</strong> Em família ou entre amigos, um valor entre 10 e 20 € costuma funcionar bem. No trabalho, um valor mais baixo deixa toda a gente à vontade.</li>
+<li><strong>Combina o limite e a data.</strong> Em família ou entre amigos, um valor entre 10 e 20 € costuma funcionar bem. No trabalho, um valor mais baixo deixa toda a gente à vontade. Há sugestões para cada valor nas <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</li>
 <li><strong>Decide se há exclusões.</strong> Casais ou irmãos que já trocam prendas entre si podem ficar impedidos de se tirar um ao outro.</li>
-<li><strong>Faz o sorteio.</strong> Com papelinhos, alguém acaba por tirar o próprio nome e é preciso repetir, e toda a gente tem de estar no mesmo sítio. Num <a href="/criar">sorteio online</a> cada pessoa recebe o convite por email e ninguém se tira a si próprio.</li>
+<li><strong>Faz o sorteio.</strong> Com papelinhos, alguém acaba por tirar o próprio nome e é preciso repetir, e toda a gente tem de estar no mesmo sítio. Num <a href="/criar">sorteio online</a> cada pessoa recebe o convite por email, ninguém se tira a si próprio e cada um descobre o nome na sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a>.</li>
 <li><strong>Envia um lembrete</strong> uma semana antes da troca, com a data, a hora e o limite.</li>
 <li><strong>Faz a troca.</strong> Junta toda a gente e revela os amigos secretos, um de cada vez.</li>
 </ol>
@@ -67,6 +67,7 @@ body="""
 <li><strong>Com perguntas.</strong> Quem recebe tenta adivinhar quem lhe ofereceu, com três perguntas de sim ou não.</li>
 <li><strong>Todos ao mesmo tempo.</strong> Abre-se tudo de uma vez e só depois se descobre quem deu o quê. Bom para grupos grandes ou com pouco tempo.</li>
 </ul>
+<p>Para a revelação em cadeia, há exemplos prontos a usar em <a href="/pistas-e-mensagens-amigo-secreto/">pistas e mensagens para o amigo secreto</a>, para a família, os amigos e o trabalho.</p>
 
 <h2 id="variantes">Variantes para animar a troca</h2>
 <h3>Amigo secreto com tema</h3>
@@ -74,16 +75,16 @@ body="""
 <h3>Amigo secreto com lista de desejos</h3>
 <p>Antes do sorteio, cada pessoa escreve três sugestões dentro do limite. Quem compra escolhe uma delas ou inspira-se para algo parecido. Evita prendas que acabam esquecidas numa gaveta.</p>
 <h3>Troca com «roubo»</h3>
-<p>Não há sorteio de nomes: cada pessoa traz uma prenda embrulhada e, à vez, escolhe abrir uma nova ou «roubar» uma já aberta. É mais caótico e funciona bem em festas de empresa.</p>
+<p>Não há sorteio de nomes: cada pessoa traz uma prenda embrulhada e, à vez, escolhe abrir uma nova ou «roubar» uma já aberta. É mais caótico e funciona bem em festas de empresa. Para o resto da organização no trabalho, vê o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
 <h3>Amigo secreto à distância</h3>
 <p>Para famílias espalhadas pelo país ou pelo estrangeiro: o sorteio faz-se por email e a revelação por videochamada. Temos um <a href="/amigo-secreto-a-distancia/">guia para o amigo secreto à distância</a>.</p>
 <h3>Grupos separados para adultos e crianças</h3>
-<p>Em famílias grandes, dois sorteios diferentes evitam que um adulto tenha de escolher uma prenda para uma criança que mal conhece, e vice-versa.</p>
+<p>Em famílias grandes, dois sorteios diferentes evitam que um adulto tenha de escolher uma prenda para uma criança que mal conhece, e vice-versa. Explicamos como adaptar as regras no <a href="/amigo-secreto-criancas/">amigo secreto com crianças</a>.</p>
 
 <h2 id="erros">Erros comuns a evitar</h2>
 <ul>
 <li><strong>Um limite pouco claro.</strong> «Mais ou menos 20 €» acaba em prendas de 8 € ao lado de prendas de 40 €. Combinem um valor máximo.</li>
-<li><strong>Repetir o sorteio à frente de todos.</strong> Quando alguém tira o próprio nome nos papelinhos e se repete, o grupo fica com pistas sobre quem tirou quem.</li>
+<li><strong>Repetir o sorteio à frente de todos.</strong> Quando alguém tira o próprio nome nos papelinhos e se repete, o grupo fica com pistas sobre quem tirou quem. Vê as alternativas em <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>.</li>
 <li><strong>Esquecer quem não pode estar na troca.</strong> Combinem antes se a prenda é entregue mais tarde ou deixada com alguém.</li>
 <li><strong>Contar a alguém quem te saiu.</strong> Basta uma pessoa saber para o segredo se espalhar.</li>
 <li><strong>Deixar as compras para a véspera.</strong> As lojas estão cheias e as encomendas online podem não chegar a tempo.</li>
@@ -95,7 +96,7 @@ faq=[
 ("Posso tirar a pessoa que me tirou a mim?", "Pode acontecer e não é um problema: as duas pessoas trocam prendas entre si. Só não te podes tirar a ti próprio."),
 ("Quanto se deve gastar no amigo secreto?", "Depende do grupo. Em família ou entre amigos, um limite entre 10 e 20 € costuma funcionar bem. No trabalho, um valor mais baixo deixa toda a gente à vontade. O importante é ser igual para todos e combinado antes do sorteio."),
 ("O que fazer se alguém desistir depois do sorteio?", "Não é preciso repetir o sorteio. Quem tinha tirado a pessoa que desistiu passa a oferecer a prenda a quem essa pessoa tinha tirado. Assim ninguém fica sem prenda e só uma pessoa tem de mudar de escolha."),
-("A pessoa que organiza também pode participar?", "Pode. A página de quem organiza não mostra os resultados. Quem organiza recebe os links de todos para poder reenviar convites, por isso só veria o resultado de outra pessoa se abrisse o link dela. Basta não o fazer para jogar como toda a gente."),
+("A pessoa que organiza também pode participar?", 'Pode. A página de quem organiza não mostra os resultados. Quem organiza recebe os links de todos para poder reenviar convites, por isso só veria o resultado de outra pessoa se abrisse o link dela. Basta não o fazer para jogar como toda a gente. Os detalhes estão em <a href="/como-funciona-o-sapatinho-privacidade/">como funciona o Sapatinho por dentro</a>.'),
 ],
 related=["ideias-de-prendas-amigo-secreto", "amigo-secreto-a-distancia"],
 ))
@@ -236,7 +237,7 @@ body="""
 
 <h2 id="dicas">Dicas para acertar na prenda</h2>
 <ul>
-<li><strong>Pede uma lista de desejos.</strong> Se o grupo combinar que cada pessoa escreve três sugestões, ninguém fica a adivinhar.</li>
+<li><strong>Pede uma lista de desejos.</strong> Se o grupo combinar que cada pessoa escreve três sugestões, ninguém fica a adivinhar. É uma das variantes nas <a href="/regras-do-amigo-secreto/#variantes">regras do amigo secreto</a>.</li>
 <li><strong>Pergunta a alguém próximo.</strong> Com discrição, para não revelares quem te saiu.</li>
 <li><strong>Pede talão de troca.</strong> Se o tamanho ou a cor não estiverem certos, a pessoa troca sem constrangimento.</li>
 <li><strong>Capricha no embrulho.</strong> Um embrulho cuidado faz uma prenda simples parecer especial.</li>
@@ -276,10 +277,11 @@ body="""
 <p>Quando parte do grupo vive noutra cidade ou noutro país, o amigo secreto é uma boa desculpa para manter a tradição sem que ninguém tenha de comprar dez prendas e pagar dez envios. Só precisa de mais alguma organização do que o habitual.</p>
 
 <h2 id="sorteio">1. Fazer o sorteio sem estar junto</h2>
-<p>Com papelinhos, o sorteio obriga toda a gente a estar no mesmo sítio, ou alguém a tirar os nomes pelos outros e a ficar a saber tudo. Num <a href="/criar">sorteio online por email</a>, quem organiza escreve os nomes e os emails e cada pessoa recebe o seu convite. Cada um sorteia no telemóvel, quando quiser, e só vê o seu próprio resultado.</p>
+<p>Com papelinhos, o sorteio obriga toda a gente a estar no mesmo sítio, ou alguém a tirar os nomes pelos outros e a ficar a saber tudo. Num <a href="/criar">sorteio online por email</a>, quem organiza escreve os nomes e os emails e cada pessoa recebe o seu convite. Cada um roda a sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel, quando quiser, e só vê o seu próprio resultado.</p>
+<p>Se o grupo ainda está a decidir, comparamos papelinhos, mensagem e email em <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>.</p>
 
 <h2 id="regras">2. Combinar as regras práticas</h2>
-<p>À distância há três coisas que convém decidir antes do sorteio:</p>
+<p>As <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a> são as mesmas de sempre. À distância há três coisas que convém decidir antes do sorteio:</p>
 <ul>
 <li><strong>Os portes contam para o limite?</strong> Um envio para o estrangeiro pode custar mais do que a prenda. A regra mais justa costuma ser: o limite é só para a prenda e cada um paga o seu envio.</li>
 <li><strong>Uma data limite de envio,</strong> com margem suficiente para a prenda chegar antes da troca.</li>
@@ -291,11 +293,11 @@ body="""
 <li><strong>Compra online com entrega na morada da pessoa.</strong> Muitas lojas permitem embrulhar e juntar uma mensagem, e evitas os portes de um segundo envio.</li>
 <li><strong>Se enviares pelo correio, envia cedo.</strong> Na época de Natal os envios demoram mais do que o normal, sobretudo para o estrangeiro.</li>
 <li><strong>Atenção a envios para fora da União Europeia.</strong> Para países como o Reino Unido, a Suíça ou o Brasil, a prenda pode ficar retida na alfândega ou pagar taxas à chegada. Prefere uma loja que entregue no país de destino.</li>
-<li><strong>Considera uma prenda digital.</strong> Um vale-oferta, um livro digital, bilhetes para um evento ou uma assinatura chegam no momento e não pagam portes.</li>
+<li><strong>Considera uma prenda digital.</strong> Um vale-oferta, um livro digital, bilhetes para um evento ou uma assinatura chegam no momento e não pagam portes. Há mais ideias nas <a href="/prendas-ultima-hora-amigo-secreto/#digitais">prendas de última hora</a>.</li>
 </ul>
 
 <h2 id="revelacao">4. A revelação por videochamada</h2>
-<p>Marquem uma hora em que toda a gente possa estar ligada, com atenção aos fusos horários de quem está fora. Cada pessoa abre a prenda em frente à câmara e tenta adivinhar quem a ofereceu. Quem ofereceu revela-se, e passa-se ao seguinte.</p>
+<p>Marquem uma hora em que toda a gente possa estar ligada, com atenção aos fusos horários de quem está fora. Cada pessoa abre a prenda em frente à câmara e tenta adivinhar quem a ofereceu. Quem ofereceu revela-se, e passa-se ao seguinte. Para pôr toda a gente a adivinhar, há ideias em <a href="/pistas-e-mensagens-amigo-secreto/">pistas e mensagens para o amigo secreto</a>.</p>
 <p>Se o grupo for grande, combinem uma ordem antes da chamada para não se atropelarem. E peçam a quem está do outro lado que não abra a prenda antes do tempo.</p>
 """,
 faq=[
@@ -349,12 +351,12 @@ body="""
 <li>Prendas com conotação política ou religiosa</li>
 <li>Álcool, a não ser que saibas que a pessoa bebe e que a empresa não se importa</li>
 </ul>
-<p>Para mais sugestões, vê as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
+<p>Para mais sugestões, vê as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se a equipa gosta de brincar, há uma secção para colegas nas <a href="/prendas-engracadas-amigo-secreto/#trabalho">prendas engraçadas</a>.</p>
 
 <h2 id="equipas">Equipas grandes ou remotas</h2>
 <ul>
 <li><strong>Divide por equipas ou departamentos</strong> quando o grupo é grande. As pessoas conhecem melhor quem lhes sai e a troca fica mais animada.</li>
-<li><strong>Inclui quem está em teletrabalho.</strong> Com o sorteio por email ninguém precisa de estar no escritório. A troca pode ser feita por videochamada, como explicamos no guia do <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a>.</li>
+<li><strong>Inclui quem está em teletrabalho.</strong> Com o sorteio por email ninguém precisa de estar no escritório: cada pessoa roda a sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no próprio computador. A troca pode ser feita por videochamada, como explicamos no guia do <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a>.</li>
 <li><strong>Combina o que acontece a quem falta</strong> no dia da troca: a prenda fica guardada ou é entregue no dia seguinte.</li>
 </ul>
 
@@ -363,15 +365,17 @@ body="""
 <thead><tr><th>Quando</th><th>O quê</th></tr></thead>
 <tbody>
 <tr><td>4 semanas antes</td><td>Anunciar o amigo secreto e pedir a quem quer participar que se inscreva</td></tr>
-<tr><td>3 semanas antes</td><td>Fazer o sorteio e enviar os convites</td></tr>
+<tr><td>3 semanas antes</td><td>Fazer o <a href="/criar">sorteio online</a> e enviar os convites</td></tr>
 <tr><td>1 semana antes</td><td>Lembrete com a data, a hora e o limite</td></tr>
 <tr><td>No dia</td><td>Troca de prendas, por exemplo no almoço ou no jantar de Natal</td></tr>
 </tbody>
 </table></div>
+<p>Se é a primeira vez que organizas, as <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a> explicam o resto passo a passo, e em <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio</a> comparamos as formas de sortear.</p>
 
 <h2 id="mensagem">Mensagem pronta a enviar aos colegas</h2>
 <p>Copia e adapta:</p>
 <blockquote class="note">Olá a todos! Este ano vamos fazer amigo secreto na equipa. Quem quiser participar, responda a este email até sexta-feira. O limite é 10 € e a troca será no almoço de Natal, a 18 de dezembro. Depois do prazo, cada participante recebe por email um link para sortear quem lhe saiu. A participação é voluntária e ninguém fica de fora do almoço por não entrar.</blockquote>
+<p>Para o postal da prenda ou para a revelação, há frases para colegas nas <a href="/pistas-e-mensagens-amigo-secreto/#postal">pistas e mensagens</a>.</p>
 
 <h2>Grupos com mais de 30 pessoas</h2>
 <p>Cada sorteio do Sapatinho aceita até 30 participantes. Para grupos maiores, a solução mais simples é fazer um sorteio por equipa. Se preferires um sorteio único para toda a empresa, escreve-nos para <strong>ajuda@sapatinho-natal.pt</strong>.</p>
@@ -407,7 +411,7 @@ body="""
 <li><a href="#perguntas">Perguntas frequentes</a></li>
 </ol></nav>
 
-<p>Um bom sorteio de amigo secreto tem de cumprir três regras: ninguém se tira a si próprio, cada pessoa só sabe quem lhe saiu e o resultado não se perde até ao dia da troca. Nem todas as formas de sortear cumprem as três.</p>
+<p>Um bom sorteio de amigo secreto tem de cumprir três regras: ninguém se tira a si próprio, cada pessoa só sabe quem lhe saiu e o resultado não se perde até ao dia da troca. Nem todas as formas de sortear cumprem as três. O resto do jogo, do limite à revelação, está nas <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a>.</p>
 
 <h2 id="papelinhos">1. Com papelinhos</h2>
 <p>É a forma tradicional: escreve-se cada nome num papel, dobra-se, mistura-se num saco ou numa taça e cada pessoa tira um.</p>
@@ -432,11 +436,12 @@ body="""
 </ul>
 
 <h2 id="online">4. Online, por email</h2>
-<p>Num <a href="/criar">sorteio online como o do Sapatinho</a>, quem organiza escreve os nomes e os emails. Cada pessoa recebe um convite com um link só seu, sorteia no telemóvel e recebe um segundo email com o nome que lhe saiu.</p>
+<p>Num <a href="/criar">sorteio online como o do Sapatinho</a>, quem organiza escreve os nomes e os emails. Cada pessoa recebe um convite com um link só seu, roda a <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel e recebe um segundo email com o nome que lhe saiu.</p>
 <ul>
-<li><strong>Vantagens:</strong> ninguém se tira a si próprio, quem organiza também pode participar, funciona à distância e o resultado fica guardado no email. Dá para indicar pares que não se podem tirar, como casais.</li>
+<li><strong>Vantagens:</strong> ninguém se tira a si próprio, quem organiza também pode participar, serve para um <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a> e o resultado fica guardado no email. Dá para indicar pares que não se podem tirar, como casais.</li>
 <li><strong>Problemas:</strong> é preciso o email de cada pessoa. Os convites podem ir parar ao spam, por isso convém avisar o grupo.</li>
 </ul>
+<p>O que fica guardado, e onde, está explicado em <a href="/como-funciona-o-sapatinho-privacidade/">como funciona o Sapatinho por dentro</a>.</p>
 
 <h2 id="comparacao">Comparação rápida</h2>
 <div class="tbl"><table>
@@ -449,6 +454,7 @@ body="""
 <tr><td>Permite exclusões (casais)</td><td>Não</td><td>Sim</td><td>Não</td><td>Sim</td></tr>
 </tbody>
 </table></div>
+<p>Depois do sorteio vem a parte divertida: escolher a prenda, com as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço</a>, e preparar a revelação, com as <a href="/pistas-e-mensagens-amigo-secreto/">pistas para o amigo secreto</a>.</p>
 """,
 faq=[
 ("Como evitar que alguém se tire a si próprio nos papelinhos?", "Se acontecer, o mais seguro é repetir o sorteio para todos. Num sorteio online o problema não existe, porque o nome de cada pessoa nunca entra no seu próprio sorteio."),
@@ -478,12 +484,13 @@ body="""
 </ol></nav>
 
 <h2 id="pistas">Como dar boas pistas</h2>
-<p>Na revelação em cadeia, cada pessoa descreve o seu amigo secreto até alguém adivinhar. Quem recebe a prenda revela o seu e a cadeia continua. Para correr bem:</p>
+<p>Na revelação em cadeia, uma das formas de revelação das <a href="/regras-do-amigo-secreto/#revelacao">regras do amigo secreto</a>, cada pessoa descreve o seu amigo secreto até alguém adivinhar. Quem recebe a prenda revela o seu e a cadeia continua. Para correr bem:</p>
 <ul>
 <li><strong>Começa vago e vai afunilando.</strong> A primeira pista deve servir a várias pessoas e a última só a uma.</li>
 <li><strong>Usa histórias do grupo,</strong> não características físicas. «Foi quem se perdeu a caminho do jantar do ano passado» é mais divertido e não ofende ninguém.</li>
 <li><strong>Três a cinco pistas chegam.</strong> Mais do que isso e a sala perde a paciência.</li>
 </ul>
+<p>Também funciona por videochamada, num <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a>: cada pessoa dá as pistas antes de a prenda ser aberta.</p>
 
 <h2 id="exemplos">Exemplos de pistas</h2>
 <h3>Para a família</h3>
@@ -508,11 +515,12 @@ body="""
 <li>«Nas reuniões, é quem pergunta "então, o que ficou decidido?"»</li>
 <li>«Tem a secretária mais arrumada do piso, ou a menos.»</li>
 </ul>
-<p class="note">No trabalho, fica-te por hábitos e momentos partilhados. Evita pistas sobre aparência, idade ou vida pessoal.</p>
+<p class="note">No trabalho, fica-te por hábitos e momentos partilhados. Evita pistas sobre aparência, idade ou vida pessoal. Mais conselhos no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
 
 <h2 id="postal">Mensagens para o postal da prenda</h2>
-<p>Um postal com duas linhas escritas à mão faz toda a diferença, sobretudo quando a prenda é simples. Se ainda não queres revelar quem és, assina «O teu amigo secreto».</p>
+<p>Um postal com duas linhas escritas à mão faz toda a diferença, sobretudo quando a prenda é simples, como as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>. Se ainda não queres revelar quem és, assina «O teu amigo secreto».</p>
 <h3>Divertidas</h3>
+<p>Se ofereces uma das <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a>, o postal é o sítio certo para explicar a piada.</p>
 <ul>
 <li>«Tive meses para escolher e escolhi na véspera. Feliz Natal!»</li>
 <li>«Se não gostares, a culpa é do sorteio.»</li>
@@ -563,7 +571,7 @@ body="""
 
 <h2 id="calendario">1. Faz o sorteio antes da Black Friday</h2>
 <p>Se o sorteio só acontece em dezembro, ninguém sabe a quem vai oferecer quando os descontos aparecem. Fazer o sorteio na primeira quinzena de novembro dá a toda a gente tempo para pensar na prenda e comprar com calma.</p>
-<p>Um <a href="/criar">sorteio online</a> resolve-se numa tarde, mesmo que o grupo só se junte no Natal.</p>
+<p>Um <a href="/criar">sorteio online</a> resolve-se numa tarde, mesmo que o grupo só se junte no Natal. Se ainda estão a escolher a forma de sortear, vê <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>.</p>
 
 <h2 id="desconto">2. Confirma se o desconto é real</h2>
 <p>Há lojas que sobem o preço nas semanas anteriores para depois anunciar um desconto maior. Antes de comprar:</p>
@@ -578,10 +586,11 @@ body="""
 
 <h2 id="limite">3. O limite é o preço que pagas</h2>
 <p>Se o limite é 20 € e encontras algo que custava 35 € por 20 €, a prenda está dentro do limite. O que conta é o que pagas, não o preço antes do desconto. Combinem isto no grupo se houver dúvidas, para ninguém se sentir em desvantagem.</p>
+<p>Para saber o que procurar, há listas com preço aproximado nas <a href="/prendas-amigo-secreto-ate-20-euros/">prendas para amigo secreto até 20 €</a> e, para outros valores, nas <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas por preço e por pessoa</a>.</p>
 
 <h2 id="entregas">4. Entregas e trocas</h2>
 <ul>
-<li><strong>Conta com atrasos.</strong> Nas semanas da Black Friday as transportadoras estão sobrecarregadas.</li>
+<li><strong>Conta com atrasos.</strong> Nas semanas da Black Friday as transportadoras estão sobrecarregadas. Se a encomenda não chegar a tempo, há alternativas nas <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a>.</li>
 <li><strong>Vê o prazo de devolução.</strong> Comprando no final de novembro, um prazo curto pode acabar antes do Natal. Muitas lojas alargam o prazo de trocas na época natalícia; confirma antes de comprar.</li>
 <li><strong>Pede talão de oferta</strong>, para quem recebe poder trocar sem saber o preço.</li>
 </ul>
@@ -617,11 +626,12 @@ body="""
 
 <h2 id="grupos">Um sorteio só para os miúdos</h2>
 <p>Em famílias grandes, o mais simples é fazer dois sorteios: um para os adultos e outro para as crianças. Assim os miúdos oferecem a outros miúdos, escolhem prendas de que eles próprios gostariam, e nenhum adulto tem de adivinhar o que quer uma criança de 7 anos que vê duas vezes por ano.</p>
-<p>No Sapatinho basta criar dois sorteios separados, com os mesmos dados da troca.</p>
+<p>No Sapatinho basta <a href="/criar">criar dois sorteios separados</a>, com os mesmos dados da troca.</p>
 
 <h2 id="regras">Regras adaptadas</h2>
+<p>As <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a> são as mesmas para todas as idades. Com crianças, ajudam alguns ajustes:</p>
 <ul>
-<li><strong>Um adulto acompanha cada criança</strong> no sorteio e nas compras. Os convites podem ir para o email dos pais.</li>
+<li><strong>Um adulto acompanha cada criança</strong> no sorteio e nas compras. Os convites podem ir para o email dos pais, e a criança roda a <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> com eles.</li>
 <li><strong>Prazos curtos.</strong> Para os mais novos, fazer o sorteio uma ou duas semanas antes da troca torna o segredo mais fácil de guardar.</li>
 <li><strong>Limite baixo e igual,</strong> para nenhuma criança comparar prendas e sair a perder.</li>
 <li><strong>Uma lista de desejos simples:</strong> três coisas de que gostam (uma cor, um herói, um jogo) ajudam quem compra a acertar.</li>
@@ -634,6 +644,7 @@ body="""
 <li>A participação deve ser opcional e combinada com os encarregados de educação.</li>
 <li>O limite deve ser baixo, para não pesar no orçamento das famílias.</li>
 <li>Um adulto deve garantir que nenhuma criança fica sem prenda no dia, mesmo que alguém falte.</li>
+<li>Se o sorteio for feito na sala, com papelinhos, vê como evitar que alguém se tire a si próprio em <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>.</li>
 </ul>
 
 <h2 id="prendas">Ideias de prendas por idade</h2>
@@ -646,7 +657,7 @@ body="""
 </tbody>
 </table></div>
 <p class="shop">Procurar na Amazon: [[amz:plastilina niños|plasticina]] · [[amz:puzzle infantil piezas grandes|puzzles para os mais novos]] · [[amz:kit experimentos niños|kits de experiências]] · [[amz:kit pulseras niñas|kits de pulseiras]] · [[amz:juego de mesa niños 8 años|jogos de tabuleiro rápidos]]</p>
-<p>Para mais sugestões, vê as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
+<p>Para mais sugestões, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
 """,
 faq=[
 ("A partir de que idade uma criança pode participar no amigo secreto?", "A partir dos 4 ou 5 anos, com ajuda de um adulto. O mais difícil para os mais novos é guardar o segredo, por isso convém fazer o sorteio poucos dias antes da troca."),
@@ -695,6 +706,7 @@ body="""
 <li><strong>Recebe um segundo email com o nome</strong>, para confirmar sempre que quiser.</li>
 </ol>
 <p>A roleta é a parte divertida, mas o resultado já estava decidido quando o sorteio foi criado. Por isso não adianta rodar outra vez: o link mostra sempre o mesmo nome.</p>
+<p>Se ainda estás a escolher entre papelinhos, mensagem e email, comparamos as quatro formas em <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>.</p>
 
 <h2 id="porque">Porque é melhor do que uma roda de nomes</h2>
 <p>As rodas de sorteio genéricas, em que se escrevem nomes e se gira, foram feitas para escolher um vencedor à frente de todos. No amigo secreto isso cria três problemas:</p>
@@ -708,9 +720,10 @@ body="""
 <h2 id="revelacao">Como usar a roleta na revelação</h2>
 <ul>
 <li><strong>Todos ao mesmo tempo.</strong> No jantar em que combinam o amigo secreto, cada pessoa abre o seu email e roda a roleta ao mesmo tempo. Cada um olha só para o seu ecrã.</li>
-<li><strong>Para quem está longe.</strong> O convite chega por email, por isso quem vive noutra cidade ou fora do país roda a roleta quando quiser.</li>
+<li><strong>Para quem está longe.</strong> O convite chega por email, por isso quem vive noutra cidade ou fora do país roda a roleta quando quiser. Vê o guia do <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a>.</li>
 <li><strong>Com crianças.</strong> O convite pode ir para o email de um dos pais, que roda a roleta com a criança. Vê o guia do <a href="/amigo-secreto-criancas/">amigo secreto com crianças</a>.</li>
 </ul>
+<p>Depois de cada um saber quem lhe saiu, a troca segue as <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a> de sempre, com a revelação que o grupo preferir.</p>
 
 <script>
 (function(){
@@ -740,7 +753,7 @@ faq=[
 ("Posso rodar a roleta outra vez se não gostar do nome?", "Não. O sorteio fica feito quando é criado e o teu link mostra sempre o mesmo nome. É isso que garante que cada pessoa tem um amigo secreto diferente."),
 ("A roleta pode parar no meu nome?", "Não. O teu nome nunca entra no teu sorteio."),
 ("Preciso de instalar alguma app?", "Não. A roleta abre no navegador do telemóvel ou do computador, a partir do link do email."),
-("Quem organiza vê o resultado da roleta dos outros?", "A página de quem organiza não mostra os resultados. Cada resultado aparece a quem abre o link correspondente. Quem organiza tem os links de todos para poder reenviar convites, por isso só veria o resultado de outra pessoa se abrisse o link dela."),
+("Quem organiza vê o resultado da roleta dos outros?", 'A página de quem organiza não mostra os resultados. Cada resultado aparece a quem abre o link correspondente. Quem organiza tem os links de todos para poder reenviar convites, por isso só veria o resultado de outra pessoa se abrisse o link dela. Explicamos tudo em <a href="/como-funciona-o-sapatinho-privacidade/">como funciona o Sapatinho por dentro</a>.'),
 ],
 related=["como-fazer-sorteio-amigo-secreto", "regras-do-amigo-secreto"],
 ))
@@ -826,6 +839,7 @@ body="""
 <li><strong>Escreve um postal.</strong> Uma frase sobre a pessoa é o que fica. Há ideias nas <a href="/pistas-e-mensagens-amigo-secreto/">pistas e mensagens</a>.</li>
 <li><strong>Pensa na pessoa, não no preço.</strong> Saber que alguém gosta de chá de menta vale mais do que um orçamento maior.</li>
 </ul>
+<p>Muitas destas ideias compram-se no supermercado ou na papelaria. Se a troca é amanhã, vê também as <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a>.</p>
 <p>Se o vosso limite é um pouco mais alto, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
 """,
 faq=[
@@ -903,6 +917,7 @@ body="""
 <li>Um suporte para o telemóvel</li>
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:taza divertida oficina|canecas]] · [[amz:botella reutilizable|garrafas]] · [[amz:soporte movil escritorio|suportes]]</p>
+<p>Se já sabes do que a pessoa gosta, há listas pensadas para ela nas <a href="/prendas-amigo-secreto-homem/#ate-10">prendas para homem até 10 €</a> e nas <a href="/prendas-amigo-secreto-mulher/#ate-10">prendas para mulher até 10 €</a>.</p>
 
 <h2 id="casa">Para quem gosta de estar em casa</h2>
 <ul>
@@ -1030,7 +1045,7 @@ body="""
 <li><strong>Respeita o limite.</strong> Uma piada cara deixa os outros desconfortáveis.</li>
 <li><strong>Escreve um postal.</strong> Uma frase a explicar a piada ajuda a pessoa a perceber que foi pensada para ela. Há ideias nas <a href="/pistas-e-mensagens-amigo-secreto/">pistas e mensagens</a>.</li>
 </ul>
-<p>Se preferes algo mais clássico, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se a troca é amanhã, vê as <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a>.</p>
+<p>Se preferes algo mais clássico, vê as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Para escolher pelos gostos da pessoa, há listas de <a href="/prendas-amigo-secreto-homem/">prendas para homem</a> e de <a href="/prendas-amigo-secreto-mulher/">prendas para mulher</a>. Se a troca é amanhã, vê as <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a>.</p>
 """,
 faq=[
 ("Que prenda engraçada dar no amigo secreto até 5 €?", "Umas orelhas de rena para usar no jantar, um pato de borracha «para os dias difíceis», um bigode postiço com um postal ou um bingo de Natal feito por ti. Com 5 €, um postal a explicar a piada faz toda a diferença."),
@@ -1139,6 +1154,7 @@ body="""
 <li>Um alecrim ou um loureiro num vaso de barro (8 a 15 €)</li>
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:mapa mundi rascar|mapas de raspar]] · [[amz:maceta barro|vasos de barro]]</p>
+<p>Também há ideias até 15 € arrumadas por gostos nas <a href="/prendas-amigo-secreto-homem/#ate-15">prendas de amigo secreto para homem</a> e nas <a href="/prendas-amigo-secreto-mulher/#ate-15">prendas de amigo secreto para mulher</a>.</p>
 
 <p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>; se é um pouco mais alto, as <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite de 15 € escrito no convite.</p>
 """,
@@ -1241,6 +1257,7 @@ body="""
 <li>Um kit para cultivar ervas aromáticas na janela (10 a 18 €)</li>
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:kit cultivo hierbas aromaticas|kits de ervas aromáticas]] · [[amz:cesta gourmet regalo|cestos gourmet]]</p>
+<p>Para escolher por pessoa, vê as ideias até 20 € para <a href="/prendas-amigo-secreto-homem/#ate-20">um homem que faz desporto, cozinha ou lê</a> e para <a href="/prendas-amigo-secreto-mulher/#ate-20">uma mulher que gosta de casa, cozinha ou leitura</a>. Se a troca é já amanhã, as <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a> compram-se no próprio dia.</p>
 
 <p>Se o vosso limite é mais baixo, vê as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>, as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou as <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>; para outros valores, todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se o grupo ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite de 20 € escrito no convite.</p>
 """,
@@ -1688,7 +1705,7 @@ body="""
 </ol>
 
 <h2 id="sorteio">Como é feito o sorteio</h2>
-<p>O sorteio usa o gerador de números aleatórios criptográfico do servidor (<code>crypto.getRandomValues</code>) para baralhar a lista de nomes. Se alguém ficar com o próprio nome, ou com uma pessoa que não pode tirar (um casal, por exemplo), baralha-se outra vez, até 5000 tentativas.</p>
+<p>O sorteio usa o gerador de números aleatórios criptográfico do servidor (<code>crypto.getRandomValues</code>) para baralhar a lista de nomes. Se alguém ficar com o próprio nome, ou com uma pessoa que não pode tirar (um casal, por exemplo), baralha-se outra vez, até 5000 tentativas. É o mesmo problema dos papelinhos, que comparamos em <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>, mas aqui ninguém vê as repetições.</p>
 <pre><code>function draw(names, blocked) {
   for (let attempt = 0; attempt &lt; 5000; attempt++) {
     const r = names.slice();
@@ -1701,7 +1718,7 @@ body="""
   }
   return null;  // não há sorteio possível com estas exclusões
 }</code></pre>
-<p>O sorteio fica feito neste momento. A roleta que cada pessoa vê depois é só a forma de mostrar um resultado que já está decidido, por isso rodar outra vez dá sempre o mesmo nome.</p>
+<p>O sorteio fica feito neste momento. A <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> que cada pessoa vê depois é só a forma de mostrar um resultado que já está decidido, por isso rodar outra vez dá sempre o mesmo nome.</p>
 
 <h2 id="link">O que está dentro de cada link</h2>
 <p>Em vez de guardarmos os resultados numa base de dados, cada link leva lá dentro o resultado do seu dono. Um link tem a forma <code>sapatinho-natal.pt/r/&lt;dados&gt;.&lt;assinatura&gt;</code>, e os dados são estes:</p>
@@ -1750,7 +1767,7 @@ body="""
 <h2 id="limites">Os limites, sem rodeios</h2>
 <ul>
 <li><strong>Quem tem o teu link vê o teu resultado.</strong> É assim que o link funciona. Não o reencaminhes.</li>
-<li><strong>Quem organiza tem os links de todos</strong>, para poder reenviar convites. Se os abrir, fica a saber os resultados. Por isso pedimos que não o faça.</li>
+<li><strong>Quem organiza tem os links de todos</strong>, para poder reenviar convites. Se os abrir, fica a saber os resultados. Por isso pedimos que não o faça. Nas <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a> explicamos como quem organiza pode jogar como toda a gente.</li>
 <li><strong>Os nomes no link estão codificados, não cifrados.</strong> Quem souber descodificar o teu link consegue ler o grupo e o nome que te saiu. O email, esse, está cifrado.</li>
 <li><strong>Os emails passam pelo Brevo</strong>, que precisa deles para os entregar e guarda o registo de envio durante um mês. O Brevo também troca os links dos emails por links seus, para contar cliques; no plano gratuito isto não se pode desligar.</li>
 </ul>

@@ -303,7 +303,7 @@ HOME_FAQ = [
 ("Dá para impedir que casais ou irmãos se tirem um ao outro?", "Sim. Ao criar o sorteio, indicas os pares que não se podem tirar e o sorteio respeita-os."),
 ("Posso fazer o sorteio mais do que uma vez?", "Não. O sorteio é feito uma única vez para cada participante. Se voltares a abrir o link, vês o mesmo resultado."),
 ("Quem organiza fica a saber os resultados?", "A página de quem organiza não mostra os resultados. Quem organiza recebe os links de todos para poder reenviar convites, por isso só veria o resultado de outra pessoa se abrisse o link dela."),
-("Posso sair-me a mim próprio?", "Não. O teu nome nunca entra no teu sorteio."),
+("Posso sair-me a mim próprio?", 'Não. O teu nome nunca entra no teu sorteio. Com papelinhos isto acontece muitas vezes: comparamos as alternativas em <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>.'),
 ("Dá para fazer amigo secreto à distância?", 'Sim. O sorteio é por email, por isso ninguém precisa de estar junto. Vê o guia do <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a>.'),
 ("Não recebi o email. E agora?", "Procura na pasta de spam ou promoções por um email do Sapatinho. Se não estiver lá, pede a quem organizou para te reenviar o convite. O teu resultado não se perde."),
 ("Quantas pessoas podem participar?", "Entre 3 e 30 pessoas por sorteio. Para grupos maiores, como empresas, faz um sorteio por equipa."),
