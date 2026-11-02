@@ -128,7 +128,7 @@ body="""
 <ul>
 <li><a href="/prendas-amigo-secreto-homem/">Prendas de amigo secreto para homem</a></li>
 <li><a href="/prendas-amigo-secreto-mulher/">Prendas de amigo secreto para mulher</a></li>
-<li><a href="/amigo-secreto-na-empresa/">Prendas para colegas de trabalho</a>, no guia do amigo secreto na empresa</li>
+<li><a href="/prendas-amigo-secreto-colegas/">Prendas de amigo secreto para colegas de trabalho</a></li>
 <li><a href="/amigo-secreto-criancas/">Prendas para crianças</a>, por idade</li>
 </ul>
 <h3>Por tipo de prenda</h3>
@@ -227,7 +227,7 @@ body="""
 <tr><td>Alguém que gosta de cozinhar</td><td>Especiarias, um avental, um azeite especial, um livro de receitas</td></tr>
 <tr><td>Um leitor</td><td>Um livro, um marcador, uma luz de leitura</td></tr>
 <tr><td>Alguém que faz desporto</td><td>Uma garrafa térmica, uma toalha de microfibra, meias técnicas</td></tr>
-<tr><td>Um colega que mal conheces</td><td>Chocolate, uma caneca, uma planta, uma vela. Prendas neutras são uma aposta segura. Mais no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a></td></tr>
+<tr><td>Um colega que mal conheces</td><td>Chocolate, uma caneca, uma planta, uma vela. Prendas neutras são uma aposta segura. Mais nas <a href="/prendas-amigo-secreto-colegas/">prendas para colegas de trabalho</a></td></tr>
 <tr><td>Um homem</td><td>Depende do que ele gosta de fazer: há ideias por gosto nas <a href="/prendas-amigo-secreto-homem/">prendas para homem</a></td></tr>
 <tr><td>Uma mulher</td><td>O mesmo: escolhe pelo que ela faz, não pelo género. Ideias nas <a href="/prendas-amigo-secreto-mulher/">prendas para mulher</a></td></tr>
 <tr><td>Uma criança</td><td>Um livro ilustrado, um jogo, material de desenho. Mais no <a href="/amigo-secreto-criancas/">amigo secreto com crianças</a></td></tr>
@@ -351,7 +351,7 @@ body="""
 <li>Prendas com conotação política ou religiosa</li>
 <li>Álcool, a não ser que saibas que a pessoa bebe e que a empresa não se importa</li>
 </ul>
-<p>Para mais sugestões, vê as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se a equipa gosta de brincar, há uma secção para colegas nas <a href="/prendas-engracadas-amigo-secreto/#trabalho">prendas engraçadas</a>.</p>
+<p>Para a lista completa, com preço e para quem é cada ideia, vê as <a href="/prendas-amigo-secreto-colegas/">prendas de amigo secreto para colegas de trabalho</a>, arrumadas por limite de 5 a 20 €. Para outros tipos de pessoa, há as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se a equipa gosta de brincar, há uma secção para colegas nas <a href="/prendas-engracadas-amigo-secreto/#trabalho">prendas engraçadas</a>.</p>
 
 <h2 id="equipas">Equipas grandes ou remotas</h2>
 <ul>
@@ -917,6 +917,7 @@ body="""
 <li>Um suporte para o telemóvel</li>
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:taza divertida oficina|canecas]] · [[amz:botella reutilizable|garrafas]] · [[amz:soporte movil escritorio|suportes]]</p>
+<p>Para mais ideias por limite, vê as <a href="/prendas-amigo-secreto-colegas/">prendas para colegas de trabalho</a>.</p>
 <p>Se já sabes do que a pessoa gosta, há listas pensadas para ela nas <a href="/prendas-amigo-secreto-homem/#ate-10">prendas para homem até 10 €</a> e nas <a href="/prendas-amigo-secreto-mulher/#ate-10">prendas para mulher até 10 €</a>.</p>
 
 <h2 id="casa">Para quem gosta de estar em casa</h2>
@@ -1027,7 +1028,7 @@ body="""
 <li>Um bloco de notas «coisas que podiam ter sido um email»</li>
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:boton rojo frases|botões com frases]] · [[amz:mini canasta papelera|mini cestos de basquetebol]] · [[amz:sello personalizado aprobado|carimbos]]</p>
-<p>Mais ideias para colegas no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
+<p>Mais ideias, por limite, nas <a href="/prendas-amigo-secreto-colegas/">prendas para colegas de trabalho</a>. Para organizar a troca, vê o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
 
 <h2 id="feito">Feitas por ti</h2>
 <ul>
@@ -1123,7 +1124,7 @@ body="""
 <li>Um conjunto de marcadores fluorescentes e notas autocolantes bonitas (8 a 14 €)</li>
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:alfombrilla raton grande escritorio|tapetes de rato grandes]] · [[amz:lampara led escritorio usb|candeeiros de secretária]] · [[amz:termo te con filtro|garrafas para chá]] · [[amz:tarjetero minimalista|porta-cartões]]</p>
-<p>Mais ideias para colegas no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
+<p>Mais ideias, por limite, nas <a href="/prendas-amigo-secreto-colegas/">prendas para colegas de trabalho</a>. Para organizar a troca, vê o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
 
 <h2 id="casa">Para quem gosta de estar em casa</h2>
 <ul>
@@ -1234,7 +1235,7 @@ body="""
 <li>Uma bateria portátil pequena para o telemóvel (15 a 20 €)</li>
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:botella termica acero inoxidable 500ml|garrafas térmicas]] · [[amz:taza termica cafe|canecas térmicas]] · [[amz:organizador escritorio bambu|organizadores]] · [[amz:bateria externa pequeña|baterias portáteis]]</p>
-<p>Mais ideias para colegas no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
+<p>Mais ideias, por limite, nas <a href="/prendas-amigo-secreto-colegas/">prendas para colegas de trabalho</a>. Para organizar a troca, vê o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
 
 <h2 id="casa">Para quem gosta de estar em casa</h2>
 <ul>
@@ -1645,7 +1646,7 @@ body="""
 <li>Um porta-cartões ou uma capa para o passe (5 a 12 €): para quem anda de metro ou de autocarro.</li>
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:lampara led escritorio usb|candeeiros de secretária]] · [[amz:tarjetero mujer|porta-cartões]]</p>
-<p>Mais ideias para o trabalho no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
+<p>Mais ideias para o trabalho nas <a href="/prendas-amigo-secreto-colegas/">prendas para colegas de trabalho</a>.</p>
 
 <h2 id="tudo">Para quem «tem tudo»</h2>
 <ul>
@@ -1667,6 +1668,118 @@ faq=[
 ("Cosmética é boa ideia no amigo secreto?", "Só coisas simples e neutras, como um creme de mãos ou um bálsamo para os lábios. Perfume e maquilhagem dependem muito do gosto de cada pessoa: deixa-os para quando a conheces bem."),
 ],
 related=["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-homem", "prendas-amigo-secreto-ate-20-euros"],
+))
+
+# ---------------------------------------------------------------- para colegas
+PAGES.append(dict(
+slug="prendas-amigo-secreto-colegas",
+date="2026-11-02",
+nav="Prendas para colegas",
+short="Prendas para colegas",
+card="26 ideias até 20 € para o amigo secreto do trabalho: secretária, café, comida e piadas seguras.",
+title="Prendas amigo secreto colegas de trabalho: 26 ideias | Sapatinho",
+h1="Prendas de amigo secreto para colegas de trabalho",
+dek="Saiu-te um colega no amigo secreto do trabalho, talvez alguém com quem mal falas? Vinte e seis ideias por limite, com o preço aproximado e para quem é cada uma, que podes abrir à frente da equipa toda.",
+description="26 prendas de amigo secreto para colegas de trabalho até 5, 10, 15 e 20 €: para a secretária, para o café, para comer e engraçadas sem ofender.",
+body="""
+<p class="lead-answer"><strong>Boas prendas de amigo secreto para colegas de trabalho</strong> são coisas neutras que se usam na secretária ou se gastam na pausa do café: um caderno de capa rija, uma caneca de viagem, um candeeiro LED, uma planta pequena, chocolate bom ou café de especialidade. Se mal conheces a pessoa, prefere algo que se coma ou que se use no escritório, e deixa de fora tudo o que é pessoal.</p>
+
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#ate-5">Até 5 €</a></li>
+<li><a href="#ate-10">Até 10 €</a></li>
+<li><a href="#ate-15">Até 15 €</a></li>
+<li><a href="#ate-20">Até 20 €</a></li>
+<li><a href="#por-tipo">Por tipo de colega</a></li>
+<li><a href="#evitar">O que evitar no trabalho</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<p>Os preços entre parênteses são aproximados e mudam de loja para loja e com as promoções. Confirma o preço antes de comprar. A regra para tudo o que está nesta lista: uma prenda que a pessoa pode abrir à frente da equipa sem ficar desconfortável.</p>
+
+<h2 id="ate-5">Prendas para colegas até 5 €</h2>
+<ul>
+<li>Uma tablete de chocolate negro de boa qualidade (2 a 5 €): para o colega que mal conheces. Quase toda a gente gosta, e quem não gosta partilha.</li>
+<li>Um bloco de notas autocolantes com um desenho divertido (2 a 5 €): para quem enche o monitor de lembretes.</li>
+<li>Uma caixa pequena de chás de ervas (3 a 5 €): para quem bebe uma infusão a meio da tarde.</li>
+<li>Uma suculenta num vaso pequeno (3 a 5 €): para quem tem a secretária perto da janela e pouco tempo para regar.</li>
+<li>Uma caneta de gel boa ou dois marcadores fluorescentes (3 a 5 €): para quem sublinha tudo nas reuniões.</li>
+<li>Uma bola anti-stress com uma cara divertida (2 a 5 €): para quem tem um dezembro cheio de prazos.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:chocolate negro regalo|chocolate]] · [[amz:notas adhesivas divertidas|notas autocolantes]] · [[amz:suculenta maceta pequeña|suculentas]] · [[amz:pelota antiestres divertida|bolas anti-stress]]</p>
+<p>Mais ideias baratas, comestíveis e feitas por ti, nas <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a>.</p>
+
+<h2 id="ate-10">Prendas para colegas até 10 €</h2>
+<ul>
+<li>Uma caneca com uma piada de escritório, como «não falo antes do primeiro café» (7 a 10 €): para quem chega e vai direto à máquina.</li>
+<li>Um pacote de café de especialidade, em grão ou moído (6 a 10 €): para quem leva o café a sério. Confirma antes se usa cafeteira ou cápsulas.</li>
+<li>Um caderno A5 de capa rija (6 a 10 €): para quem tira notas à mão nas reuniões.</li>
+<li>Um suporte de telemóvel para a secretária (6 a 10 €): para quem passa o dia em videochamadas.</li>
+<li>Uma caixa de bolachas de manteiga ou de bombons (5 a 10 €): para quem gosta de partilhar com a equipa.</li>
+<li>Um carimbo com «aprovado» ou «visto» (6 a 10 €): para quem passa o dia a rever documentos e leva a piada a bem.</li>
+<li>Uma caneca de viagem com tampa (7 a 10 €): para quem chega ao escritório com o café na mão.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:taza divertida oficina|canecas com piada]] · [[amz:cafe de especialidad molido|café de especialidade]] · [[amz:cuaderno a5 tapa dura|cadernos A5]] · [[amz:soporte movil escritorio|suportes de telemóvel]] · [[amz:taza de viaje con tapa|canecas de viagem]]</p>
+<p>O limite de 10 € é dos mais usados no trabalho. Há mais ideias nas <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>.</p>
+
+<h2 id="ate-15">Prendas para colegas até 15 €</h2>
+<ul>
+<li>Um candeeiro LED pequeno de secretária, com ligação USB (10 a 15 €): para quem trabalha até tarde ou num canto escuro.</li>
+<li>Uma garrafa térmica para chá, com filtro para as folhas (10 a 15 €): para quem bebe chá o dia todo.</li>
+<li>Um tapete de rato grande, que cobre a secretária (10 a 15 €): para quem tem a secretária cheia de coisas.</li>
+<li>Uma seleção de conservas portuguesas, como sardinhas, atum ou cavala (8 a 15 €): para quem leva o almoço de casa.</li>
+<li>Uma bolsa para organizar cabos e carregadores (8 a 14 €): para quem anda com o portátil entre casa e o escritório.</li>
+<li>Um jogo de cartas rápido, que se joga em dez minutos (8 a 15 €): para animar a pausa do almoço.</li>
+<li>Um mini cesto de basquetebol para o caixote do papel (10 a 15 €): para a equipa que precisa de uma brincadeira entre reuniões.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:lampara led escritorio usb|candeeiros de secretária]] · [[amz:termo te con filtro|garrafas para chá]] · [[amz:alfombrilla raton grande escritorio|tapetes de rato grandes]] · [[amz:organizador cables viaje|bolsas para cabos]] · [[amz:mini canasta papelera|mini cestos de basquetebol]]</p>
+<p>Mais ideias nas <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>.</p>
+
+<h2 id="ate-20">Prendas para colegas até 20 €</h2>
+<ul>
+<li>Uma garrafa térmica de aço inoxidável de 500 ml (12 a 20 €): para quem leva café ou água para todo o lado.</li>
+<li>Um organizador de secretária em bambu (12 a 20 €): para quem tem canetas, clipes e post-its espalhados.</li>
+<li>Uma caixa de produtos portugueses: doce, queijo, bolachas ou um azeite pequeno (12 a 20 €): para quem prefere prendas que se comem.</li>
+<li>Uma planta de interior que aguenta pouca luz, num vaso bonito (10 a 20 €): para quem tem a secretária longe da janela.</li>
+<li>Um suporte dobrável para o portátil (15 a 20 €): para quem trabalha no portátil e passa o dia de cabeça baixa.</li>
+<li>Uma bateria portátil pequena para o telemóvel (15 a 20 €): para quem anda de reunião em reunião sem carregador.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:botella termica acero inoxidable 500ml|garrafas térmicas]] · [[amz:organizador escritorio bambu|organizadores de secretária]] · [[amz:soporte portatil plegable|suportes para portátil]] · [[amz:bateria externa pequeña|baterias portáteis]]</p>
+<p>Mais ideias nas <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>.</p>
+
+<h2 id="por-tipo">Por tipo de colega</h2>
+<p>Se sabes uma ou duas coisas sobre a pessoa, usa-as. Se não sabes nada, fica pela primeira linha.</p>
+<div class="tbl"><table>
+<thead><tr><th>Se o colega…</th><th>Experimenta</th></tr></thead>
+<tbody>
+<tr><td>Mal o conheces</td><td>Chocolate, chá, um caderno ou uma caixa de bolachas para partilhar</td></tr>
+<tr><td>Vive à base de café</td><td>Café de especialidade, uma caneca de viagem ou uma garrafa térmica</td></tr>
+<tr><td>Gosta de comer bem</td><td>Conservas portuguesas ou uma caixa de produtos regionais</td></tr>
+<tr><td>Tem sentido de humor</td><td>Uma caneca com piada, um carimbo «aprovado» ou um mini cesto de basquetebol. Mais nas <a href="/prendas-engracadas-amigo-secreto/#trabalho">prendas engraçadas para colegas</a></td></tr>
+<tr><td>Está em teletrabalho</td><td>Um suporte para o portátil, um candeeiro LED ou uma bolsa para cabos</td></tr>
+<tr><td>Tem a secretária cheia</td><td>Um organizador em bambu ou um tapete de rato grande</td></tr>
+</tbody>
+</table></div>
+<p>Se já sabes do que a pessoa gosta fora do trabalho, há listas por gostos nas <a href="/prendas-amigo-secreto-homem/">prendas para homem</a> e nas <a href="/prendas-amigo-secreto-mulher/">prendas para mulher</a>.</p>
+
+<h2 id="evitar">O que evitar no amigo secreto do trabalho</h2>
+<ul>
+<li>Roupa com tamanho, perfume, cosmética e tudo o que é muito pessoal.</li>
+<li>Piadas sobre aparência, idade, peso, vida amorosa ou desempenho no trabalho.</li>
+<li>Prendas com conotação política ou religiosa.</li>
+<li>Álcool, a não ser que saibas que a pessoa bebe. Na dúvida, troca por café, chá ou doces.</li>
+<li>Passar o limite combinado. No trabalho, uma prenda muito acima do valor deixa os outros pouco à vontade.</li>
+</ul>
+<p>Se és tu quem organiza, o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a> explica como combinar o limite, incluir quem está em teletrabalho e convidar a equipa sem pressionar ninguém. Para o postal que vai com a prenda, há frases para colegas nas <a href="/pistas-e-mensagens-amigo-secreto/#postal">pistas e mensagens</a>.</p>
+
+<p>Para outros valores e tipos de pessoa, vê todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se a equipa ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite escrito no convite.</p>
+""",
+faq=[
+("O que oferecer a um colega que mal conheço?", "Algo neutro, que se coma ou que se use no escritório: chocolate bom, chá, uma caixa de bolachas, um caderno ou uma planta pequena. Evita roupa, perfume e prendas pessoais."),
+("Quanto gastar no amigo secreto do trabalho?", "O valor que o grupo combinar, e não mais. Um limite baixo, por exemplo entre 5 e 15 €, deixa toda a gente à vontade, e deve ser igual para todos, incluindo as chefias."),
+("Prendas engraçadas são boa ideia no trabalho?", "Sim, se a piada for sobre o escritório, o café ou as reuniões, e não sobre a pessoa. Uma caneca com piada ou um carimbo «aprovado» funcionam bem à frente de toda a equipa."),
+("Posso oferecer vinho a um colega?", "Só se souberes que a pessoa bebe e que não há problema em levar álcool para o trabalho. Se tiveres dúvidas, um café de especialidade ou uma caixa de doces é mais seguro."),
+],
+related=["amigo-secreto-na-empresa", "ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-ate-10-euros"],
 ))
 
 # ---------------------------------------------------------------- privacidade técnica
@@ -1841,6 +1954,9 @@ IMAGES = {
 "prendas-amigo-secreto-mulher": dict(
     cover="Ilustração de uma planta num vaso, uma vela acesa, uma prenda com laço, uma pilha de livros e uma caneca",
     figures=[dict(file="em-casa", after="casa", alt="Prendas para quem gosta de estar em casa: uma vela acesa, um cachecol enrolado, uma caneca quente e um creme de mãos")]),
+"prendas-amigo-secreto-colegas": dict(
+    cover="Ilustração de uma secretária com um candeeiro, um caderno, uma prenda com etiqueta, uma caneca de viagem e uma planta",
+    figures=[dict(file="secretaria", after="ate-15", alt="Prendas para a secretária de um colega: um candeeiro LED, um caderno com lápis, uma tablete de chocolate, uma caneca de viagem e uma planta")]),
 "como-funciona-o-sapatinho-privacidade": dict(
     cover="Ilustração de um envelope fechado com um cadeado, uma chave e um endereço de link do sorteio",
     figures=[dict(file="link", after="link", alt="Um endereço de link do sorteio com cadeado por cima de um envelope selado, entre uma chave e um cadeado")]),
@@ -1916,6 +2032,14 @@ QUICK = {
     ("gorro", "Gorro ou luvas", "6 a 15 €", "Para quem tem sempre frio.", "gorro y guantes invierno"),
     ("caneca", "Chocolate quente com caneca", "8 a 15 €", "Para as noites frias de dezembro.", "chocolate caliente regalo taza"),
     ("calendario", "Agenda de 2027", "5 a 15 €", "Para quem gosta de ter tudo planeado.", "agenda 2027"),
+]),
+"prendas-amigo-secreto-colegas": dict(items=[
+    ("chocolate", "Chocolate de boa qualidade", "2 a 5 €", "Para o colega que mal conheces.", "chocolate negro regalo"),
+    ("caneca-bigode", "Caneca com piada de escritório", "7 a 10 €", "Para quem vai direto à máquina do café.", "taza divertida oficina"),
+    ("caderno", "Caderno A5 de capa rija", "6 a 10 €", "Para quem tira notas nas reuniões.", "cuaderno a5 tapa dura"),
+    ("caneca-viagem", "Caneca de viagem com tampa", "7 a 10 €", "Para quem chega com o café na mão.", "taza de viaje con tapa"),
+    ("candeeiro", "Candeeiro LED de secretária", "10 a 15 €", "Para quem trabalha até tarde.", "lampara led escritorio usb"),
+    ("planta", "Planta para pouca luz", "10 a 20 €", "Para quem tem a secretária longe da janela.", "planta interior poca luz maceta"),
 ]),
 "ideias-de-prendas-amigo-secreto": dict(items=[
     ("meias", "Meias de Natal divertidas", "até 5 €", "Para quem leva o Natal a sério, ou a brincar.", "calcetines navidad divertidos"),
