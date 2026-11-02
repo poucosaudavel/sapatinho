@@ -585,6 +585,32 @@ function scarf(c, c2) {
     `<path d="M30 -112H94V-22H30Z" fill="${darken(c, .14)}"/><path d="M30 -112H94V-100H30Z" fill="#000" opacity=".12"/>` + fr;
 }
 
+// Prendas para a secretária (página das prendas para colegas).
+function notebook(c, o) {
+  const { pen = true } = o || {};
+  let s = shadow(70) + `<rect x="-62" y="-170" width="124" height="170" rx="8" fill="${c || C.green}"/>` +
+    `<rect x="-36" y="-170" width="98" height="170" rx="8" fill="#000" opacity=".08"/>` +
+    `<rect x="-20" y="-126" width="62" height="34" rx="4" fill="${C.paper}"/>` +
+    `<path d="M30 -170V0" stroke="${C.gold}" stroke-width="8"/>` +
+    Array.from({ length: 6 }, (_, i) => `<rect x="-74" y="${-158 + i * 27}" width="26" height="9" rx="4.5" fill="${C.mint2}"/>`).join('');
+  if (pen) s += g(96, -32, .9, 6, pencil(170));
+  return s;
+}
+function deskLamp(c, arm) {
+  const a = arm || C.ink;
+  return shadow(60) + `<rect x="-56" y="-16" width="112" height="16" rx="8" fill="${a}"/>` +
+    `<path d="M-30 -14L10 -120L66 -90" fill="none" stroke="${a}" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>` +
+    `<circle cx="10" cy="-120" r="10" fill="${C.mint2}"/>` +
+    g(66, -90, 1, 30, `<path d="M-34 0L-20 -34H20L34 0Z" fill="${c || C.ember}"/><ellipse cx="0" cy="2" rx="22" ry="8" fill="${C.goldL}"/>`) +
+    g(66, -90, 1, 30, `<path d="M-22 6L-46 78H46L22 6Z" fill="${C.goldL}" opacity=".22"/>`);
+}
+function travelMug(c) {
+  return shadow(46) + `<path d="M-38 -150H38L30 0H-30Z" fill="${c || C.blue}"/>` +
+    `<path d="M10 -150H38L30 0H6Z" fill="#000" opacity=".1"/>` +
+    `<rect x="-38" y="-96" width="76" height="34" fill="${C.paper}" opacity=".9"/>` + g(0, -79, 1, 0, star(11, C.ember)) +
+    `<rect x="-46" y="-172" width="92" height="26" rx="9" fill="${C.ink}"/><rect x="-20" y="-182" width="40" height="14" rx="6" fill="${C.ink}"/>`;
+}
+
 // ------------------------------------------------------------------ cenas
 // Cada cena desenha sobre o fundo e devolve o SVG interior.
 const W1 = 1200, H1 = 675, W2 = 1200, H2 = 800, G1 = 590, G2 = 640;
@@ -863,6 +889,27 @@ const SCENES = {
       g(830, G2, 1.1, 0, mug({ c: C.gold, deco: 'star', st: C.mint2 })) +
       g(1050, G2, .8, 0, creamTube(C.mint, C.ember)) +
       sparkles([[400, 260, 16, C.gold, 's'], [720, 300, 14, C.gold], [1100, 200, 12, C.ember], [140, 240, 12, C.ember]]),
+  },
+  'prendas-amigo-secreto-colegas': {
+    capa: () => bgDark(W1, H1, 61) +
+      `<rect x="100" y="${G1 - 4}" width="1000" height="22" rx="6" fill="${C.wood}"/><rect x="100" y="${G1 + 14}" width="1000" height="14" fill="${C.woodD}"/>` +
+      g(200, G1 - 4, .85, 0, deskLamp(C.gold, C.mint2)) +
+      g(400, G1 - 4, .9, -4, notebook(C.ember, { pen: false })) +
+      g(640, G1 - 4, 1, 0, gift({ w: 220, h: 160, c: C.green, r: C.gold, pat: 'dots' })) +
+      string(`M700 410Q780 380 820 300`) + g(850, 270, 1, 10, hangTag(120, 150, C.paper, heart(22, C.ember))) +
+      g(900, G1 - 4, .9, 0, travelMug(C.blue)) +
+      g(1030, G1 - 4, .7, 0, plant({ pot: C.gold })) +
+      g(330, 230, 1, 0, sticky(70, C.gold, -8)) + g(1010, 250, 1, 0, sticky(62, C.leafL, 7)) +
+      sparkles([[560, 120, 18, C.gold, 's'], [150, 180, 12], [760, 150, 14], [1120, 140, 12]]),
+    secretaria: () => bgLight(W2, H2, 62) +
+      `<rect x="80" y="${G2}" width="1040" height="20" rx="6" fill="${C.woodL}"/><rect x="80" y="${G2 + 16}" width="1040" height="12" fill="${C.wood}"/>` +
+      g(210, G2, 1.1, 0, deskLamp(C.ember)) +
+      g(470, G2, 1.05, -3, notebook(C.green)) +
+      g(720, G2, .9, 0, chocolate(200, 70)) +
+      g(900, G2, 1.05, 0, travelMug(C.ember)) +
+      g(1060, G2, .8, 0, plant()) +
+      g(720, 330, 1, 0, sticky(80, C.gold, -6)) +
+      sparkles([[370, 250, 16, C.gold, 's'], [880, 200, 14, C.gold], [1120, 300, 12, C.ember], [120, 260, 12, C.ember]]),
   },
   'como-funciona-o-sapatinho-privacidade': {
     capa: () => bgDark(W1, H1, 54) +
