@@ -611,6 +611,14 @@ function travelMug(c) {
     `<rect x="-46" y="-172" width="92" height="26" rx="9" fill="${C.ink}"/><rect x="-20" y="-182" width="40" height="14" rx="6" fill="${C.ink}"/>`;
 }
 
+// Setas curvas para os jogos de troca de prendas.
+function arcArrow(x1, y1, x2, y2, lift, c, w) {
+  const mx = (x1 + x2) / 2, my = Math.min(y1, y2) - lift, col = c || C.gold, sw = w || 6;
+  const ang = Math.atan2(y2 - my, x2 - mx) * 180 / Math.PI;
+  return `<path d="M${x1} ${y1}Q${mx} ${my} ${x2} ${y2}" fill="none" stroke="${col}" stroke-width="${sw}" stroke-linecap="round" stroke-dasharray="14 14"/>` +
+    g(x2, y2, 1, ang, `<path d="M6 0L-22 -16L-16 0L-22 16Z" fill="${col}"/>`);
+}
+
 // ------------------------------------------------------------------ cenas
 // Cada cena desenha sobre o fundo e devolve o SVG interior.
 const W1 = 1200, H1 = 675, W2 = 1200, H2 = 800, G1 = 590, G2 = 640;
@@ -910,6 +918,30 @@ const SCENES = {
       g(1060, G2, .8, 0, plant()) +
       g(720, 330, 1, 0, sticky(80, C.gold, -6)) +
       sparkles([[370, 250, 16, C.gold, 's'], [880, 200, 14, C.gold], [1120, 300, 12, C.ember], [120, 260, 12, C.ember]]),
+  },
+  'troca-de-prendas-natal': {
+    capa: () => bgDark(W1, H1, 64) +
+      g(250, G1, 1, 0, gift({ w: 200, h: 150, c: C.ember, r: C.gold, pat: 'dots' })) +
+      g(760, G1, 1, 0, gift({ w: 190, h: 150, c: C.green, r: C.paper, pat: 'stripes' })) +
+      arcArrow(300, 360, 700, 360, 150, C.gold) + arcArrow(650, 470, 365, 470, -30, C.goldL) +
+      g(470, G1 - 40, 1, -12, dice(90, 5, C.paper)) + g(560, G1 - 30, 1, 10, dice(80, 3, C.ember)) +
+      g(1010, G1, 1, 0, bag(170, 200, C.gold, txt(0, -70, 110, C.ink, '?'))) +
+      sparkles([[120, 200, 12], [500, 140, 18, C.gold, 's'], [920, 170, 14], [1120, 300, 12]]),
+    dados: () => bgLight(W2, H2, 65) +
+      g(180, G2, .9, 0, gift({ w: 150, h: 120, c: C.ember, r: C.gold })) +
+      g(420, G2, .9, 0, gift({ w: 140, h: 130, c: C.green, r: C.paper, pat: 'dots' })) +
+      g(780, G2, .9, 0, gift({ w: 150, h: 115, c: C.blue, r: C.goldL, pat: 'stripes' })) +
+      g(1020, G2, .9, 0, gift({ w: 140, h: 125, c: C.gold, r: C.ember })) +
+      arcArrow(210, 440, 400, 440, 90, C.ember) + arcArrow(450, 440, 760, 440, 120, C.ember) + arcArrow(810, 440, 1000, 440, 90, C.ember) +
+      g(540, 250, 1, -14, dice(130, 6, C.gold)) + g(680, 260, 1, 12, dice(120, 2, C.ember)) +
+      sparkles([[330, 200, 16, C.gold, 's'], [880, 200, 14, C.gold], [1110, 300, 12, C.ember], [110, 300, 12, C.ember]]),
+    saco: () => bgLight(W2, H2, 66) +
+      g(600, G2, 1, 0, bag(330, 330, C.ember, txt(0, -110, 190, C.paper, '?'))) +
+      g(520, 290, .7, -18, gift({ w: 120, h: 100, c: C.green, r: C.gold, noShadow: true })) +
+      g(690, 270, .7, 14, gift({ w: 110, h: 95, c: C.gold, r: C.ember, pat: 'dots', noShadow: true })) +
+      g(240, G2, 1, 0, gift({ w: 150, h: 120, c: C.blue, r: C.paper })) +
+      g(960, G2, 1, 0, gift({ w: 160, h: 110, c: C.green, r: C.goldL, pat: 'stripes' })) +
+      sparkles([[400, 200, 16, C.gold, 's'], [820, 160, 14, C.gold], [1100, 300, 12, C.ember], [130, 260, 12, C.ember]]),
   },
   'como-funciona-o-sapatinho-privacidade': {
     capa: () => bgDark(W1, H1, 54) +
