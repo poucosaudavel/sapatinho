@@ -75,7 +75,7 @@ body="""
 <h3>Amigo secreto com lista de desejos</h3>
 <p>Antes do sorteio, cada pessoa escreve três sugestões dentro do limite. Quem compra escolhe uma delas ou inspira-se para algo parecido. Evita prendas que acabam esquecidas numa gaveta.</p>
 <h3>Troca com «roubo»</h3>
-<p>Não há sorteio de nomes: cada pessoa traz uma prenda embrulhada e, à vez, escolhe abrir uma nova ou «roubar» uma já aberta. É mais caótico e funciona bem em festas de empresa. Para o resto da organização no trabalho, vê o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
+<p>Não há sorteio de nomes: cada pessoa traz uma prenda embrulhada e, à vez, escolhe abrir uma nova ou «roubar» uma já aberta. É mais caótico e funciona bem em festas de empresa. As regras passo a passo, e outros jogos como a troca com dados ou o saco misterioso, estão nos <a href="/troca-de-prendas-natal/">jogos de troca de prendas de Natal</a>. Para o resto da organização no trabalho, vê o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
 <h3>Amigo secreto à distância</h3>
 <p>Para famílias espalhadas pelo país ou pelo estrangeiro: o sorteio faz-se por email e a revelação por videochamada. Temos um <a href="/amigo-secreto-a-distancia/">guia para o amigo secreto à distância</a>.</p>
 <h3>Grupos separados para adultos e crianças</h3>
@@ -359,6 +359,7 @@ body="""
 <li><strong>Inclui quem está em teletrabalho.</strong> Com o sorteio por email ninguém precisa de estar no escritório: cada pessoa roda a sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no próprio computador. A troca pode ser feita por videochamada, como explicamos no guia do <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a>.</li>
 <li><strong>Combina o que acontece a quem falta</strong> no dia da troca: a prenda fica guardada ou é entregue no dia seguinte.</li>
 </ul>
+<p>Se a equipa vai estar toda junta e quer algo mais animado do que o sorteio, há outras formas de trocar prendas, como a troca com roubo ou o saco misterioso, nos <a href="/troca-de-prendas-natal/">jogos de troca de prendas</a>.</p>
 
 <h2 id="calendario">Calendário sugerido</h2>
 <div class="tbl"><table>
@@ -544,6 +545,142 @@ faq=[
 ("Devo assinar o postal da prenda?", "Depende de como fazem a revelação. Se a ideia é adivinhar, assina «O teu amigo secreto» e revela-te só depois."),
 ],
 related=["regras-do-amigo-secreto", "amigo-secreto-na-empresa"],
+))
+
+# ---------------------------------------------------------------- troca de prendas
+PAGES.append(dict(
+slug="troca-de-prendas-natal",
+date="2026-11-03",
+nav="Troca de prendas",
+short="Jogos de troca de prendas",
+card="Seis formas de trocar prendas no Natal: com roubo, com dados, às cegas, com tema ou por email.",
+title="Troca de prendas de Natal: 6 jogos e regras | Sapatinho",
+h1="Troca de prendas de Natal: 6 jogos e como se jogam",
+dek="Amigo secreto, troca com roubo, dados, saco misterioso, tema ou sorteio por email. As regras de cada jogo em poucas linhas, para quem é, quanto tempo demora e que limite combinar.",
+description="Seis jogos de troca de prendas de Natal: amigo secreto, troca com roubo, com dados, saco misterioso, com tema e por email. Regras curtas e tabela.",
+body="""
+<p class="lead-answer"><strong>Há seis formas fáceis de fazer a troca de prendas de Natal</strong>: o amigo secreto clássico, o «amigo secreto ladrão» (troca com roubo), a troca com dados, a troca às cegas com um saco misterioso, a troca com tema e o amigo secreto por email. Em todas, cada pessoa leva uma prenda e volta para casa com uma. O que muda é a forma de decidir quem fica com o quê.</p>
+
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#comparar">Tabela: qual escolher</a></li>
+<li><a href="#classico">Amigo secreto clássico</a></li>
+<li><a href="#roubo">Amigo secreto ladrão (troca com roubo)</a></li>
+<li><a href="#dados">Troca com dados</a></li>
+<li><a href="#saco">Troca às cegas ou saco misterioso</a></li>
+<li><a href="#tema">Troca com tema</a></li>
+<li><a href="#email">Amigo secreto por email</a></li>
+<li><a href="#antes">O que combinar antes</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<h2 id="comparar">Tabela: qual jogo de troca escolher</h2>
+<p>Os tempos são para a troca em si, no dia da festa, e contam só com o jogo. Os limites são sugestões: o que conta é o grupo combinar um valor igual para todos.</p>
+<div class="tbl"><table>
+<thead><tr><th>Jogo</th><th>Para que grupo</th><th>Pessoas</th><th>Tempo no dia</th><th>Limite sugerido</th></tr></thead>
+<tbody>
+<tr><td><a href="#classico">Amigo secreto clássico</a></td><td>Família e amigos que se conhecem</td><td>A partir de 3</td><td>20 a 40 min</td><td>10 a 20 €</td></tr>
+<tr><td><a href="#roubo">Troca com roubo</a></td><td>Trabalho, amigos, festas animadas</td><td>8 a 25</td><td>30 a 60 min</td><td>10 a 15 €</td></tr>
+<tr><td><a href="#dados">Troca com dados</a></td><td>Família com crianças, grupos pequenos</td><td>5 a 15</td><td>20 a 30 min</td><td>5 a 10 €</td></tr>
+<tr><td><a href="#saco">Saco misterioso</a></td><td>Grupos grandes ou que mal se conhecem</td><td>5 a 40</td><td>10 a 20 min</td><td>5 a 10 €</td></tr>
+<tr><td><a href="#tema">Troca com tema</a></td><td>Qualquer grupo, para facilitar a escolha</td><td>A partir de 3</td><td>Depende do jogo</td><td>5 a 15 €</td></tr>
+<tr><td><a href="#email">Amigo secreto por email</a></td><td>Grupos à distância, trabalho, famílias espalhadas</td><td>3 a 30</td><td>20 a 40 min</td><td>10 a 20 €</td></tr>
+</tbody>
+</table></div>
+<p>Regra rápida: se o grupo se conhece bem, escolhe o amigo secreto, que dá prendas pensadas para a pessoa. Se mal se conhecem, escolhe a troca com roubo ou o saco misterioso, onde a prenda não é para ninguém em especial.</p>
+
+<h2 id="classico">1. Amigo secreto clássico</h2>
+<p><strong>Para quem:</strong> famílias e grupos de amigos. <strong>Pessoas:</strong> a partir de 3, par ou ímpar. <strong>Tempo:</strong> o sorteio faz-se semanas antes; a revelação demora 20 a 40 minutos. <strong>Limite:</strong> 10 a 20 €.</p>
+<ol>
+<li>Cada pessoa tira à sorte o nome de outra. Ninguém se pode tirar a si próprio.</li>
+<li>Compra uma prenda para essa pessoa, dentro do limite, e guarda segredo.</li>
+<li>No dia da troca, cada um revela quem lhe saiu e entrega a prenda.</li>
+</ol>
+<p>É o único jogo da lista em que a prenda é escolhida a pensar numa pessoa concreta. As regras completas, o que fazer com números ímpares e as formas de revelação estão nas <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a>.</p>
+
+<h2 id="roubo">2. Amigo secreto ladrão (troca com roubo)</h2>
+<p><strong>Para quem:</strong> colegas de trabalho, grupos de amigos, festas onde se quer rir. <strong>Pessoas:</strong> 8 a 25. <strong>Tempo:</strong> 30 a 60 minutos. <strong>Limite:</strong> 10 a 15 €.</p>
+<p>Não há sorteio de nomes. Cada pessoa leva uma prenda embrulhada que sirva a qualquer pessoa do grupo.</p>
+<ol>
+<li>Põe as prendas todas no meio e dá a cada pessoa um número à sorte, em papelinhos.</li>
+<li>O número 1 escolhe uma prenda do monte e abre-a à frente de todos.</li>
+<li>A partir do número 2, cada pessoa escolhe: abre uma prenda nova do monte ou «rouba» uma já aberta.</li>
+<li>Quem é roubado escolhe outra vez: abre uma nova ou rouba a de outra pessoa.</li>
+<li>Não se pode roubar de volta logo a seguir a prenda que te tiraram.</li>
+<li>Uma prenda roubada três vezes fica «congelada» com quem a tem e já não sai de lá.</li>
+<li>Quando o monte acaba, o número 1 pode trocar uma última vez com qualquer pessoa, porque foi o único que não pôde escolher.</li>
+</ol>
+<p>Escrevam as regras num papel antes de começar: é a melhor forma de evitar discussões a meio. Em grupos de mais de 25, o jogo fica lento; dividam por mesas ou por equipas. Se a troca é no trabalho, o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a> ajuda a combinar o limite e a participação.</p>
+
+<h2 id="dados">3. Troca com dados</h2>
+<p><strong>Para quem:</strong> famílias com crianças e grupos pequenos à volta de uma mesa. <strong>Pessoas:</strong> 5 a 15. <strong>Tempo:</strong> 20 a 30 minutos. <strong>Limite:</strong> 5 a 10 €. <strong>Precisas de:</strong> um ou dois dados e um temporizador (o do telemóvel serve).</p>
+<p>Cada pessoa leva uma prenda embrulhada e põe-na no centro da mesa. O jogo tem duas rondas.</p>
+<ol>
+<li><strong>Primeira ronda:</strong> à vez, cada pessoa lança o dado. Com 1 ou 6, tira uma prenda do centro. Com outro número, passa o dado. A ronda acaba quando o centro fica vazio. Quem já tem prenda e volta a tirar 1 ou 6 passa a vez.</li>
+<li><strong>Segunda ronda:</strong> liga o temporizador para 5 a 10 minutos. Continuam a lançar o dado, à vez:
+<ul>
+<li>1: passa a tua prenda para a pessoa da esquerda;</li>
+<li>2: passa a tua prenda para a pessoa da direita;</li>
+<li>3: troca a tua prenda com quem quiseres;</li>
+<li>4: toda a gente passa a prenda para a esquerda;</li>
+<li>5: toda a gente passa a prenda para a direita;</li>
+<li>6: lança outra vez.</li>
+</ul></li>
+<li>Quando o temporizador tocar, cada pessoa fica com a prenda que tem na mão e abre-a.</li>
+</ol>
+<p>Os embrulhos ficam fechados até ao fim, por isso ninguém sabe o que está a passar de mão em mão. Sem dados, joga-se a mesma ideia com uma história de Natal lida em voz alta: cada vez que aparece a palavra «esquerda» ou «direita», as prendas passam para esse lado.</p>
+<p class="shop">Procurar na Amazon: [[amz:dados grandes espuma|dados grandes]] · [[amz:reloj de arena 5 minutos|ampulhetas de 5 minutos]]</p>
+
+<h2 id="saco">4. Troca às cegas ou saco misterioso</h2>
+<p><strong>Para quem:</strong> grupos grandes, turmas, associações e grupos que mal se conhecem. <strong>Pessoas:</strong> 5 a 40. <strong>Tempo:</strong> 10 a 20 minutos. <strong>Limite:</strong> 5 a 10 €.</p>
+<ol>
+<li>Cada pessoa leva uma prenda que sirva a qualquer pessoa, num saco opaco ou num embrulho simples, sem nome nem etiqueta.</li>
+<li>À chegada, as prendas vão todas para um saco grande ou para uma caixa.</li>
+<li>À vez, cada pessoa tira uma prenda sem ver. Se tirar a sua, devolve-a e tira outra.</li>
+<li>Abrem-se todas ao mesmo tempo. No fim, quem quiser pode trocar com outra pessoa, desde que as duas aceitem.</li>
+</ol>
+<p>É o jogo mais rápido da lista e o mais fácil de organizar à última hora: não há sorteio antes nem regras para explicar. Como a prenda pode calhar a qualquer pessoa, escolhe algo neutro: chocolate, chá, uma caneca, um jogo de cartas ou uma vela. Há ideias para cada valor nas <a href="/prendas-amigo-secreto-ate-5-euros/">prendas até 5 €</a> e nas <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>.</p>
+<p class="shop">Procurar na Amazon: [[amz:bolsas regalo navidad tela|sacos de prenda de pano]]</p>
+
+<h2 id="tema">5. Troca com tema</h2>
+<p><strong>Para quem:</strong> qualquer grupo, sobretudo quando as pessoas não sabem o que comprar. <strong>Pessoas:</strong> a partir de 3. <strong>Tempo:</strong> o do jogo que usarem para trocar. <strong>Limite:</strong> 5 a 15 €.</p>
+<p>O tema não é um jogo à parte: é uma regra que se junta a qualquer um dos outros. Toda a gente leva uma prenda dentro do mesmo tema. Alguns que resultam bem:</p>
+<ul>
+<li><strong>Um livro</strong>, com uma frase na primeira página a dizer porque o escolheste.</li>
+<li><strong>Algo comestível português:</strong> conservas, doce, queijo, bolachas ou um azeite pequeno.</li>
+<li><strong>Feito à mão:</strong> bolachas, um frasco de doce, um postal desenhado por ti.</li>
+<li><strong>Algo vermelho</strong>, ou de outra cor que o grupo escolha.</li>
+<li><strong>Meias</strong>: quanto mais ridículas, melhor.</li>
+<li><strong>A prenda mais engraçada até 5 €</strong>, com votação no fim. Há ideias nas <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas para o amigo secreto</a>.</li>
+</ul>
+<p>Combinem o tema no convite, junto com o limite e a data, para ninguém ser apanhado de surpresa.</p>
+
+<h2 id="email">6. Amigo secreto por email</h2>
+<p><strong>Para quem:</strong> grupos que não conseguem estar juntos no dia do sorteio, equipas de trabalho e famílias espalhadas pelo país ou pelo estrangeiro. <strong>Pessoas:</strong> 3 a 30. <strong>Tempo:</strong> criar o sorteio demora uns minutos; a troca no dia, 20 a 40 minutos. <strong>Limite:</strong> 10 a 20 €.</p>
+<ol>
+<li>Quem organiza escreve no <a href="/criar">Sapatinho</a> os nomes e os emails do grupo, o limite e a data da troca.</li>
+<li>Cada pessoa recebe um email com um link só seu e roda a <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> para descobrir quem lhe saiu.</li>
+<li>No dia, a troca segue como no amigo secreto clássico, em pessoa ou por videochamada.</li>
+</ol>
+<p>Ninguém se tira a si próprio e não é preciso estar no mesmo sítio para sortear. A página de quem organiza não mostra quem tirou quem, por isso quem organiza também pode participar. É grátis, não precisa de registo e é feito em Portugal. Para quem está longe, há mais dicas no guia do <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a>.</p>
+
+<h2 id="antes">O que combinar antes da troca</h2>
+<ul>
+<li><strong>O jogo.</strong> Escolham um e expliquem as regras no convite, para ninguém chegar sem prenda ou com a prenda errada.</li>
+<li><strong>Um limite igual para todos.</strong> Um valor máximo, e não «mais ou menos».</li>
+<li><strong>Para quem é a prenda.</strong> No amigo secreto, é para uma pessoa. Na troca com roubo, nos dados e no saco, tem de servir a qualquer pessoa.</li>
+<li><strong>A data, a hora e o local</strong>, e o que acontece a quem não puder ir.</li>
+<li><strong>Crianças e adultos.</strong> Em famílias grandes, dois jogos separados funcionam melhor. Vê o <a href="/amigo-secreto-criancas/">amigo secreto com crianças</a>.</li>
+</ul>
+<p>Para escolher a prenda, há listas por preço e por tipo de pessoa nas <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se escolherem o amigo secreto, podem fazer o <a href="/criar">sorteio online por email</a> em poucos minutos.</p>
+""",
+faq=[
+("Qual é a diferença entre o amigo secreto e uma troca de prendas?", "No amigo secreto há um sorteio antes e cada pessoa compra uma prenda para alguém em concreto. Nas outras trocas, como a troca com roubo, os dados ou o saco misterioso, cada pessoa leva uma prenda que pode calhar a qualquer pessoa, e quem fica com o quê decide-se no próprio dia."),
+("Como funciona o amigo secreto ladrão?", "Cada pessoa leva uma prenda embrulhada. Por ordem, cada uma abre uma prenda nova ou rouba uma já aberta. Quem é roubado volta a escolher. Uma regra simples para o jogo acabar é a prenda ficar «congelada» depois de ser roubada três vezes."),
+("A troca de prendas tem de ter um número par de pessoas?", 'Não. Todos estes jogos funcionam com número par ou ímpar, porque cada pessoa leva uma prenda e fica com uma. No amigo secreto são precisas pelo menos três pessoas. Explicamos porquê nas <a href="/regras-do-amigo-secreto/#par-ou-impar">regras do amigo secreto</a>.'),
+("Que jogo de troca de prendas é melhor para o trabalho?", "Depende da equipa. O amigo secreto por email funciona bem quando há pessoas em teletrabalho ou em turnos diferentes. Se a equipa vai estar toda junta e gosta de brincar, a troca com roubo anima a festa. Em qualquer caso, a participação deve ser voluntária."),
+("Dá para fazer a troca de prendas à distância?", 'Dá. Façam o sorteio do amigo secreto por email, enviem as prendas com tempo e abram-nas todos ao mesmo tempo numa videochamada. Há um guia para isso no <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a>.'),
+],
+related=["regras-do-amigo-secreto", "amigo-secreto-na-empresa", "prendas-engracadas-amigo-secreto"],
 ))
 
 # ---------------------------------------------------------------- black friday
@@ -1029,6 +1166,7 @@ body="""
 </ul>
 <p class="shop">Procurar na Amazon: [[amz:boton rojo frases|botões com frases]] · [[amz:mini canasta papelera|mini cestos de basquetebol]] · [[amz:sello personalizado aprobado|carimbos]]</p>
 <p>Mais ideias, por limite, nas <a href="/prendas-amigo-secreto-colegas/">prendas para colegas de trabalho</a>. Para organizar a troca, vê o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.</p>
+<p>Se o grupo fizer uma troca com roubo em vez do sorteio, uma prenda engraçada dá luta até ao fim. Vê como se joga nos <a href="/troca-de-prendas-natal/#roubo">jogos de troca de prendas</a>.</p>
 
 <h2 id="feito">Feitas por ti</h2>
 <ul>
@@ -1957,6 +2095,10 @@ IMAGES = {
 "prendas-amigo-secreto-colegas": dict(
     cover="Ilustração de uma secretária com um candeeiro, um caderno, uma prenda com etiqueta, uma caneca de viagem e uma planta",
     figures=[dict(file="secretaria", after="ate-15", alt="Prendas para a secretária de um colega: um candeeiro LED, um caderno com lápis, uma tablete de chocolate, uma caneca de viagem e uma planta")]),
+"troca-de-prendas-natal": dict(
+    cover="Ilustração de duas prendas com setas a trocarem de lugar, dois dados e um saco de prendas com um ponto de interrogação",
+    figures=[dict(file="dados", after="dados", alt="Dois dados por cima de uma fila de prendas embrulhadas, com setas a mostrar as prendas a passar de mão em mão"),
+             dict(file="saco", after="saco", alt="Um saco grande com um ponto de interrogação, com prendas a sair por cima e mais prendas sem etiqueta ao lado")]),
 "como-funciona-o-sapatinho-privacidade": dict(
     cover="Ilustração de um envelope fechado com um cadeado, uma chave e um endereço de link do sorteio",
     figures=[dict(file="link", after="link", alt="Um endereço de link do sorteio com cadeado por cima de um envelope selado, entre uma chave e um cadeado")]),
