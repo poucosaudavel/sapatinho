@@ -469,18 +469,22 @@ related=["regras-do-amigo-secreto", "amigo-secreto-a-distancia"],
 PAGES.append(dict(
 slug="pistas-e-mensagens-amigo-secreto",
 date="2026-10-28",
+modified="2026-11-04",
 nav="Pistas e mensagens",
 short="Pistas e mensagens",
 card="Ideias de pistas para a revelação e frases para o postal da prenda.",
-title="Pistas e mensagens para o amigo secreto | Sapatinho",
-h1="Pistas e mensagens para o amigo secreto",
+title="Pistas e frases para amigo secreto: 46 exemplos | Sapatinho",
+h1="Pistas, frases e mensagens para o amigo secreto",
 dek="A revelação é o melhor momento da troca. Ideias de pistas para pôr toda a gente a adivinhar, e frases para escrever no postal que acompanha a prenda.",
-description="Ideias de pistas para revelar o amigo secreto e mensagens para o postal da prenda: divertidas, carinhosas e para o trabalho.",
+description="Pistas para revelar o amigo secreto e frases prontas para o bilhete da prenda: engraçadas, para colegas, para a família e para crianças.",
 body="""
+<p class="lead-answer"><strong>Uma boa pista de amigo secreto fala de um hábito ou de uma história do grupo</strong>, nunca da aparência. Começa vaga e vai afunilando até só servir a uma pessoa: três a cinco pistas chegam. Aqui tens exemplos de pistas para a família, os amigos e o trabalho, e 24 frases prontas para o bilhete da prenda.</p>
+
 <nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
 <li><a href="#pistas">Como dar boas pistas</a></li>
 <li><a href="#exemplos">Exemplos de pistas</a></li>
 <li><a href="#postal">Mensagens para o postal</a></li>
+<li><a href="#frases">24 frases prontas para o bilhete ou para as pistas</a></li>
 <li><a href="#perguntas">Perguntas frequentes</a></li>
 </ol></nav>
 
@@ -539,10 +543,52 @@ body="""
 <li>«Para recarregar energias antes de janeiro.»</li>
 <li>«Votos de boas festas e de uma caixa de email vazia.»</li>
 </ul>
+
+<h2 id="frases">24 frases prontas para o bilhete ou para as pistas</h2>
+<p>Frases curtas, escritas por nós, para copiar para o bilhete que vai com a prenda. As que começam por «Pista» servem também para a revelação. Troca um pormenor por outro do teu grupo e ficam tuas.</p>
+<h3 id="engracadas">Engraçadas</h3>
+<ul>
+<li>«Pensei muito nesta prenda. Uns dez minutos, mais ou menos.»</li>
+<li>«Abre com cuidado: o embrulho deu mais trabalho do que a prenda.»</li>
+<li>«Trocas só com talão. O talão está comigo. Boa sorte.»</li>
+<li>«Saíste-me no sorteio e não havia recurso.»</li>
+<li>«Esta prenda cumpre o limite combinado. Ao cêntimo.»</li>
+<li>«Se adivinhares quem sou, ganhas mais um chocolate. Talvez.»</li>
+</ul>
+<h3 id="colegas">Para colegas</h3>
+<ul>
+<li>«Para a próxima reunião que podia ter sido um email.»</li>
+<li>«Boas festas! Prometo não te pôr em cópia de nada até janeiro.»</li>
+<li>«Um brinde às pausas para café que salvaram as segundas-feiras.»</li>
+<li>«Para aguentares dezembro com mais calma do que o resto do ano.»</li>
+<li>«Bom Natal, e que o computador arranque à primeira em 2027.»</li>
+<li>«Pista: sento-me mais perto de ti do que pensas.»</li>
+</ul>
+<h3 id="familia">Para a família</h3>
+<ul>
+<li>«Para quem guarda sempre o melhor lugar no sofá.»</li>
+<li>«Este ano o sorteio acertou em cheio. Feliz Natal!»</li>
+<li>«Uma prenda pequena para quem faz o Natal desta família acontecer.»</li>
+<li>«Não é a receita da avó, mas leva o mesmo carinho.»</li>
+<li>«Pista: já me viste comer o último bolinho de bacalhau e não disseste nada.»</li>
+<li>«Pista: estou nesta sala e já te pedi para me passares o arroz doce.»</li>
+</ul>
+<h3 id="criancas">Para crianças</h3>
+<ul>
+<li>«Esta prenda veio do Polo Norte, com uma paragem pelo caminho.»</li>
+<li>«Para brincares muito nas férias de Natal!»</li>
+<li>«Adivinha: quem é que te deu a última fatia de bolo-rei?»</li>
+<li>«Pista: chego à prateleira de cima sem precisar de banco.»</li>
+<li>«Pista: já fizemos um forte de almofadas juntos.»</li>
+<li>«O teu amigo secreto quer muito ver-te sorrir quando abrires isto.»</li>
+</ul>
+<p class="note">Com crianças pequenas, escreve tu a frase e deixa-as fazer um desenho ao lado. Mais ideias para os miúdos no <a href="/amigo-secreto-criancas/">amigo secreto com crianças</a>.</p>
+<p>Ainda não fizeram o sorteio? No <a href="/criar">Sapatinho fazes o sorteio do amigo secreto online</a>, grátis e sem registo: cada pessoa recebe por email um link só seu e descobre quem lhe saiu. A página de quem organiza não mostra quem tirou quem, por isso as pistas continuam a ter graça no dia da troca.</p>
 """,
 faq=[
 ("Como revelar o amigo secreto de forma divertida?", "Uma das formas mais populares é a revelação em cadeia: cada pessoa dá pistas sobre o seu amigo secreto até alguém adivinhar, e quem recebe a prenda continua. Explicamos outras formas nas regras do amigo secreto."),
 ("Devo assinar o postal da prenda?", "Depende de como fazem a revelação. Se a ideia é adivinhar, assina «O teu amigo secreto» e revela-te só depois."),
+("O que escrever no bilhete do amigo secreto?", "Uma ou duas frases chegam: uma piada sobre a prenda, um agradecimento ou uma pista sobre quem és. Uma frase que fale de um momento que passaram juntos é o que a pessoa mais guarda."),
 ],
 related=["regras-do-amigo-secreto", "amigo-secreto-na-empresa"],
 ))
@@ -595,7 +641,7 @@ body="""
 <li>Compra uma prenda para essa pessoa, dentro do limite, e guarda segredo.</li>
 <li>No dia da troca, cada um revela quem lhe saiu e entrega a prenda.</li>
 </ol>
-<p>É o único jogo da lista em que a prenda é escolhida a pensar numa pessoa concreta. As regras completas, o que fazer com números ímpares e as formas de revelação estão nas <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a>.</p>
+<p>É o único jogo da lista em que a prenda é escolhida a pensar numa pessoa concreta. Para a revelação, há pistas e frases prontas para o bilhete nas <a href="/pistas-e-mensagens-amigo-secreto/">pistas e frases para o amigo secreto</a>. As regras completas, o que fazer com números ímpares e as formas de revelação estão nas <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a>.</p>
 
 <h2 id="roubo">2. Amigo secreto ladrão (troca com roubo)</h2>
 <p><strong>Para quem:</strong> colegas de trabalho, grupos de amigos, festas onde se quer rir. <strong>Pessoas:</strong> 8 a 25. <strong>Tempo:</strong> 30 a 60 minutos. <strong>Limite:</strong> 10 a 15 €.</p>
@@ -772,7 +818,7 @@ body="""
 <li><strong>Prazos curtos.</strong> Para os mais novos, fazer o sorteio uma ou duas semanas antes da troca torna o segredo mais fácil de guardar.</li>
 <li><strong>Limite baixo e igual,</strong> para nenhuma criança comparar prendas e sair a perder.</li>
 <li><strong>Uma lista de desejos simples:</strong> três coisas de que gostam (uma cor, um herói, um jogo) ajudam quem compra a acertar.</li>
-<li><strong>Prendas feitas à mão também contam.</strong> Um desenho ou uma pulseira feita pela criança são muitas vezes as prendas de que os outros miúdos mais gostam.</li>
+<li><strong>Prendas feitas à mão também contam.</strong> Um desenho ou uma pulseira feita pela criança são muitas vezes as prendas de que os outros miúdos mais gostam. Para o bilhete, há <a href="/pistas-e-mensagens-amigo-secreto/#criancas">frases prontas para crianças</a>.</li>
 </ul>
 
 <h2 id="escola">Na escola ou no ATL</h2>
