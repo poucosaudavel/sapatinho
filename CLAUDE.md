@@ -9,14 +9,15 @@ Dono: Diogo (não é programador; explica as coisas em linguagem simples e em po
 | --- | --- |
 | `site/` | Site estático (Cloudflare Pages, projeto `sapatinho-natal`). `sorteio.html` e `r.html` são a página do sorteio (iguais). `_headers` tem a CSP. `_redirects` envia `/r/*` para `r.html`. |
 | `tools/seo/` | Gerador das páginas de conteúdo: `content.py` (texto dos guias), `build.py` (página inicial, FAQ, privacidade, sitemap, robots, dados estruturados). |
-| `worker/` | API (Cloudflare Worker `sapatinho-api`, rota `sapatinho-natal.pt/api/*`): `POST /api/create`, `POST /api/confirm`, `GET /api/stats`. |
+| `worker/` | API (Cloudflare Worker `sapatinho-api`, rota `sapatinho-natal.pt/api/*`): `POST /api/create`, `POST /api/confirm`, `GET /api/stats` (contagens e o estado da Oficina, com a palavra-passe do painel). |
+| `tools/oficina/` | A Oficina 3D (painel dos agentes): `oficina.html` é a fonte; `build_painel.py` gera `site/painel/oficina/`. A mesma página está publicada no claude.ai. |
 | `marketing/` | Redes sociais: `brief.md` (voz e regras), `content/part*.json` (publicações e stories até 20 dez), `render/` (gera as imagens), `build_cal.py` (calendário). |
 | `tests/` | Testes locais da API: `node --test tests/*.test.mjs` |
 | `scripts/` | `deploy-site.sh` e `deploy-worker.sh` |
-| `gestao/` | `tarefas.md` (quadro de tarefas até 20 dez), `kpis.md` (números), `recados.md` (recados entre agentes, entregues pelo gestor), `afiliados.md`. `backlinks.md` e `suporte.md` têm contactos de pessoas e ficam fora do Git. Gerido pelo `/gestor`. |
+| `gestao/` | `tarefas.md` (quadro de tarefas até 20 dez), `kpis.md` (números), `recados.md` (recados entre agentes, entregues pelo gestor), `ideias.md` (ideias do CIO e o que o gestor decidiu), `oficina.json` (estado da equipa para a Oficina 3D), `afiliados.md`. `backlinks.md` e `suporte.md` têm contactos de pessoas e ficam fora do Git. Gerido pelo `/gestor`. |
 | `private/` | **Não está no Git.** Páginas e notas privadas do Diogo. As regras estão em `CLAUDE.local.md` (também fora do Git). |
 
-Agentes em `.claude/agents/`: `seo` (Google e conteúdo do site), `outreach` (backlinks), `social-media` (Facebook e Instagram), `analista` (números e KPIs), `afiliados` (receita), `produto` (conversão do site), `suporte` (ajuda, entrega dos emails e operações) e `qa` (revisão independente).
+Agentes em `.claude/agents/`: `seo` (Google e conteúdo do site), `outreach` (backlinks), `social-media` (Facebook e Instagram), `analista` (números e KPIs), `afiliados` (receita), `produto` (conversão do site), `suporte` (ajuda, entrega dos emails e operações), `inovacao` (CIO: ideias para crescer) e `qa` (revisão independente).
 
 **Gestor do projeto (CEO):** o comando `/gestor` põe o Claude a gerir o Sapatinho: mede, decide as prioridades, distribui o trabalho pelos agentes, revê, publica, regista em `gestao/` e diz ao Diogo só o que precisa dele. É um comando e não um agente porque, no Claude Code, só a conversa principal consegue chamar os outros agentes.
 
@@ -24,7 +25,7 @@ Agentes em `.claude/agents/`: `seo` (Google e conteúdo do site), `outreach` (ba
 
 - Quem organiza preenche `/criar`. O worker faz o sorteio, assina cada link (`/r/<payload>.<HMAC>`) e envia os convites pelo Brevo.
 - O payload é JSON ofuscado (XOR + base64url, **não é cifra**): grupo, limite, data, nome, quem saiu, lista de nomes. O email vai cifrado com AES-GCM no campo `x`. Links antigos (antes de 29 out 2026) têm o email em claro no campo `e` e têm de continuar a funcionar.
-- Não há base de dados. O KV `STATS` guarda só: contagens anónimas por dia (`d:`), quota diária de emails (`q:`), código HMAC do IP por dia (`ip:`, 24 h) e marca de confirmação por link (`c:`, 12 h).
+- Não há base de dados. O KV `STATS` guarda só: contagens anónimas por dia (`d:`), quota diária de emails (`q:`), código HMAC do IP por dia (`ip:`, 24 h) e marca de confirmação por link (`c:`, 12 h) e o estado da equipa para a Oficina 3D (`oficina`, escrito pelo gestor a partir de `gestao/oficina.json`; sem dados pessoais).
 - As chaves de assinatura e de cifra derivam de `BREVO_API_KEY`. Mudar essa chave invalida todos os links já enviados.
 - Brevo grátis: 300 emails/dia. O worker recusa sorteios acima de 260 emails/dia (`DAILY_EMAILS`) e segundos emails acima de 295.
 

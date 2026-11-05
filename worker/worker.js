@@ -333,7 +333,8 @@ async function stats(req, env, json) {
   const days = [];
   for (const k of list.keys) days.push({ dia: k.name.slice(2), ...((await env.STATS.get(k.name, "json")) || {}) });
   days.sort((a, b) => a.dia.localeCompare(b.dia));
-  return json({ days });
+  const oficina = await env.STATS.get("oficina", "json");
+  return json({ days, oficina: oficina || null });
 }
 
 export { create, confirm, encode, decode, sign, verify, draw };

@@ -34,6 +34,7 @@ Cada tarefa do quadro tem de servir um destes números; se não serve nenhum, co
 | `afiliados` | Receita: links de afiliado, lojas novas, preços, links partidos | Mexer em textos fora dos blocos de compra |
 | `produto` | Conversão: visitas que acabam em sorteio, testes no telemóvel, melhorias no início, `/criar` e sorteio | Mexer em `worker/` ou nos textos de SEO |
 | `suporte` | Pedidos de ajuda, entrega dos emails (spam), Brevo, limite de envios, site e API a funcionar | Mexer no site ou na API: só reporta |
+| `inovacao` | CIO: ideias para fazer crescer o negócio, com teste barato e impacto esperado | Executar as ideias: tu decides e entregas ao agente certo |
 | `qa` | Revisão independente antes e depois de publicar | Corrigir: só aponta |
 
 Chamas cada agente com a ferramenta de agentes e uma ordem completa (tarefa, prazo, ficheiros, o que já existe, o que tem de entregar): o agente não vê esta conversa. Tarefas independentes correm em paralelo. Um agente nunca revê o próprio trabalho: quem revê é o `qa` e és tu.
@@ -69,9 +70,16 @@ Chamas cada agente com a ferramenta de agentes e uma ordem completa (tarefa, pra
 
 ## Oficina (o painel 3D do Diogo)
 
-O Diogo vê a equipa a trabalhar em https://claude.ai/artifact/HUjhoTLiXDvgwL9sBs794v (a oficina do Pai Natal). No fim de cada dia de trabalho, atualizas a base de dados dela com a ferramenta `ArtifactData` (url acima). Lê primeiro cada documento e escreve com o `if_version` que leste; junta tudo num único `batch`.
+O Diogo vê a equipa a trabalhar em dois sítios, com os mesmos dados:
+- https://claude.ai/artifact/HUjhoTLiXDvgwL9sBs794v (no claude.ai);
+- https://sapatinho-natal.pt/painel/oficina/ (no painel do site, com a palavra-passe do painel).
 
-- `agentes/<id>` (ids: `gestor`, `seo`, `outreach`, `social-media`, `analista`, `afiliados`, `produto`, `suporte`, `qa`): `estado` (`trabalhar` enquanto o agente tem trabalho aberto hoje; `espera` quando está parado à espera do Diogo; `descanso` quando está em dia; `novo` só até ao primeiro trabalho), `tarefa` (a próxima coisa que faz, numa frase), `feitos` (soma 1 por cada tarefa concluída hoje: uma página, um contacto enviado, um post agendado, um PR revisto), `ultimo` (a última conquista, numa frase curta) e `atualizado` (hora ISO).
+No fim de cada dia de trabalho:
+1. Atualizas `gestao/oficina.json` (versionado, nada privado) com o formato `{"agentes": {"<id>": {...}}, "estado": {...}}` descrito abaixo.
+2. Copias os mesmos dados para a base de dados do artifact com a ferramenta `ArtifactData` (url acima): documentos `agentes/<id>` e `oficina/estado`. Lê primeiro cada documento e escreve com o `if_version` que leste; junta tudo num único `batch`.
+3. Copias o ficheiro para o painel do site: no PC do Diogo, `npx wrangler@4 kv key put oficina --path gestao/oficina.json --namespace-id 982eafb389b94a8ca92bd8a9b6b82cc8 --remote`. Se o wrangler pedir login, usa o painel do Cloudflare no Chrome (Workers e Pages › KV › STATS › chave `oficina`, colar o conteúdo do ficheiro) ou regista que ficou por fazer.
+
+- `agentes/<id>` (ids: `gestor`, `seo`, `outreach`, `social-media`, `analista`, `afiliados`, `produto`, `suporte`, `inovacao`, `qa`): `estado` (`trabalhar` enquanto o agente tem trabalho aberto hoje; `espera` quando está parado à espera do Diogo; `descanso` quando está em dia; `novo` só até ao primeiro trabalho), `tarefa` (a próxima coisa que faz, numa frase), `feitos` (soma 1 por cada tarefa concluída hoje: uma página, um contacto enviado, um post agendado, um PR revisto), `ultimo` (a última conquista, numa frase curta) e `atualizado` (hora ISO).
 - `oficina/estado`: `prioridades` (as 3 de amanhã), `preciso` (o que precisa do Diogo, ou «Nada por agora.»), `diario` (acrescenta uma linha por turno, `{quando, texto}`, e guarda só as últimas 20), `recados` (os recados dos últimos 7 dias, `{quando, de, para, texto, estado}` com `de`/`para` iguais aos ids dos agentes; no máximo 20), `resultados` (`sorteios_semana`, `receita_semana` em euros, `cliques_google_semana`, `backlinks_publicados`, `taxa_sorteio` em %: só números reais; `null` quando não há dados) e `atualizado`.
 - Só números e factos reais, como no resto do trabalho. Nada privado (nada da partida, nada de contactos de pessoas).
 - Se a ferramenta não estiver disponível no turno, regista isso na nota do dia e segue.
@@ -83,7 +91,7 @@ O Diogo vê a equipa a trabalhar em https://claude.ai/artifact/HUjhoTLiXDvgwL9sB
 - **Terça:** `produto`.
 - **Quarta:** `afiliados`.
 - **Quinta:** teste de entrega pelo `suporte`.
-- **Sexta:** retrospetiva curta em `gestao/tarefas.md`: o que resultou, o que se corta e o que se muda na semana seguinte.
+- **Sexta:** o `inovacao` propõe até 3 ideias em `gestao/ideias.md`; aprovas, adias ou recusas cada uma (com o porquê) e as aprovadas entram no quadro com dono e data. Depois, retrospetiva curta em `gestao/tarefas.md`: o que resultou, o que se corta e o que se muda na semana seguinte.
 
 ## Meta (Facebook e Instagram)
 

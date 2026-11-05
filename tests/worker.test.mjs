@@ -104,7 +104,13 @@ test("painel: só com a senha certa", async () => {
   const { env } = setup();
   const get = (h) => worker.fetch(new Request("https://sapatinho-natal.pt/api/stats", { headers: h }), env);
   assert.equal((await get({ Authorization: "Bearer errada" })).status, 401);
-  assert.equal((await get({ Authorization: "Bearer senha-do-painel" })).status, 200);
+  const ok = await get({ Authorization: "Bearer senha-do-painel" });
+  assert.equal(ok.status, 200);
+  assert.equal((await ok.json()).oficina, null);
+  await env.STATS.put("oficina", JSON.stringify({ agentes: { seo: { estado: "trabalhar" } } }));
+  assert.equal((await (await get({ Authorization: "Bearer senha-do-painel" })).json()).oficina.agentes.seo.estado, "trabalhar");
+  const bad = await (await get({ Authorization: "Bearer errada" })).json();
+  assert.equal(bad.oficina, undefined);
 });
 
 test("segundo email: 3 ideias dentro do limite, com link para o site e nunca para lojas", async () => {

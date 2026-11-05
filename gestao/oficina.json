@@ -1,0 +1,103 @@
+{
+ "agentes": {
+  "gestor": {
+   "estado": "descanso",
+   "feitos": 23,
+   "tarefa": "Próximo turno amanhã às 7:44: atrasos, caixa do sapatinhonatal e as 3 prioridades do dia.",
+   "ultimo": "Passou a CEO e montou a equipa",
+   "atualizado": "2026-11-05T21:40:00Z"
+  },
+  "seo": {
+   "estado": "descanso",
+   "feitos": 14,
+   "tarefa": "Dar focos diferentes às páginas «Prendas para colegas» e «Amigo secreto na empresa» (até 9 nov).",
+   "ultimo": "Página de prendas para a família",
+   "atualizado": "2026-11-05T10:50:00Z"
+  },
+  "outreach": {
+   "estado": "descanso",
+   "feitos": 19,
+   "tarefa": "Criar o registo dos 19 contactos já enviados e marcar os lembretes de 7 dias (até 6 nov).",
+   "ultimo": "19 emails a sites portugueses, ainda sem respostas",
+   "atualizado": "2026-11-05T09:30:00Z"
+  },
+  "social-media": {
+   "estado": "descanso",
+   "feitos": 5,
+   "tarefa": "Novembro está todo agendado no Meta. A seguir: dezembro, à medida que a janela de 29 dias abre.",
+   "ultimo": "14 publicações com as ilustrações do site",
+   "atualizado": "2026-11-05T20:20:00Z"
+  },
+  "analista": {
+   "estado": "novo",
+   "feitos": 0,
+   "tarefa": "Primeiros KPIs com números reais na segunda, 9 nov.",
+   "atualizado": "2026-11-05T20:24:00Z"
+  },
+  "afiliados": {
+   "estado": "novo",
+   "feitos": 0,
+   "tarefa": "Ver que lojas portuguesas há na Awin (já aprovada) e propor em quais entrar (até 9 nov).",
+   "atualizado": "2026-11-05T20:24:00Z"
+  },
+  "produto": {
+   "estado": "novo",
+   "feitos": 0,
+   "tarefa": "Primeiro teste completo no telemóvel na terça, 10 nov.",
+   "atualizado": "2026-11-05T20:43:00Z"
+  },
+  "suporte": {
+   "estado": "novo",
+   "feitos": 0,
+   "tarefa": "Começa amanhã de manhã: pedidos de ajuda e site a funcionar. Teste de entrega na quinta, 12 nov.",
+   "atualizado": "2026-11-05T20:43:00Z"
+  },
+  "inovacao": {
+   "estado": "novo",
+   "feitos": 0,
+   "tarefa": "Primeiras 3 ideias para o negócio na sexta, 6 nov.",
+   "atualizado": "2026-11-05T21:40:00Z"
+  },
+  "qa": {
+   "estado": "novo",
+   "feitos": 0,
+   "tarefa": "Revê o próximo PR antes de ser junto e confirma o site depois de publicar.",
+   "atualizado": "2026-11-05T20:24:00Z"
+  }
+ },
+ "estado": {
+  "prioridades": [
+   "Registo dos 19 contactos de backlinks e lembretes de 7 dias",
+   "Lojas da Awin: ver quais valem a pena",
+   "Separar as páginas de colegas e de empresa"
+  ],
+  "preciso": "Deixar o Brevo e o painel do site com a sessão iniciada no Chrome.",
+  "diario": [
+   {
+    "quando": "2026-11-05T20:24:00Z",
+    "texto": "O gestor passa a CEO, com 4 agentes novos. Meta de 28 a 30 nov agendado."
+   },
+   {
+    "quando": "2026-11-05T20:43:00Z",
+    "texto": "Chegaram a Conversão e o Suporte. Turnos automáticos às 7:44 e 19:44."
+   },
+   {
+    "quando": "2026-11-05T21:10:00Z",
+    "texto": "A equipa passa a deixar recados entre si e o CEO mede 5 resultados por semana."
+   },
+   {
+    "quando": "2026-11-05T21:40:00Z",
+    "texto": "Chegou o CIO (Inovação): ideias para crescer, à sexta."
+   }
+  ],
+  "recados": [],
+  "resultados": {
+   "sorteios_semana": null,
+   "receita_semana": null,
+   "cliques_google_semana": null,
+   "backlinks_publicados": 0,
+   "taxa_sorteio": null
+  },
+  "atualizado": "2026-11-05T21:40:00Z"
+ }
+}
