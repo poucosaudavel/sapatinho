@@ -19,11 +19,15 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 3 nov | seo | /criar: título e descrição; guia de ideias liga às páginas de preço (PR #1) | à espera do Diogo: publicar e pedir indexação |
 | 4 nov | seo | Página de prendas engraçadas (PR #2) | à espera do Diogo: publicar e pedir indexação |
 | até 2 nov | gestor | Pesquisar programas de afiliados em Portugal (vales de experiências, lojas) | feito (`gestao/afiliados.md`) |
-| 2 nov | gestor | Agendar no Meta o que falta de novembro: feed de 28 nov 20:30, 29 nov e 30 nov; stories de 29 e 30 nov (o Meta só aceita até 29 dias à frente) | por fazer |
+| 2 nov | gestor | Agendar no Meta o que falta de novembro: feed de 28 nov 20:30, 29 nov e 30 nov; stories de 29 e 30 nov | atrasado; feito a 5 nov |
+| todos os dias | gestor | Agendar no Meta o que já entrou na janela de 29 dias | contínuo |
+| até 6 nov | outreach | Criar `gestao/backlinks.md` (fora do Git) com os 19 contactos já enviados e marcar os lembretes de 7 dias | por fazer |
+| até 9 nov | seo | «Prendas para colegas» e «Amigo secreto na empresa»: focos diferentes e ligação entre as duas | por fazer |
 | todas as segundas | Diogo | Enviar os números da semana (Search Console, `/painel`, Amazon, Meta); ver `gestao/kpis.md` | por fazer |
 | todas as segundas | gestor | Atualizar `gestao/kpis.md` e criar tarefas para o que estiver em risco | por fazer |
 | 16 nov | gestor | Pôr número nas metas «a definir» dos KPIs | por fazer |
-| até 8 nov | Diogo | Registar-se na Awin e mandar a lista de lojas portuguesas que aparecem (ver `gestao/afiliados.md`) | por fazer |
+| até 8 nov | Diogo | Registar-se na Awin | feito (aprovado) |
+| até 9 nov | afiliados | Ver no painel da Awin que lojas portuguesas há (vales de experiências, livrarias, eletrónica) e propor em quais entrar; o Diogo candidata-se | por fazer |
 | 3 a 9 nov | social-media | Publicações que levam às páginas novas de prendas | feito e agendado no Meta (31 out) |
 | 6 nov | seo | Prendas até 20 € | à espera do Diogo: publicar e pedir indexação |
 | 9 nov | seo | Prendas até 15 € | por fazer |
@@ -44,6 +48,8 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 1 a 20 dez | gestor | Vigiar o limite do Brevo | por fazer |
 
 ## Notas do gestor
+
+- 5 nov: o gestor passa a CEO, com agentes novos: `outreach` (backlinks, saiu do `seo`), `analista`, `afiliados` e `qa`. Registo obrigatório no fim de cada dia de trabalho. Atrasos encontrados: Meta de 28 a 30 nov por agendar (tratado), quadro e KPIs parados desde 31 out, 19 contactos sem registo, aprovação da Awin por tratar.
 
 - 31 out: Meta reagendado com as versões novas de 2, 3, 4, 8 e 14 nov (feed) e 4 a 8 nov (stories). O gestor passa a ser o único a agendar no Meta (o lembrete do claude.ai foi cancelado). API só com o «sim» do Diogo.
 - 30 out: página «Prendas até 20 €» feita (antecipada de 6 nov); pesquisa de afiliados feita; publicações de 3 a 9 nov ajustadas às páginas novas. Tudo num PR à espera do Diogo.

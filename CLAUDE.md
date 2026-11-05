@@ -13,12 +13,12 @@ Dono: Diogo (não é programador; explica as coisas em linguagem simples e em po
 | `marketing/` | Redes sociais: `brief.md` (voz e regras), `content/part*.json` (publicações e stories até 20 dez), `render/` (gera as imagens), `build_cal.py` (calendário). |
 | `tests/` | Testes locais da API: `node --test tests/*.test.mjs` |
 | `scripts/` | `deploy-site.sh` e `deploy-worker.sh` |
-| `gestao/` | `tarefas.md`: quem faz o quê e o quadro de tarefas até 20 dez (gerido pelo `/gestor`). |
+| `gestao/` | `tarefas.md` (quadro de tarefas até 20 dez), `kpis.md` (números), `afiliados.md`. `backlinks.md` tem contactos de pessoas e fica fora do Git. Gerido pelo `/gestor`. |
 | `private/` | **Não está no Git.** Páginas e notas privadas do Diogo. As regras estão em `CLAUDE.local.md` (também fora do Git). |
 
-Agentes em `.claude/agents/`: `seo` (Google e conteúdo do site) e `social-media` (Facebook e Instagram).
+Agentes em `.claude/agents/`: `seo` (Google e conteúdo do site), `outreach` (backlinks), `social-media` (Facebook e Instagram), `analista` (números e KPIs), `afiliados` (receita) e `qa` (revisão independente).
 
-**Gestor do projeto:** o comando `/gestor` põe o Claude a coordenar a equipa. Lê o quadro `gestao/tarefas.md`, entrega as tarefas ao `seo` e ao `social-media`, revê o trabalho contra as regras abaixo e diz ao Diogo o que precisa dele. É um comando e não um agente porque, no Claude Code, só a conversa principal consegue chamar os outros agentes.
+**Gestor do projeto (CEO):** o comando `/gestor` põe o Claude a gerir o Sapatinho: mede, decide as prioridades, distribui o trabalho pelos agentes, revê, publica, regista em `gestao/` e diz ao Diogo só o que precisa dele. É um comando e não um agente porque, no Claude Code, só a conversa principal consegue chamar os outros agentes.
 
 ## Como funciona (resumo técnico)
 
@@ -35,7 +35,7 @@ Antes da primeira vez, o Diogo corre `npx wrangler@4 login` (o Claude nunca faz 
 - Site: `scripts/deploy-site.sh` (gera as páginas, aplica `private/` e publica). **Se `private/` não existir antes de 26 dez 2026, o script recusa**: publicar sem ela apagava páginas privadas que estão online.
 - API: corre primeiro `node --test tests/*.test.mjs`, depois `scripts/deploy-worker.sh`.
 - Depois de um deploy, confirma no site real (página alterada, `/r` com um link de teste, `/api/create` com nome inválido devolve 400).
-- Faz deploy só quando o Diogo pedir ou aprovar. **Exceção:** o `/gestor` tem aprovação permanente do Diogo (30 out 2026) para juntar PRs e publicar o site e a API sozinho, seguindo as verificações de `.claude/commands/gestor.md`.
+- Faz deploy só quando o Diogo pedir ou aprovar. **Exceção:** o `/gestor` tem aprovação permanente do Diogo (30 out 2026) para juntar PRs e publicar o site sozinho, seguindo as verificações de `.claude/commands/gestor.md`. A API só com o «sim» do Diogo para cada publicação.
 
 ## Regras que não se quebram
 
