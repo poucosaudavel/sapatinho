@@ -619,6 +619,22 @@ function arcArrow(x1, y1, x2, y2, lift, c, w) {
     g(x2, y2, 1, ang, `<path d="M6 0L-22 -16L-16 0L-22 16Z" fill="${col}"/>`);
 }
 
+
+// Moldura e pantufas (página das prendas para a família).
+function photoFrame(w, h, inner) {
+  return shadow(w * .5) + `<path d="M${-w * .18} 0L${-w * .05} ${-h * .5}" stroke="${C.woodD}" stroke-width="10" stroke-linecap="round"/>` +
+    `<rect x="${-w / 2}" y="${-h}" width="${w}" height="${h}" rx="10" fill="${C.wood}"/>` +
+    `<rect x="${-w / 2 + 18}" y="${-h + 18}" width="${w - 36}" height="${h - 36}" rx="4" fill="${C.mint}"/>` +
+    `<rect x="${-w / 2 + 18}" y="${-h * .38}" width="${w - 36}" height="${h * .38 - 18}" fill="${C.leaf}" opacity=".55"/>` +
+    (inner || '') + `<rect x="${-w / 2}" y="${-h}" width="${w}" height="${h}" rx="10" fill="none" stroke="${C.woodD}" stroke-width="4"/>`;
+}
+function slipper(c, fur) {
+  return shadow(90, 10) + `<path d="M-100 0Q-110 -40 -70 -46H60Q104 -46 106 -14Q106 0 90 0Z" fill="${darken(c, .18)}"/>` +
+    `<path d="M-30 -44Q-26 -96 30 -96Q80 -96 96 -40Q60 -30 -30 -44Z" fill="${c}"/>` +
+    `<path d="M-34 -44Q-30 -64 -10 -66Q-6 -50 -34 -44Z" fill="${fur || C.paper}"/>` +
+    `<ellipse cx="-30" cy="-46" rx="16" ry="10" fill="${fur || C.paper}"/>`;
+}
+
 // ------------------------------------------------------------------ cenas
 // Cada cena desenha sobre o fundo e devolve o SVG interior.
 const W1 = 1200, H1 = 675, W2 = 1200, H2 = 800, G1 = 590, G2 = 640;
@@ -918,6 +934,24 @@ const SCENES = {
       g(1060, G2, .8, 0, plant()) +
       g(720, 330, 1, 0, sticky(80, C.gold, -6)) +
       sparkles([[370, 250, 16, C.gold, 's'], [880, 200, 14, C.gold], [1120, 300, 12, C.ember], [120, 260, 12, C.ember]]),
+  },
+  'prendas-amigo-secreto-familia': {
+    capa: () => bgDark(W1, H1, 67) +
+      g(170, G1, .95, 0, gift({ w: 150, h: 110, c: C.green, r: C.gold, pat: 'dots' })) +
+      g(330, 330, 1, 0, avatar(54, C.skin[0], '#d8d4cc', C.ember)) +
+      g(560, 300, 1, 0, avatar(62, C.skin[2], C.hair[0], C.blue)) +
+      g(770, 380, 1, 0, avatar(44, C.skin[1], C.hair[2], C.gold)) +
+      g(450, G1, 1, 0, gift({ w: 200, h: 120, c: C.ember, r: C.gold, pat: 'stripes' })) +
+      g(700, G1, 1, 0, gift({ w: 170, h: 100, c: C.gold, r: C.ember })) +
+      g(960, G1, .85, -4, photoFrame(220, 180, g(-45, -95, 1, 0, avatar(22, C.skin[0], C.hair[1], C.ember)) + g(35, -90, 1, 0, avatar(18, C.skin[2], C.hair[0], C.gold)))) +
+      sparkles([[120, 200, 12], [450, 130, 18, C.gold, 's'], [880, 160, 14], [1120, 300, 12], [680, 120, 12]]),
+    avos: () => bgLight(W2, H2, 68) +
+      g(270, G2, 1.2, -3, photoFrame(250, 210, g(-55, -110, 1, 0, avatar(26, C.skin[1], C.hair[2], C.ember)) + g(45, -104, 1, 0, avatar(22, C.skin[0], C.hair[0], C.blue)))) +
+      g(560, G2, 1.15, 0, mug({ c: C.ember, deco: 'heart', st: C.mint2 })) +
+      g(830, G2, 1, 0, slipper(C.green)) + g(900, G2 + 20, 1, 0, slipper(C.green)) +
+      g(1040, G2 - 230, 1, 12, playCard(120, 170, { l: 'A', s: spade(30, C.ink) }, C.ink)) +
+      g(1080, G2 - 200, 1, 22, playCard(120, 170, { l: 'R', s: heart(28, C.ember) }, C.ember)) +
+      sparkles([[420, 230, 16, C.gold, 's'], [720, 260, 14, C.gold], [1110, 520, 12, C.ember], [130, 230, 12, C.ember]]),
   },
   'troca-de-prendas-natal': {
     capa: () => bgDark(W1, H1, 64) +
