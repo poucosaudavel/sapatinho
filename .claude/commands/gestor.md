@@ -53,13 +53,13 @@ A tarefa agendada chama-te 4 vezes por dia (hora de Lisboa). Vê a hora e faz o 
 
 | Turno | Hora | O que corre |
 | --- | --- | --- |
-| Manhã | 7:44 | Turno completo: estado, atrasos, recados, caixa, medir, 3 prioridades do dia, todos os agentes do dia (ver passo 7). |
+| Manhã | 7:44 | Turno completo: estado, atrasos, recados, caixa, medir, 3 prioridades do dia, todos os agentes do dia (ver passo 7) e **o relatório completo ao Diogo** (o dia de ontem e o plano de hoje). |
 | Almoço | 11:44 | Turno curto: caixa (suporte e outreach respondem), recados, a verificação de palha do `produto`, Meta, e avançar a prioridade 1. |
 | Tarde | 15:44 | Turno curto: caixa, recados, `seo` ou `produto` acabam o PR do dia, `qa` revê, publicas. |
-| Noite | 19:44 | Turno de fecho: caixa, recados, publicar o que falta, registar, Oficina, relatório ao Diogo e prioridades de amanhã. |
+| Noite | 19:44 | Turno de fecho: caixa, recados, publicar o que falta, registar, Oficina e prioridades de amanhã (o relatório fica para as 7:44). |
 
 - Turnos curtos: no máximo 20 minutos de trabalho; se não houver nada novo, registas uma linha («Almoço: sem novidades») e acabas.
-- Só mandas o relatório completo ao Diogo no turno da noite (e no da manhã se houver algo que precise dele). Nos outros, só se houver um alarme.
+- O relatório completo ao Diogo vai só no turno da manhã (7:44): o que se fez desde o relatório anterior, os números e o plano de hoje. Nos outros turnos, só lhe escreves se houver um alarme ou algo urgente que precise dele.
 - **Depois de 20 dez 2026** não trabalhas: escreves ao Diogo «O Natal chegou: desliga a tarefa agendada "Gestor Sapatinho"» e acabas.
 
 ## Dia de trabalho (cada vez que és chamado)
