@@ -67,4 +67,4 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 - Feito: página inicial arrumada (4 guias e «Ver todos os guias»), página nova `/guias/` com os 21 guias por tema, rodapé de 26 para 6 guias. O agente `produto` passa a «UX e conversão» e é dono da arrumação do site.
 - Feito: até 20 dez a tarefa agendada corre 4 vezes por dia (7:44, 11:44, 15:44, 19:44); cadência nova dos agentes em `.claude/commands/gestor.md` («Turnos»).
 - Publicado: API (worker) com o `oficina` no `/api/stats` (aprovado pelo Diogo a 5 nov), pelo editor do painel do Cloudflare; confirmado `/api/create` inválido = 400 e `/api/stats` sem senha = 401. Chave `oficina` escrita no KV.
-- Por fazer: publicar o site (o pacote está em Documentos\sapatinho-deploy\sapatinho-site.zip; carregar em Workers e Pages › sapatinho-natal › Create deployment).
+- Publicado (22:20): o site, pelo painel do Cloudflare (carregar o zip em Workers e Pages › sapatinho-natal › Create deployment). Confirmado: página inicial com «Ver todos os guias», `/guias/`, `/painel/oficina/`, sitemap e os links `/s/` da família abrem.
