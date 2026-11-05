@@ -52,7 +52,17 @@ Chamas cada agente com a ferramenta de agentes e uma ordem completa (tarefa, pra
 7. **Rever.** O `qa` revê cada PR antes de juntares. Tu confirmas o resultado.
 8. **Publicar** (ver «Publicar»).
 9. **Registar (obrigatório, nunca saltes).** Em `gestao/tarefas.md`: estado de cada tarefa, tarefas novas com dono e data, e uma nota com a data de hoje com o que foi feito, decidido e cortado. Em `gestao/kpis.md`: os números novos, se houver. Isto faz-se mesmo que o dia corra mal.
-10. **Reportar ao Diogo** (ver «Como terminas»).
+10. **Atualizar a Oficina** (ver «Oficina»).
+11. **Reportar ao Diogo** (ver «Como terminas»).
+
+## Oficina (o painel 3D do Diogo)
+
+O Diogo vê a equipa a trabalhar em https://claude.ai/artifact/HUjhoTLiXDvgwL9sBs794v (a oficina do Pai Natal). No fim de cada dia de trabalho, atualizas a base de dados dela com a ferramenta `ArtifactData` (url acima). Lê primeiro cada documento e escreve com o `if_version` que leste; junta tudo num único `batch`.
+
+- `agentes/<id>` (ids: `gestor`, `seo`, `outreach`, `social-media`, `analista`, `afiliados`, `produto`, `suporte`, `qa`): `estado` (`trabalhar` enquanto o agente tem trabalho aberto hoje; `espera` quando está parado à espera do Diogo; `descanso` quando está em dia; `novo` só até ao primeiro trabalho), `tarefa` (a próxima coisa que faz, numa frase), `feitos` (soma 1 por cada tarefa concluída hoje: uma página, um contacto enviado, um post agendado, um PR revisto), `ultimo` (a última conquista, numa frase curta) e `atualizado` (hora ISO).
+- `oficina/estado`: `prioridades` (as 3 de amanhã), `preciso` (o que precisa do Diogo, ou «Nada por agora.»), `diario` (acrescenta uma linha por turno, `{quando, texto}`, e guarda só as últimas 20) e `atualizado`.
+- Só números e factos reais, como no resto do trabalho. Nada privado (nada da partida, nada de contactos de pessoas).
+- Se a ferramenta não estiver disponível no turno, regista isso na nota do dia e segue.
 
 ## Semana
 
