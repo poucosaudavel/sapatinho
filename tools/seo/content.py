@@ -129,6 +129,7 @@ body="""
 <li><a href="/prendas-amigo-secreto-homem/">Prendas de amigo secreto para homem</a></li>
 <li><a href="/prendas-amigo-secreto-mulher/">Prendas de amigo secreto para mulher</a></li>
 <li><a href="/prendas-amigo-secreto-colegas/">Prendas de amigo secreto para colegas de trabalho</a></li>
+<li><a href="/prendas-amigo-secreto-familia/">Prendas de amigo secreto para a família</a>: sogra, avós, tios e primos adolescentes</li>
 <li><a href="/amigo-secreto-criancas/">Prendas para crianças</a>, por idade</li>
 </ul>
 <h3>Por tipo de prenda</h3>
@@ -231,6 +232,7 @@ body="""
 <tr><td>Um homem</td><td>Depende do que ele gosta de fazer: há ideias por gosto nas <a href="/prendas-amigo-secreto-homem/">prendas para homem</a></td></tr>
 <tr><td>Uma mulher</td><td>O mesmo: escolhe pelo que ela faz, não pelo género. Ideias nas <a href="/prendas-amigo-secreto-mulher/">prendas para mulher</a></td></tr>
 <tr><td>Uma criança</td><td>Um livro ilustrado, um jogo, material de desenho. Mais no <a href="/amigo-secreto-criancas/">amigo secreto com crianças</a></td></tr>
+<tr><td>A sogra, os avós ou um primo</td><td>Uma moldura com fotografias, uma vela grande, um cartão-oferta para os adolescentes. Ideias por pessoa nas <a href="/prendas-amigo-secreto-familia/">prendas para a família</a></td></tr>
 <tr><td>Alguém que «tem tudo»</td><td>Uma experiência, algo comestível, um vale feito por ti</td></tr>
 </tbody>
 </table></div>
@@ -1966,6 +1968,138 @@ faq=[
 related=["amigo-secreto-na-empresa", "ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-ate-10-euros"],
 ))
 
+# ---------------------------------------------------------------- família
+PAGES.append(dict(
+slug="prendas-amigo-secreto-familia",
+date="2026-11-05",
+nav="Prendas para a família",
+short="Prendas para a família",
+card="37 ideias para o amigo secreto em família: sogra, avós, tios, cunhados e primos adolescentes.",
+title="Prendas amigo secreto em família: 37 ideias por pessoa | Sapatinho",
+h1="Prendas de amigo secreto para a família: sogra, avós, tios e primos",
+dek="No amigo secreto da família tanto te pode sair a avó como o primo de 15 anos. Trinta e sete ideias, arrumadas por pessoa, com o preço aproximado e para quem é cada uma.",
+description="37 prendas de amigo secreto em família, com preço: para a sogra, os avós, tios, cunhados e primos adolescentes, e ideias que servem a qualquer idade.",
+body="""
+<p class="lead-answer"><strong>Boas prendas de amigo secreto para a família</strong> são as que servem a várias idades e se usam em casa: um jogo de tabuleiro, uma manta para o sofá, um cabaz de produtos portugueses, uma moldura com uma fotografia de todos ou uma caixa de bombons. Se sabes quem te saiu, escolhe pela pessoa: em baixo há ideias para a sogra, os avós, os tios, os cunhados e os primos adolescentes.</p>
+
+<nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
+<li><a href="#qualquer">Para qualquer pessoa da família</a></li>
+<li><a href="#sogra">Para a sogra ou o sogro</a></li>
+<li><a href="#avos">Para os avós</a></li>
+<li><a href="#tios">Para tios e pais</a></li>
+<li><a href="#cunhados">Para cunhados e primos adultos</a></li>
+<li><a href="#adolescentes">Para primos e sobrinhos adolescentes</a></li>
+<li><a href="#evitar">O que evitar em família</a></li>
+<li><a href="#organizar">Como organizar o amigo secreto em família</a></li>
+<li><a href="#perguntas">Perguntas frequentes</a></li>
+</ol></nav>
+
+<p>Os preços entre parênteses são aproximados e mudam de loja para loja e com as promoções. Confirma o valor antes de comprar. Para a lista geral, por limite, vê todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
+
+<h2 id="qualquer">Prendas que servem a qualquer pessoa da família</h2>
+<p>Para quando o sorteio junta três gerações e não sabes bem o que a pessoa gosta.</p>
+<ul>
+<li>Um jogo de tabuleiro para várias idades, rápido de aprender (15 a 25 €): para estrear logo na noite da troca.</li>
+<li>Uma caixa de bombons ou de chocolates portugueses (5 a 12 €): quase toda a gente gosta, e quem não gosta partilha.</li>
+<li>Uma manta polar para o sofá (15 a 20 €): para quem tem sempre frio nas noites de inverno.</li>
+<li>Um puzzle de 500 ou 1000 peças com uma paisagem portuguesa (10 a 20 €): para montar em família nas férias de Natal.</li>
+<li>Um cabaz pequeno com compota, bolachas e um chá (10 a 20 €): para quem prefere prendas que se comem.</li>
+<li>Umas meias quentes ou um pijama de Natal (10 a 20 €): para quem entra no espírito da festa. Confirma o tamanho com alguém próximo.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:juego de mesa familiar|jogos de tabuleiro]] · [[amz:manta polar sofa|mantas]] · [[amz:puzzle 1000 piezas paisaje|puzzles]] · [[amz:pijama navidad familia|pijamas de Natal]]</p>
+
+<h2 id="sogra">Prendas para a sogra ou o sogro</h2>
+<p>Quando ainda há pouca confiança, vale mais uma prenda bonita e útil do que uma piada.</p>
+<ul>
+<li>Uma vela perfumada grande em frasco de vidro (10 a 18 €): segura para quem gosta de ter a casa arranjada.</li>
+<li>Uma planta de interior num vaso bonito (10 a 20 €): para quem tem jeito para plantas e uma varanda cheia.</li>
+<li>Um azeite virgem extra de um produtor português, com flor de sal (10 a 18 €): para quem manda na cozinha no jantar de Natal.</li>
+<li>Um livro de receitas de doces portugueses (12 a 20 €): para quem faz as filhoses e as rabanadas da família.</li>
+<li>Um avental de cozinha de tecido grosso (10 a 18 €): para o sogro que trata do assado ou do churrasco.</li>
+<li>Uma garrafa de vinho do Porto ou um licor, se souberes que a pessoa bebe (10 a 20 €): para levar para a mesa da consoada.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:vela perfumada tarro cristal grande|velas em frasco]] · [[amz:planta interior maceta decorativa|plantas de interior]] · [[amz:delantal cocina algodon|aventais]]</p>
+<p>Se te saiu a sogra e não sabes os gostos dela, há mais ideias por gostos nas <a href="/prendas-amigo-secreto-mulher/">prendas de amigo secreto para mulher</a>; para o sogro, nas <a href="/prendas-amigo-secreto-homem/">prendas para homem</a>.</p>
+
+<h2 id="avos">Prendas para os avós</h2>
+<p>Para os avós, o que conta é sobretudo a família. As prendas com fotografias e tempo passado juntos costumam acertar.</p>
+<ul>
+<li>Uma moldura com uma fotografia recente dos netos (8 a 15 €): para pôr na sala, à vista de todas as visitas.</li>
+<li>Um calendário de 2027 feito com fotografias da família (12 a 20 €, em lojas de impressão de fotografias): para lembrar os aniversários de todos.</li>
+<li>Umas pantufas quentes com sola antiderrapante (12 a 20 €): para quem anda por casa e tem chão frio.</li>
+<li>Uma lupa de leitura com luz (8 a 15 €): para quem lê o jornal ou as palavras cruzadas.</li>
+<li>Uma caixa de chás ou de café com uma caneca grande (10 a 18 €): para o lanche da tarde.</li>
+<li>Um baralho de cartas de letra grande ou um dominó (6 a 15 €): para quem joga à sueca ou ao dominó com os amigos.</li>
+<li>Um vale feito por ti, como «um almoço de domingo cozinhado pelos netos» ou «uma tarde de ajuda no quintal» (só custa o tempo): para quem diz que não precisa de nada.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:marco de fotos|molduras]] · [[amz:zapatillas casa antideslizantes|pantufas]] · [[amz:lupa de lectura con luz|lupas com luz]] · [[amz:baraja cartas letra grande|cartas de letra grande]]</p>
+
+<h2 id="tios">Prendas para tios e pais</h2>
+<ul>
+<li>Um termómetro de cozinha digital, para assados e bacalhau no forno (10 a 18 €): para quem cozinha para a família toda.</li>
+<li>Uma caixa de conservas portuguesas em latas bonitas (10 a 20 €): para quem gosta de petiscar antes do jantar.</li>
+<li>Uma garrafa térmica de aço inoxidável (12 a 20 €): para quem leva café para o trabalho ou para a pesca.</li>
+<li>Um cachecol ou um gorro de lã (10 a 20 €): para quem tem sempre frio à saída da missa do galo ou do futebol.</li>
+<li>Um livro do autor preferido, acabado de sair (15 a 20 €): para quem lê nas férias.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:termometro de cocina digital|termómetros de cozinha]] · [[amz:botella termica acero inoxidable|garrafas térmicas]] · [[amz:bufanda lana|cachecóis de lã]]</p>
+
+<h2 id="cunhados">Prendas para cunhados e primos adultos</h2>
+<p>Com quem tens mais confiança já dá para arriscar uma piada, desde que seja sobre a família em geral e não sobre a pessoa.</p>
+<ul>
+<li>Um jogo de cartas para grupo (8 a 15 €): para animar a noite de Natal depois do jantar.</li>
+<li>Uma caneca com uma piada sobre jantares de família (7 a 12 €): para o cunhado que se ri de tudo.</li>
+<li>Um kit para fazer cocktails ou gin em casa, se a pessoa bebe (12 a 20 €): para quem recebe os amigos.</li>
+<li>Um molho picante artesanal (6 a 12 €): para quem põe piri-piri em tudo.</li>
+<li>Dois bilhetes de cinema (14 a 20 €): para levar quem quiser.</li>
+<li>Uma bateria portátil pequena para o telemóvel (15 a 20 €): para quem fica sempre sem bateria nas viagens de Natal.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:juego de cartas para grupo|jogos de cartas]] · [[amz:kit cocteleria casa|kits de cocktails]] · [[amz:salsa picante artesanal|molhos picantes]] · [[amz:bateria externa pequeña|baterias portáteis]]</p>
+<p>Mais ideias com piada nas <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas para amigo secreto</a>.</p>
+
+<h2 id="adolescentes">Prendas para primos e sobrinhos adolescentes</h2>
+<p>É a pessoa mais difícil de acertar no amigo secreto da família. Na dúvida, deixa-os escolher.</p>
+<ul>
+<li>Um cartão-oferta de uma loja de música, jogos, livros ou roupa (10 a 20 €): para quem tem gostos que mudam todos os meses.</li>
+<li>Uns auriculares simples, com ou sem fio (10 a 20 €): para quem perde os seus de três em três meses.</li>
+<li>Uma fita de luz LED de cores para o quarto (10 a 20 €): para quem gosta de mudar o quarto.</li>
+<li>Um jogo de cartas de festa, para jogar com os amigos (10 a 15 €): para quem tem a casa cheia ao fim de semana.</li>
+<li>Uma garrafa reutilizável com um desenho de que gostem (8 a 15 €): para levar para a escola ou para o treino.</li>
+<li>O primeiro volume de uma banda desenhada ou de uma série de manga (8 a 12 €): para quem ainda não sabe que gosta de ler.</li>
+<li>Uma bolsa ou um estojo para o telemóvel e os cabos (8 a 15 €): para quem anda com tudo na mochila.</li>
+</ul>
+<p class="shop">Procurar na Amazon: [[amz:auriculares baratos|auriculares]] · [[amz:tira led habitacion|luzes LED]] · [[amz:juego de cartas fiesta adolescentes|jogos de festa]] · [[amz:manga primer volumen|manga]]</p>
+<p>Para os mais novos, há ideias por idade no <a href="/amigo-secreto-criancas/">amigo secreto com crianças</a>.</p>
+
+<h2 id="evitar">O que evitar no amigo secreto da família</h2>
+<ul>
+<li>Prendas que soam a recado: uma balança, um livro de dietas ou um despertador para quem chega sempre atrasado.</li>
+<li>Piadas sobre a idade, o peso, a vida amorosa ou as discussões antigas da família.</li>
+<li>Roupa com tamanho, se não tens a certeza. Se arriscares, pede talão de troca.</li>
+<li>Álcool para quem não bebe ou para os primos menores de idade.</li>
+<li>Passar muito o limite combinado. Na família, isso nota-se e deixa os outros pouco à vontade.</li>
+</ul>
+
+<h2 id="organizar">Como organizar o amigo secreto em família</h2>
+<ul>
+<li><strong>Um limite igual para todos.</strong> Combinem um valor que sirva aos avós, aos pais e aos primos que ainda estudam. Se o limite for 15 ou 20 €, vê as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a> e as <a href="/prendas-amigo-secreto-ate-20-euros/">prendas até 20 €</a>.</li>
+<li><strong>Uma lista de desejos.</strong> Cada pessoa escreve três sugestões, e ninguém fica a adivinhar. É uma das variantes nas <a href="/regras-do-amigo-secreto/#variantes">regras do amigo secreto</a>.</li>
+<li><strong>Crianças à parte, se for preciso.</strong> Muitas famílias fazem um sorteio só dos adultos e outro dos miúdos, cada um com o seu limite.</li>
+<li><strong>Família espalhada pelo país ou lá fora?</strong> O <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a> explica como enviar a prenda e fazer a troca por videochamada.</li>
+<li><strong>Um jogo na hora da troca.</strong> Dados, roubos e prendas a passar de mão em mão estão nos <a href="/troca-de-prendas-natal/">jogos de troca de prendas</a>.</li>
+</ul>
+<p>O sorteio pode fazer-se online: quem organiza escreve os nomes e os emails da família no <a href="/criar">sorteio online por email</a>, e cada pessoa recebe o seu resultado no email, com o limite escrito no convite. A página de quem organiza não mostra quem tirou quem.</p>
+""",
+faq=[
+("O que oferecer à sogra no amigo secreto?", "Uma prenda bonita e útil, que não seja muito pessoal: uma vela perfumada grande, uma planta num vaso bonito, um azeite especial ou um livro de receitas de doces portugueses. Se souberes que bebe, um vinho do Porto também resulta."),
+("Que prenda dar aos avós no amigo secreto?", "As que têm a família lá dentro: uma moldura com uma fotografia dos netos, um calendário com fotografias de todos ou um vale para um almoço cozinhado pelos netos. Umas pantufas quentes ou uma lupa com luz são úteis no dia a dia."),
+("Qual é um bom limite para o amigo secreto em família?", "Um valor que todos possam pagar sem esforço, dos avós aos primos que ainda estudam. Entre 10 e 20 € costuma funcionar. O que importa é ser igual para todos."),
+("O que oferecer a um primo adolescente que mal conheço?", "Um cartão-oferta de uma loja de música, jogos, livros ou roupa, para ele escolher. Uns auriculares simples ou um jogo de cartas de festa também são apostas seguras."),
+("Os miúdos podem entrar no mesmo sorteio que os adultos?", 'Podem, mas muitas famílias preferem fazer dois sorteios: um dos adultos e outro das crianças, cada um com o seu limite. Há ideias por idade no <a href="/amigo-secreto-criancas/">amigo secreto com crianças</a>.'),
+],
+related=["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-ate-20-euros", "amigo-secreto-criancas"],
+))
+
 # ---------------------------------------------------------------- privacidade técnica
 PAGES.append(dict(
 slug="como-funciona-o-sapatinho-privacidade",
@@ -2141,6 +2275,9 @@ IMAGES = {
 "prendas-amigo-secreto-colegas": dict(
     cover="Ilustração de uma secretária com um candeeiro, um caderno, uma prenda com etiqueta, uma caneca de viagem e uma planta",
     figures=[dict(file="secretaria", after="ate-15", alt="Prendas para a secretária de um colega: um candeeiro LED, um caderno com lápis, uma tablete de chocolate, uma caneca de viagem e uma planta")]),
+"prendas-amigo-secreto-familia": dict(
+    cover="Ilustração de uma família de três gerações, com avó, pai e neta, ao lado de prendas embrulhadas e de uma moldura com fotografia",
+    figures=[dict(file="avos", after="avos", alt="Prendas para os avós: uma moldura com a fotografia dos netos, uma caneca quente, umas pantufas e duas cartas de jogar")]),
 "troca-de-prendas-natal": dict(
     cover="Ilustração de duas prendas com setas a trocarem de lugar, dois dados e um saco de prendas com um ponto de interrogação",
     figures=[dict(file="dados", after="dados", alt="Dois dados por cima de uma fila de prendas embrulhadas, com setas a mostrar as prendas a passar de mão em mão"),
@@ -2228,6 +2365,14 @@ QUICK = {
     ("caneca-viagem", "Caneca de viagem com tampa", "7 a 10 €", "Para quem chega com o café na mão.", "taza de viaje con tapa"),
     ("candeeiro", "Candeeiro LED de secretária", "10 a 15 €", "Para quem trabalha até tarde.", "lampara led escritorio usb"),
     ("planta", "Planta para pouca luz", "10 a 20 €", "Para quem tem a secretária longe da janela.", "planta interior poca luz maceta"),
+]),
+"prendas-amigo-secreto-familia": dict(items=[
+    ("dados", "Jogo de tabuleiro para várias idades", "15 a 25 €", "Para estrear na noite da troca.", "juego de mesa familiar"),
+    ("manta", "Manta polar para o sofá", "15 a 20 €", "Para quem tem sempre frio no inverno.", "manta polar sofa"),
+    ("puzzle", "Puzzle de 1000 peças", "10 a 20 €", "Para montar em família nas férias.", "puzzle 1000 piezas paisaje"),
+    ("vela", "Vela grande em frasco", "10 a 18 €", "Para a sogra que gosta da casa arranjada.", "vela perfumada tarro cristal grande"),
+    ("cha", "Caixa de chás com caneca", "10 a 18 €", "Para o lanche da tarde dos avós.", "caja te regalo taza"),
+    ("cartas", "Jogo de cartas de festa", "10 a 15 €", "Para o primo adolescente.", "juego de cartas fiesta adolescentes"),
 ]),
 "ideias-de-prendas-amigo-secreto": dict(items=[
     ("meias", "Meias de Natal divertidas", "até 5 €", "Para quem leva o Natal a sério, ou a brincar.", "calcetines navidad divertidos"),
