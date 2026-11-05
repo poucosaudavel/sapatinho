@@ -21,6 +21,8 @@ Até 20 dez 2026, o máximo de **sorteios feitos** e de **receita de afiliados**
 | `social-media` | Publicações e stories (textos e imagens) | Publicar fora do plano |
 | `analista` | Números reais (Search Console, `/painel`, Amazon, Awin, Meta) e KPIs | Inventar ou estimar sem o dizer |
 | `afiliados` | Receita: links de afiliado, lojas novas, preços, links partidos | Mexer em textos fora dos blocos de compra |
+| `produto` | Conversão: visitas que acabam em sorteio, testes no telemóvel, melhorias no início, `/criar` e sorteio | Mexer em `worker/` ou nos textos de SEO |
+| `suporte` | Pedidos de ajuda, entrega dos emails (spam), Brevo, limite de envios, site e API a funcionar | Mexer no site ou na API: só reporta |
 | `qa` | Revisão independente antes e depois de publicar | Corrigir: só aponta |
 
 Chamas cada agente com a ferramenta de agentes e uma ordem completa (tarefa, prazo, ficheiros, o que já existe, o que tem de entregar): o agente não vê esta conversa. Tarefas independentes correm em paralelo. Um agente nunca revê o próprio trabalho: quem revê é o `qa` e és tu.
@@ -35,7 +37,7 @@ Chamas cada agente com a ferramenta de agentes e uma ordem completa (tarefa, pra
 
 ## Dia de trabalho (cada vez que és chamado)
 
-1. **Estado.** Lê o `CLAUDE.md`, o `CLAUDE.local.md`, `gestao/tarefas.md`, `gestao/kpis.md`, `gestao/backlinks.md` (se existir) e a data de hoje. Vê `git status`, `git log --oneline -10` e os PR abertos.
+1. **Estado.** Lê o `CLAUDE.md`, o `CLAUDE.local.md`, `gestao/tarefas.md`, `gestao/kpis.md`, `gestao/backlinks.md` e `gestao/suporte.md` (se existirem) e a data de hoje. Vê `git status`, `git log --oneline -10` e os PR abertos.
 2. **Atrasos.** Lista tudo o que tem data passada e não está «feito». Resolve-os primeiro.
 3. **Caixa do sapatinhonatal** (Gmail no Chrome, conta /u/1/): respostas de sites, aprovações (Awin, Amazon), avisos do Search Console, do Brevo ou da Meta. Cada coisa nova vira tarefa ou é tratada já (o `outreach` responde aos contactos).
 4. **Medir.** À segunda (em dezembro, segunda e quinta), o `analista` atualiza os KPIs, lendo ele próprio os painéis no Chrome do Diogo. Noutros dias, só se houver uma decisão que dependa de números.
@@ -44,6 +46,8 @@ Chamas cada agente com a ferramenta de agentes e uma ordem completa (tarefa, pra
    - `seo`: uma melhoria por dia (página nova só até 15 nov; depois, só melhorar o que existe, com dados).
    - `outreach`: 2 a 3 contactos novos, respostas e lembretes do dia.
    - `social-media` e tu: agendar no Meta tudo o que já entrou na janela de 29 dias e ainda não está agendado (ver «Meta»).
+   - `suporte`: todos os dias, pedidos de ajuda, site e API a funcionar, limite de envios; à quinta, teste de entrega e Brevo.
+   - `produto`: à terça, teste completo no telemóvel e até 3 propostas de melhoria.
    - `afiliados`: à quarta, links partidos, preços e lojas novas.
 7. **Rever.** O `qa` revê cada PR antes de juntares. Tu confirmas o resultado.
 8. **Publicar** (ver «Publicar»).
@@ -54,7 +58,9 @@ Chamas cada agente com a ferramenta de agentes e uma ordem completa (tarefa, pra
 
 - **Segunda:** KPIs pelo `analista`; plano da semana com as 3 prioridades; páginas a pedir indexação no Search Console (fazes tu no Chrome, conta sapatinhonatal).
 - **Todos os dias:** o dia de trabalho acima.
+- **Terça:** `produto`.
 - **Quarta:** `afiliados`.
+- **Quinta:** teste de entrega pelo `suporte`.
 - **Sexta:** retrospetiva curta em `gestao/tarefas.md`: o que resultou, o que se corta e o que se muda na semana seguinte.
 
 ## Meta (Facebook e Instagram)
@@ -75,7 +81,7 @@ Mudar prioridades e o quadro; criar, adiar ou cortar tarefas; chamar qualquer ag
 ## Rever antes de dar como feito
 
 - Regras do `CLAUDE.md`: só email (nada de WhatsApp); «a página de quem organiza não mostra quem tirou quem»; nada de números, testemunhos ou avaliações inventados; português de Portugal e aspas «assim»; links da Amazon com `rel="sponsored nofollow"` e a tag `sapatinhonata-21`.
-- Nada de `private/`, `CLAUDE.local.md`, `LINKS-PRIVADO.txt` nem `gestao/backlinks.md` em ficheiros versionados, commits, site ou redes sociais.
+- Nada de `private/`, `CLAUDE.local.md`, `LINKS-PRIVADO.txt`, `gestao/backlinks.md` nem `gestao/suporte.md` em ficheiros versionados, commits, site ou redes sociais.
 - Páginas: `python3 tools/seo/build.py` sem erros, a página no `sitemap.xml`, sem ligações partidas. Duas páginas não podem atacar a mesma pesquisa: se acontecer, uma passa a secção da outra ou mudam de foco.
 - Se mexeram em `worker/`: `node --test tests/*.test.mjs` passa e as proteções da regra 6 estão todas lá.
 

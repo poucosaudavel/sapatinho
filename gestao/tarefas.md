@@ -49,6 +49,8 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 
 ## Notas do gestor
 
+- 5 nov (noite): dois agentes novos, `produto` (conversão; terça) e `suporte` (ajuda e entrega dos emails; todos os dias, teste à quinta). O gestor passa a correr sozinho todos os dias às 7:44 e às 19:44.
+
 - 5 nov: o gestor passa a CEO, com agentes novos: `outreach` (backlinks, saiu do `seo`), `analista`, `afiliados` e `qa`. Registo obrigatório no fim de cada dia de trabalho. Atrasos encontrados: Meta de 28 a 30 nov por agendar (tratado), quadro e KPIs parados desde 31 out, 19 contactos sem registo, aprovação da Awin por tratar.
 
 - 31 out: Meta reagendado com as versões novas de 2, 3, 4, 8 e 14 nov (feed) e 4 a 8 nov (stories). O gestor passa a ser o único a agendar no Meta (o lembrete do claude.ai foi cancelado). API só com o «sim» do Diogo.

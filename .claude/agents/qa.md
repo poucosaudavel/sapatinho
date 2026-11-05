@@ -18,7 +18,7 @@ description: Revisor independente do Sapatinho. Usar antes de juntar um PR e dep
    - links da Amazon com `tag=sapatinhonata-21` e `rel="sponsored nofollow"`.
 3. Ligações internas: cada `href="/..."` aponta para uma página que existe em `site/`; páginas novas estão no `sitemap.xml`.
 4. Duas páginas não atacam a mesma pesquisa (título e H1 parecidos): se acontecer, aponta-o.
-5. Nada privado no PR: nenhum ficheiro de `private/`, `CLAUDE.local.md`, `LINKS-PRIVADO.txt`, `gestao/backlinks.md`, nem texto copiado deles.
+5. Nada privado no PR: nenhum ficheiro de `private/`, `CLAUDE.local.md`, `LINKS-PRIVADO.txt`, `gestao/backlinks.md`, `gestao/suporte.md`, nem texto copiado deles.
 6. Se mexe em `worker/` ou `tests/`: `node --test tests/*.test.mjs` passa e as proteções da regra 6 estão todas lá.
 7. Redes sociais: os links apontam para páginas que existem; os textos respeitam o `marketing/brief.md`.
 
