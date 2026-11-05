@@ -19,7 +19,7 @@ Que cada convite chegue à caixa de entrada e que quem tem um problema receba aj
 2. **Site e API a funcionar:** a página inicial, o `/criar` e um `/r` de teste abrem; `/api/create` com um nome inválido devolve 400.
 3. **Limite de envios:** emails enviados hoje no `/painel` (ou no Brevo). Acima de 200 num dia, avisa logo o gestor.
 
-## Uma vez por semana (à quinta)
+## Duas vezes por semana até 20 dez (à segunda e à quinta)
 
 1. **Teste de entrega:** um sorteio de 3 pessoas para `sapatinhonatal+entrega1@gmail.com`, `+entrega2` e `+entrega3`. Confirma que os 3 convites chegam à caixa de entrada (não ao spam nem às promoções), que o botão funciona e que o segundo email chega depois de sortear. Regista o resultado.
 2. **Brevo** (Chrome, com a sessão do Diogo): emails devolvidos, bloqueados e marcados como spam na semana. Se as queixas subirem, avisa o gestor com os números.

@@ -164,7 +164,7 @@ const TEAM = [
   {id:"social-media",nome:"Redes sociais", papel:"Facebook e Instagram",                   cor:"#ff7eb6", prop:"megafone"},
   {id:"analista",    nome:"Métricas",      papel:"Números reais e KPIs",                    cor:"#8be0ac", prop:"quadro"},
   {id:"afiliados",   nome:"Afiliados",     papel:"Receita dos links de compra",             cor:"#ffd166", prop:"cofre"},
-  {id:"produto",     nome:"Conversão",     papel:"Visitas que viram sorteios",              cor:"#b48cff", prop:"brinquedos"},
+  {id:"produto",     nome:"UX e conversão", papel:"Site arrumado, visitas que viram sorteios",              cor:"#b48cff", prop:"brinquedos"},
   {id:"suporte",     nome:"Suporte",       papel:"Ajuda e entrega dos emails",              cor:"#ff9f6b", prop:"sino"},
   {id:"inovacao",    nome:"Inovação",      papel:"CIO: ideias para fazer crescer o negócio", cor:"#c6f36b", prop:"lampada"},
   {id:"qa",          nome:"Revisão",       papel:"Revê tudo antes e depois de publicar",    cor:"#6be0d8", prop:"lupa"}
@@ -182,7 +182,7 @@ const fmtHora = iso => { try{ const d=new Date(iso); return d.toLocaleString("pt
 function hud(){
   const now=new Date(); let natal=new Date(now.getFullYear(),11,25); if(now>natal) natal=new Date(now.getFullYear()+1,11,25);
   $("h-dias").textContent = Math.ceil((natal-now)/864e5);
-  const next=new Date(now); const slots=[[7,44],[19,44]]; let found=null;
+  const next=new Date(now); const slots=[[7,44],[11,44],[15,44],[19,44]]; let found=null;
   for(let d=0; d<2 && !found; d++){ for(const [h,m] of slots){ const t=new Date(now.getFullYear(),now.getMonth(),now.getDate()+d,h,m); if(t>now){found=t;break;} } }
   $("h-turno").textContent = found ? (found.getDate()===now.getDate()?"hoje ":"amanhã ")+found.toLocaleTimeString("pt-PT",{hour:"2-digit",minute:"2-digit"}) : "–";
   const r=(state.geral&&state.geral.resultados)||{}; const num=v=>typeof v==="number"&&isFinite(v);

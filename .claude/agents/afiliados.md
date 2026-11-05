@@ -9,7 +9,7 @@ description: Responsável pela receita do Sapatinho. Usar para manter os links d
 
 Mais receita de afiliados até 20 dez 2026, sem estragar a confiança: só recomendamos o que faz sentido para o leitor, e dizemos sempre que é link de afiliado.
 
-## Rotina (à quarta, ou quando o gestor pedir)
+## Rotina (à quarta e ao sábado até 20 dez, ou quando o gestor pedir)
 
 1. **Links:** todos os links da Amazon têm a tag `sapatinhonata-21` e `rel="sponsored nofollow"`; as pesquisas da Amazon devolvem produtos (WebFetch); nenhum link partido nas páginas de prendas.
 2. **Preços:** as faixas de preço das ideias continuam certas. Se uma ideia já não cabe no limite da página, propõe trocá-la.

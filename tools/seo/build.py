@@ -85,6 +85,17 @@ NAV = ('<nav aria-label="Principal"><a href="/#como-funciona">Como funciona</a>'
 HEADER = ('<header class="top">\n    <a class="logo" href="/"><img src="/favicon.svg" alt="" width="34" height="34">'
           '<b>Sapatinho<span>.</span></b></a>\n    ' + NAV + '\n  </header>')
 
+# Fewer links: the footer and the homepage show only the main guides; the rest live in /guias/ (UX, 5 nov 2026)
+HOME_GUIDES = ["ideias-de-prendas-amigo-secreto", "regras-do-amigo-secreto", "como-fazer-sorteio-amigo-secreto", "amigo-secreto-na-empresa"]
+FOOTER_GUIDES = HOME_GUIDES + ["prendas-amigo-secreto-ate-10-euros"]
+BYSLUG_F = {p["slug"]: p["short"] for p in PAGES}
+GUIDE_GROUPS = [
+    ("Organizar o amigo secreto", ["regras-do-amigo-secreto", "como-fazer-sorteio-amigo-secreto", "roleta-amigo-secreto", "pistas-e-mensagens-amigo-secreto", "troca-de-prendas-natal"]),
+    ("Prendas por preço", ["prendas-amigo-secreto-ate-5-euros", "prendas-amigo-secreto-ate-10-euros", "prendas-amigo-secreto-ate-15-euros", "prendas-amigo-secreto-ate-20-euros", "amigo-secreto-black-friday"]),
+    ("Prendas por pessoa", ["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-homem", "prendas-amigo-secreto-mulher", "prendas-amigo-secreto-colegas", "prendas-amigo-secreto-familia", "prendas-engracadas-amigo-secreto", "prendas-ultima-hora-amigo-secreto"]),
+    ("Situações especiais", ["amigo-secreto-na-empresa", "amigo-secreto-a-distancia", "amigo-secreto-criancas", "como-funciona-o-sapatinho-privacidade"]),
+]
+
 FOOTER = """<footer class="foot rich">
     <div class="brand-col"><a class="logo" href="/"><img src="/favicon.svg" alt="" width="28" height="28"><b style="font-size:1.3rem">Sapatinho<span>.</span></b></a>
       <p>Amigo secreto online, grátis e por email. Cada pessoa recebe o seu link e descobre quem lhe saiu.</p></div>
@@ -97,7 +108,8 @@ FOOTER = """<footer class="foot rich">
       <li><a href="https://www.facebook.com/sapatinhonatal" rel="noopener">Facebook</a></li>
     </ul></div>
     <div><h3>Guias</h3><ul>
-""" + "\n".join(f'      <li><a href="/{p["slug"]}/">{p["short"]}</a></li>' for p in PAGES) + """
+""" + "\n".join(f'      <li><a href="/{s}/">{BYSLUG_F[s]}</a></li>' for s in FOOTER_GUIDES) + """
+      <li><a href="/guias/">Todos os guias</a></li>
     </ul></div>
     <div class="legal"><span>© 2026 Sapatinho · sapatinho-natal.pt</span><span>Ajuda: ajuda@sapatinho-natal.pt</span></div>
   </footer>"""
@@ -309,6 +321,28 @@ HOME_FAQ = [
 ("Quantas pessoas podem participar?", "Entre 3 e 30 pessoas por sorteio. Para grupos maiores, como empresas, faz um sorteio por equipa."),
 ]
 
+def home_cards():
+    c = "".join(f'<a href="/{BYSLUG[g]["slug"]}/"><b>{BYSLUG[g]["short"]}</b><span>{BYSLUG[g]["card"]}</span></a>' for g in HOME_GUIDES)
+    return c + f'<a href="/guias/"><b>Ver todos os guias</b><span>{len(PAGES)} guias: prendas por preço e por pessoa, regras, empresa, crianças e mais.</span></a>'
+
+def build_hub():
+    url = BASE + "/guias/"
+    grouped = [s for _, g in GUIDE_GROUPS for s in g]
+    missing = [p["slug"] for p in PAGES if p["slug"] not in grouped]
+    assert not missing and len(grouped) == len(set(grouped)), f"guides without a group in /guias/: {missing}"
+    h = head("Guias do amigo secreto: prendas, regras e organização | Sapatinho",
+             "Todos os guias do Sapatinho para o amigo secreto: ideias de prendas por preço e por pessoa, regras, sorteio, empresa, crianças e à distância.", url,
+             jsonld={"@context": "https://schema.org", "@graph": [ORG, WEBSITE, crumbs_ld([("Início", BASE + "/"), ("Guias", url)])]})
+    parts = []
+    for title, slugs in GUIDE_GROUPS:
+        cards = "".join(f'<a href="/{BYSLUG[g]["slug"]}/"><b>{BYSLUG[g]["short"]}</b><span>{BYSLUG[g]["card"]}</span></a>' for g in slugs if g in BYSLUG)
+        parts.append(f'    <h2>{title}</h2>\n    <nav class="related" style="max-width:none;margin:0 0 28px" aria-label="{title}">{cards}</nav>')
+    main = f"""    <nav class="crumbs" aria-label="Estás aqui"><a href="/">Início</a><span aria-hidden="true">›</span><span>Guias</span></nav>
+    <div class="article-head"><h1>Guias do amigo secreto</h1><p>Tudo o que precisas para organizar a troca e escolher a prenda.</p></div>
+""" + "\n".join(parts) + "\n    " + CTA
+    os.makedirs(f"{SITE}/guias", exist_ok=True)
+    open(f"{SITE}/guias/index.html", "w").write(page_shell(h, main))
+
 def patch_home():
     f = f"{SITE}/index.html"
     h = open(f).read()
@@ -339,11 +373,11 @@ def patch_home():
     h = re.sub(r'<div class="faq">.*?</div>\n    </section>', '<div class="faq">\n' + faq + '\n      </div>\n    </section>', h, count=1, flags=re.S)
     # guides section before the FAQ
     if 'id="guias"' not in h:
-        cards = "".join(f'<a href="/{p["slug"]}/"><b>{p["short"]}</b><span>{p["card"]}</span></a>' for p in PAGES)
+        cards = home_cards()
         guides = f"""    <section id="guias">
       <div class="section-h">
         <div class="eyebrow">Guias</div>
-        <h2>Tudo para organizar o amigo secreto</h2>
+        <h2>Guias para organizar o amigo secreto</h2>
       </div>
       <nav class="related" style="max-width:none;margin:0" aria-label="Guias">{cards}</nav>
     </section>
@@ -351,8 +385,9 @@ def patch_home():
 """
         h = h.replace('    <section id="perguntas">', guides + '    <section id="perguntas">', 1)
     else:
-        cards = "".join(f'<a href="/{p["slug"]}/"><b>{p["short"]}</b><span>{p["card"]}</span></a>' for p in PAGES)
+        cards = home_cards()
         h = re.sub(r'(<nav class="related" style="max-width:none;margin:0" aria-label="Guias">).*?(</nav>)', lambda m: m.group(1) + cards + m.group(2), h, count=1, flags=re.S)
+        h = h.replace("<h2>Tudo para organizar o amigo secreto</h2>", "<h2>Guias para organizar o amigo secreto</h2>")
     if ".faq details p a{" not in h:
         h = h.replace(".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}",
                       ".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}\n.faq details p a{color:var(--paper)}")
@@ -398,7 +433,7 @@ def write_404():
 def write_sitemap():
     urls = [("/", "1.0", "weekly", MODIFIED), ("/criar", "0.9", "monthly", PUBLISHED)]
     urls += [(f"/{p['slug']}/", "0.8", "monthly", p.get("modified", p.get("date", PUBLISHED))) for p in PAGES]
-    urls += [("/privacidade/", "0.3", "yearly", PUBLISHED)]
+    urls += [("/guias/", "0.7", "monthly", MODIFIED), ("/privacidade/", "0.3", "yearly", PUBLISHED)]
     body = "\n".join(f"  <url><loc>{BASE}{u}</loc><lastmod>{lm}</lastmod><changefreq>{c}</changefreq><priority>{pr}</priority></url>" for u, pr, c, lm in urls)
     open(f"{SITE}/sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n')
     open(f"{SITE}/robots.txt", "w").write(f"""User-agent: *
@@ -416,6 +451,7 @@ if __name__ == "__main__":
     for p in PAGES:
         build_guide(p)
     build_privacy()
+    build_hub()
     patch_home()
     patch_criar()
     for path in ["sorteio.html", "r.html", "org.html"]:
