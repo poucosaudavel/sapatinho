@@ -21,6 +21,8 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | até 2 nov | gestor | Pesquisar programas de afiliados em Portugal (vales de experiências, lojas) | feito (`gestao/afiliados.md`) |
 | 2 nov | gestor | Agendar no Meta o que falta de novembro: feed de 28 nov 20:30, 29 nov e 30 nov; stories de 29 e 30 nov | atrasado; feito a 5 nov |
 | todos os dias | gestor | Agendar no Meta o que já entrou na janela de 29 dias | contínuo |
+| 6 nov | gestor | Publicar o site (painel com a Oficina 3D) e a API (`/api/stats` com o estado da Oficina; **o Diogo aprovou esta publicação da API a 5 nov**), depois copiar `gestao/oficina.json` para a chave `oficina` do KV e confirmar `/painel/oficina/` | por fazer |
+| 6 nov | inovacao | Primeiras 3 ideias em `gestao/ideias.md` | por fazer |
 | até 6 nov | outreach | Criar `gestao/backlinks.md` (fora do Git) com os 19 contactos já enviados e marcar os lembretes de 7 dias | por fazer |
 | até 9 nov | seo | «Prendas para colegas» e «Amigo secreto na empresa»: focos diferentes e ligação entre as duas | por fazer |
 | todas as segundas | Diogo | Enviar os números da semana (Search Console, `/painel`, Amazon, Meta); ver `gestao/kpis.md` | por fazer |
@@ -48,6 +50,8 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 1 a 20 dez | gestor | Vigiar o limite do Brevo | por fazer |
 
 ## Notas do gestor
+
+- 5 nov (noite): chegou o CIO (`inovacao`). A Oficina 3D passa a estar também em `/painel/oficina/`, à espera de publicação (a sessão do Cloudflare no Chrome expirou).
 
 - 5 nov (noite): dois agentes novos, `produto` (conversão; terça) e `suporte` (ajuda e entrega dos emails; todos os dias, teste à quinta). O gestor passa a correr sozinho todos os dias às 7:44 e às 19:44.
 
