@@ -62,3 +62,9 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 - 30 out: KPIs e objetivos criados em `gestao/kpis.md`, a pedido do Diogo.
 - 30 out: quadro criado a partir do plano de rentabilização até 20 dez.
 - 30 out: o Diogo deu ao gestor autonomia para juntar PRs e publicar o site e a API.
+
+### 5 nov 2026, 22:15 (Claude, com o Diogo)
+- Feito: página inicial arrumada (4 guias e «Ver todos os guias»), página nova `/guias/` com os 21 guias por tema, rodapé de 26 para 6 guias. O agente `produto` passa a «UX e conversão» e é dono da arrumação do site.
+- Feito: até 20 dez a tarefa agendada corre 4 vezes por dia (7:44, 11:44, 15:44, 19:44); cadência nova dos agentes em `.claude/commands/gestor.md` («Turnos»).
+- Publicado: API (worker) com o `oficina` no `/api/stats` (aprovado pelo Diogo a 5 nov), pelo editor do painel do Cloudflare; confirmado `/api/create` inválido = 400 e `/api/stats` sem senha = 401. Chave `oficina` escrita no KV.
+- Por fazer: publicar o site (o pacote está em Documentos\sapatinho-deploy\sapatinho-site.zip; carregar em Workers e Pages › sapatinho-natal › Create deployment).
