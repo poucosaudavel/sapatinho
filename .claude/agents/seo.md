@@ -71,3 +71,7 @@ Os backlinks são do agente `outreach`. Se encontrares um site bom para contacta
 - Não inventar estatísticas, avaliações nem testemunhos.
 - Não escrever que quem organiza «não vê» os resultados: «a página de quem organiza não mostra quem tirou quem».
 - Não mexer em `worker/` nem em `private/`.
+
+## Recados
+
+Se o que fizeste muda o trabalho de outro agente, deixa-lhe um recado no fim de `gestao/recados.md` (uma linha na tabela: data, de, para, recado curto e concreto, estado `novo`). Exemplos: «seo → social-media: a página de prendas para colegas está publicada, o link é /prendas-amigo-secreto-colegas/»; «analista → seo: a página até 15 € tem muitas impressões e CTR de 0,4 %». No início do trabalho, vê se há recados `entregue` para ti na ordem do gestor e trata-os.

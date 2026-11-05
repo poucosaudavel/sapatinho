@@ -34,3 +34,7 @@ tools: Read, Edit, Write, Grep, Glob, Bash, WebSearch
 - **Reagir à atualidade:** se aparecer um tema (notícia, meme, data), propõe a troca de uma publicação do calendário em vez de acrescentar mais.
 - **Métricas:** com os números que o Diogo trouxer (alcance, guardados, partilhas, cliques no link), diz o que repetir e o que cortar, e ajusta as semanas seguintes.
 - **Coerência com o site:** os links apontam para páginas que existem (confirma em `site/`). Se uma publicação precisar de uma página que não existe, fala com o agente `seo`.
+
+## Recados
+
+Se o que fizeste muda o trabalho de outro agente, deixa-lhe um recado no fim de `gestao/recados.md` (uma linha na tabela: data, de, para, recado curto e concreto, estado `novo`). Exemplos: «seo → social-media: a página de prendas para colegas está publicada, o link é /prendas-amigo-secreto-colegas/»; «analista → seo: a página até 15 € tem muitas impressões e CTR de 0,4 %». No início do trabalho, vê se há recados `entregue` para ti na ordem do gestor e trata-os.

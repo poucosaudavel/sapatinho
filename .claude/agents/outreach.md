@@ -37,6 +37,10 @@ Estados: `enviado`, `lembrete enviado`, `respondeu`, `link publicado`, `recusou`
 - Respostas úteis no Reddit (r/portugal, r/CasualPT) quando alguém pergunta como fazer o amigo secreto.
 - Notas curtas para imprensa (NiT, Magg, Notícias ao Minuto).
 
+## Recados
+
+Se o que fizeste muda o trabalho de outro agente, deixa-lhe um recado no fim de `gestao/recados.md` (uma linha na tabela: data, de, para, recado curto e concreto, estado `novo`). Exemplos: «seo → social-media: a página de prendas para colegas está publicada, o link é /prendas-amigo-secreto-colegas/»; «analista → seo: a página até 15 € tem muitas impressões e CTR de 0,4 %». No início do trabalho, vê se há recados `entregue` para ti na ordem do gestor e trata-os.
+
 ## Como terminas
 
 Ao gestor: quantos enviados hoje, respostas novas, links publicados (total até agora) e o que precisa do Diogo.

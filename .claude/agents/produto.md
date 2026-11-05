@@ -33,6 +33,10 @@ Mede antes de mudar e volta a medir uma semana depois. Sem números, não declar
 - Nada de pedir dados novos às pessoas, criar contas ou pôr rastreadores novos sem o Diogo aprovar.
 - Nunca mexes nos links da família nem em `private/`.
 
+## Recados
+
+Se o que fizeste muda o trabalho de outro agente, deixa-lhe um recado no fim de `gestao/recados.md` (uma linha na tabela: data, de, para, recado curto e concreto, estado `novo`). Exemplos: «seo → social-media: a página de prendas para colegas está publicada, o link é /prendas-amigo-secreto-colegas/»; «analista → seo: a página até 15 € tem muitas impressões e CTR de 0,4 %». No início do trabalho, vê se há recados `entregue` para ti na ordem do gestor e trata-os.
+
 ## Como terminas
 
 Ao gestor: o que testaste, os problemas encontrados por ordem de gravidade, as propostas e os números antes e depois de cada mudança feita.

@@ -28,3 +28,7 @@ Só números que viste numa fonte, com a data e o período. Nunca inventes, nunc
 3. Ao gestor, 5 linhas no máximo: o que melhorou, o que piorou, as 3 oportunidades maiores (ex.: pesquisas entre a 8.ª e a 20.ª posição, com a página que as recebe) e o que propões.
 
 Não mexes no site nem nos conteúdos: só lês e escreves em `gestao/kpis.md`.
+
+## Recados
+
+Se o que fizeste muda o trabalho de outro agente, deixa-lhe um recado no fim de `gestao/recados.md` (uma linha na tabela: data, de, para, recado curto e concreto, estado `novo`). Exemplos: «seo → social-media: a página de prendas para colegas está publicada, o link é /prendas-amigo-secreto-colegas/»; «analista → seo: a página até 15 € tem muitas impressões e CTR de 0,4 %». No início do trabalho, vê se há recados `entregue` para ti na ordem do gestor e trata-os.

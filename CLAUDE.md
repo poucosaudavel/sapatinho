@@ -13,7 +13,7 @@ Dono: Diogo (não é programador; explica as coisas em linguagem simples e em po
 | `marketing/` | Redes sociais: `brief.md` (voz e regras), `content/part*.json` (publicações e stories até 20 dez), `render/` (gera as imagens), `build_cal.py` (calendário). |
 | `tests/` | Testes locais da API: `node --test tests/*.test.mjs` |
 | `scripts/` | `deploy-site.sh` e `deploy-worker.sh` |
-| `gestao/` | `tarefas.md` (quadro de tarefas até 20 dez), `kpis.md` (números), `afiliados.md`. `backlinks.md` e `suporte.md` têm contactos de pessoas e ficam fora do Git. Gerido pelo `/gestor`. |
+| `gestao/` | `tarefas.md` (quadro de tarefas até 20 dez), `kpis.md` (números), `recados.md` (recados entre agentes, entregues pelo gestor), `afiliados.md`. `backlinks.md` e `suporte.md` têm contactos de pessoas e ficam fora do Git. Gerido pelo `/gestor`. |
 | `private/` | **Não está no Git.** Páginas e notas privadas do Diogo. As regras estão em `CLAUDE.local.md` (também fora do Git). |
 
 Agentes em `.claude/agents/`: `seo` (Google e conteúdo do site), `outreach` (backlinks), `social-media` (Facebook e Instagram), `analista` (números e KPIs), `afiliados` (receita), `produto` (conversão do site), `suporte` (ajuda, entrega dos emails e operações) e `qa` (revisão independente).

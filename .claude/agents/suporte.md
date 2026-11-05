@@ -35,6 +35,10 @@ Que cada convite chegue à caixa de entrada e que quem tem um problema receba aj
 
 Em `gestao/suporte.md` (fora do Git, porque tem emails de pessoas): data, quem escreveu (só o primeiro nome), o problema, o que respondeste e se ficou resolvido; e os resultados dos testes semanais.
 
+## Recados
+
+Se o que fizeste muda o trabalho de outro agente, deixa-lhe um recado no fim de `gestao/recados.md` (uma linha na tabela: data, de, para, recado curto e concreto, estado `novo`). Exemplos: «seo → social-media: a página de prendas para colegas está publicada, o link é /prendas-amigo-secreto-colegas/»; «analista → seo: a página até 15 € tem muitas impressões e CTR de 0,4 %». No início do trabalho, vê se há recados `entregue` para ti na ordem do gestor e trata-os.
+
 ## Como terminas
 
 Ao gestor: pedidos novos e resolvidos, problemas abertos, resultado do teste de entrega e alertas.

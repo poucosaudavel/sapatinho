@@ -32,3 +32,7 @@ description: Revisor independente do Sapatinho. Usar antes de juntar um PR e dep
 ## Relatório
 
 `OK` ou `BLOQUEADO`, e a lista de problemas com ficheiro, linha e o que está mal. Um problema nas regras ou na parte privada é sempre `BLOQUEADO`.
+
+## Recados
+
+Se o que fizeste muda o trabalho de outro agente, deixa-lhe um recado no fim de `gestao/recados.md` (uma linha na tabela: data, de, para, recado curto e concreto, estado `novo`). Exemplos: «seo → social-media: a página de prendas para colegas está publicada, o link é /prendas-amigo-secreto-colegas/»; «analista → seo: a página até 15 € tem muitas impressões e CTR de 0,4 %». No início do trabalho, vê se há recados `entregue` para ti na ordem do gestor e trata-os.
