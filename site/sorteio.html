@@ -46,6 +46,10 @@
 .secret{display:flex;gap:10px;align-items:flex-start;background:var(--paper-2);border-radius:4px;padding:12px 14px;font-size:.88rem;color:var(--ink)}
 .secret svg{flex:none;margin-top:2px}
 .back{margin-top:22px;font-size:.88rem;color:var(--soft)}
+.gifts{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;gap:10px}
+.gifts h2{font-size:1.35rem;line-height:1.2;text-align:center;margin:0 0 4px}
+.gifts .btn{text-decoration:none}
+.again{border-top:1px solid var(--line);padding-top:16px}
 @media (max-width:420px){.draw{padding:28px 20px 22px}.draw h1{font-size:1.8rem}.result .who{font-size:2.5rem}}
 </style>
 </head>
@@ -96,22 +100,46 @@ function showResult(o, mailing){
     '<div class="result"><div class="who">'+esc(o.t)+'</div></div>'+
     facts(o) + lock +
     '<p class="note">'+(o.l ? 'Escolhe uma prenda até '+esc(o.l)+' €. ' : '')+(o.d ? 'A troca é a '+esc(Sap.fmtDate(o.d))+'. ' : '')+'Bom Natal!</p>'+
-    (mailing ? '<p class="note" id="mailnote">A enviar-te um email com o nome…</p>' : '') +
-    '<a class="btn wide" href="'+ideasHref(o.l)+'">Ver ideias de prendas'+(o.l ? ' até '+esc(o.l)+' €' : '')+'</a>' + moreIdeas();
+    (mailing ? '<p class="note" id="mailnote">A enviar-te um email com o nome…</p>' : '');
+  // Ideias de prenda e convite: construídos com createElement/textContent, nunca com HTML a partir do link.
+  app.appendChild(giftBlock(o.l));
+  app.appendChild(againLine());
 }
-function ideasHref(l){
-  var n = parseFloat(l) || 0;
-  var u = "?utm_source=sorteio&utm_medium=resultado";
-  // a página nunca passa do limite do grupo (limite 12 € -> ideias até 10 €), como no email
-  if (n >= 5 && n < 50){
-    var c = n < 10 ? 5 : n < 15 ? 10 : n < 20 ? 15 : 20;
-    return "/prendas-amigo-secreto-ate-" + c + "-euros/" + u;
+var UTM = "?utm_source=sorteio&utm_medium=resultado";
+function validLimit(l){ return (typeof l === "number" && isFinite(l) && Math.floor(l) === l && l > 0) ? l : 0; }
+/* Página de prendas para o limite do grupo. A faixa nunca passa do limite (12 € -> até 10 €), como no email;
+   abaixo de 5 € vai para «até 5 €»; acima de 20 € ou sem limite, para o guia geral. Só números, nunca nomes. */
+function giftLinks(l){
+  var n = validLimit(l), out = [];
+  if (n && n < 10) {
+    out.push(["/prendas-amigo-secreto-ate-5-euros/", "Prendas até 5 €"]);
+    if (n <= 5) out.push(["/prendas-engracadas-amigo-secreto/", "Prendas engraçadas"]);
+  } else if (n && n <= 20) {
+    var c = n < 15 ? 10 : n < 20 ? 15 : 20;
+    out.push(["/prendas-amigo-secreto-ate-" + c + "-euros/", "Prendas até " + c + " €"]);
+  } else {
+    out.push(["/ideias-de-prendas-amigo-secreto/", "Ideias de prendas por preço"]);
   }
-  return "/ideias-de-prendas-amigo-secreto/" + u + (n >= 50 ? "#ate-50" : "");
+  out.push(["/prendas-ultima-hora-amigo-secreto/", "Prendas de última hora"]);
+  return out;
 }
-function moreIdeas(){
-  var u = "?utm_source=sorteio&utm_medium=resultado";
-  return '<p class="note">Mais ideias: <a href="/prendas-engracadas-amigo-secreto/'+u+'">prendas engraçadas</a> · <a href="/prendas-amigo-secreto-homem/'+u+'">para homem</a> · <a href="/prendas-ultima-hora-amigo-secreto/'+u+'">de última hora</a></p>';
+function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+function giftBlock(l){
+  var n = validLimit(l), box = el("div", "gifts");
+  box.appendChild(el("h2", "", "Já sabes a quem vais dar. " + (n ? "Precisas de ideias até " + String(n) + " €?" : "Precisas de ideias de prendas?")));
+  giftLinks(l).forEach(function(p, i){
+    var a = el("a", i === 0 ? "btn wide" : "btn ghost wide", p[1]);
+    a.href = p[0] + UTM;
+    box.appendChild(a);
+  });
+  return box;
+}
+function againLine(){
+  var p = el("p", "note again", "Queres fazer um amigo secreto com outro grupo? É grátis e demora 2 minutos. ");
+  var a = el("a", "", "Criar outro sorteio");
+  a.href = "/criar?utm_source=sorteio&utm_medium=convite";
+  p.appendChild(a);
+  return p;
 }
 
 function showDraw(o, key, code){
