@@ -60,6 +60,10 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 .pair{display:grid;grid-template-columns:1fr auto 1fr 38px;gap:8px;align-items:center}
 .pair em{font-style:normal;color:var(--muted);font-size:.85rem}
 .err{background:#fbe6e1;color:#8a2a17;border-radius:4px;padding:12px 14px;font-size:.92rem}
+.err .fix{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.err .fix button{font:600 .92rem var(--body);padding:10px 14px;border-radius:4px;cursor:pointer;border:1px solid #8a2a17;background:#8a2a17;color:#fff}
+.err .fix button.alt{background:transparent;color:#8a2a17}
+.prow input.typo{border-color:#c4441f;box-shadow:0 0 0 2px #f3c9bd}
 .results{display:flex;flex-direction:column;gap:12px}
 .res{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;border-top:1px solid var(--line);padding-top:12px}
 .res b{font-family:var(--display);font-weight:400;font-size:1.25rem;color:var(--ink)}
@@ -203,12 +207,50 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
   function fail(msg){ err.textContent = msg; err.hidden = false; err.scrollIntoView({behavior:"smooth", block:"center"}); }
   var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+  /* Erros de escrita no domínio do email (gmial.com, hotmail.con, sapo.ot…): o convite nunca chegaria.
+     Só avisa; quem organiza corrige com um toque ou diz que está certo. Nada sai do navegador. */
+  var DOMAINS = ["gmail.com","hotmail.com","outlook.com","outlook.pt","live.com","live.com.pt","sapo.pt","icloud.com","yahoo.com","msn.com","netcabo.pt","iol.pt","clix.pt","mail.com","ymail.com","gmx.com","aol.com","me.com","mac.com","googlemail.com","hotmail.fr","yahoo.fr","yahoo.com.br"];
+  var FIXED = { "gmail.pt":"gmail.com", "gmail.com.pt":"gmail.com", "hotmail.com.pt":"hotmail.com", "sapo.com":"sapo.pt", "icloud.pt":"icloud.com" };
+  var okDomains = Object.create(null);
+  function near(a, b){ // distância 1: uma letra a mais, a menos, trocada ou duas letras seguidas trocadas
+    if (a === b || Math.abs(a.length - b.length) > 1) return false;
+    var i = 0; while (i < a.length && a[i] === b[i]) i++;
+    if (a.length === b.length) return a.slice(i+1) === b.slice(i+1) || (a[i] === b[i+1] && a[i+1] === b[i] && a.slice(i+2) === b.slice(i+2));
+    return a.length > b.length ? a.slice(i+1) === b.slice(i) : a.slice(i) === b.slice(i+1);
+  }
+  function suggest(email){
+    var at = email.lastIndexOf("@"), d = email.slice(at+1);
+    if (at < 1 || okDomains[d] || DOMAINS.indexOf(d) >= 0) return null;
+    var s = FIXED[d] || DOMAINS.filter(function(x){ return near(d, x); })[0];
+    return s ? email.slice(0, at+1) + s : null;
+  }
+  function emailInputs(){
+    return Array.prototype.map.call(people.children, function(r){ return r.querySelectorAll("input")[1]; });
+  }
+  function askTypo(p, better){
+    var inp = emailInputs().filter(function(x){ return x.value.trim().toLowerCase() === p.e; })[0];
+    err.textContent = "";
+    err.appendChild(document.createTextNode("O email de " + p.n + " parece ter um erro: «" + p.e + "». Querias dizer «" + better + "»?"));
+    var box = document.createElement("div"); box.className = "fix";
+    var yes = document.createElement("button"); yes.type = "button"; yes.textContent = "Corrigir para " + better.slice(better.lastIndexOf("@"));
+    var no = document.createElement("button"); no.type = "button"; no.className = "alt"; no.textContent = "Está certo";
+    yes.addEventListener("click", function(){ if (inp){ inp.value = better; inp.classList.remove("typo"); } err.hidden = true; go.focus(); });
+    no.addEventListener("click", function(){ okDomains[p.e.slice(p.e.lastIndexOf("@")+1)] = true; if (inp) inp.classList.remove("typo"); err.hidden = true; go.focus(); });
+    box.appendChild(yes); box.appendChild(no); err.appendChild(box);
+    if (inp) inp.classList.add("typo");
+    err.hidden = false; err.scrollIntoView({behavior:"smooth", block:"center"});
+  }
+
   form.addEventListener("submit", function(e){
     e.preventDefault(); err.hidden = true;
     var ps = rows();
     for (var i=0;i<ps.length;i++){
       if (!ps[i].n) return fail("Falta o nome de quem tem o email " + ps[i].e + ".");
       if (!emailRe.test(ps[i].e)) return fail("Falta ou não é válido o email de " + ps[i].n + ".");
+    }
+    for (var j=0;j<ps.length;j++){
+      var better = suggest(ps[j].e);
+      if (better) return askTypo(ps[j], better);
     }
     if (ps.length < 3) return fail("Precisas de pelo menos 3 participantes.");
     if (ps.length > 30) return fail("O máximo é 30 participantes.");
