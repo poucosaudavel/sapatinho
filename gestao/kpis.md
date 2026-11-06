@@ -20,13 +20,13 @@ Estado: **em linha**, **em risco** (a meta falha se nada mudar), **falhou**, **c
 
 | KPI | Fonte (quem envia) | Meta | Prazo | Atual | Estado |
 | --- | --- | --- | --- | --- | --- |
-| Cliques do Google | Search Console (Diogo) | cerca de 1 000 entre 1 e 20 dez (**estimativa** do `seo.md`; revê-se a 16 nov) | 20 dez | sem dados | sem dados |
-| Pesquisas na primeira página (posição média ≤ 10) | Search Console (Diogo) | 10 (**estimativa** do `seo.md`; revê-se a 16 nov) | 1 dez | sem dados | sem dados |
-| Sorteios feitos por semana | `/painel` (Diogo) | a definir a 16 nov, a partir das semanas de novembro | 20 dez | sem dados | sem dados |
-| Convites abertos e sorteados (sorteados ÷ convites) | `/painel` (Diogo) | a definir a 16 nov | 20 dez | sem dados | sem dados |
-| Cliques nos links da Amazon | Amazon Associados (Diogo) | a definir a 16 nov | 20 dez | sem dados | sem dados |
-| Ganhos de afiliados | Amazon Associados (Diogo) | a definir a 16 nov | 20 dez | sem dados | sem dados |
-| Cliques no link (bio, stories, Facebook) | Meta Business Suite (Diogo) | a definir a 16 nov | 20 dez | sem dados | sem dados |
+| Cliques do Google | Search Console (Diogo) | cerca de 1 000 entre 1 e 20 dez (**estimativa** do `seo.md`; revê-se a 16 nov) | 20 dez | 20 cliques, 492 impressões, CTR 4,1 %, posição 12,7 (28 out a 3 nov; lido a 5 e 6 nov). Antes: 9 / 276 (26 out–1 nov), 16 / 383 (27 out–2 nov) | em linha (cedo) |
+| Pesquisas na primeira página (posição média ≤ 10) | Search Console (Diogo) | 10 (**estimativa** do `seo.md`; revê-se a 16 nov) | 1 dez | 4 (28 out–3 nov): «prendas engraçadas até 5€» 8,5 (4 cliques), «prendas amigo secreto engraçadas» 9,0, «roleta amigo secreto» 9,3, «roleta de amigo secreto» 7,3. «prendas amigo secreto» 44,7; guia de ideias 39,1 | em linha (cedo) |
+| Sorteios feitos por semana | `/painel` (Diogo) | a definir a 16 nov, a partir das semanas de novembro | 20 dez | 5 nov (painel): 10 sorteios no total, 51 convites, 5,1 pessoas por sorteio. 6 nov: +1 sorteio de teste (descontar) | sem dados (meta a 16 nov) |
+| Convites abertos e sorteados (sorteados ÷ convites) | `/painel` (Diogo) | a definir a 16 nov | 20 dez | 5 nov: 73 % (37 de 51) | sem dados (meta a 16 nov) |
+| Cliques nos links da Amazon | Amazon Associados (Diogo) | a definir a 16 nov | 20 dez | 6 nov: 2 cliques em novembro (3 nos últimos 30 dias), 0 pedidos | sem dados (meta a 16 nov) |
+| Ganhos de afiliados | Amazon Associados (Diogo) | a definir a 16 nov | 20 dez | 6 nov: 0,00 € (Amazon). Awin: 0 lojas aceites, 9 pendentes. Aviso fiscal da Amazon por concluir | em risco |
+| Cliques no link (bio, stories, Facebook) | Meta Business Suite (Diogo) | a definir a 16 nov | 20 dez | 6 nov: seguidores FB 1, IG 1; 0 cliques em ligações no FB (29 out–4 nov; 37 visualizações, 63 visitas) | em risco |
 
 ## 3. Alarmes (evitam perder visitas)
 
@@ -47,3 +47,9 @@ Estado: **em linha**, **em risco** (a meta falha se nada mudar), **falhou**, **c
 ## Histórico
 
 - 30 out: KPIs criados. Ainda sem números de base; pedidos ao Diogo os dados atuais do Search Console, `/painel` e Amazon.
+- 31 out a 6 nov (rotina das 10:40, leituras diárias no Chrome do PC; fonte entre parênteses):
+  - Google (Search Console, 7 dias): 1 nov 5 cliques / 113 impressões / posição 15,3; 2 nov 7 / 168 / 14,5; 3 nov 9 / 276 / 14,1; 4 nov 16 / 383 / 13,8; 5 nov 20 / 492 / 12,7 (28 out–3 nov); 6 nov sem atualização do Google.
+  - Sorteios (`/painel`, total): 1 nov 4 (17 convites); 2 nov 5 (24); 3 nov 7 (30); 4 nov 8 (40); 5 nov 10 (51, 73 % sortearam). 6 nov sem dados (domínio em baixo até ~11:00) e 1 sorteio de teste às 15:07.
+  - Amazon (Associados): 2 cliques em novembro, 0 €. Meta: FB 1 seguidor; IG 0 até 4 nov, 1 desde 5 nov; 0 cliques em ligações.
+  - Emails de backlinks (Gmail sapatinhonatal): 22 enviados, 7 lembretes, 5 agendados, 0 respostas até 6 nov.
+- 6 nov: passagem da rotina das 10:40 para o gestor do PC.
