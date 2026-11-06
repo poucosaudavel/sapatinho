@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "descanso",
+      "estado": "espera",
       "feitos": 23,
-      "tarefa": "Próximo turno amanhã às 7:44: atrasos, caixa do sapatinhonatal e as 3 prioridades do dia.",
-      "ultimo": "Passou a CEO e montou a equipa",
-      "atualizado": "2026-11-05T21:40:00Z"
+      "tarefa": "À espera do Diogo: validar os dados do domínio sapatinho-natal.pt no Dominios.PT. Turno da noite: caixa, Meta e prioridades de amanhã.",
+      "ultimo": "Confirmou no site as ideias de prenda no resultado do sorteio",
+      "atualizado": "2026-11-06T15:30:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -72,7 +72,7 @@
       "Lojas da Awin: ver quais valem a pena",
       "Separar as páginas de colegas e de empresa"
     ],
-    "preciso": "Deixar o Brevo e o painel do site com a sessão iniciada no Chrome.",
+    "preciso": "Validar os dados do domínio sapatinho-natal.pt no Dominios.PT (até 14 nov).",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -93,6 +93,10 @@
       {
         "quando": "2026-11-05T22:05:00Z",
         "texto": "O Conversão passou a UX e conversão: página inicial com 4 guias, rodapé mais curto e /guias/ com todos. Até 20 dez a equipa trabalha 4 vezes por dia (7:44, 11:44, 15:44, 19:44)."
+      },
+      {
+        "quando": "2026-11-06T15:30:00Z",
+        "texto": "Tarde: alarme do domínio enviado ao Diogo; ideias de prenda no resultado confirmadas no site."
       }
     ],
     "recados": [],
@@ -103,6 +107,6 @@
       "backlinks_publicados": 0,
       "taxa_sorteio": null
     },
-    "atualizado": "2026-11-05T22:05:00Z"
+    "atualizado": "2026-11-06T15:30:00Z"
   }
 }

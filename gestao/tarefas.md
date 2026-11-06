@@ -21,7 +21,8 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | até 2 nov | gestor | Pesquisar programas de afiliados em Portugal (vales de experiências, lojas) | feito (`gestao/afiliados.md`) |
 | 2 nov | gestor | Agendar no Meta o que falta de novembro: feed de 28 nov 20:30, 29 nov e 30 nov; stories de 29 e 30 nov | atrasado; feito a 5 nov |
 | todos os dias | gestor | Agendar no Meta o que já entrou na janela de 29 dias | contínuo |
-| 6 nov | gestor | Publicar o site (painel com a Oficina 3D) e a API (`/api/stats` com o estado da Oficina; **o Diogo aprovou esta publicação da API a 5 nov**), depois copiar `gestao/oficina.json` para a chave `oficina` do KV e confirmar `/painel/oficina/` | por fazer |
+| 6 nov | gestor | Publicar o site (painel com a Oficina 3D) e a API (`/api/stats` com o estado da Oficina; **o Diogo aprovou esta publicação da API a 5 nov**), depois copiar `gestao/oficina.json` para a chave `oficina` do KV e confirmar `/painel/oficina/` | feito (5 nov, 22:20) |
+| até 14 nov | Diogo | Domínio sapatinho-natal.pt: confirmar no Dominios.PT nome, NIF, morada, email e telefone (pedido do .PT de 6 nov; o domínio já foi removido uma vez a 6 nov por falta de prova e registado de novo) | à espera do Diogo (avisado a 6 nov, 15:30) |
 | 6 nov | inovacao | Primeiras 3 ideias em `gestao/ideias.md` | por fazer |
 | até 6 nov | outreach | Criar `gestao/backlinks.md` (fora do Git) com os 19 contactos já enviados e marcar os lembretes de 7 dias | por fazer |
 | até 9 nov | seo | «Prendas para colegas» e «Amigo secreto na empresa»: focos diferentes e ligação entre as duas | por fazer |
@@ -50,6 +51,12 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 1 a 20 dez | gestor | Vigiar o limite do Brevo | por fazer |
 
 ## Notas do gestor
+
+### 6 nov 2026, 15:30 (turno da tarde)
+- Os turnos das 7:44 e das 11:44 não deixaram registo (ficaram ficheiros de bloqueio do git das 11:45; limpos). O relatório da manhã não está confirmado.
+- Alarme: o .PT removeu o domínio às 6:15 por falta de prova; o Diogo registou-o de novo às 10:59. Às 15:01 chegou novo pedido de validação de dados (prazo 8 a 10 dias). Diogo avisado por notificação.
+- Confirmado no site real: as ideias de prenda e o convite «organiza outro sorteio» (PR #24) estão no `/r` e no `/sorteio`; o link `/s/` da família abre.
+- Turno curto: sem agentes (o tempo foi para o alarme do domínio). Caixa do sapatinhonatal e Meta ficam para o turno da noite.
 
 - 5 nov (noite): chegou o CIO (`inovacao`). A Oficina 3D passa a estar também em `/painel/oficina/`, à espera de publicação (a sessão do Cloudflare no Chrome expirou).
 
