@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 27,
-      "tarefa": "Publicar o site com os PRs #25 a #27 e, às 19:44, agendar no Meta até 5 dez.",
-      "ultimo": "Turno extra depois do incidente do domínio: 3 PRs revistos e juntos",
-      "atualizado": "2026-11-06T16:00:00Z"
+      "feitos": 29,
+      "tarefa": "Amanhã às 7:44: relatório completo, outreach responde ao Echo Boomer e afiliados na Awin.",
+      "ultimo": "Turno da noite: site confirmado, 2 respostas de sites registadas",
+      "atualizado": "2026-11-06T19:55:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -15,18 +15,18 @@
       "atualizado": "2026-11-06T16:00:00Z"
     },
     "outreach": {
-      "estado": "espera",
+      "estado": "trabalhar",
       "feitos": 20,
-      "tarefa": "Lembretes de 9 a 13 nov e 3 sites novos (o envio precisa de um «sim» direto do Diogo neste PC).",
-      "ultimo": "Registo com 22 contactos e 7 lembretes",
-      "atualizado": "2026-11-06T16:00:00Z"
+      "tarefa": "Responder ao Echo Boomer e lembrar a NiT perto de dezembro.",
+      "ultimo": "2 sites responderam (NiT e Echo Boomer)",
+      "atualizado": "2026-11-06T19:55:00Z"
     },
     "social-media": {
       "estado": "descanso",
       "feitos": 5,
-      "tarefa": "Novembro está todo agendado no Meta. A seguir: dezembro, à medida que a janela de 29 dias abre.",
+      "tarefa": "Preparar dezembro (1 a 20) até 16 nov para agendar no Meta.",
       "ultimo": "14 publicações com as ilustrações do site",
-      "atualizado": "2026-11-05T20:20:00Z"
+      "atualizado": "2026-11-06T19:55:00Z"
     },
     "analista": {
       "estado": "descanso",
@@ -52,8 +52,8 @@
       "estado": "descanso",
       "feitos": 2,
       "tarefa": "Pedidos de ajuda e site a funcionar em cada turno.",
-      "atualizado": "2026-11-06T16:00:00Z",
-      "ultimo": "Convites de teste entregues na caixa principal; Brevo 100 % entregue"
+      "atualizado": "2026-11-06T19:55:00Z",
+      "ultimo": "Site e API confirmados às 19:50; nenhum pedido de ajuda"
     },
     "inovacao": {
       "estado": "descanso",
@@ -63,18 +63,18 @@
       "ultimo": "3 ideias novas, todas aprovadas"
     },
     "qa": {
-      "estado": "trabalhar",
+      "estado": "descanso",
       "feitos": 3,
-      "tarefa": "Confirmar o site real depois da publicação.",
-      "atualizado": "2026-11-06T16:00:00Z",
-      "ultimo": "PRs #25, #26 e #27 aprovados"
+      "tarefa": "Rever o próximo PR.",
+      "atualizado": "2026-11-06T19:55:00Z",
+      "ultimo": "Site real confirmado depois da publicação de 6 nov"
     }
   },
   "estado": {
     "prioridades": [
-      "Publicar e confirmar /criar com o aviso de email e as páginas de colegas e empresa",
-      "Meta: agendar até 5 dez",
-      "Ideias de 6 nov no produto (mensagem para o grupo primeiro)"
+      "Outreach: responder ao Echo Boomer e preparar os lembretes de 9 a 13 nov",
+      "Afiliados (sábado): 8 lojas pendentes na Awin e comissões vs. Amazon",
+      "Produto: «Copiar mensagem para o grupo» no fim do /criar"
     ],
     "preciso": "Validar os dados do domínio na Dominios.PT (até 14 nov) e confirmar o bloqueio de registo e a renovação automática; criar 2 códigos de seguimento na Amazon.",
     "diario": [
@@ -105,9 +105,28 @@
       {
         "quando": "2026-11-06T16:00:00Z",
         "texto": "Turno extra: incidente do domínio registado; emails voltam a chegar; PRs #25 a #27 revistos e juntos."
+      },
+      {
+        "quando": "2026-11-06T19:55:00Z",
+        "texto": "Noite: site e API confirmados; a NiT e o Echo Boomer responderam; recados entregues."
       }
     ],
-    "recados": [],
+    "recados": [
+      {
+        "quando": "2026-11-05T21:00:00Z",
+        "de": "gestor",
+        "para": "gestor",
+        "texto": "Decidir as ideias de 5 nov",
+        "estado": "entregue"
+      },
+      {
+        "quando": "2026-11-06T15:45:00Z",
+        "de": "gestor",
+        "para": "gestor",
+        "texto": "Passagem da rotina das 10:40 feita",
+        "estado": "entregue"
+      }
+    ],
     "resultados": {
       "sorteios_semana": 8,
       "receita_semana": 0,
@@ -115,6 +134,6 @@
       "backlinks_publicados": 0,
       "taxa_sorteio": 70
     },
-    "atualizado": "2026-11-06T16:00:00Z"
+    "atualizado": "2026-11-06T19:55:00Z"
   }
 }

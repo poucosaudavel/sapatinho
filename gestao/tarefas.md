@@ -45,7 +45,8 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | até 15 nov | produto | Ideias de 6 nov aprovadas: «Copiar mensagem para o grupo» no fim do /criar (sem botão de email com o nome de quem saiu), «Lembra-me de comprar a prenda» no /r (calendário, sem nome) e texto pronto para pedir os emails | por fazer |
 | 7 nov | afiliados | Awin: recusa da Worten (6 nov, 11:00); ver as outras 8 pendentes e comparar comissões com a Amazon (ideia 4 de 5 nov) | por fazer |
 | até 14 nov | Diogo | Amazon: criar 2 códigos de seguimento novos (resultado do sorteio e redes sociais) para saber de onde vem cada venda (ideia 3 de 5 nov, aprovada) | à espera do Diogo |
-| 6 nov | gestor | Meta: agendar o que entrou na janela de 29 dias (até 5 dez) | por fazer (passa para o turno das 19:44) |
+| 6 nov | gestor | Meta: agendar o que entrou na janela de 29 dias (até 5 dez) | adiado (6 nov, 19:44): novembro já está agendado; 1 a 5 dez só depois de o `social-media` dar dezembro como pronto (10 a 16 nov) |
+| 7 nov | outreach | Responder ao Echo Boomer numa linha (agradecer; não pagamos publicações) e marcar lembrete à NiT para ~25 nov | por fazer |
 | 10 a 16 nov | social-media | Dezembro (1 a 20) pronto a agendar | por fazer |
 | 3 nov | seo | Página /troca-de-prendas-natal/ (6 jogos de troca, PR #21) | feito (publicado 3 nov; no Google a 4 nov) |
 | 4 nov | seo | /pistas-e-mensagens-amigo-secreto/: título novo e 24 frases prontas (PR #22) | feito (publicado; indexação pedida e confirmada 4 nov). Não mexer antes de 11 nov |
@@ -70,6 +71,8 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 1 a 20 dez | gestor | Vigiar o limite do Brevo | por fazer |
 
 ## Notas do gestor
+
+- 6 nov, 19:44 (tarefa agendada, turno da noite): git a funcionar (autorização de apagar dada; pull sem erros). Site real: início, /criar, /guias/, sitemap e o link /s/ da família = 200; /api/stats sem senha = 401; /api/create inválido = 400. Caixa: 2 respostas de outreach (NiT: vão escrever mais perto de dezembro e guardaram o email; Echo Boomer: dão prioridade a quem paga, talvez mencionem um dia) — registadas em `gestao/backlinks.md`; resposta curta ao Echo Boomer fica para o `outreach` amanhã. Nenhum pedido de ajuda. Meta: sem mensagens novas; novembro agendado; dezembro adiado até o `social-media` o dar como pronto. Recados de 5 e 6 nov entregues. Oficina atualizada.
 
 - 6 nov, 15:44 (tarefa agendada, turno da tarde): outra sessão do gestor estava a trabalhar ao mesmo tempo (merges às 15:44–15:45 e build do site em `dist/` às 15:45). Para não chocar com ela, não lancei agentes nem publiquei; o turno da tarde já tinha corrido às 15:30. Sem alarmes novos.
 
