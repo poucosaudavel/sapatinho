@@ -23,9 +23,9 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | todos os dias | gestor | Agendar no Meta o que já entrou na janela de 29 dias | contínuo |
 | 6 nov | gestor | Publicar o site (painel com a Oficina 3D) e a API (`/api/stats` com o estado da Oficina; **o Diogo aprovou esta publicação da API a 5 nov**), depois copiar `gestao/oficina.json` para a chave `oficina` do KV e confirmar `/painel/oficina/` | feito (5 nov, 22:20) |
 | até 14 nov | Diogo | Domínio sapatinho-natal.pt: confirmar no Dominios.PT nome, NIF, morada, email e telefone (pedido do .PT de 6 nov; o domínio já foi removido uma vez a 6 nov por falta de prova e registado de novo) | à espera do Diogo (avisado a 6 nov, 15:30) |
-| 6 nov | inovacao | Primeiras 3 ideias em `gestao/ideias.md` | por fazer |
+| 6 nov | inovacao | Primeiras 3 ideias em `gestao/ideias.md` | feito (6 nov: 3 ideias novas; decisões em `gestao/ideias.md`) |
 | até 6 nov | outreach | Criar `gestao/backlinks.md` (fora do Git) com os 19 contactos já enviados e marcar os lembretes de 7 dias | feito (6 nov, passagem da rotina das 10:40: 30 linhas; lembretes dos 7 de 30 out enviados a 6 nov) |
-| até 9 nov | seo | «Prendas para colegas» e «Amigo secreto na empresa»: focos diferentes e ligação entre as duas | feito (/prendas-amigo-secreto-colegas/, PR #20, 2 nov) |
+| até 9 nov | seo | «Prendas para colegas» e «Amigo secreto na empresa»: focos diferentes e ligação entre as duas | feito (PR #25, 6 nov: colegas = ideias de prendas; empresa = como organizar; ligadas entre si) |
 | todas as segundas | Diogo | Enviar os números da semana (Search Console, `/painel`, Amazon, Meta); ver `gestao/kpis.md` | por fazer |
 | todas as segundas | gestor | Atualizar `gestao/kpis.md` e criar tarefas para o que estiver em risco | por fazer |
 | 16 nov | gestor | Pôr número nas metas «a definir» dos KPIs | por fazer |
@@ -35,10 +35,17 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 6 nov | seo | Prendas até 20 € | feito (publicado a 30 out) |
 | 9 nov | seo | Prendas até 15 € | feito (publicado a 31 out, indexado) |
 | 9 nov | gestor | Decidir que afiliados compensam e dizer ao Diogo | por fazer |
-| 11 nov | seo | Guia da empresa: 20 ideias para colegas | feito (página própria /prendas-amigo-secreto-colegas/, 26 ideias, 2 nov) |
+| 11 nov | seo | Guia da empresa: 20 ideias para colegas | cortado (6 nov): juntava outra vez as duas páginas na mesma pesquisa; as ideias ficam só em /prendas-amigo-secreto-colegas/ |
 | 12 nov | seo | Prendas de última hora | feito (publicado a 31 out, indexado) |
 | 13 nov | seo | Prendas para homem | feito (publicado a 1 nov) |
 | 15 nov | seo | Prendas para mulher (prazo final de conteúdo novo) | feito (PR #17, 1 nov) |
+| 6 nov | produto | /criar: painel «Convites enviados» já não aparece antes do sorteio; etiqueta «Enviado» inteira (PR #26) | feito (junto a 6 nov) |
+| 6 nov | produto | /criar: aviso «Querias dizer …?» para emails com erro no domínio (PR #27) | feito (junto a 6 nov); medir sorteados ÷ convites de 6 a 13 nov |
+| 7 nov | seo | `.claude/agents/seo.md`: a pesquisa «ideias amigo secreto trabalho» passa para /prendas-amigo-secreto-colegas/ (precisa do «sim» do Diogo: é mudar instruções de agente) | à espera do Diogo |
+| até 15 nov | produto | Ideias de 6 nov aprovadas: «Copiar mensagem para o grupo» no fim do /criar (sem botão de email com o nome de quem saiu), «Lembra-me de comprar a prenda» no /r (calendário, sem nome) e texto pronto para pedir os emails | por fazer |
+| 7 nov | afiliados | Awin: recusa da Worten (6 nov, 11:00); ver as outras 8 pendentes e comparar comissões com a Amazon (ideia 4 de 5 nov) | por fazer |
+| até 14 nov | Diogo | Amazon: criar 2 códigos de seguimento novos (resultado do sorteio e redes sociais) para saber de onde vem cada venda (ideia 3 de 5 nov, aprovada) | à espera do Diogo |
+| 6 nov | gestor | Meta: agendar o que entrou na janela de 29 dias (até 5 dez) | por fazer (passa para o turno das 19:44) |
 | 10 a 16 nov | social-media | Dezembro (1 a 20) pronto a agendar | por fazer |
 | 3 nov | seo | Página /troca-de-prendas-natal/ (6 jogos de troca, PR #21) | feito (publicado 3 nov; no Google a 4 nov) |
 | 4 nov | seo | /pistas-e-mensagens-amigo-secreto/: título novo e 24 frases prontas (PR #22) | feito (publicado; indexação pedida e confirmada 4 nov). Não mexer antes de 11 nov |
@@ -63,6 +70,14 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 1 a 20 dez | gestor | Vigiar o limite do Brevo | por fazer |
 
 ## Notas do gestor
+
+### 6 nov 2026, ~16:00: incidente do domínio e turno completo extra (pedido do Diogo)
+- **Incidente:** o site, a API e os links estiveram em baixo desde a madrugada de 6 nov até cerca das 12:45. O .PT removeu o domínio sapatinho-natal.pt às 6:15 por falta de prova dos dados do titular; o Diogo registou-o de novo às 10:59 (Dominios.PT) e os servidores de nomes voltaram ao Cloudflare (clint/mira). Às 15:01 o .PT pediu outra vez a validação dos dados (prazo 8 a 10 dias): tarefa do Diogo até 14 nov. Pedido ao Diogo: confirmar na Dominios.PT que o bloqueio de registo e a renovação automática estão ligados.
+- **Confirmado depois (suporte, 15:30–15:38):** página inicial, /criar, /guias/ = 200; /painel pede senha; /api/stats sem senha = 401; /api/create inválido = 400; DNS da Google já mostra o Cloudflare. Teste de entrega: 3 convites entregues às 15:33 na caixa principal, segundo email às 15:37. Brevo 30 out–6 nov: 103 enviados, 100 % entregues, 0 devoluções e queixas. Nenhum pedido de ajuda.
+- **Erro de teste:** um teste de nome inválido com «<» criou um sorteio real para 3 endereços de teste (sapatinhonatal+inv*): descontar no /painel. Para testar o 400 usar «$» ou «%».
+- **Números (analista):** 8 sorteios de 31 out a 6 nov; 0 € de receita (Amazon: 3 cliques e 0 pedidos em 30 dias; Awin pede login); 20 cliques no Google de 28 out a 3 nov (492 impressões, posição 12,7); 70 % de convites sorteados. Sem alarmes.
+- **Feito:** PRs #25 (focos colegas/empresa), #26 e #27 (/criar) revistos pelo `qa` (aprovados, reparos menores) e juntos. Outreach: registo com 22 contactos, 0 respostas, 0 links publicados; 3 sites candidatos novos. Nenhum email de outreach novo enviado neste turno (o envio a partir de uma ordem do gestor foi bloqueado pelo classificador; os 5 agendados para 9 e 10 nov ficam).
+- **Decidi:** as 4 ideias de 5 nov aprovadas (1 e 2 já publicadas no PR #24, a medir até 13 nov; 3 precisa do Diogo; 4 vai para o `afiliados` no sábado). As 3 ideias de 6 nov aprovadas para o `produto` até 15 nov. Cortada a secção «20 ideias para colegas» no guia da empresa (11 nov).
 
 ### 6 nov 2026, 15:45: passagem da rotina das 10:40 para o gestor do PC
 O Diogo decidiu (6 nov, 15:38) que só o gestor do PC manda no projeto. A rotina diária das 10:40 (conversa do claude.ai) foi desligada. O que ela fez de 31 out a 6 nov:

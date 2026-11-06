@@ -44,8 +44,37 @@ Estado: **em linha**, **em risco** (a meta falha se nada mudar), **falhou**, **c
 4. **16 nov:** com duas semanas de dados, o gestor põe número nas metas «a definir» e confirma ou corrige as estimativas.
 5. O resumo ao Diogo diz sempre: o que está em linha, o que está em risco e o que se vai fazer.
 
+## Medições reais (lidas pela rotina das 10:40, passadas ao gestor a 6 nov)
+
+Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima ficam para o gestor marcar estados à segunda.
+
+| Indicador | Valor | Período | Fonte | Lido a |
+| --- | --- | --- | --- | --- |
+| Cliques do Google | 20 | 28 out a 3 nov | Search Console | 5 e 6 nov (não mudou) |
+| Impressões | 492 | 28 out a 3 nov | Search Console | 5 e 6 nov |
+| CTR média | 4,1 % | 28 out a 3 nov | Search Console | 5 e 6 nov |
+| Posição média | 12,7 | 28 out a 3 nov | Search Console | 5 e 6 nov |
+| Pesquisa com mais cliques | «prendas engraçadas para amigo secreto até 5€»: 4 cliques, 49 impressões, posição 8,5 | 28 out a 3 nov | Search Console | 5 nov |
+| Páginas com mais impressões | /regras-do-amigo-secreto/ 87 (posição 6,4; CTR 1,1 %), /prendas-engracadas-amigo-secreto/ 85, /ideias-de-prendas-amigo-secreto/ 72 (posição 39,1) | 28 out a 3 nov | Search Console | 5 nov |
+| Sorteios criados (total) | 10 | até 5 nov | `/painel` | 5 nov, 10:50 |
+| Convites enviados (total) | 51 | até 5 nov | `/painel` | 5 nov |
+| Pessoas que já sortearam | 37 (73 %) | até 5 nov | `/painel` | 5 nov |
+| Pessoas por sorteio | 5,1 | até 5 nov | `/painel` | 5 nov |
+| Sorteios por dia | 30 out: 3 · 31 out: 1 · 2 nov: 3 · 3 nov: 1 · 4 nov: 1 · 5 nov (até 10:50): 1 | 30 out a 5 nov | `/painel` | 5 nov |
+| Sorteio de teste | +1 sorteio e 3 convites («Teste spam 6 nov», emails sapatinhonatal+spam1/2/3); descontar | 6 nov, 15:07 | criado pela rotina | 6 nov |
+| Cliques na Amazon | 2 | novembro até 6 nov | Amazon Afiliados | 6 nov |
+| Ganhos da Amazon | 0,00 € (0 pedidos) | novembro até 6 nov | Amazon Afiliados | 6 nov |
+| Seguidores Facebook | 1 | 6 nov | Meta Business Suite | 6 nov |
+| Seguidores Instagram | 1 | 6 nov | Meta Business Suite | 6 nov |
+| Facebook: visualizações / visualizadores / interações / cliques em ligações / visitas | 37 / 9 / 0 / 0 / 63 | 29 out a 4 nov | Meta Business Suite | 5 nov |
+| Instagram: visualizações / visualizadores / interações | 40 / 2 / 2 | 29 out a 4 nov | Meta Business Suite | 5 nov |
+| Emails de backlinks | 22 enviados, 7 lembretes, 5 agendados, 0 respostas, 0 links | 30 out a 6 nov | Gmail sapatinhonatal | 6 nov |
+| Awin | 9 lojas pendentes, 0 aprovadas, 0 recusadas | pedidos de 31 out | Awin | 5 nov |
+| Teste de entrega dos convites | 3 de 3 na Caixa principal, 0 no Spam | 6 nov | Gmail sapatinhonatal | 6 nov |
+
 ## Histórico
 
+- 6 nov: secção «Medições reais» acrescentada na passagem da rotina das 10:40 para o gestor do PC.
 - 30 out: KPIs criados. Ainda sem números de base; pedidos ao Diogo os dados atuais do Search Console, `/painel` e Amazon.
 - 31 out a 6 nov (rotina das 10:40, leituras diárias no Chrome do PC; fonte entre parênteses):
   - Google (Search Console, 7 dias): 1 nov 5 cliques / 113 impressões / posição 15,3; 2 nov 7 / 168 / 14,5; 3 nov 9 / 276 / 14,1; 4 nov 16 / 383 / 13,8; 5 nov 20 / 492 / 12,7 (28 out–3 nov); 6 nov sem atualização do Google.
@@ -53,3 +82,4 @@ Estado: **em linha**, **em risco** (a meta falha se nada mudar), **falhou**, **c
   - Amazon (Associados): 2 cliques em novembro, 0 €. Meta: FB 1 seguidor; IG 0 até 4 nov, 1 desde 5 nov; 0 cliques em ligações.
   - Emails de backlinks (Gmail sapatinhonatal): 22 enviados, 7 lembretes, 5 agendados, 0 respostas até 6 nov.
 - 6 nov: passagem da rotina das 10:40 para o gestor do PC.
+- 6 nov, ~16:00 (analista): sorteios 31 out–6 nov = 8 (11 desde 30 out; 54 convites, 38 sortearam = 70 %); Amazon 30 dias: 3 cliques, 0 pedidos, 0 €; Google 28 out–3 nov: 20 cliques, 492 impressões, CTR 4,1 %, posição 12,7; Brevo 30 out–6 nov: 103 enviados, 100 % entregues, 0 devoluções e queixas (suporte). Sem alarmes. O /painel de 6 nov inclui sorteios de teste (descontar).

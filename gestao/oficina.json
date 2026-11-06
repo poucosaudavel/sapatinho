@@ -1,25 +1,25 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "espera",
-      "feitos": 23,
-      "tarefa": "À espera do Diogo: validar os dados do domínio sapatinho-natal.pt no Dominios.PT. Turno da noite: caixa, Meta e prioridades de amanhã.",
-      "ultimo": "Confirmou no site as ideias de prenda no resultado do sorteio",
-      "atualizado": "2026-11-06T15:30:00Z"
+      "estado": "trabalhar",
+      "feitos": 27,
+      "tarefa": "Publicar o site com os PRs #25 a #27 e, às 19:44, agendar no Meta até 5 dez.",
+      "ultimo": "Turno extra depois do incidente do domínio: 3 PRs revistos e juntos",
+      "atualizado": "2026-11-06T16:00:00Z"
     },
     "seo": {
       "estado": "descanso",
-      "feitos": 14,
-      "tarefa": "Dar focos diferentes às páginas «Prendas para colegas» e «Amigo secreto na empresa» (até 9 nov).",
-      "ultimo": "Página de prendas para a família",
-      "atualizado": "2026-11-05T10:50:00Z"
+      "feitos": 15,
+      "tarefa": "Esperar a indexação das páginas de colegas e empresa; próxima melhoria com dados.",
+      "ultimo": "Colegas = prendas, empresa = organizar (PR #25)",
+      "atualizado": "2026-11-06T16:00:00Z"
     },
     "outreach": {
-      "estado": "descanso",
-      "feitos": 19,
-      "tarefa": "Criar o registo dos 19 contactos já enviados e marcar os lembretes de 7 dias (até 6 nov).",
-      "ultimo": "19 emails a sites portugueses, ainda sem respostas",
-      "atualizado": "2026-11-05T09:30:00Z"
+      "estado": "espera",
+      "feitos": 20,
+      "tarefa": "Lembretes de 9 a 13 nov e 3 sites novos (o envio precisa de um «sim» direto do Diogo neste PC).",
+      "ultimo": "Registo com 22 contactos e 7 lembretes",
+      "atualizado": "2026-11-06T16:00:00Z"
     },
     "social-media": {
       "estado": "descanso",
@@ -29,50 +29,54 @@
       "atualizado": "2026-11-05T20:20:00Z"
     },
     "analista": {
-      "estado": "novo",
-      "feitos": 0,
-      "tarefa": "Primeiros KPIs com números reais na segunda, 9 nov.",
-      "atualizado": "2026-11-05T20:24:00Z"
+      "estado": "descanso",
+      "feitos": 1,
+      "tarefa": "KPIs completos na segunda, 9 nov.",
+      "atualizado": "2026-11-06T16:00:00Z",
+      "ultimo": "8 sorteios na semana e 70 % sorteados"
     },
     "afiliados": {
       "estado": "novo",
       "feitos": 0,
-      "tarefa": "Ver que lojas portuguesas há na Awin (já aprovada) e propor em quais entrar (até 9 nov).",
-      "atualizado": "2026-11-05T20:24:00Z"
+      "tarefa": "Sábado 7 nov: Awin (Worten recusou) e comparar comissões com a Amazon.",
+      "atualizado": "2026-11-06T16:00:00Z"
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "Verificação de palha diária e teste no telemóvel à terça e à sexta",
-      "atualizado": "2026-11-05T22:05:00Z",
-      "ultimo": "Página inicial arrumada: 4 guias e a nova página /guias/"
+      "feitos": 3,
+      "tarefa": "As 3 ideias de 6 nov até 15 nov (mensagem para o grupo, lembrete de compra, texto para pedir emails).",
+      "atualizado": "2026-11-06T16:00:00Z",
+      "ultimo": "Aviso de email com erro e painel do /criar corrigido (PRs #26 e #27)"
     },
     "suporte": {
-      "estado": "novo",
-      "feitos": 0,
-      "tarefa": "Começa amanhã de manhã: pedidos de ajuda e site a funcionar. Teste de entrega na quinta, 12 nov.",
-      "atualizado": "2026-11-05T20:43:00Z"
+      "estado": "descanso",
+      "feitos": 2,
+      "tarefa": "Pedidos de ajuda e site a funcionar em cada turno.",
+      "atualizado": "2026-11-06T16:00:00Z",
+      "ultimo": "Convites de teste entregues na caixa principal; Brevo 100 % entregue"
     },
     "inovacao": {
-      "estado": "novo",
-      "feitos": 0,
-      "tarefa": "Primeiras 3 ideias para o negócio na sexta, 6 nov.",
-      "atualizado": "2026-11-05T21:40:00Z"
+      "estado": "descanso",
+      "feitos": 3,
+      "tarefa": "Próximas ideias na terça, 10 nov.",
+      "atualizado": "2026-11-06T16:00:00Z",
+      "ultimo": "3 ideias novas, todas aprovadas"
     },
     "qa": {
-      "estado": "novo",
-      "feitos": 0,
-      "tarefa": "Revê o próximo PR antes de ser junto e confirma o site depois de publicar.",
-      "atualizado": "2026-11-05T20:24:00Z"
+      "estado": "trabalhar",
+      "feitos": 3,
+      "tarefa": "Confirmar o site real depois da publicação.",
+      "atualizado": "2026-11-06T16:00:00Z",
+      "ultimo": "PRs #25, #26 e #27 aprovados"
     }
   },
   "estado": {
     "prioridades": [
-      "Registo dos 19 contactos de backlinks e lembretes de 7 dias",
-      "Lojas da Awin: ver quais valem a pena",
-      "Separar as páginas de colegas e de empresa"
+      "Publicar e confirmar /criar com o aviso de email e as páginas de colegas e empresa",
+      "Meta: agendar até 5 dez",
+      "Ideias de 6 nov no produto (mensagem para o grupo primeiro)"
     ],
-    "preciso": "Validar os dados do domínio sapatinho-natal.pt no Dominios.PT (até 14 nov).",
+    "preciso": "Validar os dados do domínio na Dominios.PT (até 14 nov) e confirmar o bloqueio de registo e a renovação automática; criar 2 códigos de seguimento na Amazon.",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -97,16 +101,20 @@
       {
         "quando": "2026-11-06T15:30:00Z",
         "texto": "Tarde: alarme do domínio enviado ao Diogo; ideias de prenda no resultado confirmadas no site."
+      },
+      {
+        "quando": "2026-11-06T16:00:00Z",
+        "texto": "Turno extra: incidente do domínio registado; emails voltam a chegar; PRs #25 a #27 revistos e juntos."
       }
     ],
     "recados": [],
     "resultados": {
-      "sorteios_semana": null,
-      "receita_semana": null,
-      "cliques_google_semana": null,
+      "sorteios_semana": 8,
+      "receita_semana": 0,
+      "cliques_google_semana": 20,
       "backlinks_publicados": 0,
-      "taxa_sorteio": null
+      "taxa_sorteio": 70
     },
-    "atualizado": "2026-11-06T15:30:00Z"
+    "atualizado": "2026-11-06T16:00:00Z"
   }
 }
