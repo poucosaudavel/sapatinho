@@ -71,6 +71,8 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 
 ## Notas do gestor
 
+- 6 nov, 15:44 (tarefa agendada, turno da tarde): outra sessão do gestor estava a trabalhar ao mesmo tempo (merges às 15:44–15:45 e build do site em `dist/` às 15:45). Para não chocar com ela, não lancei agentes nem publiquei; o turno da tarde já tinha corrido às 15:30. Sem alarmes novos.
+
 ### 6 nov 2026, ~16:00: incidente do domínio e turno completo extra (pedido do Diogo)
 - **Incidente:** o site, a API e os links estiveram em baixo desde a madrugada de 6 nov até cerca das 12:45. O .PT removeu o domínio sapatinho-natal.pt às 6:15 por falta de prova dos dados do titular; o Diogo registou-o de novo às 10:59 (Dominios.PT) e os servidores de nomes voltaram ao Cloudflare (clint/mira). Às 15:01 o .PT pediu outra vez a validação dos dados (prazo 8 a 10 dias): tarefa do Diogo até 14 nov. Pedido ao Diogo: confirmar na Dominios.PT que o bloqueio de registo e a renovação automática estão ligados.
 - **Confirmado depois (suporte, 15:30–15:38):** página inicial, /criar, /guias/ = 200; /painel pede senha; /api/stats sem senha = 401; /api/create inválido = 400; DNS da Google já mostra o Cloudflare. Teste de entrega: 3 convites entregues às 15:33 na caixa principal, segundo email às 15:37. Brevo 30 out–6 nov: 103 enviados, 100 % entregues, 0 devoluções e queixas. Nenhum pedido de ajuda.
