@@ -64,6 +64,7 @@ A tarefa agendada chama-te 4 vezes por dia (hora de Lisboa). Vê a hora e faz o 
 
 ## Dia de trabalho (cada vez que és chamado)
 
+0. **Git antes de tudo** (os turnos de 6 nov às 7:44 e 11:44 falharam por isto). No PC, apagar ficheiros está bloqueado, por isso o git deixa ficheiros `.lock` para trás. No início de cada turno, se nenhum git estiver a correr, muda-os de nome em vez de os apagar: `for f in .git/*.lock .git/refs/heads/*.lock .git/objects/*.lock; do [ -e "$f" ] && mv "$f" ".git/stale-$(basename "$f")-$(date +%s)"; done` (nunca para dentro de `.git/refs`). Depois `git pull` (a pasta já tem `pull.rebase=true` e `rebase.autoStash=true`: commits repetidos que já estão no GitHub desaparecem sozinhos). Se o pull continuar a falhar, regista o erro exato, trabalha numa cópia nova (`git clone` para outra pasta) e diz ao Diogo no relatório.
 1. **Estado.** Lê o `CLAUDE.md`, o `CLAUDE.local.md`, `gestao/tarefas.md`, `gestao/kpis.md`, `gestao/backlinks.md` e `gestao/suporte.md` (se existirem) e a data de hoje. Vê `git status`, `git log --oneline -10` e os PR abertos.
 2. **Atrasos.** Lista tudo o que tem data passada e não está «feito». Resolve-os primeiro.
 3. **Recados:** lê `gestao/recados.md`. Cada recado `novo` vai na ordem do agente a quem se destina; depois marcas `entregue`. Recados antigos (mais de 14 dias e entregues) apagas da tabela.
