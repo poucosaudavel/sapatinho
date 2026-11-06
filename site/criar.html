@@ -33,6 +33,7 @@
 .intro h1{font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.05;margin-top:10px}
 .intro p{color:var(--soft);margin-top:12px;max-width:52ch}
 .panel{padding:30px 28px 28px;display:flex;flex-direction:column;gap:18px}
+[hidden]{display:none!important}
 .panel h2{font-size:1.5rem;color:var(--ink)}
 .step-h{display:flex;align-items:baseline;gap:12px}
 .step-h .n{font-family:var(--display);color:var(--ember);font-size:1.5rem;line-height:1}
@@ -47,6 +48,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 .sent{display:flex;flex-direction:column;gap:0}
 .sent div{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-block:10px;font-size:.95rem;color:var(--ink)}
 .sent div span{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.sent div span.ok{flex:none;overflow:visible;color:#2d5c45}
 .ok{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:999px;background:#e5efe8;color:#2d5c45}
 .orgbox{display:flex;gap:8px;flex-wrap:wrap}
 .orgbox input{flex:1 1 240px}
