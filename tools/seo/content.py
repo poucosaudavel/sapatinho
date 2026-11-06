@@ -313,18 +313,21 @@ related=["regras-do-amigo-secreto", "ideias-de-prendas-amigo-secreto"],
 # ---------------------------------------------------------------- empresa
 PAGES.append(dict(
 slug="amigo-secreto-na-empresa",
+modified="2026-11-06",
 nav="Na empresa",
 short="Amigo secreto na empresa",
-card="Participação voluntária, prendas adequadas e uma mensagem pronta a enviar aos colegas.",
-title="Amigo secreto na empresa: como organizar | Sapatinho",
+card="Como organizar no trabalho: inscrições, limite, calendário, equipas remotas e uma mensagem pronta a enviar.",
+title="Amigo secreto no trabalho: como organizar na empresa | Sapatinho",
 h1="Amigo secreto na empresa: como organizar no trabalho",
-dek="Um amigo secreto bem organizado aproxima colegas que mal se falam durante o ano. Mal organizado, deixa pessoas desconfortáveis. Este guia ajuda-te a acertar.",
-description="Como organizar o amigo secreto no trabalho: participação voluntária, limite de preço, prendas adequadas, equipas remotas e uma mensagem pronta a enviar aos colegas.",
+dek="Um amigo secreto bem organizado aproxima colegas que mal se falam durante o ano. Mal organizado, deixa pessoas desconfortáveis. Este guia é para quem organiza: regras, datas e o convite à equipa.",
+description="Como organizar o amigo secreto no trabalho: inscrições voluntárias, limite igual para todos, calendário de 4 semanas, equipas remotas e uma mensagem pronta a enviar.",
 body="""
+<p class="lead-answer"><strong>Para organizar o amigo secreto na empresa</strong>, anuncia-o como um convite voluntário com cerca de quatro semanas de antecedência, combina um limite baixo e igual para todos (por exemplo 10 €), faz o sorteio por email três semanas antes, para incluir quem está em teletrabalho, e marca a troca para o almoço ou o jantar de Natal.</p>
+
 <nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
 <li><a href="#voluntario">Participação sempre voluntária</a></li>
 <li><a href="#limite">Um limite baixo e igual para todos</a></li>
-<li><a href="#prendas">Prendas adequadas ao trabalho</a></li>
+<li><a href="#prendas">Que prendas combinar</a></li>
 <li><a href="#equipas">Equipas grandes ou remotas</a></li>
 <li><a href="#calendario">Calendário sugerido</a></li>
 <li><a href="#mensagem">Mensagem pronta a enviar</a></li>
@@ -337,23 +340,8 @@ body="""
 <h2 id="limite">Um limite baixo e igual para todos</h2>
 <p>No trabalho convivem salários e situações muito diferentes. Um limite baixo, por exemplo entre 5 e 15 €, deixa toda a gente à vontade. O valor deve ser o mesmo para todos, incluindo chefias.</p>
 
-<h2 id="prendas">Prendas adequadas ao trabalho</h2>
-<p>A regra de ouro: uma prenda que podias abrir à frente de toda a equipa sem ninguém ficar desconfortável.</p>
-<h3>Boas escolhas</h3>
-<ul>
-<li>Algo comestível: chocolate, bolachas, chá ou café</li>
-<li>Uma planta pequena para a secretária</li>
-<li>Material de escritório bonito: um caderno, uma caneta, um organizador</li>
-<li>Uma caneca, um livro ou um jogo de cartas</li>
-</ul>
-<h3>A evitar</h3>
-<ul>
-<li>Roupa interior, perfumes ou cosméticos muito pessoais</li>
-<li>Piadas sobre aparência, idade, peso ou vida pessoal</li>
-<li>Prendas com conotação política ou religiosa</li>
-<li>Álcool, a não ser que saibas que a pessoa bebe e que a empresa não se importa</li>
-</ul>
-<p>Para a lista completa, com preço e para quem é cada ideia, vê as <a href="/prendas-amigo-secreto-colegas/">prendas de amigo secreto para colegas de trabalho</a>, arrumadas por limite de 5 a 20 €. Para outros tipos de pessoa, há as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se a equipa gosta de brincar, há uma secção para colegas nas <a href="/prendas-engracadas-amigo-secreto/#trabalho">prendas engraçadas</a>.</p>
+<h2 id="prendas">Que prendas combinar</h2>
+<p>Escreve no convite a regra de ouro: uma prenda que se pode abrir à frente de toda a equipa sem ninguém ficar desconfortável. Nada de roupa, perfume ou piadas sobre a pessoa, e o limite cumpre-se. Se alguém perguntar o que oferecer, envia-lhe as <a href="/prendas-amigo-secreto-colegas/">prendas de amigo secreto para colegas de trabalho</a>: são 26 ideias arrumadas por limite, de 5 a 20 €, e uma lista do que evitar. Se a equipa gosta de brincar, há uma secção para colegas nas <a href="/prendas-engracadas-amigo-secreto/#trabalho">prendas engraçadas</a>.</p>
 
 <h2 id="equipas">Equipas grandes ou remotas</h2>
 <ul>
@@ -388,7 +376,7 @@ faq=[
 ("Qual é um bom limite para o amigo secreto no trabalho?", "Um valor baixo, por exemplo entre 5 e 15 €, deixa toda a gente à vontade. O importante é ser igual para todos."),
 ("E se alguém faltar no dia da troca?", "Combinem antes: a prenda pode ficar guardada até a pessoa voltar ou ser entregue por quem a ofereceu noutro dia."),
 ],
-related=["ideias-de-prendas-amigo-secreto", "amigo-secreto-a-distancia"],
+related=["prendas-amigo-secreto-colegas", "amigo-secreto-a-distancia", "regras-do-amigo-secreto"],
 ))
 
 # ================================================================ lote 2 (28 out 2026)
@@ -1238,7 +1226,7 @@ faq=[
 ("Que prenda engraçada dar no amigo secreto até 5 €?", "Umas orelhas de rena para usar no jantar, um pato de borracha «para os dias difíceis», um bigode postiço com um postal ou um bingo de Natal feito por ti. Com 5 €, um postal a explicar a piada faz toda a diferença."),
 ("Qual é uma boa prenda engraçada para o amigo secreto?", "Uma que faça rir e sirva para alguma coisa: meias ridículas, uma caneca com piada, um jogo de cartas para o jantar ou um pijama de Natal. Funcionam com quase toda a gente."),
 ("Uma prenda engraçada pode ofender?", "Pode, se a piada for sobre a pessoa. Evita temas como o peso, a idade ou a aparência, e pensa em quem vai estar a ver quando ela abrir a prenda."),
-("Que prenda engraçada dar a um colega de trabalho?", 'Algo ligado ao escritório ou ao café, como um carimbo «aprovado» ou uma caneca com piada. Há mais ideias no guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a>.'),
+("Que prenda engraçada dar a um colega de trabalho?", 'Algo ligado ao escritório ou ao café, como um carimbo «aprovado» ou uma caneca com piada. Há mais ideias nas <a href="/prendas-amigo-secreto-colegas/">prendas para colegas de trabalho</a>.'),
 ],
 related=["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-ate-10-euros", "amigo-secreto-na-empresa"],
 ))
@@ -1860,13 +1848,14 @@ related=["ideias-de-prendas-amigo-secreto", "prendas-amigo-secreto-homem", "pren
 PAGES.append(dict(
 slug="prendas-amigo-secreto-colegas",
 date="2026-11-02",
+modified="2026-11-06",
 nav="Prendas para colegas",
 short="Prendas para colegas",
 card="26 ideias até 20 € para o amigo secreto do trabalho: secretária, café, comida e piadas seguras.",
-title="Prendas amigo secreto colegas de trabalho: 26 ideias | Sapatinho",
-h1="Prendas de amigo secreto para colegas de trabalho",
+title="Prendas amigo secreto colegas de trabalho: 26 ideias até 20 € | Sapatinho",
+h1="Prendas de amigo secreto para colegas de trabalho: 26 ideias até 20 €",
 dek="Saiu-te um colega no amigo secreto do trabalho, talvez alguém com quem mal falas? Vinte e seis ideias por limite, com o preço aproximado e para quem é cada uma, que podes abrir à frente da equipa toda.",
-description="26 prendas de amigo secreto para colegas de trabalho até 5, 10, 15 e 20 €: para a secretária, para o café, para comer e engraçadas sem ofender.",
+description="26 ideias de prendas de amigo secreto para colegas de trabalho, com preço: até 5, 10, 15 e 20 €, por tipo de colega e o que evitar no escritório.",
 body="""
 <p class="lead-answer"><strong>Boas prendas de amigo secreto para colegas de trabalho</strong> são coisas neutras que se usam na secretária ou se gastam na pausa do café: um caderno de capa rija, uma caneca de viagem, um candeeiro LED, uma planta pequena, chocolate bom ou café de especialidade. Se mal conheces a pessoa, prefere algo que se coma ou que se use no escritório, e deixa de fora tudo o que é pessoal.</p>
 
@@ -1955,13 +1944,13 @@ body="""
 <li>Álcool, a não ser que saibas que a pessoa bebe. Na dúvida, troca por café, chá ou doces.</li>
 <li>Passar o limite combinado. No trabalho, uma prenda muito acima do valor deixa os outros pouco à vontade.</li>
 </ul>
-<p>Se és tu quem organiza, o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a> explica como combinar o limite, incluir quem está em teletrabalho e convidar a equipa sem pressionar ninguém. Para o postal que vai com a prenda, há frases para colegas nas <a href="/pistas-e-mensagens-amigo-secreto/#postal">pistas e mensagens</a>.</p>
+<p>Esta página é para quem já tem um nome e precisa de uma prenda. Se és tu quem organiza a troca, o guia do <a href="/amigo-secreto-na-empresa/">amigo secreto na empresa</a> trata do resto: inscrições, limite, datas, colegas em teletrabalho e uma mensagem pronta a enviar à equipa. Para o postal que vai com a prenda, há frases para colegas nas <a href="/pistas-e-mensagens-amigo-secreto/#postal">pistas e mensagens</a>.</p>
 
 <p>Para outros valores e tipos de pessoa, vê todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>. Se a equipa ainda não fez o sorteio, podem fazê-lo num <a href="/criar">sorteio online por email</a>, com o limite escrito no convite.</p>
 """,
 faq=[
 ("O que oferecer a um colega que mal conheço?", "Algo neutro, que se coma ou que se use no escritório: chocolate bom, chá, uma caixa de bolachas, um caderno ou uma planta pequena. Evita roupa, perfume e prendas pessoais."),
-("Quanto gastar no amigo secreto do trabalho?", "O valor que o grupo combinar, e não mais. Um limite baixo, por exemplo entre 5 e 15 €, deixa toda a gente à vontade, e deve ser igual para todos, incluindo as chefias."),
+("Quanto gastar na prenda de um colega?", "O valor que o grupo combinou, e não mais. Uma prenda muito acima do limite deixa os outros pouco à vontade. Esta lista está arrumada por limite, de 5 a 20 €."),
 ("Prendas engraçadas são boa ideia no trabalho?", "Sim, se a piada for sobre o escritório, o café ou as reuniões, e não sobre a pessoa. Uma caneca com piada ou um carimbo «aprovado» funcionam bem à frente de toda a equipa."),
 ("Posso oferecer vinho a um colega?", "Só se souberes que a pessoa bebe e que não há problema em levar álcool para o trabalho. Se tiveres dúvidas, um café de especialidade ou uma caixa de doces é mais seguro."),
 ],
