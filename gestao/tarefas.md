@@ -43,10 +43,16 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 6 nov | produto | /criar: aviso «Querias dizer …?» para emails com erro no domínio (PR #27) | feito (junto a 6 nov); medir sorteados ÷ convites de 6 a 13 nov |
 | 7 nov | seo | `.claude/agents/seo.md`: a pesquisa «ideias amigo secreto trabalho» passa para /prendas-amigo-secreto-colegas/ (precisa do «sim» do Diogo: é mudar instruções de agente) | à espera do Diogo |
 | até 15 nov | produto | Ideias de 6 nov aprovadas: «Copiar mensagem para o grupo» no fim do /criar (sem botão de email com o nome de quem saiu), «Lembra-me de comprar a prenda» no /r (calendário, sem nome) e texto pronto para pedir os emails | por fazer |
-| 7 nov | afiliados | Awin: recusa da Worten (6 nov, 11:00); ver as outras 8 pendentes e comparar comissões com a Amazon (ideia 4 de 5 nov) | por fazer |
+| 7 nov | afiliados | Awin: recusa da Worten (6 nov, 11:00); ver as outras 8 pendentes e comparar comissões com a Amazon (ideia 4 de 5 nov) | feito (7 nov): Worten recusou («Advertiser doesn't work with this publisher type»); 8 pendentes; comparação em `gestao/afiliados.md`; comissões das lojas por ler (Awin pede login) |
 | até 14 nov | Diogo | Amazon: criar 2 códigos de seguimento novos (resultado do sorteio e redes sociais) para saber de onde vem cada venda (ideia 3 de 5 nov, aprovada) | à espera do Diogo |
 | 6 nov | gestor | Meta: agendar o que entrou na janela de 29 dias (até 5 dez) | adiado (6 nov, 19:44): novembro já está agendado; 1 a 5 dez só depois de o `social-media` dar dezembro como pronto (10 a 16 nov) |
-| 7 nov | outreach | Responder ao Echo Boomer numa linha (agradecer; não pagamos publicações) e marcar lembrete à NiT para ~25 nov | por fazer |
+| 7 nov | produto | /criar: «Avisa o grupo» com «Copiar mensagem» no fim (sem nomes de participantes; link com utm_source=grupo) (PR #28) | em curso: PR aberto; falta a revisão do `qa` (GitHub sem acesso a 7 nov de manhã) |
+| quando o GitHub voltar | qa | Rever o PR #28; depois o gestor junta e publica | à espera do Diogo (acesso ao GitHub) |
+| até 9 nov | Diogo | GitHub: a sessão caiu no Chrome do PC, o git do PC pede utilizador e a ligação do Claude ao GitHub pede nova autorização (a API respondeu «account suspended»): voltar a entrar e confirmar se a conta tem algum aviso | à espera do Diogo |
+| 9 nov | seo | Rotina de segunda: comparar o CTR de 4 a 8 nov de /regras, /prendas-engracadas e /ideias (títulos de 1 nov, PR #18); se /regras < 3 % na posição 6–7, novo título e descrição | por fazer |
+| até 11 nov | Diogo | Awin: voltar a entrar no Chrome do PC (a sessão expirou) para o `afiliados` ler comissões e estados na quarta | à espera do Diogo |
+| quando possível | Diogo | Meta Business Suite: as mensagens do Instagram aparecem «Desassociado» / «Confirmar acesso» | à espera do Diogo |
+| 7 nov | outreach | Responder ao Echo Boomer e 2–3 contactos novos | bloqueado (7 nov, 7:5x): o classificador do PC recusou lançar o `outreach` («transações reais»); fica para quando o Diogo o pedir diretamente |
 | 10 a 16 nov | social-media | Dezembro (1 a 20) pronto a agendar | por fazer |
 | 3 nov | seo | Página /troca-de-prendas-natal/ (6 jogos de troca, PR #21) | feito (publicado 3 nov; no Google a 4 nov) |
 | 4 nov | seo | /pistas-e-mensagens-amigo-secreto/: título novo e 24 frases prontas (PR #22) | feito (publicado; indexação pedida e confirmada 4 nov). Não mexer antes de 11 nov |
@@ -71,6 +77,9 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 1 a 20 dez | gestor | Vigiar o limite do Brevo | por fazer |
 
 ## Notas do gestor
+
+- 7 nov, 7:44 (tarefa agendada, turno da manhã): git limpo e atualizado no arranque. Caixa: nada novo desde 6 nov (nenhum pedido de ajuda nem aviso). Site e API OK (suporte, por fetch no Chrome: páginas 200, /s/ da família 200, /api/stats 401, /api/create inválido 400). Números (analista): 7 sorteios reais de 31 out a 6 nov (corrige os 8 de ontem, que contavam um teste); 0 reais a 6 nov e até às 7:50 de 7 nov; Google 29 out–4 nov 25 cliques / 612 impressões / posição 12 (sobe de 20/492); Amazon novembro 3 cliques, 0 €. Meta: sem mensagens nem comentários; 91 publicações agendadas de 7 a 30 nov; mensagens do Instagram «Desassociado»; erro do IG de 3 nov mantém-se. Afiliados: Worten recusada, 8 pendentes, links da Amazon todos com a tag e rel certos. SEO: nenhuma mudança (as 3 páginas candidatas mudaram a 1 nov; medir na segunda). Produto: PR #28 «Avisa o grupo» aberto. **Bloqueios:** o GitHub ficou sem acesso a meio do turno (o `qa` não conseguiu ler o PR; o git do PC não faz fetch/push) — PR #28 não revisto nem junto, nada publicado; o `outreach` foi recusado pelo classificador. Este registo fica em commit local até o push voltar a funcionar.
+- **Decidi:** não juntar o PR #28 sem revisão; prioridades de hoje mantêm-se para a tarde se o GitHub voltar.
 
 - 6 nov, 19:44 (tarefa agendada, turno da noite): git a funcionar (autorização de apagar dada; pull sem erros). Site real: início, /criar, /guias/, sitemap e o link /s/ da família = 200; /api/stats sem senha = 401; /api/create inválido = 400. Caixa: 2 respostas de outreach (NiT: vão escrever mais perto de dezembro e guardaram o email; Echo Boomer: dão prioridade a quem paga, talvez mencionem um dia) — registadas em `gestao/backlinks.md`; resposta curta ao Echo Boomer fica para o `outreach` amanhã. Nenhum pedido de ajuda. Meta: sem mensagens novas; novembro agendado; dezembro adiado até o `social-media` o dar como pronto. Recados de 5 e 6 nov entregues. Oficina atualizada.
 

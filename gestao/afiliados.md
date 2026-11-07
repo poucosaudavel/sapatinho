@@ -6,7 +6,7 @@ Objetivo: saber se há programas de afiliados portugueses que compensem ao lado 
 
 | Programa | Como se entra | Comissão | Duração do clique | Fonte |
 | --- | --- | --- | --- | --- |
-| Amazon.es (Associados) | Já temos (`sapatinhonata-21`) | 1 a 10 % conforme a categoria: moda 10 %, livros 6 %, eletrónica 3 %, consolas 1 % | 24 horas | [shelf.pt](https://shelf.pt/blog/programas-afiliados-portugal), [kairosafiliados.pt](https://kairosafiliados.pt/afiliados-em-portugal/) |
+| Amazon.es (Associados) | Já temos (`sapatinhonata-21`) | 0 a 8 % conforme a categoria (tabela oficial vista a 7 nov: moda 8 %, beleza/cozinha/casa 6 %, livros 4,5 %, desporto 4 %, papelaria 3,5 %, brinquedos/eletrónica 3 %, videojogos 1 %, cheques-prenda 0 %) | 24 horas | [shelf.pt](https://shelf.pt/blog/programas-afiliados-portugal), [kairosafiliados.pt](https://kairosafiliados.pt/afiliados-em-portugal/) |
 | Awin (rede com muitas lojas) | Registo como «publisher»; pedem um depósito de 5 libras, devolvido no primeiro pagamento se fores aceite | Cada loja decide; em retalho costuma ser 1 a 8 % | Cada loja decide | [awin.com](https://www.awin.com/gb/compliance-and-regulations/application-process-and-joining-fee) |
 | Worten | Através de uma rede de afiliados | Baixa, cerca de 1 a 5 % | Não publicado | [kairosafiliados.pt](https://kairosafiliados.pt/afiliados-em-portugal/) |
 | Bertrand, Wook, Fnac | São citadas como lojas com programa, sem números | Não publicado | Não publicado | [kairosafiliados.pt](https://kairosafiliados.pt/afiliados-em-portugal/), [shelf.pt](https://shelf.pt/blog/programas-afiliados-portugal) |
@@ -26,3 +26,14 @@ Objetivo: saber se há programas de afiliados portugueses que compensem ao lado 
 ## Impostos (só para saberes; não é aconselhamento)
 
 O dinheiro de afiliados conta como rendimento de trabalho independente (categoria B): abrir atividade nas Finanças e passar recibo verde quando receberes. Abaixo de cerca de 15 000 € por ano costuma haver isenção de IVA. Fala com um contabilista antes do primeiro pagamento. Fonte: [kairosafiliados.pt](https://kairosafiliados.pt/afiliados-em-portugal/).
+
+## Estado dos pedidos na Awin (7 nov 2026, afiliados)
+
+O painel da Awin pediu login (sessão expirada); visto só pelo email do sapatinhonatal.
+
+| Loja | Estado | Comissão anunciada |
+| --- | --- | --- |
+| Worten PT | recusada a 6 nov: «Advertiser doesn't work with this publisher type» | — |
+| Colvin, PcComponentes, Startselect, Wanapix, Decathlon, Sephora, Druni, Douglas | pendentes (sem email de resposta até 7 nov) | não vista (só dentro da Awin); Decathlon: clique de 15 dias (decathlon.pt/lp/i/afiliados) |
+
+Links Amazon (7 nov): 282 links em `site/`, todos pesquisas `amazon.es/s?k=`, todos com `tag=sapatinhonata-21` e `rel="sponsored nofollow noopener"`. Sem 404 possível (são pesquisas); 1 testada no Chrome devolve produtos. O curl do PC não chega à Amazon.

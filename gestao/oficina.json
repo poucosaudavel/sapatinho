@@ -1,82 +1,83 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
-      "feitos": 29,
-      "tarefa": "Amanhã às 7:44: relatório completo, outreach responde ao Echo Boomer e afiliados na Awin.",
-      "ultimo": "Turno da noite: site confirmado, 2 respostas de sites registadas",
-      "atualizado": "2026-11-06T19:55:00Z"
+      "estado": "espera",
+      "feitos": 1,
+      "tarefa": "Juntar e publicar o PR #28 quando o GitHub voltar.",
+      "ultimo": "Turno da manhã: relatório e bloqueios registados",
+      "atualizado": "2026-11-07T08:20:00Z"
     },
     "seo": {
       "estado": "descanso",
-      "feitos": 15,
-      "tarefa": "Esperar a indexação das páginas de colegas e empresa; próxima melhoria com dados.",
-      "ultimo": "Colegas = prendas, empresa = organizar (PR #25)",
-      "atualizado": "2026-11-06T16:00:00Z"
+      "feitos": 0,
+      "tarefa": "Segunda: medir o CTR dos títulos de 1 nov.",
+      "ultimo": "Hoje sem mudanças: títulos de 1 nov ainda a medir",
+      "atualizado": "2026-11-07T08:20:00Z"
     },
     "outreach": {
-      "estado": "trabalhar",
-      "feitos": 20,
-      "tarefa": "Responder ao Echo Boomer e lembrar a NiT perto de dezembro.",
-      "ultimo": "2 sites responderam (NiT e Echo Boomer)",
-      "atualizado": "2026-11-06T19:55:00Z"
+      "estado": "espera",
+      "feitos": 0,
+      "tarefa": "Responder ao Echo Boomer (bloqueado hoje).",
+      "ultimo": "5 emails agendados para 9 e 10 nov",
+      "atualizado": "2026-11-07T08:20:00Z"
     },
     "social-media": {
       "estado": "descanso",
-      "feitos": 5,
-      "tarefa": "Preparar dezembro (1 a 20) até 16 nov para agendar no Meta.",
-      "ultimo": "14 publicações com as ilustrações do site",
-      "atualizado": "2026-11-06T19:55:00Z"
+      "feitos": 0,
+      "tarefa": "Preparar dezembro (1 a 20) até 16 nov.",
+      "ultimo": "91 publicações agendadas até 30 nov",
+      "atualizado": "2026-11-07T08:20:00Z"
     },
     "analista": {
       "estado": "descanso",
       "feitos": 1,
       "tarefa": "KPIs completos na segunda, 9 nov.",
-      "atualizado": "2026-11-06T16:00:00Z",
-      "ultimo": "8 sorteios na semana e 70 % sorteados"
+      "atualizado": "2026-11-07T08:20:00Z",
+      "ultimo": "7 sorteios reais na semana; Google sobe para 25 cliques"
     },
     "afiliados": {
-      "estado": "novo",
-      "feitos": 0,
-      "tarefa": "Sábado 7 nov: Awin (Worten recusou) e comparar comissões com a Amazon.",
-      "atualizado": "2026-11-06T16:00:00Z"
+      "estado": "espera",
+      "feitos": 1,
+      "tarefa": "Quarta: ler comissões na Awin (precisa de nova entrada do Diogo).",
+      "atualizado": "2026-11-07T08:20:00Z",
+      "ultimo": "Worten recusou; 282 links da Amazon todos certos"
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 3,
-      "tarefa": "As 3 ideias de 6 nov até 15 nov (mensagem para o grupo, lembrete de compra, texto para pedir emails).",
-      "atualizado": "2026-11-06T16:00:00Z",
-      "ultimo": "Aviso de email com erro e painel do /criar corrigido (PRs #26 e #27)"
+      "feitos": 1,
+      "tarefa": "PR #28 à espera de revisão; a seguir «Lembra-me de comprar a prenda».",
+      "atualizado": "2026-11-07T08:20:00Z",
+      "ultimo": "«Avisa o grupo» no fim do /criar (PR #28)"
     },
     "suporte": {
       "estado": "descanso",
-      "feitos": 2,
+      "feitos": 1,
       "tarefa": "Pedidos de ajuda e site a funcionar em cada turno.",
-      "atualizado": "2026-11-06T19:55:00Z",
-      "ultimo": "Site e API confirmados às 19:50; nenhum pedido de ajuda"
+      "atualizado": "2026-11-07T08:20:00Z",
+      "ultimo": "Site e API OK; nenhum pedido de ajuda"
     },
     "inovacao": {
       "estado": "descanso",
-      "feitos": 3,
+      "feitos": 0,
       "tarefa": "Próximas ideias na terça, 10 nov.",
       "atualizado": "2026-11-06T16:00:00Z",
       "ultimo": "3 ideias novas, todas aprovadas"
     },
     "qa": {
-      "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Rever o próximo PR.",
-      "atualizado": "2026-11-06T19:55:00Z",
+      "estado": "espera",
+      "feitos": 0,
+      "tarefa": "Rever o PR #28 quando o GitHub voltar.",
+      "atualizado": "2026-11-07T08:20:00Z",
       "ultimo": "Site real confirmado depois da publicação de 6 nov"
     }
   },
   "estado": {
     "prioridades": [
-      "Outreach: responder ao Echo Boomer e preparar os lembretes de 9 a 13 nov",
-      "Afiliados (sábado): 8 lojas pendentes na Awin e comissões vs. Amazon",
-      "Produto: «Copiar mensagem para o grupo» no fim do /criar"
+      "Rever, juntar e publicar o PR #28 («Avisa o grupo»)",
+      "Outreach: resposta ao Echo Boomer e contactos novos",
+      "Produto: «Lembra-me de comprar a prenda» no /r"
     ],
-    "preciso": "Validar os dados do domínio na Dominios.PT (até 14 nov) e confirmar o bloqueio de registo e a renovação automática; criar 2 códigos de seguimento na Amazon.",
+    "preciso": "Voltar a entrar no GitHub (Chrome do PC e ligação do Claude), na Awin e confirmar o acesso às mensagens do Instagram; validar os dados do domínio na Dominios.PT até 14 nov; entrevista fiscal da Amazon.",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -109,6 +110,10 @@
       {
         "quando": "2026-11-06T19:55:00Z",
         "texto": "Noite: site e API confirmados; a NiT e o Echo Boomer responderam; recados entregues."
+      },
+      {
+        "quando": "2026-11-07T08:20:00Z",
+        "texto": "Manhã de 7 nov: site OK, 7 sorteios reais na semana, Google a subir; PR #28 aberto mas o GitHub ficou sem acesso, nada publicado."
       }
     ],
     "recados": [
@@ -128,12 +133,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 8,
+      "sorteios_semana": 7,
       "receita_semana": 0,
-      "cliques_google_semana": 20,
+      "cliques_google_semana": 25,
       "backlinks_publicados": 0,
-      "taxa_sorteio": 70
+      "taxa_sorteio": 73
     },
-    "atualizado": "2026-11-06T19:55:00Z"
+    "atualizado": "2026-11-07T08:20:00Z"
   }
 }

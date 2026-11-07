@@ -71,6 +71,11 @@ Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima f
 | Emails de backlinks | 22 enviados, 7 lembretes, 5 agendados, 0 respostas, 0 links | 30 out a 6 nov | Gmail sapatinhonatal | 6 nov |
 | Awin | 9 lojas pendentes, 0 aprovadas, 0 recusadas | pedidos de 31 out | Awin | 5 nov |
 | Teste de entrega dos convites | 3 de 3 na Caixa principal, 0 no Spam | 6 nov | Gmail sapatinhonatal | 6 nov |
+| Cliques / impressões / CTR / posição (Google) | 25 / 612 / 4,1 % / 12 | 29 out a 4 nov | Search Console | 7 nov, ~7:50 |
+| Pesquisa com mais cliques | «prendas engraçadas para amigo secreto até 5€»: 4 cliques, 53 impressões | 29 out a 4 nov | Search Console | 7 nov |
+| Sorteios / convites / sortearam (painel, com testes) | 13 / 60 / 39 (65 %) | até 7 nov, ~7:50 | `/painel` | 7 nov |
+| Sorteios reais (sem os 3 testes de 6 nov) | total 10 sorteios, 51 convites; 31 out–6 nov: 7; 6 nov: 0; 7 nov: 0 até ~7:50 | 30 out a 7 nov | `/painel` | 7 nov |
+| Cliques na Amazon | 3 em novembro (4 nos últimos 30 dias), 0 pedidos, 0,00 € | até 7 nov | Amazon Afiliados | 7 nov |
 
 ## Histórico
 
@@ -83,3 +88,4 @@ Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima f
   - Emails de backlinks (Gmail sapatinhonatal): 22 enviados, 7 lembretes, 5 agendados, 0 respostas até 6 nov.
 - 6 nov: passagem da rotina das 10:40 para o gestor do PC.
 - 6 nov, ~16:00 (analista): sorteios 31 out–6 nov = 8 (11 desde 30 out; 54 convites, 38 sortearam = 70 %); Amazon 30 dias: 3 cliques, 0 pedidos, 0 €; Google 28 out–3 nov: 20 cliques, 492 impressões, CTR 4,1 %, posição 12,7; Brevo 30 out–6 nov: 103 enviados, 100 % entregues, 0 devoluções e queixas (suporte). Sem alarmes. O /painel de 6 nov inclui sorteios de teste (descontar).
+- 7 nov, manhã (analista): Google 29 out–4 nov: 25 cliques, 612 impressões, CTR 4,1 %, posição 12 (semana anterior 20 / 492). Painel: 13 sorteios / 60 convites, mas 6 nov = 3 sorteios / 9 convites, todos de teste; reais: 10 sorteios / 51 convites, 7 de 31 out a 6 nov, 0 a 6 nov, 0 a 7 nov até ~7:50. Amazon: 3 cliques em novembro, 0 €; aviso fiscal ainda por concluir. Sem alarmes.
