@@ -48,7 +48,7 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 6 nov | gestor | Meta: agendar o que entrou na janela de 29 dias (até 5 dez) | adiado (6 nov, 19:44): novembro já está agendado; 1 a 5 dez só depois de o `social-media` dar dezembro como pronto (10 a 16 nov) |
 | 7 nov | produto | /criar: «Avisa o grupo» com «Copiar mensagem» no fim (sem nomes de participantes; link com utm_source=grupo) (PR #28) | em curso: PR aberto; falta a revisão do `qa` (GitHub sem acesso a 7 nov de manhã) |
 | quando o GitHub voltar | qa | Rever o PR #28; depois o gestor junta e publica | à espera do Diogo (acesso ao GitHub) |
-| até 9 nov | Diogo | GitHub: a sessão caiu no Chrome do PC, o git do PC pede utilizador e a ligação do Claude ao GitHub pede nova autorização (a API respondeu «account suspended»): voltar a entrar e confirmar se a conta tem algum aviso | à espera do Diogo |
+| até 9 nov | Diogo | GitHub: conta poucosaudavel suspensa pelo GitHub (a API responde «account suspended»); ticket de reativação aberto pelo Diogo a 7 nov. Até voltar, o gestor trabalha só no PC (ver gestor.md) | à espera do GitHub |
 | 9 nov | seo | Rotina de segunda: comparar o CTR de 4 a 8 nov de /regras, /prendas-engracadas e /ideias (títulos de 1 nov, PR #18); se /regras < 3 % na posição 6–7, novo título e descrição | por fazer |
 | até 11 nov | Diogo | Awin: voltar a entrar no Chrome do PC (a sessão expirou) para o `afiliados` ler comissões e estados na quarta | à espera do Diogo |
 | quando possível | Diogo | Meta Business Suite: as mensagens do Instagram aparecem «Desassociado» / «Confirmar acesso» | à espera do Diogo |
