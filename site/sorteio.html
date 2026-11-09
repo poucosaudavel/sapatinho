@@ -50,6 +50,9 @@
 .gifts h2{font-size:1.35rem;line-height:1.2;text-align:center;margin:0 0 4px}
 .gifts .btn{text-decoration:none}
 .again{border-top:1px solid var(--line);padding-top:16px}
+.remind{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;gap:10px}
+.remind h2{font-size:1.2rem;line-height:1.2;text-align:center;margin:0}
+.remind .btn{text-decoration:none}
 @media (max-width:420px){.draw{padding:28px 20px 22px}.draw h1{font-size:1.8rem}.result .who{font-size:2.5rem}}
 </style>
 </head>
@@ -103,6 +106,7 @@ function showResult(o, mailing){
     (mailing ? '<p class="note" id="mailnote">A enviar-te um email com o nome…</p>' : '');
   // Ideias de prenda e convite: construídos com createElement/textContent, nunca com HTML a partir do link.
   app.appendChild(giftBlock(o.l));
+  app.appendChild(remindBlock(o));
   app.appendChild(againLine());
 }
 var UTM = "?utm_source=sorteio&utm_medium=resultado";
@@ -140,6 +144,71 @@ function againLine(){
   a.href = "/criar?utm_source=sorteio&utm_medium=convite";
   p.appendChild(a);
   return p;
+}
+
+/* «Lembra-me de comprar a prenda»: evento de calendário gerado aqui no navegador.
+   O texto do evento é fixo: nunca leva o nome de quem saiu, o teu nome, o grupo nem o link do convite
+   (o link tem os nomes, só ofuscados). Só entram o limite (número) e a data da troca (já validados por Sap.safe). */
+var CAL_UTM = "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/?utm_source=calendario&utm_medium=lembrete";
+var CAL_TITLE = "Comprar a prenda do amigo secreto";
+function ymd(dt){ return dt.getUTCFullYear() + ("0"+(dt.getUTCMonth()+1)).slice(-2) + ("0"+dt.getUTCDate()).slice(-2); }
+function todayUTC(){ var n = new Date(); return new Date(Date.UTC(n.getFullYear(), n.getMonth(), n.getDate())); }
+/* Dia do lembrete: 3 dias antes da troca (nunca antes de amanhã); sem data, daqui a 3 dias. Troca já passada: sem lembrete. */
+function remindDay(d){
+  var t = todayUTC(), DAY = 86400000, tomorrow = new Date(t.getTime() + DAY);
+  if (!d) return new Date(t.getTime() + 3*DAY);
+  var p = d.split("-"), x = new Date(Date.UTC(+p[0], +p[1]-1, +p[2]));
+  if (isNaN(x.getTime()) || x.getTime() <= t.getTime()) return null;
+  var r = new Date(x.getTime() - 3*DAY);
+  return r.getTime() < tomorrow.getTime() ? tomorrow : r;
+}
+function calDetails(o){
+  var n = validLimit(o.l), parts = [];
+  if (n) parts.push("Limite: " + String(n) + " €.");
+  if (o.d) parts.push("A troca é a " + Sap.fmtDate(o.d) + ".");
+  parts.push("Para veres de novo quem te saiu, abre o link do teu convite (está no teu email).");
+  parts.push("Ideias de prendas: " + CAL_UTM);
+  return parts.join("\n");
+}
+function icsText(s){ return String(s).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n"); }
+function icsFile(day, details){
+  var end = new Date(day.getTime() + 86400000);
+  var stamp = new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d+Z$/,"Z");
+  var uid = Date.now().toString(36) + Math.random().toString(36).slice(2) + "@sapatinho-natal.pt";
+  return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Sapatinho//Lembrete//PT","CALSCALE:GREGORIAN","METHOD:PUBLISH",
+    "BEGIN:VEVENT","UID:"+uid,"DTSTAMP:"+stamp,"DTSTART;VALUE=DATE:"+ymd(day),"DTEND;VALUE=DATE:"+ymd(end),
+    "SUMMARY:"+icsText(CAL_TITLE),"DESCRIPTION:"+icsText(details),"URL:"+CAL_UTM,"TRANSP:TRANSPARENT",
+    "BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+icsText(CAL_TITLE),"TRIGGER:PT10H","END:VALARM",
+    "END:VEVENT","END:VCALENDAR"].map(icsFold).join("\r\n") + "\r\n";
+}
+/* Linhas do .ics com no máximo 75 bytes (RFC 5545): parte-se de 60 em 60 caracteres. */
+function icsFold(line){ var out = []; while (line.length > 60) { out.push(line.slice(0, 60)); line = line.slice(60); } out.push(line); return out.join("\r\n "); }
+function remindBlock(o){
+  var box = el("div", "remind"), day = remindDay(o.d);
+  if (!day) return box;
+  var details = calDetails(o);
+  box.appendChild(el("h2", "", "Lembra-me de comprar a prenda"));
+  box.appendChild(el("p", "note", "Fica um lembrete no teu calendário a " + Sap.fmtDate(ymd(day).replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3")) + ". Não leva o nome de quem te saiu."));
+  var g = el("a", "btn ghost wide", "Google Calendar");
+  g.href = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+    "&text=" + encodeURIComponent(CAL_TITLE) +
+    "&dates=" + ymd(day) + "/" + ymd(new Date(day.getTime() + 86400000)) +
+    "&details=" + encodeURIComponent(details);
+  g.target = "_blank"; g.rel = "noopener noreferrer";
+  box.appendChild(g);
+  var b = el("button", "btn ghost wide", "Outro calendário (iPhone, Outlook)");
+  b.type = "button";
+  b.addEventListener("click", function(){
+    try {
+      var url = URL.createObjectURL(new Blob([icsFile(day, details)], { type: "text/calendar;charset=utf-8" }));
+      var a = document.createElement("a");
+      a.href = url; a.download = "lembrete-prenda.ics";
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 10000);
+    } catch (e) { b.textContent = "Não foi possível criar o lembrete"; b.disabled = true; }
+  });
+  box.appendChild(b);
+  return box;
 }
 
 function showDraw(o, key, code){
