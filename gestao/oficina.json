@@ -1,60 +1,60 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "espera",
-      "feitos": 1,
-      "tarefa": "Juntar e publicar o PR #28 quando o GitHub voltar.",
-      "ultimo": "Turno da manhã: relatório e bloqueios registados",
-      "atualizado": "2026-11-07T08:20:00Z"
+      "estado": "trabalhar",
+      "feitos": 3,
+      "tarefa": "Medir o CTR das regras e da roleta a 16 nov; juntar o PR #28 quando o GitHub voltar.",
+      "ultimo": "3 ramos revistos, juntos e publicados (lembrete da prenda, títulos, dezembro)",
+      "atualizado": "2026-11-09T09:20:00Z"
     },
     "seo": {
       "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Segunda: medir o CTR dos títulos de 1 nov.",
-      "ultimo": "Hoje sem mudanças: títulos de 1 nov ainda a medir",
-      "atualizado": "2026-11-07T08:20:00Z"
+      "feitos": 2,
+      "tarefa": "16 nov: medir o CTR de /regras e /roleta; ver /prendas-ultima-hora (sem impressões).",
+      "ultimo": "Títulos e descrições novos para as regras e a roleta (publicados)",
+      "atualizado": "2026-11-09T09:20:00Z"
     },
     "outreach": {
       "estado": "espera",
       "feitos": 0,
-      "tarefa": "Responder ao Echo Boomer (bloqueado hoje).",
+      "tarefa": "Confirmar os 5 emails agendados (9 e 10 nov); lembretes até 13 nov.",
       "ultimo": "5 emails agendados para 9 e 10 nov",
-      "atualizado": "2026-11-07T08:20:00Z"
+      "atualizado": "2026-11-09T09:20:00Z"
     },
     "social-media": {
-      "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Preparar dezembro (1 a 20) até 16 nov.",
-      "ultimo": "91 publicações agendadas até 30 nov",
-      "atualizado": "2026-11-07T08:20:00Z"
+      "estado": "trabalhar",
+      "feitos": 1,
+      "tarefa": "Dezembro de 11 a 20 pronto até 16 nov.",
+      "ultimo": "1 a 10 dez prontos: 7 stories novas e 2 textos corrigidos",
+      "atualizado": "2026-11-09T09:20:00Z"
     },
     "analista": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "KPIs completos na segunda, 9 nov.",
-      "atualizado": "2026-11-07T08:20:00Z",
-      "ultimo": "7 sorteios reais na semana; Google sobe para 25 cliques"
+      "tarefa": "KPIs completos na quinta, 12 nov.",
+      "atualizado": "2026-11-09T09:20:00Z",
+      "ultimo": "Semana 2–8 nov: 6 sorteios, 31 cliques no Google (+244 %)"
     },
     "afiliados": {
       "estado": "espera",
-      "feitos": 1,
+      "feitos": 0,
       "tarefa": "Quarta: ler comissões na Awin (precisa de nova entrada do Diogo).",
-      "atualizado": "2026-11-07T08:20:00Z",
+      "atualizado": "2026-11-09T09:20:00Z",
       "ultimo": "Worten recusou; 282 links da Amazon todos certos"
     },
     "produto": {
       "estado": "trabalhar",
       "feitos": 1,
-      "tarefa": "PR #28 à espera de revisão; a seguir «Lembra-me de comprar a prenda».",
-      "atualizado": "2026-11-07T08:20:00Z",
-      "ultimo": "«Avisa o grupo» no fim do /criar (PR #28)"
+      "tarefa": "Até 15 nov: texto pronto para pedir os emails; ver porque não houve sorteios de 6 a 8 nov.",
+      "atualizado": "2026-11-09T09:20:00Z",
+      "ultimo": "«Lembra-me de comprar a prenda» no resultado (publicado)"
     },
     "suporte": {
       "estado": "descanso",
       "feitos": 1,
       "tarefa": "Pedidos de ajuda e site a funcionar em cada turno.",
-      "atualizado": "2026-11-07T08:20:00Z",
-      "ultimo": "Site e API OK; nenhum pedido de ajuda"
+      "atualizado": "2026-11-09T09:20:00Z",
+      "ultimo": "Teste de entrega: 3 convites na caixa Principal; Brevo 100 % entregues"
     },
     "inovacao": {
       "estado": "descanso",
@@ -64,20 +64,20 @@
       "ultimo": "3 ideias novas, todas aprovadas"
     },
     "qa": {
-      "estado": "espera",
-      "feitos": 0,
+      "estado": "descanso",
+      "feitos": 3,
       "tarefa": "Rever o PR #28 quando o GitHub voltar.",
-      "atualizado": "2026-11-07T08:20:00Z",
-      "ultimo": "Site real confirmado depois da publicação de 6 nov"
+      "atualizado": "2026-11-09T09:20:00Z",
+      "ultimo": "3 ramos revistos e o site real confirmado depois da publicação"
     }
   },
   "estado": {
     "prioridades": [
-      "Rever, juntar e publicar o PR #28 («Avisa o grupo»)",
-      "Outreach: resposta ao Echo Boomer e contactos novos",
-      "Produto: «Lembra-me de comprar a prenda» no /r"
+      "Produto: perceber os 3 dias sem sorteios (6–8 nov) e fazer o texto para pedir os emails",
+      "Social: dezembro de 11 a 20 pronto",
+      "SEO: /prendas-ultima-hora sem impressões e medir os títulos novos a 16 nov"
     ],
-    "preciso": "Voltar a entrar no GitHub (Chrome do PC e ligação do Claude), na Awin e confirmar o acesso às mensagens do Instagram; validar os dados do domínio na Dominios.PT até 14 nov; entrevista fiscal da Amazon.",
+    "preciso": "GitHub: reativação da conta (ticket aberto). Validar os dados do domínio na Dominios.PT até 14 nov. Entrar na Awin no Chrome do PC. Entrevista fiscal e 2 códigos de seguimento na Amazon. Mensagens do Instagram («Confirmar acesso»).",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -114,6 +114,10 @@
       {
         "quando": "2026-11-07T08:20:00Z",
         "texto": "Manhã de 7 nov: site OK, 7 sorteios reais na semana, Google a subir; PR #28 aberto mas o GitHub ficou sem acesso, nada publicado."
+      },
+      {
+        "quando": "2026-11-09T09:20:00Z",
+        "texto": "Manhã de 9 nov: KPIs da semana (6 sorteios, 31 cliques no Google); publicados o lembrete da prenda, títulos novos das regras e da roleta; 1 a 10 dez prontos nas redes."
       }
     ],
     "recados": [
@@ -130,15 +134,22 @@
         "para": "gestor",
         "texto": "Passagem da rotina das 10:40 feita",
         "estado": "entregue"
+      },
+      {
+        "quando": "2026-11-09T09:10:00Z",
+        "de": "analista",
+        "para": "seo",
+        "texto": "Regras e roleta com 0 cliques na posição 8; última hora sem impressões",
+        "estado": "entregue"
       }
     ],
     "resultados": {
-      "sorteios_semana": 7,
+      "sorteios_semana": 6,
       "receita_semana": 0,
-      "cliques_google_semana": 25,
+      "cliques_google_semana": 31,
       "backlinks_publicados": 0,
-      "taxa_sorteio": 73
+      "taxa_sorteio": 79
     },
-    "atualizado": "2026-11-07T08:20:00Z"
+    "atualizado": "2026-11-09T09:20:00Z"
   }
 }

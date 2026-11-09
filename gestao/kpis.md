@@ -1,6 +1,6 @@
 # KPIs e objetivos do Sapatinho até 20 dez 2026
 
-Gerido pelo gestor (`/gestor`). Revê-se **todas as segundas-feiras** com os números que o Diogo enviar. Atualizado a 30 out 2026.
+Gerido pelo gestor (`/gestor`). Revê-se **todas as segundas-feiras** com os números que o Diogo enviar. Atualizado a 30 out 2026; números de 9 nov 2026 (analista).
 
 Regra: só há metas com número quando há dados reais por trás. As metas de resultado ficam «a definir» até haver a primeira medição; os valores do `seo.md` são estimativas e estão marcados como tal.
 
@@ -20,13 +20,13 @@ Estado: **em linha**, **em risco** (a meta falha se nada mudar), **falhou**, **c
 
 | KPI | Fonte (quem envia) | Meta | Prazo | Atual | Estado |
 | --- | --- | --- | --- | --- | --- |
-| Cliques do Google | Search Console (Diogo) | cerca de 1 000 entre 1 e 20 dez (**estimativa** do `seo.md`; revê-se a 16 nov) | 20 dez | 20 cliques, 492 impressões, CTR 4,1 %, posição 12,7 (28 out a 3 nov; lido a 5 e 6 nov). Antes: 9 / 276 (26 out–1 nov), 16 / 383 (27 out–2 nov) | em linha (cedo) |
+| Cliques do Google | Search Console (Diogo) | cerca de 1 000 entre 1 e 20 dez (**estimativa** do `seo.md`; revê-se a 16 nov) | 20 dez | 9 nov: **31 cliques**, 992 impressões, CTR 3,1 %, posição 11,7 (2–8 nov). Semana anterior (26 out–1 nov): 9 / 276 / 3,3 % / 14,1 → +244 % cliques | em linha (cedo) |
 | Pesquisas na primeira página (posição média ≤ 10) | Search Console (Diogo) | 10 (**estimativa** do `seo.md`; revê-se a 16 nov) | 1 dez | 4 (28 out–3 nov): «prendas engraçadas até 5€» 8,5 (4 cliques), «prendas amigo secreto engraçadas» 9,0, «roleta amigo secreto» 9,3, «roleta de amigo secreto» 7,3. «prendas amigo secreto» 44,7; guia de ideias 39,1 | em linha (cedo) |
-| Sorteios feitos por semana | `/painel` (Diogo) | a definir a 16 nov, a partir das semanas de novembro | 20 dez | 5 nov (painel): 10 sorteios no total, 51 convites, 5,1 pessoas por sorteio. 6 nov: +1 sorteio de teste (descontar) | sem dados (meta a 16 nov) |
-| Convites abertos e sorteados (sorteados ÷ convites) | `/painel` (Diogo) | a definir a 16 nov | 20 dez | 5 nov: 73 % (37 de 51) | sem dados (meta a 16 nov) |
-| Cliques nos links da Amazon | Amazon Associados (Diogo) | a definir a 16 nov | 20 dez | 6 nov: 2 cliques em novembro (3 nos últimos 30 dias), 0 pedidos | sem dados (meta a 16 nov) |
-| Ganhos de afiliados | Amazon Associados (Diogo) | a definir a 16 nov | 20 dez | 6 nov: 0,00 € (Amazon). Awin: 0 lojas aceites, 9 pendentes. Aviso fiscal da Amazon por concluir | em risco |
-| Cliques no link (bio, stories, Facebook) | Meta Business Suite (Diogo) | a definir a 16 nov | 20 dez | 6 nov: seguidores FB 1, IG 1; 0 cliques em ligações no FB (29 out–4 nov; 37 visualizações, 63 visitas) | em risco |
+| Sorteios feitos por semana | `/painel` (Diogo) | a definir a 16 nov, a partir das semanas de novembro | 20 dez | 9 nov (painel, sem os 3 testes de 6 nov): **6 sorteios em 2–8 nov** (34 convites); 30 out–1 nov: 4 (o painel só conta desde 30 out). 0 sorteios reais a 6, 7 e 8 nov. Total real: 10 sorteios, 51 convites | sem dados (meta a 16 nov) |
+| Convites abertos e sorteados (sorteados ÷ convites) | `/painel` (Diogo) | a definir a 16 nov | 20 dez | 9 nov: total real 73 % (37 de 51); semana 2–8 nov 79 % (27 de 34) | sem dados (meta a 16 nov) |
+| Cliques nos links da Amazon | Amazon Associados (Diogo) | a definir a 16 nov | 20 dez | 9 nov: 5 cliques em novembro (1–8 nov), 6 nos últimos 30 dias (10 out–8 nov), 0 pedidos | sem dados (meta a 16 nov) |
+| Ganhos de afiliados | Amazon Associados (Diogo) | a definir a 16 nov | 20 dez | 9 nov: 0,00 € em novembro (Amazon, 0 pedidos). Awin: sem dados (pede login). Aviso fiscal da Amazon ainda por concluir | em risco |
+| Cliques no link (bio, stories, Facebook) | Meta Business Suite (Diogo) | a definir a 16 nov | 20 dez | 9 nov: cliques em ligações sem dados (não aparecem na visão geral). 1–7 nov: FB 8 visualizadores, IG alcance 4, 45 conteúdos publicados. 30 dias (10 out–8 nov): FB 40 visualizações, 12 visualizadores, 97 visitas, 1 interação, 1 seguidor | em risco |
 
 ## 3. Alarmes (evitam perder visitas)
 
@@ -76,6 +76,17 @@ Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima f
 | Sorteios / convites / sortearam (painel, com testes) | 13 / 60 / 39 (65 %) | até 7 nov, ~7:50 | `/painel` | 7 nov |
 | Sorteios reais (sem os 3 testes de 6 nov) | total 10 sorteios, 51 convites; 31 out–6 nov: 7; 6 nov: 0; 7 nov: 0 até ~7:50 | 30 out a 7 nov | `/painel` | 7 nov |
 | Cliques na Amazon | 3 em novembro (4 nos últimos 30 dias), 0 pedidos, 0,00 € | até 7 nov | Amazon Afiliados | 7 nov |
+| Cliques / impressões / CTR / posição (Google) | 31 / 992 / 3,1 % / 11,7 (semana anterior 26 out–1 nov: 9 / 276 / 3,3 % / 14,1) | 2 a 8 nov | Search Console | 9 nov, ~9:10 |
+| Google por página (cliques / impressões / CTR / posição) | /prendas-amigo-secreto-ate-5-euros/ 8 / 145 / 5,5 % / 8,5 · /prendas-engracadas-amigo-secreto/ 6 / 134 / 4,5 % / 9,7 · /criar 5 / 40 / 12,5 % / 11,3 · /regras-do-amigo-secreto/ 0 / 166 / 0 % / 8,3 · /ideias-de-prendas-amigo-secreto/ 0 / 134 / 0 % / 28,6 · /prendas-amigo-secreto-colegas/ 2 / 71 / 2,8 % / 8,2 · /roleta-amigo-secreto/ 0 / 66 / 0 % / 8,2 | 2 a 8 nov | Search Console | 9 nov |
+| CTR e posição de 4 a 8 nov (pedido do seo) | /regras-do-amigo-secreto/ 0 cliques, 130 impressões, CTR 0 %, posição 8,6 · /prendas-engracadas-amigo-secreto/ 4 / 109 / 3,7 % / 10,1 · /ideias-de-prendas-amigo-secreto/ 0 / 111 / 0 % / 27,7. Total do site 4–8 nov: 19 / 770 / 2,5 % / 11,7 | 4 a 8 nov | Search Console | 9 nov |
+| Pesquisas com mais impressões | «prendas engraçadas para amigo secreto até 5€» 4 cliques / 46 / posição 9,5 · «prendas amigo secreto» 0 / 21 / 30,6 · «ideias prendas amigo secreto» 0 / 16 / 27,8 · «ideias prenda amigo secreto» 0 / 14 / 32,6 · «roleta de amigo secreto» 0 / 9 / 8,7 · «roleta amigo secreto» 0 / 8 / 9,0 · «prendas engraçadas para amigo secreto até 10€» 1 / 5 / 13,4 | 2 a 8 nov | Search Console | 9 nov |
+| Páginas do sitemap sem impressões | /prendas-ultima-hora-amigo-secreto/ (publicada 31 out; 0 impressões de 26 out a 8 nov), /troca-de-prendas-natal/ (publicada 3 nov), /guias/, /como-funciona-o-sapatinho-privacidade/ | 26 out a 8 nov | Search Console + `site/sitemap.xml` | 9 nov |
+| Sorteios por dia (painel, com testes) | 30 out 3 · 31 out 1 · 2 nov 3 · 3 nov 1 · 4 nov 1 · 5 nov 1 · 6 nov 3 (todos teste) · 7 e 8 nov 0. Totais do painel: 13 sorteios / 60 convites / 39 sortearam | 30 out a 8 nov | `/painel` | 9 nov, ~9:05 |
+| Sorteios reais (sem os 3 testes de 6 nov, 9 convites) | 2–8 nov: 6 sorteios, 34 convites, 27 sortearam (79 %). 30 out–1 nov: 4 / 17 / 10. Total: 10 / 51 / 37 (73 %) | 30 out a 8 nov | `/painel` | 9 nov |
+| Emails por dia | o painel não mostra emails por dia; convites por dia no máximo 14 (30 out); 2–8 nov no máximo 13 (2 nov) | 30 out a 8 nov | `/painel` | 9 nov |
+| Amazon | 5 cliques em novembro, 0 pedidos, 0,00 €; 6 cliques nos últimos 30 dias (10 out–8 nov). Aviso fiscal por concluir | 1 a 8 nov | Amazon Afiliados (atualizado 9 nov 02:37) | 9 nov |
+| Meta | FB visualizadores 8, IG alcance 4, 45 conteúdos (13 publicações FB, 20 histórias FB, 12 publicações IG). 30 dias: FB 40 visualizações, 12 visualizadores, 97 visitas, 1 interação, 1 seguidor. Cliques em ligações: sem dados | 1 a 7 nov | Meta Business Suite | 9 nov |
+| Awin | sem dados: pede login do Diogo | — | Awin | 9 nov |
 
 ## Histórico
 
@@ -89,3 +100,4 @@ Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima f
 - 6 nov: passagem da rotina das 10:40 para o gestor do PC.
 - 6 nov, ~16:00 (analista): sorteios 31 out–6 nov = 8 (11 desde 30 out; 54 convites, 38 sortearam = 70 %); Amazon 30 dias: 3 cliques, 0 pedidos, 0 €; Google 28 out–3 nov: 20 cliques, 492 impressões, CTR 4,1 %, posição 12,7; Brevo 30 out–6 nov: 103 enviados, 100 % entregues, 0 devoluções e queixas (suporte). Sem alarmes. O /painel de 6 nov inclui sorteios de teste (descontar).
 - 7 nov, manhã (analista): Google 29 out–4 nov: 25 cliques, 612 impressões, CTR 4,1 %, posição 12 (semana anterior 20 / 492). Painel: 13 sorteios / 60 convites, mas 6 nov = 3 sorteios / 9 convites, todos de teste; reais: 10 sorteios / 51 convites, 7 de 31 out a 6 nov, 0 a 6 nov, 0 a 7 nov até ~7:50. Amazon: 3 cliques em novembro, 0 €; aviso fiscal ainda por concluir. Sem alarmes.
+- 9 nov, ~9:15 (analista, revisão de segunda): Google 2–8 nov 31 cliques / 992 impressões / CTR 3,1 % / posição 11,7 (semana anterior 9 / 276; +244 % cliques). Sorteios reais 2–8 nov: 6 (34 convites, 79 % sortearam); 0 reais a 6, 7 e 8 nov. Amazon novembro: 5 cliques, 0 €. Meta 1–7 nov: FB 8 visualizadores, IG alcance 4. Awin: sem dados (login). Alarmes: CTR 0 % em /regras-do-amigo-secreto/ (166 impressões, posição 8,3) e /roleta-amigo-secreto/ (66, 8,2); /prendas-ultima-hora-amigo-secreto/ sem impressões desde 31 out (faz 14 dias a 14 nov). Brevo e queda de cliques: sem alarme.
