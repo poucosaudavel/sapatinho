@@ -107,7 +107,7 @@
        "template": "tip",
        "kicker": "Pistas",
        "title": "Uma boa pista faz pensar, não denuncia",
-       "body": "Fala de algo que partilhas com a pessoa, não de ti. \"Já cantámos juntos no karaoke\" funciona. \"Sou o único com barba\" acaba com o jogo."
+       "body": "Fala de algo que partilhas com a pessoa, não de ti. «Já cantámos juntos no karaoke» funciona. «Sou o único com barba» acaba com o jogo."
       }
      ],
      "caption": "A pista perfeita deixa a mesa inteira a olhar uns para os outros durante a sobremesa. ✍️\n\nTrês regras simples:\n1. Fala de uma memória partilhada, não de uma característica tua.\n2. Nada de pormenores que só tu tens (o carro amarelo, o cão de três patas, a tatuagem).\n3. Escreve à mão. A letra também é uma pista, mas das boas, porque ninguém repara até ser tarde.\n\nSe te faltar inspiração, temos pistas e frases prontas para o postal no site.\n\nQual foi a melhor pista que já viste num amigo secreto? Link na bio.",
@@ -134,13 +134,28 @@
     {
      "time": "17:00",
      "type": "quiz",
-     "text": "No Sapatinho, quem fica a saber quem tirou quem?",
+     "text": "A página de quem organiza mostra quem tirou quem?",
      "options": [
-      "Quem organiza",
-      "Toda a gente",
-      "Só cada um sabe o seu"
+      "Mostra tudo",
+      "Não mostra",
+      "Só no dia da troca"
      ],
-     "answer": 2
+     "answer": 1
+    },
+    {
+     "time": "19:00",
+     "type": "ideia",
+     "item": "Postal de Natal em branco",
+     "price": "até 5 €",
+     "text": "Para escreveres a pista com outra letra. Frases prontas no guia das pistas.",
+     "link": "https://sapatinho-natal.pt/pistas-e-mensagens-amigo-secreto/",
+     "afiliado": false
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Uma boa pista faz pensar. Não denuncia.",
+     "post": "2026-12-05-b"
     }
    ]
   },
@@ -160,7 +175,7 @@
       },
       {
        "template": "list",
-       "title": "A avó que \"não precisa de nada\"",
+       "title": "A avó que «não precisa de nada»",
        "items": [
         "Manta polar macia, até 20 €",
         "Álbum com fotos dos netos, até 15 €",
@@ -191,7 +206,7 @@
        "body": "Para a colega, a cunhada, o miúdo de 8 anos e o tio que já tem tudo."
       }
      ],
-     "caption": "\"Saiu-me o sogro.\" Respira. Há solução. 🎄\n\nUma prenda certa começa na pessoa, não na loja. Por isso organizámos ideias por tipo de pessoa, cada uma com o preço ao lado, para não furares o limite.\n\nA avó quer conforto. O primo adolescente quer coisas que use mesmo (e que não tenham ar de prenda de avó). O sogro quer paz, e de preferência algo para provar ao jantar.\n\nFaltou alguém lá de casa? Escreve nos comentários quem te saiu e a malta ajuda com ideias. Mais pessoas e preços no guia, link na bio.",
+     "caption": "«Saiu-me o sogro.» Respira. Há solução. 🎄\n\nUma prenda certa começa na pessoa, não na loja. Por isso organizámos ideias por tipo de pessoa, cada uma com o preço ao lado, para não furares o limite.\n\nA avó quer conforto. O primo adolescente quer coisas que use mesmo (e que não tenham ar de prenda de avó). O sogro quer paz, e de preferência algo para provar ao jantar.\n\nFaltou alguém lá de casa? Escreve nos comentários quem te saiu e a malta ajuda com ideias. Mais pessoas e preços no guia, link na bio.",
      "hashtags": "#amigosecreto #ideiasdeprendas #prendasdenatal #natalemfamilia #amigosecretonatal #natal2026 #portugal",
      "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#por-pessoa"
     }
@@ -270,6 +285,12 @@
      "type": "partilha",
      "text": "Família longe? Assim funciona.",
      "post": "2026-12-07-a"
+    },
+    {
+     "time": "18:00",
+     "type": "cta",
+     "text": "Família espalhada pelo mundo? Cada um recebe o convite no email, esteja onde estiver.",
+     "link": "https://sapatinho-natal.pt/criar"
     }
    ]
   },
@@ -288,7 +309,7 @@
        "body": "Nomes, emails, limite e data. Dois minutos e cada um recebe o seu convite."
       }
      ],
-     "caption": "8 de dezembro: dia de feriado, de almoço demorado e de alguém perguntar \"então e o amigo secreto, já está?\" 🙋\n\nAproveita que estão todos à mesa. Pede os emails, abre o Sapatinho no telemóvel e faz o sorteio antes da sobremesa.\n\nNinguém se tira a si próprio, dá para impedir que os casais se tirem um ao outro e quem organiza não fica a saber nada. Cada pessoa descobre o seu nome sozinha, numa roleta.\n\nSem papelinhos, sem registo, sem app. E grátis.\n\nBom feriado! Link na bio para criar o vosso.",
+     "caption": "8 de dezembro: dia de feriado, de almoço demorado e de alguém perguntar «então e o amigo secreto, já está?» 🙋\n\nAproveita que estão todos à mesa. Pede os emails, abre o Sapatinho no telemóvel e faz o sorteio antes da sobremesa.\n\nNinguém se tira a si próprio, dá para impedir que os casais se tirem um ao outro e a página de quem organiza não mostra quem tirou quem. Cada pessoa descobre o seu nome sozinha, numa roleta.\n\nSem papelinhos, sem registo, sem app. E grátis.\n\nBom feriado! Link na bio para criar o vosso.",
      "hashtags": "#amigosecreto #amigosecretonatal #feriado #natalemfamilia #natal2026 #portugal",
      "link": "https://sapatinho-natal.pt/criar"
     },
@@ -329,6 +350,21 @@
      "type": "cta",
      "text": "Toda a gente em casa hoje? Faz o sorteio agora e os convites saem já.",
      "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
+     "time": "18:30",
+     "type": "ideia",
+     "item": "Lata de bolachas de manteiga",
+     "price": "até 10 €",
+     "text": "Para levar à consoada ou deixar na secretária de alguém. Mais ideias baratas no guia.",
+     "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/#ate-10",
+     "afiliado": false
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "24 ou 25? Vota nos comentários.",
+     "post": "2026-12-08-b"
     }
    ]
   },
@@ -349,7 +385,7 @@
       {
        "template": "meme",
        "kicker": "O detetive",
-       "title": "Antes da sobremesa já \"sabe\" quem tirou toda a gente",
+       "title": "Antes da sobremesa já «sabe» quem tirou toda a gente",
        "body": "Não sabe. Mas fala com muita confiança."
       },
       {
@@ -404,6 +440,15 @@
      "type": "partilha",
      "text": "Marca o colega das meias. Toda a gente tem um.",
      "post": "2026-12-09-a"
+    },
+    {
+     "time": "17:30",
+     "type": "ideia",
+     "item": "Planta pequena num vaso",
+     "price": "até 10 €",
+     "text": "Para a secretária do colega que só conheces do elevador. Mais ideias para colegas no guia.",
+     "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-colegas/#ate-10",
+     "afiliado": false
     }
    ]
   },
@@ -423,7 +468,7 @@
        "body": "Escreve o nome da criança e o email do pai ou da mãe. Ela carrega em Sortear, vê o nome sair na roleta e ajuda a escolher a prenda."
       }
      ],
-     "caption": "Os miúdos levam o amigo secreto mais a sério do que qualquer adulto. 🧒\n\nNão precisam de ter email: basta pôr o nome da criança e o email de um dos pais. No dia, abrem o link juntos, ela carrega em \"Sortear\" e vê o nome a girar na roleta. Só não vale gritar o nome para a casa inteira.\n\nDicas para correr bem:\n• Limite baixo, para os miúdos poderem escolher.\n• Ajuda a escrever a pista no postal.\n• Treina o segredo: \"é como uma surpresa de anos\".\n\nMais ideias para fazer o amigo secreto com crianças no site, link na bio.",
+     "caption": "Os miúdos levam o amigo secreto mais a sério do que qualquer adulto. 🧒\n\nNão precisam de ter email: basta pôr o nome da criança e o email de um dos pais. No dia, abrem o link juntos, ela carrega em «Sortear» e vê o nome a girar na roleta. Só não vale gritar o nome para a casa inteira.\n\nDicas para correr bem:\n• Limite baixo, para os miúdos poderem escolher.\n• Ajuda a escrever a pista no postal.\n• Treina o segredo: «é como uma surpresa de anos».\n\nMais ideias para fazer o amigo secreto com crianças no site, link na bio.",
      "hashtags": "#amigosecreto #amigosecretocriancas #natalemfamilia #miudos #natal2026 #portugal",
      "link": "https://sapatinho-natal.pt/amigo-secreto-criancas/"
     },

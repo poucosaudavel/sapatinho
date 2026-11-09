@@ -1100,6 +1100,15 @@
      "type": "partilha",
      "text": "Envia a quem organiza o jantar de empresa.",
      "post": "2026-12-02-a"
+    },
+    {
+     "time": "17:00",
+     "type": "sondagem",
+     "text": "No amigo secreto do trabalho, o limite ideal é…",
+     "options": [
+      "Até 10 €",
+      "Até 15 €"
+     ]
     }
    ]
   },
@@ -1137,20 +1146,20 @@
        "template": "list",
        "title": "Pistas que baralham sem mentir",
        "items": [
-        "\"Conhecemo-nos há mais tempo do que pensas\"",
-        "\"Já partilhámos uma mesa este ano\"",
-        "\"Rimo-nos da mesma piada\"",
-        "\"Uma letra do meu nome está aqui escondida\""
+        "«Conhecemo-nos há mais tempo do que pensas»",
+        "«Já partilhámos uma mesa este ano»",
+        "«Rimo-nos da mesma piada»",
+        "«Uma letra do meu nome está aqui escondida»"
        ]
       },
       {
        "template": "list",
        "title": "Mensagens curtas para o postal",
        "items": [
-        "\"Para quem merece mais do que 20 €\"",
-        "\"Usa-me com moderação\"",
-        "\"Escolhi isto a pensar em ti\"",
-        "\"Não abras antes do dia combinado\""
+        "«Para quem merece mais do que 20 €»",
+        "«Usa-me com moderação»",
+        "«Escolhi isto a pensar em ti»",
+        "«Não abras antes do dia combinado»"
        ]
       },
       {
@@ -1165,7 +1174,7 @@
        "body": "Ideias para o postal, para a revelação e para manter o segredo até ao fim."
       }
      ],
-     "caption": "Comprar a prenda é metade do trabalho. A outra metade é o bilhete.\n\nUma boa pista deixa a pessoa a pensar no grupo inteiro sem apontar para ninguém. \"Já partilhámos uma mesa este ano\" serve para meia família. \"Rimo-nos da mesma piada\" serve para todos, se a piada for a do tio.\n\nO truque final: escreve com outra letra ou em maiúsculas. A caligrafia é a forma mais rápida de estragar o mistério.\n\nHá mais pistas e mensagens no site (link na bio). Qual é a tua pista preferida para despistar o grupo?",
+     "caption": "Comprar a prenda é metade do trabalho. A outra metade é o bilhete.\n\nUma boa pista deixa a pessoa a pensar no grupo inteiro sem apontar para ninguém. «Já partilhámos uma mesa este ano» serve para meia família. «Rimo-nos da mesma piada» serve para todos, se a piada for a do tio.\n\nO truque final: escreve com outra letra ou em maiúsculas. A caligrafia é a forma mais rápida de estragar o mistério.\n\nHá mais pistas e mensagens no site (link na bio). Qual é a tua pista preferida para despistar o grupo?",
      "hashtags": "#amigosecreto #amigosecretonatal #natal2026 #pistas #postaldenatal #prendasdenatal #portugal",
      "link": "https://sapatinho-natal.pt/pistas-e-mensagens-amigo-secreto/"
     }
