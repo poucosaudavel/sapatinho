@@ -851,10 +851,10 @@ short="Roleta do amigo secreto",
 card="Cada pessoa roda a sua roleta no telemóvel e descobre o nome que lhe saiu.",
 title="Roleta de amigo secreto grátis: cada um roda a sua | Sapatinho",
 h1="Roleta do amigo secreto online",
-dek="Cada pessoa abre o seu link, carrega em «Sortear» e a roleta pára no nome do seu amigo secreto. Grátis e sem registo, e cada pessoa só vê o seu resultado.",
-description="Cada pessoa recebe um link por email e roda a sua roleta no telemóvel. Ninguém se tira a si próprio e cada um só vê o seu resultado. Grátis, sem registo.",
+dek="Cada pessoa abre o seu link, carrega em «Sortear» e a roleta pára no nome do seu amigo secreto. Grátis e sem registo, e cada link mostra só o resultado dessa pessoa.",
+description="Cada pessoa recebe um link por email e roda a sua roleta no telemóvel. Ninguém se tira a si próprio e cada link mostra só um resultado. Grátis, sem registo.",
 body="""
-<p class="lead-answer"><strong>A roleta do amigo secreto</strong> é a forma de cada pessoa descobrir quem lhe saiu: abre o link que recebeu por email, carrega em «Sortear» e a roleta gira até parar num nome. No Sapatinho é grátis, ninguém se tira a si próprio e cada pessoa só vê a sua roleta.</p>
+<p class="lead-answer"><strong>A roleta do amigo secreto</strong> é a forma de cada pessoa descobrir quem lhe saiu: abre o link que recebeu por email, carrega em «Sortear» e a roleta gira até parar num nome. No Sapatinho é grátis, ninguém se tira a si próprio e cada link mostra só o resultado dessa pessoa.</p>
 
 <div class="demo">
   <div class="demo-h"><b>Experimenta a roleta</b><span>Demonstração com nomes de exemplo. Não é um sorteio a sério.</span></div>
