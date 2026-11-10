@@ -3,23 +3,23 @@
     "gestor": {
       "estado": "trabalhar",
       "feitos": 3,
-      "tarefa": "Medir o CTR das regras e da roleta a 16 nov; juntar o PR #28 quando o GitHub voltar.",
+      "tarefa": "Turno da noite: lembretes, Search Console e fecho do dia",
       "ultimo": "3 ramos revistos, juntos e publicados (lembrete da prenda, títulos, dezembro)",
-      "atualizado": "2026-11-09T09:20:00Z"
+      "atualizado": "2026-11-10T15:55:00Z"
     },
     "seo": {
-      "estado": "descanso",
+      "estado": "trabalhar",
       "feitos": 2,
-      "tarefa": "16 nov: medir o CTR de /regras e /roleta; ver /prendas-ultima-hora (sem impressões).",
+      "tarefa": "Ver no Search Console que páginas dão 404 ou redirecionamento",
       "ultimo": "Títulos e descrições novos para as regras e a roleta (publicados)",
-      "atualizado": "2026-11-09T09:20:00Z"
+      "atualizado": "2026-11-10T15:55:00Z"
     },
     "outreach": {
-      "estado": "espera",
+      "estado": "trabalhar",
       "feitos": 0,
-      "tarefa": "Confirmar os 5 emails agendados (9 e 10 nov); lembretes até 13 nov.",
-      "ultimo": "5 emails agendados para 9 e 10 nov",
-      "atualizado": "2026-11-09T09:20:00Z"
+      "tarefa": "Enviar os lembretes de 9 e 10 nov",
+      "ultimo": "Lisboa Secreta respondeu: vai avaliar",
+      "atualizado": "2026-11-10T15:55:00Z"
     },
     "social-media": {
       "estado": "trabalhar",
@@ -77,7 +77,7 @@
       "Social: dezembro de 11 a 20 pronto",
       "SEO: /prendas-ultima-hora sem impressões e medir os títulos novos a 16 nov"
     ],
-    "preciso": "GitHub: reativação da conta (ticket aberto). Validar os dados do domínio na Dominios.PT até 14 nov. Entrar na Awin no Chrome do PC. Entrevista fiscal e 2 códigos de seguimento na Amazon. Mensagens do Instagram («Confirmar acesso»).",
+    "preciso": "Validar os dados do domínio na Dominios.PT até 14 nov. Entrar na Awin no Chrome do PC. Entrevista fiscal e 2 códigos de seguimento na Amazon. Mensagens do Instagram («Confirmar acesso»).",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -118,6 +118,10 @@
       {
         "quando": "2026-11-09T09:20:00Z",
         "texto": "Manhã de 9 nov: KPIs da semana (6 sorteios, 31 cliques no Google); publicados o lembrete da prenda, títulos novos das regras e da roleta; 1 a 10 dez prontos nas redes."
+      },
+      {
+        "quando": "2026-11-10T15:55:00Z",
+        "texto": "Tarde: site e API OK; saíram 5 contactos; a Lisboa Secreta respondeu (vai avaliar). Aviso do Google sobre páginas não indexadas passa ao SEO."
       }
     ],
     "recados": [
@@ -150,6 +154,6 @@
       "backlinks_publicados": 0,
       "taxa_sorteio": 79
     },
-    "atualizado": "2026-11-09T09:20:00Z"
+    "atualizado": "2026-11-10T15:55:00Z"
   }
 }
