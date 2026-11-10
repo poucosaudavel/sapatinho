@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
+      "estado": "descanso",
       "feitos": 3,
-      "tarefa": "Turno da noite: lembretes, Search Console e fecho do dia",
+      "tarefa": "Turno da manhã de 11 nov: relatório completo",
       "ultimo": "3 ramos revistos, juntos e publicados (lembrete da prenda, títulos, dezembro)",
-      "atualizado": "2026-11-10T15:55:00Z"
+      "atualizado": "2026-11-10T19:58:00Z"
     },
     "seo": {
       "estado": "trabalhar",
@@ -15,11 +15,11 @@
       "atualizado": "2026-11-10T15:55:00Z"
     },
     "outreach": {
-      "estado": "trabalhar",
+      "estado": "espera",
       "feitos": 0,
-      "tarefa": "Enviar os lembretes de 9 e 10 nov",
+      "tarefa": "Lembretes de 9 e 10 nov: à espera do ok do Diogo",
       "ultimo": "Lisboa Secreta respondeu: vai avaliar",
-      "atualizado": "2026-11-10T15:55:00Z"
+      "atualizado": "2026-11-10T19:58:00Z"
     },
     "social-media": {
       "estado": "trabalhar",
@@ -73,11 +73,11 @@
   },
   "estado": {
     "prioridades": [
-      "Produto: perceber os 3 dias sem sorteios (6–8 nov) e fazer o texto para pedir os emails",
-      "Social: dezembro de 11 a 20 pronto",
-      "SEO: /prendas-ultima-hora sem impressões e medir os títulos novos a 16 nov"
+      "Outreach: 4 lembretes de 7 dias (Time Out, Poupança no Minuto, Hey Miga, TechBit) — precisam de ok do Diogo",
+      "SEO: ver no Search Console as páginas 404 e com redirecionamento e corrigir",
+      "Produto: perceber os 3 dias sem sorteios (6–8 nov)"
     ],
-    "preciso": "Validar os dados do domínio na Dominios.PT até 14 nov. Entrar na Awin no Chrome do PC. Entrevista fiscal e 2 códigos de seguimento na Amazon. Mensagens do Instagram («Confirmar acesso»).",
+    "preciso": "Os lembretes de outreach foram bloqueados quando o gestor os mandou enviar: diz se os envio eu ou se os envias tu. Validar os dados do domínio na Dominios.PT até 14 nov. Entrevista fiscal e 2 códigos de seguimento na Amazon. Mensagens do Instagram («Confirmar acesso»).",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -122,6 +122,10 @@
       {
         "quando": "2026-11-10T15:55:00Z",
         "texto": "Tarde: site e API OK; saíram 5 contactos; a Lisboa Secreta respondeu (vai avaliar). Aviso do Google sobre páginas não indexadas passa ao SEO."
+      },
+      {
+        "quando": "2026-11-10T19:58:00Z",
+        "texto": "Noite: site e API OK; caixa sem novidades. Lembretes de outreach bloqueados no envio; ficam para o Diogo decidir. Nada por publicar."
       }
     ],
     "recados": [
@@ -154,6 +158,6 @@
       "backlinks_publicados": 0,
       "taxa_sorteio": 79
     },
-    "atualizado": "2026-11-10T15:55:00Z"
+    "atualizado": "2026-11-10T19:58:00Z"
   }
 }
