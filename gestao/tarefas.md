@@ -22,7 +22,7 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 2 nov | gestor | Agendar no Meta o que falta de novembro: feed de 28 nov 20:30, 29 nov e 30 nov; stories de 29 e 30 nov | atrasado; feito a 5 nov |
 | todos os dias | gestor | Agendar no Meta o que já entrou na janela de 29 dias | contínuo |
 | 6 nov | gestor | Publicar o site (painel com a Oficina 3D) e a API (`/api/stats` com o estado da Oficina; **o Diogo aprovou esta publicação da API a 5 nov**), depois copiar `gestao/oficina.json` para a chave `oficina` do KV e confirmar `/painel/oficina/` | feito (5 nov, 22:20) |
-| até 14 nov | Diogo | Domínio sapatinho-natal.pt: confirmar no Dominios.PT nome, NIF, morada, email e telefone (pedido do .PT de 6 nov; o domínio já foi removido uma vez a 6 nov por falta de prova e registado de novo) | à espera do Diogo (avisado a 6 nov, 15:30) |
+| até 14 nov | Diogo | Domínio sapatinho-natal.pt: confirmar no Dominios.PT nome, NIF, morada, email e telefone (pedido do .PT de 6 nov; o domínio já foi removido uma vez a 6 nov por falta de prova e registado de novo) | feito (11 nov: o Diogo enviou os dados ao .PT; falta a confirmação do .PT) |
 | 6 nov | inovacao | Primeiras 3 ideias em `gestao/ideias.md` | feito (6 nov: 3 ideias novas; decisões em `gestao/ideias.md`) |
 | até 6 nov | outreach | Criar `gestao/backlinks.md` (fora do Git) com os 19 contactos já enviados e marcar os lembretes de 7 dias | feito (6 nov, passagem da rotina das 10:40: 30 linhas; lembretes dos 7 de 30 out enviados a 6 nov) |
 | até 9 nov | seo | «Prendas para colegas» e «Amigo secreto na empresa»: focos diferentes e ligação entre as duas | feito (PR #25, 6 nov: colegas = ideias de prendas; empresa = como organizar; ligadas entre si) |
