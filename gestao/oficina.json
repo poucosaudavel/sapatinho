@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "espera",
-      "feitos": 4,
-      "tarefa": "Publicar o site assim que o Cloudflare tiver sessão",
-      "ultimo": "4 ramos revistos, juntos e enviados para o GitHub",
-      "atualizado": "2026-11-11T10:00:00Z"
+      "feitos": 5,
+      "tarefa": "Stories da Amazon no Meta com o código novo (até 13 nov)",
+      "ultimo": "Agradecimento ao TechBit; site e API OK",
+      "atualizado": "2026-11-11T19:55:00Z"
     },
     "seo": {
       "estado": "trabalhar",
@@ -17,9 +17,9 @@
     "outreach": {
       "estado": "espera",
       "feitos": 0,
-      "tarefa": "9 lembretes e contactos novos: envio bloqueado, à espera do Diogo",
-      "ultimo": "Lisboa Secreta respondeu: vai avaliar",
-      "atualizado": "2026-11-11T10:00:00Z"
+      "tarefa": "3 lembretes em rascunho: o Diogo carrega em Enviar",
+      "ultimo": "1.º backlink publicado: TechBit (4 links)",
+      "atualizado": "2026-11-11T19:55:00Z"
     },
     "social-media": {
       "estado": "trabalhar",
@@ -53,8 +53,8 @@
       "estado": "descanso",
       "feitos": 1,
       "tarefa": "Pedidos de ajuda e site a funcionar em cada turno",
-      "atualizado": "2026-11-11T10:00:00Z",
-      "ultimo": "Site e API OK; Brevo 100 % entregues"
+      "atualizado": "2026-11-11T19:55:00Z",
+      "ultimo": "Site e API OK às 19:50"
     },
     "inovacao": {
       "estado": "descanso",
@@ -73,11 +73,11 @@
   },
   "estado": {
     "prioridades": [
-      "Publicar o site (caixa dos guias e correção do 404) e validar no Search Console",
-      "Outreach: 9 lembretes e contactos novos (precisa do Diogo)",
-      "Meta: trocar as 10 stories da Amazon pelo código das redes"
+      "Stories da Amazon no Meta com sapatinhoredes-21 (até 13 nov)",
+      "KPIs completos de quinta (analista)",
+      "Imagens de dezembro para as redes (social-media)"
     ],
-    "preciso": "Entrar no Cloudflare no Chrome para publicar; enviar os lembretes de backlinks; trocar as stories da Amazon no Meta.",
+    "preciso": "Enviar os 3 lembretes em rascunho no Gmail do sapatinhonatal; dar ao Chrome acesso ao Search Console e ao Meta para as tarefas agendadas.",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -130,6 +130,10 @@
       {
         "quando": "2026-11-11T10:00:00Z",
         "texto": "Manhã: 4 ramos (404 do Search Console, caixa nos guias, código das redes, dezembro 11–20) revistos e juntos; publicação à espera do login do Cloudflare; envio de emails bloqueado."
+      },
+      {
+        "quando": "2026-11-11T19:55:00Z",
+        "texto": "Noite: 1.º backlink publicado (TechBit, 4 links). Site e API OK. 3 lembretes ficaram em rascunho."
       }
     ],
     "recados": [
@@ -159,9 +163,9 @@
       "sorteios_semana": 3,
       "receita_semana": 0,
       "cliques_google_semana": 39,
-      "backlinks_publicados": 0,
+      "backlinks_publicados": 1,
       "taxa_sorteio": 74
     },
-    "atualizado": "2026-11-11T10:00:00Z"
+    "atualizado": "2026-11-11T19:55:00Z"
   }
 }

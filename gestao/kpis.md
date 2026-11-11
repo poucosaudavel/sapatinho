@@ -69,6 +69,7 @@ Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima f
 | Facebook: visualizações / visualizadores / interações / cliques em ligações / visitas | 37 / 9 / 0 / 0 / 63 | 29 out a 4 nov | Meta Business Suite | 5 nov |
 | Instagram: visualizações / visualizadores / interações | 40 / 2 / 2 | 29 out a 4 nov | Meta Business Suite | 5 nov |
 | Emails de backlinks | 22 enviados, 7 lembretes, 5 agendados, 0 respostas, 0 links | 30 out a 6 nov | Gmail sapatinhonatal | 6 nov |
+| Backlinks publicados | 1 (TechBit, artigo de 9 nov, 4 links sem nofollow) | até 11 nov | Gmail sapatinhonatal + página do artigo | 11 nov, 19:50 |
 | Awin | 9 lojas pendentes, 0 aprovadas, 0 recusadas | pedidos de 31 out | Awin | 5 nov |
 | Teste de entrega dos convites | 3 de 3 na Caixa principal, 0 no Spam | 6 nov | Gmail sapatinhonatal | 6 nov |
 | Cliques / impressões / CTR / posição (Google) | 25 / 612 / 4,1 % / 12 | 29 out a 4 nov | Search Console | 7 nov, ~7:50 |
