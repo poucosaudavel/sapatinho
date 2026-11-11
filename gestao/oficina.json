@@ -1,60 +1,60 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Turno da manhã de 11 nov: relatório completo",
-      "ultimo": "3 ramos revistos, juntos e publicados (lembrete da prenda, títulos, dezembro)",
-      "atualizado": "2026-11-10T19:58:00Z"
+      "estado": "espera",
+      "feitos": 4,
+      "tarefa": "Publicar o site assim que o Cloudflare tiver sessão",
+      "ultimo": "4 ramos revistos, juntos e enviados para o GitHub",
+      "atualizado": "2026-11-11T10:00:00Z"
     },
     "seo": {
       "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "Ver no Search Console que páginas dão 404 ou redirecionamento",
-      "ultimo": "Títulos e descrições novos para as regras e a roleta (publicados)",
-      "atualizado": "2026-11-10T15:55:00Z"
+      "feitos": 1,
+      "tarefa": "Validar a correção do 404 no Search Console depois de publicar",
+      "ultimo": "Corrigido o 404 do Search Console (email ofuscado)",
+      "atualizado": "2026-11-11T10:00:00Z"
     },
     "outreach": {
       "estado": "espera",
       "feitos": 0,
-      "tarefa": "Lembretes de 9 e 10 nov: à espera do ok do Diogo",
+      "tarefa": "9 lembretes e contactos novos: envio bloqueado, à espera do Diogo",
       "ultimo": "Lisboa Secreta respondeu: vai avaliar",
-      "atualizado": "2026-11-10T19:58:00Z"
+      "atualizado": "2026-11-11T10:00:00Z"
     },
     "social-media": {
       "estado": "trabalhar",
       "feitos": 1,
-      "tarefa": "Dezembro de 11 a 20 pronto até 16 nov.",
-      "ultimo": "1 a 10 dez prontos: 7 stories novas e 2 textos corrigidos",
-      "atualizado": "2026-11-09T09:20:00Z"
+      "tarefa": "Imagens de 11 a 20 dez (falta o Playwright no PC)",
+      "ultimo": "11 a 20 dez prontos: 6 stories novas",
+      "atualizado": "2026-11-11T10:00:00Z"
     },
     "analista": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "KPIs completos na quinta, 12 nov.",
-      "atualizado": "2026-11-09T09:20:00Z",
-      "ultimo": "Semana 2–8 nov: 6 sorteios, 31 cliques no Google (+244 %)"
+      "tarefa": "KPIs completos na quinta, 12 nov",
+      "atualizado": "2026-11-11T10:00:00Z",
+      "ultimo": "Google 3–9 nov: 39 cliques (+26 %)"
     },
     "afiliados": {
-      "estado": "espera",
-      "feitos": 0,
-      "tarefa": "Quarta: ler comissões na Awin (precisa de nova entrada do Diogo).",
-      "atualizado": "2026-11-09T09:20:00Z",
-      "ultimo": "Worten recusou; 282 links da Amazon todos certos"
+      "estado": "descanso",
+      "feitos": 2,
+      "tarefa": "Sábado: filtro de preço nas pesquisas da Amazon",
+      "atualizado": "2026-11-11T10:00:00Z",
+      "ultimo": "Redes com o código novo da Amazon; Awin: 8 pendentes"
     },
     "produto": {
       "estado": "trabalhar",
       "feitos": 1,
-      "tarefa": "Até 15 nov: texto pronto para pedir os emails; ver porque não houve sorteios de 6 a 8 nov.",
-      "atualizado": "2026-11-09T09:20:00Z",
-      "ultimo": "«Lembra-me de comprar a prenda» no resultado (publicado)"
+      "tarefa": "Medir a caixa «Criar sorteio» a 18 nov; /criar com 3 pessoas",
+      "atualizado": "2026-11-11T10:00:00Z",
+      "ultimo": "Caixa «Criar sorteio» no topo de cada guia"
     },
     "suporte": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Pedidos de ajuda e site a funcionar em cada turno.",
-      "atualizado": "2026-11-09T09:20:00Z",
-      "ultimo": "Teste de entrega: 3 convites na caixa Principal; Brevo 100 % entregues"
+      "tarefa": "Pedidos de ajuda e site a funcionar em cada turno",
+      "atualizado": "2026-11-11T10:00:00Z",
+      "ultimo": "Site e API OK; Brevo 100 % entregues"
     },
     "inovacao": {
       "estado": "descanso",
@@ -65,19 +65,19 @@
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Rever o PR #28 quando o GitHub voltar.",
-      "atualizado": "2026-11-09T09:20:00Z",
-      "ultimo": "3 ramos revistos e o site real confirmado depois da publicação"
+      "feitos": 1,
+      "tarefa": "Confirmar o site real depois de publicar",
+      "atualizado": "2026-11-11T10:00:00Z",
+      "ultimo": "4 ramos revistos e aprovados"
     }
   },
   "estado": {
     "prioridades": [
-      "Outreach: 4 lembretes de 7 dias (Time Out, Poupança no Minuto, Hey Miga, TechBit) — precisam de ok do Diogo",
-      "SEO: ver no Search Console as páginas 404 e com redirecionamento e corrigir",
-      "Produto: perceber os 3 dias sem sorteios (6–8 nov)"
+      "Publicar o site (caixa dos guias e correção do 404) e validar no Search Console",
+      "Outreach: 9 lembretes e contactos novos (precisa do Diogo)",
+      "Meta: trocar as 10 stories da Amazon pelo código das redes"
     ],
-    "preciso": "Os lembretes de outreach foram bloqueados quando o gestor os mandou enviar: diz se os envio eu ou se os envias tu. Validar os dados do domínio na Dominios.PT até 14 nov. Entrevista fiscal e 2 códigos de seguimento na Amazon. Mensagens do Instagram («Confirmar acesso»).",
+    "preciso": "Entrar no Cloudflare no Chrome para publicar; enviar os lembretes de backlinks; trocar as stories da Amazon no Meta.",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -126,6 +126,10 @@
       {
         "quando": "2026-11-10T19:58:00Z",
         "texto": "Noite: site e API OK; caixa sem novidades. Lembretes de outreach bloqueados no envio; ficam para o Diogo decidir. Nada por publicar."
+      },
+      {
+        "quando": "2026-11-11T10:00:00Z",
+        "texto": "Manhã: 4 ramos (404 do Search Console, caixa nos guias, código das redes, dezembro 11–20) revistos e juntos; publicação à espera do login do Cloudflare; envio de emails bloqueado."
       }
     ],
     "recados": [
@@ -152,12 +156,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 6,
+      "sorteios_semana": 3,
       "receita_semana": 0,
-      "cliques_google_semana": 31,
+      "cliques_google_semana": 39,
       "backlinks_publicados": 0,
-      "taxa_sorteio": 79
+      "taxa_sorteio": 74
     },
-    "atualizado": "2026-11-10T19:58:00Z"
+    "atualizado": "2026-11-11T10:00:00Z"
   }
 }

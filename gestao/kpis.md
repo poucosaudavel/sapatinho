@@ -87,6 +87,12 @@ Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima f
 | Amazon | 5 cliques em novembro, 0 pedidos, 0,00 €; 6 cliques nos últimos 30 dias (10 out–8 nov). Aviso fiscal por concluir | 1 a 8 nov | Amazon Afiliados (atualizado 9 nov 02:37) | 9 nov |
 | Meta | FB visualizadores 8, IG alcance 4, 45 conteúdos (13 publicações FB, 20 histórias FB, 12 publicações IG). 30 dias: FB 40 visualizações, 12 visualizadores, 97 visitas, 1 interação, 1 seguidor. Cliques em ligações: sem dados | 1 a 7 nov | Meta Business Suite | 9 nov |
 | Awin | sem dados: pede login do Diogo | — | Awin | 9 nov |
+| Sorteios por dia (painel) | 9 nov 2 (1 real + 1 teste) · 10 nov 2 (13 convites, 13 sortearam) · 11 nov 0 até ~9:20. Totais do painel 17 / 84 / 62 (74 %); reais 13 sorteios / 72 convites | 30 out a 11 nov | `/painel` | 11 nov, ~9:20 |
+| Cliques / impressões / CTR / posição (Google) | 39 / ~1,08 mil / 3,6 % / 11,4 (2–8 nov: 31 / 992 / 3,1 % / 11,7) | 3 a 9 nov | Search Console | 11 nov, ~9:25 |
+| /regras-do-amigo-secreto/ | 1 clique / 189 impressões (~0,5 %) | 3 a 9 nov | Search Console | 11 nov |
+| Brevo | 80 enviados, 100 % entregues, 0 % devoluções e queixas, aberturas ~53 % | 4 a 11 nov | Brevo | 11 nov, ~9:45 |
+| Awin | 8 pendentes, 0 aprovadas, Worten recusada | pedidos de 31 out | Awin | 11 nov |
+| Amazon | sem dados (página de erro no Chrome) | — | Amazon Afiliados | 11 nov |
 
 ## Histórico
 
@@ -101,3 +107,4 @@ Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima f
 - 6 nov, ~16:00 (analista): sorteios 31 out–6 nov = 8 (11 desde 30 out; 54 convites, 38 sortearam = 70 %); Amazon 30 dias: 3 cliques, 0 pedidos, 0 €; Google 28 out–3 nov: 20 cliques, 492 impressões, CTR 4,1 %, posição 12,7; Brevo 30 out–6 nov: 103 enviados, 100 % entregues, 0 devoluções e queixas (suporte). Sem alarmes. O /painel de 6 nov inclui sorteios de teste (descontar).
 - 7 nov, manhã (analista): Google 29 out–4 nov: 25 cliques, 612 impressões, CTR 4,1 %, posição 12 (semana anterior 20 / 492). Painel: 13 sorteios / 60 convites, mas 6 nov = 3 sorteios / 9 convites, todos de teste; reais: 10 sorteios / 51 convites, 7 de 31 out a 6 nov, 0 a 6 nov, 0 a 7 nov até ~7:50. Amazon: 3 cliques em novembro, 0 €; aviso fiscal ainda por concluir. Sem alarmes.
 - 9 nov, ~9:15 (analista, revisão de segunda): Google 2–8 nov 31 cliques / 992 impressões / CTR 3,1 % / posição 11,7 (semana anterior 9 / 276; +244 % cliques). Sorteios reais 2–8 nov: 6 (34 convites, 79 % sortearam); 0 reais a 6, 7 e 8 nov. Amazon novembro: 5 cliques, 0 €. Meta 1–7 nov: FB 8 visualizadores, IG alcance 4. Awin: sem dados (login). Alarmes: CTR 0 % em /regras-do-amigo-secreto/ (166 impressões, posição 8,3) e /roleta-amigo-secreto/ (66, 8,2); /prendas-ultima-hora-amigo-secreto/ sem impressões desde 31 out (faz 14 dias a 14 nov). Brevo e queda de cliques: sem alarme.
+- 11 nov, manhã (analista): fim dos dias sem sorteios (1 real a 9 nov, 2 a 10 nov); Google 3–9 nov 39 cliques (+26 %); Amazon sem dados. Alarme: CTR ~0,5 % em /regras (189 impressões).
