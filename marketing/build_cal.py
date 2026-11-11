@@ -23,10 +23,16 @@ def fixq(o):
     if "options" in o: o["options"] = [q(x) for x in o["options"]]
     return o
 
-AMAZON_TAG = "sapatinhonata-21"  # tag de Associado da Amazon.es
-def tagged(u):
+# Tags de Associado da Amazon.es. Desde 11 nov 2026 as redes têm código próprio
+# (sapatinhoredes-21), para se ver na Amazon o que vem das redes. O que saiu antes
+# fica com a tag antiga (já publicado; os links continuam a dar comissão).
+AMAZON_TAG_OLD = "sapatinhonata-21"
+AMAZON_TAG = "sapatinhoredes-21"
+REDES_TAG_FROM = "2026-11-11"
+def tagged(u, date):
     if u and "amazon.es" in u and "tag=" not in u:
-        return u + ("&" if "?" in u else "?") + "tag=" + AMAZON_TAG
+        tag = AMAZON_TAG if date >= REDES_TAG_FROM else AMAZON_TAG_OLD
+        return u + ("&" if "?" in u else "?") + "tag=" + tag
     return u
 
 jobs, data = [], []
@@ -46,7 +52,7 @@ for d in days:
             imgs.append(rel)
         seed += 1
         day["feed"].append({**{k: post[k] for k in ("id", "time", "pillar", "caption", "hashtags")},
-                            "link": tagged(post.get("link", "")), "images": imgs, "format": "carrossel" if tot > 1 else "imagem"})
+                            "link": tagged(post.get("link", ""), d["date"]), "images": imgs, "format": "carrossel" if tot > 1 else "imagem"})
     stories = [{"time": "08:30", "type": "contagem", "n": n}] + d["stories"]
     for j, st in enumerate(stories):
         fixq(st)
@@ -54,7 +60,7 @@ for d in days:
         if st["type"] != "partilha":
             img = f"img/{d['date']}/st{j+1}.jpg"
             jobs.append({"out": f"{OUT}/{img}", "kind": "story", "seed": seed + j, "data": st})
-        if st.get("link"): st["link"] = tagged(st["link"])
+        if st.get("link"): st["link"] = tagged(st["link"], d["date"])
         day["stories"].append({**st, "image": img})
     day["stories"].sort(key=lambda s: s["time"])
     data.append(day)
