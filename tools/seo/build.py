@@ -74,7 +74,7 @@ def head(title, desc, canonical, og_title=None, og_desc=None, og_type="website",
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/styles.css?v=20261031b">
+<link rel="stylesheet" href="/styles.css?v=20261111a">
 {j}{extra}"""
 
 NAV = ('<nav aria-label="Principal"><a href="/#como-funciona">Como funciona</a>'
@@ -113,6 +113,10 @@ FOOTER = """<footer class="foot rich">
     </ul></div>
     <div class="legal"><span>© 2026 Sapatinho · sapatinho-natal.pt</span><span>Ajuda: ajuda@sapatinho-natal.pt</span></div>
   </footer>"""
+
+# CTA curto no topo dos guias (11 nov, produto): o único botão no corpo estava a ~88 % da página.
+# Mede-se com o utm (guia/topo) e com os sorteios por dia no /painel.
+TOP_CTA = """<p class="top-cta"><span>Vais organizar o amigo secreto? O sorteio é grátis e cada pessoa recebe o seu por email.</span><a class="btn" href="/criar?utm_source=guia&amp;utm_medium=topo">Criar sorteio</a></p>"""
 
 CTA = """<div class="cta-box"><p><b>Pronto para sortear?</b>Cria o amigo secreto do teu grupo em dois minutos. É grátis e cada pessoa recebe o convite por email.</p><a class="btn" href="/criar">Criar sorteio</a></div>"""
 
@@ -253,6 +257,7 @@ def build_guide(p):
       <h1>{p['h1']}</h1>
       <p class="dek">{p['dek']}</p>
       <p class="meta">Atualizado a {fmt_date(p.get("modified", p.get("date", PUBLISHED)))}</p>
+      {TOP_CTA}
     </div>
 {cover_html(p)}    <article class="card article">
 {body}
