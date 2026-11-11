@@ -55,7 +55,7 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 16 nov | seo | Medir o CTR de 10 a 16 nov de /regras e /roleta (hipótese: > 2 %); não mexer antes | por fazer |
 | até 14 nov | seo | /prendas-ultima-hora-amigo-secreto/ sem impressões desde 31 out: ver porquê; o Diogo ou o gestor pede indexação outra vez | por fazer |
 | depois de 9 nov | gestor | Pedir indexação de /regras-do-amigo-secreto/, /roleta-amigo-secreto/ e /prendas-ultima-hora-amigo-secreto/ no Search Console | por fazer |
-| até 11 nov | Diogo | Awin: voltar a entrar no Chrome do PC (a sessão expirou) para o `afiliados` ler comissões e estados na quarta | à espera do Diogo |
+| até 11 nov | Diogo | Awin: voltar a entrar no Chrome do PC (a sessão expirou) para o `afiliados` ler comissões e estados na quarta | feito (11 nov, 9:2x: o Diogo entrou na Awin no Chrome do PC) |
 | quando possível | Diogo | Meta Business Suite: as mensagens do Instagram aparecem «Desassociado» / «Confirmar acesso» | à espera do Diogo |
 | 7 nov | outreach | Responder ao Echo Boomer e 2–3 contactos novos | bloqueado (7 nov, 7:5x): o classificador do PC recusou lançar o `outreach` («transações reais»); fica para quando o Diogo o pedir diretamente |
 | 10 a 16 nov | social-media | Dezembro (1 a 20) pronto a agendar | em curso: 1 a 10 dez feito e junto (9 nov: 7 stories novas, 2 frases de privacidade corrigidas, aspas); falta 11 a 20 dez (stories em 11, 13, 15, 16, 18, 19; aspas nas legendas) |
