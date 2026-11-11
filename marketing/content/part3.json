@@ -598,6 +598,12 @@
      "text": "Qual foi a melhor frase que já recebeste num postal?"
     },
     {
+     "time": "18:30",
+     "type": "cta",
+     "text": "Troca marcada e sorteio por fazer? Nomes, emails e 2 minutos. O resto vai por email.",
+     "link": "https://sapatinho-natal.pt/criar"
+    },
+    {
      "time": "20:45",
      "type": "partilha",
      "text": "Frases para o postal. Copia à vontade.",
@@ -620,7 +626,7 @@
        "body": "Cada pessoa descobre o seu nome sozinha. A página de organizador serve para reenviar convites. O segredo fica guardado."
       }
      ],
-     "caption": "Com papelinhos, quem organiza acaba sempre por ver alguma coisa. No Sapatinho, não precisa de ver nada. 🤫\n\nAssim que o sorteio é feito, cada pessoa recebe um convite por email, abre o link, carrega em \"Sortear\" e vê o nome sair na roleta. Depois recebe outro email com o nome, para confirmar quando quiser.\n\nQuem organiza tem um link próprio para reenviar convites a quem diz que \"não recebeu nada\" (verifica o spam, tio). E essa página não mostra quem tirou quem.\n\nOu seja: quem organiza também participa, sem batota. Cria o vosso no link na bio.",
+     "caption": "Com papelinhos, quem organiza acaba sempre por espreitar um papelinho. No Sapatinho, cada pessoa descobre o seu nome sozinha. 🤫\n\nAssim que o sorteio é feito, cada pessoa recebe um convite por email, abre o link, carrega em «Sortear» e vê o nome sair na roleta. Depois recebe outro email com o nome, para confirmar quando quiser.\n\nQuem organiza tem um link próprio para reenviar convites a quem diz que «não recebeu nada» (verifica o spam, tio). E essa página não mostra quem tirou quem.\n\nOu seja: quem organiza também participa, sem batota. Cria o vosso no link na bio.",
      "hashtags": "#amigosecreto #amigosecretonatal #sorteioonline #natalemfamilia #natal2026 #portugal",
      "link": "https://sapatinho-natal.pt/criar"
     },
@@ -632,11 +638,11 @@
       {
        "template": "meme",
        "kicker": "Quando escreves a pista",
-       "title": "\"Sou o único do grupo com um Fiat Punto amarelo\"",
+       "title": "«Sou o único do grupo com um Fiat Punto amarelo»",
        "body": "e depois perguntas como é que adivinharam à primeira."
       }
      ],
-     "caption": "Há pistas difíceis, há pistas fáceis e há esta. 😂\n\nTodos os anos alguém escreve uma pista tão específica que a revelação dura três segundos: o carro, o cão, o clube, a terra natal. Não há mistério que resista.\n\nSe queres manter o suspense até ao fim, fala de uma memória que partilham e não de algo que só tu tens. Exemplo: \"Já nos perdemos juntos à procura de estacionamento.\" Serve para meia família.\n\nQual foi a pista mais óbvia que já viste? Pistas melhores no link na bio.",
+     "caption": "Há pistas difíceis, há pistas fáceis e há esta. 😂\n\nTodos os anos alguém escreve uma pista tão específica que a revelação dura três segundos: o carro, o cão, o clube, a terra natal. Não há mistério que resista.\n\nSe queres manter o suspense até ao fim, fala de uma memória que partilham e não de algo que só tu tens. Exemplo: «Já nos perdemos juntos à procura de estacionamento.» Serve para meia família.\n\nQual foi a pista mais óbvia que já viste? Pistas melhores no link na bio.",
      "hashtags": "#amigosecreto #humor #pistas #natalemfamilia #amigosecretonatal #natal2026",
      "link": "https://sapatinho-natal.pt/pistas-e-mensagens-amigo-secreto/"
     }
@@ -697,6 +703,15 @@
     }
    ],
    "stories": [
+    {
+     "time": "09:30",
+     "type": "ideia",
+     "item": "Livro de receitas portuguesas",
+     "price": "até 20 €",
+     "text": "Para quem passa o Natal na cozinha. Escreve uma receita tua na primeira página.",
+     "link": "https://sapatinho-natal.pt/prendas-amigo-secreto-ate-20-euros/#cozinha",
+     "afiliado": false
+    },
     {
      "time": "11:00",
      "type": "sondagem",
@@ -814,7 +829,7 @@
        "body": "Muitas lojas têm um último dia para entregar antes do Natal. Vê na página do produto, não no anúncio. Se não der, há plano B: experiências e vouchers."
       }
      ],
-     "caption": "Encomendar a prenda online a meio de dezembro é um desporto de risco. 📦\n\nAntes de carregar em \"comprar\":\n• Confirma o prazo de entrega da loja, na página do produto ou no carrinho.\n• Vê se a encomenda vem de fora do país. Às vezes demora o dobro.\n• Escolhe entrega em casa ou num ponto de recolha onde passes mesmo.\n\nSe as datas já não batem certo, não entres em pânico: um voucher, uma experiência ou uma caixa de bombons da pastelaria resolvem tudo, e chegam a tempo.\n\nIdeias de última hora no link na bio.",
+     "caption": "Encomendar a prenda online a meio de dezembro é um desporto de risco. 📦\n\nAntes de carregar em «comprar»:\n• Confirma o prazo de entrega da loja, na página do produto ou no carrinho.\n• Vê se a encomenda vem de fora do país. Às vezes demora o dobro.\n• Escolhe entrega em casa ou num ponto de recolha onde passes mesmo.\n\nSe as datas já não batem certo, não entres em pânico: um voucher, uma experiência ou uma caixa de bombons da pastelaria resolvem tudo, e chegam a tempo.\n\nIdeias de última hora no link na bio.",
      "hashtags": "#amigosecreto #comprasdenatal #prendasdenatal #ultimahora #natal2026 #portugal",
      "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/"
     },
@@ -895,6 +910,12 @@
       "Prenda por correio"
      ],
      "answer": 1
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "29 prendas para comprar hoje. Guarda isto.",
+     "post": "2026-12-15-b"
     }
    ]
   },
@@ -910,11 +931,11 @@
       {
        "template": "meme",
        "kicker": "Quando a encomenda diz",
-       "title": "\"Entrega prevista: 27 de dezembro\"",
+       "title": "«Entrega prevista: 27 de dezembro»",
        "body": "Plano B: voucher, experiência ou bombons bons. Ninguém precisa de saber."
       }
      ],
-     "caption": "Aquele momento em que abres o email da loja e o teu Natal passa para dia 27. 🫠\n\nSe te aconteceu, respira. Tens duas opções:\n1. Ofereces na mesma, com um postal a dizer \"a prenda está a caminho, como os Reis Magos\".\n2. Passas ao plano B: um voucher, uma experiência ou uma caixa de bombons da pastelaria. Chega hoje e ninguém fica de mãos vazias na troca.\n\nE para a próxima encomenda, confirma o prazo de entrega da loja antes de pagar.\n\nJá te aconteceu? Conta nos comentários. Ideias de última hora no link na bio.",
+     "caption": "Aquele momento em que abres o email da loja e o teu Natal passa para dia 27. 🫠\n\nSe te aconteceu, respira. Tens duas opções:\n1. Ofereces na mesma, com um postal a dizer «a prenda está a caminho, como os Reis Magos».\n2. Passas ao plano B: um voucher, uma experiência ou uma caixa de bombons da pastelaria. Chega hoje e ninguém fica de mãos vazias na troca.\n\nE para a próxima encomenda, confirma o prazo de entrega da loja antes de pagar.\n\nJá te aconteceu? Conta nos comentários. Ideias de última hora no link na bio.",
      "hashtags": "#amigosecreto #humor #prendasdeultimahora #comprasdenatal #natal2026 #portugal",
      "link": "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/"
     }
@@ -934,6 +955,12 @@
      "type": "slider",
      "text": "Nível de stress com as prendas de Natal",
      "emoji": "😅"
+    },
+    {
+     "time": "18:30",
+     "type": "cta",
+     "text": "A troca é já no fim de semana? O sorteio faz-se hoje, em 2 minutos.",
+     "link": "https://sapatinho-natal.pt/criar"
     },
     {
      "time": "20:45",
@@ -1000,7 +1027,7 @@
        ]
       }
      ],
-     "caption": "Hora da verdade, que estamos entre amigos. 🙈\n\nHá quem passe uma noite inteira com papel, tesoura e música de Natal, e adore. Há quem chegue à caixa e diga \"é para oferta\" com um sorriso. E há quem acredite que um saco bonito resolve tudo, e tem alguma razão.\n\nNo amigo secreto, o embrulho conta: é a primeira coisa que se vê na troca e dá logo pistas (ou despista, se fores esperto).\n\nQual és tu? Responde nos comentários e marca quem embrulha pior lá em casa.",
+     "caption": "Hora da verdade, que estamos entre amigos. 🙈\n\nHá quem passe uma noite inteira com papel, tesoura e música de Natal, e adore. Há quem chegue à caixa e diga «é para oferta» com um sorriso. E há quem acredite que um saco bonito resolve tudo, e tem alguma razão.\n\nNo amigo secreto, o embrulho conta: é a primeira coisa que se vê na troca e dá logo pistas (ou despista, se fores esperto).\n\nQual és tu? Responde nos comentários e marca quem embrulha pior lá em casa.",
      "hashtags": "#amigosecreto #embrulhos #natalemfamilia #prendasdenatal #natal2026 #portugal",
      "link": "https://sapatinho-natal.pt/criar"
     }
@@ -1081,6 +1108,15 @@
      "text": "Qual é o doce de Natal que não pode faltar na tua mesa?"
     },
     {
+     "time": "17:00",
+     "type": "sondagem",
+     "text": "No amigo secreto, preferes receber uma prenda…",
+     "options": [
+      "Para comer",
+      "Para guardar"
+     ]
+    },
+    {
      "time": "20:45",
      "type": "partilha",
      "text": "Na dúvida, oferece comida.",
@@ -1104,7 +1140,7 @@
        "body": "À vez, cada pessoa lê a pista em voz alta e diz quem acha que foi. Só depois abre. Dá para rir e ninguém fica a olhar para o telemóvel."
       }
      ],
-     "caption": "A troca de prendas pode ser cinco minutos de papel rasgado ou o momento mais divertido da noite. 🎄\n\nA nossa sugestão:\n1. Sentem-se em roda, com as prendas no meio.\n2. À vez, cada um pega na sua, lê a pista em voz alta e arrisca um nome.\n3. Se acertar, o amigo secreto confirma. Se não, a mesa toda ajuda.\n4. Só depois se abre a prenda.\n\nComecem pelo mais novo e acabem em quem organizou, que também participou sem saber de nada.\n\nComo fazem a revelação lá em casa? Regras e ideias no link na bio.",
+     "caption": "A troca de prendas pode ser cinco minutos de papel rasgado ou o momento mais divertido da noite. 🎄\n\nA nossa sugestão:\n1. Sentem-se em roda, com as prendas no meio.\n2. À vez, cada um pega na sua, lê a pista em voz alta e arrisca um nome.\n3. Se acertar, o amigo secreto confirma. Se não, a mesa toda ajuda.\n4. Só depois se abre a prenda.\n\nComecem pelo mais novo e acabem em quem organizou, que também entrou no sorteio como toda a gente.\n\nComo fazem a revelação lá em casa? Regras e ideias no link na bio.",
      "hashtags": "#amigosecreto #revelacao #trocadeprendas #natalemfamilia #amigosecretonatal #natal2026 #portugal",
      "link": "https://sapatinho-natal.pt/regras-do-amigo-secreto/"
     },
@@ -1116,7 +1152,7 @@
       {
        "template": "meme",
        "kicker": "Quando dizes",
-       "title": "\"Eu sabia que eras tu!\"",
+       "title": "«Eu sabia que eras tu!»",
        "body": "Não sabias. Tinhas apostado na tia Fernanda até ao último segundo."
       }
      ],
@@ -1151,6 +1187,12 @@
       "Ninguém"
      ],
      "answer": 1
+    },
+    {
+     "time": "20:45",
+     "type": "partilha",
+     "text": "Sê sincero: acertaste à primeira?",
+     "post": "2026-12-19-b"
     }
    ]
   },
