@@ -68,7 +68,7 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 9 e 10 nov | outreach | Emails agendados no Gmail: seg 9 nov 9:30 (Notícias de Coimbra, PRIMA, Pumpkin) e ter 10 nov 9:30 (Revista VIP, Lisboa Secreta) | agendado (confirmar nos Enviados) |
 | até 13 nov | outreach | Lembrete único (7 dias) aos contactos de 2 a 6 nov que não responderem | por fazer |
 | 9 nov | afiliados | Ver na Awin as 9 lojas pendentes | por fazer |
-| até 14 nov | Diogo | Amazon: concluir a entrevista fiscal (perfis EUA e Canadá «Incompleto»; o aviso voltou a 6 nov, falta provavelmente a assinatura) | à espera do Diogo |
+| até 14 nov | Diogo | Amazon: concluir a entrevista fiscal (perfis EUA e Canadá «Incompleto»; o aviso voltou a 6 nov, falta provavelmente a assinatura) | feito (11 nov, o Diogo acabou a entrevista dos EUA e do Canadá) |
 | quando possível | gestor | www.sapatinho-natal.pt não resolve (falta registo «www» no Cloudflare) | por fazer (não urgente) |
 | quando possível | social-media | Publicação do Instagram de 3 nov 12:30 com «Erro ao publicar» no Meta (não repetida) | ver |
 | meados nov | gestor | Rever metas com o Search Console e o `/painel` que o Diogo enviar | por fazer |
