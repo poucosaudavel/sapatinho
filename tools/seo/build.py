@@ -15,6 +15,12 @@ def ld(obj):
     s = json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
     return '<script type="application/ld+json">' + s.replace("</", "<\\/") + "</script>"
 
+# A Cloudflare troca os emails visíveis por ligações /cdn-cgi/l/email-protection, que o Google
+# segue e dão 404 no Search Console. <!--email_off--> faz a Cloudflare deixar este email em paz.
+EMAIL = "ajuda@sapatinho-natal.pt"
+def email_off(h):
+    return re.sub(r"(?<!<!--email_off-->)" + re.escape(EMAIL), "<!--email_off-->" + EMAIL + "<!--/email_off-->", h)
+
 def text(h):
     return html.unescape(re.sub(r"<[^>]+>", "", h)).strip()
 
@@ -111,7 +117,7 @@ FOOTER = """<footer class="foot rich">
 """ + "\n".join(f'      <li><a href="/{s}/">{BYSLUG_F[s]}</a></li>' for s in FOOTER_GUIDES) + """
       <li><a href="/guias/">Todos os guias</a></li>
     </ul></div>
-    <div class="legal"><span>© 2026 Sapatinho · sapatinho-natal.pt</span><span>Ajuda: ajuda@sapatinho-natal.pt</span></div>
+    <div class="legal"><span>© 2026 Sapatinho · sapatinho-natal.pt</span><span>Ajuda: <!--email_off-->ajuda@sapatinho-natal.pt<!--/email_off--></span></div>
   </footer>"""
 
 CTA = """<div class="cta-box"><p><b>Pronto para sortear?</b>Cria o amigo secreto do teu grupo em dois minutos. É grátis e cada pessoa recebe o convite por email.</p><a class="btn" href="/criar">Criar sorteio</a></div>"""
@@ -133,7 +139,7 @@ def page_shell(head_html, main_html, scripts=""):
 <div class="wrap">
   {HEADER}
   <main>
-{main_html}
+{email_off(main_html)}
   </main>
   {FOOTER}
 </div>
@@ -369,7 +375,7 @@ def patch_home():
                '<p class="sub">Faz o sorteio do amigo secreto online. Cada pessoa recebe por email o seu link pessoal e descobre quem lhe saiu. A página de quem organiza não mostra quem tirou quem.</p>',
                h, count=1, flags=re.S)
     # FAQ rebuilt from HOME_FAQ so it matches the structured data
-    faq = "\n".join(f"        <details><summary>{html.escape(q)}</summary><p>{a}</p></details>" for q, a in HOME_FAQ)
+    faq = email_off("\n".join(f"        <details><summary>{html.escape(q)}</summary><p>{a}</p></details>" for q, a in HOME_FAQ))
     h = re.sub(r'<div class="faq">.*?</div>\n    </section>', '<div class="faq">\n' + faq + '\n      </div>\n    </section>', h, count=1, flags=re.S)
     # guides section before the FAQ
     if 'id="guias"' not in h:
