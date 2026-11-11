@@ -23,7 +23,7 @@ def fixq(o):
     if "options" in o: o["options"] = [q(x) for x in o["options"]]
     return o
 
-AMAZON_TAG = "sapatinhonata-21"  # tag de Associado da Amazon.es
+AMAZON_TAG = "sapatinhoredes-21"  # tag de Associado da Amazon.es para as redes sociais (desde 11 nov 2026)
 def tagged(u):
     if u and "amazon.es" in u and "tag=" not in u:
         return u + ("&" if "?" in u else "?") + "tag=" + AMAZON_TAG
