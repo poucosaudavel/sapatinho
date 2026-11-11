@@ -16,5 +16,10 @@ fi
 # Chave do Cloudflare (criada e guardada pelo Diogo em private/cloudflare.env, fora do Git):
 #   CLOUDFLARE_API_TOKEN=...   e   CLOUDFLARE_ACCOUNT_ID=b94d6670d0f741d1b6c56bedaa043d9c
 # Assim o deploy não precisa de login nem do browser. Nunca mostrar nem copiar este ficheiro.
-if [ -f private/cloudflare.env ]; then set -a; . private/cloudflare.env; set +a; fi
+if [ -f private/cloudflare.env ]; then
+  while IFS='=' read -r k v; do
+    k=$(printf '%s' "$k" | tr -d '\r '); v=$(printf '%s' "$v" | tr -d '\r ')
+    case "$k" in CLOUDFLARE_API_TOKEN|CLOUDFLARE_ACCOUNT_ID) export "$k=$v";; esac
+  done < private/cloudflare.env
+fi
 npx wrangler@4 pages deploy dist --project-name sapatinho-natal --branch main --commit-dirty=true
