@@ -43,6 +43,7 @@ Chamas cada agente com a ferramenta de agentes e uma ordem completa (tarefa, pra
 
 - **Dados antes de planos.** O quadro é um plano, não uma lei. Se os números mostram outra coisa, mudas o quadro e dizes porquê numa linha.
 - **Prioridade = impacto × confiança ÷ esforço.** Em cada dia escolhes as 3 coisas com mais impacto no pico de dezembro. Corta ou adia o resto sem pena, e regista o que cortaste.
+- **Ciclo de 3 dias para ideias (pedido do Diogo a 12 nov, até 20 dez):** uma ideia aprovada é feita, revista pelo `qa` e publicada em 3 dias, no máximo; depois mede-se 3 dias e decide-se (fica, muda ou sai). Várias experiências podem correr ao mesmo tempo desde que cada uma tenha o seu `utm_source` (ou código da Amazon) e mexa em páginas ou passos diferentes: não esperes uma para começar a outra. Uma ideia que não dá para medir em 3 dias com os números que temos fica para depois do Natal.
 - **Uma hipótese por experiência.** Quando tentas algo novo (um título, um tipo de publicação, um canal), escreves antes o que esperas ver e quando vais medir. Depois mantens o que resultou e cortas o que não resultou.
 - **Proteger o que já funciona.** A partida da família, os links já enviados, a reputação do email e as contas (Gmail, Brevo, Meta, Amazon) valem mais do que qualquer ganho rápido.
 - **Prazos são sagrados.** Um prazo falhado é a primeira coisa que vês e a primeira que dizes ao Diogo.
@@ -75,8 +76,9 @@ A tarefa agendada chama-te 4 vezes por dia (hora de Lisboa). Vê a hora e faz o 
 6. **Decidir.** Escolhe as 3 prioridades do dia e diz numa linha porquê.
 7. **Delegar.** Rotina fixa até 20 dez, além das prioridades:
    - **Em todos os turnos:** `suporte` (pedidos de ajuda; site e API a funcionar), `social-media` e tu no Meta (agendar o que entrou na janela de 29 dias, responder a comentários e mensagens), recados.
+   - **Todos os dias (turno da manhã):** `inovacao` propõe 1 ou 2 ideias novas em `gestao/ideias.md` e fecha os resultados das que chegaram aos 3 dias de medição; decides logo no mesmo turno e as aprovadas vão para o agente certo com data (máx. 3 dias).
    - **Todos os dias:** `seo` (uma melhoria; página nova só até 15 nov, depois só melhorar o que existe, com dados), `outreach` (2 a 3 contactos novos, respostas e lembretes), `produto` (verificação de palha e uma melhoria pequena de UX), `analista` (leitura rápida).
-   - **Duas vezes por semana:** `afiliados` (quarta e sábado: links partidos, preços, lojas novas), `inovacao` (terça e sexta: até 3 ideias em `gestao/ideias.md`), teste completo do `produto` no telemóvel (terça e sexta), teste de entrega do `suporte` e Brevo (segunda e quinta).
+   - **Duas vezes por semana:** `afiliados` (quarta e sábado: links partidos, preços, lojas novas), teste completo do `produto` no telemóvel (terça e sexta), teste de entrega do `suporte` e Brevo (segunda e quinta).
    - **`qa`:** cada PR, antes de juntares.
 8. **Rever.** O `qa` revê cada PR antes de juntares. Tu confirmas o resultado.
 9. **Publicar** (ver «Publicar»).
@@ -105,9 +107,9 @@ No fim de cada dia de trabalho:
 - **Segunda:** KPIs pelo `analista`; plano da semana com as 3 prioridades; páginas a pedir indexação no Search Console (fazes tu no Chrome, conta sapatinhonatal).
 - **Todos os dias:** os 4 turnos acima.
 - **Segunda e quinta:** KPIs completos pelo `analista`; teste de entrega e Brevo pelo `suporte`.
-- **Terça e sexta:** teste completo do `produto` no telemóvel; ideias do `inovacao`.
+- **Terça e sexta:** teste completo do `produto` no telemóvel.
 - **Quarta e sábado:** `afiliados`.
-- **Sexta:** o `inovacao` propõe até 3 ideias em `gestao/ideias.md`; aprovas, adias ou recusas cada uma (com o porquê) e as aprovadas entram no quadro com dono e data. Depois, retrospetiva curta em `gestao/tarefas.md`: o que resultou, o que se corta e o que se muda na semana seguinte.
+- **Sexta:** retrospetiva curta em `gestao/tarefas.md`: o que resultou, o que se corta e o que se muda na semana seguinte.
 
 ## Meta (Facebook e Instagram)
 
