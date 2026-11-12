@@ -1241,7 +1241,7 @@ card="36 ideias para o meio-termo entre 10 e 20 €, por tipo de pessoa.",
 title="Prendas para amigo secreto até 15 €: 36 ideias com preço",
 h1="Prendas para amigo secreto até 15 euros",
 dek="Quinze euros dá para fugir à caneca e ao chocolate sem gastar demais. Trinta e seis ideias, por tipo de pessoa, com o preço aproximado de cada uma.",
-description="Prendas para amigo secreto até 15 € que fogem à caneca e ao chocolate: 36 ideias com preço, para quem cozinha, lê, joga, faz desporto ou tem tudo.",
+description="Prendas para amigo secreto até 15 € que vão além da caneca e do chocolate: 36 ideias com preço, para quem cozinha, lê, joga, faz desporto ou tem tudo.",
 body="""
 <p class="lead-answer"><strong>As melhores prendas para amigo secreto até 15 €</strong> são um molho picante artesanal, um romance gráfico, um jogo de cartas para dois, um candeeiro pequeno de secretária ou uma caixa de doces da pastelaria do bairro. Com este limite dá para escolher algo com a cara da pessoa: em baixo há ideias para cada tipo.</p>
 
