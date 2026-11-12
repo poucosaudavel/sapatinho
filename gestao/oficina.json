@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "espera",
-      "feitos": 3,
-      "tarefa": "Agendar 1 a 11 dez no Meta à noite; publicar quando o Diogo entrar no Cloudflare",
-      "ultimo": "Ramo dos títulos revisto pelo qa e junto ao main",
-      "atualizado": "2026-11-12T16:00:00Z"
+      "estado": "trabalhar",
+      "feitos": 19,
+      "tarefa": "Agendar as stories de 1 a 11 dez e o feed de 11 dez no Meta",
+      "ultimo": "Feed de 1 a 10 dez agendado no Meta (16 publicações)",
+      "atualizado": "2026-11-12T21:15:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -24,9 +24,9 @@
     "social-media": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Dezembro pronto a agendar no Meta",
+      "tarefa": "Stories de 1 a 11 dez entram no Meta a 13 nov",
       "ultimo": "142 imagens de 1 a 20 dez geradas",
-      "atualizado": "2026-11-12T08:05:00Z"
+      "atualizado": "2026-11-12T21:15:00Z"
     },
     "analista": {
       "estado": "descanso",
@@ -73,11 +73,11 @@
   },
   "estado": {
     "prioridades": [
-      "Publicar o pacote de 12 nov (Diogo entra no Cloudflare)",
-      "Agendar 1 a 11 dez no Meta",
-      "Títulos das páginas com impressões sem cliques (seo)"
+      "Stories de 1 a 11 dez e feed de 11 dez no Meta",
+      "Pedir indexação de homem, até 10 €, até 15 € e /criar",
+      "Ideias do inovacao e retrospetiva da semana"
     ],
-    "preciso": "Entrar no Cloudflare para publicar o site de 12 nov; preencher os dados de pagamento na Amazon; enviar os 3 lembretes em rascunho no Gmail do sapatinhonatal.",
+    "preciso": "Preencher os dados de pagamento na Amazon; enviar os 3 lembretes em rascunho no Gmail do sapatinhonatal.",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -142,6 +142,10 @@
       {
         "quando": "2026-11-12T11:58:00Z",
         "texto": "Almoço: caixa e Meta sem novidades, site e API OK; site de 12 nov à espera do login no Cloudflare."
+      },
+      {
+        "quando": "2026-11-12T21:15:00Z",
+        "texto": "Noite: feed de 1 a 10 dez agendado no Facebook e no Instagram (16 publicações). Caixa sem novidades."
       }
     ],
     "recados": [
@@ -181,6 +185,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-12T11:58:00Z"
+    "atualizado": "2026-11-12T21:15:00Z"
   }
 }
