@@ -3,9 +3,9 @@
     "gestor": {
       "estado": "espera",
       "feitos": 3,
-      "tarefa": "Agendar 1 a 11 dez no Meta; publicar quando o Diogo entrar no Cloudflare",
+      "tarefa": "Agendar 1 a 11 dez no Meta à noite; publicar quando o Diogo entrar no Cloudflare",
       "ultimo": "2 ramos juntos ao main; pacote de 12 nov pronto",
-      "atualizado": "2026-11-12T08:05:00Z"
+      "atualizado": "2026-11-12T11:58:00Z"
     },
     "seo": {
       "estado": "trabalhar",
@@ -138,6 +138,10 @@
       {
         "quando": "2026-11-12T08:05:00Z",
         "texto": "Manhã de 12 nov: KPIs de quinta, teste de entrega OK, imagens de dezembro feitas, 2 ramos juntos; site por publicar (login no Cloudflare)."
+      },
+      {
+        "quando": "2026-11-12T11:58:00Z",
+        "texto": "Almoço: caixa e Meta sem novidades, site e API OK; site de 12 nov à espera do login no Cloudflare."
       }
     ],
     "recados": [
@@ -177,6 +181,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-12T08:05:00Z"
+    "atualizado": "2026-11-12T11:58:00Z"
   }
 }
