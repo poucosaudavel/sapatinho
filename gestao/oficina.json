@@ -2,82 +2,82 @@
   "agentes": {
     "gestor": {
       "estado": "espera",
-      "feitos": 5,
-      "tarefa": "Stories da Amazon no Meta com o código novo (até 13 nov)",
-      "ultimo": "Agradecimento ao TechBit; site e API OK",
-      "atualizado": "2026-11-11T19:55:00Z"
+      "feitos": 3,
+      "tarefa": "Agendar 1 a 11 dez no Meta; publicar quando o Diogo entrar no Cloudflare",
+      "ultimo": "2 ramos juntos ao main; pacote de 12 nov pronto",
+      "atualizado": "2026-11-12T08:05:00Z"
     },
     "seo": {
       "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "Validar a correção do 404 no Search Console depois de publicar",
-      "ultimo": "Corrigido o 404 do Search Console (email ofuscado)",
-      "atualizado": "2026-11-11T10:00:00Z"
+      "feitos": 3,
+      "tarefa": "Títulos de homem, até 10 € e até 15 € (impressões sem cliques)",
+      "ultimo": "Validação do 404 iniciada; email protegido em org/r/sorteio",
+      "atualizado": "2026-11-12T08:05:00Z"
     },
     "outreach": {
       "estado": "espera",
       "feitos": 0,
       "tarefa": "3 lembretes em rascunho: o Diogo carrega em Enviar",
       "ultimo": "1.º backlink publicado: TechBit (4 links)",
-      "atualizado": "2026-11-11T19:55:00Z"
+      "atualizado": "2026-11-12T08:05:00Z"
     },
     "social-media": {
-      "estado": "trabalhar",
+      "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Imagens de 11 a 20 dez (falta o Playwright no PC)",
-      "ultimo": "11 a 20 dez prontos: 6 stories novas",
-      "atualizado": "2026-11-11T10:00:00Z"
+      "tarefa": "Dezembro pronto a agendar no Meta",
+      "ultimo": "142 imagens de 1 a 20 dez geradas",
+      "atualizado": "2026-11-12T08:05:00Z"
     },
     "analista": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "KPIs completos na quinta, 12 nov",
-      "atualizado": "2026-11-11T10:00:00Z",
-      "ultimo": "Google 3–9 nov: 39 cliques (+26 %)"
+      "tarefa": "Leitura rápida amanhã; KPIs completos na segunda",
+      "atualizado": "2026-11-12T08:05:00Z",
+      "ultimo": "KPIs de quinta: 4 sorteios em 9–11 nov, 38 cliques no Google"
     },
     "afiliados": {
       "estado": "descanso",
-      "feitos": 2,
+      "feitos": 0,
       "tarefa": "Sábado: filtro de preço nas pesquisas da Amazon",
       "atualizado": "2026-11-11T10:00:00Z",
       "ultimo": "Redes com o código novo da Amazon; Awin: 8 pendentes"
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "Medir a caixa «Criar sorteio» a 18 nov; /criar com 3 pessoas",
-      "atualizado": "2026-11-11T10:00:00Z",
-      "ultimo": "Caixa «Criar sorteio» no topo de cada guia"
+      "feitos": 2,
+      "tarefa": "Medir a caixa «Criar sorteio» a 18 nov",
+      "atualizado": "2026-11-12T08:05:00Z",
+      "ultimo": "/criar começa com 3 pessoas e diz o nome do botão"
     },
     "suporte": {
       "estado": "descanso",
-      "feitos": 1,
+      "feitos": 2,
       "tarefa": "Pedidos de ajuda e site a funcionar em cada turno",
-      "atualizado": "2026-11-11T19:55:00Z",
-      "ultimo": "Site e API OK às 19:50"
+      "atualizado": "2026-11-12T08:05:00Z",
+      "ultimo": "Teste de entrega OK: caixa Principal"
     },
     "inovacao": {
       "estado": "descanso",
       "feitos": 0,
-      "tarefa": "Próximas ideias na terça, 10 nov.",
+      "tarefa": "Próximas ideias na sexta, 13 nov.",
       "atualizado": "2026-11-06T16:00:00Z",
       "ultimo": "3 ideias novas, todas aprovadas"
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 1,
+      "feitos": 2,
       "tarefa": "Confirmar o site real depois de publicar",
-      "atualizado": "2026-11-11T10:00:00Z",
-      "ultimo": "4 ramos revistos e aprovados"
+      "atualizado": "2026-11-12T08:05:00Z",
+      "ultimo": "2 ramos revistos e aprovados"
     }
   },
   "estado": {
     "prioridades": [
-      "Stories da Amazon no Meta com sapatinhoredes-21 (até 13 nov)",
-      "KPIs completos de quinta (analista)",
-      "Imagens de dezembro para as redes (social-media)"
+      "Publicar o pacote de 12 nov (Diogo entra no Cloudflare)",
+      "Agendar 1 a 11 dez no Meta",
+      "Títulos das páginas com impressões sem cliques (seo)"
     ],
-    "preciso": "Enviar os 3 lembretes em rascunho no Gmail do sapatinhonatal; dar ao Chrome acesso ao Search Console e ao Meta para as tarefas agendadas.",
+    "preciso": "Entrar no Cloudflare para publicar o site de 12 nov; preencher os dados de pagamento na Amazon; enviar os 3 lembretes em rascunho no Gmail do sapatinhonatal.",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -134,6 +134,10 @@
       {
         "quando": "2026-11-11T19:55:00Z",
         "texto": "Noite: 1.º backlink publicado (TechBit, 4 links). Site e API OK. 3 lembretes ficaram em rascunho."
+      },
+      {
+        "quando": "2026-11-12T08:05:00Z",
+        "texto": "Manhã de 12 nov: KPIs de quinta, teste de entrega OK, imagens de dezembro feitas, 2 ramos juntos; site por publicar (login no Cloudflare)."
       }
     ],
     "recados": [
@@ -157,15 +161,22 @@
         "para": "seo",
         "texto": "Regras e roleta com 0 cliques na posição 8; última hora sem impressões",
         "estado": "entregue"
+      },
+      {
+        "quando": "2026-11-12T08:00:00Z",
+        "de": "analista",
+        "para": "seo",
+        "texto": "Homem, até 10 € e até 15 €: impressões sem cliques",
+        "estado": "entregue"
       }
     ],
     "resultados": {
-      "sorteios_semana": 3,
+      "sorteios_semana": 4,
       "receita_semana": 0,
-      "cliques_google_semana": 39,
+      "cliques_google_semana": 38,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 74
+      "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-11T19:55:00Z"
+    "atualizado": "2026-11-12T08:05:00Z"
   }
 }
