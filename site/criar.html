@@ -94,7 +94,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
     <div class="intro">
       <div class="eyebrow">Criar amigo secreto online</div>
       <h1>O amigo secreto do teu grupo, em dois minutos</h1>
-      <p>Escreve os nomes e os emails, carrega em sortear e cada pessoa recebe o convite no email. A tua página de organizador não mostra quem tirou quem.</p>
+      <p>Escreve os nomes e os emails, carrega em «Fazer o sorteio e enviar convites» e cada pessoa recebe o convite no email. A tua página de organizador não mostra quem tirou quem.</p>
     </div>
 
     <form id="f" novalidate>
@@ -200,7 +200,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
     r.querySelector(".x").addEventListener("click", function(){ r.remove(); });
     pairs.appendChild(r); refreshPairs();
   }
-  for (var k=0;k<4;k++) addPerson();
+  for (var k=0;k<3;k++) addPerson();
   document.getElementById("addP").addEventListener("click", function(){ addPerson().focus(); });
   document.getElementById("addX").addEventListener("click", addPair);
 
