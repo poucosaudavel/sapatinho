@@ -411,7 +411,7 @@ def patch_criar():
     desc = "Faz o sorteio do amigo secreto online em dois minutos: nomes, emails, limite da prenda e quem não se pode tirar. Cada pessoa recebe o seu link. Grátis e sem registo."
     graph = [ORG, WEBSITE, crumbs_ld([("Início", BASE + "/"), ("Criar sorteio", BASE + "/criar")])]
     newhead = head(title, desc, BASE + "/criar", og_title="Criar um amigo secreto · Sapatinho",
-                   og_desc="Escreve os nomes e os emails, carrega em sortear e cada pessoa recebe o convite. Grátis e sem registo.",
+                   og_desc="Escreve os nomes e os emails, carrega em «Fazer o sorteio e enviar convites» e cada pessoa recebe o convite. Grátis e sem registo.",
                    jsonld={"@context": "https://schema.org", "@graph": graph})
     h = re.sub(r"<head>.*?<style>", "<head>\n" + newhead + "<style>", h, count=1, flags=re.S)
     h = re.sub(r'<header class="top">.*?</header>', HEADER.replace('<a class="nav-cta" href="/criar">Criar sorteio</a>', '<a href="/#entrar">Entrar no sorteio</a>'), h, count=1, flags=re.S)
