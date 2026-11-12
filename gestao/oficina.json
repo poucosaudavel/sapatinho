@@ -4,15 +4,15 @@
       "estado": "espera",
       "feitos": 3,
       "tarefa": "Agendar 1 a 11 dez no Meta à noite; publicar quando o Diogo entrar no Cloudflare",
-      "ultimo": "2 ramos juntos ao main; pacote de 12 nov pronto",
-      "atualizado": "2026-11-12T11:58:00Z"
+      "ultimo": "Ramo dos títulos revisto pelo qa e junto ao main",
+      "atualizado": "2026-11-12T16:00:00Z"
     },
     "seo": {
-      "estado": "trabalhar",
-      "feitos": 3,
-      "tarefa": "Títulos de homem, até 10 € e até 15 € (impressões sem cliques)",
-      "ultimo": "Validação do 404 iniciada; email protegido em org/r/sorteio",
-      "atualizado": "2026-11-12T08:05:00Z"
+      "estado": "descanso",
+      "feitos": 4,
+      "tarefa": "Medir o CTR das 3 páginas de 17 a 23 nov",
+      "ultimo": "Títulos de homem, até 10 € e até 15 € reescritos; og do /criar certo",
+      "atualizado": "2026-11-12T16:00:00Z"
     },
     "outreach": {
       "estado": "espera",
@@ -67,8 +67,8 @@
       "estado": "descanso",
       "feitos": 2,
       "tarefa": "Confirmar o site real depois de publicar",
-      "atualizado": "2026-11-12T08:05:00Z",
-      "ultimo": "2 ramos revistos e aprovados"
+      "atualizado": "2026-11-12T16:00:00Z",
+      "ultimo": "Aprovou os títulos SEO de 12 nov"
     }
   },
   "estado": {
