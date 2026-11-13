@@ -109,22 +109,22 @@ function showResult(o, mailing){
   app.appendChild(remindBlock(o));
   app.appendChild(againLine());
 }
-var UTM = "?utm_source=sorteio&utm_medium=resultado";
 function validLimit(l){ return (typeof l === "number" && isFinite(l) && Math.floor(l) === l && l > 0) ? l : 0; }
 /* Página de prendas para o limite do grupo. A faixa nunca passa do limite (12 € -> até 10 €), como no email;
-   abaixo de 5 € vai para «até 5 €»; acima de 20 € ou sem limite, para o guia geral. Só números, nunca nomes. */
+   abaixo de 5 € vai para «até 5 €»; acima de 20 € ou sem limite, para o guia geral. Só números, nunca nomes.
+   Cada botão passa por um endereço de contagem fixo /ir/prendas/<página>/ (gerado em tools/seo/build.py, sem parâmetros). */
 function giftLinks(l){
   var n = validLimit(l), out = [];
   if (n && n < 10) {
-    out.push(["/prendas-amigo-secreto-ate-5-euros/", "Prendas até 5 €"]);
-    if (n <= 5) out.push(["/prendas-engracadas-amigo-secreto/", "Prendas engraçadas"]);
+    out.push(["/ir/prendas/ate-5/", "Prendas até 5 €"]);
+    if (n <= 5) out.push(["/ir/prendas/engracadas/", "Prendas engraçadas"]);
   } else if (n && n <= 20) {
     var c = n < 15 ? 10 : n < 20 ? 15 : 20;
-    out.push(["/prendas-amigo-secreto-ate-" + c + "-euros/", "Prendas até " + c + " €"]);
+    out.push(["/ir/prendas/ate-" + c + "/", "Prendas até " + c + " €"]);
   } else {
-    out.push(["/ideias-de-prendas-amigo-secreto/", "Ideias de prendas por preço"]);
+    out.push(["/ir/prendas/ideias/", "Ideias de prendas por preço"]);
   }
-  out.push(["/prendas-ultima-hora-amigo-secreto/", "Prendas de última hora"]);
+  out.push(["/ir/prendas/ultima-hora/", "Prendas de última hora"]);
   return out;
 }
 function el(tag, cls, text){ var e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
@@ -133,7 +133,7 @@ function giftBlock(l){
   box.appendChild(el("h2", "", "Já sabes a quem vais dar. " + (n ? "Precisas de ideias até " + String(n) + " €?" : "Precisas de ideias de prendas?")));
   giftLinks(l).forEach(function(p, i){
     var a = el("a", i === 0 ? "btn wide" : "btn ghost wide", p[1]);
-    a.href = p[0] + UTM;
+    a.href = p[0];
     box.appendChild(a);
   });
   return box;

@@ -449,6 +449,16 @@ IR = {
     "sorteio": ("/criar", "criar um sorteio"),                          # «Criar outro sorteio» no /r e no /sorteio
     "calendario": ("/ideias-de-prendas-amigo-secreto/", "ideias de prendas"),  # lembrete do calendário no /r
     "guia": ("/criar", "criar um sorteio"),                             # botões «Criar sorteio» dentro dos guias
+    "emails": ("/criar", "criar um sorteio"),                           # «cria o sorteio» depois da mensagem para pedir os emails (guia da empresa)
+    # Botões de prendas no /r e no /sorteio: um endereço por página de destino (a faixa de preço já está no destino).
+    # O total soma-se pelo prefixo /ir/prendas/ na Cloudflare Web Analytics.
+    "prendas/ate-5": ("/prendas-amigo-secreto-ate-5-euros/", "prendas até 5 €"),
+    "prendas/ate-10": ("/prendas-amigo-secreto-ate-10-euros/", "prendas até 10 €"),
+    "prendas/ate-15": ("/prendas-amigo-secreto-ate-15-euros/", "prendas até 15 €"),
+    "prendas/ate-20": ("/prendas-amigo-secreto-ate-20-euros/", "prendas até 20 €"),
+    "prendas/engracadas": ("/prendas-engracadas-amigo-secreto/", "prendas engraçadas"),
+    "prendas/ideias": ("/ideias-de-prendas-amigo-secreto/", "ideias de prendas"),
+    "prendas/ultima-hora": ("/prendas-ultima-hora-amigo-secreto/", "prendas de última hora"),
 }
 
 def write_ir():
