@@ -75,6 +75,10 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 .groupmsg{display:flex;flex-direction:column;gap:10px}
 .groupmsg textarea{font:500 .95rem/1.45 var(--body);padding:12px;border:1px solid var(--line);border-radius:4px;background:var(--paper-2);color:var(--ink);width:100%;min-height:15em;resize:vertical}
 .groupmsg .btn{align-self:flex-start}
+.askmsg{font-size:.92rem}
+.askmsg summary{cursor:pointer;color:var(--ink);text-decoration:underline;text-underline-offset:3px;width:fit-content}
+.askmsg[open] summary{margin-bottom:10px}
+.askmsg .sbtn{align-self:flex-start}
 .ghostbtn{font:600 1rem var(--body);background:transparent;color:var(--ink);border:1px solid var(--ink);border-radius:4px;padding:13px 18px;cursor:pointer}
 @media (max-width:640px){
   .grid3{grid-template-columns:1fr 1fr}.grid3 label:first-child{grid-column:1/-1}
@@ -114,6 +118,13 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
         <section class="card panel">
           <div class="step-h"><span class="n">2</span><h2>Quem participa</h2></div>
           <p class="hint">Entre 3 e 30 pessoas. Cada nome e cada email têm de ser diferentes. Não te esqueças de ti, se também participas.</p>
+          <details class="askmsg">
+            <summary>Ainda não tens os emails? Copia esta mensagem para o grupo</summary>
+            <div class="groupmsg">
+              <textarea id="askMsg" readonly rows="7" aria-label="Mensagem para pedir os emails">Olá! Vou organizar o nosso amigo secreto de Natal no Sapatinho (sapatinho-natal.pt). Cada um recebe um email com um link para sortear quem lhe calha. Manda-me o teu email, por favor: só serve para receberes os emails do sorteio.</textarea>
+              <button type="button" class="sbtn" id="copyAsk">Copiar mensagem</button>
+            </div>
+          </details>
           <div class="people" id="people"></div>
           <button type="button" class="link-btn" id="addP">+ Adicionar pessoa</button>
         </section>
@@ -212,6 +223,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
   for (var k=0;k<3;k++) addPerson();
   document.getElementById("addP").addEventListener("click", function(){ addPerson().focus(); });
   document.getElementById("addX").addEventListener("click", addPair);
+  document.getElementById("copyAsk").addEventListener("click", function(){ Sap.copy(document.getElementById("askMsg").value, this, "Copiado!"); });
 
   function fail(msg){ err.textContent = msg; err.hidden = false; err.scrollIntoView({behavior:"smooth", block:"center"}); }
   var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
