@@ -2,82 +2,82 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 19,
-      "tarefa": "Agendar as stories de 1 a 11 dez e o feed de 11 dez no Meta",
-      "ultimo": "Feed de 1 a 10 dez agendado no Meta (16 publicações)",
-      "atualizado": "2026-11-12T21:15:00Z"
+      "feitos": 22,
+      "tarefa": "Agendar 12 dez no Meta e decidir as experiências com medição",
+      "ultimo": "Site publicado; 44 publicações de dezembro agendadas no Meta",
+      "atualizado": "2026-11-13T09:15:00Z"
     },
     "seo": {
       "estado": "descanso",
-      "feitos": 4,
-      "tarefa": "Medir o CTR das 3 páginas de 17 a 23 nov",
-      "ultimo": "Títulos de homem, até 10 € e até 15 € reescritos; og do /criar certo",
-      "atualizado": "2026-11-12T16:00:00Z"
+      "feitos": 5,
+      "tarefa": "Rotina de segunda: páginas entre a 8.ª e a 20.ª posição",
+      "ultimo": "Mensagem para pedir os emails no guia da empresa",
+      "atualizado": "2026-11-13T09:15:00Z"
     },
     "outreach": {
       "estado": "espera",
       "feitos": 0,
-      "tarefa": "3 lembretes em rascunho: o Diogo carrega em Enviar",
+      "tarefa": "Contactos novos (o envio tem sido recusado; o Diogo envia)",
       "ultimo": "1.º backlink publicado: TechBit (4 links)",
-      "atualizado": "2026-11-12T08:05:00Z"
+      "atualizado": "2026-11-13T09:15:00Z"
     },
     "social-media": {
-      "estado": "descanso",
+      "estado": "trabalhar",
       "feitos": 1,
-      "tarefa": "Stories de 1 a 11 dez entram no Meta a 13 nov",
-      "ultimo": "142 imagens de 1 a 20 dez geradas",
-      "atualizado": "2026-11-12T21:15:00Z"
+      "tarefa": "Tags da Amazon nas stories de 12 a 20 dez",
+      "ultimo": "Dezembro pronto e agendado até 11 dez",
+      "atualizado": "2026-11-13T09:15:00Z"
     },
     "analista": {
       "estado": "descanso",
-      "feitos": 1,
-      "tarefa": "Leitura rápida amanhã; KPIs completos na segunda",
-      "atualizado": "2026-11-12T08:05:00Z",
-      "ultimo": "KPIs de quinta: 4 sorteios em 9–11 nov, 38 cliques no Google"
+      "feitos": 2,
+      "tarefa": "Search Console com os dados de 11 a 17 nov",
+      "atualizado": "2026-11-13T09:15:00Z",
+      "ultimo": "Medição das ideias de 6/9 nov (sem dados de utm)"
     },
     "afiliados": {
-      "estado": "descanso",
+      "estado": "trabalhar",
       "feitos": 0,
-      "tarefa": "Sábado: filtro de preço nas pesquisas da Amazon",
-      "atualizado": "2026-11-11T10:00:00Z",
+      "tarefa": "Filtro de preço e Amazon no /r (sábado)",
+      "atualizado": "2026-11-13T09:15:00Z",
       "ultimo": "Redes com o código novo da Amazon; Awin: 8 pendentes"
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "Medir a caixa «Criar sorteio» a 18 nov",
-      "atualizado": "2026-11-12T08:05:00Z",
-      "ultimo": "/criar começa com 3 pessoas e diz o nome do botão"
+      "feitos": 4,
+      "tarefa": "Endereços /ir/ para medir as experiências (até 16 nov)",
+      "atualizado": "2026-11-13T09:15:00Z",
+      "ultimo": "«Avisa o grupo» e «Pedir os emails» no /criar"
     },
     "suporte": {
       "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Pedidos de ajuda e site a funcionar em cada turno",
-      "atualizado": "2026-11-12T08:05:00Z",
-      "ultimo": "Teste de entrega OK: caixa Principal"
+      "feitos": 3,
+      "tarefa": "Teste de entrega na segunda",
+      "atualizado": "2026-11-13T09:15:00Z",
+      "ultimo": "Site, API e Brevo OK; sem pedidos de ajuda"
     },
     "inovacao": {
       "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Próximas ideias na sexta, 13 nov.",
-      "atualizado": "2026-11-06T16:00:00Z",
-      "ultimo": "3 ideias novas, todas aprovadas"
+      "feitos": 1,
+      "tarefa": "Ideias de amanhã",
+      "atualizado": "2026-11-13T09:15:00Z",
+      "ultimo": "2 ideias: Amazon direta no /r e medição sem cookies"
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Confirmar o site real depois de publicar",
-      "atualizado": "2026-11-12T16:00:00Z",
-      "ultimo": "Aprovou os títulos SEO de 12 nov"
+      "feitos": 3,
+      "tarefa": "Rever as /ir/ e a Amazon no /r",
+      "atualizado": "2026-11-13T09:15:00Z",
+      "ultimo": "Aprovou o /criar e o guia da empresa"
     }
   },
   "estado": {
     "prioridades": [
-      "Stories de 1 a 11 dez e feed de 11 dez no Meta",
-      "Pedir indexação de homem, até 10 €, até 15 € e /criar",
-      "Ideias do inovacao e retrospetiva da semana"
+      "Amazon no /r com sapatinhores-21 e filtro de preço (afiliados)",
+      "Endereços /ir/ para medir as experiências (produto)",
+      "Agendar 12 dez no Meta e corrigir as tags de 12–20 dez"
     ],
-    "preciso": "Preencher os dados de pagamento na Amazon; enviar os 3 lembretes em rascunho no Gmail do sapatinhonatal.",
+    "preciso": "Amazon Associados: preencher as informações de pagamento. Mudar as instruções do qa/CLAUDE.md para os 3 códigos da Amazon (quando quiseres).",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -146,6 +146,10 @@
       {
         "quando": "2026-11-12T21:15:00Z",
         "texto": "Noite: feed de 1 a 10 dez agendado no Facebook e no Instagram (16 publicações). Caixa sem novidades."
+      },
+      {
+        "quando": "2026-11-13T09:15:00Z",
+        "texto": "Manhã: publicado «Avisa o grupo» e «Pedir os emails» (/criar e guia da empresa); feed de 11 dez e 43 stories de 1–11 dez agendados; indexação pedida de 5 páginas."
       }
     ],
     "recados": [
@@ -176,6 +180,20 @@
         "para": "seo",
         "texto": "Homem, até 10 € e até 15 €: impressões sem cliques",
         "estado": "entregue"
+      },
+      {
+        "quando": "2026-11-13T09:15:00Z",
+        "de": "inovacao",
+        "para": "afiliados",
+        "texto": "Amazon direta no /r com sapatinhores-21",
+        "estado": "novo"
+      },
+      {
+        "quando": "2026-11-13T09:15:00Z",
+        "de": "gestor",
+        "para": "social-media",
+        "texto": "Trocar a tag da Amazon nas stories de 12–20 dez",
+        "estado": "novo"
       }
     ],
     "resultados": {
@@ -185,6 +203,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-12T21:15:00Z"
+    "atualizado": "2026-11-13T09:15:00Z"
   }
 }
