@@ -70,7 +70,7 @@ Estados: **por fazer**, **em curso**, **à espera do Diogo**, **feito**. Datas e
 | 6 nov | suporte | Teste de entrega: sorteio «Teste spam 6 nov» para sapatinhonatal+spam1..3 | feito: os 3 convites na Caixa principal (descontar 1 sorteio e 3 convites no painel) |
 | 6 nov | outreach | Lembrete único aos 7 contactos de 30 out (Pplware, e-konomista, idealista, NiT, RFM, Echo Boomer, HR Portugal) | feito (6 nov 15:23–15:26; não voltar a insistir) |
 | 9 e 10 nov | outreach | Emails agendados no Gmail: seg 9 nov 9:30 (Notícias de Coimbra, PRIMA, Pumpkin) e ter 10 nov 9:30 (Revista VIP, Lisboa Secreta) | agendado (confirmar nos Enviados) |
-| até 13 nov | outreach | Lembrete único (7 dias) aos contactos de 2 a 6 nov que não responderem | por fazer |
+| até 13 nov | outreach | Lembrete único (7 dias) aos contactos de 2 a 6 nov que não responderem | feito (11, 12 e 13 nov; os últimos 7 — Tek, Magia do Lar, Presentes e Prendas, Doutor Finanças, Por tua Conta, Notícias ao Minuto, 4gnews — a 13 nov ~9:20, a pedido do Diogo) |
 | 9 nov | afiliados | Ver na Awin as 9 lojas pendentes | feito (11 nov): 8 pendentes, 0 aprovadas, Worten recusada |
 | 11 nov | afiliados | Redes com `sapatinhoredes-21` a partir de 11 nov (`marketing/build_cal.py`, por data) | feito (junto e no GitHub). O `/r` não tem links da Amazon: `sapatinhores-21` sem uso até o Diogo decidir |
 | até 13 nov | gestor/Diogo | Meta: substituir as 10 stories da Amazon de 11 a 27 nov (11 nov 10:00, 12, 13, 15, 17, 19, 21, 23, 25 e 27 nov) pela versão com `tag=sapatinhoredes-21` | cortado (12 nov): o código antigo continua a dar comissão; só perdíamos a medição de ~9 stories com alcance muito baixo, e trocar cada uma é apagar e recriar no Meta. Dezembro já sai com o código novo |
