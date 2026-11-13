@@ -3,9 +3,9 @@
     "gestor": {
       "estado": "trabalhar",
       "feitos": 22,
-      "tarefa": "Agendar 12 dez no Meta e decidir as experiências com medição",
-      "ultimo": "Site publicado; 44 publicações de dezembro agendadas no Meta",
-      "atualizado": "2026-11-13T09:15:00Z"
+      "tarefa": "Publicar as /ir/ e o no-referrer no /r à noite",
+      "ultimo": "Turno da tarde: /ir/ feitas e revistas; Chrome desligado",
+      "atualizado": "2026-11-13T16:20:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -44,10 +44,10 @@
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 4,
-      "tarefa": "Endereços /ir/ para medir as experiências (até 16 nov)",
-      "atualizado": "2026-11-13T09:15:00Z",
-      "ultimo": "«Avisa o grupo» e «Pedir os emails» no /criar"
+      "feitos": 5,
+      "tarefa": "Corrigir reparos do qa nas /ir/ e publicar",
+      "atualizado": "2026-11-13T16:20:00Z",
+      "ultimo": "Endereços de contagem /ir/ feitos num ramo"
     },
     "suporte": {
       "estado": "descanso",
@@ -65,10 +65,10 @@
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Rever as /ir/ e a Amazon no /r",
-      "atualizado": "2026-11-13T09:15:00Z",
-      "ultimo": "Aprovou o /criar e o guia da empresa"
+      "feitos": 4,
+      "tarefa": "Confirmar as /ir/ no site real depois de publicar",
+      "atualizado": "2026-11-13T16:20:00Z",
+      "ultimo": "Reviu as /ir/: aprovado com reparos"
     }
   },
   "estado": {
