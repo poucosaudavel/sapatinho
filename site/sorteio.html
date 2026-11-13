@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#0f2a22">
 <title>O teu sorteio · Sapatinho</title>
 <meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sapatinho">
 <meta property="og:locale" content="pt_PT">
@@ -240,7 +241,9 @@ function showDraw(o, key, code){
 
 function sendConfirm(code){
   var note = function(t){ var n = document.getElementById("mailnote"); if (n) n.textContent = t; };
-  fetch("/api/confirm", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ code: code }) })
+  // A página tem referrer «no-referrer»: com essa política o navegador manda «Origin: null» nos POST e o worker recusava (403).
+  // «strict-origin» só neste pedido: o Origin vai certo e o Referer leva só o domínio, nunca o endereço com o payload.
+  fetch("/api/confirm", { method:"POST", referrerPolicy:"strict-origin", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ code: code }) })
     .then(function(r){ note(r.ok ? "Enviámos-te um email com o nome, para confirmares quando quiseres." : "Não foi possível enviar o email de confirmação, mas podes voltar a este link sempre que quiseres."); })
     .catch(function(){ note("Não foi possível enviar o email de confirmação, mas podes voltar a este link sempre que quiseres."); });
 }
