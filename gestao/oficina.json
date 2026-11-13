@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
-      "feitos": 22,
-      "tarefa": "Publicar as /ir/ e o no-referrer no /r à noite",
-      "ultimo": "Turno da tarde: /ir/ feitas e revistas; Chrome desligado",
-      "atualizado": "2026-11-13T16:20:00Z"
+      "estado": "espera",
+      "feitos": 23,
+      "tarefa": "Publicar as /ir/ amanhã de manhã (falta o Chrome)",
+      "ultimo": "Turno da noite: reparos feitos e revistos; Chrome desligado",
+      "atualizado": "2026-11-13T20:05:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -44,10 +44,10 @@
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 5,
-      "tarefa": "Corrigir reparos do qa nas /ir/ e publicar",
-      "atualizado": "2026-11-13T16:20:00Z",
-      "ultimo": "Endereços de contagem /ir/ feitos num ramo"
+      "feitos": 6,
+      "tarefa": "Meta strict-origin no /r e publicar as /ir/",
+      "atualizado": "2026-11-13T20:05:00Z",
+      "ultimo": "Reparos do qa nas /ir/ e privacidade do /r"
     },
     "suporte": {
       "estado": "descanso",
@@ -65,19 +65,19 @@
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 4,
-      "tarefa": "Confirmar as /ir/ no site real depois de publicar",
-      "atualizado": "2026-11-13T16:20:00Z",
-      "ultimo": "Reviu as /ir/: aprovado com reparos"
+      "feitos": 5,
+      "tarefa": "Rever o strict-origin e confirmar as /ir/ no site real",
+      "atualizado": "2026-11-13T20:05:00Z",
+      "ultimo": "Reviu os reparos das /ir/: aprovado com reparos"
     }
   },
   "estado": {
     "prioridades": [
-      "Amazon no /r com sapatinhores-21 e filtro de preço (afiliados)",
-      "Endereços /ir/ para medir as experiências (produto)",
-      "Agendar 12 dez no Meta e corrigir as tags de 12–20 dez"
+      "Publicar as /ir/ e a privacidade do /r, com teste real da confirmação",
+      "Amazon no /r com sapatinhores-21 (afiliados)",
+      "Agendar 12 dez no Meta"
     ],
-    "preciso": "Amazon Associados: preencher as informações de pagamento. Mudar as instruções do qa/CLAUDE.md para os 3 códigos da Amazon (quando quiseres).",
+    "preciso": "Ligar o Chrome do PC com a extensão do Claude (desligado desde a tarde de 13 nov: sem publicar nem ver a caixa). Amazon Associados: preencher as informações de pagamento. Mudar as instruções do qa/CLAUDE.md para os 3 códigos da Amazon (quando quiseres).",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -150,6 +150,10 @@
       {
         "quando": "2026-11-13T09:15:00Z",
         "texto": "Manhã: publicado «Avisa o grupo» e «Pedir os emails» (/criar e guia da empresa); feed de 11 dez e 43 stories de 1–11 dez agendados; indexação pedida de 5 páginas."
+      },
+      {
+        "quando": "2026-11-13T20:05:00Z",
+        "texto": "Noite: reparos das /ir/ feitos e revistos pelo qa; sem Chrome, a publicação fica para amanhã de manhã."
       }
     ],
     "recados": [
@@ -203,6 +207,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-13T09:15:00Z"
+    "atualizado": "2026-11-13T20:05:00Z"
   }
 }
