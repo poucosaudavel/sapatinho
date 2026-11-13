@@ -313,7 +313,7 @@ related=["regras-do-amigo-secreto", "ideias-de-prendas-amigo-secreto"],
 # ---------------------------------------------------------------- empresa
 PAGES.append(dict(
 slug="amigo-secreto-na-empresa",
-modified="2026-11-06",
+modified="2026-11-13",
 nav="Na empresa",
 short="Amigo secreto na empresa",
 card="Como organizar no trabalho: inscrições, limite, calendário, equipas remotas e uma mensagem pronta a enviar.",
@@ -331,6 +331,7 @@ body="""
 <li><a href="#equipas">Equipas grandes ou remotas</a></li>
 <li><a href="#calendario">Calendário sugerido</a></li>
 <li><a href="#mensagem">Mensagem pronta a enviar</a></li>
+<li><a href="#emails">Mensagem para pedir os emails aos colegas</a></li>
 <li><a href="#perguntas">Perguntas frequentes</a></li>
 </ol></nav>
 
@@ -367,6 +368,11 @@ body="""
 <p>Copia e adapta:</p>
 <blockquote class="note">Olá a todos! Este ano vamos fazer amigo secreto na equipa. Quem quiser participar, responda a este email até sexta-feira. O limite é 10 € e a troca será no almoço de Natal, a 18 de dezembro. Depois do prazo, cada participante recebe por email um link para sortear quem lhe saiu. A participação é voluntária e ninguém fica de fora do almoço por não entrar.</blockquote>
 <p>Para o postal da prenda ou para a revelação, há frases para colegas nas <a href="/pistas-e-mensagens-amigo-secreto/#postal">pistas e mensagens</a>.</p>
+
+<h2 id="emails">Mensagem para pedir os emails aos colegas</h2>
+<p>Se anunciaste o amigo secreto de viva voz ou no chat da equipa, ainda precisas do email de cada participante. Copia e adapta:</p>
+<blockquote class="note">Olá a todos! Este ano o amigo secreto de Natal vai ser no Sapatinho (sapatinho-natal.pt). Cada um recebe um email com um link e roda a roleta para saber a quem vai dar a prenda. Quem quiser participar, mande-me o seu email até sexta-feira, por favor. Só serve para receberem o convite e o nome que vos sair.</blockquote>
+<p>Pede o email que cada pessoa abre todos os dias, pessoal ou do trabalho: os filtros de alguns emails de empresa podem mandar o convite para o spam. Quando tiveres a lista, <a href="/criar">cria o sorteio</a> e cada pessoa recebe o seu convite por email.</p>
 
 <h2>Grupos com mais de 30 pessoas</h2>
 <p>Cada sorteio do Sapatinho aceita até 30 participantes. Para grupos maiores, a solução mais simples é fazer um sorteio por equipa. Se preferires um sorteio único para toda a empresa, escreve-nos para <strong>ajuda@sapatinho-natal.pt</strong>.</p>
