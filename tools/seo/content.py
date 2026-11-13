@@ -372,7 +372,7 @@ body="""
 <h2 id="emails">Mensagem para pedir os emails aos colegas</h2>
 <p>Se anunciaste o amigo secreto de viva voz ou no chat da equipa, ainda precisas do email de cada participante. Copia e adapta:</p>
 <blockquote class="note">Olá a todos! Este ano o amigo secreto de Natal vai ser no Sapatinho (sapatinho-natal.pt). Cada um recebe um email com um link e roda a roleta para saber a quem vai dar a prenda. Quem quiser participar, mandem-me o vosso email até sexta-feira, por favor. Só serve para receberem o convite e o nome que vos sair.</blockquote>
-<p>Pede o email que cada pessoa abre todos os dias, pessoal ou do trabalho: os filtros de alguns emails de empresa podem mandar o convite para o spam. Quando tiveres a lista, <a href="/criar?utm_source=guia&amp;utm_medium=emails">cria o sorteio</a> e cada pessoa recebe o seu convite por email.</p>
+<p>Pede o email que cada pessoa abre todos os dias, pessoal ou do trabalho: os filtros de alguns emails de empresa podem mandar o convite para o spam. Quando tiveres a lista, <a href="/ir/guia/">cria o sorteio</a> e cada pessoa recebe o seu convite por email.</p>
 
 <h2>Grupos com mais de 30 pessoas</h2>
 <p>Cada sorteio do Sapatinho aceita até 30 participantes. Para grupos maiores, a solução mais simples é fazer um sorteio por equipa. Se preferires um sorteio único para toda a empresa, escreve-nos para <strong>ajuda@sapatinho-natal.pt</strong>.</p>

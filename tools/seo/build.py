@@ -121,8 +121,8 @@ FOOTER = """<footer class="foot rich">
   </footer>"""
 
 # CTA curto no topo dos guias (11 nov, produto): o único botão no corpo estava a ~88 % da página.
-# Mede-se com o utm (guia/topo) e com os sorteios por dia no /painel.
-TOP_CTA = """<p class="top-cta"><span>Vais organizar o amigo secreto? O sorteio é grátis e cada pessoa recebe o seu por email.</span><a class="btn" href="/criar?utm_source=guia&amp;utm_medium=topo">Criar sorteio</a></p>"""
+# Mede-se com o endereço de contagem /ir/guia/ (13 nov) e com os sorteios por dia no /painel.
+TOP_CTA = """<p class="top-cta"><span>Vais organizar o amigo secreto? O sorteio é grátis e cada pessoa recebe o seu por email.</span><a class="btn" href="/ir/guia/">Criar sorteio</a></p>"""
 
 CTA = """<div class="cta-box"><p><b>Pronto para sortear?</b>Cria o amigo secreto do teu grupo em dois minutos. É grátis e cada pessoa recebe o convite por email.</p><a class="btn" href="/criar">Criar sorteio</a></div>"""
 
@@ -441,6 +441,37 @@ def write_404():
     </div>"""
     open(f"{SITE}/404.html", "w").write(page_shell(h, main))
 
+# Endereços de contagem sem cookies (produto, 13 nov): página fixa que segue de imediato para o destino.
+# A Cloudflare Web Analytics conta a visita ao caminho /ir/<origem>/. Nunca levam nomes, payload nem parâmetros.
+# Ficam fora do sitemap e têm noindex. Sem JavaScript: só meta refresh e um link visível.
+IR = {
+    "grupo": ("/", "a página inicial"),                                 # mensagem que quem organiza partilha no grupo (/criar)
+    "sorteio": ("/criar", "criar um sorteio"),                          # «Criar outro sorteio» no /r e no /sorteio
+    "calendario": ("/ideias-de-prendas-amigo-secreto/", "ideias de prendas"),  # lembrete do calendário no /r
+    "guia": ("/criar", "criar um sorteio"),                             # botões «Criar sorteio» dentro dos guias
+}
+
+def write_ir():
+    for origem, (dest, label) in IR.items():
+        os.makedirs(f"{SITE}/ir/{origem}", exist_ok=True)
+        open(f"{SITE}/ir/{origem}/index.html", "w").write(f"""<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="refresh" content="0;url={dest}">
+<link rel="canonical" href="{BASE}{dest}">
+<title>Sapatinho</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="wrap"><p>A abrir… Se não abrir sozinho, <a href="{dest}">segue para {label}</a>.</p></main>
+</body>
+</html>
+""")
+
 def write_sitemap():
     urls = [("/", "1.0", "weekly", MODIFIED), ("/criar", "0.9", "monthly", PUBLISHED)]
     urls += [(f"/{p['slug']}/", "0.8", "monthly", p.get("modified", p.get("date", PUBLISHED))) for p in PAGES]
@@ -468,5 +499,6 @@ if __name__ == "__main__":
     for path in ["sorteio.html", "r.html", "org.html"]:
         patch_private(path, None)
     write_404()
+    write_ir()
     write_sitemap()
     print("ok")

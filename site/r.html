@@ -141,7 +141,8 @@ function giftBlock(l){
 function againLine(){
   var p = el("p", "note again", "Queres fazer um amigo secreto com outro grupo? É grátis e demora 2 minutos. ");
   var a = el("a", "", "Criar outro sorteio");
-  a.href = "/criar?utm_source=sorteio&utm_medium=convite";
+  a.href = "/ir/sorteio/";
+  a.rel = "noreferrer"; // o endereço do /r leva o payload: não o passar à página de contagem
   p.appendChild(a);
   return p;
 }
@@ -149,7 +150,7 @@ function againLine(){
 /* «Lembra-me de comprar a prenda»: evento de calendário gerado aqui no navegador.
    O texto do evento é fixo: nunca leva o nome de quem saiu, o teu nome, o grupo nem o link do convite
    (o link tem os nomes, só ofuscados). Só entram o limite (número) e a data da troca (já validados por Sap.safe). */
-var CAL_UTM = "https://sapatinho-natal.pt/ideias-de-prendas-amigo-secreto/?utm_source=calendario&utm_medium=lembrete";
+var CAL_UTM = "https://sapatinho-natal.pt/ir/calendario/";
 var CAL_TITLE = "Comprar a prenda do amigo secreto";
 function ymd(dt){ return dt.getUTCFullYear() + ("0"+(dt.getUTCMonth()+1)).slice(-2) + ("0"+dt.getUTCDate()).slice(-2); }
 function todayUTC(){ var n = new Date(); return new Date(Date.UTC(n.getFullYear(), n.getMonth(), n.getDate())); }
