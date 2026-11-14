@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "espera",
-      "feitos": 4,
-      "tarefa": "Publicar o pacote de 14 nov quando o Chrome do PC voltar",
-      "ultimo": "Turno de almoço: página «Vê um exemplo» feita num ramo",
-      "atualizado": "2026-11-14T12:05:00Z"
+      "estado": "trabalhar",
+      "feitos": 7,
+      "tarefa": "Turno da tarde: qa revê «Vê um exemplo»; teste completo da confirmação por email",
+      "ultimo": "Site de 14 nov publicado e verificado; Meta 12 dez agendado",
+      "atualizado": "2026-11-14T12:50:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -15,24 +15,24 @@
       "atualizado": "2026-11-14T08:45:00Z"
     },
     "outreach": {
-      "estado": "espera",
+      "estado": "descanso",
       "feitos": 0,
-      "tarefa": "À espera do Chrome do PC para ver a caixa, os painéis e o Meta",
+      "tarefa": "Chrome de volta: rotina normal no próximo turno",
       "ultimo": "1.º backlink publicado: TechBit (4 links)",
-      "atualizado": "2026-11-14T08:45:00Z"
+      "atualizado": "2026-11-14T12:50:00Z"
     },
     "social-media": {
-      "estado": "espera",
+      "estado": "descanso",
       "feitos": 0,
-      "tarefa": "À espera do Chrome do PC para ver a caixa, os painéis e o Meta",
-      "ultimo": "Dezembro pronto e agendado até 11 dez",
-      "atualizado": "2026-11-14T08:45:00Z"
+      "tarefa": "Chrome de volta: rotina normal no próximo turno",
+      "ultimo": "12 dez agendado (2 publicações e 4 stories)",
+      "atualizado": "2026-11-14T12:50:00Z"
     },
     "analista": {
-      "estado": "espera",
+      "estado": "descanso",
       "feitos": 0,
-      "tarefa": "À espera do Chrome do PC para ver a caixa, os painéis e o Meta",
-      "atualizado": "2026-11-14T08:45:00Z",
+      "tarefa": "Chrome de volta: rotina normal no próximo turno",
+      "atualizado": "2026-11-14T12:50:00Z",
       "ultimo": "Medição das ideias de 6/9 nov (sem dados de utm)"
     },
     "afiliados": {
@@ -77,12 +77,8 @@
       "Ver na Cloudflare se os caminhos /r/ ficam guardados",
       "Agendar 12 dez no Meta e «Vê um exemplo» (produto)"
     ],
-    "preciso": "Ligar o Chrome do PC com a extensão do Claude (desligado desde a tarde de 13 nov: sem publicar nem ver a caixa). Amazon Associados: preencher as informações de pagamento.",
+    "preciso": "Nada por agora.",
     "diario": [
-      {
-        "quando": "2026-11-05T20:43:00Z",
-        "texto": "Chegaram a Conversão e o Suporte. Turnos automáticos às 7:44 e 19:44."
-      },
       {
         "quando": "2026-11-05T21:10:00Z",
         "texto": "A equipa passa a deixar recados entre si e o CEO mede 5 resultados por semana."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-14T12:05:00Z",
         "texto": "Almoço: Chrome do PC ainda desligado (sem caixa, Meta nem publicação). produto fez a página «Vê um exemplo» num ramo."
+      },
+      {
+        "quando": "2026-11-14T12:50:00Z",
+        "texto": "Chrome de volta: site de 14 nov publicado e verificado, sem caminhos /r/ na Web Analytics, Meta 12 dez agendado."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-14T12:05:00Z"
+    "atualizado": "2026-11-14T12:50:00Z"
   }
 }

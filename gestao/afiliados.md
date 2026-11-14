@@ -34,6 +34,6 @@ O painel da Awin pediu login (sessão expirada); visto só pelo email do sapatin
 | Loja | Estado | Comissão anunciada |
 | --- | --- | --- |
 | Worten PT | recusada a 6 nov: «Advertiser doesn't work with this publisher type» | — |
-| Colvin, PcComponentes, Startselect, Wanapix, Decathlon, Sephora, Druni, Douglas | pendentes (sem email de resposta até 7 nov) | não vista (só dentro da Awin); Decathlon: clique de 15 dias (decathlon.pt/lp/i/afiliados) |
+| Colvin, PcComponentes, Startselect, Wanapix, Decathlon, Sephora, Druni | pendentes (sem email de resposta até 7 nov; Douglas_PT recusou a 13 nov: «URL is irrelevant») | não vista (só dentro da Awin); Decathlon: clique de 15 dias (decathlon.pt/lp/i/afiliados) |
 
 Links Amazon (7 nov): 282 links em `site/`, todos pesquisas `amazon.es/s?k=`, todos com `tag=sapatinhonata-21` e `rel="sponsored nofollow noopener"`. Sem 404 possível (são pesquisas); 1 testada no Chrome devolve produtos. O curl do PC não chega à Amazon.
