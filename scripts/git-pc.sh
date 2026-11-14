@@ -4,7 +4,6 @@
 # Este script muda-os de nome (mudar de nome é permitido) e depois corre o git.
 # Uso: bash scripts/git-pc.sh pull   |   bash scripts/git-pc.sh status   |   ...
 cd "$(dirname "$0")/.." || exit 1
-G() { git -c pull.rebase=false -c pull.ff=only -c gc.auto=0 -c maintenance.auto=false "$@"; }
 clear_locks() {
   pgrep -x git >/dev/null 2>&1 && return
   mkdir -p .git/stale
@@ -12,6 +11,8 @@ clear_locks() {
     [ -e "$f" ] && mv "$f" ".git/stale/$(basename "$f")-$(date +%s%N)"
   done
 }
+# Cada comando git pode deixar um .lock: limpa-se antes e depois de cada um.
+G() { clear_locks; git -c pull.rebase=false -c pull.ff=only -c gc.auto=0 -c maintenance.auto=false "$@"; local r=$?; clear_locks; return $r; }
 clear_locks
 # "pull" sem apagar: o git normal substitui ficheiros apagando-os, o que aqui falha a meio.
 # Em vez disso, escrevemos cada ficheiro alterado por cima (sem apagar) e só depois mudamos o ponteiro do ramo.
