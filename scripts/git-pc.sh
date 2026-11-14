@@ -26,7 +26,7 @@ if [ "$1" = "pull" ] && [ $# -eq 1 ]; then
   fi
   if ! G diff --quiet HEAD -- || ! G diff --cached --quiet; then
     for f in $(G diff --name-only HEAD); do
-      if G diff --name-only HEAD origin/main | grep -qx "$f"; then echo "Alterações por guardar em $f, que também mudou no GitHub: não atualizo." >&2; exit 3; fi
+      if G diff --name-only HEAD origin/main | grep -qx "$f" && ! G diff --quiet origin/main -- "$f"; then echo "Alterações por guardar em $f, que também mudou no GitHub: não atualizo." >&2; exit 3; fi
     done
   fi
   G diff --name-status --no-renames HEAD origin/main | while IFS=$'\t' read -r st f; do
