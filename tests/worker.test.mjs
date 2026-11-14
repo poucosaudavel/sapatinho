@@ -185,3 +185,18 @@ test("LINK_SECRET: links novos com a chave própria; links antigos (chave do Bre
   const outro = setup(); outro.env.LINK_SECRET = "outro";
   await assert.rejects(confirm({ code: codeNovo }, outro.env, req("/", {})));
 });
+
+test("chave dos links guardada no KV (cfg:link_secret) funciona como LINK_SECRET", async () => {
+  const antigo = setup();
+  const r1 = await create({ g: "Antes", people: people(["A", "B", "C"]) }, antigo.env, req("/", {}));
+  const codeAntigo = r1.links[0].link.split("/r/")[1];
+  const s = setup();
+  await s.env.STATS.put("cfg:link_secret", "x".repeat(40));
+  await confirm({ code: codeAntigo }, s.env, req("/", {}));
+  assert.equal(s.sent.at(-1).to[0].email, "p0@exemplo.pt");
+  const r2 = await create({ g: "Depois", people: people(["A", "B", "C"]) }, s.env, req("/", {}));
+  const codeNovo = r2.links[2].link.split("/r/")[1];
+  await confirm({ code: codeNovo }, s.env, req("/", {}));
+  assert.equal(s.sent.at(-1).to[0].email, "p2@exemplo.pt");
+  await assert.rejects(confirm({ code: codeNovo }, antigo.env, req("/", {})));
+});

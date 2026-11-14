@@ -2,7 +2,8 @@
 // Routes (mounted at sapatinho-natal.pt/api/*):
 //   POST /api/create   { g, l, d, people:[{n,e}], pairs:[[a,b]] } -> draws, emails invites, returns links
 //   POST /api/confirm  { code }                                    -> emails the participant their result
-// Secrets: BREVO_API_KEY (envio; e chave dos links antigos) e LINK_SECRET (chave dos links novos, desde 14 nov 2026; nunca apagar)
+// Secrets: BREVO_API_KEY (envio; e chave dos links antigos). Chave dos links novos (desde 14 nov 2026; nunca apagar):
+// secret LINK_SECRET ou, se não existir, a entrada "cfg:link_secret" do KV STATS.
 
 const SITE = "https://sapatinho-natal.pt";
 const SENDER = { name: "Sapatinho", email: "sorteio@sapatinho-natal.pt" };
@@ -155,11 +156,22 @@ function decode(str) {
     return o && o.v === 2 ? o : null;
   } catch { return null; }
 }
-/* Chaves dos links. Desde 14 nov 2026, se existir o secret LINK_SECRET, os links novos são assinados
-   e cifrados com ele (chave própria, separada da do Brevo). Os links anteriores, feitos com a chave
-   derivada de BREVO_API_KEY, continuam a ser aceites. NUNCA apagar LINK_SECRET depois de o criar. */
+/* Chaves dos links. Desde 14 nov 2026, se existir uma chave própria dos links (secret LINK_SECRET, ou a
+   entrada "cfg:link_secret" do KV), os links novos são assinados e cifrados com ela, separada da do Brevo.
+   Os links anteriores, feitos com a chave derivada de BREVO_API_KEY, continuam a ser aceites.
+   NUNCA apagar essa chave depois de a criar: os links feitos com ela deixavam de funcionar. */
+const linkSecretCache = new WeakMap();
+async function linkSecret(env) {
+  if (env.LINK_SECRET) return env.LINK_SECRET;
+  if (linkSecretCache.has(env)) return linkSecretCache.get(env);
+  let v = "";
+  try { v = (env.STATS && (await env.STATS.get("cfg:link_secret"))) || ""; } catch {}
+  if (v.length >= 32) linkSecretCache.set(env, v); // só se guarda em memória quando existe (assim aparece sem republicar)
+  return v.length >= 32 ? v : "";
+}
 async function hmacKey(env, legacy = false) {
-  const material = env.LINK_SECRET && !legacy ? "sapatinho-link:" + env.LINK_SECRET : "sapatinho:" + env.BREVO_API_KEY;
+  const ls = legacy ? "" : await linkSecret(env);
+  const material = ls ? "sapatinho-link:" + ls : "sapatinho:" + env.BREVO_API_KEY;
   return crypto.subtle.importKey("raw", new TextEncoder().encode(material), { name: "HMAC", hash: "SHA-256" }, false, ["sign", "verify"]);
 }
 async function sign(enc, env, legacy = false) {
@@ -170,7 +182,7 @@ async function verify(code, env) {
   const [enc, sig] = code.split(".");
   if (!enc || !sig || code.length > 4000) return null;
   if ((await sign(enc, env)) === code) return decode(enc);
-  if (env.LINK_SECRET && (await sign(enc, env, true)) === code) return decode(enc);
+  if ((await linkSecret(env)) && (await sign(enc, env, true)) === code) return decode(enc);
   return null;
 }
 
@@ -178,7 +190,8 @@ async function verify(code, env) {
    O email só serve para enviar o segundo email. Vai cifrado no próprio link:
    só este servidor o consegue ler, e não fica guardado em lado nenhum. */
 async function emailKey(env, legacy = false) {
-  const material = env.LINK_SECRET && !legacy ? "sapatinho-email-link:" + env.LINK_SECRET : "sapatinho-email:" + env.BREVO_API_KEY;
+  const ls = legacy ? "" : await linkSecret(env);
+  const material = ls ? "sapatinho-email-link:" + ls : "sapatinho-email:" + env.BREVO_API_KEY;
   const raw = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(material));
   return crypto.subtle.importKey("raw", raw, { name: "AES-GCM" }, false, ["encrypt", "decrypt"]);
 }
@@ -189,7 +202,7 @@ async function sealEmail(email, env) {
   return toB64url(out);
 }
 async function openEmail(sealed, env) {
-  for (const legacy of env.LINK_SECRET ? [false, true] : [false]) {
+  for (const legacy of (await linkSecret(env)) ? [false, true] : [false]) {
     try {
       const b = fromB64url(sealed);
       const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b.slice(0, 12) }, await emailKey(env, legacy), b.slice(12));
