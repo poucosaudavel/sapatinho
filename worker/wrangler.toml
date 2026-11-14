@@ -3,7 +3,9 @@ name = "sapatinho-api"
 main = "worker.js"
 account_id = "b94d6670d0f741d1b6c56bedaa043d9c"
 compatibility_date = "2026-10-25"
-workers_dev = true
+# Só se chega à API por sapatinho-natal.pt/api/* (onde está a regra de limite da zona).
+workers_dev = false
+preview_urls = false
 routes = [{ pattern = "sapatinho-natal.pt/api/*", zone_name = "sapatinho-natal.pt" }]
 
 # Contagens anónimas, limites anti-abuso e marcas de confirmação (sem nomes nem emails)

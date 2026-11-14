@@ -35,7 +35,7 @@ export default {
 
     try {
       if (url.pathname.endsWith("/api/create")) return json(await create(body, env, req));
-      if (url.pathname.endsWith("/api/confirm")) return json(await confirm(body, env));
+      if (url.pathname.endsWith("/api/confirm")) return json(await confirm(body, env, req));
       return json({ error: "Não encontrado." }, 404);
     } catch (e) {
       return json({ error: e.userMessage || "Ocorreu um erro. Tenta outra vez daqui a pouco." }, e.status || 500);
@@ -70,7 +70,6 @@ async function create(b, env, req) {
   for (const p of ps) if (!nameOk(p.n)) throw fail(`O nome «${p.n}» só pode ter letras, números, espaços, hífens e apóstrofos.`);
   if (!groupOk(g)) throw fail("O nome do grupo só pode ter letras, números, espaços e pontuação simples (sem endereços de sites, emails ou telefones).");
   const names = ps.map((p) => p.n);
-  await guardCreate(env, req, names.length);
   const blocked = Object.create(null);
   for (const pair of Array.isArray(b.pairs) ? b.pairs.slice(0, 40) : []) {
     const [a, c] = [clean(pair?.[0], 30), clean(pair?.[1], 30)];
@@ -80,6 +79,8 @@ async function create(b, env, req) {
   }
   const m = draw(names, blocked);
   if (!m) throw fail("Com estas restrições não há forma de fazer o sorteio. Remove um dos pares ou junta mais pessoas.");
+  // Os limites só se gastam depois de se saber que o sorteio é possível.
+  await guardCreate(env, req, names.length);
 
   const links = [];
   for (const p of ps) {
@@ -99,7 +100,7 @@ async function create(b, env, req) {
 }
 
 /* ---------- confirm ---------- */
-async function confirm(b, env) {
+async function confirm(b, env, req) {
   const code = String(b.code || "");
   const o = await verify(code, env);
   if (!o || !(o.x || o.e)) throw fail("Link inválido.", 400);
@@ -109,7 +110,7 @@ async function confirm(b, env) {
   // O mesmo link só pede o segundo email uma vez em cada 12 horas (evita encher a caixa de alguém).
   const mark = env.STATS ? "c:" + (await tag("confirm:" + code, env)) : null;
   if (mark && (await env.STATS.get(mark))) return { ok: true };
-  await reserve(env, 1, CONFIRM_CAP);
+  await guardConfirm(env, req);
   if (mark) { try { await env.STATS.put(mark, "1", { expirationTtl: 43200 }); } catch {} }
   try {
   await sendBatch([{
@@ -289,9 +290,13 @@ async function count(env, inc) {
 /* ---------- proteção contra abusos ---------- */
 // Endereços de sites no nome do grupo ou nos nomes transformariam os convites em publicidade ou burla.
 const hasLink = (s) => /(https?:|www\.|[a-z0-9-]+\.(pt|com|net|org|io|br|info|xyz|me|co|eu|link|site|shop|app|top|click)\b)/i.test(s);
-const DAILY_EMAILS = 260;      // o plano gratuito do Brevo envia 300 emails por dia; deixamos margem para os segundos emails
-const CONFIRM_CAP = 295;       // os segundos emails podem usar a margem até perto dos 300
+// O plano gratuito do Brevo envia 300 emails por dia. Convites e segundos emails têm contadores separados,
+// para que um não consiga esgotar o outro (somados ficam abaixo dos 300).
+const DAILY_EMAILS = 240;      // convites por dia (contador "q:")
+const CONFIRM_CAP = 55;        // segundos emails por dia (contador "qc:")
 const CREATES_PER_IP = 10;     // sorteios por dia a partir do mesmo endereço IP
+const EMAILS_PER_IP = 90;      // convites por dia a partir do mesmo endereço IP (3 sorteios de 30)
+const CONFIRMS_PER_IP = 20;    // segundos emails por dia pedidos a partir do mesmo endereço IP
 async function tag(text, env) {  // HMAC curto e irreversível, para não guardar o texto original
   const k = await crypto.subtle.importKey("raw", new TextEncoder().encode("sapatinho-tag:" + env.BREVO_API_KEY), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
   return toB64url(new Uint8Array(await crypto.subtle.sign("HMAC", k, new TextEncoder().encode(text))).slice(0, 12));
@@ -299,20 +304,36 @@ async function tag(text, env) {  // HMAC curto e irreversível, para não guarda
 async function guardCreate(env, req, n) {
   if (!env.STATS) return;
   const day = new Date().toISOString().slice(0, 10);
-  const ip = req.headers.get("CF-Connecting-IP") || "";
-  if (!ip) { await reserve(env, n, DAILY_EMAILS); return; }
-  // Guardamos só um código irreversível do IP, durante 24 horas, para contar sorteios por dia.
-  const key = "ip:" + day + ":" + (await tag(ip + "|" + day, env));
-  const used = parseInt((await env.STATS.get(key)) || "0", 10);
-  if (used >= CREATES_PER_IP) throw fail("Já criaste muitos sorteios hoje. Tenta outra vez amanhã.", 429);
-  await env.STATS.put(key, String(used + 1), { expirationTtl: 86400 });
-  await reserve(env, n, DAILY_EMAILS);
+  const ip = req?.headers?.get("CF-Connecting-IP") || "";
+  if (ip) {
+    // Guardamos só um código irreversível do IP, durante 24 horas, com o número de sorteios e de convites.
+    const key = "ip2:" + day + ":" + (await tag(ip + "|" + day, env));
+    const cur = (await env.STATS.get(key, "json")) || { s: 0, e: 0 };
+    if (cur.s >= CREATES_PER_IP || cur.e + n > EMAILS_PER_IP) throw fail("Já criaste muitos sorteios hoje. Tenta outra vez amanhã.", 429);
+    await reserve(env, n, DAILY_EMAILS, "q:");
+    await env.STATS.put(key, JSON.stringify({ s: cur.s + 1, e: cur.e + n }), { expirationTtl: 86400 });
+    return;
+  }
+  await reserve(env, n, DAILY_EMAILS, "q:");
+}
+async function guardConfirm(env, req) {
+  if (!env.STATS) return;
+  const day = new Date().toISOString().slice(0, 10);
+  const ip = req?.headers?.get("CF-Connecting-IP") || "";
+  let key = null, used = 0;
+  if (ip) {
+    key = "ipc:" + day + ":" + (await tag("c|" + ip + "|" + day, env));
+    used = parseInt((await env.STATS.get(key)) || "0", 10);
+    if (used >= CONFIRMS_PER_IP) throw fail("Já pedimos muitos emails hoje a partir daqui. Tenta outra vez amanhã.", 429);
+  }
+  await reserve(env, 1, CONFIRM_CAP, "qc:");
+  if (key) await env.STATS.put(key, String(used + 1), { expirationTtl: 86400 });
 }
 // Quota diária do Brevo: os emails contam-se ANTES de enviar (reserva), para que um envio que falhe a meio
-// ou pedidos seguidos não passem o limite. Chave "q:<dia>" só com um número; apaga-se sozinha em 2 dias.
-async function reserve(env, n, cap) {
+// ou pedidos seguidos não passem o limite. Chaves "q:<dia>" (convites) e "qc:<dia>" (segundos emails), só com um número; apaga-se sozinha em 2 dias.
+async function reserve(env, n, cap, prefix) {
   if (!env.STATS) return;
-  const key = "q:" + new Date().toISOString().slice(0, 10);
+  const key = prefix + new Date().toISOString().slice(0, 10);
   const used = parseInt((await env.STATS.get(key)) || "0", 10);
   if (used + n > cap) throw fail("Hoje já enviámos todos os emails que podemos. Tenta outra vez amanhã.", 429);
   await env.STATS.put(key, String(used + n), { expirationTtl: 172800 });

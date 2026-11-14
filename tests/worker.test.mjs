@@ -124,3 +124,43 @@ test("segundo email: 3 ideias dentro do limite, com link para o site e nunca par
     assert.ok(!/amazon|tag=/i.test(html), "sem links de lojas no email");
   }
 });
+
+const mail30 = (k) => Array.from({ length: 30 }, (_, i) => ({ n: "P" + k + "x" + i, e: `p${k}x${i}@exemplo.pt` }));
+
+test("um só IP não esgota a quota do site: no máximo 90 convites por dia", async () => {
+  const { env } = setup();
+  const ip = { ...O, "CF-Connecting-IP": "7.7.7.7" };
+  for (let i = 0; i < 3; i++) assert.equal((await worker.fetch(req("/api/create", { g: "G" + i, people: mail30(i) }, ip), env)).status, 200);
+  assert.equal((await worker.fetch(req("/api/create", { g: "G9", people: people(["A", "B", "C"]) }, ip), env)).status, 429);
+  // outra pessoa continua a conseguir criar
+  assert.equal((await worker.fetch(req("/api/create", { g: "Outro", people: people(["A", "B", "C"]) }, { ...O, "CF-Connecting-IP": "8.8.8.8" }), env)).status, 200);
+});
+
+test("sorteio impossível não gasta quota nem limite do IP", async () => {
+  const { env, store } = setup();
+  const r = await worker.fetch(req("/api/create", { g: "G", people: people(["A", "B", "C"]), pairs: [["A", "B"], ["A", "C"]] }, O), env);
+  assert.equal(r.status, 400);
+  assert.equal([...store.keys()].filter((k) => k.startsWith("q:") || k.startsWith("ip2:")).length, 0);
+});
+
+test("segundos emails têm contador próprio e não bloqueiam a criação de sorteios", async () => {
+  const s = setup();
+  const day = new Date().toISOString().slice(0, 10);
+  await s.env.STATS.put("qc:" + day, "55");
+  const code = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Ana", t: "Rui", p: ["Ana", "Rui", "Eva"], e: "a@exemplo.pt" }), s.env);
+  await assert.rejects(confirm({ code }, s.env, req("/", {})), (e) => e.status === 429);
+  const r = await worker.fetch(req("/api/create", { g: "Novo", people: people(["A", "B", "C"]) }, O), s.env);
+  assert.equal(r.status, 200);
+});
+
+test("segundos emails: no máximo 20 por IP por dia", async () => {
+  const s = setup();
+  const ip = { "CF-Connecting-IP": "6.6.6.6" };
+  for (let i = 0; i < 20; i++) {
+    const code = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Ana" + i, t: "Rui", p: ["Ana", "Rui", "Eva"], e: `a${i}@exemplo.pt` }), s.env);
+    await confirm({ code }, s.env, req("/", {}, ip));
+  }
+  const code = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Zé", t: "Rui", p: ["Zé", "Rui", "Eva"], e: "z@exemplo.pt" }), s.env);
+  await assert.rejects(confirm({ code }, s.env, req("/", {}, ip)), (e) => e.status === 429);
+  await confirm({ code }, s.env, req("/", {}, { "CF-Connecting-IP": "5.5.5.5" }));
+});
