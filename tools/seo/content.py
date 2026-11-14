@@ -2378,6 +2378,17 @@ QUICK = {
     ("dados", "Jogo de tabuleiro", "até 20 €", "Para famílias e grupos de amigos.", "juego de mesa familiar"),
 ]),
 }
+# Preço máximo (em euros) das pesquisas da Amazon nas páginas com limite claro.
+# Vira o filtro &rh=p_36:-<cêntimos> no link (o p_36 da amazon.es é em cêntimos).
+AMZ_MAX = {
+    "prendas-amigo-secreto-ate-5-euros": 5,
+    "prendas-amigo-secreto-ate-10-euros": 10,
+    "prendas-amigo-secreto-ate-15-euros": 15,
+    "prendas-amigo-secreto-ate-20-euros": 20,
+}
+for _p in PAGES:
+    if _p["slug"] in AMZ_MAX:
+        _p["amz_max"] = AMZ_MAX[_p["slug"]]
 for _p in PAGES:
     if _p["slug"] in QUICK:
         _p["quick"] = QUICK[_p["slug"]]

@@ -32,18 +32,21 @@ AFF_NOTE = ('<p class="aff-note">Alguns links desta página são de afiliados: s
             'o Sapatinho pode receber uma pequena comissão, sem custo extra para ti. '
             'Como Associado da Amazon, o Sapatinho recebe por compras qualificadas.</p>')
 
-def amz_url(q):
+def amz_url(q, max_eur=None):
+    """Pesquisa da Amazon.es; max_eur (euros) acrescenta o filtro de preço máximo (p_36 em cêntimos)."""
     from urllib.parse import quote_plus
     u = "https://www.amazon.es/s?k=" + quote_plus(q)
+    if max_eur:
+        u += "&rh=" + quote_plus(f"p_36:-{int(round(max_eur * 100))}")
     return u + ("&tag=" + AMAZON_TAG if AMAZON_TAG else "")
 
-def affiliate(body):
-    """[[amz:termo de pesquisa|texto]] -> link Amazon de afiliado."""
+def affiliate(body, max_eur=None):
+    """[[amz:termo de pesquisa|texto]] -> link Amazon de afiliado (com preço máximo, se a página o tiver)."""
     found = [False]
     def rep(m):
         found[0] = True
         q, label = m.group(1), m.group(2) or m.group(1)
-        return f'<a href="{html.escape(amz_url(q))}" rel="sponsored nofollow noopener" target="_blank">{label}</a>'
+        return f'<a href="{html.escape(amz_url(q, max_eur))}" rel="sponsored nofollow noopener" target="_blank">{label}</a>'
     out = re.sub(r"\[\[amz:([^|\]]+)(?:\|([^\]]+))?\]\]", rep, body)
     return out, found[0]
 
@@ -253,7 +256,7 @@ def build_guide(p):
         graph.append(faq_ld(p["faq"]))
     h = head(p["title"], p["description"], url, og_title=p["h1"], og_type="article",
              jsonld={"@context": "https://schema.org", "@graph": graph}, og_image=og)
-    body, has_aff = affiliate(add_quick(p, add_figures(p, p["body"])))
+    body, has_aff = affiliate(add_quick(p, add_figures(p, p["body"])), p.get("amz_max"))
     if has_aff:
         body = AFF_NOTE + "\n" + body
     rel = "".join(f'<a href="/{s}/"><b>{BYSLUG[s]["short"]}</b><span>{BYSLUG[s]["card"]}</span></a>' for s in p["related"])
