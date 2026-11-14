@@ -164,3 +164,24 @@ test("segundos emails: no máximo 20 por IP por dia", async () => {
   await assert.rejects(confirm({ code }, s.env, req("/", {}, ip)), (e) => e.status === 429);
   await confirm({ code }, s.env, req("/", {}, { "CF-Connecting-IP": "5.5.5.5" }));
 });
+
+test("LINK_SECRET: links novos com a chave própria; links antigos (chave do Brevo) continuam a funcionar", async () => {
+  const antigo = setup();
+  const r1 = await create({ g: "Antes", people: people(["A", "B", "C"]) }, antigo.env, req("/", {}));
+  const codeAntigo = r1.links[0].link.split("/r/")[1];
+  // o mesmo worker, agora com LINK_SECRET
+  const s = setup();
+  s.env.LINK_SECRET = "segredo-dos-links-de-teste";
+  await confirm({ code: codeAntigo }, s.env, req("/", {}));
+  assert.equal(s.sent.length, 1, "link antigo continua a enviar o segundo email");
+  assert.equal(s.sent[0].to[0].email, "p0@exemplo.pt");
+  const r2 = await create({ g: "Depois", people: people(["A", "B", "C"]) }, s.env, req("/", {}));
+  const codeNovo = r2.links[1].link.split("/r/")[1];
+  await confirm({ code: codeNovo }, s.env, req("/", {}));
+  assert.equal(s.sent.at(-1).to[0].email, "p1@exemplo.pt");
+  // um link novo não é aceite só com a chave do Brevo (prova que usa a chave própria)
+  await assert.rejects(confirm({ code: codeNovo }, antigo.env, req("/", {})));
+  // com LINK_SECRET errado, o link novo é recusado
+  const outro = setup(); outro.env.LINK_SECRET = "outro";
+  await assert.rejects(confirm({ code: codeNovo }, outro.env, req("/", {})));
+});

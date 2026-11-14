@@ -25,9 +25,9 @@ Agentes em `.claude/agents/`: `seo` (Google e conteúdo do site), `outreach` (ba
 
 - Quem organiza preenche `/criar`. O worker faz o sorteio, assina cada link (`/r/<payload>.<HMAC>`) e envia os convites pelo Brevo.
 - O payload é JSON ofuscado (XOR + base64url, **não é cifra**): grupo, limite, data, nome, quem saiu, lista de nomes. O email vai cifrado com AES-GCM no campo `x`. Links antigos (antes de 29 out 2026) têm o email em claro no campo `e` e têm de continuar a funcionar.
-- Não há base de dados. O KV `STATS` guarda só: contagens anónimas por dia (`d:`), quota diária de emails (`q:`), código HMAC do IP por dia (`ip:`, 24 h) e marca de confirmação por link (`c:`, 12 h) e o estado da equipa para a Oficina 3D (`oficina`, escrito pelo gestor a partir de `gestao/oficina.json`; sem dados pessoais).
-- As chaves de assinatura e de cifra derivam de `BREVO_API_KEY`. Mudar essa chave invalida todos os links já enviados.
-- Brevo grátis: 300 emails/dia. O worker recusa sorteios acima de 260 emails/dia (`DAILY_EMAILS`) e segundos emails acima de 295.
+- Não há base de dados. O KV `STATS` guarda só: contagens anónimas por dia (`d:`), quota diária de emails (`q:`), códigos HMAC do IP por dia (`ip2:` sorteios e convites, `ipc:` segundos emails, 24 h), quota dos segundos emails (`qc:`) e marca de confirmação por link (`c:`, 12 h) e o estado da equipa para a Oficina 3D (`oficina`, escrito pelo gestor a partir de `gestao/oficina.json`; sem dados pessoais).
+- Chaves dos links: desde 14 nov 2026 os links novos são assinados e cifrados com o secret `LINK_SECRET` (chave própria). Os links anteriores usam a chave derivada de `BREVO_API_KEY` e continuam a ser aceites. **Nunca apagar `LINK_SECRET` nem mudar `BREVO_API_KEY` no worker**: invalidava os links já enviados.
+- Brevo grátis: 300 emails/dia. Convites e segundos emails têm contadores separados (`q:` até 240 por dia, `qc:` até 55), mais limites por IP (10 sorteios e 90 convites; 20 segundos emails).
 
 ## Deploy
 
@@ -44,7 +44,7 @@ Antes da primeira vez, o Diogo corre `npx wrangler@4 login` (o Claude nunca faz 
 2. **Só email.** O site envia os resultados por email. Não mencionar WhatsApp como forma de envio.
 3. **Honestidade sobre privacidade.** A página de quem organiza **não mostra** os resultados, mas quem organiza tem os links de todos. Nunca escrever "quem organiza não vê / não consegue ver". Escrever "a página de quem organiza não mostra quem tirou quem". Não inventar números, testemunhos nem avaliações.
 4. **Emails de teste** só para `sapatinhonatal+<algo>@gmail.com`. Nunca para o email pessoal do Diogo nem para pessoas reais.
-5. **Secrets:** nunca escrever, pedir nem guardar chaves, senhas ou tokens. O Diogo mete-os no Cloudflare (`BREVO_API_KEY`, `STATS_TOKEN`).
+5. **Secrets:** nunca escrever, pedir nem guardar chaves, senhas ou tokens. O Diogo mete-os no Cloudflare (`BREVO_API_KEY`, `STATS_TOKEN`, `LINK_SECRET`).
 6. **Segurança da API:** qualquer mudança no worker tem de manter: verificação de Origin; validação de nomes e grupo (`nameOk`, `groupOk`); reserva da quota antes de enviar; marca de 12 h antes de enviar; `Object.create(null)` no sorteio; escapar tudo nos emails. Corre os testes.
 7. **Página do sorteio:** todos os campos do link passam por `Sap.safe()` e `esc()`. Só se aceitam links com assinatura (`código.assinatura`). Mantém a CSP em `site/_headers`.
 
@@ -64,4 +64,3 @@ Antes da primeira vez, o Diogo corre `npx wrangler@4 login` (o Claude nunca faz 
 
 - Brevo: o histórico de emails apaga-se ao fim de 1 mês e as pré-visualizações (conteúdo) não são guardadas. O registo de cliques (links reescritos para `sendibt3.com`) não se pode desligar no plano grátis; pode contribuir para os emails irem para o spam.
 - Os limites guardados no KV não são atómicos. Já existe a regra de limite de pedidos do Cloudflare «Limite envio Sapatinho» (caminho contém `/api/`, 4 pedidos por 10 s por IP, bloqueio de 10 s; é a única permitida no plano grátis), que trava rajadas de um só IP. Rajadas de muitos IPs ao mesmo tempo ainda podem passar a quota; a solução completa seria um Durable Object.
-- Separar a chave dos links de `BREVO_API_KEY` (novo secret `LINK_SECRET`, aceitando a chave antiga para verificar).
