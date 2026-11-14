@@ -2,82 +2,82 @@
   "agentes": {
     "gestor": {
       "estado": "espera",
-      "feitos": 23,
-      "tarefa": "Publicar as /ir/ amanhã de manhã (falta o Chrome)",
-      "ultimo": "Turno da noite: reparos feitos e revistos; Chrome desligado",
-      "atualizado": "2026-11-13T20:05:00Z"
+      "feitos": 4,
+      "tarefa": "Publicar o pacote de 14 nov quando o Chrome do PC voltar",
+      "ultimo": "Juntei 4 ramos revistos no main e deixei o pacote do site pronto",
+      "atualizado": "2026-11-14T08:45:00Z"
     },
     "seo": {
       "estado": "descanso",
-      "feitos": 5,
-      "tarefa": "Rotina de segunda: páginas entre a 8.ª e a 20.ª posição",
+      "feitos": 0,
+      "tarefa": "Rotina de segunda: CTR de /regras e /roleta",
       "ultimo": "Mensagem para pedir os emails no guia da empresa",
-      "atualizado": "2026-11-13T09:15:00Z"
+      "atualizado": "2026-11-14T08:45:00Z"
     },
     "outreach": {
       "estado": "espera",
       "feitos": 0,
-      "tarefa": "Contactos novos (o envio tem sido recusado; o Diogo envia)",
+      "tarefa": "À espera do Chrome do PC para ver a caixa, os painéis e o Meta",
       "ultimo": "1.º backlink publicado: TechBit (4 links)",
-      "atualizado": "2026-11-13T09:15:00Z"
+      "atualizado": "2026-11-14T08:45:00Z"
     },
     "social-media": {
-      "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "Tags da Amazon nas stories de 12 a 20 dez",
+      "estado": "espera",
+      "feitos": 0,
+      "tarefa": "À espera do Chrome do PC para ver a caixa, os painéis e o Meta",
       "ultimo": "Dezembro pronto e agendado até 11 dez",
-      "atualizado": "2026-11-13T09:15:00Z"
+      "atualizado": "2026-11-14T08:45:00Z"
     },
     "analista": {
-      "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Search Console com os dados de 11 a 17 nov",
-      "atualizado": "2026-11-13T09:15:00Z",
+      "estado": "espera",
+      "feitos": 0,
+      "tarefa": "À espera do Chrome do PC para ver a caixa, os painéis e o Meta",
+      "atualizado": "2026-11-14T08:45:00Z",
       "ultimo": "Medição das ideias de 6/9 nov (sem dados de utm)"
     },
     "afiliados": {
-      "estado": "trabalhar",
-      "feitos": 0,
-      "tarefa": "Filtro de preço e Amazon no /r (sábado)",
-      "atualizado": "2026-11-13T09:15:00Z",
-      "ultimo": "Redes com o código novo da Amazon; Awin: 8 pendentes"
+      "estado": "descanso",
+      "feitos": 2,
+      "tarefa": "Testar o filtro de preço na amazon.es quando houver Chrome",
+      "atualizado": "2026-11-14T08:45:00Z",
+      "ultimo": "Filtro de preço nas 4 páginas e Amazon no /r com código próprio"
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 6,
-      "tarefa": "Meta strict-origin no /r e publicar as /ir/",
-      "atualizado": "2026-11-13T20:05:00Z",
-      "ultimo": "Reparos do qa nas /ir/ e privacidade do /r"
+      "feitos": 1,
+      "tarefa": "«Vê um exemplo antes de criar» (até 17 nov)",
+      "atualizado": "2026-11-14T08:45:00Z",
+      "ultimo": "Endereços /ir/ acabados, com os reparos do qa"
     },
     "suporte": {
-      "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Teste de entrega na segunda",
-      "atualizado": "2026-11-13T09:15:00Z",
+      "estado": "espera",
+      "feitos": 0,
+      "tarefa": "À espera do Chrome do PC para ver a caixa, os painéis e o Meta",
+      "atualizado": "2026-11-14T08:45:00Z",
       "ultimo": "Site, API e Brevo OK; sem pedidos de ajuda"
     },
     "inovacao": {
       "estado": "descanso",
-      "feitos": 1,
+      "feitos": 2,
       "tarefa": "Ideias de amanhã",
-      "atualizado": "2026-11-13T09:15:00Z",
-      "ultimo": "2 ideias: Amazon direta no /r e medição sem cookies"
+      "atualizado": "2026-11-14T08:45:00Z",
+      "ultimo": "2 ideias novas e uma frase do início que quebrava a regra de privacidade"
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 5,
-      "tarefa": "Rever o strict-origin e confirmar as /ir/ no site real",
-      "atualizado": "2026-11-13T20:05:00Z",
-      "ultimo": "Reviu os reparos das /ir/: aprovado com reparos"
+      "feitos": 4,
+      "tarefa": "Rever o site real depois de publicar",
+      "atualizado": "2026-11-14T08:45:00Z",
+      "ultimo": "4 ramos revistos (2 reparos na nota de afiliado)"
     }
   },
   "estado": {
     "prioridades": [
-      "Publicar as /ir/ e a privacidade do /r, com teste real da confirmação",
-      "Amazon no /r com sapatinhores-21 (afiliados)",
-      "Agendar 12 dez no Meta"
+      "Publicar o pacote de 14 nov e testar a confirmação por email",
+      "Ver na Cloudflare se os caminhos /r/ ficam guardados",
+      "Agendar 12 dez no Meta e «Vê um exemplo» (produto)"
     ],
-    "preciso": "Ligar o Chrome do PC com a extensão do Claude (desligado desde a tarde de 13 nov: sem publicar nem ver a caixa). Amazon Associados: preencher as informações de pagamento. Mudar as instruções do qa/CLAUDE.md para os 3 códigos da Amazon (quando quiseres).",
+    "preciso": "Ligar o Chrome do PC com a extensão do Claude (desligado desde a tarde de 13 nov: sem publicar nem ver a caixa). Amazon Associados: preencher as informações de pagamento.",
     "diario": [
       {
         "quando": "2026-11-05T20:24:00Z",
@@ -154,6 +154,10 @@
       {
         "quando": "2026-11-13T20:05:00Z",
         "texto": "Noite: reparos das /ir/ feitos e revistos pelo qa; sem Chrome, a publicação fica para amanhã de manhã."
+      },
+      {
+        "quando": "2026-11-14T08:45:00Z",
+        "texto": "Manhã de 14 nov: Chrome desligado. Prontos e revistos: endereços /ir/, privacidade do /r, filtro de preço e Amazon no /r, frase de privacidade do início. Pacote do site à espera de publicação."
       }
     ],
     "recados": [
@@ -190,7 +194,7 @@
         "de": "inovacao",
         "para": "afiliados",
         "texto": "Amazon direta no /r com sapatinhores-21",
-        "estado": "novo"
+        "estado": "entregue"
       },
       {
         "quando": "2026-11-13T09:15:00Z",
@@ -198,6 +202,13 @@
         "para": "social-media",
         "texto": "Trocar a tag da Amazon nas stories de 12–20 dez",
         "estado": "novo"
+      },
+      {
+        "quando": "2026-11-14",
+        "de": "inovacao",
+        "para": "gestor",
+        "texto": "Frase do início quebrava a regra de privacidade",
+        "estado": "entregue"
       }
     ],
     "resultados": {
@@ -207,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-13T20:05:00Z"
+    "atualizado": "2026-11-14T08:45:00Z"
   }
 }
