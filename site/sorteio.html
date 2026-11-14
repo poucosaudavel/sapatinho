@@ -50,6 +50,11 @@
 .gifts{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;gap:10px}
 .gifts h2{font-size:1.35rem;line-height:1.2;text-align:center;margin:0 0 4px}
 .gifts .btn{text-decoration:none}
+.amz{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.amz p{margin:0}
+.amz .row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.amz .row a{font-size:.88rem;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none}
+.amz .aff{font-size:.75rem}
 .again{border-top:1px solid var(--line);padding-top:16px}
 .remind{border-top:1px solid var(--line);padding-top:20px;display:flex;flex-direction:column;gap:10px}
 .remind h2{font-size:1.2rem;line-height:1.2;text-align:center;margin:0}
@@ -137,7 +142,42 @@ function giftBlock(l){
     a.href = p[0];
     box.appendChild(a);
   });
+  var amz = amazonBlock(l);
+  if (amz) box.appendChild(amz);
   return box;
+}
+/* Pesquisas da Amazon dentro do limite do grupo (mesmos escalões dos botões: 5, 10, 15 e 20 €).
+   Termos fixos por escalão: o endereço nunca leva nomes, grupo nem nada do link do convite, só o escalão (número).
+   Código de afiliado próprio do /r (sapatinhores-21) para medir à parte. O referrer fica no strict-origin da página
+   (só o domínio). Acima de 20 € ou sem limite não há bloco (sem filtro de preço honesto). */
+var AMZ_TAG = "sapatinhores-21";
+var AMZ_TERMS = {
+  5:  [["bombones", "Chocolates"], ["calcetines navidad", "Meias de Natal"], ["taza divertida", "Canecas"]],
+  10: [["juego de cartas", "Jogos de cartas"], ["vela aromatica", "Velas perfumadas"], ["llavero original", "Porta-chaves"]],
+  15: [["manta polar", "Mantas"], ["taza termica", "Canecas térmicas"], ["puzzle 1000 piezas", "Puzzles"]],
+  20: [["altavoz bluetooth", "Colunas bluetooth"], ["juego de mesa", "Jogos de tabuleiro"], ["botella termica", "Garrafas térmicas"]]
+};
+function amazonTier(l){
+  var n = validLimit(l);
+  if (!n || n > 20) return 0;
+  return n < 10 ? 5 : n < 15 ? 10 : n < 20 ? 15 : 20;
+}
+function amazonBlock(l){
+  var c = amazonTier(l);
+  if (!c || !AMZ_TERMS[c]) return null;
+  var wrap = el("div", "amz"), row = el("div", "row");
+  wrap.appendChild(el("p", "note", "Ou vê já na Amazon, até " + String(c) + " €:"));
+  AMZ_TERMS[c].forEach(function(t){
+    var a = el("a", "", t[1]);
+    a.href = "https://www.amazon.es/s?k=" + encodeURIComponent(t[0]) + "&rh=" + encodeURIComponent("p_36:-" + String(c * 100)) + "&tag=" + AMZ_TAG;
+    a.rel = "sponsored nofollow noopener";
+    a.target = "_blank";
+    a.setAttribute("aria-label", t[1] + " até " + String(c) + " € na Amazon (abre noutra janela)");
+    row.appendChild(a);
+  });
+  wrap.appendChild(row);
+  wrap.appendChild(el("p", "note aff", "Links de afiliado: se comprares, o Sapatinho recebe uma pequena comissão, sem custo para ti. Preços aproximados: confirma antes de comprar."));
+  return wrap;
 }
 function againLine(){
   var p = el("p", "note again", "Queres fazer um amigo secreto com outro grupo? É grátis e demora 2 minutos. ");
