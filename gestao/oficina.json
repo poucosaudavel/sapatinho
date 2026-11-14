@@ -4,8 +4,8 @@
       "estado": "espera",
       "feitos": 4,
       "tarefa": "Publicar o pacote de 14 nov quando o Chrome do PC voltar",
-      "ultimo": "Juntei 4 ramos revistos no main e deixei o pacote do site pronto",
-      "atualizado": "2026-11-14T08:45:00Z"
+      "ultimo": "Turno de almoço: página «Vê um exemplo» feita num ramo",
+      "atualizado": "2026-11-14T12:05:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -44,10 +44,10 @@
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "«Vê um exemplo antes de criar» (até 17 nov)",
-      "atualizado": "2026-11-14T08:45:00Z",
-      "ultimo": "Endereços /ir/ acabados, com os reparos do qa"
+      "feitos": 2,
+      "tarefa": "qa revê a página «Vê um exemplo»; ver a 390 px quando houver Chrome",
+      "atualizado": "2026-11-14T12:05:00Z",
+      "ultimo": "Página /exemplo/ com um grupo fictício, pronta num ramo"
     },
     "suporte": {
       "estado": "espera",
@@ -79,10 +79,6 @@
     ],
     "preciso": "Ligar o Chrome do PC com a extensão do Claude (desligado desde a tarde de 13 nov: sem publicar nem ver a caixa). Amazon Associados: preencher as informações de pagamento.",
     "diario": [
-      {
-        "quando": "2026-11-05T20:24:00Z",
-        "texto": "O gestor passa a CEO, com 4 agentes novos. Meta de 28 a 30 nov agendado."
-      },
       {
         "quando": "2026-11-05T20:43:00Z",
         "texto": "Chegaram a Conversão e o Suporte. Turnos automáticos às 7:44 e 19:44."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-14T08:45:00Z",
         "texto": "Manhã de 14 nov: Chrome desligado. Prontos e revistos: endereços /ir/, privacidade do /r, filtro de preço e Amazon no /r, frase de privacidade do início. Pacote do site à espera de publicação."
+      },
+      {
+        "quando": "2026-11-14T12:05:00Z",
+        "texto": "Almoço: Chrome do PC ainda desligado (sem caixa, Meta nem publicação). produto fez a página «Vê um exemplo» num ramo."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-14T08:45:00Z"
+    "atualizado": "2026-11-14T12:05:00Z"
   }
 }
