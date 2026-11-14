@@ -5,9 +5,11 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 python3 tools/seo/build.py
-rm -rf dist && cp -r site dist
+# A pasta ligada do PC não deixa apagar ficheiros: o dist vai para uma pasta temporária fora do projeto.
+DIST="$(mktemp -d)/dist"
+cp -r site "$DIST"
 if [ -f private/aplicar.py ]; then
-  python3 private/aplicar.py dist
+  python3 private/aplicar.py "$DIST"
 elif [ "$(date +%Y%m%d)" -lt 20261226 ]; then
   echo "ERRO: falta a pasta private/. Sem ela, o deploy apagava páginas privadas que estão online." >&2
   echo "Põe a pasta private/ na raiz do projeto e volta a correr." >&2
@@ -22,4 +24,4 @@ if [ -f private/cloudflare.env ]; then
     case "$k" in CLOUDFLARE_API_TOKEN|CLOUDFLARE_ACCOUNT_ID) export "$k=$v";; esac
   done < private/cloudflare.env
 fi
-npx wrangler@4 pages deploy dist --project-name sapatinho-natal --branch main --commit-dirty=true
+npx wrangler@4 pages deploy "$DIST" --project-name sapatinho-natal --branch main --commit-dirty=true
