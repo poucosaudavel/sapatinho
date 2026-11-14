@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0f2a22">
 <title>O teu sorteio · Sapatinho</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="referrer" content="no-referrer">
+<meta name="referrer" content="strict-origin">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sapatinho">
 <meta property="og:locale" content="pt_PT">
@@ -151,7 +151,7 @@ function againLine(){
 /* «Lembra-me de comprar a prenda»: evento de calendário gerado aqui no navegador.
    O texto do evento é fixo: nunca leva o nome de quem saiu, o teu nome, o grupo nem o link do convite
    (o link tem os nomes, só ofuscados). Só entram o limite (número) e a data da troca (já validados por Sap.safe). */
-var CAL_UTM = "https://sapatinho-natal.pt/ir/calendario/";
+var CAL_IR = "https://sapatinho-natal.pt/ir/calendario/";
 var CAL_TITLE = "Comprar a prenda do amigo secreto";
 function ymd(dt){ return dt.getUTCFullYear() + ("0"+(dt.getUTCMonth()+1)).slice(-2) + ("0"+dt.getUTCDate()).slice(-2); }
 function todayUTC(){ var n = new Date(); return new Date(Date.UTC(n.getFullYear(), n.getMonth(), n.getDate())); }
@@ -169,7 +169,7 @@ function calDetails(o){
   if (n) parts.push("Limite: " + String(n) + " €.");
   if (o.d) parts.push("A troca é a " + Sap.fmtDate(o.d) + ".");
   parts.push("Para veres de novo quem te saiu, abre o link do teu convite (está no teu email).");
-  parts.push("Ideias de prendas: " + CAL_UTM);
+  parts.push("Ideias de prendas: " + CAL_IR);
   return parts.join("\n");
 }
 function icsText(s){ return String(s).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n"); }
@@ -179,7 +179,7 @@ function icsFile(day, details){
   var uid = Date.now().toString(36) + Math.random().toString(36).slice(2) + "@sapatinho-natal.pt";
   return ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Sapatinho//Lembrete//PT","CALSCALE:GREGORIAN","METHOD:PUBLISH",
     "BEGIN:VEVENT","UID:"+uid,"DTSTAMP:"+stamp,"DTSTART;VALUE=DATE:"+ymd(day),"DTEND;VALUE=DATE:"+ymd(end),
-    "SUMMARY:"+icsText(CAL_TITLE),"DESCRIPTION:"+icsText(details),"URL:"+CAL_UTM,"TRANSP:TRANSPARENT",
+    "SUMMARY:"+icsText(CAL_TITLE),"DESCRIPTION:"+icsText(details),"URL:"+CAL_IR,"TRANSP:TRANSPARENT",
     "BEGIN:VALARM","ACTION:DISPLAY","DESCRIPTION:"+icsText(CAL_TITLE),"TRIGGER:PT10H","END:VALARM",
     "END:VEVENT","END:VCALENDAR"].map(icsFold).join("\r\n") + "\r\n";
 }
@@ -241,8 +241,8 @@ function showDraw(o, key, code){
 
 function sendConfirm(code){
   var note = function(t){ var n = document.getElementById("mailnote"); if (n) n.textContent = t; };
-  // A página tem referrer «no-referrer»: com essa política o navegador manda «Origin: null» nos POST e o worker recusava (403).
-  // «strict-origin» só neste pedido: o Origin vai certo e o Referer leva só o domínio, nunca o endereço com o payload.
+  // A página já tem referrer «strict-origin» (o Origin vai certo nos POST e o Referer leva só o domínio, nunca o endereço com o payload).
+  // Repetido aqui por segurança, caso a meta mude.
   fetch("/api/confirm", { method:"POST", referrerPolicy:"strict-origin", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ code: code }) })
     .then(function(r){ note(r.ok ? "Enviámos-te um email com o nome, para confirmares quando quiseres." : "Não foi possível enviar o email de confirmação, mas podes voltar a este link sempre que quiseres."); })
     .catch(function(){ note("Não foi possível enviar o email de confirmação, mas podes voltar a este link sempre que quiseres."); });

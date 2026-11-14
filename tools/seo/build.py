@@ -472,7 +472,6 @@ def write_ir():
 <meta name="robots" content="noindex">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="refresh" content="0;url={dest}">
-<link rel="canonical" href="{BASE}{dest}">
 <title>Sapatinho</title>
 <link rel="stylesheet" href="/styles.css">
 </head>
