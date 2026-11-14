@@ -402,6 +402,11 @@ def patch_home():
         cards = home_cards()
         h = re.sub(r'(<nav class="related" style="max-width:none;margin:0" aria-label="Guias">).*?(</nav>)', lambda m: m.group(1) + cards + m.group(2), h, count=1, flags=re.S)
         h = h.replace("<h2>Tudo para organizar o amigo secreto</h2>", "<h2>Guias para organizar o amigo secreto</h2>")
+    # «Ver um exemplo» (14 nov, produto): link discreto por baixo dos botões do topo, sem competir com «Criar um sorteio».
+    if 'href="/exemplo/"' not in h:
+        h = re.sub(r'(<div class="ctas">.*?</div>)',
+                   lambda m: m.group(1) + '\n        <p class="ex-link" style="margin-top:14px;font-size:.9rem;color:var(--soft)">Primeiro queres ver como fica? <a href="/exemplo/" style="color:var(--paper)">Ver um exemplo</a></p>',
+                   h, count=1, flags=re.S)
     if ".faq details p a{" not in h:
         h = h.replace(".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}",
                       ".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}\n.faq details p a{color:var(--paper)}")
@@ -453,6 +458,7 @@ IR = {
     "calendario": ("/ideias-de-prendas-amigo-secreto/", "ideias de prendas"),  # lembrete do calendário no /r
     "guia": ("/criar", "criar um sorteio"),                             # botões «Criar sorteio» dentro dos guias
     "emails": ("/criar", "criar um sorteio"),                           # «cria o sorteio» depois da mensagem para pedir os emails (guia da empresa)
+    "exemplo": ("/criar", "criar um sorteio"),                          # «Criar o meu sorteio» na página /exemplo/
     # Botões de prendas no /r e no /sorteio: um endereço por página de destino (a faixa de preço já está no destino).
     # O total soma-se pelo prefixo /ir/prendas/ na Cloudflare Web Analytics.
     "prendas/ate-5": ("/prendas-amigo-secreto-ate-5-euros/", "prendas até 5 €"),
@@ -484,6 +490,126 @@ def write_ir():
 </html>
 """)
 
+# ---------------------------------------------------------------- /exemplo/
+# «Vê um exemplo antes de criar» (ideia do CIO aprovada a 14 nov; produto). Página fixa, só HTML/CSS, sem API
+# e com um grupo inventado. Fica com noindex e fora do sitemap: serve quem já está no site e hesita antes do
+# /criar; não deve competir no Google com /como-funciona-o-sapatinho-privacidade/ (do seo).
+# O botão passa por /ir/exemplo/ para se contar quantos seguem para o /criar.
+EX_GROUP = "Jantar de Natal da equipa"
+EX_NAMES = ["Marta", "Rui", "Inês", "Tiago", "Carla", "Bruno"]
+EX_CSS = """<style>
+.ex-steps{display:grid;gap:22px;margin:0 0 28px}
+.ex-step{display:grid;gap:12px}
+.ex-step h2{font-family:var(--display);font-weight:400;font-size:clamp(1.35rem,4vw,1.7rem);color:var(--paper);margin:0}
+.ex-step h2 span{display:inline-block;min-width:1.7em;height:1.7em;line-height:1.7em;text-align:center;border-radius:50%;background:var(--ember);color:#fff;font-family:inherit;font-size:.8em;margin-right:8px}
+.ex-step > p{color:var(--soft);margin:0;max-width:60ch}
+.ex-mail{background:#fff;color:var(--ink);border-radius:14px;overflow:hidden;max-width:560px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.ex-mail-h{background:var(--paper-2);padding:10px 16px;font-size:.85rem;color:var(--muted);border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.ex-mail-h b{color:var(--ink);font-weight:600}
+.ex-mail-b{padding:20px 18px 22px}
+.ex-mail-b .g{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ember);font-weight:600}
+.ex-mail-b h3{font-family:Georgia,serif;font-weight:400;font-size:1.5rem;line-height:1.15;margin:6px 0 10px}
+.ex-mail-b p{margin:0 0 12px;color:var(--ink);font-size:.98rem}
+.ex-mail-b .small{font-size:.85rem;color:var(--muted)}
+.ex-mail-b .fake-btn{display:inline-block;background:var(--ember);color:#fff;border-radius:999px;padding:11px 20px;font-weight:600;margin:4px 0 14px}
+.ex-mail-b .who{font-family:Georgia,serif;font-size:2.2rem;line-height:1.1;margin:2px 0 12px;color:var(--ember)}
+.ex-mail-b ul{margin:6px 0 10px;padding-left:20px}
+.ex-mail-b li{margin:4px 0}
+.ex-ideas{border-top:1px solid var(--line);padding-top:12px;margin-top:6px}
+.ex-ideas b{font-size:.9rem}
+.ex-page{background:var(--paper);color:var(--ink);border-radius:18px;padding:22px 18px;max-width:560px}
+.ex-page .who{font-family:var(--display);font-size:2.4rem;color:var(--ember);margin:4px 0 14px}
+.ex-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 14px}
+.ex-facts div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 8px;text-align:center}
+.ex-facts b{display:block;font-size:1.1rem}
+.ex-facts small{color:var(--muted);font-size:.78rem}
+.ex-chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0}
+.ex-chips span{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:.88rem}
+.ex-names{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.ex-names span{background:var(--night-2);color:var(--paper);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:6px 12px;font-size:.92rem}
+.ex-note{font-size:.85rem;color:var(--soft);margin:0}
+.ex-cta{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;margin:8px 0 32px}
+@media (max-width:760px){
+  .ex-mail-b{padding:16px 14px 18px}
+  .ex-mail-b h3{font-size:1.3rem}
+  .ex-page{padding:18px 14px}
+  .ex-page .who,.ex-mail-b .who{font-size:2rem}
+  .ex-cta .btn{width:100%;text-align:center}
+}
+</style>
+"""
+
+def build_exemplo():
+    url = BASE + "/exemplo/"
+    h = head("Exemplo de amigo secreto: o email e o resultado | Sapatinho",
+             "Vê como fica um amigo secreto no Sapatinho antes de criares o teu: o convite por email, a roleta e o resultado, com um grupo inventado.",
+             url, robots="noindex, follow", extra=EX_CSS)
+    names = "".join(f"<span>{n}</span>" for n in EX_NAMES)
+    ideas = ["Um livro recente de um autor de que a pessoa goste", "Uma garrafa térmica", "Um jogo de tabuleiro pequeno ou de viagem"]
+    ideas_li = "".join(f"<li>{i}</li>" for i in ideas)
+    main = f"""    <nav class="crumbs" aria-label="Estás aqui"><a href="/">Início</a><span aria-hidden="true">›</span><span>Exemplo</span></nav>
+    <div class="article-head"><div class="eyebrow">Exemplo com um grupo inventado</div><h1>Vê como fica antes de criares o teu</h1>
+      <p class="dek">O grupo «{EX_GROUP}» tem 6 pessoas, limite de 15 € e troca de prendas a 18 de dezembro. É isto que cada pessoa recebe.</p></div>
+    <div class="ex-cta"><a class="btn" href="/ir/exemplo/">Criar o meu sorteio</a><span class="ex-note">Grátis, sem registo, 3 a 30 pessoas.</span></div>
+
+    <div class="ex-steps">
+      <section class="ex-step">
+        <h2><span>1</span>Quem organiza escreve os nomes</h2>
+        <p>Nomes e emails do grupo, o limite da prenda e a data da troca. O Sapatinho faz o sorteio e ninguém se tira a si próprio.</p>
+        <div class="ex-names" aria-label="Participantes do exemplo">{names}</div>
+      </section>
+
+      <section class="ex-step">
+        <h2><span>2</span>Cada pessoa recebe um convite por email</h2>
+        <p>O convite tem um link só dessa pessoa. Este é o da Marta:</p>
+        <div class="ex-mail" aria-label="Exemplo do email de convite">
+          <div class="ex-mail-h"><b>Sapatinho</b> · Marta, estás no amigo secreto «{EX_GROUP}»</div>
+          <div class="ex-mail-b">
+            <div class="g">{EX_GROUP}</div>
+            <h3>Olá, Marta! Está na hora de sortear.</h3>
+            <p>Estás no amigo secreto <b>{EX_GROUP}</b>, com 6 participantes. Carrega no botão para descobrires quem te saiu.</p>
+            <p>Limite da prenda: <b>15 €</b><br>Troca de prendas: <b>18 de dezembro</b></p>
+            <span class="fake-btn" aria-hidden="true">Sortear o meu amigo secreto</span>
+            <p class="small">Este link é só teu. Não o reencaminhes a ninguém. Depois de sortear, enviamos-te outro email com o nome, para confirmares sempre que quiseres.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ex-step">
+        <h2><span>3</span>A pessoa roda a roleta e vê quem lhe saiu</h2>
+        <p>No link pessoal, a Marta roda a roleta no telemóvel. A página mostra o nome, o limite, a data e ideias de prendas dentro do limite.</p>
+        <div class="ex-page" aria-label="Exemplo da página do resultado">
+          <div class="eyebrow" style="color:var(--ember)">{EX_GROUP}</div>
+          <p style="margin:6px 0 0">Marta, o teu amigo secreto é</p>
+          <div class="who">Tiago</div>
+          <div class="ex-facts"><div><b>6</b><small>Participantes</small></div><div><b>15 €</b><small>Limite</small></div><div><b>18 dez</b><small>Troca</small></div></div>
+          <p style="margin:0"><b>Já sabes a quem vais dar. Precisas de ideias até 15 €?</b></p>
+          <div class="ex-chips" aria-hidden="true"><span>Prendas até 15 €</span><span>Prendas de última hora</span></div>
+        </div>
+      </section>
+
+      <section class="ex-step">
+        <h2><span>4</span>E recebe um segundo email com o nome</h2>
+        <p>Para confirmar sempre que quiser, com três ideias de prendas dentro do limite.</p>
+        <div class="ex-mail" aria-label="Exemplo do email com o resultado">
+          <div class="ex-mail-h"><b>Sapatinho</b> · Marta, já sabes quem te saiu · {EX_GROUP}</div>
+          <div class="ex-mail-b">
+            <div class="g">{EX_GROUP}</div>
+            <p>Marta, o teu amigo secreto é</p>
+            <div class="who">Tiago</div>
+            <p>Limite da prenda: <b>15 €</b><br>Troca de prendas: <b>18 de dezembro</b></p>
+            <p class="small">Guarda segredo! Guarda este email para confirmares quando precisares.</p>
+            <div class="ex-ideas"><b>Três ideias até 15 €</b><ul>{ideas_li}</ul></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="cta-box"><p><b>A página de quem organiza não mostra quem tirou quem.</b>Cada pessoa só vê o seu resultado no seu link. Tudo por email, grátis e sem registo.</p><a class="btn" href="/ir/exemplo/">Criar o meu sorteio</a></div>
+    <p class="ex-note" style="margin-top:14px">Os nomes, o grupo e as datas desta página são inventados.</p>"""
+    os.makedirs(f"{SITE}/exemplo", exist_ok=True)
+    open(f"{SITE}/exemplo/index.html", "w").write(page_shell(h, main))
+
 def write_sitemap():
     urls = [("/", "1.0", "weekly", MODIFIED), ("/criar", "0.9", "monthly", PUBLISHED)]
     urls += [(f"/{p['slug']}/", "0.8", "monthly", p.get("modified", p.get("date", PUBLISHED))) for p in PAGES]
@@ -511,6 +637,7 @@ if __name__ == "__main__":
     for path in ["sorteio.html", "r.html", "org.html"]:
         patch_private(path, None)
     write_404()
+    build_exemplo()
     write_ir()
     write_sitemap()
     print("ok")
