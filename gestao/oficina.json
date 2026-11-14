@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
-      "feitos": 7,
-      "tarefa": "Turno da tarde: qa revê «Vê um exemplo»; teste completo da confirmação por email",
-      "ultimo": "Site de 14 nov publicado e verificado; Meta 12 dez agendado",
-      "atualizado": "2026-11-14T12:50:00Z"
+      "estado": "descanso",
+      "feitos": 9,
+      "tarefa": "Turno da manhã de domingo: caixa, Meta e relatório ao Diogo",
+      "ultimo": "«Ver um exemplo» junto e publicado (sem browser, pela chave do Cloudflare)",
+      "atualizado": "2026-11-14T20:05:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -43,17 +43,17 @@
       "ultimo": "Filtro de preço nas 4 páginas e Amazon no /r com código próprio"
     },
     "produto": {
-      "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "qa revê a página «Vê um exemplo»; ver a 390 px quando houver Chrome",
-      "atualizado": "2026-11-14T12:05:00Z",
-      "ultimo": "Página /exemplo/ com um grupo fictício, pronta num ramo"
+      "estado": "descanso",
+      "feitos": 3,
+      "tarefa": "A partir de 15 nov: contar as visitas a /ir/exemplo/",
+      "atualizado": "2026-11-14T20:05:00Z",
+      "ultimo": "Página /exemplo/ publicada"
     },
     "suporte": {
       "estado": "espera",
       "feitos": 0,
-      "tarefa": "À espera do Chrome do PC para ver a caixa, os painéis e o Meta",
-      "atualizado": "2026-11-14T08:45:00Z",
+      "tarefa": "À espera do Chrome do PC para a caixa e o Meta",
+      "atualizado": "2026-11-14T20:05:00Z",
       "ultimo": "Site, API e Brevo OK; sem pedidos de ajuda"
     },
     "inovacao": {
@@ -65,24 +65,20 @@
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 4,
-      "tarefa": "Rever o site real depois de publicar",
-      "atualizado": "2026-11-14T08:45:00Z",
-      "ultimo": "4 ramos revistos (2 reparos na nota de afiliado)"
+      "feitos": 5,
+      "tarefa": "Confirmar no site real /exemplo/ e os links /s/ quando houver browser",
+      "atualizado": "2026-11-14T20:05:00Z",
+      "ultimo": "«Ver um exemplo» aprovado (1 reparo no comentário do código)"
     }
   },
   "estado": {
     "prioridades": [
-      "Publicar o pacote de 14 nov e testar a confirmação por email",
-      "Ver na Cloudflare se os caminhos /r/ ficam guardados",
-      "Agendar 12 dez no Meta e «Vê um exemplo» (produto)"
+      "Confirmar no site real /exemplo/ e os links da partida",
+      "Caixa do sapatinhonatal e Meta (agendar 13 dez)",
+      "Turno da manhã: analista, inovacao e relatório ao Diogo"
     ],
     "preciso": "Nada por agora.",
     "diario": [
-      {
-        "quando": "2026-11-05T21:10:00Z",
-        "texto": "A equipa passa a deixar recados entre si e o CEO mede 5 resultados por semana."
-      },
       {
         "quando": "2026-11-05T21:40:00Z",
         "texto": "Chegou o CIO (Inovação): ideias para crescer, à sexta."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-14T12:50:00Z",
         "texto": "Chrome de volta: site de 14 nov publicado e verificado, sem caminhos /r/ na Web Analytics, Meta 12 dez agendado."
+      },
+      {
+        "quando": "2026-11-14T20:05:00Z",
+        "texto": "Noite: «Ver um exemplo» revisto pelo qa, junto e publicado (deploy direto, sem browser). Chrome desligado: sem caixa nem Meta."
       }
     ],
     "recados": [
@@ -201,10 +201,10 @@
         "de": "gestor",
         "para": "social-media",
         "texto": "Trocar a tag da Amazon nas stories de 12–20 dez",
-        "estado": "novo"
+        "estado": "entregue"
       },
       {
-        "quando": "2026-11-14",
+        "quando": "2026-11-14T08:45:00Z",
         "de": "inovacao",
         "para": "gestor",
         "texto": "Frase do início quebrava a regra de privacidade",
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-14T12:50:00Z"
+    "atualizado": "2026-11-14T20:05:00Z"
   }
 }
