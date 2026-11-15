@@ -5,7 +5,7 @@
       "feitos": 1,
       "tarefa": "Confirmar o site real e agendar 13–14 dez no Meta quando o Chrome voltar",
       "ultimo": "Site de 15 nov publicado (/criar a 360 px e «Tens outro grupo?»)",
-      "atualizado": "2026-11-15T08:05:00Z"
+      "atualizado": "2026-11-15T15:55:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -79,10 +79,6 @@
     ],
     "preciso": "Ligar o Chrome do PC com a extensão do Claude (desligado desde 14 nov à tarde): sem ele não há caixa, Meta nem verificação do site.",
     "diario": [
-      {
-        "quando": "2026-11-06T15:30:00Z",
-        "texto": "Tarde: alarme do domínio enviado ao Diogo; ideias de prenda no resultado confirmadas no site."
-      },
       {
         "quando": "2026-11-06T16:00:00Z",
         "texto": "Turno extra: incidente do domínio registado; emails voltam a chegar; PRs #25 a #27 revistos e juntos."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-15T11:55:00Z",
         "texto": "Almoço: Chrome ainda desligado e sem acesso ao site; só verificação. Recado da regra 3 confirmado resolvido."
+      },
+      {
+        "quando": "2026-11-15T15:55:00Z",
+        "texto": "Tarde: Chrome ainda desligado e sem acesso ao site; nada por juntar. Só verificação."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-15T11:55:00Z"
+    "atualizado": "2026-11-15T15:55:00Z"
   }
 }
