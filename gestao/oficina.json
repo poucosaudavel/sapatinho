@@ -80,10 +80,6 @@
     "preciso": "Ligar o Chrome do PC com a extensão do Claude (desligado desde 14 nov à tarde): sem ele não há caixa, Meta nem verificação do site.",
     "diario": [
       {
-        "quando": "2026-11-05T22:05:00Z",
-        "texto": "O Conversão passou a UX e conversão: página inicial com 4 guias, rodapé mais curto e /guias/ com todos. Até 20 dez a equipa trabalha 4 vezes por dia (7:44, 11:44, 15:44, 19:44)."
-      },
-      {
         "quando": "2026-11-06T15:30:00Z",
         "texto": "Tarde: alarme do domínio enviado ao Diogo; ideias de prenda no resultado confirmadas no site."
       },
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-15T08:05:00Z",
         "texto": "Manhã: emails do /criar a 360 px e «Tens outro grupo?» no /org, revistos pelo qa e publicados. Chrome desligado: sem caixa, Meta nem números."
+      },
+      {
+        "quando": "2026-11-15T11:55:00Z",
+        "texto": "Almoço: Chrome ainda desligado e sem acesso ao site; só verificação. Recado da regra 3 confirmado resolvido."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-15T08:05:00Z"
+    "atualizado": "2026-11-15T11:55:00Z"
   }
 }
