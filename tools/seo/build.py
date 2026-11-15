@@ -459,6 +459,7 @@ IR = {
     "guia": ("/criar", "criar um sorteio"),                             # botões «Criar sorteio» dentro dos guias
     "emails": ("/criar", "criar um sorteio"),                           # «cria o sorteio» depois da mensagem para pedir os emails (guia da empresa)
     "exemplo": ("/criar", "criar um sorteio"),                          # «Criar o meu sorteio» na página /exemplo/
+    "org": ("/criar", "criar um sorteio"),                              # «Organizar o sorteio de outro grupo» no /org (15 nov)
     # Botões de prendas no /r e no /sorteio: um endereço por página de destino (a faixa de preço já está no destino).
     # O total soma-se pelo prefixo /ir/prendas/ na Cloudflare Web Analytics.
     "prendas/ate-5": ("/prendas-amigo-secreto-ate-5-euros/", "prendas até 5 €"),
