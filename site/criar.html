@@ -87,6 +87,12 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
   .res{grid-template-columns:1fr 1fr}.res>div{grid-column:1/-1}
   .panel{padding:26px 18px 22px}
 }
+@media (max-width:400px){
+  .sent div{flex-wrap:wrap;align-items:center;row-gap:2px}
+  .sent div b{flex:1 1 0;min-width:0;overflow-wrap:anywhere}
+  .sent div span.ok{order:2}
+  .sent div span:not(.ok){order:3;flex:1 0 100%;white-space:normal;overflow-wrap:anywhere}
+}
 </style>
 </head>
 <body>
