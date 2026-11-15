@@ -1,88 +1,84 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "descanso",
-      "feitos": 9,
-      "tarefa": "Turno da manhã de domingo: caixa, Meta e relatório ao Diogo",
-      "ultimo": "«Ver um exemplo» junto e publicado (sem browser, pela chave do Cloudflare)",
-      "atualizado": "2026-11-14T20:05:00Z"
+      "estado": "espera",
+      "feitos": 1,
+      "tarefa": "Confirmar o site real e agendar 13–14 dez no Meta quando o Chrome voltar",
+      "ultimo": "Site de 15 nov publicado (/criar a 360 px e «Tens outro grupo?»)",
+      "atualizado": "2026-11-15T08:05:00Z"
     },
     "seo": {
       "estado": "descanso",
       "feitos": 0,
       "tarefa": "Rotina de segunda: CTR de /regras e /roleta",
       "ultimo": "Mensagem para pedir os emails no guia da empresa",
-      "atualizado": "2026-11-14T08:45:00Z"
+      "atualizado": "2026-11-15T08:05:00Z"
     },
     "outreach": {
       "estado": "descanso",
       "feitos": 0,
       "tarefa": "Chrome de volta: rotina normal no próximo turno",
       "ultimo": "1.º backlink publicado: TechBit (4 links)",
-      "atualizado": "2026-11-14T12:50:00Z"
+      "atualizado": "2026-11-15T08:05:00Z"
     },
     "social-media": {
-      "estado": "descanso",
+      "estado": "espera",
       "feitos": 0,
-      "tarefa": "Chrome de volta: rotina normal no próximo turno",
+      "tarefa": "13 e 14 dez por agendar no Meta (Chrome desligado)",
       "ultimo": "12 dez agendado (2 publicações e 4 stories)",
-      "atualizado": "2026-11-14T12:50:00Z"
+      "atualizado": "2026-11-15T08:05:00Z"
     },
     "analista": {
-      "estado": "descanso",
+      "estado": "espera",
       "feitos": 0,
-      "tarefa": "Chrome de volta: rotina normal no próximo turno",
-      "atualizado": "2026-11-14T12:50:00Z",
+      "tarefa": "KPIs de segunda (precisa do Chrome ligado)",
+      "atualizado": "2026-11-15T08:05:00Z",
       "ultimo": "Medição das ideias de 6/9 nov (sem dados de utm)"
     },
     "afiliados": {
       "estado": "descanso",
-      "feitos": 2,
+      "feitos": 0,
       "tarefa": "Testar o filtro de preço na amazon.es quando houver Chrome",
-      "atualizado": "2026-11-14T08:45:00Z",
+      "atualizado": "2026-11-15T08:05:00Z",
       "ultimo": "Filtro de preço nas 4 páginas e Amazon no /r com código próprio"
     },
     "produto": {
       "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "A partir de 15 nov: contar as visitas a /ir/exemplo/",
-      "atualizado": "2026-11-14T20:05:00Z",
-      "ultimo": "Página /exemplo/ publicada"
+      "feitos": 2,
+      "tarefa": "Medir /ir/org/ e /ir/exemplo/ de 16 a 18 nov",
+      "atualizado": "2026-11-15T08:05:00Z",
+      "ultimo": "«Tens outro grupo?» no /org e emails do /criar a 360 px"
     },
     "suporte": {
       "estado": "espera",
       "feitos": 0,
-      "tarefa": "À espera do Chrome do PC para a caixa e o Meta",
-      "atualizado": "2026-11-14T20:05:00Z",
+      "tarefa": "Ver a caixa ajuda@ e o site real quando o Chrome voltar",
+      "atualizado": "2026-11-15T08:05:00Z",
       "ultimo": "Site, API e Brevo OK; sem pedidos de ajuda"
     },
     "inovacao": {
       "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Ideias de amanhã",
-      "atualizado": "2026-11-14T08:45:00Z",
-      "ultimo": "2 ideias novas e uma frase do início que quebrava a regra de privacidade"
+      "feitos": 1,
+      "tarefa": "Fechar resultados das ideias de 13 e 14 nov",
+      "atualizado": "2026-11-15T08:05:00Z",
+      "ultimo": "Ideia «Tens outro grupo?» (aprovada e publicada no mesmo dia)"
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 5,
-      "tarefa": "Confirmar no site real /exemplo/ e os links /s/ quando houver browser",
-      "atualizado": "2026-11-14T20:05:00Z",
-      "ultimo": "«Ver um exemplo» aprovado (1 reparo no comentário do código)"
+      "feitos": 3,
+      "tarefa": "Confirmar no site real as páginas novas quando houver browser",
+      "atualizado": "2026-11-15T08:05:00Z",
+      "ultimo": "Aprovou 2 ramos de 15 nov (1 recusa por contraste, corrigida)"
     }
   },
   "estado": {
     "prioridades": [
-      "Confirmar no site real /exemplo/ e os links da partida",
-      "Caixa do sapatinhonatal e Meta (agendar 13 dez)",
-      "Turno da manhã: analista, inovacao e relatório ao Diogo"
+      "Com o Chrome: confirmar o site real, agendar 13–14 dez no Meta e ver a caixa",
+      "KPIs de segunda e medir as experiências (guias, /criar, /ir/)",
+      "SEO: CTR de /regras e /roleta (10–16 nov) e metas dos KPIs"
     ],
-    "preciso": "Nada por agora.",
+    "preciso": "Ligar o Chrome do PC com a extensão do Claude (desligado desde 14 nov à tarde): sem ele não há caixa, Meta nem verificação do site.",
     "diario": [
-      {
-        "quando": "2026-11-05T21:40:00Z",
-        "texto": "Chegou o CIO (Inovação): ideias para crescer, à sexta."
-      },
       {
         "quando": "2026-11-05T22:05:00Z",
         "texto": "O Conversão passou a UX e conversão: página inicial com 4 guias, rodapé mais curto e /guias/ com todos. Até 20 dez a equipa trabalha 4 vezes por dia (7:44, 11:44, 15:44, 19:44)."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-14T20:05:00Z",
         "texto": "Noite: «Ver um exemplo» revisto pelo qa, junto e publicado (deploy direto, sem browser). Chrome desligado: sem caixa nem Meta."
+      },
+      {
+        "quando": "2026-11-15T08:05:00Z",
+        "texto": "Manhã: emails do /criar a 360 px e «Tens outro grupo?» no /org, revistos pelo qa e publicados. Chrome desligado: sem caixa, Meta nem números."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-14T20:05:00Z"
+    "atualizado": "2026-11-15T08:05:00Z"
   }
 }
