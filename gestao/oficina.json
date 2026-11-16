@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "Agendar 13 e 14 dez no Meta (turno da noite)",
-      "ultimo": "Queda de impressões investigada: sem problema técnico",
-      "atualizado": "2026-11-16T16:05:00Z"
+      "feitos": 2,
+      "tarefa": "Amanhã: fechar as experiências de 13–14 nov e decidir a Black Friday",
+      "ultimo": "13 e 14 dez agendados no Meta (2 publicações e 8 stories)",
+      "atualizado": "2026-11-16T20:05:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -22,11 +22,11 @@
       "atualizado": "2026-11-15T08:05:00Z"
     },
     "social-media": {
-      "estado": "espera",
-      "feitos": 0,
-      "tarefa": "13 e 14 dez por agendar no Meta (Chrome desligado)",
-      "ultimo": "12 dez agendado (2 publicações e 4 stories)",
-      "atualizado": "2026-11-15T08:05:00Z"
+      "estado": "descanso",
+      "feitos": 1,
+      "tarefa": "15 dez entra na janela do Meta amanhã",
+      "ultimo": "13 e 14 dez agendados (FB + IG)",
+      "atualizado": "2026-11-16T20:05:00Z"
     },
     "analista": {
       "estado": "espera",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Com o Chrome: site real, caixa, Meta 13–14 dez, KPIs e fecho das experiências",
-      "Decidir a Black Friday",
-      "produto: /ir/redes/ na /links/ e teste no telemóvel"
+      "Fechar as experiências de 13–14 nov (/ir/*, Amazon sapatinhores-21, /exemplo/) com o analista",
+      "Decidir a Black Friday (27 nov)",
+      "produto: /ir/redes/ na /links/ + teste completo no telemóvel (terça)"
     ],
-    "preciso": "Ligar o Chrome do PC (8 turnos sem ele: sem caixa, Meta nem números).",
+    "preciso": "Decidir a privacidade do /r na Web Analytics: excluir /r/* (definição do Cloudflare) ou mudar o worker (precisa do teu «sim»).",
     "diario": [
-      {
-        "quando": "2026-11-09T09:20:00Z",
-        "texto": "Manhã de 9 nov: KPIs da semana (6 sorteios, 31 cliques no Google); publicados o lembrete da prenda, títulos novos das regras e da roleta; 1 a 10 dez prontos nas redes."
-      },
       {
         "quando": "2026-11-10T15:55:00Z",
         "texto": "Tarde: site e API OK; saíram 5 contactos; a Lisboa Secreta respondeu (vai avaliar). Aviso do Google sobre páginas não indexadas passa ao SEO."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-16T16:05:00Z",
         "texto": "Tarde: queda do Google investigada — o site está indexado e sem erros; coincide com a atualização do Google de novembro. Medir a 20 e 25 nov."
+      },
+      {
+        "quando": "2026-11-16T20:05:00Z",
+        "texto": "Noite: 13 e 14 dez agendados no Meta (2 publicações e 8 stories, Facebook e Instagram). Caixa do email e do Meta sem novidades."
       }
     ],
     "recados": [
@@ -212,12 +212,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 4,
+      "sorteios_semana": 5,
       "receita_semana": 0,
       "cliques_google_semana": 38,
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-16T16:05:00Z"
+    "atualizado": "2026-11-16T20:05:00Z"
   }
 }
