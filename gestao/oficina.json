@@ -3,16 +3,16 @@
     "gestor": {
       "estado": "espera",
       "feitos": 1,
-      "tarefa": "Confirmar o site real e agendar 13–14 dez no Meta quando o Chrome voltar",
-      "ultimo": "Site de 15 nov publicado (/criar a 360 px e «Tens outro grupo?»)",
-      "atualizado": "2026-11-15T19:55:00Z"
+      "tarefa": "Caixa, Meta e KPIs quando o Chrome voltar",
+      "ultimo": "Publicou o pacote de 16 nov",
+      "atualizado": "2026-11-16T08:20:00Z"
     },
     "seo": {
       "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Rotina de segunda: CTR de /regras e /roleta",
-      "ultimo": "Mensagem para pedir os emails no guia da empresa",
-      "atualizado": "2026-11-15T08:05:00Z"
+      "feitos": 1,
+      "tarefa": "Medir títulos novos e /regras e /roleta quando houver Search Console",
+      "ultimo": "Títulos e descrições de 3 guias de prendas publicados",
+      "atualizado": "2026-11-16T08:20:00Z"
     },
     "outreach": {
       "estado": "descanso",
@@ -31,8 +31,8 @@
     "analista": {
       "estado": "espera",
       "feitos": 0,
-      "tarefa": "KPIs de segunda (precisa do Chrome ligado)",
-      "atualizado": "2026-11-15T08:05:00Z",
+      "tarefa": "KPIs de segunda: precisa do Chrome ligado",
+      "atualizado": "2026-11-16T08:20:00Z",
       "ultimo": "Medição das ideias de 6/9 nov (sem dados de utm)"
     },
     "afiliados": {
@@ -43,11 +43,11 @@
       "ultimo": "Filtro de preço nas 4 páginas e Amazon no /r com código próprio"
     },
     "produto": {
-      "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Medir /ir/org/ e /ir/exemplo/ de 16 a 18 nov",
-      "atualizado": "2026-11-15T08:05:00Z",
-      "ultimo": "«Tens outro grupo?» no /org e emails do /criar a 360 px"
+      "estado": "trabalhar",
+      "feitos": 1,
+      "tarefa": "Contar as visitas das redes na /links/ (/ir/redes/) até 18 nov",
+      "atualizado": "2026-11-16T08:20:00Z",
+      "ultimo": "Enter no /criar já não envia o sorteio a meio"
     },
     "suporte": {
       "estado": "espera",
@@ -59,30 +59,26 @@
     "inovacao": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Fechar resultados das ideias de 13 e 14 nov",
-      "atualizado": "2026-11-15T08:05:00Z",
-      "ultimo": "Ideia «Tens outro grupo?» (aprovada e publicada no mesmo dia)"
+      "tarefa": "Fechar as experiências de 13–14 nov a 17 nov",
+      "atualizado": "2026-11-16T08:20:00Z",
+      "ultimo": "Ideia: medir quem vem das redes na /links/"
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Confirmar no site real as páginas novas quando houver browser",
-      "atualizado": "2026-11-15T08:05:00Z",
-      "ultimo": "Aprovou 2 ramos de 15 nov (1 recusa por contraste, corrigida)"
+      "feitos": 2,
+      "tarefa": "Confirmar o site real quando o Chrome voltar",
+      "atualizado": "2026-11-16T08:20:00Z",
+      "ultimo": "Aprovou os títulos SEO e o Enter do /criar (testado a 360 px)"
     }
   },
   "estado": {
     "prioridades": [
-      "Com o Chrome: confirmar o site real, ver a caixa e agendar 13–14 dez no Meta",
-      "KPIs de segunda e contar as visitas a /ir/* (experiências)",
-      "SEO: CTR de /regras e /roleta (10–16 nov)"
+      "Com o Chrome: site real, caixa, Meta 13–14 dez, KPIs e fecho das experiências",
+      "Decidir a Black Friday",
+      "produto: /ir/redes/ na /links/ e teste no telemóvel"
     ],
-    "preciso": "Ligar o Chrome do PC com a extensão do Claude (desligado desde 14 nov à tarde): sem ele não há caixa, Meta nem verificação do site.",
+    "preciso": "Ligar o Chrome do PC (8 turnos sem ele: sem caixa, Meta nem números).",
     "diario": [
-      {
-        "quando": "2026-11-06T19:55:00Z",
-        "texto": "Noite: site e API confirmados; a NiT e o Echo Boomer responderam; recados entregues."
-      },
       {
         "quando": "2026-11-07T08:20:00Z",
         "texto": "Manhã de 7 nov: site OK, 7 sorteios reais na semana, Google a subir; PR #28 aberto mas o GitHub ficou sem acesso, nada publicado."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-15T19:55:00Z",
         "texto": "Noite: Chrome ainda desligado e sem acesso ao site; nada por publicar. Prioridades de segunda registadas."
+      },
+      {
+        "quando": "2026-11-16T08:20:00Z",
+        "texto": "Manhã: títulos SEO de 3 guias e Enter seguro no /criar, revistos pelo qa e publicados. Chrome ainda desligado: sem números."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-15T19:55:00Z"
+    "atualizado": "2026-11-16T08:20:00Z"
   }
 }
