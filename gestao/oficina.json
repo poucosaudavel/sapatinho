@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "espera",
+      "estado": "trabalhar",
       "feitos": 1,
-      "tarefa": "Caixa, Meta e KPIs quando o Chrome voltar",
-      "ultimo": "Publicou o pacote de 16 nov",
-      "atualizado": "2026-11-16T08:20:00Z"
+      "tarefa": "Agendar 13 e 14 dez no Meta (turno da noite)",
+      "ultimo": "Queda de impressões investigada: sem problema técnico",
+      "atualizado": "2026-11-16T16:05:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -79,10 +79,6 @@
     ],
     "preciso": "Ligar o Chrome do PC (8 turnos sem ele: sem caixa, Meta nem números).",
     "diario": [
-      {
-        "quando": "2026-11-07T08:20:00Z",
-        "texto": "Manhã de 7 nov: site OK, 7 sorteios reais na semana, Google a subir; PR #28 aberto mas o GitHub ficou sem acesso, nada publicado."
-      },
       {
         "quando": "2026-11-09T09:20:00Z",
         "texto": "Manhã de 9 nov: KPIs da semana (6 sorteios, 31 cliques no Google); publicados o lembrete da prenda, títulos novos das regras e da roleta; 1 a 10 dez prontos nas redes."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-16T08:20:00Z",
         "texto": "Manhã: títulos SEO de 3 guias e Enter seguro no /criar, revistos pelo qa e publicados. Chrome ainda desligado: sem números."
+      },
+      {
+        "quando": "2026-11-16T16:05:00Z",
+        "texto": "Tarde: queda do Google investigada — o site está indexado e sem erros; coincide com a atualização do Google de novembro. Medir a 20 e 25 nov."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 80
     },
-    "atualizado": "2026-11-16T08:20:00Z"
+    "atualizado": "2026-11-16T16:05:00Z"
   }
 }
