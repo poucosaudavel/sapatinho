@@ -115,8 +115,8 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
         <section class="card panel">
           <div class="step-h"><span class="n">1</span><h2>O grupo</h2></div>
           <div class="grid3">
-            <label for="g">Nome do grupo<input id="g" type="text" maxlength="60" placeholder="Natal dos primos"></label>
-            <label for="l">Limite (€)<input id="l" type="number" min="1" max="1000" step="1" inputmode="numeric" placeholder="20"></label>
+            <label for="g">Nome do grupo<input id="g" type="text" maxlength="60" placeholder="Natal dos primos" enterkeyhint="next"></label>
+            <label for="l">Limite (€)<input id="l" type="number" min="1" max="1000" step="1" inputmode="numeric" placeholder="20" enterkeyhint="next"></label>
             <label for="d">Troca de prendas<input id="d" type="date"></label>
           </div>
         </section>
@@ -207,8 +207,8 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
   function renumber(){ Array.prototype.forEach.call(people.children, function(r,i){ r.querySelector("span").textContent = (i+1) + "."; }); }
   function addPerson(){
     var id = "p" + (++uid), r = document.createElement("div"); r.className = "prow";
-    r.innerHTML = '<span></span><input id="'+id+'n" type="text" maxlength="30" placeholder="Nome" aria-label="Nome" autocomplete="off">'+
-      '<input id="'+id+'e" type="email" maxlength="120" placeholder="email@exemplo.pt" aria-label="Email" autocomplete="off" inputmode="email">'+
+    r.innerHTML = '<span></span><input id="'+id+'n" type="text" maxlength="30" placeholder="Nome" aria-label="Nome" autocomplete="off" enterkeyhint="next">'+
+      '<input id="'+id+'e" type="email" maxlength="120" placeholder="email@exemplo.pt" aria-label="Email" autocomplete="off" inputmode="email" enterkeyhint="next">'+
       '<button type="button" class="x" aria-label="Remover pessoa">×</button>';
     r.querySelector("input").addEventListener("input", refreshPairs);
     r.querySelector(".x").addEventListener("click", function(){ if (people.children.length > 3){ r.remove(); renumber(); refreshPairs(); } });
@@ -230,6 +230,20 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
   document.getElementById("addP").addEventListener("click", function(){ addPerson().focus(); });
   document.getElementById("addX").addEventListener("click", addPair);
   document.getElementById("copyAsk").addEventListener("click", function(){ Sap.copy(document.getElementById("askMsg").value, this, "Copiado!"); });
+
+  /* No telemóvel, a tecla «Enter»/«Ir» do teclado enviava o formulário a meio: com 3 pessoas escritas,
+     o sorteio saía sem as restantes (e não se pode desfazer). Agora salta para o campo seguinte;
+     no último email preenchido abre uma pessoa nova. Só o botão faz o sorteio. */
+  form.addEventListener("keydown", function(e){
+    var t = e.target;
+    if (e.key !== "Enter" || e.isComposing || !t || t.tagName !== "INPUT") return;
+    e.preventDefault();
+    var all = Array.prototype.filter.call(form.querySelectorAll("input"), function(x){ return !x.disabled && x.offsetParent !== null; });
+    var i = all.indexOf(t);
+    if (i >= 0 && i < all.length - 1) return all[i+1].focus();
+    if (t.value.trim() && people.contains(t) && people.children.length < 30) return addPerson().focus();
+    t.blur();
+  });
 
   function fail(msg){ err.textContent = msg; err.hidden = false; err.scrollIntoView({behavior:"smooth", block:"center"}); }
   var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
