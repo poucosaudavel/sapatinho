@@ -402,11 +402,9 @@ def patch_home():
         cards = home_cards()
         h = re.sub(r'(<nav class="related" style="max-width:none;margin:0" aria-label="Guias">).*?(</nav>)', lambda m: m.group(1) + cards + m.group(2), h, count=1, flags=re.S)
         h = h.replace("<h2>Tudo para organizar o amigo secreto</h2>", "<h2>Guias para organizar o amigo secreto</h2>")
-    # «Ver um exemplo» (14 nov, produto): link discreto por baixo dos botões do topo, sem competir com «Criar um sorteio».
-    if 'href="/exemplo/"' not in h:
-        h = re.sub(r'(<div class="ctas">.*?</div>)',
-                   lambda m: m.group(1) + '\n        <p class="ex-link" style="margin-top:14px;font-size:.9rem;color:var(--soft)">Primeiro queres ver como fica? <a href="/exemplo/" style="color:var(--paper)">Ver um exemplo</a></p>',
-                   h, count=1, flags=re.S)
+    # «Ver um exemplo» saiu da página inicial a 17 nov (produto): um objetivo por página, «Criar um sorteio».
+    # A página /exemplo/ continua publicada; só deixou de ter link no início. Se o link voltar ao HTML, tira-se.
+    h = re.sub(r'\n\s*<p class="ex-link"[^\n]*?href="/exemplo/".*?</p>', '', h, count=1)
     if ".faq details p a{" not in h:
         h = h.replace(".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}",
                       ".faq details p{color:var(--soft);margin-top:10px;max-width:60ch}\n.faq details p a{color:var(--paper)}")
@@ -454,12 +452,13 @@ def write_404():
 # Ficam fora do sitemap e têm noindex. Sem JavaScript: só meta refresh e um link visível.
 IR = {
     "grupo": ("/", "a página inicial"),                                 # mensagem que quem organiza partilha no grupo (/criar)
-    "sorteio": ("/criar", "criar um sorteio"),                          # «Criar outro sorteio» no /r e no /sorteio
+    "sorteio": ("/criar", "criar um sorteio"),                          # «Faz o sorteio dele aqui, grátis» no /r e no /sorteio (texto mudado a 17 nov)
     "calendario": ("/ideias-de-prendas-amigo-secreto/", "ideias de prendas"),  # lembrete do calendário no /r
     "guia": ("/criar", "criar um sorteio"),                             # botões «Criar sorteio» dentro dos guias
     "emails": ("/criar", "criar um sorteio"),                           # «cria o sorteio» depois da mensagem para pedir os emails (guia da empresa)
     "exemplo": ("/criar", "criar um sorteio"),                          # «Criar o meu sorteio» na página /exemplo/
     "org": ("/criar", "criar um sorteio"),                              # «Organizar o sorteio de outro grupo» no /org (15 nov)
+    "lembrete": ("/criar", "criar um sorteio"),                         # «Copiar lembrete para o grupo» no /org (17 nov): sem uso (o lembrete mede-se pela taxa no /painel)
     # Página da bio das redes sociais /links/ (16 nov): conta quem vem do Instagram e do Facebook.
     "redes": ("/criar", "criar um sorteio"),                            # «Criar sorteio grátis» no /links/
     "redes-prendas": ("/prendas-amigo-secreto-ate-5-euros/", "prendas até 5 €"),  # «Ideias de prendas por preço» no /links/

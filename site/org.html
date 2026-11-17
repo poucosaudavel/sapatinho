@@ -55,6 +55,12 @@
     <section class="card panel" id="box">
       <p class="lead">A carregar…</p>
     </section>
+    <!-- «Copiar lembrete para o grupo» (produto, 17 nov): texto fixo, sem nomes, emails nem links do sorteio.
+         Mede-se pela taxa de quem sorteia no /painel (17 nov, gestor): um pedido em segundo plano não aparece na Web Analytics. -->
+    <section class="card other" id="remind" hidden>
+      <p>Avisa o grupo de que os convites vão por email, enviados pelo Sapatinho. Muitos caem em Promoções ou Spam.</p>
+      <button type="button" class="btn ghost" id="remindbtn">Copiar lembrete para o grupo</button>
+    </section>
     <!-- «Tens outro grupo?» (produto, 15 nov): link fixo, sem query nem hash; os links de todos ficam só no # desta página. -->
     <section class="card other" id="other" hidden>
       <p>Tens outro grupo? Trabalho, amigos, família… Cada grupo tem o seu sorteio e os convites seguem por email.</p>
@@ -87,6 +93,12 @@
     var b = ev.target.closest(".sbtn"); if (!b) return;
     Sap.copy(o.links[+b.dataset.i].link, b);
   });
+  var REMIND = "Olá! Já fiz o sorteio do amigo secreto. Cada pessoa recebeu um convite por email, enviado pelo Sapatinho, com o link para ver quem lhe saiu. Se não o encontrares na caixa de entrada, procura em Promoções ou Spam.";
+  var rb = document.getElementById("remindbtn");
+  rb.addEventListener("click", function(){
+    Sap.copy(REMIND, rb, "Copiado. Cola no grupo");
+  });
+  document.getElementById("remind").hidden = false;
   document.getElementById("other").hidden = false;
 })();
 </script>

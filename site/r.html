@@ -180,8 +180,9 @@ function amazonBlock(l){
   return wrap;
 }
 function againLine(){
-  var p = el("p", "note again", "Queres fazer um amigo secreto com outro grupo? É grátis e demora 2 minutos. ");
-  var a = el("a", "", "Criar outro sorteio");
+  // 17 nov (produto): «Criar outro sorteio» teve 0 cliques em ~120 visitas; só muda o texto (a posição fica).
+  var p = el("p", "note again", "Tens outro grupo? ");
+  var a = el("a", "", "Faz o sorteio dele aqui, grátis");
   a.href = "/ir/sorteio/";
   a.rel = "noreferrer"; // o endereço do /r leva o payload: não o passar à página de contagem
   p.appendChild(a);
