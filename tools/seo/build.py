@@ -460,6 +460,9 @@ IR = {
     "emails": ("/criar", "criar um sorteio"),                           # «cria o sorteio» depois da mensagem para pedir os emails (guia da empresa)
     "exemplo": ("/criar", "criar um sorteio"),                          # «Criar o meu sorteio» na página /exemplo/
     "org": ("/criar", "criar um sorteio"),                              # «Organizar o sorteio de outro grupo» no /org (15 nov)
+    # Página da bio das redes sociais /links/ (16 nov): conta quem vem do Instagram e do Facebook.
+    "redes": ("/criar", "criar um sorteio"),                            # «Criar sorteio grátis» no /links/
+    "redes-prendas": ("/prendas-amigo-secreto-ate-5-euros/", "prendas até 5 €"),  # «Ideias de prendas por preço» no /links/
     # Botões de prendas no /r e no /sorteio: um endereço por página de destino (a faixa de preço já está no destino).
     # O total soma-se pelo prefixo /ir/prendas/ na Cloudflare Web Analytics.
     "prendas/ate-5": ("/prendas-amigo-secreto-ate-5-euros/", "prendas até 5 €"),
