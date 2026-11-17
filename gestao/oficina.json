@@ -3,16 +3,16 @@
     "gestor": {
       "estado": "trabalhar",
       "feitos": 2,
-      "tarefa": "Amanhã: fechar as experiências de 13–14 nov e decidir a Black Friday",
-      "ultimo": "13 e 14 dez agendados no Meta (2 publicações e 8 stories)",
-      "atualizado": "2026-11-16T20:05:00Z"
+      "tarefa": "Decidir a Black Friday e fechar as experiências",
+      "ultimo": "Site publicado com as /ir/redes/; Black Friday recusada",
+      "atualizado": "2026-11-17T08:20:00+00:00"
     },
     "seo": {
       "estado": "descanso",
-      "feitos": 1,
-      "tarefa": "Medir títulos novos e /regras e /roleta quando houver Search Console",
-      "ultimo": "Títulos e descrições de 3 guias de prendas publicados",
-      "atualizado": "2026-11-16T08:20:00Z"
+      "feitos": 0,
+      "tarefa": "Esperar pelo fim da atualização do Google (medir a 20 nov)",
+      "ultimo": "Títulos de 3 guias (16 nov)",
+      "atualizado": "2026-11-17T08:20:00+00:00"
     },
     "outreach": {
       "estado": "descanso",
@@ -23,17 +23,17 @@
     },
     "social-media": {
       "estado": "descanso",
-      "feitos": 1,
-      "tarefa": "15 dez entra na janela do Meta amanhã",
-      "ultimo": "13 e 14 dez agendados (FB + IG)",
-      "atualizado": "2026-11-16T20:05:00Z"
+      "feitos": 5,
+      "tarefa": "Meta 16 dez amanhã",
+      "ultimo": "15 dez agendado no Facebook e no Instagram",
+      "atualizado": "2026-11-17T08:20:00+00:00"
     },
     "analista": {
-      "estado": "espera",
-      "feitos": 0,
-      "tarefa": "KPIs de segunda: precisa do Chrome ligado",
-      "atualizado": "2026-11-16T08:20:00Z",
-      "ultimo": "Medição das ideias de 6/9 nov (sem dados de utm)"
+      "estado": "trabalhar",
+      "feitos": 1,
+      "tarefa": "Fechar «Tens outro grupo?» e medir /ir/redes/ (18 nov)",
+      "atualizado": "2026-11-17T08:20:00+00:00",
+      "ultimo": "Experiências de 13–16 nov fechadas com números reais"
     },
     "afiliados": {
       "estado": "descanso",
@@ -45,9 +45,9 @@
     "produto": {
       "estado": "trabalhar",
       "feitos": 1,
-      "tarefa": "Contar as visitas das redes na /links/ (/ir/redes/) até 18 nov",
-      "atualizado": "2026-11-16T08:20:00Z",
-      "ultimo": "Enter no /criar já não envia o sorteio a meio"
+      "tarefa": "Lembrete na /org, «Organiza outro sorteio» no /r e tirar «Ver um exemplo» (até 20 nov)",
+      "atualizado": "2026-11-17T08:20:00+00:00",
+      "ultimo": "/links/ passa a contar quem vem das redes"
     },
     "suporte": {
       "estado": "espera",
@@ -58,31 +58,27 @@
     },
     "inovacao": {
       "estado": "descanso",
-      "feitos": 1,
-      "tarefa": "Fechar as experiências de 13–14 nov a 17 nov",
-      "atualizado": "2026-11-16T08:20:00Z",
-      "ultimo": "Ideia: medir quem vem das redes na /links/"
+      "feitos": 2,
+      "tarefa": "Nova ideia amanhã de manhã",
+      "atualizado": "2026-11-17T08:20:00+00:00",
+      "ultimo": "Lembrete para o grupo na /org (aprovada)"
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Confirmar o site real quando o Chrome voltar",
-      "atualizado": "2026-11-16T08:20:00Z",
-      "ultimo": "Aprovou os títulos SEO e o Enter do /criar (testado a 360 px)"
+      "feitos": 1,
+      "tarefa": "Rever o próximo ramo do produto",
+      "atualizado": "2026-11-17T08:20:00+00:00",
+      "ultimo": "Aprovou o ramo das /ir/redes/ (teste a 360 px)"
     }
   },
   "estado": {
     "prioridades": [
-      "Fechar as experiências de 13–14 nov (/ir/*, Amazon sapatinhores-21, /exemplo/) com o analista",
-      "Decidir a Black Friday (27 nov)",
-      "produto: /ir/redes/ na /links/ + teste completo no telemóvel (terça)"
+      "produto: lembrete na /org, «Organiza outro sorteio» no /r e tirar «Ver um exemplo»",
+      "afiliados: links partidos e preços dos guias",
+      "analista: fechar «Tens outro grupo?» e medir /ir/redes/; Meta 16 dez"
     ],
-    "preciso": "Decidir a privacidade do /r na Web Analytics: excluir /r/* (definição do Cloudflare) ou mudar o worker (precisa do teu «sim»).",
+    "preciso": "Decidir a privacidade do /r: excluir /r/* da Web Analytics do Cloudflare ou mudar o worker.",
     "diario": [
-      {
-        "quando": "2026-11-10T15:55:00Z",
-        "texto": "Tarde: site e API OK; saíram 5 contactos; a Lisboa Secreta respondeu (vai avaliar). Aviso do Google sobre páginas não indexadas passa ao SEO."
-      },
       {
         "quando": "2026-11-10T19:58:00Z",
         "texto": "Noite: site e API OK; caixa sem novidades. Lembretes de outreach bloqueados no envio; ficam para o Diogo decidir. Nada por publicar."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-16T20:05:00Z",
         "texto": "Noite: 13 e 14 dez agendados no Meta (2 publicações e 8 stories, Facebook e Instagram). Caixa do email e do Meta sem novidades."
+      },
+      {
+        "quando": "2026-11-17T08:20:00+00:00",
+        "texto": "Manhã: 16 nov com 2 sorteios e 41 convites; /links/ publicada com as /ir/redes/; 15 dez agendado no Meta; Black Friday recusada."
       }
     ],
     "recados": [
@@ -214,10 +214,10 @@
     "resultados": {
       "sorteios_semana": 5,
       "receita_semana": 0,
-      "cliques_google_semana": 38,
-      "backlinks_publicados": 1,
-      "taxa_sorteio": 80
+      "cliques_google_semana": 18,
+      "backlinks_publicados": 0,
+      "taxa_sorteio": 85
     },
-    "atualizado": "2026-11-16T20:05:00Z"
+    "atualizado": "2026-11-17T08:20:00+00:00"
   }
 }
