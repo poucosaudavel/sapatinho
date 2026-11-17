@@ -3,9 +3,9 @@
     "gestor": {
       "estado": "trabalhar",
       "feitos": 2,
-      "tarefa": "Decidir a Black Friday e fechar as experiências",
+      "tarefa": "Decidir como medir o lembrete e publicar à tarde",
       "ultimo": "Site publicado com as /ir/redes/; Black Friday recusada",
-      "atualizado": "2026-11-17T08:20:00+00:00"
+      "atualizado": "2026-11-17T12:05:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -44,10 +44,10 @@
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "Lembrete na /org, «Organiza outro sorteio» no /r e tirar «Ver um exemplo» (até 20 nov)",
-      "atualizado": "2026-11-17T08:20:00+00:00",
-      "ultimo": "/links/ passa a contar quem vem das redes"
+      "feitos": 2,
+      "tarefa": "qa revê o ramo do lembrete na /org; depois publicar",
+      "atualizado": "2026-11-17T12:05:00+00:00",
+      "ultimo": "Ramo pronto: lembrete na /org, texto novo no /r, início mais limpo"
     },
     "suporte": {
       "estado": "espera",
@@ -79,10 +79,6 @@
     ],
     "preciso": "Nada por agora.",
     "diario": [
-      {
-        "quando": "2026-11-10T19:58:00Z",
-        "texto": "Noite: site e API OK; caixa sem novidades. Lembretes de outreach bloqueados no envio; ficam para o Diogo decidir. Nada por publicar."
-      },
       {
         "quando": "2026-11-11T10:00:00Z",
         "texto": "Manhã: 4 ramos (404 do Search Console, caixa nos guias, código das redes, dezembro 11–20) revistos e juntos; publicação à espera do login do Cloudflare; envio de emails bloqueado."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-17T08:20:00+00:00",
         "texto": "Manhã: 16 nov com 2 sorteios e 41 convites; /links/ publicada com as /ir/redes/; 15 dez agendado no Meta; Black Friday recusada."
+      },
+      {
+        "quando": "2026-11-17T12:05:00+00:00",
+        "texto": "Almoço: caixas vazias; site OK a 390 px; ramo do lembrete na /org pronto para o qa."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 0,
       "taxa_sorteio": 85
     },
-    "atualizado": "2026-11-17T08:20:00+00:00"
+    "atualizado": "2026-11-17T12:05:00+00:00"
   }
 }
