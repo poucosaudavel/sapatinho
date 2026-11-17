@@ -4,3 +4,17 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Página do sorteio e links pessoais: sem as estatísticas do Cloudflare (Web Analytics).
+# A injeção automática do Cloudflare não acontece em respostas com «no-transform»,
+# por isso os caminhos /r/<código> e /s/<código> nunca chegam às estatísticas (17 nov 2026).
+/r
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/r/*
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/sorteio
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/sorteio.html
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
+/s/*
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
