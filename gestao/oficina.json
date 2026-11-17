@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "Decidir como medir o lembrete e publicar à tarde",
-      "ultimo": "Site publicado com as /ir/redes/; Black Friday recusada",
-      "atualizado": "2026-11-17T12:05:00+00:00"
+      "feitos": 3,
+      "tarefa": "Turno da noite: caixa, Meta e prioridades de amanhã",
+      "ultimo": "Site publicado com o lembrete na /org",
+      "atualizado": "2026-11-17T16:05:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -43,11 +43,11 @@
       "ultimo": "Filtro de preço nas 4 páginas e Amazon no /r com código próprio"
     },
     "produto": {
-      "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "qa revê o ramo do lembrete na /org; depois publicar",
-      "atualizado": "2026-11-17T12:05:00+00:00",
-      "ultimo": "Ramo pronto: lembrete na /org, texto novo no /r, início mais limpo"
+      "estado": "descanso",
+      "feitos": 3,
+      "tarefa": "Medir o lembrete e o «Tens outro grupo?» (18–20 nov)",
+      "atualizado": "2026-11-17T16:05:00+00:00",
+      "ultimo": "Publicado: lembrete na /org e texto novo no /r"
     },
     "suporte": {
       "estado": "espera",
@@ -65,10 +65,10 @@
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 1,
-      "tarefa": "Rever o próximo ramo do produto",
-      "atualizado": "2026-11-17T08:20:00+00:00",
-      "ultimo": "Aprovou o ramo das /ir/redes/ (teste a 360 px)"
+      "feitos": 2,
+      "tarefa": "Rever o próximo ramo",
+      "atualizado": "2026-11-17T16:05:00+00:00",
+      "ultimo": "Aprovou o ramo do lembrete na /org"
     }
   },
   "estado": {
@@ -79,10 +79,6 @@
     ],
     "preciso": "Nada por agora.",
     "diario": [
-      {
-        "quando": "2026-11-11T10:00:00Z",
-        "texto": "Manhã: 4 ramos (404 do Search Console, caixa nos guias, código das redes, dezembro 11–20) revistos e juntos; publicação à espera do login do Cloudflare; envio de emails bloqueado."
-      },
       {
         "quando": "2026-11-11T19:55:00Z",
         "texto": "Noite: 1.º backlink publicado (TechBit, 4 links). Site e API OK. 3 lembretes ficaram em rascunho."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-17T12:05:00+00:00",
         "texto": "Almoço: caixas vazias; site OK a 390 px; ramo do lembrete na /org pronto para o qa."
+      },
+      {
+        "quando": "2026-11-17T16:05:00+00:00",
+        "texto": "Tarde: qa aprovou; publicado o lembrete na /org e «Tens outro grupo?» no /r; caixa vazia."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 0,
       "taxa_sorteio": 85
     },
-    "atualizado": "2026-11-17T12:05:00+00:00"
+    "atualizado": "2026-11-17T16:05:00+00:00"
   }
 }
