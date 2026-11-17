@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
-      "feitos": 3,
-      "tarefa": "Turno da noite: caixa, Meta e prioridades de amanhã",
-      "ultimo": "Site publicado com o lembrete na /org",
-      "atualizado": "2026-11-17T16:05:00+00:00"
+      "estado": "descanso",
+      "feitos": 4,
+      "tarefa": "Turno da manhã: relatório, feed de 16 dez e Meta 17 dez",
+      "ultimo": "Stories de 16 dez agendadas no Meta",
+      "atualizado": "2026-11-17T20:10:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -23,10 +23,10 @@
     },
     "social-media": {
       "estado": "descanso",
-      "feitos": 5,
-      "tarefa": "Meta 16 dez amanhã",
-      "ultimo": "15 dez agendado no Facebook e no Instagram",
-      "atualizado": "2026-11-17T08:20:00+00:00"
+      "feitos": 9,
+      "tarefa": "Feed de 16 dez e 17 dez no Meta amanhã de manhã",
+      "ultimo": "4 stories de 16 dez agendadas (FB + IG)",
+      "atualizado": "2026-11-17T20:10:00+00:00"
     },
     "analista": {
       "estado": "trabalhar",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "produto: lembrete na /org, «Organiza outro sorteio» no /r e tirar «Ver um exemplo»",
-      "afiliados: links partidos e preços dos guias",
-      "analista: fechar «Tens outro grupo?» e medir /ir/redes/; Meta 16 dez"
+      "afiliados: links partidos e preços dos guias de 5, 10, 15 e 20 €",
+      "analista: fechar «Tens outro grupo?» e medir /ir/redes/",
+      "produto: medir o lembrete da /org; Meta 16 (feed) e 17 dez"
     ],
     "preciso": "Nada por agora.",
     "diario": [
-      {
-        "quando": "2026-11-11T19:55:00Z",
-        "texto": "Noite: 1.º backlink publicado (TechBit, 4 links). Site e API OK. 3 lembretes ficaram em rascunho."
-      },
       {
         "quando": "2026-11-12T08:05:00Z",
         "texto": "Manhã de 12 nov: KPIs de quinta, teste de entrega OK, imagens de dezembro feitas, 2 ramos juntos; site por publicar (login no Cloudflare)."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-17T16:05:00+00:00",
         "texto": "Tarde: qa aprovou; publicado o lembrete na /org e «Tens outro grupo?» no /r; caixa vazia."
+      },
+      {
+        "quando": "2026-11-17T20:10:00+00:00",
+        "texto": "Noite: caixa vazia; 4 stories de 16 dez agendadas no Facebook e Instagram; feed de 16 dez fica para a manhã (limite de 29 dias)."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 0,
       "taxa_sorteio": 85
     },
-    "atualizado": "2026-11-17T16:05:00+00:00"
+    "atualizado": "2026-11-17T20:10:00+00:00"
   }
 }
