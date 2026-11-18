@@ -37,3 +37,19 @@ O painel da Awin pediu login (sessão expirada); visto só pelo email do sapatin
 | Colvin, PcComponentes, Startselect, Wanapix, Decathlon, Sephora, Druni | pendentes (sem email de resposta até 7 nov; Douglas_PT recusou a 13 nov: «URL is irrelevant») | não vista (só dentro da Awin); Decathlon: clique de 15 dias (decathlon.pt/lp/i/afiliados) |
 
 Links Amazon (7 nov): 282 links em `site/`, todos pesquisas `amazon.es/s?k=`, todos com `tag=sapatinhonata-21` e `rel="sponsored nofollow noopener"`. Sem 404 possível (são pesquisas); 1 testada no Chrome devolve produtos. O curl do PC não chega à Amazon.
+
+## Rotina de 18 nov 2026 (afiliados)
+
+**Awin** (painel pediu login → sem dados do painel; visto pelo Gmail do sapatinhonatal, pesquisa «awin»): nenhum email novo desde 13 nov.
+
+| Loja | Estado a 18 nov |
+| --- | --- |
+| Worten PT | recusada (6 nov) |
+| Douglas_PT | recusada (13 nov, «URL is irrelevant») |
+| Colvin, PcComponentes, Startselect, Wanapix, Decathlon, Sephora, Druni | pendentes (sem resposta por email; há 12+ dias) |
+
+**Links** (build de 18 nov numa cópia, sem publicar): 282 links da Amazon em 14 páginas dos guias, todos com `tag=sapatinhonata-21` e `rel="sponsored nofollow noopener"`; nenhum sem pesquisa. `/r` e `/sorteio` iguais, com `sapatinhores-21`, `p_36` por escalão e `rel="sponsored nofollow noopener"`. Nenhum link em falta ou partido.
+
+**Preços** (amazon.es no Chrome, 76 pesquisas: as 64 dos guias de 5/10/15/20 € e as 12 do /r; feito sem a tag para não contar cliques, exceto 1 visita de teste com `sapatinhonata-21`): todas devolvem produtos (28 a 60 na 1.ª página). O filtro `p_36` é respeitado: o preço mediano fica dentro do limite em todas. Os preços mostrados com entrega em Portugal chegam a ~1–2 % acima do limite (ex.: 5,07 € no filtro de 5 €, 15,24 € no de 15 €, 20,32 € no de 20 €; é o IVA de Portugal sobre o preço base) e há poucos casos soltos acima de +15 % (variantes com «a partir de»). Nenhuma ideia precisa de troca. Mais justas: «mapa mundi rascar» (15 €, só 28 resultados, mediana 14,22 €) e «bateria externa pequeña» (20 €, mediana 17,99 €).
+
+**Correção** (ramo `afiliados/18nov`, commit 2018df0, por rever pelo `qa`): a caixa «Escolhas rápidas» (texto comum `QUICK_INTRO`) passa a dizer «Os preços são aproximados»; nos guias até 5 € e até 10 € faltava a palavra.

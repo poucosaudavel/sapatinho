@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "descanso",
-      "feitos": 4,
-      "tarefa": "Turno da manhã: relatório, feed de 16 dez e Meta 17 dez",
-      "ultimo": "Stories de 16 dez agendadas no Meta",
-      "atualizado": "2026-11-17T20:10:00+00:00"
+      "estado": "trabalhar",
+      "feitos": 3,
+      "tarefa": "Meta 17 dez nos turnos da tarde e da noite",
+      "ultimo": "Publicou a frase dos preços aproximados e agendou o feed de 16 dez",
+      "atualizado": "2026-11-18T08:20:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -24,30 +24,30 @@
     "social-media": {
       "estado": "descanso",
       "feitos": 9,
-      "tarefa": "Feed de 16 dez e 17 dez no Meta amanhã de manhã",
+      "tarefa": "Dezembro pronto; o gestor agenda no Meta",
       "ultimo": "4 stories de 16 dez agendadas (FB + IG)",
-      "atualizado": "2026-11-17T20:10:00+00:00"
+      "atualizado": "2026-11-18T08:20:00+00:00"
     },
     "analista": {
-      "estado": "trabalhar",
+      "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Fechar «Tens outro grupo?» e medir /ir/redes/ (18 nov)",
-      "atualizado": "2026-11-17T08:20:00+00:00",
-      "ultimo": "Experiências de 13–16 nov fechadas com números reais"
+      "tarefa": "KPIs de quinta e reler as /ir/ a 20 nov",
+      "atualizado": "2026-11-18T08:20:00+00:00",
+      "ultimo": "Leitura de 18 nov: 23 sorteios, 94 % sortearam; Google ainda em baixo"
     },
     "afiliados": {
       "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Testar o filtro de preço na amazon.es quando houver Chrome",
-      "atualizado": "2026-11-15T08:05:00Z",
-      "ultimo": "Filtro de preço nas 4 páginas e Amazon no /r com código próprio"
+      "feitos": 2,
+      "tarefa": "Sábado: rotina; Awin até 22 nov",
+      "atualizado": "2026-11-18T08:20:00+00:00",
+      "ultimo": "282 links e 76 pesquisas da Amazon confirmados"
     },
     "produto": {
-      "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Medir o lembrete e o «Tens outro grupo?» (18–20 nov)",
-      "atualizado": "2026-11-17T16:05:00+00:00",
-      "ultimo": "Publicado: lembrete na /org e texto novo no /r"
+      "estado": "trabalhar",
+      "feitos": 1,
+      "tarefa": "/org sem «Tens outro grupo?» e /criar a 390 px (até 20 nov)",
+      "atualizado": "2026-11-18T08:20:00+00:00",
+      "ultimo": "Verificação de palha a 390 px sem problemas graves"
     },
     "suporte": {
       "estado": "espera",
@@ -58,31 +58,27 @@
     },
     "inovacao": {
       "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Nova ideia amanhã de manhã",
-      "atualizado": "2026-11-17T08:20:00+00:00",
-      "ultimo": "Lembrete para o grupo na /org (aprovada)"
+      "feitos": 1,
+      "tarefa": "Ideias de amanhã",
+      "atualizado": "2026-11-18T08:20:00+00:00",
+      "ultimo": "Ideia: aparecer no Bing antes do pico"
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Rever o próximo ramo",
-      "atualizado": "2026-11-17T16:05:00+00:00",
-      "ultimo": "Aprovou o ramo do lembrete na /org"
+      "feitos": 1,
+      "tarefa": "Rever o próximo ramo do produto",
+      "atualizado": "2026-11-18T08:20:00+00:00",
+      "ultimo": "Aprovou o ramo afiliados/18nov"
     }
   },
   "estado": {
     "prioridades": [
-      "afiliados: links partidos e preços dos guias de 5, 10, 15 e 20 €",
-      "analista: fechar «Tens outro grupo?» e medir /ir/redes/",
-      "produto: medir o lembrete da /org; Meta 16 (feed) e 17 dez"
+      "produto + qa: /org sem «Tens outro grupo?» e /criar a 390 px",
+      "analista: KPIs de quinta; suporte: teste de entrega e Brevo",
+      "Meta: 17 e 18 dez"
     ],
-    "preciso": "Nada por agora.",
+    "preciso": "Bing Webmaster Tools: importar o site do Search Console (10 min, login teu).",
     "diario": [
-      {
-        "quando": "2026-11-12T08:05:00Z",
-        "texto": "Manhã de 12 nov: KPIs de quinta, teste de entrega OK, imagens de dezembro feitas, 2 ramos juntos; site por publicar (login no Cloudflare)."
-      },
       {
         "quando": "2026-11-12T11:58:00Z",
         "texto": "Almoço: caixa e Meta sem novidades, site e API OK; site de 12 nov à espera do login no Cloudflare."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-17T20:10:00+00:00",
         "texto": "Noite: caixa vazia; 4 stories de 16 dez agendadas no Facebook e Instagram; feed de 16 dez fica para a manhã (limite de 29 dias)."
+      },
+      {
+        "quando": "2026-11-18T08:20:00+00:00",
+        "texto": "Manhã: caixa vazia; frase dos preços aproximados publicada; afiliados confirmou todos os links; «Tens outro grupo?» sai; feed de 16 dez agendado."
       }
     ],
     "recados": [
@@ -214,10 +214,10 @@
     "resultados": {
       "sorteios_semana": 5,
       "receita_semana": 0,
-      "cliques_google_semana": 18,
-      "backlinks_publicados": 0,
-      "taxa_sorteio": 85
+      "cliques_google_semana": 4,
+      "backlinks_publicados": 1,
+      "taxa_sorteio": 94
     },
-    "atualizado": "2026-11-17T20:10:00+00:00"
+    "atualizado": "2026-11-18T08:20:00+00:00"
   }
 }
