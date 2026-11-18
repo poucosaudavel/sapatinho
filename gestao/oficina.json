@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 3,
+      "feitos": 4,
       "tarefa": "Meta 17 dez nos turnos da tarde e da noite",
-      "ultimo": "Publicou a frase dos preços aproximados e agendou o feed de 16 dez",
-      "atualizado": "2026-11-18T08:20:00+00:00"
+      "ultimo": "Sitemap e 24 páginas enviados ao Bing",
+      "atualizado": "2026-11-18T12:00:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -44,10 +44,10 @@
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "/org sem «Tens outro grupo?» e /criar a 390 px (até 20 nov)",
-      "atualizado": "2026-11-18T08:20:00+00:00",
-      "ultimo": "Verificação de palha a 390 px sem problemas graves"
+      "feitos": 2,
+      "tarefa": "qa revê o ramo da /org e do /criar; publicar à tarde",
+      "atualizado": "2026-11-18T12:00:00+00:00",
+      "ultimo": "/org sem «Tens outro grupo?» e /criar um campo por linha a 390 px"
     },
     "suporte": {
       "estado": "espera",
@@ -79,10 +79,6 @@
     ],
     "preciso": "Bing Webmaster Tools: importar o site do Search Console (10 min, login teu).",
     "diario": [
-      {
-        "quando": "2026-11-12T11:58:00Z",
-        "texto": "Almoço: caixa e Meta sem novidades, site e API OK; site de 12 nov à espera do login no Cloudflare."
-      },
       {
         "quando": "2026-11-12T21:15:00Z",
         "texto": "Noite: feed de 1 a 10 dez agendado no Facebook e no Instagram (16 publicações). Caixa sem novidades."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-18T08:20:00+00:00",
         "texto": "Manhã: caixa vazia; frase dos preços aproximados publicada; afiliados confirmou todos os links; «Tens outro grupo?» sai; feed de 16 dez agendado."
+      },
+      {
+        "quando": "2026-11-18T12:00:00+00:00",
+        "texto": "Almoço: Bing Webmaster Tools com sitemap e 24 páginas pedidas; produto deixou pronto o ramo da /org e do /criar em ecrãs estreitos (qa revê à tarde)."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 94
     },
-    "atualizado": "2026-11-18T08:20:00+00:00"
+    "atualizado": "2026-11-18T12:00:00+00:00"
   }
 }
