@@ -206,7 +206,7 @@ def add_figures(p, body):
             raise SystemExit(f"{p['slug']}: não encontrei <h2 id=\"{f['after']}\"> para a imagem {f['file']}")
     return body
 
-QUICK_INTRO = "As ideias mais fáceis de encontrar online. Os preços mudam com as promoções: confirma o valor antes de comprar."
+QUICK_INTRO = "As ideias mais fáceis de encontrar online. Os preços são aproximados e mudam com as promoções: confirma o valor antes de comprar."
 
 def quick_html(p):
     """Bloco «Escolhas rápidas»: cartões com ícone, preço, para quem e botão para a Amazon."""
