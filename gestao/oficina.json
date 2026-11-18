@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
-      "feitos": 5,
-      "tarefa": "Meta 17 dez no turno da noite",
-      "ultimo": "Publicou a /org e o /criar novos",
-      "atualizado": "2026-11-18T16:00:00+00:00"
+      "estado": "descanso",
+      "feitos": 11,
+      "tarefa": "Turno da manhã de quinta: relatório, KPIs e Meta 18 dez",
+      "ultimo": "17 dez agendado no Meta (carrossel, feed e 4 stories)",
+      "atualizado": "2026-11-18T20:40:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -25,8 +25,8 @@
       "estado": "descanso",
       "feitos": 9,
       "tarefa": "Dezembro pronto; o gestor agenda no Meta",
-      "ultimo": "4 stories de 16 dez agendadas (FB + IG)",
-      "atualizado": "2026-11-18T08:20:00+00:00"
+      "ultimo": "17 dez agendado no Meta (FB + IG)",
+      "atualizado": "2026-11-18T20:40:00+00:00"
     },
     "analista": {
       "estado": "descanso",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "produto + qa: /org sem «Tens outro grupo?» e /criar a 390 px",
       "analista: KPIs de quinta; suporte: teste de entrega e Brevo",
-      "Meta: 17 e 18 dez"
+      "Meta: agendar 18 dez (stories de manhã, feed à noite)",
+      "produto: verificação de palha + nome longo na /org"
     ],
-    "preciso": "Bing Webmaster Tools: importar o site do Search Console (10 min, login teu).",
+    "preciso": "Nada por agora.",
     "diario": [
-      {
-        "quando": "2026-11-12T21:15:00Z",
-        "texto": "Noite: feed de 1 a 10 dez agendado no Facebook e no Instagram (16 publicações). Caixa sem novidades."
-      },
       {
         "quando": "2026-11-13T09:15:00Z",
         "texto": "Manhã: publicado «Avisa o grupo» e «Pedir os emails» (/criar e guia da empresa); feed de 11 dez e 43 stories de 1–11 dez agendados; indexação pedida de 5 páginas."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-18T12:00:00+00:00",
         "texto": "Almoço: Bing Webmaster Tools com sitemap e 24 páginas pedidas; produto deixou pronto o ramo da /org e do /criar em ecrãs estreitos (qa revê à tarde)."
+      },
+      {
+        "quando": "2026-11-18T20:40:00+00:00",
+        "texto": "Noite: 17 dez agendado no Meta (carrossel 12:30, feed 20:30, 4 stories; Facebook e Instagram). Caixa sem novidades."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 94
     },
-    "atualizado": "2026-11-18T12:00:00+00:00"
+    "atualizado": "2026-11-18T20:40:00+00:00"
   }
 }
