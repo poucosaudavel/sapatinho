@@ -87,6 +87,10 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
   .res{grid-template-columns:1fr 1fr}.res>div{grid-column:1/-1}
   .panel{padding:26px 18px 22px}
 }
+/* Limite e data um por linha em ecrãs estreitos (produto, 18 nov): a 390 px a data aparecia cortada. */
+@media (max-width:420px){
+  .grid3{grid-template-columns:1fr}
+}
 @media (max-width:400px){
   .sent div{flex-wrap:wrap;align-items:center;row-gap:2px}
   .sent div b{flex:1 1 0;min-width:0;overflow-wrap:anywhere}
