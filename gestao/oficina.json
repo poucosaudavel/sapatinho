@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 4,
-      "tarefa": "Meta 17 dez nos turnos da tarde e da noite",
-      "ultimo": "Sitemap e 24 páginas enviados ao Bing",
-      "atualizado": "2026-11-18T12:00:00+00:00"
+      "feitos": 5,
+      "tarefa": "Meta 17 dez no turno da noite",
+      "ultimo": "Publicou a /org e o /criar novos",
+      "atualizado": "2026-11-18T16:00:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -43,11 +43,11 @@
       "ultimo": "282 links e 76 pesquisas da Amazon confirmados"
     },
     "produto": {
-      "estado": "trabalhar",
+      "estado": "descanso",
       "feitos": 2,
-      "tarefa": "qa revê o ramo da /org e do /criar; publicar à tarde",
-      "atualizado": "2026-11-18T12:00:00+00:00",
-      "ultimo": "/org sem «Tens outro grupo?» e /criar um campo por linha a 390 px"
+      "tarefa": "Medir o lembrete da /org e /ir/sorteio/ até 20 nov",
+      "atualizado": "2026-11-18T16:00:00+00:00",
+      "ultimo": "/org e /criar publicados (qa aprovou)"
     },
     "suporte": {
       "estado": "espera",
@@ -65,10 +65,10 @@
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 1,
+      "feitos": 2,
       "tarefa": "Rever o próximo ramo do produto",
-      "atualizado": "2026-11-18T08:20:00+00:00",
-      "ultimo": "Aprovou o ramo afiliados/18nov"
+      "atualizado": "2026-11-18T16:00:00+00:00",
+      "ultimo": "Aprovou o ramo da /org e do /criar"
     }
   },
   "estado": {
