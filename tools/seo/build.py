@@ -457,7 +457,7 @@ IR = {
     "guia": ("/criar", "criar um sorteio"),                             # botões «Criar sorteio» dentro dos guias
     "emails": ("/criar", "criar um sorteio"),                           # «cria o sorteio» depois da mensagem para pedir os emails (guia da empresa)
     "exemplo": ("/criar", "criar um sorteio"),                          # «Criar o meu sorteio» na página /exemplo/
-    "org": ("/criar", "criar um sorteio"),                              # «Organizar o sorteio de outro grupo» no /org (15 nov)
+    "org": ("/criar", "criar um sorteio"),                              # «Organizar o sorteio de outro grupo» no /org (15 nov); botão retirado a 18 nov, endereço mantido
     "lembrete": ("/criar", "criar um sorteio"),                         # «Copiar lembrete para o grupo» no /org (17 nov): sem uso (o lembrete mede-se pela taxa no /painel)
     # Página da bio das redes sociais /links/ (16 nov): conta quem vem do Instagram e do Facebook.
     "redes": ("/criar", "criar um sorteio"),                            # «Criar sorteio grátis» no /links/

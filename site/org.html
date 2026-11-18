@@ -61,11 +61,7 @@
       <p>Avisa o grupo de que os convites vão por email, enviados pelo Sapatinho. Muitos caem em Promoções ou Spam.</p>
       <button type="button" class="btn ghost" id="remindbtn">Copiar lembrete para o grupo</button>
     </section>
-    <!-- «Tens outro grupo?» (produto, 15 nov): link fixo, sem query nem hash; os links de todos ficam só no # desta página. -->
-    <section class="card other" id="other" hidden>
-      <p>Tens outro grupo? Trabalho, amigos, família… Cada grupo tem o seu sorteio e os convites seguem por email.</p>
-      <a class="btn ghost" href="/ir/org/">Organizar o sorteio de outro grupo</a>
-    </section>
+    <!-- «Tens outro grupo?» saiu a 18 nov (produto): 0 cliques em ~52 visitas. O /ir/org/ fica em _redirects/IR (custo zero). -->
   </main>
   <footer class="foot">
     <span>© 2026 Sapatinho · sapatinho-natal.pt</span>
@@ -99,7 +95,6 @@
     Sap.copy(REMIND, rb, "Copiado. Cola no grupo");
   });
   document.getElementById("remind").hidden = false;
-  document.getElementById("other").hidden = false;
 })();
 </script>
 </body>
