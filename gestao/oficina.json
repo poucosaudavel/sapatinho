@@ -4,8 +4,8 @@
       "estado": "trabalhar",
       "feitos": 2,
       "tarefa": "Noite: agendar 18 dez no Meta",
-      "ultimo": "Publicado o reparo da /org (nome longo)",
-      "atualizado": "2026-11-19T08:05:00+00:00"
+      "ultimo": "Turno da tarde: rodapé dos emails pronto e revisto",
+      "atualizado": "2026-11-19T15:52:02+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -43,11 +43,11 @@
       "ultimo": "282 links e 76 pesquisas da Amazon confirmados"
     },
     "produto": {
-      "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "Rodapé dos emails por /ir/email/ (até 21 nov)",
-      "atualizado": "2026-11-19T08:05:00+00:00",
-      "ultimo": "Nome longo na /org legível no telemóvel"
+      "estado": "espera",
+      "feitos": 3,
+      "tarefa": "Rodapé dos emails pronto: espera o «sim» do Diogo para publicar a API",
+      "atualizado": "2026-11-19T15:52:02+00:00",
+      "ultimo": "Ramo do rodapé «Tens outro grupo?» nos emails, 16/16 testes"
     },
     "suporte": {
       "estado": "descanso",
@@ -65,10 +65,10 @@
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 1,
+      "feitos": 2,
       "tarefa": "Rever o ramo do rodapé dos emails",
-      "atualizado": "2026-11-19T08:05:00+00:00",
-      "ultimo": "Aprovou o reparo da /org"
+      "atualizado": "2026-11-19T15:52:02+00:00",
+      "ultimo": "Aprovou o ramo do rodapé dos emails"
     }
   },
   "estado": {
@@ -77,12 +77,8 @@
       "produto: rodapé dos emails por /ir/email/ (API só com o «sim» do Diogo)",
       "Fechar as experiências de 20 nov"
     ],
-    "preciso": "Um «sim» para publicar a API com a linha nova no rodapé dos emails (quando o ramo estiver pronto).",
+    "preciso": "«Sim» para publicar a API com o rodapé «Tens outro grupo?» nos emails; abrir o Chrome no PC para o turno das 19:44.",
     "diario": [
-      {
-        "quando": "2026-11-14T08:45:00Z",
-        "texto": "Manhã de 14 nov: Chrome desligado. Prontos e revistos: endereços /ir/, privacidade do /r, filtro de preço e Amazon no /r, frase de privacidade do início. Pacote do site à espera de publicação."
-      },
       {
         "quando": "2026-11-14T12:05:00Z",
         "texto": "Almoço: Chrome do PC ainda desligado (sem caixa, Meta nem publicação). produto fez a página «Vê um exemplo» num ramo."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-19T11:55:00+00:00",
         "texto": "Almoço: sem novidades; site e API a funcionar."
+      },
+      {
+        "quando": "2026-11-19T15:52:02+00:00",
+        "texto": "Tarde: rodapé dos emails pronto e aprovado pelo qa; espera o «sim» do Diogo para a API. Site e API a funcionar."
       }
     ],
     "recados": [
@@ -204,6 +204,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 93
     },
-    "atualizado": "2026-11-19T11:55:00+00:00"
+    "atualizado": "2026-11-19T15:52:02+00:00"
   }
 }
