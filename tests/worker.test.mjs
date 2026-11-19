@@ -125,6 +125,35 @@ test("segundo email: 3 ideias dentro do limite, com link para o site e nunca par
   }
 });
 
+test("rodapé «Tens outro grupo?» nos 2 emails e «Mais ideias» via /ir/email-prendas/", async () => {
+  const s = setup();
+  const r = await create({ g: "Natal <b>", l: 12, people: people(["Ana", "Rui", "Eva"]) }, s.env, req("/", {}));
+  const linha = "Tens outro grupo (trabalho, amigos)? <a href=\"https://sapatinho-natal.pt/ir/email/\"";
+  const convite = s.sent[0];
+  assert.ok(convite.htmlContent.includes(linha), "linha no HTML do convite");
+  assert.ok(convite.htmlContent.includes("Faz o vosso sorteio em sapatinho-natal.pt</a>"));
+  assert.ok(convite.textContent.includes("Tens outro grupo (trabalho, amigos)? Faz o vosso sorteio em sapatinho-natal.pt: https://sapatinho-natal.pt/ir/email/"));
+  assert.ok(convite.htmlContent.indexOf("Tens outro grupo") < convite.htmlContent.indexOf("Recebeste este email porque"));
+  const code = r.links[0].link.split("/r/")[1];
+  s.sent.length = 0;
+  await confirm({ code }, s.env);
+  const conf = s.sent[0];
+  assert.ok(conf.htmlContent.includes(linha), "linha no HTML da confirmação");
+  assert.ok(conf.textContent.includes("https://sapatinho-natal.pt/ir/email/"));
+  assert.ok(conf.htmlContent.includes('href="https://sapatinho-natal.pt/ir/email-prendas/ate-10/"'));
+  assert.ok(conf.textContent.includes("Mais ideias: https://sapatinho-natal.pt/ir/email-prendas/ate-10/"));
+  for (const m of [conf, convite]) {
+    assert.ok(!/utm_source|whatsapp|amazon|tag=/i.test(m.htmlContent + m.textContent));
+    assert.ok(!m.htmlContent.includes("Natal <b>"), "grupo escapado");
+  }
+  for (const [l, f] of [[3, "ate-5"], [15, "ate-15"], [25, "ate-20"], [60, "ate-50"], [null, "ideias"]]) {
+    const t = setup();
+    const c = await sign(encode({ v: 2, g: "G", l, d: null, n: "Ana", t: "Rui", p: ["Ana", "Rui", "Eva"], e: "a@exemplo.pt" }), t.env);
+    await confirm({ code: c }, t.env);
+    assert.ok(t.sent[0].htmlContent.includes(`/ir/email-prendas/${f}/"`), `${l}: ${f}`);
+  }
+});
+
 const mail30 = (k) => Array.from({ length: 30 }, (_, i) => ({ n: "P" + k + "x" + i, e: `p${k}x${i}@exemplo.pt` }));
 
 test("um só IP não esgota a quota do site: no máximo 90 convites por dia", async () => {
