@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
+      "estado": "espera",
       "feitos": 2,
-      "tarefa": "Noite: agendar 18 dez no Meta",
-      "ultimo": "Turno da tarde: rodapé dos emails pronto e revisto",
-      "atualizado": "2026-11-19T15:52:02+00:00"
+      "tarefa": "Manhã: agendar 18 dez no Meta (precisa do Chrome)",
+      "ultimo": "Noite: site verificado, 7 páginas /ir/email* no ar",
+      "atualizado": "2026-11-19T20:00:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -24,9 +24,9 @@
     "social-media": {
       "estado": "descanso",
       "feitos": 0,
-      "tarefa": "Dezembro pronto; o gestor agenda no Meta",
+      "tarefa": "18 dez por agendar no Meta (Chrome desligado)",
       "ultimo": "17 dez agendado no Meta (FB + IG)",
-      "atualizado": "2026-11-18T20:40:00+00:00"
+      "atualizado": "2026-11-19T20:00:00+00:00"
     },
     "analista": {
       "estado": "descanso",
@@ -45,9 +45,9 @@
     "produto": {
       "estado": "espera",
       "feitos": 3,
-      "tarefa": "Rodapé dos emails pronto: espera o «sim» do Diogo para publicar a API",
-      "atualizado": "2026-11-19T15:52:02+00:00",
-      "ultimo": "Ramo do rodapé «Tens outro grupo?» nos emails, 16/16 testes"
+      "tarefa": "Rodapé dos emails: falta publicar a API (chave sem acesso a Workers)",
+      "atualizado": "2026-11-19T20:00:00+00:00",
+      "ultimo": "Site com as 7 páginas /ir/email* publicado (17:20)"
     },
     "suporte": {
       "estado": "descanso",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Meta: agendar 18 dez (turno da noite)",
-      "produto: rodapé dos emails por /ir/email/ (API só com o «sim» do Diogo)",
-      "Fechar as experiências de 20 nov"
+      "Meta: agendar 18 dez (stories e feed) com o Chrome",
+      "analista: fechar as experiências de 20 nov (/ir/redes/, lembrete, /ir/sorteio/) e ler o Google pós-atualização",
+      "Publicar a API do rodapé dos emails quando a chave tiver acesso a Workers"
     ],
-    "preciso": "«Sim» para publicar a API com o rodapé «Tens outro grupo?» nos emails; abrir o Chrome no PC para o turno das 19:44.",
+    "preciso": "Abrir o Chrome no PC com a extensão do Claude (desligado desde a tarde). Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API) para o rodapé dos emails.",
     "diario": [
-      {
-        "quando": "2026-11-14T12:05:00Z",
-        "texto": "Almoço: Chrome do PC ainda desligado (sem caixa, Meta nem publicação). produto fez a página «Vê um exemplo» num ramo."
-      },
       {
         "quando": "2026-11-14T12:50:00Z",
         "texto": "Chrome de volta: site de 14 nov publicado e verificado, sem caminhos /r/ na Web Analytics, Meta 12 dez agendado."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-19T15:52:02+00:00",
         "texto": "Tarde: rodapé dos emails pronto e aprovado pelo qa; espera o «sim» do Diogo para a API. Site e API a funcionar."
+      },
+      {
+        "quando": "2026-11-19T20:00:00+00:00",
+        "texto": "Noite: Chrome do PC desligado (sem caixa nem Meta; 18 dez fica para a manhã). Site e /ir/email/ verificados: tudo 200, API inválida 400."
       }
     ],
     "recados": [
@@ -204,6 +204,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 93
     },
-    "atualizado": "2026-11-19T15:52:02+00:00"
+    "atualizado": "2026-11-19T20:00:00+00:00"
   }
 }
