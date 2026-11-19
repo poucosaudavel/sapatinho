@@ -80,10 +80,6 @@
     "preciso": "Um «sim» para publicar a API com a linha nova no rodapé dos emails (quando o ramo estiver pronto).",
     "diario": [
       {
-        "quando": "2026-11-13T20:05:00Z",
-        "texto": "Noite: reparos das /ir/ feitos e revistos pelo qa; sem Chrome, a publicação fica para amanhã de manhã."
-      },
-      {
         "quando": "2026-11-14T08:45:00Z",
         "texto": "Manhã de 14 nov: Chrome desligado. Prontos e revistos: endereços /ir/, privacidade do /r, filtro de preço e Amazon no /r, frase de privacidade do início. Pacote do site à espera de publicação."
       },
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-19T08:05:00+00:00",
         "texto": "Manhã: teste de entrega OK (Caixa principal, < 1 min); KPIs de quinta; reparo do nome longo na /org revisto e publicado; Meta 18 dez fica para a noite."
+      },
+      {
+        "quando": "2026-11-19T11:55:00+00:00",
+        "texto": "Almoço: sem novidades; site e API a funcionar."
       }
     ],
     "recados": [
@@ -204,6 +204,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 93
     },
-    "atualizado": "2026-11-19T08:05:00+00:00"
+    "atualizado": "2026-11-19T11:55:00+00:00"
   }
 }
