@@ -227,13 +227,18 @@ async function sendBatch(messages, env) {
 /* ---------- email templates ---------- */
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmtDate = (iso) => { if (!iso) return ""; const [, mo, da] = iso.split("-"); return `${parseInt(da, 10)} de ${MESES[parseInt(mo, 10) - 1]}`; };
+/* Rodapé dos 2 emails (19 nov): igual para todos, sem nomes nem links pessoais. Conta-se em /ir/email/. */
+const OTHER_GROUP = "Tens outro grupo (trabalho, amigos)?";
+const OTHER_GROUP_URL = `${SITE}/ir/email/`;
+const otherGroupText = () => `${OTHER_GROUP} Faz o vosso sorteio em sapatinho-natal.pt: ${OTHER_GROUP_URL}`;
 function frame(inner) {
   return `<!doctype html><html lang="pt-PT"><body style="margin:0;background:#0f2a22;padding:32px 12px;font-family:Helvetica,Arial,sans-serif">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:480px">
 <tr><td style="padding:0 4px 18px;font-family:Georgia,serif;font-size:26px;color:#f7f1e6">Sapatinho<span style="color:#d9a441">.</span></td></tr>
 <tr><td style="background:#f7f1e6;border-radius:6px;border-top:6px solid #c8452c;padding:30px 28px;color:#1d2a25;font-size:16px;line-height:1.55">${inner}</td></tr>
-<tr><td style="padding:18px 4px 0;font-size:12px;color:#8fa59a">Recebeste este email porque alguém te incluiu num amigo secreto em sapatinho-natal.pt. Dúvidas: responde a este email.</td></tr>
+<tr><td style="padding:18px 4px 0;font-size:13px;color:#c9d6cf">${esc(OTHER_GROUP)} <a href="${esc(OTHER_GROUP_URL)}" style="color:#d9a441;font-weight:bold">Faz o vosso sorteio em sapatinho-natal.pt</a></td></tr>
+<tr><td style="padding:10px 4px 0;font-size:12px;color:#8fa59a">Recebeste este email porque alguém te incluiu num amigo secreto em sapatinho-natal.pt. Dúvidas: responde a este email.</td></tr>
 </table></td></tr></table></body></html>`;
 }
 const details = (l, d) => [l ? `Limite da prenda: <b>${l} €</b>` : "", d ? `Troca de prendas: <b>${esc(fmtDate(d))}</b>` : ""].filter(Boolean).join("<br>");
@@ -249,7 +254,7 @@ ${button(link, "Sortear o meu amigo secreto")}
 <p style="margin:0;font-size:13px;color:#5f6d66">Este link é só teu. Não o reencaminhes a ninguém. Depois de sortear, enviamos-te outro email com o nome, para confirmares sempre que quiseres.</p>`);
 }
 function inviteText({ n, g, l, d, link }) {
-  return `Olá, ${n}!\n\nEstás no amigo secreto «${g}».${l ? `\nLimite da prenda: ${l} €.` : ""}${d ? `\nTroca de prendas: ${fmtDate(d)}.` : ""}\n\nAbre o teu link pessoal para sortear:\n${link}\n\nEste link é só teu. Não o reencaminhes.\n\nSapatinho · sapatinho-natal.pt`;
+  return `Olá, ${n}!\n\nEstás no amigo secreto «${g}».${l ? `\nLimite da prenda: ${l} €.` : ""}${d ? `\nTroca de prendas: ${fmtDate(d)}.` : ""}\n\nAbre o teu link pessoal para sortear:\n${link}\n\nEste link é só teu. Não o reencaminhes.\n\n${otherGroupText()}\n\nSapatinho · sapatinho-natal.pt`;
 }
 function confirmHtml(o, link) {
   const s = suggestions(o.l);
@@ -282,18 +287,14 @@ function suggestions(l) {
   const pool = tier ? IDEAS[tier].slice() : [...IDEAS["10"], ...IDEAS["20"]];
   const ideas = [];
   while (ideas.length < 3 && pool.length) ideas.push(pool.splice(rnd(pool.length), 1)[0]);
-  const utm = "?utm_source=email&utm_medium=confirmacao";
-  const url = tier === "5" ? `${SITE}/prendas-amigo-secreto-ate-5-euros/${utm}`
-    : tier === "10" ? `${SITE}/prendas-amigo-secreto-ate-10-euros/${utm}`
-    : tier === "15" ? `${SITE}/prendas-amigo-secreto-ate-15-euros/${utm}`
-    : tier === "20" ? `${SITE}/prendas-amigo-secreto-ate-20-euros/${utm}`
-    : `${SITE}/ideias-de-prendas-amigo-secreto/${utm}${tier ? "#ate-" + tier : ""}`;
+  // Passa por /ir/email-prendas/<faixa>/ (páginas fixas de tools/seo/build.py, IR) para a Cloudflare contar os cliques.
+  const url = `${SITE}/ir/email-prendas/${tier ? "ate-" + tier : "ideias"}/`;
   const label = tier ? `até ${tier} €` : "de prendas";
   return { ideas, url, label };
 }
 function confirmText(o, link) {
   const s = suggestions(o.l);
-  return `${o.n}, o teu amigo secreto é: ${o.t}\n\nGrupo: ${o.g}${o.l ? `\nLimite da prenda: ${o.l} €` : ""}${o.d ? `\nTroca de prendas: ${fmtDate(o.d)}` : ""}\n\nVer o teu sorteio: ${link}\n\nGuarda segredo!\n\nTrês ideias ${s.label}:\n${s.ideas.map((t) => "- " + t).join("\n")}\nMais ideias: ${s.url}\n\nSapatinho · sapatinho-natal.pt`;
+  return `${o.n}, o teu amigo secreto é: ${o.t}\n\nGrupo: ${o.g}${o.l ? `\nLimite da prenda: ${o.l} €` : ""}${o.d ? `\nTroca de prendas: ${fmtDate(o.d)}` : ""}\n\nVer o teu sorteio: ${link}\n\nGuarda segredo!\n\nTrês ideias ${s.label}:\n${s.ideas.map((t) => "- " + t).join("\n")}\nMais ideias: ${s.url}\n\n${otherGroupText()}\n\nSapatinho · sapatinho-natal.pt`;
 }
 
 /* ---------- anonymous counters (no names, no emails) ---------- */

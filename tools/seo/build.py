@@ -471,6 +471,15 @@ IR = {
     "prendas/engracadas": ("/prendas-engracadas-amigo-secreto/", "prendas engraçadas"),
     "prendas/ideias": ("/ideias-de-prendas-amigo-secreto/", "ideias de prendas"),
     "prendas/ultima-hora": ("/prendas-ultima-hora-amigo-secreto/", "prendas de última hora"),
+    # Emails do worker (19 nov): rodapé «Tens outro grupo?» nos 2 emails e «Ver mais ideias» do email de confirmação.
+    # Um endereço por faixa de suggestions() em worker/worker.js; o total soma-se pelo prefixo /ir/email-prendas/.
+    "email": ("/criar", "criar um sorteio"),
+    "email-prendas/ate-5": ("/prendas-amigo-secreto-ate-5-euros/", "prendas até 5 €"),
+    "email-prendas/ate-10": ("/prendas-amigo-secreto-ate-10-euros/", "prendas até 10 €"),
+    "email-prendas/ate-15": ("/prendas-amigo-secreto-ate-15-euros/", "prendas até 15 €"),
+    "email-prendas/ate-20": ("/prendas-amigo-secreto-ate-20-euros/", "prendas até 20 €"),
+    "email-prendas/ate-50": ("/ideias-de-prendas-amigo-secreto/#ate-50", "prendas até 50 €"),
+    "email-prendas/ideias": ("/ideias-de-prendas-amigo-secreto/", "ideias de prendas"),
 }
 
 def write_ir():
