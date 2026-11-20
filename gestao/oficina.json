@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "espera",
-      "feitos": 2,
-      "tarefa": "Manhã: agendar 18 dez no Meta (precisa do Chrome)",
-      "ultimo": "Noite: site verificado, 7 páginas /ir/email* no ar",
-      "atualizado": "2026-11-19T20:00:00+00:00"
+      "feitos": 3,
+      "tarefa": "Agendar 18 e 19 dez no Meta quando o Chrome voltar",
+      "ultimo": "Manhã: site OK, experiências fechadas, retrospetiva da semana",
+      "atualizado": "2026-11-20T08:15:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -22,17 +22,17 @@
       "atualizado": "2026-11-15T08:05:00Z"
     },
     "social-media": {
-      "estado": "descanso",
+      "estado": "espera",
       "feitos": 0,
-      "tarefa": "18 dez por agendar no Meta (Chrome desligado)",
+      "tarefa": "18 e 19 dez por agendar no Meta (Chrome desligado)",
       "ultimo": "17 dez agendado no Meta (FB + IG)",
-      "atualizado": "2026-11-19T20:00:00+00:00"
+      "atualizado": "2026-11-20T08:15:00+00:00"
     },
     "analista": {
-      "estado": "descanso",
-      "feitos": 1,
-      "tarefa": "Reler as /ir/ e fechar experiências a 20 nov",
-      "atualizado": "2026-11-19T08:05:00+00:00",
+      "estado": "espera",
+      "feitos": 0,
+      "tarefa": "Ler painel, Cloudflare e Google quando o Chrome voltar",
+      "atualizado": "2026-11-20T08:15:00+00:00",
       "ultimo": "KPIs de quinta: 3 sorteios na semana, Google ainda em baixo"
     },
     "afiliados": {
@@ -44,28 +44,28 @@
     },
     "produto": {
       "estado": "espera",
-      "feitos": 3,
+      "feitos": 1,
       "tarefa": "Rodapé dos emails: falta publicar a API (chave sem acesso a Workers)",
-      "atualizado": "2026-11-19T20:00:00+00:00",
-      "ultimo": "Site com as 7 páginas /ir/email* publicado (17:20)"
+      "atualizado": "2026-11-20T08:15:00+00:00",
+      "ultimo": "Teste de sexta a 390 px: sem links partidos nem scroll"
     },
     "suporte": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Caixa e site em todos os turnos",
-      "atualizado": "2026-11-19T08:05:00+00:00",
-      "ultimo": "Teste de entrega: Caixa principal em menos de 1 min"
+      "tarefa": "Caixa do sapatinhonatal quando o Chrome voltar",
+      "atualizado": "2026-11-20T08:15:00+00:00",
+      "ultimo": "Site e API a responder (7:50)"
     },
     "inovacao": {
       "estado": "descanso",
       "feitos": 1,
       "tarefa": "Ideias de amanhã",
-      "atualizado": "2026-11-19T08:05:00+00:00",
-      "ultimo": "Ideia: «Tens outro grupo?» no rodapé dos emails"
+      "atualizado": "2026-11-20T08:15:00+00:00",
+      "ultimo": "Ideia: post do Diogo no LinkedIn"
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 2,
+      "feitos": 0,
       "tarefa": "Rever o ramo do rodapé dos emails",
       "atualizado": "2026-11-19T15:52:02+00:00",
       "ultimo": "Aprovou o ramo do rodapé dos emails"
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Meta: agendar 18 dez (stories e feed) com o Chrome",
-      "analista: fechar as experiências de 20 nov (/ir/redes/, lembrete, /ir/sorteio/) e ler o Google pós-atualização",
+      "Meta: agendar 18 e 19 dez com o Chrome",
+      "analista: painel, Cloudflare e Google por página (fim da atualização ~24 nov)",
       "Publicar a API do rodapé dos emails quando a chave tiver acesso a Workers"
     ],
-    "preciso": "Abrir o Chrome no PC com a extensão do Claude (desligado desde a tarde). Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API) para o rodapé dos emails.",
+    "preciso": "Abrir o Chrome no PC com a extensão do Claude (desligado desde 19 nov à tarde). Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API). Dizer se queres fazer um post no teu LinkedIn.",
     "diario": [
-      {
-        "quando": "2026-11-14T12:50:00Z",
-        "texto": "Chrome de volta: site de 14 nov publicado e verificado, sem caminhos /r/ na Web Analytics, Meta 12 dez agendado."
-      },
       {
         "quando": "2026-11-14T20:05:00Z",
         "texto": "Noite: «Ver um exemplo» revisto pelo qa, junto e publicado (deploy direto, sem browser). Chrome desligado: sem caixa nem Meta."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-19T20:00:00+00:00",
         "texto": "Noite: Chrome do PC desligado (sem caixa nem Meta; 18 dez fica para a manhã). Site e /ir/email/ verificados: tudo 200, API inválida 400."
+      },
+      {
+        "quando": "2026-11-20T08:15:00+00:00",
+        "texto": "Manhã: Chrome desligado; site e API OK; experiências /ir/ fechadas (ficam); retrospetiva da semana; ideia do LinkedIn para o Diogo."
       }
     ],
     "recados": [
@@ -195,6 +195,13 @@
         "para": "gestor",
         "texto": "Ideia do rodapé dos emails precisa do «sim» do Diogo à API",
         "estado": "entregue"
+      },
+      {
+        "quando": "2026-11-20",
+        "de": "inovacao",
+        "para": "gestor",
+        "texto": "Ideia do post no LinkedIn do Diogo (depende dele)",
+        "estado": "entregue"
       }
     ],
     "resultados": {
@@ -204,6 +211,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 93
     },
-    "atualizado": "2026-11-19T20:00:00+00:00"
+    "atualizado": "2026-11-20T08:15:00+00:00"
   }
 }
