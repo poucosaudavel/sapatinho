@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 5,
-      "tarefa": "Meta 19 dez: quiz 17:00 e feed 20:30 no turno da noite",
-      "ultimo": "Tarde: feed de 19 dez 12:30 agendado (FB + IG)",
-      "atualizado": "2026-11-20T16:05:00+00:00"
+      "feitos": 7,
+      "tarefa": "Meta 20 dez (stories e feed) à medida que entram na janela",
+      "ultimo": "Noite: 19 dez completo no Meta (quiz 17:00 e feed 20:30)",
+      "atualizado": "2026-11-20T20:35:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Meta: 19 dez quiz 17:00 e feed 20:30 (turno da noite)",
-      "analista: painel, Cloudflare e Google por página (fim da atualização ~24 nov)",
+      "Meta 20 dez (stories e feed 20:30) à medida que entram na janela",
+      "afiliados (sábado) e prazo da Awin (22 nov)",
       "Publicar a API do rodapé dos emails quando a chave tiver acesso a Workers"
     ],
     "preciso": "Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API do rodapé). Dizer se queres fazer um post no teu LinkedIn. Deixar o Chrome do PC aberto.",
     "diario": [
-      {
-        "quando": "2026-11-15T11:55:00Z",
-        "texto": "Almoço: Chrome ainda desligado e sem acesso ao site; só verificação. Recado da regra 3 confirmado resolvido."
-      },
       {
         "quando": "2026-11-15T15:55:00Z",
         "texto": "Tarde: Chrome ainda desligado e sem acesso ao site; nada por juntar. Só verificação."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-20T16:05:00+00:00",
         "texto": "Tarde: caixa sem novidades; feed de 19 dez 12:30 agendado no Meta (FB + IG)."
+      },
+      {
+        "quando": "2026-11-20T20:35:00+00:00",
+        "texto": "Noite: caixa vazia; 19 dez completo no Meta (quiz 17:00 e feed 20:30, Facebook e Instagram)."
       }
     ],
     "recados": [
@@ -211,6 +211,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 93
     },
-    "atualizado": "2026-11-20T16:05:00+00:00"
+    "atualizado": "2026-11-20T20:35:00+00:00"
   }
 }
