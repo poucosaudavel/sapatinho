@@ -24,9 +24,9 @@
     "social-media": {
       "estado": "espera",
       "feitos": 0,
-      "tarefa": "18 e 19 dez por agendar no Meta (Chrome desligado)",
-      "ultimo": "17 dez agendado no Meta (FB + IG)",
-      "atualizado": "2026-11-20T08:15:00+00:00"
+      "tarefa": "Agendar o resto de 19 dez quando entrar na janela",
+      "ultimo": "18 dez agendado no Facebook e Instagram",
+      "atualizado": "2026-11-20T12:15:00+00:00"
     },
     "analista": {
       "estado": "espera",
@@ -79,10 +79,6 @@
     ],
     "preciso": "Abrir o Chrome no PC com a extensão do Claude (desligado desde 19 nov à tarde). Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API). Dizer se queres fazer um post no teu LinkedIn.",
     "diario": [
-      {
-        "quando": "2026-11-14T20:05:00Z",
-        "texto": "Noite: «Ver um exemplo» revisto pelo qa, junto e publicado (deploy direto, sem browser). Chrome desligado: sem caixa nem Meta."
-      },
       {
         "quando": "2026-11-15T08:05:00Z",
         "texto": "Manhã: emails do /criar a 360 px e «Tens outro grupo?» no /org, revistos pelo qa e publicados. Chrome desligado: sem caixa, Meta nem números."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-20T08:15:00+00:00",
         "texto": "Manhã: Chrome desligado; site e API OK; experiências /ir/ fechadas (ficam); retrospetiva da semana; ideia do LinkedIn para o Diogo."
+      },
+      {
+        "quando": "2026-11-20T12:15:00+00:00",
+        "texto": "Almoço: Chrome de volta; Meta de 18 dez e manhã de 19 dez agendados (FB + IG)."
       }
     ],
     "recados": [
@@ -211,6 +211,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 93
     },
-    "atualizado": "2026-11-20T08:15:00+00:00"
+    "atualizado": "2026-11-20T12:15:00+00:00"
   }
 }
