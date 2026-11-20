@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "espera",
-      "feitos": 3,
-      "tarefa": "Agendar 18 e 19 dez no Meta quando o Chrome voltar",
-      "ultimo": "Manhã: site OK, experiências fechadas, retrospetiva da semana",
-      "atualizado": "2026-11-20T08:15:00+00:00"
+      "estado": "trabalhar",
+      "feitos": 5,
+      "tarefa": "Meta 19 dez: quiz 17:00 e feed 20:30 no turno da noite",
+      "ultimo": "Tarde: feed de 19 dez 12:30 agendado (FB + IG)",
+      "atualizado": "2026-11-20T16:05:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Meta: agendar 18 e 19 dez com o Chrome",
+      "Meta: 19 dez quiz 17:00 e feed 20:30 (turno da noite)",
       "analista: painel, Cloudflare e Google por página (fim da atualização ~24 nov)",
       "Publicar a API do rodapé dos emails quando a chave tiver acesso a Workers"
     ],
-    "preciso": "Abrir o Chrome no PC com a extensão do Claude (desligado desde 19 nov à tarde). Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API). Dizer se queres fazer um post no teu LinkedIn.",
+    "preciso": "Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API do rodapé). Dizer se queres fazer um post no teu LinkedIn. Deixar o Chrome do PC aberto.",
     "diario": [
-      {
-        "quando": "2026-11-15T08:05:00Z",
-        "texto": "Manhã: emails do /criar a 360 px e «Tens outro grupo?» no /org, revistos pelo qa e publicados. Chrome desligado: sem caixa, Meta nem números."
-      },
       {
         "quando": "2026-11-15T11:55:00Z",
         "texto": "Almoço: Chrome ainda desligado e sem acesso ao site; só verificação. Recado da regra 3 confirmado resolvido."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-20T12:15:00+00:00",
         "texto": "Almoço: Chrome de volta; Meta de 18 dez e manhã de 19 dez agendados (FB + IG)."
+      },
+      {
+        "quando": "2026-11-20T16:05:00+00:00",
+        "texto": "Tarde: caixa sem novidades; feed de 19 dez 12:30 agendado no Meta (FB + IG)."
       }
     ],
     "recados": [
@@ -211,6 +211,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 93
     },
-    "atualizado": "2026-11-20T12:15:00+00:00"
+    "atualizado": "2026-11-20T16:05:00+00:00"
   }
 }
