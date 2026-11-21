@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 7,
-      "tarefa": "Meta 20 dez (stories e feed) à medida que entram na janela",
-      "ultimo": "Noite: 19 dez completo no Meta (quiz 17:00 e feed 20:30)",
-      "atualizado": "2026-11-20T20:35:00+00:00"
+      "feitos": 2,
+      "tarefa": "Meta 20 dez: stories 8:30 e 10:00 no almoço, 13:00 à tarde, 18:00 e feed à noite",
+      "ultimo": "Manhã: caixas vazias, site OK, números lidos, relatório ao Diogo",
+      "atualizado": "2026-11-21T08:05:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -22,46 +22,46 @@
       "atualizado": "2026-11-15T08:05:00Z"
     },
     "social-media": {
-      "estado": "espera",
+      "estado": "trabalhar",
       "feitos": 0,
-      "tarefa": "Agendar o resto de 19 dez quando entrar na janela",
+      "tarefa": "20 dez no Meta ao longo do dia (último dia do calendário)",
       "ultimo": "18 dez agendado no Facebook e Instagram",
-      "atualizado": "2026-11-20T12:15:00+00:00"
+      "atualizado": "2026-11-21T08:05:00+00:00"
     },
     "analista": {
-      "estado": "espera",
-      "feitos": 0,
-      "tarefa": "Ler painel, Cloudflare e Google quando o Chrome voltar",
-      "atualizado": "2026-11-20T08:15:00+00:00",
-      "ultimo": "KPIs de quinta: 3 sorteios na semana, Google ainda em baixo"
+      "estado": "descanso",
+      "feitos": 1,
+      "tarefa": "KPIs completos na segunda (23 nov)",
+      "atualizado": "2026-11-21T08:05:00+00:00",
+      "ultimo": "Leitura rápida: 20 nov 0 sorteios; Google 0 cliques em 13–19 nov"
     },
     "afiliados": {
       "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Sábado: rotina; Awin até 22 nov",
-      "atualizado": "2026-11-18T08:20:00+00:00",
-      "ultimo": "282 links e 76 pesquisas da Amazon confirmados"
+      "feitos": 1,
+      "tarefa": "Awin: decidir a 22 nov se as 7 lojas pendentes ficam perdidas",
+      "atualizado": "2026-11-21T08:05:00+00:00",
+      "ultimo": "282 links da Amazon e 76 pesquisas com filtro verificados: nada a corrigir"
     },
     "produto": {
       "estado": "espera",
-      "feitos": 1,
+      "feitos": 0,
       "tarefa": "Rodapé dos emails: falta publicar a API (chave sem acesso a Workers)",
       "atualizado": "2026-11-20T08:15:00+00:00",
       "ultimo": "Teste de sexta a 390 px: sem links partidos nem scroll"
     },
     "suporte": {
       "estado": "descanso",
-      "feitos": 1,
+      "feitos": 0,
       "tarefa": "Caixa do sapatinhonatal quando o Chrome voltar",
       "atualizado": "2026-11-20T08:15:00+00:00",
       "ultimo": "Site e API a responder (7:50)"
     },
     "inovacao": {
-      "estado": "descanso",
+      "estado": "espera",
       "feitos": 1,
-      "tarefa": "Ideias de amanhã",
-      "atualizado": "2026-11-20T08:15:00+00:00",
-      "ultimo": "Ideia: post do Diogo no LinkedIn"
+      "tarefa": "À espera do Diogo: LinkedIn e botão da Página do Facebook",
+      "atualizado": "2026-11-21T08:05:00+00:00",
+      "ultimo": "Ideia: link de contagem no botão e numa publicação afixada da Página do Facebook"
     },
     "qa": {
       "estado": "descanso",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Meta 20 dez (stories e feed 20:30) à medida que entram na janela",
-      "afiliados (sábado) e prazo da Awin (22 nov)",
+      "Meta 20 dez ao longo dos 3 turnos (último dia do calendário)",
+      "Awin: decidir a 22 nov com o que houver no Gmail",
       "Publicar a API do rodapé dos emails quando a chave tiver acesso a Workers"
     ],
-    "preciso": "Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API do rodapé). Dizer se queres fazer um post no teu LinkedIn. Deixar o Chrome do PC aberto.",
+    "preciso": "Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API do rodapé). Dizer se queres o post no teu LinkedIn e o link no botão da Página do Facebook. Deixar o Chrome do PC aberto.",
     "diario": [
-      {
-        "quando": "2026-11-15T15:55:00Z",
-        "texto": "Tarde: Chrome ainda desligado e sem acesso ao site; nada por juntar. Só verificação."
-      },
       {
         "quando": "2026-11-15T19:55:00Z",
         "texto": "Noite: Chrome ainda desligado e sem acesso ao site; nada por publicar. Prioridades de segunda registadas."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-20T20:35:00+00:00",
         "texto": "Noite: caixa vazia; 19 dez completo no Meta (quiz 17:00 e feed 20:30, Facebook e Instagram)."
+      },
+      {
+        "quando": "2026-11-21T08:05:00+00:00",
+        "texto": "Manhã: caixas vazias, site OK; 20 nov sem sorteios; Google ainda a zero; afiliados sem nada a corrigir; ideia nova do Facebook à espera do Diogo."
       }
     ],
     "recados": [
@@ -209,8 +209,8 @@
       "receita_semana": 0,
       "cliques_google_semana": 0,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 93
+      "taxa_sorteio": 94
     },
-    "atualizado": "2026-11-20T20:35:00+00:00"
+    "atualizado": "2026-11-21T08:05:00+00:00"
   }
 }

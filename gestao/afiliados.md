@@ -53,3 +53,16 @@ Links Amazon (7 nov): 282 links em `site/`, todos pesquisas `amazon.es/s?k=`, to
 **Preços** (amazon.es no Chrome, 76 pesquisas: as 64 dos guias de 5/10/15/20 € e as 12 do /r; feito sem a tag para não contar cliques, exceto 1 visita de teste com `sapatinhonata-21`): todas devolvem produtos (28 a 60 na 1.ª página). O filtro `p_36` é respeitado: o preço mediano fica dentro do limite em todas. Os preços mostrados com entrega em Portugal chegam a ~1–2 % acima do limite (ex.: 5,07 € no filtro de 5 €, 15,24 € no de 15 €, 20,32 € no de 20 €; é o IVA de Portugal sobre o preço base) e há poucos casos soltos acima de +15 % (variantes com «a partir de»). Nenhuma ideia precisa de troca. Mais justas: «mapa mundi rascar» (15 €, só 28 resultados, mediana 14,22 €) e «bateria externa pequeña» (20 €, mediana 17,99 €).
 
 **Correção** (ramo `afiliados/18nov`, commit 2018df0, por rever pelo `qa`): a caixa «Escolhas rápidas» (texto comum `QUICK_INTRO`) passa a dizer «Os preços são aproximados»; nos guias até 5 € e até 10 € faltava a palavra.
+
+
+## Rotina de 21 nov 2026 (sábado, afiliados)
+
+Feito a partir do shell do PC, sem Chrome (ocupado pelo gestor) e sem git. A Awin fica com o gestor.
+
+**Links** (build de hoje numa cópia fora do projeto; saiu igual ao `site/` atual, 0 diferenças): 282 links da Amazon em 14 páginas dos guias, todos pesquisas `amazon.es/s?k=`, todos com `tag=sapatinhonata-21` e `rel="sponsored nofollow noopener"`. `/r` e `/sorteio` iguais, `sapatinhores-21`, 12 pesquisas com `p_36` por escalão (5/10/15/20 €) e `rel` certo. Redes (`marketing/build_cal.py` → `out/data.json`): 24 links, 18 com `sapatinhoredes-21` (de 11 nov em diante) e 6 com a tag antiga (1 a 10 nov, já publicados, como previsto). Worker (`worker/`): nenhum link da Amazon nos emails.
+
+**Pesquisas com filtro de preço:** 88 links / 64 pesquisas nos guias de 5, 10, 15 e 20 € (16/20/27/25 links), todos com `p_36:-500/-1000/-1500/-2000` igual ao limite da página; nenhum acima. Com as 12 do /r: 76 pesquisas, iguais a 18 nov. Aviso de afiliado em todas as 14 páginas; «preços aproximados… confirma o valor antes de comprar» nas páginas com preços (criancas e troca-de-prendas só têm pesquisas sem preço).
+
+**Amazon a responder:** sem rede (o `curl -sI` do PC recebe 403 «host is not on the allow list» do proxy para amazon.es; 4 pesquisas tentadas). Preços não revistos hoje; os de 18 nov continuam a valer.
+
+**Problemas:** nenhum. Nada a corrigir.

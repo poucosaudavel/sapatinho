@@ -1,6 +1,6 @@
 # KPIs e objetivos do Sapatinho até 20 dez 2026
 
-Gerido pelo gestor (`/gestor`). Revê-se **todas as segundas-feiras** com os números que o Diogo enviar. Atualizado a 30 out 2026; números de 19 nov 2026 (analista).
+Gerido pelo gestor (`/gestor`). Revê-se **todas as segundas-feiras** com os números que o Diogo enviar. Atualizado a 30 out 2026; números de 21 nov 2026 (gestor).
 
 Regra: só há metas com número quando há dados reais por trás. As metas de resultado ficam «a definir» até haver a primeira medição; os valores do `seo.md` são estimativas e estão marcados como tal.
 
@@ -129,6 +129,10 @@ Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima f
 | Cliques / impressões por dia (Google) | 10 nov 4 / 28 · 11 nov 0 / 0 · 12 nov 0 / 0 · 13 nov 0 / 3 · 14 nov 0 / 1 · 15 nov 0 / 0 · 16 nov 0 / 3 · 17 nov 0 / 0 (18 nov ainda sem dados). Últimos 7 dias com dados (11–17 nov): 0 / 7. 28 dias: 59 / 1,5 mil / 3,9 % / 12,1. Sem recuperação | 25 out a 17 nov | Search Console | 19 nov, ~8:00 |
 | Amazon | **15 cliques em novembro**, 0 pedidos, 0,00 €; 16 cliques e 0,00 € nos últimos 30 dias (20 out–18 nov). Por código: sem dados | 1 a 18 nov | Amazon Afiliados (atualizado 19 nov 02:42 CET) | 19 nov |
 | Bing Webmaster Tools | abre sem login; páginas indexadas: sem dados («os dados estão a ser processados, até 48 h») | site ligado a 18 nov | Bing Webmaster Tools | 19 nov |
+| Sorteios por dia | 19 nov: 1 (teste do `suporte`) · 20 nov: 0 | 19–20 nov | `/painel` | 21 nov, 7:46 |
+| Painel (total) | 24 sorteios / 157 convites / 148 sortearam (94 %), 6,5 pessoas por sorteio | até 20 nov | `/painel` | 21 nov, 7:46 |
+| Google (7 dias) | 0 cliques / 9 impressões / posição 43,3 | 13 a 19 nov | Search Console | 21 nov, 7:47 |
+| Páginas indexadas (Google) | 25 indexadas, 9 não indexadas (robots 4, canónica 3, redirecionamento 1, 404 1: todas de propósito ou já tratadas) | 21 nov | Search Console | 21 nov |
 
 ## Histórico
 
