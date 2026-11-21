@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
-      "feitos": 5,
-      "tarefa": "Meta 20 dez: story das 18:00 e feed das 20:30 à noite",
-      "ultimo": "Tarde: story de 20 dez das 13:00 agendada (Facebook e Instagram)",
-      "atualizado": "2026-11-21T16:00:00+00:00"
+      "estado": "descanso",
+      "feitos": 7,
+      "tarefa": "Domingo: decidir a Awin e preparar a semana do pico",
+      "ultimo": "Noite: story 18:00 e feed 20:30 de 20 dez agendados — calendário do Meta completo",
+      "atualizado": "2026-11-21T20:40:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -22,11 +22,11 @@
       "atualizado": "2026-11-15T08:05:00Z"
     },
     "social-media": {
-      "estado": "trabalhar",
+      "estado": "descanso",
       "feitos": 0,
-      "tarefa": "20 dez no Meta ao longo do dia (último dia do calendário)",
-      "ultimo": "18 dez agendado no Facebook e Instagram",
-      "atualizado": "2026-11-21T12:00:00+00:00"
+      "tarefa": "Calendário do Meta completo até 20 dez; responder a comentários e mensagens",
+      "ultimo": "20 dez agendado no Facebook e Instagram (último dia)",
+      "atualizado": "2026-11-21T20:40:00+00:00"
     },
     "analista": {
       "estado": "descanso",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Meta 20 dez ao longo dos 3 turnos (último dia do calendário)",
-      "Awin: decidir a 22 nov com o que houver no Gmail",
-      "Publicar a API do rodapé dos emails quando a chave tiver acesso a Workers"
+      "Awin: decidir hoje (22 nov) com o que houver no Gmail",
+      "Publicar a API do rodapé dos emails quando a chave tiver acesso a Workers",
+      "Preparar a semana do pico: KPIs de segunda e leitura do Google a 24–25 nov"
     ],
     "preciso": "Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API do rodapé). Dizer se queres o post no teu LinkedIn e o link no botão da Página do Facebook. Deixar o Chrome do PC aberto.",
     "diario": [
-      {
-        "quando": "2026-11-16T08:20:00Z",
-        "texto": "Manhã: títulos SEO de 3 guias e Enter seguro no /criar, revistos pelo qa e publicados. Chrome ainda desligado: sem números."
-      },
       {
         "quando": "2026-11-16T16:05:00Z",
         "texto": "Tarde: queda do Google investigada — o site está indexado e sem erros; coincide com a atualização do Google de novembro. Medir a 20 e 25 nov."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-21T12:00:00+00:00",
         "texto": "Almoço: caixas vazias; stories de 20 dez (8:30 e 10:00) agendadas no Facebook e no Instagram."
+      },
+      {
+        "quando": "2026-11-21T20:40:00+00:00",
+        "texto": "Noite: story das 18:00 e feed das 20:30 de 20 dez agendados (Facebook e Instagram). O calendário do Meta está completo até 20 dez. Caixa sem novidades."
       }
     ],
     "recados": [
@@ -211,6 +211,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 94
     },
-    "atualizado": "2026-11-21T12:00:00+00:00"
+    "atualizado": "2026-11-21T20:40:00+00:00"
   }
 }
