@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "Meta 20 dez: stories 8:30 e 10:00 no almoço, 13:00 à tarde, 18:00 e feed à noite",
-      "ultimo": "Manhã: caixas vazias, site OK, números lidos, relatório ao Diogo",
-      "atualizado": "2026-11-21T08:05:00+00:00"
+      "feitos": 4,
+      "tarefa": "Meta 20 dez: story das 13:00 à tarde; 18:00 e feed das 20:30 à noite",
+      "ultimo": "Almoço: stories de 20 dez das 8:30 e 10:00 agendadas (Facebook e Instagram)",
+      "atualizado": "2026-11-21T12:00:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -26,7 +26,7 @@
       "feitos": 0,
       "tarefa": "20 dez no Meta ao longo do dia (último dia do calendário)",
       "ultimo": "18 dez agendado no Facebook e Instagram",
-      "atualizado": "2026-11-21T08:05:00+00:00"
+      "atualizado": "2026-11-21T12:00:00+00:00"
     },
     "analista": {
       "estado": "descanso",
@@ -79,10 +79,6 @@
     ],
     "preciso": "Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API do rodapé). Dizer se queres o post no teu LinkedIn e o link no botão da Página do Facebook. Deixar o Chrome do PC aberto.",
     "diario": [
-      {
-        "quando": "2026-11-15T19:55:00Z",
-        "texto": "Noite: Chrome ainda desligado e sem acesso ao site; nada por publicar. Prioridades de segunda registadas."
-      },
       {
         "quando": "2026-11-16T08:20:00Z",
         "texto": "Manhã: títulos SEO de 3 guias e Enter seguro no /criar, revistos pelo qa e publicados. Chrome ainda desligado: sem números."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-21T08:05:00+00:00",
         "texto": "Manhã: caixas vazias, site OK; 20 nov sem sorteios; Google ainda a zero; afiliados sem nada a corrigir; ideia nova do Facebook à espera do Diogo."
+      },
+      {
+        "quando": "2026-11-21T12:00:00+00:00",
+        "texto": "Almoço: caixas vazias; stories de 20 dez (8:30 e 10:00) agendadas no Facebook e no Instagram."
       }
     ],
     "recados": [
@@ -211,6 +211,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 94
     },
-    "atualizado": "2026-11-21T08:05:00+00:00"
+    "atualizado": "2026-11-21T12:00:00+00:00"
   }
 }
