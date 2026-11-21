@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 4,
-      "tarefa": "Meta 20 dez: story das 13:00 à tarde; 18:00 e feed das 20:30 à noite",
-      "ultimo": "Almoço: stories de 20 dez das 8:30 e 10:00 agendadas (Facebook e Instagram)",
-      "atualizado": "2026-11-21T12:00:00+00:00"
+      "feitos": 5,
+      "tarefa": "Meta 20 dez: story das 18:00 e feed das 20:30 à noite",
+      "ultimo": "Tarde: story de 20 dez das 13:00 agendada (Facebook e Instagram)",
+      "atualizado": "2026-11-21T16:00:00+00:00"
     },
     "seo": {
       "estado": "descanso",
