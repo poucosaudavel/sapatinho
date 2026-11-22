@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "descanso",
+      "estado": "trabalhar",
       "feitos": 7,
-      "tarefa": "Domingo: decidir a Awin e preparar a semana do pico",
-      "ultimo": "Noite: story 18:00 e feed 20:30 de 20 dez agendados — calendário do Meta completo",
-      "atualizado": "2026-11-21T20:40:00+00:00"
+      "tarefa": "Publicar a API do rodapé quando a chave tiver a permissão",
+      "ultimo": "Awin fechada: só Amazon até ao Natal",
+      "atualizado": "2026-11-22T08:05:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -38,9 +38,9 @@
     "afiliados": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Awin: decidir a 22 nov se as 7 lojas pendentes ficam perdidas",
-      "atualizado": "2026-11-21T08:05:00+00:00",
-      "ultimo": "282 links da Amazon e 76 pesquisas com filtro verificados: nada a corrigir"
+      "tarefa": "Quarta 25 nov: links partidos e preços",
+      "atualizado": "2026-11-22T08:05:00+00:00",
+      "ultimo": "Awin fechada: fica só a Amazon"
     },
     "produto": {
       "estado": "espera",
@@ -59,9 +59,9 @@
     "inovacao": {
       "estado": "espera",
       "feitos": 1,
-      "tarefa": "À espera do Diogo: LinkedIn e botão da Página do Facebook",
-      "atualizado": "2026-11-21T08:05:00+00:00",
-      "ultimo": "Ideia: link de contagem no botão e numa publicação afixada da Página do Facebook"
+      "tarefa": "Ideia dos grupos do Facebook à espera do Diogo",
+      "atualizado": "2026-11-22T08:05:00+00:00",
+      "ultimo": "Ideia de 22 nov: publicação da Página em grupos do Facebook"
     },
     "qa": {
       "estado": "descanso",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Awin: decidir hoje (22 nov) com o que houver no Gmail",
       "Publicar a API do rodapé dos emails quando a chave tiver acesso a Workers",
-      "Preparar a semana do pico: KPIs de segunda e leitura do Google a 24–25 nov"
+      "Respostas do Diogo às 3 ideias das redes (LinkedIn, botão da Página, grupos do Facebook)",
+      "Segunda: KPIs completos, teste de entrega e plano da semana do pico"
     ],
-    "preciso": "Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API do rodapé). Dizer se queres o post no teu LinkedIn e o link no botão da Página do Facebook. Deixar o Chrome do PC aberto.",
+    "preciso": "Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API do rodapé). Dizer sim ou não a 3 ideias: post no teu LinkedIn, link no botão da Página do Facebook, publicação da Página em 2–3 grupos do Facebook.",
     "diario": [
-      {
-        "quando": "2026-11-16T16:05:00Z",
-        "texto": "Tarde: queda do Google investigada — o site está indexado e sem erros; coincide com a atualização do Google de novembro. Medir a 20 e 25 nov."
-      },
       {
         "quando": "2026-11-16T20:05:00Z",
         "texto": "Noite: 13 e 14 dez agendados no Meta (2 publicações e 8 stories, Facebook e Instagram). Caixa do email e do Meta sem novidades."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-21T20:40:00+00:00",
         "texto": "Noite: story das 18:00 e feed das 20:30 de 20 dez agendados (Facebook e Instagram). O calendário do Meta está completo até 20 dez. Caixa sem novidades."
+      },
+      {
+        "quando": "2026-11-22T08:05:00+00:00",
+        "texto": "Manhã: 21 nov com 2 sorteios e 27 convites; semana com 5 sorteios (igual à anterior). Awin fechada: só Amazon. Ideia nova: grupos do Facebook (à espera do Diogo)."
       }
     ],
     "recados": [
@@ -205,12 +205,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 3,
+      "sorteios_semana": 5,
       "receita_semana": 0,
       "cliques_google_semana": 0,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 94
+      "taxa_sorteio": 93
     },
-    "atualizado": "2026-11-21T20:40:00+00:00"
+    "atualizado": "2026-11-22T08:05:00+00:00"
   }
 }
