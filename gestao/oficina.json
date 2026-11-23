@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 7,
-      "tarefa": "Segunda 23 nov: KPIs, teste de entrega e plano da semana do pico",
-      "ultimo": "Noite de 22 nov: site e API a funcionar, sem novidades",
-      "atualizado": "2026-11-22T19:55:00+00:00"
+      "feitos": 2,
+      "tarefa": "Pico de 22 nov: quota de emails e resposta do Diogo",
+      "ultimo": "Manhã de 23 nov: pico de 22 sorteios detetado e Diogo avisado",
+      "atualizado": "2026-11-23T08:00:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -31,9 +31,9 @@
     "analista": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "KPIs completos na segunda (23 nov)",
-      "atualizado": "2026-11-21T08:05:00+00:00",
-      "ultimo": "Leitura rápida: 20 nov 0 sorteios; Google 0 cliques em 13–19 nov"
+      "tarefa": "Reler o Google a 24–25 nov",
+      "atualizado": "2026-11-23T08:00:00+00:00",
+      "ultimo": "KPIs de segunda: semana com 27 sorteios"
     },
     "afiliados": {
       "estado": "descanso",
@@ -45,23 +45,23 @@
     "produto": {
       "estado": "espera",
       "feitos": 0,
-      "tarefa": "Rodapé dos emails: falta publicar a API (chave sem acesso a Workers)",
-      "atualizado": "2026-11-20T08:15:00+00:00",
+      "tarefa": "Worker: repartir a quota de emails (depois do «sim»)",
+      "atualizado": "2026-11-23T08:00:00+00:00",
       "ultimo": "Teste de sexta a 390 px: sem links partidos nem scroll"
     },
     "suporte": {
-      "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Caixa do sapatinhonatal quando o Chrome voltar",
-      "atualizado": "2026-11-20T08:15:00+00:00",
-      "ultimo": "Site e API a responder (7:50)"
+      "estado": "trabalhar",
+      "feitos": 1,
+      "tarefa": "Vigiar a quota de emails em cada turno",
+      "atualizado": "2026-11-23T08:00:00+00:00",
+      "ultimo": "Brevo 16–23 nov: 96,9 % entregues, 0 queixas"
     },
     "inovacao": {
       "estado": "espera",
       "feitos": 1,
-      "tarefa": "Ideia dos grupos do Facebook à espera do Diogo",
-      "atualizado": "2026-11-22T08:05:00+00:00",
-      "ultimo": "Ideia de 22 nov: publicação da Página em grupos do Facebook"
+      "tarefa": "À espera do Diogo: plano do Brevo",
+      "atualizado": "2026-11-23T08:00:00+00:00",
+      "ultimo": "2 ideias para aguentar o pico de emails"
     },
     "qa": {
       "estado": "descanso",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Publicar a API do rodapé dos emails quando a chave tiver acesso a Workers",
-      "Respostas do Diogo às 3 ideias das redes (LinkedIn, botão da Página, grupos do Facebook)",
-      "Segunda: KPIs completos, teste de entrega e plano da semana do pico"
+      "Quota de emails para o pico (Brevo e API)",
+      "Vigiar o /painel em cada turno",
+      "Reler o Google a 24–25 nov"
     ],
-    "preciso": "Dar à chave do Cloudflare a permissão «Workers Scripts: Edit» (ou publicar tu a API do rodapé). Dizer sim ou não a 3 ideias: post no teu LinkedIn, link no botão da Página do Facebook, publicação da Página em 2–3 grupos do Facebook.",
+    "preciso": "Decidir o plano pago do Brevo e dar a permissão Workers à chave do Cloudflare (ou publicar a API).",
     "diario": [
-      {
-        "quando": "2026-11-16T20:05:00Z",
-        "texto": "Noite: 13 e 14 dez agendados no Meta (2 publicações e 8 stories, Facebook e Instagram). Caixa do email e do Meta sem novidades."
-      },
       {
         "quando": "2026-11-17T08:20:00+00:00",
         "texto": "Manhã: 16 nov com 2 sorteios e 41 convites; /links/ publicada com as /ir/redes/; 15 dez agendado no Meta; Black Friday recusada."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-22T08:05:00+00:00",
         "texto": "Manhã: 21 nov com 2 sorteios e 27 convites; semana com 5 sorteios (igual à anterior). Awin fechada: só Amazon. Ideia nova: grupos do Facebook (à espera do Diogo)."
+      },
+      {
+        "quando": "2026-11-23T08:00:00+00:00",
+        "texto": "Manhã: recorde a 22 nov com 22 sorteios e 163 convites; semana com 27 sorteios (antes 5). Limite de 55 segundos emails atingido."
       }
     ],
     "recados": [
@@ -205,12 +205,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 5,
+      "sorteios_semana": 27,
       "receita_semana": 0,
       "cliques_google_semana": 0,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 93
+      "taxa_sorteio": 66
     },
-    "atualizado": "2026-11-22T08:05:00+00:00"
+    "atualizado": "2026-11-23T08:00:00+00:00"
   }
 }
