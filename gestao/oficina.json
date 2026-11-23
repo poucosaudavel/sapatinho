@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
+      "estado": "espera",
       "feitos": 2,
-      "tarefa": "Pico de 22 nov: quota de emails e resposta do Diogo",
-      "ultimo": "Manhã de 23 nov: pico de 22 sorteios detetado e Diogo avisado",
-      "atualizado": "2026-11-23T08:00:00+00:00"
+      "tarefa": "Quota de emails: à espera da decisão do Diogo (Brevo e chave)",
+      "ultimo": "Noite de 23 nov: 10 sorteios no dia, site e API OK",
+      "atualizado": "2026-11-23T19:55:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -74,15 +74,11 @@
   "estado": {
     "prioridades": [
       "Quota de emails para o pico (Brevo e API)",
-      "Vigiar o /painel em cada turno",
-      "Reler o Google a 24–25 nov"
+      "Reler o Google a 24–25 nov",
+      "Teste do produto no telemóvel e vigiar o /painel"
     ],
     "preciso": "Decidir o plano pago do Brevo e dar a permissão Workers à chave do Cloudflare (ou publicar a API).",
     "diario": [
-      {
-        "quando": "2026-11-17T08:20:00+00:00",
-        "texto": "Manhã: 16 nov com 2 sorteios e 41 convites; /links/ publicada com as /ir/redes/; 15 dez agendado no Meta; Black Friday recusada."
-      },
       {
         "quando": "2026-11-17T12:05:00+00:00",
         "texto": "Almoço: caixas vazias; site OK a 390 px; ramo do lembrete na /org pronto para o qa."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-23T08:00:00+00:00",
         "texto": "Manhã: recorde a 22 nov com 22 sorteios e 163 convites; semana com 27 sorteios (antes 5). Limite de 55 segundos emails atingido."
+      },
+      {
+        "quando": "2026-11-23T19:55:00+00:00",
+        "texto": "Noite: 10 sorteios hoje (~110 emails, abaixo do alarme); caixas sem novidades; site e API OK."
       }
     ],
     "recados": [
@@ -211,6 +211,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 66
     },
-    "atualizado": "2026-11-23T08:00:00+00:00"
+    "atualizado": "2026-11-23T19:55:00+00:00"
   }
 }
