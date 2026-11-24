@@ -54,7 +54,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 .orgbox input{flex:1 1 240px}
 .x{flex:none;width:38px;height:44px;border:1px solid var(--line);background:transparent;border-radius:4px;color:var(--muted);font-size:1.1rem;cursor:pointer}
 .x:hover{color:var(--ember);border-color:var(--ember)}
-.link-btn{align-self:flex-start;background:none;border:0;color:var(--ember);font:600 .95rem var(--body);cursor:pointer;padding:4px 0}
+.link-btn{align-self:flex-start;background:none;border:0;color:var(--ember);font:600 .95rem var(--body);cursor:pointer;padding:4px 0;min-height:44px}
 .link-btn:hover{text-decoration:underline}
 .pairs{display:flex;flex-direction:column;gap:10px}
 .pair{display:grid;grid-template-columns:1fr auto 1fr 38px;gap:8px;align-items:center}
@@ -90,6 +90,12 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 /* Limite e data um por linha em ecrãs estreitos (produto, 18 nov): a 390 px a data aparecia cortada. */
 @media (max-width:420px){
   .grid3{grid-template-columns:1fr}
+}
+/* A 360 px o email cortava o último carácter (qa, 24 nov): menos margem no cartão e no campo. */
+@media (max-width:380px){
+  .panel{padding:22px 12px 20px}
+  .prow{gap:4px;grid-template-columns:1.3em minmax(0,1fr) 38px}
+  .prow input{padding-inline:8px}
 }
 @media (max-width:400px){
   .sent div{flex-wrap:wrap;align-items:center;row-gap:2px}
@@ -200,6 +206,15 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
   var people = document.getElementById("people"), pairs = document.getElementById("pairs");
   var err = document.getElementById("err"), out = document.getElementById("out"), form = document.getElementById("f");
   var go = document.getElementById("go"), uid = 0;
+
+  /* Nome do grupo vindo da página inicial (/criar#<nome>): só preenche o campo, nada mais. */
+  try {
+    if (location.hash.length > 1) {
+      var gIn = document.getElementById("g");
+      var gName = decodeURIComponent(location.hash.slice(1)).replace(/\s+/g, " ").trim().slice(0, gIn.maxLength > 0 ? gIn.maxLength : 60);
+      if (gName && !gIn.value) gIn.value = gName;
+    }
+  } catch (ex) {}
 
   function rows(){
     return Array.prototype.map.call(people.children, function(r){

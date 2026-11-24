@@ -35,6 +35,13 @@
 .hero p.sub{font-size:1.15rem;color:var(--soft);max-width:34ch;margin-top:20px}
 .hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;align-items:center}
 .ghost{color:var(--soft);font-size:.95rem}
+/* Começar o sorteio com o nome do grupo (produto, 24 nov): o nome vai só no # do link para o /criar, nada é enviado. */
+.start{display:flex;flex-direction:column;gap:8px;margin-top:30px;max-width:520px}
+.start label{font-size:.85rem;font-weight:600;color:var(--soft)}
+.start-row{display:flex;gap:10px;flex-wrap:wrap}
+.start input{flex:1 1 200px;min-width:0;font:500 1rem var(--body);padding:14px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--ink)}
+.start .btn{flex:0 0 auto;min-height:44px}
+.hero .start+.ctas{margin-top:16px}
 .peek{padding:30px 26px 24px;display:flex;flex-direction:column;gap:16px;transform:rotate(1.5deg)}
 .peek .row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-block:10px;font-size:.95rem}
 .peek .row:last-child{border-bottom:0}
@@ -89,8 +96,14 @@ section{padding-block:40px}
         <div class="eyebrow">O amigo secreto da família, sem papelinhos</div>
         <h1>Amigo secreto online, <em>grátis e por email.</em></h1>
         <p class="sub">Faz o sorteio do amigo secreto online. Cada pessoa recebe por email o seu link pessoal e descobre quem lhe saiu. A página de quem organiza não mostra quem tirou quem.</p>
+        <form class="start" id="startForm" action="/criar" method="get">
+          <label for="startG">Nome do grupo</label>
+          <div class="start-row">
+            <input id="startG" type="text" maxlength="60" placeholder="Natal dos primos" autocomplete="off" enterkeyhint="go">
+            <button class="btn" type="submit">Começar o sorteio</button>
+          </div>
+        </form>
         <div class="ctas">
-          <a class="btn" href="/criar">Criar um sorteio</a>
           <a class="ghost" href="#entrar">Já tenho um convite</a>
         </div>
       </div>
@@ -188,6 +201,11 @@ section{padding-block:40px}
 
 <script src="/snow.js"></script>
 <script>
+document.getElementById("startForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var g = document.getElementById("startG").value.trim().replace(/\s+/g, " ").slice(0, 60);
+  location.href = g ? "/criar#" + encodeURIComponent(g) : "/criar";
+});
 document.getElementById("codeForm").addEventListener("submit", function(e){
   e.preventDefault();
   var raw = document.getElementById("code").value.trim();
