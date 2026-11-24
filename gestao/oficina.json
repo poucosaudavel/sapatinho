@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "espera",
+      "estado": "trabalhar",
       "feitos": 2,
-      "tarefa": "Quota de emails: à espera da decisão do Diogo (Brevo e chave)",
-      "ultimo": "Noite de 23 nov: 10 sorteios no dia, site e API OK",
-      "atualizado": "2026-11-23T19:55:00+00:00"
+      "tarefa": "Turno da tarde: juntar e publicar a ideia do início",
+      "ultimo": "Publicado o /criar com o email inteiro no telemóvel",
+      "atualizado": "2026-11-24T08:25:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -31,9 +31,9 @@
     "analista": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Reler o Google a 24–25 nov",
-      "atualizado": "2026-11-23T08:00:00+00:00",
-      "ultimo": "KPIs de segunda: semana com 27 sorteios"
+      "tarefa": "Reler o Google a 25 nov",
+      "atualizado": "2026-11-24T08:25:00+00:00",
+      "ultimo": "Brevo 23 nov: 126 emails, 0 queixas"
     },
     "afiliados": {
       "estado": "descanso",
@@ -43,46 +43,42 @@
       "ultimo": "Awin fechada: fica só a Amazon"
     },
     "produto": {
-      "estado": "espera",
-      "feitos": 0,
-      "tarefa": "Worker: repartir a quota de emails (depois do «sim»)",
-      "atualizado": "2026-11-23T08:00:00+00:00",
-      "ultimo": "Teste de sexta a 390 px: sem links partidos nem scroll"
+      "estado": "trabalhar",
+      "feitos": 2,
+      "tarefa": "Início: campo «Nome do grupo» que abre o /criar (até 26 nov)",
+      "atualizado": "2026-11-24T08:25:00+00:00",
+      "ultimo": "Teste de terça: email cortado no /criar a 390 px, corrigido"
     },
     "suporte": {
-      "estado": "trabalhar",
+      "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Vigiar a quota de emails em cada turno",
-      "atualizado": "2026-11-23T08:00:00+00:00",
-      "ultimo": "Brevo 16–23 nov: 96,9 % entregues, 0 queixas"
+      "tarefa": "Vigiar a quota e os pedidos de ajuda",
+      "atualizado": "2026-11-24T08:25:00+00:00",
+      "ultimo": "Site, /r, /org e API OK às 7:50"
     },
     "inovacao": {
-      "estado": "espera",
-      "feitos": 1,
-      "tarefa": "À espera do Diogo: plano do Brevo",
-      "atualizado": "2026-11-23T08:00:00+00:00",
-      "ultimo": "2 ideias para aguentar o pico de emails"
+      "estado": "descanso",
+      "feitos": 2,
+      "tarefa": "Ideias de amanhã",
+      "atualizado": "2026-11-24T08:25:00+00:00",
+      "ultimo": "2 ideias aprovadas: início → /criar e plano B da quota"
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Rever o ramo do rodapé dos emails",
-      "atualizado": "2026-11-19T15:52:02+00:00",
-      "ultimo": "Aprovou o ramo do rodapé dos emails"
+      "feitos": 1,
+      "tarefa": "Rever o ramo do início (tarde)",
+      "atualizado": "2026-11-24T08:25:00+00:00",
+      "ultimo": "Aprovou o CSS do /criar (2 reparos menores)"
     }
   },
   "estado": {
     "prioridades": [
-      "Quota de emails para o pico (Brevo e API)",
-      "Reler o Google a 24–25 nov",
-      "Teste do produto no telemóvel e vigiar o /painel"
+      "Quota de emails: decisão do Diogo (Brevo pago + permissão Workers) até 26 nov",
+      "Início com «Nome do grupo» → /criar (produto + qa, publicar até 26 nov)",
+      "Vigiar o /painel em cada turno (alarme acima de 200 emails/dia)"
     ],
-    "preciso": "Decidir o plano pago do Brevo e dar a permissão Workers à chave do Cloudflare (ou publicar a API).",
+    "preciso": "Decidir a quota de emails até 26 nov: plano pago do Brevo (ou não) e dar à chave do Cloudflare a permissão Workers. Também à espera: LinkedIn, botão e grupos do Facebook.",
     "diario": [
-      {
-        "quando": "2026-11-17T12:05:00+00:00",
-        "texto": "Almoço: caixas vazias; site OK a 390 px; ramo do lembrete na /org pronto para o qa."
-      },
       {
         "quando": "2026-11-17T16:05:00+00:00",
         "texto": "Tarde: qa aprovou; publicado o lembrete na /org e «Tens outro grupo?» no /r; caixa vazia."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-23T19:55:00+00:00",
         "texto": "Noite: 10 sorteios hoje (~110 emails, abaixo do alarme); caixas sem novidades; site e API OK."
+      },
+      {
+        "quando": "2026-11-24T08:25:00+00:00",
+        "texto": "Manhã: 23 nov fechou com 11 sorteios; /criar no telemóvel mostra o email inteiro (publicado); 2 ideias novas aprovadas."
       }
     ],
     "recados": [
@@ -209,8 +209,8 @@
       "receita_semana": 0,
       "cliques_google_semana": 0,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 66
+      "taxa_sorteio": 67
     },
-    "atualizado": "2026-11-23T19:55:00+00:00"
+    "atualizado": "2026-11-24T08:25:00+00:00"
   }
 }
