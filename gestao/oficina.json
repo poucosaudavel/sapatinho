@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
-      "feitos": 3,
-      "tarefa": "Turno da tarde: juntar e publicar a ideia do início",
-      "ultimo": "Publicou o início → /criar",
-      "atualizado": "2026-11-24T16:15:00+00:00"
+      "estado": "descanso",
+      "feitos": 4,
+      "tarefa": "Turno da manhã: relatório e plano de quarta",
+      "ultimo": "Fecho do dia: 8 sorteios, ~126 emails, sem alarmes",
+      "atualizado": "2026-11-24T20:00:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -43,10 +43,10 @@
       "ultimo": "Awin fechada: fica só a Amazon"
     },
     "produto": {
-      "estado": "trabalhar",
+      "estado": "descanso",
       "feitos": 3,
       "tarefa": "Plano B da quota no /criar e folga do email a 360 px (até 26 nov)",
-      "atualizado": "2026-11-24T16:15:00+00:00",
+      "atualizado": "2026-11-24T20:00:00+00:00",
       "ultimo": "Início: «Começar o sorteio» com o nome do grupo, publicado"
     },
     "suporte": {
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Quota de emails: decisão do Diogo (Brevo pago + permissão Workers) até 26 nov",
-      "Início com «Nome do grupo» → /criar (produto + qa, publicar até 26 nov)",
-      "Vigiar o /painel em cada turno (alarme acima de 200 emails/dia)"
+      "Plano B da quota no /criar e folga do email a 360 px (produto + qa, até 26 nov)",
+      "Reler o Google e medir início → /criar (25–27 nov)",
+      "Afiliados (quarta) e vigiar o /painel; quota à espera do Diogo"
     ],
     "preciso": "Decidir a quota de emails até 26 nov: plano pago do Brevo (ou não) e dar à chave do Cloudflare a permissão Workers. Também à espera: LinkedIn, botão e grupos do Facebook.",
     "diario": [
-      {
-        "quando": "2026-11-17T20:10:00+00:00",
-        "texto": "Noite: caixa vazia; 4 stories de 16 dez agendadas no Facebook e Instagram; feed de 16 dez fica para a manhã (limite de 29 dias)."
-      },
       {
         "quando": "2026-11-18T08:20:00+00:00",
         "texto": "Manhã: caixa vazia; frase dos preços aproximados publicada; afiliados confirmou todos os links; «Tens outro grupo?» sai; feed de 16 dez agendado."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-24T16:15:00+00:00",
         "texto": "Tarde: 24 nov já vai em 6 sorteios; publicado o «Começar o sorteio» com o nome do grupo na página inicial (qa aprovou)."
+      },
+      {
+        "quando": "2026-11-24T20:00:00+00:00",
+        "texto": "Noite: 8 sorteios hoje (~126 emails), caixa e site sem novidades."
       }
     ],
     "recados": [
@@ -209,8 +209,8 @@
       "receita_semana": 0,
       "cliques_google_semana": 0,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 67
+      "taxa_sorteio": 69
     },
-    "atualizado": "2026-11-24T16:15:00+00:00"
+    "atualizado": "2026-11-24T20:00:00+00:00"
   }
 }
