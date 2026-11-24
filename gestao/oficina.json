@@ -2,10 +2,10 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 2,
+      "feitos": 3,
       "tarefa": "Turno da tarde: juntar e publicar a ideia do início",
-      "ultimo": "Publicado o /criar com o email inteiro no telemóvel",
-      "atualizado": "2026-11-24T08:25:00+00:00"
+      "ultimo": "Publicou o início → /criar",
+      "atualizado": "2026-11-24T16:15:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -44,10 +44,10 @@
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "Início: campo «Nome do grupo» que abre o /criar (até 26 nov)",
-      "atualizado": "2026-11-24T08:25:00+00:00",
-      "ultimo": "Teste de terça: email cortado no /criar a 390 px, corrigido"
+      "feitos": 3,
+      "tarefa": "Plano B da quota no /criar e folga do email a 360 px (até 26 nov)",
+      "atualizado": "2026-11-24T16:15:00+00:00",
+      "ultimo": "Início: «Começar o sorteio» com o nome do grupo, publicado"
     },
     "suporte": {
       "estado": "descanso",
@@ -65,10 +65,10 @@
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 1,
+      "feitos": 2,
       "tarefa": "Rever o ramo do início (tarde)",
-      "atualizado": "2026-11-24T08:25:00+00:00",
-      "ultimo": "Aprovou o CSS do /criar (2 reparos menores)"
+      "atualizado": "2026-11-24T16:15:00+00:00",
+      "ultimo": "Aprovou o início → /criar (1 reparo pequeno a 360 px)"
     }
   },
   "estado": {
@@ -79,10 +79,6 @@
     ],
     "preciso": "Decidir a quota de emails até 26 nov: plano pago do Brevo (ou não) e dar à chave do Cloudflare a permissão Workers. Também à espera: LinkedIn, botão e grupos do Facebook.",
     "diario": [
-      {
-        "quando": "2026-11-17T16:05:00+00:00",
-        "texto": "Tarde: qa aprovou; publicado o lembrete na /org e «Tens outro grupo?» no /r; caixa vazia."
-      },
       {
         "quando": "2026-11-17T20:10:00+00:00",
         "texto": "Noite: caixa vazia; 4 stories de 16 dez agendadas no Facebook e Instagram; feed de 16 dez fica para a manhã (limite de 29 dias)."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-24T08:25:00+00:00",
         "texto": "Manhã: 23 nov fechou com 11 sorteios; /criar no telemóvel mostra o email inteiro (publicado); 2 ideias novas aprovadas."
+      },
+      {
+        "quando": "2026-11-24T16:15:00+00:00",
+        "texto": "Tarde: 24 nov já vai em 6 sorteios; publicado o «Começar o sorteio» com o nome do grupo na página inicial (qa aprovou)."
       }
     ],
     "recados": [
@@ -211,6 +211,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 67
     },
-    "atualizado": "2026-11-24T08:25:00+00:00"
+    "atualizado": "2026-11-24T16:15:00+00:00"
   }
 }
