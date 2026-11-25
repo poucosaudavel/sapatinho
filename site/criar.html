@@ -97,8 +97,9 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 @media (max-width:420px){
   .grid3{grid-template-columns:1fr}
 }
-/* A 360 px o email cortava o último carácter (qa, 24 nov): menos margem no cartão e no campo. */
-@media (max-width:380px){
+/* A 360 px o email cortava o último carácter (qa, 24 nov): menos margem no cartão e no campo.
+   Até 420 px (qa, 25 nov), para o email a 390 px não ficar mais estreito do que a 360 px. */
+@media (max-width:420px){
   /* Mais folga para o email (qa, 24 nov: a 360 px, com a letra alternativa, passava 3 px): margens laterais de 16 px.
      Desde 25 nov o email ocupa a linha toda, por baixo do número, em todos os ecrãs até 640 px (regra acima). */
   .wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
@@ -327,9 +328,9 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
      O «Porquê?» abre noutro separador para esta página, com o grupo escrito, ficar aberta. */
   function quotaBox(){
     err.textContent = ""; err.classList.add("quota");
-    var h = document.createElement("b"); h.textContent = "Hoje já não conseguimos enviar mais emails.";
-    var p1 = document.createElement("p"); p1.textContent = "O envio grátis tem um limite de emails por dia e hoje esse limite chegou ao fim. O sorteio não foi feito e ninguém recebeu nada.";
-    var p2 = document.createElement("p"); p2.textContent = "O teu grupo não se perdeu: deixa esta página aberta e carrega outra vez em «Fazer o sorteio e enviar convites» depois da meia-noite (hora de Portugal). Ou copia a lista para não teres de a escrever de novo.";
+    var h = document.createElement("b"); h.textContent = "Hoje já não há emails suficientes para o teu grupo.";
+    var p1 = document.createElement("p"); p1.textContent = "O envio grátis tem um limite de emails por dia e, com os convites do teu grupo, hoje esse limite seria ultrapassado. O sorteio não foi feito e ninguém recebeu nada.";
+    var p2 = document.createElement("p"); p2.textContent = "Deixa esta página aberta e carrega outra vez em «Fazer o sorteio e enviar convites» depois da meia-noite (hora de Portugal), quando o limite recomeça. Se quiseres, copia a lista para a teres guardada.";
     var box = document.createElement("div"); box.className = "fix";
     var cp = document.createElement("button"); cp.type = "button"; cp.textContent = "Copiar a lista do grupo";
     cp.addEventListener("click", function(){
@@ -371,6 +372,8 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
     fetch("/api/create", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(body) })
       .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { ok:r.ok, status:r.status, j:j }; }); })
       .then(function(res){
+        /* Depende do texto da mensagem de reserve() em worker/worker.js («Hoje já enviámos todos os emails que podemos…»):
+           se essa frase mudar no worker, mudar também aqui, ou a caixa da quota deixa de aparecer. */
         if (res.status === 429 && /^Hoje já enviámos todos os emails/.test(String(res.j.error || ""))) { var q = new Error(res.j.error); q.quota = true; throw q; }
         if (!res.ok || !res.j.ok) throw new Error(res.j.error || "Não foi possível fazer o sorteio. Tenta outra vez daqui a pouco.");
         var links = res.j.links;
