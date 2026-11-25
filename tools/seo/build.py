@@ -332,8 +332,14 @@ HOME_FAQ = [
 ("Posso sair-me a mim próprio?", 'Não. O teu nome nunca entra no teu sorteio. Com papelinhos isto acontece muitas vezes: comparamos as alternativas em <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>.'),
 ("Dá para fazer amigo secreto à distância?", 'Sim. O sorteio é por email, por isso ninguém precisa de estar junto. Vê o guia do <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a>.'),
 ("Não recebi o email. E agora?", "Procura na pasta de spam ou promoções por um email do Sapatinho. Se não estiver lá, pede a quem organizou para te reenviar o convite. O teu resultado não se perde."),
+("Porque é que às vezes não dá para enviar os convites?", "O Sapatinho é grátis e envia os emails através de um serviço que tem um limite de emails por dia. Quando esse limite chega ao fim, não conseguimos enviar mais convites nesse dia e o sorteio não é feito, para ninguém receber um convite pela metade. O limite recomeça à meia-noite (hora de Portugal): se deixaste a página do sorteio aberta, basta carregar outra vez no botão de enviar depois dessa hora. Se copiaste a lista do grupo, não precisas de a escrever de novo."),
 ("Quantas pessoas podem participar?", "Entre 3 e 30 pessoas por sorteio. Para grupos maiores, como empresas, faz um sorteio por equipa."),
 ]
+
+# Perguntas com endereço próprio na página inicial (/#<id>): o script da página abre a resposta.
+FAQ_IDS = {"Porque é que às vezes não dá para enviar os convites?": "limite-de-emails"}
+def faq_id(q):
+    return f' id="{FAQ_IDS[q]}"' if q in FAQ_IDS else ""
 
 def home_cards():
     c = "".join(f'<a href="/{BYSLUG[g]["slug"]}/"><b>{BYSLUG[g]["short"]}</b><span>{BYSLUG[g]["card"]}</span></a>' for g in HOME_GUIDES)
@@ -383,7 +389,7 @@ def patch_home():
                '<p class="sub">Faz o sorteio do amigo secreto online. Cada pessoa recebe por email o seu link pessoal e descobre quem lhe saiu. A página de quem organiza não mostra quem tirou quem.</p>',
                h, count=1, flags=re.S)
     # FAQ rebuilt from HOME_FAQ so it matches the structured data
-    faq = email_off("\n".join(f"        <details><summary>{html.escape(q)}</summary><p>{a}</p></details>" for q, a in HOME_FAQ))
+    faq = email_off("\n".join(f"        <details{faq_id(q)}><summary>{html.escape(q)}</summary><p>{a}</p></details>" for q, a in HOME_FAQ))
     h = re.sub(r'<div class="faq">.*?</div>\n    </section>', '<div class="faq">\n' + faq + '\n      </div>\n    </section>', h, count=1, flags=re.S)
     # guides section before the FAQ
     if 'id="guias"' not in h:
@@ -474,6 +480,8 @@ IR = {
     # Emails do worker (19 nov): rodapé «Tens outro grupo?» nos 2 emails e «Ver mais ideias» do email de confirmação.
     # Um endereço por faixa de suggestions() em worker/worker.js; o total soma-se pelo prefixo /ir/email-prendas/.
     "email": ("/criar", "criar um sorteio"),
+    # «Porquê?» na caixa do limite diário de emails no /criar (plano B da quota, 25 nov): conta os dias em que esgotou.
+    "quota": ("/#limite-de-emails", "a resposta nas perguntas frequentes"),
     "email-prendas/ate-5": ("/prendas-amigo-secreto-ate-5-euros/", "prendas até 5 €"),
     "email-prendas/ate-10": ("/prendas-amigo-secreto-ate-10-euros/", "prendas até 10 €"),
     "email-prendas/ate-15": ("/prendas-amigo-secreto-ate-15-euros/", "prendas até 15 €"),

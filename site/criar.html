@@ -63,6 +63,12 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 .err .fix{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .err .fix button{font:600 .92rem var(--body);padding:10px 14px;border-radius:4px;cursor:pointer;border:1px solid #8a2a17;background:#8a2a17;color:#fff}
 .err .fix button.alt{background:transparent;color:#8a2a17}
+/* Plano B da quota (produto, 25 nov): só quando os emails grátis do dia acabam. */
+.err.quota{display:flex;flex-direction:column;gap:8px}
+.err.quota b{font-weight:600}
+.err.quota p{margin:0}
+.err.quota .fix button{min-height:44px}
+.err .fix a{font:600 .92rem var(--body);color:#8a2a17;padding:0 4px;min-height:44px;display:inline-flex;align-items:center}
 .prow input.typo{border-color:#c4441f;box-shadow:0 0 0 2px #f3c9bd}
 .results{display:flex;flex-direction:column;gap:12px}
 .res{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;border-top:1px solid var(--line);padding-top:12px}
@@ -82,7 +88,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 .ghostbtn{font:600 1rem var(--body);background:transparent;color:var(--ink);border:1px solid var(--ink);border-radius:4px;padding:13px 18px;cursor:pointer}
 @media (max-width:640px){
   .grid3{grid-template-columns:1fr 1fr}.grid3 label:first-child{grid-column:1/-1}
-  .prow{grid-template-columns:1.6em minmax(0,1fr) 38px}.prow input[type=email]{grid-column:2/-1}.prow .x{grid-row:1;grid-column:3}
+  .prow{grid-template-columns:1.6em minmax(0,1fr) 38px}.prow input[type=email]{grid-column:1/-1}.prow .x{grid-row:1;grid-column:3}
   .pair{grid-template-columns:1fr 38px}.pair em{display:none}
   .res{grid-template-columns:1fr 1fr}.res>div{grid-column:1/-1}
   .panel{padding:26px 18px 22px}
@@ -93,9 +99,12 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 }
 /* A 360 px o email cortava o último carácter (qa, 24 nov): menos margem no cartão e no campo. */
 @media (max-width:380px){
-  .panel{padding:22px 12px 20px}
+  /* Mais folga para o email (qa, 24 nov: a 360 px, com a letra alternativa, passava 3 px): margens laterais de 16 px.
+     Desde 25 nov o email ocupa a linha toda, por baixo do número, em todos os ecrãs até 640 px (regra acima). */
+  .wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+  .panel{padding:22px 10px 20px}
   .prow{gap:4px;grid-template-columns:1.3em minmax(0,1fr) 38px}
-  .prow input{padding-inline:8px}
+  .prow input{padding-inline:6px}
 }
 @media (max-width:400px){
   .sent div{flex-wrap:wrap;align-items:center;row-gap:2px}
@@ -264,7 +273,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
     t.blur();
   });
 
-  function fail(msg){ err.textContent = msg; err.hidden = false; err.scrollIntoView({behavior:"smooth", block:"center"}); }
+  function fail(msg){ err.classList.remove("quota"); err.textContent = msg; err.hidden = false; err.scrollIntoView({behavior:"smooth", block:"center"}); }
   var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
   /* Erros de escrita no domínio do email (gmial.com, hotmail.con, sapo.ot…): o convite nunca chegaria.
@@ -289,7 +298,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
   }
   function askTypo(p, better){
     var inp = emailInputs().filter(function(x){ return x.value.trim().toLowerCase() === p.e; })[0];
-    err.textContent = "";
+    err.textContent = ""; err.classList.remove("quota");
     err.appendChild(document.createTextNode("O email de " + p.n + " parece ter um erro: «" + p.e + "». Querias dizer «" + better + "»?"));
     var box = document.createElement("div"); box.className = "fix";
     var yes = document.createElement("button"); yes.type = "button"; yes.textContent = "Corrigir para " + better.slice(better.lastIndexOf("@"));
@@ -311,6 +320,26 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
     if (l >= 1 && l <= 1000) t += " Limite da prenda: " + l + "\u00a0€.";
     if (d) t += " Troca de prendas: " + d + ".";
     return t + " https://sapatinho-natal.pt/ir/grupo/";
+  }
+
+  /* Plano B da quota (ideia do CIO de 24 nov): quando os emails grátis do dia acabam, o sorteio não é feito.
+     Em vez da frase solta, explica e deixa copiar a lista (só para a área de transferência: nada guardado nem enviado).
+     O «Porquê?» abre noutro separador para esta página, com o grupo escrito, ficar aberta. */
+  function quotaBox(){
+    err.textContent = ""; err.classList.add("quota");
+    var h = document.createElement("b"); h.textContent = "Hoje já não conseguimos enviar mais emails.";
+    var p1 = document.createElement("p"); p1.textContent = "O envio grátis tem um limite de emails por dia e hoje esse limite chegou ao fim. O sorteio não foi feito e ninguém recebeu nada.";
+    var p2 = document.createElement("p"); p2.textContent = "O teu grupo não se perdeu: deixa esta página aberta e carrega outra vez em «Fazer o sorteio e enviar convites» depois da meia-noite (hora de Portugal). Ou copia a lista para não teres de a escrever de novo.";
+    var box = document.createElement("div"); box.className = "fix";
+    var cp = document.createElement("button"); cp.type = "button"; cp.textContent = "Copiar a lista do grupo";
+    cp.addEventListener("click", function(){
+      var list = rows().map(function(p){ return p.n + " · " + p.e; }).join("\n");
+      Sap.copy(list, this, "Lista copiada!");
+    });
+    var why = document.createElement("a"); why.href = "/ir/quota/"; why.target = "_blank"; why.rel = "noopener"; why.textContent = "Porquê?";
+    box.appendChild(cp); box.appendChild(why);
+    err.appendChild(h); err.appendChild(p1); err.appendChild(p2); err.appendChild(box);
+    err.hidden = false; err.scrollIntoView({behavior:"smooth", block:"center"});
   }
 
   form.addEventListener("submit", function(e){
@@ -340,8 +369,9 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 
     go.disabled = true; go.textContent = "A sortear e a enviar os convites…";
     fetch("/api/create", { method:"POST", headers:{ "Content-Type":"application/json" }, body: JSON.stringify(body) })
-      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { ok:r.ok, j:j }; }); })
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return { ok:r.ok, status:r.status, j:j }; }); })
       .then(function(res){
+        if (res.status === 429 && /^Hoje já enviámos todos os emails/.test(String(res.j.error || ""))) { var q = new Error(res.j.error); q.quota = true; throw q; }
         if (!res.ok || !res.j.ok) throw new Error(res.j.error || "Não foi possível fazer o sorteio. Tenta outra vez daqui a pouco.");
         var links = res.j.links;
         document.getElementById("sent").innerHTML = links.map(function(x){
@@ -356,7 +386,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
         form.hidden = true; out.hidden = false;
         window.scrollTo({ top: out.getBoundingClientRect().top + scrollY - 20, behavior:"smooth" });
       })
-      .catch(function(ex){ fail(ex.message || "Não foi possível ligar ao Sapatinho. Verifica a ligação e tenta outra vez."); })
+      .catch(function(ex){ if (ex && ex.quota) return quotaBox(); fail(ex.message || "Não foi possível ligar ao Sapatinho. Verifica a ligação e tenta outra vez."); })
       .then(function(){ go.disabled = false; go.textContent = "Fazer o sorteio e enviar convites"; });
   });
 })();
