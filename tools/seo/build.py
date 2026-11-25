@@ -290,7 +290,7 @@ PRIVACY_BODY = """
 </ul>
 
 <h2>Para que os usamos</h2>
-<p>Usamos os nomes e os emails apenas para fazer o sorteio e enviar a cada participante o convite e, depois de sortear, o email com o resultado. Não enviamos publicidade, não vendemos dados e não os partilhamos com terceiros para fins comerciais.</p>
+<p>Usamos os nomes e os emails apenas para fazer o sorteio e enviar a cada participante o convite e, depois de sortear, normalmente o email com o resultado. Não enviamos publicidade, não vendemos dados e não os partilhamos com terceiros para fins comerciais.</p>
 
 <h2>Onde ficam guardados</h2>
 <p>O Sapatinho não tem uma base de dados com os sorteios. O resultado de cada participante fica codificado no seu link pessoal. Para enviar os emails usamos a Brevo, um serviço de envio de email, que guarda o registo de cada envio (destinatário, assunto, entrega, aberturas e cliques) durante um mês e não guarda o conteúdo dos emails. O site está alojado na Cloudflare. Explicamos tudo, com o código, em <a href="/como-funciona-o-sapatinho-privacidade/">como funciona o Sapatinho por dentro</a>.</p>
@@ -325,7 +325,7 @@ def build_privacy():
 # ---------------------------------------------------------------- existing pages
 HOME_FAQ = [
 ("O que é o amigo secreto?", 'É uma troca de prendas em que cada pessoa tira à sorte o nome de outra e lhe oferece uma única prenda, sem revelar quem lhe saiu até ao dia da troca. Explicamos tudo nas <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a>.'),
-("Como funciona o amigo secreto online por email?", 'Quem organiza escreve os nomes e os emails do grupo, o limite da prenda e a data. O Sapatinho faz o sorteio e envia a cada pessoa um convite com um link só seu. Cada um abre o link, roda a roleta e recebe um segundo email com o nome que lhe saiu. <a href="/criar">Criar sorteio</a>.'),
+("Como funciona o amigo secreto online por email?", 'Quem organiza escreve os nomes e os emails do grupo, o limite da prenda e a data. O Sapatinho faz o sorteio e envia a cada pessoa um convite com um link só seu. Cada um abre o link, roda a roleta e vê quem lhe saiu. Normalmente recebe também um segundo email com o nome. Guarda o convite: o link mostra sempre o resultado. <a href="/criar">Criar sorteio</a>.'),
 ("O amigo secreto online é mesmo grátis?", "Sim. Criar o sorteio e enviar os convites não custa nada, não precisa de registo e não há versão paga."),
 ("Tem roleta?", 'Tem. Cada pessoa roda a sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel e descobre o nome em que a roleta pára.'),
 ("Dá para impedir que casais ou irmãos se tirem um ao outro?", "Sim. Ao criar o sorteio, indicas os pares que não se podem tirar e o sorteio respeita-os."),
@@ -615,7 +615,7 @@ def build_exemplo():
             <p>Estás no amigo secreto <b>{EX_GROUP}</b>, com 6 participantes. Carrega no botão para descobrires quem te saiu.</p>
             <p>Limite da prenda: <b>15 €</b><br>Troca de prendas: <b>18 de dezembro</b></p>
             <span class="fake-btn" aria-hidden="true">Sortear o meu amigo secreto</span>
-            <p class="small">Este link é só teu. Não o reencaminhes a ninguém. Depois de sortear, enviamos-te outro email com o nome, para confirmares sempre que quiseres.</p>
+            <p class="small">Este link é só teu. Não o reencaminhes a ninguém. Depois de sortear, normalmente enviamos-te outro email com o nome, para confirmares sempre que quiseres.</p>
           </div>
         </div>
       </section>
@@ -634,8 +634,8 @@ def build_exemplo():
       </section>
 
       <section class="ex-step">
-        <h2><span>4</span>E recebe um segundo email com o nome</h2>
-        <p>Para confirmar sempre que quiser, com três ideias de prendas dentro do limite.</p>
+        <h2><span>4</span>Normalmente, recebe também um segundo email</h2>
+        <p>Com o nome e três ideias de prendas dentro do limite. Se não chegar, o link do convite mostra sempre quem lhe saiu.</p>
         <div class="ex-mail" aria-label="Exemplo do email com o resultado">
           <div class="ex-mail-h"><b>Sapatinho</b> · Marta, já sabes quem te saiu · {EX_GROUP}</div>
           <div class="ex-mail-b">
