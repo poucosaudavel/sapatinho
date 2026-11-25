@@ -1,88 +1,84 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "descanso",
-      "feitos": 4,
-      "tarefa": "Turno da manhã: relatório e plano de quarta",
-      "ultimo": "Fecho do dia: 8 sorteios, ~126 emails, sem alarmes",
-      "atualizado": "2026-11-24T20:00:00+00:00"
+      "estado": "trabalhar",
+      "feitos": 3,
+      "tarefa": "Tarde: Black Friday no /r (afiliados + produto + qa) e publicar",
+      "ultimo": "Plano B da quota publicado no /criar",
+      "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "seo": {
-      "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Esperar pelo fim da atualização do Google (medir a 20 nov)",
-      "ultimo": "Títulos de 3 guias (16 nov)",
-      "atualizado": "2026-11-17T08:20:00+00:00"
+      "estado": "trabalhar",
+      "feitos": 1,
+      "tarefa": "26 nov: melhorar a página de prendas até 5 €",
+      "ultimo": "Google relido: indexado, ainda sem recuperação",
+      "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "outreach": {
       "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Chrome de volta: rotina normal no próximo turno",
-      "ultimo": "1.º backlink publicado: TechBit (4 links)",
-      "atualizado": "2026-11-15T08:05:00Z"
+      "feitos": 6,
+      "tarefa": "Lembretes a 1 e 2 dez; responder se chegar resposta",
+      "ultimo": "4 lembretes e 2 contactos novos enviados",
+      "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "social-media": {
-      "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Calendário do Meta completo até 20 dez; responder a comentários e mensagens",
-      "ultimo": "20 dez agendado no Facebook e Instagram (último dia)",
-      "atualizado": "2026-11-21T20:40:00+00:00"
+      "estado": "trabalhar",
+      "feitos": 1,
+      "tarefa": "Story de 11 dez 18:30 por agendar (gestor, noite)",
+      "ultimo": "25 nov a 20 dez confirmado no Meta",
+      "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "analista": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Reler o Google a 25 nov",
-      "atualizado": "2026-11-24T08:25:00+00:00",
-      "ultimo": "Brevo 23 nov: 126 emails, 0 queixas"
+      "tarefa": "KPIs de quinta (26 nov)",
+      "ultimo": "24 nov: 11 sorteios, 111 convites, 167 emails",
+      "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "afiliados": {
-      "estado": "descanso",
+      "estado": "trabalhar",
       "feitos": 1,
-      "tarefa": "Quarta 25 nov: links partidos e preços",
-      "atualizado": "2026-11-22T08:05:00+00:00",
-      "ultimo": "Awin fechada: fica só a Amazon"
+      "tarefa": "Black Friday no /r: confirmar o endereço das ofertas",
+      "ultimo": "282 links da Amazon certos, 12 pesquisas testadas",
+      "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "produto": {
-      "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Plano B da quota no /criar e folga do email a 360 px (até 26 nov)",
-      "atualizado": "2026-11-24T20:00:00+00:00",
-      "ultimo": "Início: «Começar o sorteio» com o nome do grupo, publicado"
+      "estado": "trabalhar",
+      "feitos": 2,
+      "tarefa": "Black Friday no /r com /ir/amazon/* (tarde)",
+      "ultimo": "Plano B da quota no /criar, publicado",
+      "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "suporte": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Vigiar a quota e os pedidos de ajuda",
-      "atualizado": "2026-11-24T08:25:00+00:00",
-      "ultimo": "Site, /r, /org e API OK às 7:50"
+      "tarefa": "Quinta 26 nov: teste de entrega",
+      "ultimo": "Site, /r, /org e API OK; sem pedidos de ajuda",
+      "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "inovacao": {
       "estado": "descanso",
       "feitos": 2,
       "tarefa": "Ideias de amanhã",
-      "atualizado": "2026-11-24T08:25:00+00:00",
-      "ultimo": "2 ideias aprovadas: início → /criar e plano B da quota"
+      "ultimo": "Black Friday no /r aprovada",
+      "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "qa": {
-      "estado": "descanso",
+      "estado": "trabalhar",
       "feitos": 2,
-      "tarefa": "Rever o ramo do início (tarde)",
-      "atualizado": "2026-11-24T16:15:00+00:00",
-      "ultimo": "Aprovou o início → /criar (1 reparo pequeno a 360 px)"
+      "tarefa": "Rever a Black Friday no /r (tarde)",
+      "ultimo": "Aprovou o plano B da quota (5 reparos feitos)",
+      "atualizado": "2026-11-25T08:35:00+00:00"
     }
   },
   "estado": {
     "prioridades": [
-      "Plano B da quota no /criar e folga do email a 360 px (produto + qa, até 26 nov)",
-      "Reler o Google e medir início → /criar (25–27 nov)",
-      "Afiliados (quarta) e vigiar o /painel; quota à espera do Diogo"
+      "Quota de emails: resposta do Diogo até 26 nov (o limite de segundos emails bateu outra vez a 24 nov)",
+      "Black Friday no /r e na página da Black Friday (publicar hoje à noite)",
+      "Vigiar o /painel e medir início → /criar (25–27 nov)"
     ],
-    "preciso": "Decidir a quota de emails até 26 nov: plano pago do Brevo (ou não) e dar à chave do Cloudflare a permissão Workers. Também à espera: LinkedIn, botão e grupos do Facebook.",
+    "preciso": "Decidir a quota de emails até 26 nov: plano pago do Brevo (ou não) e dar à chave do Cloudflare a permissão Workers. Login na Cloudflare Web Analytics. À espera: botão e publicação afixada do Facebook.",
     "diario": [
-      {
-        "quando": "2026-11-18T08:20:00+00:00",
-        "texto": "Manhã: caixa vazia; frase dos preços aproximados publicada; afiliados confirmou todos os links; «Tens outro grupo?» sai; feed de 16 dez agendado."
-      },
       {
         "quando": "2026-11-18T12:00:00+00:00",
         "texto": "Almoço: Bing Webmaster Tools com sitemap e 24 páginas pedidas; produto deixou pronto o ramo da /org e do /criar em ecrãs estreitos (qa revê à tarde)."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-24T20:00:00+00:00",
         "texto": "Noite: 8 sorteios hoje (~126 emails), caixa e site sem novidades."
+      },
+      {
+        "quando": "2026-11-25T08:35:00+00:00",
+        "texto": "Manhã: plano B da quota publicado no /criar; 24 nov 11 sorteios; Google ainda sem recuperação; 6 emails de backlinks; Black Friday no /r aprovada"
       }
     ],
     "recados": [
@@ -205,12 +205,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 27,
+      "sorteios_semana": 23,
       "receita_semana": 0,
-      "cliques_google_semana": 0,
+      "cliques_google_semana": 7,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 69
+      "taxa_sorteio": 63
     },
-    "atualizado": "2026-11-24T20:00:00+00:00"
+    "atualizado": "2026-11-25T08:35:00+00:00"
   }
 }
