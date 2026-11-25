@@ -433,7 +433,7 @@ body="""
 </ul>
 
 <h2 id="online">4. Online, por email</h2>
-<p>Num <a href="/criar">sorteio online como o do Sapatinho</a>, quem organiza escreve os nomes e os emails. Cada pessoa recebe um convite com um link só seu, roda a <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel e recebe um segundo email com o nome que lhe saiu.</p>
+<p>Num <a href="/criar">sorteio online como o do Sapatinho</a>, quem organiza escreve os nomes e os emails. Cada pessoa recebe um convite com um link só seu, roda a <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel e vê logo quem lhe saiu. Normalmente recebe também um segundo email com o nome, e o link do convite mostra sempre o resultado.</p>
 <ul>
 <li><strong>Vantagens:</strong> ninguém se tira a si próprio, quem organiza também pode participar, serve para um <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a> e o resultado fica guardado no email. Dá para indicar pares que não se podem tirar, como casais.</li>
 <li><strong>Problemas:</strong> é preciso o email de cada pessoa. Os convites podem ir parar ao spam, por isso convém avisar o grupo.</li>
@@ -882,7 +882,7 @@ body="""
 <li><strong>O sorteio fica feito nesse momento.</strong> Ninguém se tira a si próprio e os pares que não se podem tirar (casais, irmãos) são respeitados.</li>
 <li><strong>Cada pessoa recebe um convite por email</strong> com um link que é só seu.</li>
 <li><strong>Abre o link e roda a roleta.</strong> A roleta passa pelos nomes do grupo e pára no amigo secreto dessa pessoa.</li>
-<li><strong>Recebe um segundo email com o nome</strong>, para confirmar sempre que quiser.</li>
+<li><strong>Normalmente, recebe também um segundo email com o nome.</strong> Se não chegar, o link do convite mostra sempre quem lhe saiu: basta guardar o convite.</li>
 </ol>
 <p>A roleta é a parte divertida, mas o resultado já estava decidido quando o sorteio foi criado. Por isso não adianta rodar outra vez: o link mostra sempre o mesmo nome.</p>
 <p>Se ainda estás a escolher entre papelinhos, mensagem e email, comparamos as quatro formas em <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>.</p>
@@ -1541,7 +1541,7 @@ body="""
 <p class="shop">Se ainda tens um ou dois dias, procurar na Amazon: [[amz:caja regalo pequeña|caixas pequenas]] · [[amz:sobres tarjeta regalo navidad|envelopes de Natal]] · [[amz:papel kraft regalo|papel pardo]]</p>
 
 <h2 id="sortear">Ainda não fizeram o sorteio?</h2>
-<p>Dá para sortear hoje mesmo. No <a href="/criar">Sapatinho</a> escreves os nomes e os emails do grupo, e cada pessoa recebe por email o nome de quem lhe saiu. É grátis e não precisa de registo. Se o tempo é curto, combinem já o limite e a data da troca no convite.</p>
+<p>Dá para sortear hoje mesmo. No <a href="/criar">Sapatinho</a> escreves os nomes e os emails do grupo, e cada pessoa recebe por email o seu link e descobre quem lhe saiu. É grátis e não precisa de registo. Se o tempo é curto, combinem já o limite e a data da troca no convite.</p>
 
 <p>Se tens mais uns dias, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a>, as <a href="/prendas-amigo-secreto-ate-15-euros/">prendas até 15 €</a>, as <a href="/prendas-engracadas-amigo-secreto/">prendas engraçadas</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
 """,
@@ -2107,7 +2107,7 @@ h1="Como funciona o Sapatinho por dentro",
 dek="O Sapatinho não tem base de dados de emails nem de resultados. Explicamos, com o código, o caminho de um sorteio do teu navegador até ao email, e o que fica guardado em cada sítio.",
 description="Como funciona o sorteio do Sapatinho, com o código: sem base de dados, emails cifrados dentro do link e só contagens anónimas.",
 body="""
-<p class="lead-answer"><strong>O Sapatinho não tem base de dados.</strong> Os nomes e os emails passam pelo nosso servidor só durante o pedido que cria o sorteio. O resultado de cada pessoa vai assinado dentro do seu próprio link, e o email vai cifrado nesse link, só para enviarmos o segundo email. Não guardamos emails, nomes nem resultados. Guardamos apenas contagens anónimas por dia e, durante umas horas, códigos irreversíveis que servem para travar abusos.</p>
+<p class="lead-answer"><strong>O Sapatinho não tem base de dados.</strong> Os nomes e os emails passam pelo nosso servidor só durante o pedido que cria o sorteio. O resultado de cada pessoa vai assinado dentro do seu próprio link, e o email vai cifrado nesse link, só para podermos enviar o segundo email. Não guardamos emails, nomes nem resultados. Guardamos apenas contagens anónimas por dia e, durante umas horas, códigos irreversíveis que servem para travar abusos.</p>
 
 <nav class="toc" aria-label="Neste guia"><b>Neste guia</b><ol>
 <li><a href="#caminho">O caminho de um sorteio</a></li>
@@ -2127,7 +2127,7 @@ body="""
 <li><strong>O servidor faz o sorteio</strong> em memória e cria um link por pessoa.</li>
 <li><strong>O servidor pede ao Brevo</strong>, o serviço de envio de emails, que mande um convite a cada participante.</li>
 <li><strong>O servidor responde</strong> ao navegador de quem organiza com os links, e esquece tudo. Não há base de dados onde escrever.</li>
-<li><strong>Cada participante abre o seu link,</strong> roda a roleta e o navegador pede ao servidor o segundo email (<code>POST /api/confirm</code>), enviando só o próprio link.</li>
+<li><strong>Cada participante abre o seu link,</strong> roda a roleta e o navegador pede ao servidor o segundo email (<code>POST /api/confirm</code>), enviando só o próprio link. Nos dias de muitos sorteios, o servidor pode não enviar esse email; o link mostra sempre o resultado.</li>
 </ol>
 
 <h2 id="sorteio">Como é feito o sorteio</h2>
@@ -2166,7 +2166,7 @@ body="""
 }</code></pre>
 
 <h2 id="email">O email, cifrado</h2>
-<p>Precisamos do email só para uma coisa: enviar o segundo email, com o nome que te saiu, depois de rodares a roleta. Para não o guardarmos em lado nenhum, ele viaja dentro do teu link, <strong>cifrado com AES-GCM</strong>. Só o nosso servidor tem a chave para o ler, e só o lê no instante em que envia esse email.</p>
+<p>Precisamos do email só para uma coisa: enviar o segundo email, com o nome que te saiu, depois de rodares a roleta. Normalmente sai logo; nos dias de muitos sorteios pode não sair, e o teu link mostra sempre quem te saiu. Para não o guardarmos em lado nenhum, ele viaja dentro do teu link, <strong>cifrado com AES-GCM</strong>. Só o nosso servidor tem a chave para o ler, e só o lê no instante em que envia esse email.</p>
 <pre><code>async function sealEmail(email, env) {
   const iv = crypto.getRandomValues(new Uint8Array(12));
   const ct = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, await emailKey(env),
@@ -2188,7 +2188,7 @@ body="""
 <tr><td>O teu navegador</td><td>Uma marca a dizer que já sorteaste, para mostrar o resultado e não a roleta</td><td>Até limpares os dados do navegador</td></tr>
 </tbody>
 </table></div>
-<p>Não usamos cookies de publicidade, não vendemos nem partilhamos emails e não enviamos nada além dos dois emails do sorteio. Os detalhes legais estão na <a href="/privacidade/">política de privacidade</a>.</p>
+<p>Não usamos cookies de publicidade, não vendemos nem partilhamos emails e não enviamos nada além dos emails do sorteio: o convite e, normalmente, um segundo email com o nome. Os detalhes legais estão na <a href="/privacidade/">política de privacidade</a>.</p>
 
 <h2 id="limites">Os limites, sem rodeios</h2>
 <ul>
@@ -2202,7 +2202,7 @@ body="""
 <p>Todo o código do servidor e do site está no GitHub, em <a href="https://github.com/poucosaudavel/sapatinho" rel="noopener">github.com/poucosaudavel/sapatinho</a>. O ficheiro do servidor é o <code>worker/worker.js</code>: tem cerca de 300 linhas e não tem nenhuma ligação a uma base de dados.</p>
 """,
 faq=[
-("O Sapatinho guarda os emails dos participantes?", "Não. O servidor recebe os emails só para enviar os convites e esquece-os no fim do pedido. O email de cada pessoa vai cifrado dentro do seu próprio link, para enviarmos o segundo email, e o serviço de envio (Brevo) guarda o registo de envio durante um mês."),
+("O Sapatinho guarda os emails dos participantes?", "Não. O servidor recebe os emails só para enviar os convites e esquece-os no fim do pedido. O email de cada pessoa vai cifrado dentro do seu próprio link, para podermos enviar o segundo email, e o serviço de envio (Brevo) guarda o registo de envio durante um mês."),
 ("O Sapatinho sabe quem saiu a quem?", "Não guarda essa informação. O resultado de cada pessoa só existe dentro do link dessa pessoa."),
 ("Alguém pode alterar o link para mudar o nome que lhe saiu?", "Não. Cada link tem uma assinatura criada com uma chave secreta do servidor. Um link alterado deixa de ser válido."),
 ("Quem organiza vê os resultados?", "Só se abrir os links dos outros participantes, que recebe para poder reenviar convites. O Sapatinho nunca lhe mostra os resultados diretamente."),
