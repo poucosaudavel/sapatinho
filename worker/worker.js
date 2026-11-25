@@ -89,11 +89,12 @@ async function create(b, env, req) {
     links.push({ n: p.n, e: p.e, link: `${SITE}/r/${code}` });
   }
 
+  const one = await isOneEmailMode(env); // modo 1 email: o convite diz para o guardarem
   const messages = links.map((x) => ({
     to: [{ email: x.e, name: x.n }],
     subject: `${x.n}, estás no amigo secreto «${g}»`,
-    htmlContent: inviteHtml({ n: x.n, g, l, d, link: x.link, count: names.length }),
-    textContent: inviteText({ n: x.n, g, l, d, link: x.link }),
+    htmlContent: inviteHtml({ n: x.n, g, l, d, link: x.link, count: names.length, one }),
+    textContent: inviteText({ n: x.n, g, l, d, link: x.link, one }),
   }));
   await sendBatch(messages, env);
   await count(env, { emails: names.length, sorteios: 1, convites: names.length, ["limite_" + bucket(l)]: 1, ["grupo_" + size(names.length)]: 1, ["exclusoes_" + (Object.keys(blocked).length ? "sim" : "nao")]: 1 });
@@ -110,7 +111,15 @@ async function confirm(b, env, req) {
   if (!email) throw fail("Link inválido.", 400);
   // O mesmo link só pede o segundo email uma vez em cada 12 horas (evita encher a caixa de alguém).
   const mark = env.STATS ? "c:" + (await tag("confirm:" + code, env)) : null;
-  if (mark && (await env.STATS.get(mark))) return { ok: true };
+  // Marca "0" = já contado em modo 1 email (sem 2.º email); qualquer outro valor = email enviado.
+  const seen = mark ? await env.STATS.get(mark) : null;
+  if (seen) return { ok: true, sent: seen !== "0" };
+  if (await isOneEmailMode(env)) {
+    // Modo 1 email: não enviamos nem gastamos quota; a pessoa volta ao email do convite.
+    if (mark) { try { await env.STATS.put(mark, "0", { expirationTtl: 43200 }); } catch {} }
+    await count(env, { sorteados: 1, sem_email: 1 });
+    return { ok: true, sent: false };
+  }
   await guardConfirm(env, req);
   if (mark) { try { await env.STATS.put(mark, "1", { expirationTtl: 43200 }); } catch {} }
   try {
@@ -122,7 +131,7 @@ async function confirm(b, env, req) {
   }], env);
   } catch (e) { if (mark) { try { await env.STATS.delete(mark); } catch {} } throw e; }
   await count(env, { emails: 1, sorteados: 1 });
-  return { ok: true };
+  return { ok: true, sent: true };
 }
 
 /* ---------- draw ---------- */
@@ -245,16 +254,18 @@ const details = (l, d) => [l ? `Limite da prenda: <b>${l} €</b>` : "", d ? `Tr
 function button(href, label) {
   return `<table role="presentation" cellpadding="0" cellspacing="0" style="margin:22px 0"><tr><td style="background:#c8452c;border-radius:4px"><a href="${esc(href)}" style="display:inline-block;padding:14px 22px;color:#ffffff;text-decoration:none;font-weight:bold">${esc(label)}</a></td></tr></table>`;
 }
-function inviteHtml({ n, g, l, d, link, count }) {
+const KEEP_INVITE = "Guarda este email: o teu link mostra sempre quem te saiu.";
+const SECOND_EMAIL = "Depois de sortear, enviamos-te outro email com o nome, para confirmares sempre que quiseres.";
+function inviteHtml({ n, g, l, d, link, count, one = false }) {
   return frame(`<div style="font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#5f6d66;font-weight:bold">${esc(g)}</div>
 <h1 style="font-family:Georgia,serif;font-weight:normal;font-size:28px;line-height:1.15;margin:8px 0 14px">Olá, ${esc(n)}! Está na hora de sortear.</h1>
 <p style="margin:0 0 10px">Estás no amigo secreto <b>${esc(g)}</b>, com ${count} participantes. Carrega no botão para descobrires quem te saiu.</p>
 <p style="margin:0">${details(l, d)}</p>
 ${button(link, "Sortear o meu amigo secreto")}
-<p style="margin:0;font-size:13px;color:#5f6d66">Este link é só teu. Não o reencaminhes a ninguém. Depois de sortear, enviamos-te outro email com o nome, para confirmares sempre que quiseres.</p>`);
+<p style="margin:0;font-size:13px;color:#5f6d66">Este link é só teu. Não o reencaminhes a ninguém. ${esc(one ? KEEP_INVITE : SECOND_EMAIL)}</p>`);
 }
-function inviteText({ n, g, l, d, link }) {
-  return `Olá, ${n}!\n\nEstás no amigo secreto «${g}».${l ? `\nLimite da prenda: ${l} €.` : ""}${d ? `\nTroca de prendas: ${fmtDate(d)}.` : ""}\n\nAbre o teu link pessoal para sortear:\n${link}\n\nEste link é só teu. Não o reencaminhes.\n\n${otherGroupText()}\n\nSapatinho · sapatinho-natal.pt`;
+function inviteText({ n, g, l, d, link, one = false }) {
+  return `Olá, ${n}!\n\nEstás no amigo secreto «${g}».${l ? `\nLimite da prenda: ${l} €.` : ""}${d ? `\nTroca de prendas: ${fmtDate(d)}.` : ""}\n\nAbre o teu link pessoal para sortear:\n${link}\n\nEste link é só teu. Não o reencaminhes.${one ? " " + KEEP_INVITE : ""}\n\n${otherGroupText()}\n\nSapatinho · sapatinho-natal.pt`;
 }
 function confirmHtml(o, link) {
   const s = suggestions(o.l);
@@ -322,6 +333,19 @@ const MONTHLY_EMAILS = 9600;   // convites + segundos emails por ciclo de crédi
 const CREATES_PER_IP = 10;     // sorteios por dia a partir do mesmo endereço IP
 const EMAILS_PER_IP = 90;      // convites por dia a partir do mesmo endereço IP (3 sorteios de 30)
 const CONFIRMS_PER_IP = 20;    // segundos emails por dia pedidos a partir do mesmo endereço IP
+/* Modo 1 email (25 nov 2026): a 80 % do limite diário dos segundos emails (240 de 300) ou do teto do ciclo
+   (7 680 de 9 600), deixamos de enviar o segundo email. O convite continua a sair e o link pessoal mostra sempre
+   quem saiu. Volta sozinho aos 2 emails no dia seguinte (novo "qc:") ou no ciclo seguinte do Brevo (dia 25). */
+const ONE_EMAIL_AT = 0.8;
+const oneEmailMode = (qcUsed, qmUsed) => qcUsed >= ONE_EMAIL_AT * CONFIRM_CAP || qmUsed >= ONE_EMAIL_AT * MONTHLY_EMAILS;
+async function isOneEmailMode(env) {
+  if (!env.STATS) return false;
+  try {
+    const qc = parseInt((await env.STATS.get("qc:" + new Date().toISOString().slice(0, 10))) || "0", 10) || 0;
+    const qm = parseInt((await env.STATS.get("qm:" + cycle())) || "0", 10) || 0;
+    return oneEmailMode(qc, qm);
+  } catch { return false; } // se o KV falhar, fica o modo normal (o reserve() continua a proteger a quota)
+}
 async function tag(text, env) {  // HMAC curto e irreversível, para não guardar o texto original
   const k = await crypto.subtle.importKey("raw", new TextEncoder().encode("sapatinho-tag:" + env.BREVO_API_KEY), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
   return toB64url(new Uint8Array(await crypto.subtle.sign("HMAC", k, new TextEncoder().encode(text))).slice(0, 12));
@@ -398,4 +422,4 @@ async function stats(req, env, json) {
   return json({ days, oficina: oficina || null });
 }
 
-export { create, confirm, encode, decode, sign, verify, draw, cycle };
+export { create, confirm, encode, decode, sign, verify, draw, cycle, oneEmailMode };

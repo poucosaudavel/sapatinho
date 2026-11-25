@@ -75,8 +75,8 @@ td.n,th.n{text-align:right}
       '<div class="kpi"><b>'+d+'</b><span>pessoas que já sortearam</span></div>'+
       '<div class="kpi"><b>'+rate+'%</b><span>dos convidados já sortearam</span></div>'+
       '<div class="kpi"><b>'+avg+'</b><span>pessoas por sorteio</span></div></div>'+
-      '<section class="box"><h2>Por dia</h2><div class="tbl"><table><thead><tr><th>Dia</th><th class="n">Sorteios</th><th class="n">Convites</th><th class="n">Sortearam</th></tr></thead><tbody>'+
-      days.slice().reverse().map(function(x){return '<tr><td>'+x.dia.split("-").reverse().join("/")+'</td><td class="n">'+(x.sorteios||0)+'</td><td class="n">'+(x.convites||0)+'</td><td class="n">'+(x.sorteados||0)+'</td></tr>'}).join("")+
+      '<section class="box"><h2>Por dia</h2><div class="tbl"><table><thead><tr><th>Dia</th><th class="n">Sorteios</th><th class="n">Convites</th><th class="n">Sortearam</th><th class="n" title="Sortearam sem segundo email (modo 1 email, a 80 % do limite)">Sem 2.º email</th></tr></thead><tbody>'+
+      days.slice().reverse().map(function(x){return '<tr><td>'+x.dia.split("-").reverse().join("/")+'</td><td class="n">'+(x.sorteios||0)+'</td><td class="n">'+(x.convites||0)+'</td><td class="n">'+(x.sorteados||0)+'</td><td class="n">'+(+x.sem_email||0)+'</td></tr>'}).join("")+
       '</tbody></table></div></section>'+
       '<section class="box"><h2>Limite da prenda</h2>'+bars(days,LIM,"limite_")+'</section>'+
       '<section class="box"><h2>Tamanho dos grupos</h2>'+bars(days,GR,"grupo_")+'<p class="note" style="margin-top:12px">'+ex+' de '+s+' sorteios usaram exclusões (casais, irmãos).</p></section>'+

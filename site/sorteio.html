@@ -285,7 +285,13 @@ function sendConfirm(code){
   // A página já tem referrer «strict-origin» (o Origin vai certo nos POST e o Referer leva só o domínio, nunca o endereço com o payload).
   // Repetido aqui por segurança, caso a meta mude.
   fetch("/api/confirm", { method:"POST", referrerPolicy:"strict-origin", headers:{ "Content-Type":"application/json" }, body: JSON.stringify({ code: code }) })
-    .then(function(r){ note(r.ok ? "Enviámos-te um email com o nome, para confirmares quando quiseres." : "Não foi possível enviar o email de confirmação, mas podes voltar a este link sempre que quiseres."); })
+    .then(function(r){
+      if (!r.ok) return note("Não foi possível enviar o email de confirmação, mas podes voltar a este link sempre que quiseres.");
+      // Modo 1 email (sent === false): não há segundo email; o convite chega.
+      return r.json().catch(function(){ return {}; }).then(function(j){
+        note(j && j.sent === false ? "Guarda o email do convite: o teu link mostra sempre quem te saiu." : "Enviámos-te um email com o nome, para confirmares quando quiseres.");
+      });
+    })
     .catch(function(){ note("Não foi possível enviar o email de confirmação, mas podes voltar a este link sempre que quiseres."); });
 }
 

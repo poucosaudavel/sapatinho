@@ -1,7 +1,7 @@
 // Testes locais da API (sem rede, sem Brevo, sem Cloudflare). Correr: node --test tests/
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import worker, { create, confirm, encode, sign, cycle } from "../worker/worker.js";
+import worker, { create, confirm, encode, sign, cycle, oneEmailMode } from "../worker/worker.js";
 
 function setup() {
   const store = new Map();
@@ -177,7 +177,8 @@ test("segundos emails têm contador próprio e não bloqueiam a criação de sor
   const day = new Date().toISOString().slice(0, 10);
   await s.env.STATS.put("qc:" + day, "300");
   const code = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Ana", t: "Rui", p: ["Ana", "Rui", "Eva"], e: "a@exemplo.pt" }), s.env);
-  await assert.rejects(confirm({ code }, s.env, req("/", {})), (e) => e.status === 429);
+  // com o contador dos segundos emails cheio, o confirm passa ao modo 1 email (não envia, não dá erro)
+  assert.deepEqual(await confirm({ code }, s.env, req("/", {})), { ok: true, sent: false });
   const r = await worker.fetch(req("/api/create", { g: "Novo", people: people(["A", "B", "C"]) }, O), s.env);
   assert.equal(r.status, 200);
 });
@@ -247,11 +248,13 @@ test("plano Starter: limites diários de 500 convites e 300 segundos emails", as
   const r = await worker.fetch(req("/api/create", { g: "Nao cabe", people: people(["A", "B", "C"]) }, O), s.env);
   assert.equal(r.status, 429);
   assert.match((await r.json()).error, /^Hoje já enviámos todos os emails/);
-  await s.env.STATS.put("qc:" + day, "299");
+  // o teto de 300 segundos emails já não se atinge pelo confirm: aos 240 entra o modo 1 email
+  await s.env.STATS.put("qc:" + day, "239");
   const code = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Ana", t: "Rui", p: ["Ana", "Rui", "Eva"], e: "a@exemplo.pt" }), s.env);
-  await confirm({ code }, s.env, req("/", {}));
+  assert.deepEqual(await confirm({ code }, s.env, req("/", {})), { ok: true, sent: true });
   const code2 = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Eva", t: "Ana", p: ["Ana", "Rui", "Eva"], e: "e@exemplo.pt" }), s.env);
-  await assert.rejects(confirm({ code: code2 }, s.env, req("/", {})), (e) => e.status === 429);
+  assert.deepEqual(await confirm({ code: code2 }, s.env, req("/", {})), { ok: true, sent: false });
+  assert.equal(s.store.get("qc:" + day), "240");
 });
 
 test("plano Starter: teto mensal de 9600 emails soma convites e segundos emails", async () => {
@@ -264,6 +267,66 @@ test("plano Starter: teto mensal de 9600 emails soma convites e segundos emails"
   assert.equal(r.status, 429);
   assert.match((await r.json()).error, /^Este mês já enviámos todos os emails que podemos\. Voltamos a enviar a 25 de (janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)\./);
   const code = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Ana", t: "Rui", p: ["Ana", "Rui", "Eva"], e: "a@exemplo.pt" }), s.env);
-  await assert.rejects(confirm({ code }, s.env, req("/", {})), (e) => e.status === 429);
+  assert.deepEqual(await confirm({ code }, s.env, req("/", {})), { ok: true, sent: false });
   assert.equal(s.sent.length, 3);
 });
+
+test("modo 1 email: liga a 80 % (240 segundos emails no dia ou 7680 no ciclo)", () => {
+  assert.equal(oneEmailMode(0, 0), false);
+  assert.equal(oneEmailMode(239, 0), false);
+  assert.equal(oneEmailMode(240, 0), true);
+  assert.equal(oneEmailMode(0, 7679), false);
+  assert.equal(oneEmailMode(0, 7680), true);
+});
+
+const FRASE_2 = "Depois de sortear, enviamos-te outro email com o nome";
+const FRASE_1 = "Guarda este email: o teu link mostra sempre quem te saiu.";
+
+test("modo normal: convite fala do segundo email e o confirm envia (sent: true)", async () => {
+  const s = setup();
+  const day = new Date().toISOString().slice(0, 10);
+  await s.env.STATS.put("qc:" + day, "239");
+  await s.env.STATS.put("qm:" + cycle(), "7600");
+  const r = await create({ g: "Normal", people: people(["A", "B", "C"]) }, s.env, req("/", {}));
+  assert.ok(s.sent[0].htmlContent.includes(FRASE_2));
+  assert.ok(!s.sent[0].htmlContent.includes(FRASE_1) && !s.sent[0].textContent.includes(FRASE_1));
+  s.sent.length = 0;
+  const code = r.links[0].link.split("/r/")[1];
+  assert.deepEqual(await confirm({ code }, s.env, req("/", {})), { ok: true, sent: true });
+  assert.equal(s.sent.length, 1);
+  assert.equal(s.store.get("qc:" + day), "240");
+  assert.deepEqual(await confirm({ code }, s.env, req("/", {})), { ok: true, sent: true });
+  assert.equal(s.sent.length, 1);
+});
+
+for (const [nome, prep] of [["dia (qc 240)", (s, day) => s.env.STATS.put("qc:" + day, "240")], ["ciclo (qm 7680)", (s) => s.env.STATS.put("qm:" + cycle(), "7680")]]) {
+  test("modo 1 email pelo " + nome + ": confirm não envia nem gasta quota; convite com a frase nova", async () => {
+    const s = setup();
+    const day = new Date().toISOString().slice(0, 10);
+    const r = await create({ g: "Grupo <b>", people: people(["A", "B", "C"]) }, s.env, req("/", {}));
+    await prep(s, day);
+    const qc0 = s.store.get("qc:" + day), qm0 = s.store.get("qm:" + cycle());
+    s.sent.length = 0;
+    const code = r.links[0].link.split("/r/")[1];
+    assert.deepEqual(await confirm({ code }, s.env, req("/", {})), { ok: true, sent: false });
+    assert.equal(s.sent.length, 0, "não chama o Brevo");
+    assert.equal(s.store.get("qc:" + day), qc0);
+    assert.equal(s.store.get("qm:" + cycle()), qm0);
+    const d = JSON.parse(s.store.get("d:" + day));
+    assert.equal(d.sorteados, 1); assert.equal(d.sem_email, 1); assert.equal(d.emails, 3);
+    // o mesmo link não conta duas vezes em 12 h
+    assert.deepEqual(await confirm({ code }, s.env, req("/", {})), { ok: true, sent: false });
+    assert.equal(JSON.parse(s.store.get("d:" + day)).sorteados, 1);
+    // link inválido continua 400
+    await assert.rejects(confirm({ code: code.slice(0, -3) + "AAA" }, s.env), (e) => e.status === 400);
+    // convites continuam a sair, com a frase nova (HTML e texto), escapados
+    const r2 = await worker.fetch(req("/api/create", { g: "Novo <i>", people: people(["Ana", "Rui", "Eva"]) }, O), s.env);
+    assert.equal(r2.status, 200);
+    assert.equal(s.sent.length, 3);
+    for (const m of s.sent) {
+      assert.ok(m.htmlContent.includes(FRASE_1) && m.textContent.includes(FRASE_1));
+      assert.ok(!m.htmlContent.includes(FRASE_2));
+      assert.ok(!m.htmlContent.includes("Novo <i>"));
+    }
+  });
+}
