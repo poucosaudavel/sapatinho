@@ -10,9 +10,9 @@
     "seo": {
       "estado": "trabalhar",
       "feitos": 1,
-      "tarefa": "26 nov: melhorar a página de prendas até 5 €",
+      "tarefa": "Texto honesto sobre o 2.º email (tarde)",
       "ultimo": "Google relido: indexado, ainda sem recuperação",
-      "atualizado": "2026-11-25T08:35:00+00:00"
+      "atualizado": "2026-11-25T12:45:00+00:00"
     },
     "outreach": {
       "estado": "descanso",
@@ -44,10 +44,10 @@
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "Black Friday no /r com /ir/amazon/* (tarde)",
-      "ultimo": "Plano B da quota no /criar, publicado",
-      "atualizado": "2026-11-25T08:35:00+00:00"
+      "feitos": 3,
+      "tarefa": "Black Friday no /r com o afiliados (tarde)",
+      "ultimo": "Modo 1 email aos 80 % feito e publicado",
+      "atualizado": "2026-11-25T12:45:00+00:00"
     },
     "suporte": {
       "estado": "descanso",
@@ -65,10 +65,10 @@
     },
     "qa": {
       "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "Rever a Black Friday no /r (tarde)",
-      "ultimo": "Aprovou o plano B da quota (5 reparos feitos)",
-      "atualizado": "2026-11-25T08:35:00+00:00"
+      "feitos": 3,
+      "tarefa": "Rever a Black Friday e os textos do 2.º email",
+      "ultimo": "Reviu o modo 1 email (aprovado com reparos)",
+      "atualizado": "2026-11-25T12:45:00+00:00"
     }
   },
   "estado": {
@@ -79,10 +79,6 @@
     ],
     "preciso": "Decidir a quota de emails até 26 nov: plano pago do Brevo (ou não) e dar à chave do Cloudflare a permissão Workers. Login na Cloudflare Web Analytics. À espera: botão e publicação afixada do Facebook.",
     "diario": [
-      {
-        "quando": "2026-11-18T20:40:00+00:00",
-        "texto": "Noite: 17 dez agendado no Meta (carrossel 12:30, feed 20:30, 4 stories; Facebook e Instagram). Caixa sem novidades."
-      },
       {
         "quando": "2026-11-19T08:05:00+00:00",
         "texto": "Manhã: teste de entrega OK (Caixa principal, < 1 min); KPIs de quinta; reparo do nome longo na /org revisto e publicado; Meta 18 dez fica para a noite."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-25T11:58:00+00:00",
         "texto": "Almoço: 25 nov já com 7 sorteios; segundos emails a sair com o limite novo; caixa e site sem novidades."
+      },
+      {
+        "quando": "2026-11-25T12:45:00+00:00",
+        "texto": "Almoço: modo 1 email aos 80 % do limite (pedido do Diogo) publicado na API e no site."
       }
     ],
     "recados": [
@@ -211,6 +211,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 65
     },
-    "atualizado": "2026-11-25T11:58:00+00:00"
+    "atualizado": "2026-11-25T12:45:00+00:00"
   }
 }
