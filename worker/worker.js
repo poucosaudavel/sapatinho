@@ -312,10 +312,13 @@ async function count(env, inc) {
 /* ---------- proteção contra abusos ---------- */
 // Endereços de sites no nome do grupo ou nos nomes transformariam os convites em publicidade ou burla.
 const hasLink = (s) => /(https?:|www\.|[a-z0-9-]+\.(pt|com|net|org|io|br|info|xyz|me|co|eu|link|site|shop|app|top|click)\b)/i.test(s);
-// O plano gratuito do Brevo envia 300 emails por dia. Convites e segundos emails têm contadores separados,
-// para que um não consiga esgotar o outro (somados ficam abaixo dos 300).
-const DAILY_EMAILS = 240;      // convites por dia (contador "q:")
-const CONFIRM_CAP = 55;        // segundos emails por dia (contador "qc:")
+// Plano Starter do Brevo (desde 25 nov 2026): 10 000 emails por mês, sem limite diário; os créditos renovam a
+// dia 25 de cada mês às ~9:25 (hora de Lisboa). Convites e segundos emails têm contadores diários separados,
+// para que um não consiga esgotar o outro, e um teto mensal comum ("qm:") abaixo dos créditos do plano.
+const DAILY_EMAILS = 500;      // convites por dia (contador "q:")
+const CONFIRM_CAP = 300;       // segundos emails por dia (contador "qc:")
+// No máximo 800 por dia: o teto mensal só se esgota com 12 dias seguidos no máximo (o recorde é 218, a 22 nov).
+const MONTHLY_EMAILS = 9600;   // convites + segundos emails por ciclo de créditos (contador "qm:"); folga de 400
 const CREATES_PER_IP = 10;     // sorteios por dia a partir do mesmo endereço IP
 const EMAILS_PER_IP = 90;      // convites por dia a partir do mesmo endereço IP (3 sorteios de 30)
 const CONFIRMS_PER_IP = 20;    // segundos emails por dia pedidos a partir do mesmo endereço IP
@@ -351,14 +354,29 @@ async function guardConfirm(env, req) {
   await reserve(env, 1, CONFIRM_CAP, "qc:");
   if (key) await env.STATS.put(key, String(used + 1), { expirationTtl: 86400 });
 }
-// Quota diária do Brevo: os emails contam-se ANTES de enviar (reserva), para que um envio que falhe a meio
-// ou pedidos seguidos não passem o limite. Chaves "q:<dia>" (convites) e "qc:<dia>" (segundos emails), só com um número; apaga-se sozinha em 2 dias.
+// Quota do Brevo: os emails contam-se ANTES de enviar (reserva), para que um envio que falhe a meio
+// ou pedidos seguidos não passem o limite. Chaves "q:<dia>" (convites) e "qc:<dia>" (segundos emails), só com um número,
+// apagam-se sozinhas em 2 dias; "qm:<ciclo>" soma os dois no ciclo de créditos e apaga-se em 40 dias.
+// Ciclo: começa a dia 25 às 10:00 UTC (depois da renovação do Brevo às ~9:25), com o nome do mês em que começa.
+function cycle(now = new Date()) {
+  const d = new Date(now.getTime() - (24 * 24 + 10) * 3600 * 1000); // recua 24 dias e 10 h: dia 25 10:00 → dia 1 00:00
+  return d.toISOString().slice(0, 7);
+}
 async function reserve(env, n, cap, prefix) {
   if (!env.STATS) return;
   const key = prefix + new Date().toISOString().slice(0, 10);
+  const mkey = "qm:" + cycle();
   const used = parseInt((await env.STATS.get(key)) || "0", 10);
+  // A frase «Hoje já enviámos todos os emails…» é lida pelo site/criar.html (caixa do plano B): não a mudar sem mudar lá.
   if (used + n > cap) throw fail("Hoje já enviámos todos os emails que podemos. Tenta outra vez amanhã.", 429);
+  const mused = parseInt((await env.STATS.get(mkey)) || "0", 10);
+  if (mused + n > MONTHLY_EMAILS) {
+    const [y, m] = cycle().split("-").map(Number);
+    const mes = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"][m % 12];
+    throw fail(`Este mês já enviámos todos os emails que podemos. Voltamos a enviar a 25 de ${mes}. Pedimos desculpa.`, 429);
+  }
   await env.STATS.put(key, String(used + n), { expirationTtl: 172800 });
+  await env.STATS.put(mkey, String(mused + n), { expirationTtl: 3456000 });
 }
 // Nomes: letras (com acentos), números, espaços, hífen, apóstrofo, ponto e emojis. Nada de "/", "@", ":"
 // nem "palavra.palavra" (que o Gmail transforma em link) nem números de telefone.
@@ -380,4 +398,4 @@ async function stats(req, env, json) {
   return json({ days, oficina: oficina || null });
 }
 
-export { create, confirm, encode, decode, sign, verify, draw };
+export { create, confirm, encode, decode, sign, verify, draw, cycle };

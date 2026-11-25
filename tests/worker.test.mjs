@@ -1,7 +1,7 @@
 // Testes locais da API (sem rede, sem Brevo, sem Cloudflare). Correr: node --test tests/
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import worker, { create, confirm, encode, sign } from "../worker/worker.js";
+import worker, { create, confirm, encode, sign, cycle } from "../worker/worker.js";
 
 function setup() {
   const store = new Map();
@@ -175,7 +175,7 @@ test("sorteio impossível não gasta quota nem limite do IP", async () => {
 test("segundos emails têm contador próprio e não bloqueiam a criação de sorteios", async () => {
   const s = setup();
   const day = new Date().toISOString().slice(0, 10);
-  await s.env.STATS.put("qc:" + day, "55");
+  await s.env.STATS.put("qc:" + day, "300");
   const code = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Ana", t: "Rui", p: ["Ana", "Rui", "Eva"], e: "a@exemplo.pt" }), s.env);
   await assert.rejects(confirm({ code }, s.env, req("/", {})), (e) => e.status === 429);
   const r = await worker.fetch(req("/api/create", { g: "Novo", people: people(["A", "B", "C"]) }, O), s.env);
@@ -228,4 +228,42 @@ test("chave dos links guardada no KV (cfg:link_secret) funciona como LINK_SECRET
   await confirm({ code: codeNovo }, s.env, req("/", {}));
   assert.equal(s.sent.at(-1).to[0].email, "p2@exemplo.pt");
   await assert.rejects(confirm({ code: codeNovo }, antigo.env, req("/", {})));
+});
+
+test("plano Starter: ciclo de créditos começa a dia 25 às 10:00 UTC", () => {
+  assert.equal(cycle(new Date("2026-11-25T09:59:00Z")), "2026-10");
+  assert.equal(cycle(new Date("2026-11-25T10:00:00Z")), "2026-11");
+  assert.equal(cycle(new Date("2026-12-24T23:00:00Z")), "2026-11");
+  assert.equal(cycle(new Date("2026-12-25T10:30:00Z")), "2026-12");
+  assert.equal(cycle(new Date("2027-01-10T12:00:00Z")), "2026-12");
+  assert.equal(cycle(new Date("2027-03-25T10:00:00Z")), "2027-03");
+});
+
+test("plano Starter: limites diários de 500 convites e 300 segundos emails", async () => {
+  const s = setup();
+  const day = new Date().toISOString().slice(0, 10);
+  await s.env.STATS.put("q:" + day, "497");
+  assert.equal((await worker.fetch(req("/api/create", { g: "Cabe", people: people(["A", "B", "C"]) }, O), s.env)).status, 200);
+  const r = await worker.fetch(req("/api/create", { g: "Nao cabe", people: people(["A", "B", "C"]) }, O), s.env);
+  assert.equal(r.status, 429);
+  assert.match((await r.json()).error, /^Hoje já enviámos todos os emails/);
+  await s.env.STATS.put("qc:" + day, "299");
+  const code = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Ana", t: "Rui", p: ["Ana", "Rui", "Eva"], e: "a@exemplo.pt" }), s.env);
+  await confirm({ code }, s.env, req("/", {}));
+  const code2 = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Eva", t: "Ana", p: ["Ana", "Rui", "Eva"], e: "e@exemplo.pt" }), s.env);
+  await assert.rejects(confirm({ code: code2 }, s.env, req("/", {})), (e) => e.status === 429);
+});
+
+test("plano Starter: teto mensal de 9600 emails soma convites e segundos emails", async () => {
+  const s = setup();
+  const m = "qm:" + cycle();
+  await s.env.STATS.put(m, "9597");
+  assert.equal((await worker.fetch(req("/api/create", { g: "Cabe", people: people(["A", "B", "C"]) }, O), s.env)).status, 200);
+  assert.equal(s.store.get(m), "9600");
+  const r = await worker.fetch(req("/api/create", { g: "Nao cabe", people: people(["A", "B", "C"]) }, O), s.env);
+  assert.equal(r.status, 429);
+  assert.match((await r.json()).error, /^Este mês já enviámos todos os emails que podemos\. Voltamos a enviar a 25 de (janeiro|fevereiro|março|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro)\./);
+  const code = await sign(encode({ v: 2, g: "G", l: 10, d: null, n: "Ana", t: "Rui", p: ["Ana", "Rui", "Eva"], e: "a@exemplo.pt" }), s.env);
+  await assert.rejects(confirm({ code }, s.env, req("/", {})), (e) => e.status === 429);
+  assert.equal(s.sent.length, 3);
 });
