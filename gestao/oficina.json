@@ -2,17 +2,17 @@
   "agentes": {
     "gestor": {
       "estado": "trabalhar",
-      "feitos": 3,
-      "tarefa": "Tarde: Black Friday no /r (afiliados + produto + qa) e publicar",
-      "ultimo": "Plano B da quota publicado no /criar",
-      "atualizado": "2026-11-25T08:35:00+00:00"
+      "feitos": 4,
+      "tarefa": "Turno da noite: Meta (story 11 dez) e registo",
+      "ultimo": "Publicado o site (deploy ccad9654)",
+      "atualizado": "2026-11-25T16:05:00+00:00"
     },
     "seo": {
-      "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "Texto honesto sobre o 2.º email (tarde)",
-      "ultimo": "Google relido: indexado, ainda sem recuperação",
-      "atualizado": "2026-11-25T12:45:00+00:00"
+      "estado": "descanso",
+      "feitos": 2,
+      "tarefa": "Página até 5 € (26 nov)",
+      "ultimo": "Texto honesto do segundo email publicado",
+      "atualizado": "2026-11-25T16:05:00+00:00"
     },
     "outreach": {
       "estado": "descanso",
@@ -36,25 +36,25 @@
       "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "afiliados": {
-      "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "Black Friday no /r: confirmar o endereço das ofertas",
-      "ultimo": "282 links da Amazon certos, 12 pesquisas testadas",
-      "atualizado": "2026-11-25T08:35:00+00:00"
+      "estado": "descanso",
+      "feitos": 2,
+      "tarefa": "Medir /ir/amazon/* a 26–28 nov",
+      "ultimo": "Black Friday no /r publicada",
+      "atualizado": "2026-11-25T16:05:00+00:00"
     },
     "produto": {
-      "estado": "trabalhar",
-      "feitos": 3,
-      "tarefa": "Black Friday no /r com o afiliados (tarde)",
-      "ultimo": "Modo 1 email aos 80 % feito e publicado",
-      "atualizado": "2026-11-25T12:45:00+00:00"
+      "estado": "descanso",
+      "feitos": 4,
+      "tarefa": "Medir início → /criar (25–27 nov)",
+      "ultimo": "Black Friday no /r e 13 /ir/amazon/* publicadas",
+      "atualizado": "2026-11-25T16:05:00+00:00"
     },
     "suporte": {
       "estado": "descanso",
-      "feitos": 1,
-      "tarefa": "Quinta 26 nov: teste de entrega",
-      "ultimo": "Site, /r, /org e API OK; sem pedidos de ajuda",
-      "atualizado": "2026-11-25T08:35:00+00:00"
+      "feitos": 2,
+      "tarefa": "Seguir o pedido de reenvio de 25 nov",
+      "ultimo": "Respondido 1 pedido de ajuda (convite não chegou)",
+      "atualizado": "2026-11-25T16:05:00+00:00"
     },
     "inovacao": {
       "estado": "descanso",
@@ -64,11 +64,11 @@
       "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "qa": {
-      "estado": "trabalhar",
-      "feitos": 3,
-      "tarefa": "Rever a Black Friday e os textos do 2.º email",
-      "ultimo": "Reviu o modo 1 email (aprovado com reparos)",
-      "atualizado": "2026-11-25T12:45:00+00:00"
+      "estado": "descanso",
+      "feitos": 4,
+      "tarefa": "Rever o próximo PR",
+      "ultimo": "2 ramos revistos (Black Friday e segundo email)",
+      "atualizado": "2026-11-25T16:05:00+00:00"
     }
   },
   "estado": {
@@ -79,10 +79,6 @@
     ],
     "preciso": "Decidir a quota de emails até 26 nov: plano pago do Brevo (ou não) e dar à chave do Cloudflare a permissão Workers. Login na Cloudflare Web Analytics. À espera: botão e publicação afixada do Facebook.",
     "diario": [
-      {
-        "quando": "2026-11-19T08:05:00+00:00",
-        "texto": "Manhã: teste de entrega OK (Caixa principal, < 1 min); KPIs de quinta; reparo do nome longo na /org revisto e publicado; Meta 18 dez fica para a noite."
-      },
       {
         "quando": "2026-11-19T11:55:00+00:00",
         "texto": "Almoço: sem novidades; site e API a funcionar."
@@ -156,8 +152,12 @@
         "texto": "Almoço: 25 nov já com 7 sorteios; segundos emails a sair com o limite novo; caixa e site sem novidades."
       },
       {
-        "quando": "2026-11-25T12:45:00+00:00",
+        "quando": "2026-11-25T12:00:00+00:00",
         "texto": "Almoço: modo 1 email aos 80 % do limite (pedido do Diogo) publicado na API e no site."
+      },
+      {
+        "quando": "2026-11-25T16:05:00+00:00",
+        "texto": "Tarde: Black Friday no /r e texto honesto do 2.º email publicados; 74 pessoas sortearam hoje (limite novo a funcionar)."
       }
     ],
     "recados": [
@@ -211,6 +211,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 65
     },
-    "atualizado": "2026-11-25T12:45:00+00:00"
+    "atualizado": "2026-11-25T16:05:00+00:00"
   }
 }
