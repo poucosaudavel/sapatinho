@@ -41,13 +41,15 @@ def amz_url(q, max_eur=None):
     return u + ("&tag=" + AMAZON_TAG if AMAZON_TAG else "")
 
 def affiliate(body, max_eur=None):
-    """[[amz:termo de pesquisa|texto]] -> link Amazon de afiliado (com preço máximo, se a página o tiver)."""
+    """[[amz:termo de pesquisa|texto]] -> link Amazon de afiliado (com preço máximo, se a página o tiver).
+    [[amz:termo|texto|N]] põe o preço máximo N € só nesse link (blocos de compra com vários escalões, 25 nov)."""
     found = [False]
     def rep(m):
         found[0] = True
         q, label = m.group(1), m.group(2) or m.group(1)
-        return f'<a href="{html.escape(amz_url(q, max_eur))}" rel="sponsored nofollow noopener" target="_blank">{label}</a>'
-    out = re.sub(r"\[\[amz:([^|\]]+)(?:\|([^\]]+))?\]\]", rep, body)
+        mx = int(m.group(3)) if m.group(3) else max_eur
+        return f'<a href="{html.escape(amz_url(q, mx))}" rel="sponsored nofollow noopener" target="_blank">{label}</a>'
+    out = re.sub(r"\[\[amz:([^|\]]+)(?:\|([^|\]]+))?(?:\|(\d+))?\]\]", rep, body)
     return out, found[0]
 
 OG_DEFAULT = dict(url=BASE + "/og.jpg", w=1200, h=630, alt="Sapatinho, o amigo secreto da família sem papelinhos")
@@ -488,10 +490,33 @@ IR = {
     "email-prendas/ate-20": ("/prendas-amigo-secreto-ate-20-euros/", "prendas até 20 €"),
     "email-prendas/ate-50": ("/ideias-de-prendas-amigo-secreto/#ate-50", "prendas até 50 €"),
     "email-prendas/ideias": ("/ideias-de-prendas-amigo-secreto/", "ideias de prendas"),
+    # Caixa da Amazon no /r e no /sorteio (25 nov): as pesquisas por escalão e a Black Friday passam a ser contadas.
+    # Destinos na Amazon.es com o código próprio do /r (sapatinhores-21), iguais às pesquisas que o /r fazia direto
+    # (encodeURIComponent do JavaScript). O total por escalão soma-se pelo prefixo /ir/amazon/ate-<N>/.
+    # Black Friday: endereço confirmado no comunicado da Amazon de 10 nov 2026 (www.amazon.es/blackfriday).
+    "amazon/ate-5/chocolates": ("https://www.amazon.es/s?k=bombones&rh=p_36%3A-500&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-5/meias": ("https://www.amazon.es/s?k=calcetines%20navidad&rh=p_36%3A-500&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-5/canecas": ("https://www.amazon.es/s?k=taza%20divertida&rh=p_36%3A-500&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-10/cartas": ("https://www.amazon.es/s?k=juego%20de%20cartas&rh=p_36%3A-1000&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-10/velas": ("https://www.amazon.es/s?k=vela%20aromatica&rh=p_36%3A-1000&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-10/porta-chaves": ("https://www.amazon.es/s?k=llavero%20original&rh=p_36%3A-1000&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-15/mantas": ("https://www.amazon.es/s?k=manta%20polar&rh=p_36%3A-1500&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-15/canecas-termicas": ("https://www.amazon.es/s?k=taza%20termica&rh=p_36%3A-1500&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-15/puzzles": ("https://www.amazon.es/s?k=puzzle%201000%20piezas&rh=p_36%3A-1500&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-20/colunas": ("https://www.amazon.es/s?k=altavoz%20bluetooth&rh=p_36%3A-2000&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-20/jogos": ("https://www.amazon.es/s?k=juego%20de%20mesa&rh=p_36%3A-2000&tag=sapatinhores-21", "a Amazon"),
+    "amazon/ate-20/garrafas": ("https://www.amazon.es/s?k=botella%20termica&rh=p_36%3A-2000&tag=sapatinhores-21", "a Amazon"),
+    "amazon/bf": ("https://www.amazon.es/blackfriday?tag=sapatinhores-21", "as ofertas da Amazon"),
 }
 
 def write_ir():
     for origem, (dest, label) in IR.items():
+        # Destinos fora do site (Amazon): «origin» para a Amazon ver só o domínio (as regras pedem que se saiba de que
+        # site vem o clique; o caminho /ir/... não leva nada pessoal) e o link visível com rel de afiliado.
+        ext = dest.startswith("https://")
+        ref = "origin" if ext else "no-referrer"
+        rel = ' rel="sponsored nofollow"' if ext else ""
+        dest = html.escape(dest)  # & -> &amp; no meta refresh e no link
         os.makedirs(f"{SITE}/ir/{origem}", exist_ok=True)
         open(f"{SITE}/ir/{origem}/index.html", "w").write(f"""<!doctype html>
 <html lang="pt-PT">
@@ -499,13 +524,13 @@ def write_ir():
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<meta name="referrer" content="no-referrer">
+<meta name="referrer" content="{ref}">
 <meta http-equiv="refresh" content="0;url={dest}">
 <title>Sapatinho</title>
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<main class="wrap"><p>A abrir… Se não abrir sozinho, <a href="{dest}">segue para {label}</a>.</p></main>
+<main class="wrap"><p>A abrir… Se não abrir sozinho, <a href="{dest}"{rel}>segue para {label}</a>.</p></main>
 </body>
 </html>
 """)

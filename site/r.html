@@ -147,35 +147,53 @@ function giftBlock(l){
   return box;
 }
 /* Pesquisas da Amazon dentro do limite do grupo (mesmos escalões dos botões: 5, 10, 15 e 20 €).
-   Termos fixos por escalão: o endereço nunca leva nomes, grupo nem nada do link do convite, só o escalão (número).
-   Código de afiliado próprio do /r (sapatinhores-21) para medir à parte. O referrer fica no strict-origin da página
-   (só o domínio). Acima de 20 € ou sem limite não há bloco (sem filtro de preço honesto). */
-var AMZ_TAG = "sapatinhores-21";
+   Termos fixos por escalão. Cada pesquisa passa por um endereço de contagem fixo /ir/amazon/ate-<escalão>/<termo>/
+   (gerado em tools/seo/build.py com o destino já escrito; o total por escalão soma-se pelo prefixo). O link leva
+   «noreferrer»: o endereço do /r tem o payload e não pode chegar à página de contagem nem à Amazon.
+   Código de afiliado próprio do /r (sapatinhores-21, escrito nos destinos do build.py) para medir à parte.
+   Acima de 20 € ou sem limite não há pesquisas (sem filtro de preço honesto). */
 var AMZ_TERMS = {
-  5:  [["bombones", "Chocolates"], ["calcetines navidad", "Meias de Natal"], ["taza divertida", "Canecas"]],
-  10: [["juego de cartas", "Jogos de cartas"], ["vela aromatica", "Velas perfumadas"], ["llavero original", "Porta-chaves"]],
-  15: [["manta polar", "Mantas"], ["taza termica", "Canecas térmicas"], ["puzzle 1000 piezas", "Puzzles"]],
-  20: [["altavoz bluetooth", "Colunas bluetooth"], ["juego de mesa", "Jogos de tabuleiro"], ["botella termica", "Garrafas térmicas"]]
+  5:  [["chocolates", "Chocolates"], ["meias", "Meias de Natal"], ["canecas", "Canecas"]],
+  10: [["cartas", "Jogos de cartas"], ["velas", "Velas perfumadas"], ["porta-chaves", "Porta-chaves"]],
+  15: [["mantas", "Mantas"], ["canecas-termicas", "Canecas térmicas"], ["puzzles", "Puzzles"]],
+  20: [["colunas", "Colunas bluetooth"], ["jogos", "Jogos de tabuleiro"], ["garrafas", "Garrafas térmicas"]]
 };
 function amazonTier(l){
   var n = validLimit(l);
   if (!n || n > 20) return 0;
   return n < 10 ? 5 : n < 15 ? 10 : n < 20 ? 15 : 20;
 }
+/* Black Friday (ideia de 25 nov): de 26 a 30 nov 2026, pela data do dispositivo; fora disso não aparece. */
+function isBlackFriday(){
+  var d = new Date();
+  return d.getFullYear() === 2026 && d.getMonth() === 10 && d.getDate() >= 26 && d.getDate() <= 30;
+}
+function amzLink(href, text, label){
+  var a = el("a", "", text);
+  a.href = href;
+  a.rel = "sponsored nofollow noopener noreferrer";
+  a.target = "_blank";
+  a.setAttribute("aria-label", label);
+  return a;
+}
 function amazonBlock(l){
-  var c = amazonTier(l);
-  if (!c || !AMZ_TERMS[c]) return null;
-  var wrap = el("div", "amz"), row = el("div", "row");
-  wrap.appendChild(el("p", "note", "Ou vê já na Amazon, até " + String(c) + " €:"));
-  AMZ_TERMS[c].forEach(function(t){
-    var a = el("a", "", t[1]);
-    a.href = "https://www.amazon.es/s?k=" + encodeURIComponent(t[0]) + "&rh=" + encodeURIComponent("p_36:-" + String(c * 100)) + "&tag=" + AMZ_TAG;
-    a.rel = "sponsored nofollow noopener";
-    a.target = "_blank";
-    a.setAttribute("aria-label", t[1] + " até " + String(c) + " € na Amazon (abre noutra janela)");
-    row.appendChild(a);
-  });
-  wrap.appendChild(row);
+  var c = amazonTier(l), bf = isBlackFriday();
+  var terms = c ? AMZ_TERMS[c] : null;
+  if (!terms && !bf) return null;
+  var wrap = el("div", "amz");
+  if (bf) {
+    var p = el("p", "note");
+    p.appendChild(amzLink("/ir/amazon/bf/", "Black Friday: ver as ofertas da Amazon", "Black Friday: ver as ofertas da Amazon (abre noutra janela)"));
+    wrap.appendChild(p);
+  }
+  if (terms) {
+    var row = el("div", "row");
+    wrap.appendChild(el("p", "note", "Ou vê já na Amazon, até " + String(c) + " €:"));
+    terms.forEach(function(t){
+      row.appendChild(amzLink("/ir/amazon/ate-" + String(c) + "/" + t[0] + "/", t[1], t[1] + " até " + String(c) + " € na Amazon (abre noutra janela)"));
+    });
+    wrap.appendChild(row);
+  }
   wrap.appendChild(el("p", "note aff", "Links de afiliado: se comprares, o Sapatinho pode receber uma pequena comissão, sem custo extra para ti. Como Associado da Amazon, o Sapatinho recebe por compras qualificadas. Preços aproximados: confirma antes de comprar."));
   return wrap;
 }
