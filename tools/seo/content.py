@@ -761,7 +761,7 @@ body="""
 </ul>
 <p>O Vale a Pena tem um guia prático sobre <a href="https://valeapena.info/black-friday-desconto-real">como saber se um desconto da Black Friday é real</a>, e uma página com as <a href="https://valeapena.info/black-friday">promoções da Black Friday 2026</a> em tecnologia e casa.</p>
 
-<p>Para ver as promoções da Amazon nesses dias já dentro do limite, procura prendas [[amz:regalo amigo invisible|até 10 €|10]], [[amz:regalo amigo invisible|até 15 €|15]] ou [[amz:regalo amigo invisible|até 20 €|20]] e compara com o preço noutras lojas.</p>
+<p>Para procurar na Amazon prendas dentro do limite, vê [[amz:regalo amigo invisible|até 10 €|10]], [[amz:regalo amigo invisible|até 15 €|15]] ou [[amz:regalo amigo invisible|até 20 €|20]], e compara com o preço noutras lojas.</p>
 
 <h2 id="limite">3. O limite é o preço que pagas</h2>
 <p>Se o limite é 20 € e encontras algo que custava 35 € por 20 €, a prenda está dentro do limite. O que conta é o que pagas, não o preço antes do desconto. Combinem isto no grupo se houver dúvidas, para ninguém se sentir em desvantagem.</p>

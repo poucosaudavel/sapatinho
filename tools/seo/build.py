@@ -493,7 +493,7 @@ IR = {
     # Caixa da Amazon no /r e no /sorteio (25 nov): as pesquisas por escalão e a Black Friday passam a ser contadas.
     # Destinos na Amazon.es com o código próprio do /r (sapatinhores-21), iguais às pesquisas que o /r fazia direto
     # (encodeURIComponent do JavaScript). O total por escalão soma-se pelo prefixo /ir/amazon/ate-<N>/.
-    # Black Friday: endereço confirmado no comunicado da Amazon de 10 nov 2026 (www.amazon.es/blackfriday).
+    # Black Friday: endereço do comunicado da Amazon de 10 nov 2026 (www.amazon.es/blackfriday).
     "amazon/ate-5/chocolates": ("https://www.amazon.es/s?k=bombones&rh=p_36%3A-500&tag=sapatinhores-21", "a Amazon"),
     "amazon/ate-5/meias": ("https://www.amazon.es/s?k=calcetines%20navidad&rh=p_36%3A-500&tag=sapatinhores-21", "a Amazon"),
     "amazon/ate-5/canecas": ("https://www.amazon.es/s?k=taza%20divertida&rh=p_36%3A-500&tag=sapatinhores-21", "a Amazon"),
@@ -511,10 +511,10 @@ IR = {
 
 def write_ir():
     for origem, (dest, label) in IR.items():
-        # Destinos fora do site (Amazon): «origin» para a Amazon ver só o domínio (as regras pedem que se saiba de que
+        # Destinos fora do site (Amazon): «strict-origin» (igual ao /r) para a Amazon ver só o domínio (as regras pedem que se saiba de que
         # site vem o clique; o caminho /ir/... não leva nada pessoal) e o link visível com rel de afiliado.
         ext = dest.startswith("https://")
-        ref = "origin" if ext else "no-referrer"
+        ref = "strict-origin" if ext else "no-referrer"
         rel = ' rel="sponsored nofollow"' if ext else ""
         dest = html.escape(dest)  # & -> &amp; no meta refresh e no link
         os.makedirs(f"{SITE}/ir/{origem}", exist_ok=True)
