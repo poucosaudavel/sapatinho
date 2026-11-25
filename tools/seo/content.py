@@ -435,7 +435,7 @@ body="""
 <h2 id="online">4. Online, por email</h2>
 <p>Num <a href="/criar">sorteio online como o do Sapatinho</a>, quem organiza escreve os nomes e os emails. Cada pessoa recebe um convite com um link só seu, roda a <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel e vê logo quem lhe saiu. Normalmente recebe também um segundo email com o nome, e o link do convite mostra sempre o resultado.</p>
 <ul>
-<li><strong>Vantagens:</strong> ninguém se tira a si próprio, quem organiza também pode participar, serve para um <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a> e o resultado fica guardado no email. Dá para indicar pares que não se podem tirar, como casais.</li>
+<li><strong>Vantagens:</strong> ninguém se tira a si próprio, quem organiza também pode participar, serve para um <a href="/amigo-secreto-a-distancia/">amigo secreto à distância</a> e o resultado fica guardado no link do convite. Dá para indicar pares que não se podem tirar, como casais.</li>
 <li><strong>Problemas:</strong> é preciso o email de cada pessoa. Os convites podem ir parar ao spam, por isso convém avisar o grupo.</li>
 </ul>
 <p>O que fica guardado, e onde, está explicado em <a href="/como-funciona-o-sapatinho-privacidade/">como funciona o Sapatinho por dentro</a>.</p>
@@ -894,7 +894,7 @@ body="""
 <li><strong>Podes tirar o teu próprio nome,</strong> e é preciso repetir.</li>
 <li><strong>Ninguém guarda o resultado,</strong> e em dezembro há sempre quem já não se lembre de quem lhe saiu.</li>
 </ul>
-<p>Na roleta do Sapatinho cada pessoa roda a sua, no seu telemóvel, e o nome fica guardado no email.</p>
+<p>Na roleta do Sapatinho cada pessoa roda a sua, no seu telemóvel, e o resultado fica guardado no link do convite.</p>
 
 <h2 id="revelacao">Como usar a roleta na revelação</h2>
 <ul>
@@ -1549,7 +1549,7 @@ faq=[
 ("O que oferecer no amigo secreto à última hora?", "Um vale de livraria ou de cinema, uma experiência, um cesto montado com coisas do supermercado ou uma prenda digital. Tudo se compra no próprio dia, e um postal escrito por ti torna-as mais pessoais."),
 ("Oferecer um vale no amigo secreto é falta de jeito?", "Não, sobretudo se não conheces bem a pessoa. Escolhe uma loja ou uma experiência ligada ao que ela gosta e embrulha o vale com algo pequeno que combine."),
 ("Posso oferecer uma prenda digital?", "Podes. Confirma que o serviço deixa oferecer e que funciona em Portugal, e entrega o código num cartão impresso, para haver alguma coisa para abrir na troca."),
-("Ainda dá para fazer o sorteio hoje?", 'Dá. No <a href="/criar">Sapatinho</a> escreves os nomes e os emails, e cada pessoa recebe por email quem lhe saiu.'),
+("Ainda dá para fazer o sorteio hoje?", 'Dá. No <a href="/criar">Sapatinho</a> escreves os nomes e os emails, e cada pessoa recebe por email o seu link e descobre quem lhe saiu.'),
 ],
 related=["ideias-de-prendas-amigo-secreto", "prendas-engracadas-amigo-secreto", "pistas-e-mensagens-amigo-secreto"],
 ))

@@ -590,7 +590,7 @@ def build_exemplo():
             <p>Estás no amigo secreto <b>{EX_GROUP}</b>, com 6 participantes. Carrega no botão para descobrires quem te saiu.</p>
             <p>Limite da prenda: <b>15 €</b><br>Troca de prendas: <b>18 de dezembro</b></p>
             <span class="fake-btn" aria-hidden="true">Sortear o meu amigo secreto</span>
-            <p class="small">Este link é só teu. Não o reencaminhes a ninguém. Depois de sortear, enviamos-te outro email com o nome, para confirmares sempre que quiseres.</p>
+            <p class="small">Este link é só teu. Não o reencaminhes a ninguém. Depois de sortear, normalmente enviamos-te outro email com o nome, para confirmares sempre que quiseres.</p>
           </div>
         </div>
       </section>
