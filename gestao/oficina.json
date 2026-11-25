@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
-      "feitos": 4,
-      "tarefa": "Turno da noite: Meta (story 11 dez) e registo",
-      "ultimo": "Publicado o site (deploy ccad9654)",
-      "atualizado": "2026-11-25T16:05:00+00:00"
+      "estado": "descanso",
+      "feitos": 6,
+      "tarefa": "Turno da manhã de 26 nov: relatório e KPIs de quinta",
+      "ultimo": "Story de 11 dez agendada: Meta completo até 20 dez",
+      "atualizado": "2026-11-25T20:05:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -22,11 +22,11 @@
       "atualizado": "2026-11-25T08:35:00+00:00"
     },
     "social-media": {
-      "estado": "trabalhar",
+      "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Story de 11 dez 18:30 por agendar (gestor, noite)",
-      "ultimo": "25 nov a 20 dez confirmado no Meta",
-      "atualizado": "2026-11-25T08:35:00+00:00"
+      "tarefa": "Ver comentários e mensagens no Meta",
+      "ultimo": "Calendário do Meta completo até 20 dez",
+      "atualizado": "2026-11-25T20:05:00+00:00"
     },
     "analista": {
       "estado": "descanso",
@@ -51,17 +51,17 @@
     },
     "suporte": {
       "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Seguir o pedido de reenvio de 25 nov",
-      "ultimo": "Respondido 1 pedido de ajuda (convite não chegou)",
-      "atualizado": "2026-11-25T16:05:00+00:00"
+      "feitos": 3,
+      "tarefa": "Teste de entrega e Brevo (26 nov)",
+      "ultimo": "Respondido o pedido do link de organizador perdido",
+      "atualizado": "2026-11-25T20:05:00+00:00"
     },
     "inovacao": {
       "estado": "descanso",
       "feitos": 2,
-      "tarefa": "Ideias de amanhã",
+      "tarefa": "Como evitar links de organizador perdidos (26 nov)",
       "ultimo": "Black Friday no /r aprovada",
-      "atualizado": "2026-11-25T08:35:00+00:00"
+      "atualizado": "2026-11-25T20:05:00+00:00"
     },
     "qa": {
       "estado": "descanso",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Quota de emails: resposta do Diogo até 26 nov (o limite de segundos emails bateu outra vez a 24 nov)",
-      "Black Friday no /r e na página da Black Friday (publicar hoje à noite)",
-      "Vigiar o /painel e medir início → /criar (25–27 nov)"
+      "KPIs de quinta e teste de entrega com o volume novo (13 sorteios/dia)",
+      "Página até 5 € (seo) e medir a Black Friday no /r (26–28 nov)",
+      "Evitar links de organizador perdidos (proposta do inovacao/produto)"
     ],
-    "preciso": "Decidir a quota de emails até 26 nov: plano pago do Brevo (ou não) e dar à chave do Cloudflare a permissão Workers. Login na Cloudflare Web Analytics. À espera: botão e publicação afixada do Facebook.",
+    "preciso": "Login na Cloudflare Web Analytics (origem das visitas). À espera: botão e publicação afixada do Facebook, grupos do Facebook.",
     "diario": [
-      {
-        "quando": "2026-11-19T11:55:00+00:00",
-        "texto": "Almoço: sem novidades; site e API a funcionar."
-      },
       {
         "quando": "2026-11-19T15:52:02+00:00",
         "texto": "Tarde: rodapé dos emails pronto e aprovado pelo qa; espera o «sim» do Diogo para a API. Site e API a funcionar."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-25T16:05:00+00:00",
         "texto": "Tarde: Black Friday no /r e texto honesto do 2.º email publicados; 74 pessoas sortearam hoje (limite novo a funcionar)."
+      },
+      {
+        "quando": "2026-11-25T20:05:00+00:00",
+        "texto": "Noite: 25 nov com 13 sorteios e 101 a sortear (máximo); semana já com 34 sorteios. Story de 11 dez agendada: Meta completo até 20 dez. 1 pedido de ajuda respondido."
       }
     ],
     "recados": [
@@ -205,12 +205,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 28,
+      "sorteios_semana": 34,
       "receita_semana": 0,
       "cliques_google_semana": 7,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 65
+      "taxa_sorteio": 67
     },
-    "atualizado": "2026-11-25T16:05:00+00:00"
+    "atualizado": "2026-11-25T20:05:00+00:00"
   }
 }
