@@ -80,10 +80,6 @@
     "preciso": "Decidir a quota de emails até 26 nov: plano pago do Brevo (ou não) e dar à chave do Cloudflare a permissão Workers. Login na Cloudflare Web Analytics. À espera: botão e publicação afixada do Facebook.",
     "diario": [
       {
-        "quando": "2026-11-18T12:00:00+00:00",
-        "texto": "Almoço: Bing Webmaster Tools com sitemap e 24 páginas pedidas; produto deixou pronto o ramo da /org e do /criar em ecrãs estreitos (qa revê à tarde)."
-      },
-      {
         "quando": "2026-11-18T20:40:00+00:00",
         "texto": "Noite: 17 dez agendado no Meta (carrossel 12:30, feed 20:30, 4 stories; Facebook e Instagram). Caixa sem novidades."
       },
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-25T08:35:00+00:00",
         "texto": "Manhã: plano B da quota publicado no /criar; 24 nov 11 sorteios; Google ainda sem recuperação; 6 emails de backlinks; Black Friday no /r aprovada"
+      },
+      {
+        "quando": "2026-11-25T11:58:00+00:00",
+        "texto": "Almoço: 25 nov já com 7 sorteios; segundos emails a sair com o limite novo; caixa e site sem novidades."
       }
     ],
     "recados": [
@@ -205,12 +205,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 23,
+      "sorteios_semana": 28,
       "receita_semana": 0,
       "cliques_google_semana": 7,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 63
+      "taxa_sorteio": 65
     },
-    "atualizado": "2026-11-25T08:35:00+00:00"
+    "atualizado": "2026-11-25T11:58:00+00:00"
   }
 }
