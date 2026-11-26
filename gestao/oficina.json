@@ -1,11 +1,11 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
+      "estado": "espera",
       "feitos": 3,
-      "tarefa": "Turno da tarde: publicar o link de organizador no /criar",
+      "tarefa": "Publicar o /criar novo quando a chave do Cloudflare funcionar",
       "ultimo": "Teste de ponta a ponta do sorteio no almoço: tudo a funcionar",
-      "atualizado": "2026-11-26T11:55:00Z"
+      "atualizado": "2026-11-26T16:05:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -44,17 +44,17 @@
     },
     "produto": {
       "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "Link de organizador visível no fim do /criar (tarde)",
-      "ultimo": "Verificação de palha: 39 ligações certas",
-      "atualizado": "2026-11-26T08:50:00+00:00"
+      "feitos": 2,
+      "tarefa": "Reparos menores do qa ao link de organizador (27 nov)",
+      "ultimo": "Link de organizador em destaque no fim do /criar",
+      "atualizado": "2026-11-26T16:05:00Z"
     },
     "suporte": {
       "estado": "descanso",
       "feitos": 2,
       "tarefa": "Pedidos de ajuda em cada turno",
-      "ultimo": "Teste de entrega de 26 nov certo (Principal)",
-      "atualizado": "2026-11-26T08:50:00+00:00"
+      "ultimo": "Tarde: caixa sem pedidos, site e API certos",
+      "atualizado": "2026-11-26T16:05:00Z"
     },
     "inovacao": {
       "estado": "descanso",
@@ -64,11 +64,11 @@
       "atualizado": "2026-11-26T08:50:00+00:00"
     },
     "qa": {
-      "estado": "trabalhar",
-      "feitos": 2,
-      "tarefa": "Rever o link de organizador do /criar",
-      "ultimo": "Aprovou a página até 5 € com 4 reparos",
-      "atualizado": "2026-11-26T08:50:00+00:00"
+      "estado": "descanso",
+      "feitos": 3,
+      "tarefa": "Confirmar o /criar no site real depois do deploy",
+      "ultimo": "Aprovou o link de organizador (sem bloqueantes)",
+      "atualizado": "2026-11-26T16:05:00Z"
     }
   },
   "estado": {
@@ -77,12 +77,8 @@
       "Medir Black Friday no /r e início → /criar (até 28 nov)",
       "Vigiar o /painel e o Brevo no pico"
     ],
-    "preciso": "Decidir se queres um anúncio pago pequeno no Facebook/Instagram de 30 nov a 2 dez (até 29 nov). O resto pode esperar.",
+    "preciso": "Chave do Cloudflare: a de private/cloudflare.env (mudada a 26 nov às 14:58) é recusada; precisa da permissão Cloudflare Pages: Edit.",
     "diario": [
-      {
-        "quando": "2026-11-20T08:15:00+00:00",
-        "texto": "Manhã: Chrome desligado; site e API OK; experiências /ir/ fechadas (ficam); retrospetiva da semana; ideia do LinkedIn para o Diogo."
-      },
       {
         "quando": "2026-11-20T12:15:00+00:00",
         "texto": "Almoço: Chrome de volta; Meta de 18 dez e manhã de 19 dez agendados (FB + IG)."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-26T11:55:00Z",
         "texto": "Almoço: manhã sem sorteios reais; teste de ponta a ponta certo (site, /r e contador a funcionar)."
+      },
+      {
+        "quando": "2026-11-26T16:05:00Z",
+        "texto": "Tarde: link de organizador feito e aprovado; publicação parada (chave do Cloudflare recusada)."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 68
     },
-    "atualizado": "2026-11-26T11:55:00Z"
+    "atualizado": "2026-11-26T16:05:00Z"
   }
 }
