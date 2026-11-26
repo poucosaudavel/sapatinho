@@ -729,7 +729,7 @@ related=["regras-do-amigo-secreto", "amigo-secreto-na-empresa", "prendas-engraca
 PAGES.append(dict(
 slug="amigo-secreto-black-friday",
 date="2026-10-28",
-modified="2026-10-29",
+modified="2026-11-26",
 nav="Black Friday",
 short="Prendas na Black Friday",
 card="Como aproveitar a Black Friday para a prenda do amigo secreto, sem cair em falsos descontos.",
@@ -749,7 +749,7 @@ body="""
 <p>Em 2026 a Black Friday é a <strong>27 de novembro</strong>, quase um mês antes do Natal. Para o amigo secreto é uma boa oportunidade: com o mesmo limite consegues uma prenda melhor, desde que saibas o que estás a comprar.</p>
 
 <h2 id="calendario">1. Faz o sorteio antes da Black Friday</h2>
-<p>Se o sorteio só acontece em dezembro, ninguém sabe a quem vai oferecer quando os descontos aparecem. Fazer o sorteio na primeira quinzena de novembro dá a toda a gente tempo para pensar na prenda e comprar com calma.</p>
+<p>Se o sorteio só acontece em dezembro, ninguém sabe a quem vai oferecer quando os descontos aparecem. Se o vosso ainda não está feito, faz o sorteio já esta semana, para cada um ter tempo de aproveitar as promoções e comprar com calma.</p>
 <p>Um <a href="/criar">sorteio online</a> resolve-se numa tarde, mesmo que o grupo só se junte no Natal. Se ainda estão a escolher a forma de sortear, vê <a href="/como-fazer-sorteio-amigo-secreto/">como fazer o sorteio do amigo secreto</a>.</p>
 
 <h2 id="desconto">2. Confirma se o desconto é real</h2>
@@ -988,7 +988,7 @@ body="""
 <li>Uma bola de Natal para a árvore, personalizada com o nome</li>
 <li>Um cabo de carregamento ou um suporte de telemóvel simples</li>
 </ul>
-<p>Onde encontrar: meias no Primark ou no supermercado; velas, porta-chaves e bolas de Natal na Flying Tiger ou num bazar; cadernos e marcadores na papelaria; cremes e bálsamos na drogaria ou no supermercado; suculentas no supermercado ou num viveiro; cabos e suportes numa loja chinesa.</p>
+<p>Onde encontrar: meias na Primark ou no supermercado; velas, porta-chaves e bolas de Natal na Flying Tiger ou num bazar; cadernos e marcadores na papelaria; cremes e bálsamos na drogaria ou no supermercado; suculentas no supermercado ou num viveiro; cabos e suportes numa loja chinesa.</p>
 <p class="shop">Procurar na Amazon: [[amz:balsamo labial regalo|bálsamos para os lábios]]</p>
 
 <h2 id="rir">Para fazer rir</h2>
@@ -1014,7 +1014,7 @@ body="""
 <li>Um frasco com 20 mensagens dobradas, para abrir uma por dia</li>
 <li>Uma pinha ou um enfeite pintado à mão</li>
 </ul>
-<p><strong>Duas que se fazem numa tarde.</strong> Sal de ervas: mistura sal grosso com alecrim e tomilho secos e raspa de limão, deixa secar num prato durante uma noite e passa para um frasco pequeno com tampa. Frasco de mensagens: escreve 20 frases curtas em tiras de papel (memórias, piadas do grupo, elogios), enrola cada uma, mete-as num frasco e cola por fora uma etiqueta com «Abrir uma por dia». Os frascos encontram-se no supermercado, numa loja chinesa ou na Flying Tiger; também podes reaproveitar um frasco de compota bem lavado.</p>
+<p><strong>Duas que se preparam numa tarde.</strong> Sal de ervas: mistura sal grosso com alecrim e tomilho secos e raspa de limão, deixa secar num prato durante uma noite e passa para um frasco pequeno com tampa. Frasco de mensagens: escreve 20 frases curtas em tiras de papel (memórias, piadas do grupo, elogios), enrola cada uma, mete-as num frasco e cola por fora uma etiqueta com «Abrir uma por dia». Os frascos encontram-se no supermercado, numa loja chinesa ou na Flying Tiger; também podes reaproveitar um frasco de compota bem lavado.</p>
 <p class="shop">Procurar na Amazon: [[amz:tarros cristal pequeños tapa|frascos pequenos com tampa]]</p>
 
 <h2 id="dicas">Como fazer 5 € parecerem mais</h2>
@@ -2292,7 +2292,8 @@ IMAGES = {
 # Cartões com ligação à Amazon, logo a seguir à introdução das páginas de prendas.
 # (ícone em site/img/icons/<ícone>.svg, nome, faixa de preço, para quem, pesquisa na Amazon em espanhol)
 # Os ícones geram-se com: node tools/seo/quick-icons.js
-# Só tipos de produto e faixas de preço que já estão na página: nada de marcas, preços exatos ou avaliações.
+# Só tipos de produto e faixas de preço que já estão na página: nada de preços exatos nem avaliações.
+# O 6.º campo (opcional) é o tipo de loja em Portugal: só nomes de lojas, nunca marcas de produto.
 QUICK = {
 "prendas-amigo-secreto-ate-5-euros": dict(
     intro="Encontram-se online e também em lojas de rua e centros comerciais: em cada uma dizemos o tipo de loja onde costuma haver. Os preços são aproximados e mudam com as promoções: confirma o valor antes de comprar.",
