@@ -4,8 +4,8 @@
       "estado": "trabalhar",
       "feitos": 3,
       "tarefa": "Turno da tarde: publicar o link de organizador no /criar",
-      "ultimo": "Página até 5 € publicada e reindexada",
-      "atualizado": "2026-11-26T08:50:00+00:00"
+      "ultimo": "Teste de ponta a ponta do sorteio no almoço: tudo a funcionar",
+      "atualizado": "2026-11-26T11:55:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -79,10 +79,6 @@
     ],
     "preciso": "Decidir se queres um anúncio pago pequeno no Facebook/Instagram de 30 nov a 2 dez (até 29 nov). O resto pode esperar.",
     "diario": [
-      {
-        "quando": "2026-11-19T20:00:00+00:00",
-        "texto": "Noite: Chrome do PC desligado (sem caixa nem Meta; 18 dez fica para a manhã). Site e /ir/email/ verificados: tudo 200, API inválida 400."
-      },
       {
         "quando": "2026-11-20T08:15:00+00:00",
         "texto": "Manhã: Chrome desligado; site e API OK; experiências /ir/ fechadas (ficam); retrospetiva da semana; ideia do LinkedIn para o Diogo."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-26T08:50:00+00:00",
         "texto": "Manhã de 26 nov: 25 nov fechou com 15 sorteios reais (recorde); semana 37 (+37 %). Página até 5 € publicada; teste de entrega certo; 9 832 emails no plano."
+      },
+      {
+        "quando": "2026-11-26T11:55:00Z",
+        "texto": "Almoço: manhã sem sorteios reais; teste de ponta a ponta certo (site, /r e contador a funcionar)."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 68
     },
-    "atualizado": "2026-11-26T08:50:00+00:00"
+    "atualizado": "2026-11-26T11:55:00Z"
   }
 }
