@@ -175,6 +175,7 @@ p{margin:0}
 .article .quick-card p{margin:0}
 .article .quick-price{font-size:.8rem;font-weight:600;letter-spacing:.04em;color:var(--ember-d);background:var(--paper-2);border-radius:3px;padding:1px 7px}
 .article .quick-who{font-size:.9rem;line-height:1.45;color:var(--muted)!important;flex:1}
+.article .quick-where{font-size:.85rem;line-height:1.4;color:var(--ink)}
 .article .quick-buy{width:100%;margin-top:10px!important}
 .article .quick-buy a{display:flex;align-items:center;justify-content:center;width:100%;font:600 .92rem var(--body);background:var(--ember);color:#fff;
   border-radius:4px;padding:11px 10px;text-decoration:none;text-align:center;transition:background .15s, transform .15s}

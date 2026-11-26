@@ -941,6 +941,7 @@ related=["como-fazer-sorteio-amigo-secreto", "regras-do-amigo-secreto"],
 PAGES.append(dict(
 slug="prendas-amigo-secreto-ate-5-euros",
 date="2026-10-29",
+modified="2026-11-26",
 nav="Prendas até 5 €",
 short="Prendas até 5 €",
 card="30 ideias baratas que não parecem baratas, para limites de 5 euros.",
@@ -972,7 +973,8 @@ body="""
 <li>Um frasco pequeno de compota, mel ou doce de abóbora</li>
 <li>Chocolate quente em pau, para mexer no leite</li>
 </ul>
-<p class="shop">Procurar na Amazon: [[amz:chocolate negro regalo|chocolate]] · [[amz:te navidad caja|chás]] · [[amz:chocolate caliente cuchara|chocolate quente em pau]]</p>
+<p>Onde encontrar: quase tudo no supermercado; as broas e as bolachas na pastelaria; as conservas e as compotas também em mercearias e lojas gourmet.</p>
+<p class="shop">Procurar na Amazon: [[amz:chocolate caliente cuchara|chocolate quente em pau]]</p>
 
 <h2 id="casa">Para casa e para o dia a dia</h2>
 <ul>
@@ -986,7 +988,8 @@ body="""
 <li>Uma bola de Natal para a árvore, personalizada com o nome</li>
 <li>Um cabo de carregamento ou um suporte de telemóvel simples</li>
 </ul>
-<p class="shop">Procurar na Amazon: [[amz:calcetines navidad divertidos|meias de Natal]] · [[amz:vela perfumada pequeña|velas]] · [[amz:libreta bolsillo bonita|cadernos]] · [[amz:balsamo labial regalo|bálsamos]]</p>
+<p>Onde encontrar: meias no Primark ou no supermercado; velas, porta-chaves e bolas de Natal na Flying Tiger ou num bazar; cadernos e marcadores na papelaria; cremes e bálsamos na drogaria ou no supermercado; suculentas no supermercado ou num viveiro; cabos e suportes numa loja chinesa.</p>
+<p class="shop">Procurar na Amazon: [[amz:balsamo labial regalo|bálsamos para os lábios]]</p>
 
 <h2 id="rir">Para fazer rir</h2>
 <ul>
@@ -998,7 +1001,8 @@ body="""
 <li>Um pato de borracha «para os dias difíceis no trabalho»</li>
 <li>Pastilhas, rebuçados ou chupa-chupas de sabores estranhos</li>
 </ul>
-<p class="shop">Procurar na Amazon: [[amz:gorro navidad|gorros de Natal]] · [[amz:juego de cartas preguntas|jogos de cartas]] · [[amz:pato de goma|patos de borracha]]</p>
+<p>Onde encontrar: gorros, orelhas de rena e óculos de plástico numa loja chinesa ou na Flying Tiger; jogos de cartas e puzzles na papelaria ou numa loja de brinquedos; rebuçados e pastilhas no supermercado.</p>
+<p class="shop">Procurar na Amazon: [[amz:juego de cartas preguntas|jogos de cartas de perguntas]]</p>
 
 <h2 id="feito">Feitas por ti</h2>
 <ul>
@@ -1010,6 +1014,8 @@ body="""
 <li>Um frasco com 20 mensagens dobradas, para abrir uma por dia</li>
 <li>Uma pinha ou um enfeite pintado à mão</li>
 </ul>
+<p><strong>Duas que se fazem numa tarde.</strong> Sal de ervas: mistura sal grosso com alecrim e tomilho secos e raspa de limão, deixa secar num prato durante uma noite e passa para um frasco pequeno com tampa. Frasco de mensagens: escreve 20 frases curtas em tiras de papel (memórias, piadas do grupo, elogios), enrola cada uma, mete-as num frasco e cola por fora uma etiqueta com «Abrir uma por dia». Os frascos encontram-se no supermercado, numa loja chinesa ou na Flying Tiger; também podes reaproveitar um frasco de compota bem lavado.</p>
+<p class="shop">Procurar na Amazon: [[amz:tarros cristal pequeños tapa|frascos pequenos com tampa]]</p>
 
 <h2 id="dicas">Como fazer 5 € parecerem mais</h2>
 <ul>
@@ -1018,6 +1024,7 @@ body="""
 <li><strong>Escreve um postal.</strong> Uma frase sobre a pessoa é o que fica. Há ideias nas <a href="/pistas-e-mensagens-amigo-secreto/">pistas e mensagens</a>.</li>
 <li><strong>Pensa na pessoa, não no preço.</strong> Saber que alguém gosta de chá de menta vale mais do que um orçamento maior.</li>
 </ul>
+<p class="shop">Procurar na Amazon: [[amz:papel kraft regalo cuerda|papel kraft e fio para embrulhar]]</p>
 <p>Muitas destas ideias compram-se no supermercado ou na papelaria. Se a troca é amanhã, vê também as <a href="/prendas-ultima-hora-amigo-secreto/">prendas de última hora</a>.</p>
 <p>Se o vosso limite é um pouco mais alto, vê as <a href="/prendas-amigo-secreto-ate-10-euros/">prendas até 10 €</a> ou todas as <a href="/ideias-de-prendas-amigo-secreto/">ideias de prendas para amigo secreto</a>.</p>
 """,
@@ -2287,13 +2294,15 @@ IMAGES = {
 # Os ícones geram-se com: node tools/seo/quick-icons.js
 # Só tipos de produto e faixas de preço que já estão na página: nada de marcas, preços exatos ou avaliações.
 QUICK = {
-"prendas-amigo-secreto-ate-5-euros": dict(items=[
-    ("chocolate", "Chocolate de boa qualidade", "até 5 €", "Para quem é guloso ou para quem mal conheces.", "chocolate negro regalo"),
-    ("meias", "Meias de Natal divertidas", "até 5 €", "Para quem leva o Natal a sério, ou a brincar.", "calcetines navidad divertidos"),
-    ("vela", "Vela perfumada pequena", "até 5 €", "Para quem gosta de estar em casa.", "vela perfumada pequeña"),
-    ("caderno", "Caderno de bolso", "até 5 €", "Para quem anda sempre a apontar coisas.", "libreta bolsillo bonita"),
-    ("cha", "Caixa pequena de chá", "até 5 €", "Para quem não passa sem uma bebida quente.", "te navidad caja"),
-    ("pato", "Pato de borracha", "até 5 €", "Para quem precisa de rir no fim do ano.", "pato de goma"),
+"prendas-amigo-secreto-ate-5-euros": dict(
+    intro="Encontram-se online e também em lojas de rua e centros comerciais: em cada uma dizemos o tipo de loja onde costuma haver. Os preços são aproximados e mudam com as promoções: confirma o valor antes de comprar.",
+    items=[
+    ("chocolate", "Chocolate de boa qualidade", "até 5 €", "Para quem é guloso ou para quem mal conheces.", "chocolate negro regalo", "supermercado ou loja gourmet"),
+    ("meias", "Meias de Natal divertidas", "até 5 €", "Para quem leva o Natal a sério, ou a brincar.", "calcetines navidad divertidos", "Primark, supermercado ou loja de roupa"),
+    ("vela", "Vela perfumada pequena", "até 5 €", "Para quem gosta de estar em casa.", "vela perfumada pequeña", "Flying Tiger, bazar ou loja de decoração"),
+    ("caderno", "Caderno de bolso", "até 5 €", "Para quem anda sempre a apontar coisas.", "libreta bolsillo bonita", "papelaria ou Flying Tiger"),
+    ("cha", "Caixa pequena de chá", "até 5 €", "Para quem não passa sem uma bebida quente.", "te navidad caja", "supermercado ou loja de chás"),
+    ("pato", "Pato de borracha", "até 5 €", "Para quem precisa de rir no fim do ano.", "pato de goma", "loja chinesa (bazar) ou Flying Tiger"),
 ]),
 "prendas-amigo-secreto-ate-10-euros": dict(items=[
     ("caneca", "Caneca com piada", "até 10 €", "Para o colega que mal conheces.", "taza divertida oficina"),

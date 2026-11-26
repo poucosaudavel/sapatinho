@@ -216,11 +216,15 @@ def quick_html(p):
     if not q:
         return ""
     cards = []
-    for icon, name, price, who, terms in q["items"]:
+    for item in q["items"]:
+        # 6.º campo opcional: tipos de loja em Portugal onde se encontra (26 nov)
+        icon, name, price, who, terms = item[:5]
+        where = item[5] if len(item) > 5 else None
         src = need(f"/img/icons/{icon}.svg")
         n = html.escape(name, quote=False)
+        w = f'<p class="quick-where">Em loja: {html.escape(where, quote=False)}</p>' if where else ""
         cards.append(f'<li class="quick-card"><img src="{src}" width="64" height="64" alt="" decoding="async">'
-                     f'<h3>{n}</h3><p class="quick-price">{html.escape(price)}</p><p class="quick-who">{html.escape(who, quote=False)}</p>'
+                     f'<h3>{n}</h3><p class="quick-price">{html.escape(price)}</p><p class="quick-who">{html.escape(who, quote=False)}</p>{w}'
                      f'<p class="quick-buy">[[amz:{terms}|Ver na Amazon<span class="vh">: {n}</span>]]</p></li>')
     if not 4 <= len(cards) <= 6:
         raise SystemExit(f"{p['slug']}: «Escolhas rápidas» precisa de 4 a 6 cartões (tem {len(cards)})")
