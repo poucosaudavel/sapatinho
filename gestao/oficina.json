@@ -3,9 +3,9 @@
     "gestor": {
       "estado": "espera",
       "feitos": 3,
-      "tarefa": "Publicar o /criar novo quando a chave do Cloudflare funcionar",
-      "ultimo": "Teste de ponta a ponta do sorteio no almoço: tudo a funcionar",
-      "atualizado": "2026-11-26T16:05:00Z"
+      "tarefa": "Publicar os reparos do link de organizador amanhã",
+      "ultimo": "Turno da noite fechado sem alarmes",
+      "atualizado": "2026-11-26T20:00:00Z"
     },
     "seo": {
       "estado": "descanso",
@@ -47,14 +47,14 @@
       "feitos": 2,
       "tarefa": "Reparos menores do qa ao link de organizador (27 nov)",
       "ultimo": "Link de organizador em destaque no fim do /criar",
-      "atualizado": "2026-11-26T16:05:00Z"
+      "atualizado": "2026-11-26T20:00:00Z"
     },
     "suporte": {
       "estado": "descanso",
-      "feitos": 2,
+      "feitos": 3,
       "tarefa": "Pedidos de ajuda em cada turno",
-      "ultimo": "Tarde: caixa sem pedidos, site e API certos",
-      "atualizado": "2026-11-26T16:05:00Z"
+      "ultimo": "Caixa e site verificados à noite: tudo certo",
+      "atualizado": "2026-11-26T20:00:00Z"
     },
     "inovacao": {
       "estado": "descanso",
@@ -73,16 +73,12 @@
   },
   "estado": {
     "prioridades": [
-      "Link de organizador visível no fim do /criar (publicar até 27 nov)",
-      "Medir Black Friday no /r e início → /criar (até 28 nov)",
-      "Vigiar o /painel e o Brevo no pico"
+      "Reparos do qa ao link de organizador e publicar",
+      "Medir Black Friday no /r e início → /criar (fecha 28 nov)",
+      "Teste no telemóvel e retrospetiva da semana"
     ],
     "preciso": "Chave do Cloudflare: a de private/cloudflare.env (mudada a 26 nov às 14:58) é recusada; precisa da permissão Cloudflare Pages: Edit.",
     "diario": [
-      {
-        "quando": "2026-11-20T12:15:00+00:00",
-        "texto": "Almoço: Chrome de volta; Meta de 18 dez e manhã de 19 dez agendados (FB + IG)."
-      },
       {
         "quando": "2026-11-20T16:05:00+00:00",
         "texto": "Tarde: caixa sem novidades; feed de 19 dez 12:30 agendado no Meta (FB + IG)."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-26T16:05:00Z",
         "texto": "Tarde: link de organizador feito e aprovado; publicação parada (chave do Cloudflare recusada)."
+      },
+      {
+        "quando": "2026-11-26T20:00:00Z",
+        "texto": "Noite: caixa sem pedidos novos; site e API certos; nada por publicar."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 68
     },
-    "atualizado": "2026-11-26T16:05:00Z"
+    "atualizado": "2026-11-26T20:00:00Z"
   }
 }
