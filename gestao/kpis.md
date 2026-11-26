@@ -146,6 +146,50 @@ Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima f
 | Meta | semana 15–21 nov: FB 6 visualizadores, IG alcance 2, 49 conteúdos. 30 dias (24 out–22 nov) FB: 60 visualizações, 21 visualizadores, 116 visitas, 1 interação, 1 seguidor. Cliques em ligações: sem dados | 15 a 22 nov | Meta Business Suite | 23 nov |
 | Visitas ao site (origem do pico de 22 nov) | sem dados: precisa de login do Diogo (a Cloudflare pediu início de sessão) | 22 nov | Cloudflare Web Analytics | 23 nov |
 
+## 26 nov 2026 (quinta) · KPIs completos
+
+Lido pelo `analista` entre as 7:47 e as 8:00 (Lisboa). Testes descontados: 25 nov 1 sorteio / 3 convites / 1 sorteou (indicado pelo gestor) e 26 nov 1 / 3 / 1 («Teste entrega 26 nov» do `suporte`, emails sapatinhonatal+e261/2/3, criado às 7:50).
+
+### Os 5 números do gestor (semana a semana)
+
+| Número | Esta semana | Semana anterior | Variação | Fonte e hora |
+| --- | --- | --- | --- | --- |
+| Sorteios reais por semana | **23–29 nov: 37 até agora** (23 nov 11 · 24 nov 11 · 25 nov 15 · 26 nov 0 reais até 7:58) | 16–22 nov: 27 | +37 % já em 3 dias | `/painel`, 7:50 e 7:58 |
+| Receita de afiliados por semana | 19–25 nov: **0,00 €** (0 produtos pedidos) | 12–18 nov: 0,00 € | igual | Amazon Afiliados (atualizado 26 nov 02:43 CET), ~7:53 |
+| Cliques do Google por semana | 18–24 nov: **7 cliques / 18 impressões** (todos os cliques na página inicial) | 11–17 nov: 0 / 7 | +7 cliques (base quase zero) | Search Console, ~7:48 |
+| Backlinks publicados | **1** (TechBit) | 1 | igual | `gestao/kpis.md` (sem novos lidos hoje) |
+| Sortearam ÷ convites | painel **68 %** (456 de 667, com testes); semana 23–29 reais 227 de 314 (72 %) | 25 nov: 63 %; 22 nov: 93 % | sobe com o Brevo pago (25 nov 118 de 132 reais) | `/painel`, 7:58 |
+
+### Leituras
+
+| Indicador | Valor | Período | Fonte | Lido a |
+| --- | --- | --- | --- | --- |
+| Painel (total, com testes) | 87 sorteios / 667 convites / 456 sortearam (68 %), 7,7 pessoas por sorteio; 23 de 87 com exclusões. Às 7:50: 86 / 664 / 455 (69 %) | até 26 nov, 7:58 | `/painel` | 26 nov, 7:58 |
+| Painel por dia (sorteios / convites / sortearam / sem 2.º email) | 22 nov 22 / 163 / 55 / 0 · 23 nov 11 / 71 / 54 / 0 · 24 nov 11 / 111 / 55 / 0 · 25 nov 16 / 135 / 119 / 0 (1 / 3 / 1 teste) · 26 nov 1 / 3 / 2 / 0 (o sorteio é o teste do `suporte`) | 22 a 26 nov | `/painel` | 26 nov, 7:58 |
+| Semana 23–29 nov (reais) | 37 sorteios, 314 convites, 227 sortearam | 23 a 26 nov, 7:58 | `/painel` menos testes | 26 nov |
+| Limite e tamanho (total) | limite: até 5 € 8, até 10 € 34, até 15 € 2, até 20 € 16, até 30 € 2, mais de 30 € 7, sem limite 17; grupos: 3–5 35, 6–10 36, 11–20 11, 21–30 4 | até 26 nov | `/painel` | 26 nov |
+| Google por dia (cliques / impressões) | 11 nov 0/0 · 12 0/0 · 13 0/3 · 14 0/1 · 15 0/0 · 16 0/3 · 17 0/0 · 18 0/2 · 19 0/0 · 20 0/1 · 21 0/1 · 22 0/1 · 23 2/4 · 24 5/9 (25 nov ainda sem dados) | 11 a 24 nov | Search Console | 26 nov, ~7:48 |
+| Google 7 dias | 7 cliques / 18 impressões / CTR 38,9 % / posição 49,8. Páginas: / 7 / 8 / posição 4,5 · /regras-do-amigo-secreto/ 0 / 9 / 88,1 · /guias/ 0 / 1 / 68,0. Consultas visíveis: «amigo secreto» 0 / 8 / 98,0 · «amigo secreto natal» 0 / 1 / 68,0 (as consultas dos 7 cliques estão ocultas pelo Google) | 18 a 24 nov | Search Console | 26 nov |
+| Google 28 dias | 65 cliques / 1,52 mil impressões / CTR 4,3 % / posição 12,4. Consultas: «prendas engraçadas para amigo secreto até 5€» 6 / 78 · «… até 10€» 1 / 10 · «roleta para amigo secreto» 1 / 6 · «prendas amigo secreto» 0 / 31 · «ideias prendas amigo secreto» 0 / 25 · «ideias prenda amigo secreto» 0 / 23 · «amigo secreto» 0 / 19 | 28 out a 24 nov | Search Console | 26 nov |
+| Páginas de prendas desde a queda | **continuam a (quase) zero**: 11–24 nov só 1 impressão cada em /prendas-amigo-secreto-homem/, /prendas-amigo-secreto-mulher/, /prendas-amigo-secreto-colegas/ e /prendas-engracadas-amigo-secreto/ (posição 5–10); **0 impressões** em até 5 €, até 10 €, até 15 €, até 20 €, /ideias-de-prendas-amigo-secreto/ e última hora. 18–24 nov: 0 em todas | 11 a 24 nov | Search Console (páginas, 16 com impressões) | 26 nov, ~7:50 |
+| Amazon | **novembro (1–25): 59 cliques**, 0 produtos pedidos, 0,00 €. Por dia: 18 nov 1 · 20 nov 2 · 22 nov 4 · 23 nov 3 · 24 nov 8 · **25 nov 27**. Últimos 7 dias (19–25 nov): **44 cliques**, 0 €; 12–18 nov: 4. 30 dias (27 out–25 nov): 60 cliques, 0 €. Por código (sapatinhonata-21 / sapatinhores-21 / sapatinhoredes-21): sem dados (não li o filtro; nas leituras anteriores devolvia 0 em todos) | 1 a 25 nov | Amazon Afiliados (atualizado 26 nov 02:43 CET) | 26 nov, ~7:53 |
+| Brevo por dia (enviados / entregues) | **23 nov 126 / 124** (1 hard bounce, 1 soft) · **24 nov 167 / 165** (2 hard) · **25 nov 254 / 250** (2 hard, 1 soft, 1 bloqueado, 1 adiado) · 26 nov 5 / 5 até 7:55 (4 do teste). 23–25 nov: 547 enviados, 539 entregues (98,5 %), **0 queixas**, 5 hard bounces (0,9 %) | 23 a 26 nov | Brevo (estatísticas transacionais) | 26 nov, ~7:55 |
+| Brevo 19–26 nov | 827 enviados, 97,58 % entregues, rejeitados 1,93 %, hard bounce 0,97 %, queixas 0 % | 19 a 26 nov | Brevo | 26 nov |
+| Brevo créditos | Plano Starter: **9 832 emails restantes até 25/12/2026**; 0 créditos pré-pagos; 0 emails em fila | ciclo 25 nov–25 dez | Brevo («Uso e plano») | 26 nov, ~7:56 |
+| Segundos emails por dia (estimativa: enviados − convites) | 25 nov ~119 (254 − 135), igual aos 119 que sortearam; 24 nov ~56. Longe dos 240 (modo 1 email) e dos 300 | 24 a 25 nov | Brevo + `/painel` | 26 nov |
+| Meta Facebook | visualizações 18–24 nov **13** (11–17 nov: 12); visitas 18–24 nov 5. 30 dias (27 out–25 nov): 65 visualizações, 22 visualizadores, 119 visitas, **1 seguidor** (sem cancelamentos) | 27 out a 25 nov | Meta Business Suite (Estatísticas) | 26 nov, ~7:57 |
+| Meta Instagram | visualizações 18–24 nov **39** (22 nov 22, 23 nov 10, 24 nov 7; 11–17 nov: 30). 30 dias: 133 visualizações, 13 visualizadores, 28 visitas ao perfil. Seguidores: sem dados (o painel mostra «‑‑») | 27 out a 25 nov | Meta Business Suite | 26 nov |
+| Black Friday no /r (`/ir/amazon/*`) | **0 páginas vistas** nas últimas 24 h (filtro «path começa por /ir/amazon»). Todas as `/ir/`: 22 (/ir/prendas/ideias/ 5, /ir/email-prendas/ate-20/ 4, /ir/prendas/ate-5/ 4, /ir/prendas/ate-10/ 2, /ir/prendas/engracadas/ 2). As páginas `/ir/amazon/*` têm a mesma estrutura das `/ir/prendas/*` (que contam), por isso o 0 deve ser real | ~25 nov 8:00 a 26 nov 8:00 | Cloudflare Web Analytics (sessão aberta) | 26 nov, ~7:59 |
+| Visitas ao site | 128 visitas / 187 páginas vistas nas últimas 24 h (+27 % visitas). Referenciadores: direto 113, sapatinho-natal.pt 59, google 9, app Gmail 6. Caminhos: / 66, /criar 33, ideias de prendas 12, até 20 € 12, até 5 € 9. Telemóvel 142 / computador 45; Portugal 169 | últimas 24 h | Cloudflare Web Analytics | 26 nov |
+
+### Alarmes
+
+- **Google sem recuperação:** 18–24 nov 7 cliques, todos na página inicial; páginas de prendas a 0 impressões há 14+ dias (desde 10–11 nov) → alarme dos 14 dias disparado em até 5 €, 10 €, 15 €, 20 €, ideias e última hora.
+- **Brevo acima de 200 num dia:** 22 nov (218) e 25 nov (254), não seguidos. Com o Starter (9 832 restantes até 25 dez) não há risco de quota; ritmo dos últimos 3 dias ~180/dia → ~5 400 até 25 dez (estimativa).
+- **Limites do worker:** sem risco. Máximo de convites num dia 163 (22 nov, teto 500); segundos emails ~119 a 25 nov (modo 1 email só aos 240). `sem 2.º email` = 0 em todos os dias.
+- **Amazon:** cliques a subir (27 a 25 nov, 44 em 7 dias) mas **0 pedidos**; conversão 0 %. Black Friday no /r: 0 cliques nas primeiras horas.
+- **Hard bounces:** 5 em 3 dias (0,9 %), sem queixas. Em vigia.
+
 ## Histórico
 
 - 6 nov: secção «Medições reais» acrescentada na passagem da rotina das 10:40 para o gestor do PC.
@@ -174,3 +218,4 @@ Só números lidos nas fontes, com a data em que foram lidos. As tabelas acima f
 - 24 nov, ~8:00 (analista + gestor): painel 59 / 418 / 280 (67 %); 23 nov 11 sorteios / 71 convites / 54 sortearam; semana 23–29 nov 11 até agora. Brevo 23 nov 126 enviados (124 entregues); 17–24 nov 433 enviados, 96,77 % entregues, 0 % queixas. Google 15–21 nov 0 cliques / 7 impressões / posição 58,3 (22–23 nov sem dados); 28 dias 59 cliques / 1,51 mil impressões. Amazon novembro 24 cliques, 0 €. Sem alarmes novos (queda do Google continua).
 - 23 nov, ~8:00 (analista, KPIs de segunda): Google 15–21 nov 0 cliques / 7 impressões / posição 58,3 (8–14 nov: 21 cliques → −100 %; sem recuperação; dados só até 21 nov). Painel (gestor): semana 16–22 nov 27 sorteios reais (9–15 nov: 5); 22 nov 22 / 163 / 55 (limite de 55 segundos emails atingido); total 48 / 347 / 230 (66 %). Brevo 22 nov 218 enviados (207 entregues), 21 nov 51 → alarme dos 200 só num dia (ainda não dois seguidos). Amazon novembro 21 cliques, 0 €. Meta 15–21 nov: FB 6 visualizadores, IG alcance 2. Origem do pico: Cloudflare sem dados (pede login); Google e Meta quase a zero, por isso o pico não veio daí. Alarmes: queda do Google; limite de segundos emails atingido; Brevo em vigia.
 - 25 nov, ~8:00 (analista + seo): painel 71 / 559 / 350 (63 %); 24 nov 11 sorteios / 111 convites / 55 sortearam (limite de 55 segundos emails atingido outra vez); 25 nov 1 / 30 / 15 até 7:50; semana 23–29 nov 23 até agora. Brevo 24 nov 167 enviados (98,8 % entregues, 0 queixas); 18–25 nov 614 enviados, 97,2 % entregues. Google (dados até 24 nov): 23 nov 2 cliques / 4 impressões, 24 nov 5 / 8, todos na página inicial; 20–24 nov páginas de prendas 0 impressões; 28 dias 61 cliques / 1,51 mil impressões; sem recuperação. Amazon novembro 32 cliques, 0 €. Backlinks publicados: 1.
+- 26 nov, ~7:47–8:00 (analista, KPIs completos de quinta): ver secção «26 nov 2026 (quinta) · KPIs completos». Sorteios reais 23–29 nov 37 até agora (16–22 nov: 27); painel 87 / 667 / 456 (68 %). Google 18–24 nov 7 cliques / 18 impressões (11–17: 0 / 7), páginas de prendas ainda a 0. Amazon novembro 59 cliques, 0 €; 7 dias 44 cliques. Brevo 23/24/25 nov 126/167/254 enviados, 0 queixas, 9 832 restantes até 25 dez. /ir/amazon/* 0 em 24 h. Alarmes: Google sem recuperação; Amazon sem pedidos.

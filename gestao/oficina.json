@@ -1,88 +1,84 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "descanso",
-      "feitos": 6,
-      "tarefa": "Turno da manhã de 26 nov: relatório e KPIs de quinta",
-      "ultimo": "Story de 11 dez agendada: Meta completo até 20 dez",
-      "atualizado": "2026-11-25T20:05:00+00:00"
+      "estado": "trabalhar",
+      "feitos": 3,
+      "tarefa": "Turno da tarde: publicar o link de organizador no /criar",
+      "ultimo": "Página até 5 € publicada e reindexada",
+      "atualizado": "2026-11-26T08:50:00+00:00"
     },
     "seo": {
       "estado": "descanso",
       "feitos": 2,
-      "tarefa": "Página até 5 € (26 nov)",
-      "ultimo": "Texto honesto do segundo email publicado",
-      "atualizado": "2026-11-25T16:05:00+00:00"
+      "tarefa": "Medir a página até 5 € a 2 dez",
+      "ultimo": "Página até 5 € e frase da Black Friday publicadas",
+      "atualizado": "2026-11-26T08:50:00+00:00"
     },
     "outreach": {
       "estado": "descanso",
-      "feitos": 6,
-      "tarefa": "Lembretes a 1 e 2 dez; responder se chegar resposta",
-      "ultimo": "4 lembretes e 2 contactos novos enviados",
-      "atualizado": "2026-11-25T08:35:00+00:00"
+      "feitos": 2,
+      "tarefa": "Lembretes a 1, 2 e 3 dez",
+      "ultimo": "2 contactos novos enviados",
+      "atualizado": "2026-11-26T08:50:00+00:00"
     },
     "social-media": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Ver comentários e mensagens no Meta",
-      "ultimo": "Calendário do Meta completo até 20 dez",
-      "atualizado": "2026-11-25T20:05:00+00:00"
+      "tarefa": "Ver o agendamento e a caixa do Meta",
+      "ultimo": "Agendamento até 20 dez sem falhas",
+      "atualizado": "2026-11-26T08:50:00+00:00"
     },
     "analista": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "KPIs de quinta (26 nov)",
-      "ultimo": "24 nov: 11 sorteios, 111 convites, 167 emails",
-      "atualizado": "2026-11-25T08:35:00+00:00"
+      "tarefa": "Medir Black Friday e início → /criar (28 nov)",
+      "ultimo": "KPIs de quinta: 37 sorteios na semana (+37 %)",
+      "atualizado": "2026-11-26T08:50:00+00:00"
     },
     "afiliados": {
       "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Medir /ir/amazon/* a 26–28 nov",
+      "feitos": 0,
+      "tarefa": "Sábado: links partidos e preços",
       "ultimo": "Black Friday no /r publicada",
-      "atualizado": "2026-11-25T16:05:00+00:00"
+      "atualizado": "2026-11-26T08:50:00+00:00"
     },
     "produto": {
-      "estado": "descanso",
-      "feitos": 4,
-      "tarefa": "Medir início → /criar (25–27 nov)",
-      "ultimo": "Black Friday no /r e 13 /ir/amazon/* publicadas",
-      "atualizado": "2026-11-25T16:05:00+00:00"
+      "estado": "trabalhar",
+      "feitos": 1,
+      "tarefa": "Link de organizador visível no fim do /criar (tarde)",
+      "ultimo": "Verificação de palha: 39 ligações certas",
+      "atualizado": "2026-11-26T08:50:00+00:00"
     },
     "suporte": {
       "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Teste de entrega e Brevo (26 nov)",
-      "ultimo": "Respondido o pedido do link de organizador perdido",
-      "atualizado": "2026-11-25T20:05:00+00:00"
+      "feitos": 2,
+      "tarefa": "Pedidos de ajuda em cada turno",
+      "ultimo": "Teste de entrega de 26 nov certo (Principal)",
+      "atualizado": "2026-11-26T08:50:00+00:00"
     },
     "inovacao": {
       "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Como evitar links de organizador perdidos (26 nov)",
-      "ultimo": "Black Friday no /r aprovada",
-      "atualizado": "2026-11-25T20:05:00+00:00"
+      "feitos": 3,
+      "tarefa": "Fechar Black Friday e rodapé dos emails a 29 nov",
+      "ultimo": "3 propostas, 1 aprovada (link de organizador)",
+      "atualizado": "2026-11-26T08:50:00+00:00"
     },
     "qa": {
-      "estado": "descanso",
-      "feitos": 4,
-      "tarefa": "Rever o próximo PR",
-      "ultimo": "2 ramos revistos (Black Friday e segundo email)",
-      "atualizado": "2026-11-25T16:05:00+00:00"
+      "estado": "trabalhar",
+      "feitos": 2,
+      "tarefa": "Rever o link de organizador do /criar",
+      "ultimo": "Aprovou a página até 5 € com 4 reparos",
+      "atualizado": "2026-11-26T08:50:00+00:00"
     }
   },
   "estado": {
     "prioridades": [
-      "KPIs de quinta e teste de entrega com o volume novo (13 sorteios/dia)",
-      "Página até 5 € (seo) e medir a Black Friday no /r (26–28 nov)",
-      "Evitar links de organizador perdidos (proposta do inovacao/produto)"
+      "Link de organizador visível no fim do /criar (publicar até 27 nov)",
+      "Medir Black Friday no /r e início → /criar (até 28 nov)",
+      "Vigiar o /painel e o Brevo no pico"
     ],
-    "preciso": "Login na Cloudflare Web Analytics (origem das visitas). À espera: botão e publicação afixada do Facebook, grupos do Facebook.",
+    "preciso": "Decidir se queres um anúncio pago pequeno no Facebook/Instagram de 30 nov a 2 dez (até 29 nov). O resto pode esperar.",
     "diario": [
-      {
-        "quando": "2026-11-19T15:52:02+00:00",
-        "texto": "Tarde: rodapé dos emails pronto e aprovado pelo qa; espera o «sim» do Diogo para a API. Site e API a funcionar."
-      },
       {
         "quando": "2026-11-19T20:00:00+00:00",
         "texto": "Noite: Chrome do PC desligado (sem caixa nem Meta; 18 dez fica para a manhã). Site e /ir/email/ verificados: tudo 200, API inválida 400."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-25T20:05:00+00:00",
         "texto": "Noite: 25 nov com 13 sorteios e 101 a sortear (máximo); semana já com 34 sorteios. Story de 11 dez agendada: Meta completo até 20 dez. 1 pedido de ajuda respondido."
+      },
+      {
+        "quando": "2026-11-26T08:50:00+00:00",
+        "texto": "Manhã de 26 nov: 25 nov fechou com 15 sorteios reais (recorde); semana 37 (+37 %). Página até 5 € publicada; teste de entrega certo; 9 832 emails no plano."
       }
     ],
     "recados": [
@@ -202,15 +202,22 @@
         "para": "gestor",
         "texto": "Ideia do post no LinkedIn do Diogo (depende dele)",
         "estado": "entregue"
+      },
+      {
+        "quando": "2026-11-26",
+        "de": "analista",
+        "para": "seo",
+        "texto": "Páginas de prendas sem impressões desde 10–11 nov; 7 cliques na semana, todos na inicial.",
+        "estado": "entregue"
       }
     ],
     "resultados": {
-      "sorteios_semana": 34,
+      "sorteios_semana": 37,
       "receita_semana": 0,
       "cliques_google_semana": 7,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 67
+      "taxa_sorteio": 68
     },
-    "atualizado": "2026-11-25T20:05:00+00:00"
+    "atualizado": "2026-11-26T08:50:00+00:00"
   }
 }
