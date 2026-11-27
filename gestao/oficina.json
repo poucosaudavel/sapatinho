@@ -1,88 +1,84 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "espera",
-      "feitos": 3,
-      "tarefa": "Publicar os reparos do link de organizador amanhã",
-      "ultimo": "Turno da noite fechado sem alarmes",
-      "atualizado": "2026-11-26T20:00:00Z"
+      "estado": "trabalhar",
+      "feitos": 2,
+      "tarefa": "Publicar e vigiar o /painel no arranque do pico",
+      "ultimo": "Turno da manhã: 50 sorteios na semana",
+      "atualizado": "2026-11-27T08:50:00+00:00"
     },
     "seo": {
       "estado": "descanso",
-      "feitos": 2,
+      "feitos": 0,
       "tarefa": "Medir a página até 5 € a 2 dez",
       "ultimo": "Página até 5 € e frase da Black Friday publicadas",
-      "atualizado": "2026-11-26T08:50:00+00:00"
+      "atualizado": "2026-11-27T08:50:00+00:00"
     },
     "outreach": {
       "estado": "descanso",
       "feitos": 2,
-      "tarefa": "Lembretes a 1, 2 e 3 dez",
-      "ultimo": "2 contactos novos enviados",
-      "atualizado": "2026-11-26T08:50:00+00:00"
+      "tarefa": "Lembretes de 1 a 4 dez",
+      "ultimo": "2 contactos novos (MoneyLab, Edukar)",
+      "atualizado": "2026-11-27T08:50:00+00:00"
     },
     "social-media": {
       "estado": "descanso",
       "feitos": 1,
       "tarefa": "Ver o agendamento e a caixa do Meta",
-      "ultimo": "Agendamento até 20 dez sem falhas",
-      "atualizado": "2026-11-26T08:50:00+00:00"
+      "ultimo": "Feed de 26 nov saiu; 3 stories do IG falharam",
+      "atualizado": "2026-11-27T08:50:00+00:00"
     },
     "analista": {
-      "estado": "descanso",
+      "estado": "trabalhar",
       "feitos": 1,
-      "tarefa": "Medir Black Friday e início → /criar (28 nov)",
-      "ultimo": "KPIs de quinta: 37 sorteios na semana (+37 %)",
-      "atualizado": "2026-11-26T08:50:00+00:00"
+      "tarefa": "Fechos de 28 nov (início → /criar, Black Friday)",
+      "ultimo": "Leitura rápida: início → /criar 46–65 %",
+      "atualizado": "2026-11-27T08:50:00+00:00"
     },
     "afiliados": {
       "estado": "descanso",
       "feitos": 0,
       "tarefa": "Sábado: links partidos e preços",
       "ultimo": "Black Friday no /r publicada",
-      "atualizado": "2026-11-26T08:50:00+00:00"
+      "atualizado": "2026-11-27T08:50:00+00:00"
     },
     "produto": {
       "estado": "trabalhar",
       "feitos": 2,
-      "tarefa": "Reparos menores do qa ao link de organizador (27 nov)",
-      "ultimo": "Link de organizador em destaque no fim do /criar",
-      "atualizado": "2026-11-26T20:00:00Z"
+      "tarefa": "«Mais de 30 pessoas?» no /criar (28 nov)",
+      "ultimo": "Reparos do link de organizador e alvos de toque",
+      "atualizado": "2026-11-27T08:50:00+00:00"
     },
     "suporte": {
       "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Pedidos de ajuda em cada turno",
-      "ultimo": "Caixa e site verificados à noite: tudo certo",
-      "atualizado": "2026-11-26T20:00:00Z"
+      "feitos": 1,
+      "tarefa": "Caixa e site em cada turno",
+      "ultimo": "Caixa limpa, site e API certos, Brevo 97,7 %",
+      "atualizado": "2026-11-27T08:50:00+00:00"
     },
     "inovacao": {
       "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Fechar Black Friday e rodapé dos emails a 29 nov",
-      "ultimo": "3 propostas, 1 aprovada (link de organizador)",
-      "atualizado": "2026-11-26T08:50:00+00:00"
+      "feitos": 2,
+      "tarefa": "Fechos de 28 e 29 nov",
+      "ultimo": "2 ideias novas aprovadas (prazo de encomenda, mais de 30)",
+      "atualizado": "2026-11-27T08:50:00+00:00"
     },
     "qa": {
       "estado": "descanso",
-      "feitos": 3,
-      "tarefa": "Confirmar o /criar no site real depois do deploy",
-      "ultimo": "Aprovou o link de organizador (sem bloqueantes)",
-      "atualizado": "2026-11-26T16:05:00Z"
+      "feitos": 1,
+      "tarefa": "Teste de contagem do /ir/amazon/* (28 nov)",
+      "ultimo": "Reparos do link de organizador aprovados",
+      "atualizado": "2026-11-27T08:50:00+00:00"
     }
   },
   "estado": {
     "prioridades": [
-      "Reparos do qa ao link de organizador e publicar",
-      "Medir Black Friday no /r e início → /criar (fecha 28 nov)",
-      "Teste no telemóvel e retrospetiva da semana"
+      "Publicar os reparos do link de organizador e os alvos de toque",
+      "Teste de contagem do /ir/amazon/* e fechos de 28 nov",
+      "Vigiar o /painel e o Brevo no arranque do pico"
     ],
-    "preciso": "Chave do Cloudflare: a de private/cloudflare.env (mudada a 26 nov às 14:58) é recusada; precisa da permissão Cloudflare Pages: Edit.",
+    "preciso": "Ver porque falham as stories agendadas do Instagram (ligação do Instagram à Página no Meta).",
     "diario": [
-      {
-        "quando": "2026-11-20T16:05:00+00:00",
-        "texto": "Tarde: caixa sem novidades; feed de 19 dez 12:30 agendado no Meta (FB + IG)."
-      },
       {
         "quando": "2026-11-20T20:35:00+00:00",
         "texto": "Noite: caixa vazia; 19 dez completo no Meta (quiz 17:00 e feed 20:30, Facebook e Instagram)."
@@ -158,6 +154,10 @@
       {
         "quando": "2026-11-26T20:00:00Z",
         "texto": "Noite: caixa sem pedidos novos; site e API certos; nada por publicar."
+      },
+      {
+        "quando": "27 nov, 7:44",
+        "texto": "Manhã: 50 sorteios na semana (+85 %); reparos do link de organizador e alvos de toque aprovados pelo qa; 2 contactos de backlinks; 2 ideias aprovadas."
       }
     ],
     "recados": [
@@ -212,12 +212,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 37,
+      "sorteios_semana": 50,
       "receita_semana": 0,
-      "cliques_google_semana": 7,
+      "cliques_google_semana": 12,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 68
+      "taxa_sorteio": 69
     },
-    "atualizado": "2026-11-26T20:00:00Z"
+    "atualizado": "2026-11-27T08:50:00+00:00"
   }
 }
