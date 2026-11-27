@@ -1,18 +1,18 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "trabalhar",
+      "estado": "descanso",
       "feitos": 2,
-      "tarefa": "Publicar e vigiar o /painel no arranque do pico",
-      "ultimo": "Almoço: tudo certo, sem alarmes",
-      "atualizado": "2026-11-27T12:05:00+00:00"
+      "tarefa": "Amanhã: página inicial para «amigo secreto online» e páginas de notoriedade",
+      "ultimo": "Fecho de 27 nov registado",
+      "atualizado": "2026-11-27T19:55:00+00:00"
     },
     "seo": {
-      "estado": "descanso",
+      "estado": "trabalhar",
       "feitos": 0,
-      "tarefa": "Medir a página até 5 € a 2 dez",
+      "tarefa": "28 nov: página inicial focada em «amigo secreto online»",
       "ultimo": "Página até 5 € e frase da Black Friday publicadas",
-      "atualizado": "2026-11-27T08:50:00+00:00"
+      "atualizado": "2026-11-27T19:55:00+00:00"
     },
     "outreach": {
       "estado": "descanso",
@@ -66,23 +66,19 @@
     "qa": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Teste de contagem do /ir/amazon/* (28 nov)",
+      "tarefa": "Rever a página inicial nova e o teste de contagem do /ir/amazon/* (28 nov)",
       "ultimo": "Reparos do link de organizador aprovados",
-      "atualizado": "2026-11-27T08:50:00+00:00"
+      "atualizado": "2026-11-27T19:55:00+00:00"
     }
   },
   "estado": {
     "prioridades": [
-      "Publicar os reparos do link de organizador e os alvos de toque",
-      "Teste de contagem do /ir/amazon/* e fechos de 28 nov",
-      "Vigiar o /painel e o Brevo no arranque do pico"
+      "Página inicial focada em «amigo secreto online» (seo + qa; pedido do Diogo)",
+      "«Mais de 30 pessoas?» no /criar e fechos de 28 nov com o teste de contagem do /ir/amazon/*",
+      "Afiliados de sábado e preparar a 1.ª página de notoriedade (29 nov)"
     ],
-    "preciso": "Ver porque falham as stories agendadas do Instagram (ligação do Instagram à Página no Meta).",
+    "preciso": "Enviar à mão o formulário do Mogando (tem verificação anti-robô; texto no registo de backlinks).",
     "diario": [
-      {
-        "quando": "2026-11-21T08:05:00+00:00",
-        "texto": "Manhã: caixas vazias, site OK; 20 nov sem sorteios; Google ainda a zero; afiliados sem nada a corrigir; ideia nova do Facebook à espera do Diogo."
-      },
       {
         "quando": "2026-11-21T12:00:00+00:00",
         "texto": "Almoço: caixas vazias; stories de 20 dez (8:30 e 10:00) agendadas no Facebook e no Instagram."
@@ -158,6 +154,10 @@
       {
         "quando": "27 nov, 11:44",
         "texto": "Almoço: caixa sem pedidos de ajuda (Awin recusou a Sephora); site e API certos; stories de hoje sem erros."
+      },
+      {
+        "quando": "27 nov, 19:44",
+        "texto": "Noite: caixa sem novidades; site e API certos; Meta de hoje sem erros; nada por publicar; prioridades de amanhã definidas."
       }
     ],
     "recados": [
@@ -212,12 +212,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 50,
+      "sorteios_semana": 59,
       "receita_semana": 0,
       "cliques_google_semana": 12,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 69
+      "taxa_sorteio": 71
     },
-    "atualizado": "2026-11-27T12:05:00+00:00"
+    "atualizado": "2026-11-27T19:55:00+00:00"
   }
 }
