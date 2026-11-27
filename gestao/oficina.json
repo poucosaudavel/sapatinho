@@ -4,8 +4,8 @@
       "estado": "trabalhar",
       "feitos": 2,
       "tarefa": "Publicar e vigiar o /painel no arranque do pico",
-      "ultimo": "Turno da manhã: 50 sorteios na semana",
-      "atualizado": "2026-11-27T08:50:00+00:00"
+      "ultimo": "Almoço: tudo certo, sem alarmes",
+      "atualizado": "2026-11-27T12:05:00+00:00"
     },
     "seo": {
       "estado": "descanso",
@@ -79,10 +79,6 @@
     ],
     "preciso": "Ver porque falham as stories agendadas do Instagram (ligação do Instagram à Página no Meta).",
     "diario": [
-      {
-        "quando": "2026-11-20T20:35:00+00:00",
-        "texto": "Noite: caixa vazia; 19 dez completo no Meta (quiz 17:00 e feed 20:30, Facebook e Instagram)."
-      },
       {
         "quando": "2026-11-21T08:05:00+00:00",
         "texto": "Manhã: caixas vazias, site OK; 20 nov sem sorteios; Google ainda a zero; afiliados sem nada a corrigir; ideia nova do Facebook à espera do Diogo."
@@ -158,6 +154,10 @@
       {
         "quando": "27 nov, 7:44",
         "texto": "Manhã: 50 sorteios na semana (+85 %); reparos do link de organizador e alvos de toque aprovados pelo qa; 2 contactos de backlinks; 2 ideias aprovadas."
+      },
+      {
+        "quando": "27 nov, 11:44",
+        "texto": "Almoço: caixa sem pedidos de ajuda (Awin recusou a Sephora); site e API certos; stories de hoje sem erros."
       }
     ],
     "recados": [
@@ -218,6 +218,6 @@
       "backlinks_publicados": 1,
       "taxa_sorteio": 69
     },
-    "atualizado": "2026-11-27T08:50:00+00:00"
+    "atualizado": "2026-11-27T12:05:00+00:00"
   }
 }
