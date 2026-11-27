@@ -85,7 +85,7 @@ def head(title, desc, canonical, og_title=None, og_desc=None, og_type="website",
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="/styles.css?v=20261126a">
+<link rel="stylesheet" href="/styles.css?v=20261127a">
 {j}{extra}"""
 
 NAV = ('<nav aria-label="Principal"><a href="/#como-funciona">Como funciona</a>'
