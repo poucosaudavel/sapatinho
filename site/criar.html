@@ -52,10 +52,14 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 .ok{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:999px;background:#e5efe8;color:#2d5c45}
 /* Link de organizador em destaque (produto, 26 nov): logo a seguir a «Convites enviados», com botões grandes. */
 .orgsave{display:flex;flex-direction:column;gap:12px;background:var(--paper-2);border:2px solid var(--gold);border-radius:6px;padding:18px 16px}
-.orgsave h2{font-size:1.3rem}
+.orgsave h3{font-size:1.3rem;color:var(--ink)}
+/* Reparos do qa (27 nov): borda dos botões secundários visível (#5f6d66 sobre #efe6d4 ≈ 4,9:1). */
+.orgsave .btn.ghost{border-color:var(--muted)}
+.orgsave .btn.ghost:hover{border-color:var(--ink)}
 .orgsave input{background:#fff;font-size:.9rem}
 .orgsave .row-actions .btn{flex:1 1 auto;min-height:48px}
 .orgsave .note{font-size:.88rem;color:var(--ink);margin:0}
+.leavewarn{background:var(--paper-2);border-left:3px solid var(--ember);border-radius:4px;padding:10px 12px;font-size:.9rem;color:var(--ink);margin:0}
 .x{flex:none;width:38px;height:44px;border:1px solid var(--line);background:transparent;border-radius:4px;color:var(--muted);font-size:1.1rem;cursor:pointer}
 .x:hover{color:var(--ember);border-color:var(--ember)}
 .link-btn{align-self:flex-start;background:none;border:0;color:var(--ember);font:600 .95rem var(--body);cursor:pointer;padding:4px 0;min-height:44px}
@@ -175,7 +179,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
       <div class="step-h"><span class="n">4</span><h2>Convites enviados</h2></div>
       <p class="hint">Cada pessoa recebeu um email com o seu link pessoal. Depois de sortear, recebe outro com o nome que lhe saiu. Se alguém não encontrar o email, deve procurar no spam.</p>
       <div class="orgsave" id="orgSave">
-        <h2>Guarda já o teu link de organizador</h2>
+        <h3>Guarda já o teu link de organizador</h3>
         <input id="orgLink" type="text" readonly aria-label="Link de organizador">
         <div class="row-actions">
           <button type="button" class="btn" id="copyOrg">Copiar link</button>
@@ -191,6 +195,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
         <textarea id="groupMsg" readonly rows="7" aria-label="Mensagem para o grupo"></textarea>
         <button type="button" class="btn" id="copyMsg">Copiar mensagem</button>
       </div>
+      <p class="leavewarn" id="leaveWarn" role="alert" hidden>Ainda não guardaste o teu link de organizador. Sem ele não consegues reenviar um convite a quem o perder. Usa «Copiar link» ou «Guardar num ficheiro» acima, ou carrega outra vez no botão para criar outro sorteio sem o guardar (este link perde-se).</p>
       <div class="row-actions"><a class="ghostbtn" href="/criar" id="again" style="text-decoration:none">Criar outro sorteio</a></div>
     </section>
   </main>
@@ -354,8 +359,31 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 
   /* Link de organizador (produto, 26 nov): copiar, guardar num .txt ou enviar para si próprio.
      O link só existe nesta página (não vai por email nem fica guardado no Sapatinho).
-     Se nenhum dos três for usado, «Criar outro sorteio» pergunta antes de sair. Tudo em texto simples, sem HTML. */
-  var orgKept = false;
+     Reparos do qa (27 nov): orgKept só fica verdadeiro quando copiar, guardar ou enviar resulta mesmo;
+     enquanto for falso, sair da página pede confirmação (beforeunload) e «Criar outro sorteio» precisa de 2 cliques,
+     com um aviso que explica o que acontece. Tudo em texto simples, sem HTML. */
+  var orgKept = false, leaving = false;
+  var again = document.getElementById("again"), leaveWarn = document.getElementById("leaveWarn");
+  var AGAIN_TXT = "Criar outro sorteio", AGAIN_SURE = "Criar outro sem guardar o link";
+  function markKept(){
+    orgKept = true;
+    leaveWarn.hidden = true; again.textContent = AGAIN_TXT;
+  }
+  function flash(btn, txt){
+    var o = btn.getAttribute("data-label") || btn.textContent; btn.setAttribute("data-label", o);
+    btn.textContent = txt; clearTimeout(btn._t); btn._t = setTimeout(function(){ btn.textContent = o; }, 2200);
+  }
+  /* Copiar e saber se resultou (o Sap.copy não diz se falhou). */
+  function copyText(text, ok, bad){
+    function fallback(){
+      var t = document.createElement("textarea"); t.value = text; t.setAttribute("readonly", ""); t.style.position = "fixed"; t.style.opacity = "0";
+      document.body.appendChild(t); t.select(); var r = false;
+      try { r = document.execCommand("copy"); } catch (e) { r = false; }
+      t.remove(); r ? ok() : bad();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(ok, fallback);
+    else fallback();
+  }
   function fileSlug(g){
     var x = String(g || "").normalize ? String(g || "").normalize("NFD") : String(g || "");
     x = x.replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40).replace(/-+$/, "");
@@ -363,8 +391,14 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
   }
   function orgReady(org, g){
     var gName = String(g || "").replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, 60) || "Amigo secreto";
-    orgKept = false;
-    document.getElementById("copyOrg").onclick = function(){ orgKept = true; Sap.copy(org, this, "Copiado!"); };
+    orgKept = false; leaving = false; leaveWarn.hidden = true; again.textContent = AGAIN_TXT;
+    var copyBtn = document.getElementById("copyOrg"), oi = document.getElementById("orgLink");
+    copyBtn.onclick = function(){
+      copyText(org, function(){ markKept(); flash(copyBtn, "Copiado!"); }, function(){
+        oi.focus(); oi.select();
+        flash(copyBtn, "Não deu para copiar: o link ficou selecionado, copia-o à mão");
+      });
+    };
     var save = document.getElementById("saveOrg");
     save.onclick = function(){
       try {
@@ -377,8 +411,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
         a.href = url; a.download = "sapatinho-organizador-" + fileSlug(gName) + ".txt";
         document.body.appendChild(a); a.click(); a.remove();
         setTimeout(function(){ URL.revokeObjectURL(url); }, 10000);
-        orgKept = true;
-        var o = save.textContent; save.textContent = "Ficheiro guardado"; setTimeout(function(){ save.textContent = o; }, 1600);
+        markKept(); flash(save, "Ficheiro guardado");
       } catch (ex) { save.textContent = "Não foi possível guardar: usa «Copiar link»"; save.disabled = true; }
     };
     var share = document.getElementById("shareOrg");
@@ -386,12 +419,22 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
       share.hidden = false;
       share.onclick = function(){
         navigator.share({ title: "Link de organizador · Sapatinho", text: "O meu link de organizador do Sapatinho, para reenviar convites. Só para mim.", url: org })
-          .then(function(){ orgKept = true; }, function(){});
+          .then(function(){ markKept(); flash(share, "Enviado"); }, function(){ /* cancelado ou falhou: não conta como guardado */ });
       };
     }
   }
-  document.getElementById("again").addEventListener("click", function(e){
-    if (!out.hidden && !orgKept && !confirm("Ainda não guardaste o teu link de organizador. Sem ele não consegues reenviar convites. Sair mesmo assim?")) e.preventDefault();
+  again.addEventListener("click", function(e){
+    if (out.hidden || orgKept) { leaving = true; return; }
+    if (leaveWarn.hidden) {
+      e.preventDefault();
+      leaveWarn.hidden = false; again.textContent = AGAIN_SURE;
+      return;
+    }
+    leaving = true;
+  });
+  window.addEventListener("beforeunload", function(e){
+    if (out.hidden || orgKept || leaving) return;
+    e.preventDefault(); e.returnValue = "";
   });
 
   form.addEventListener("submit", function(e){
