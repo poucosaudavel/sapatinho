@@ -350,10 +350,21 @@ async function tag(text, env) {  // HMAC curto e irreversível, para não guarda
   const k = await crypto.subtle.importKey("raw", new TextEncoder().encode("sapatinho-tag:" + env.BREVO_API_KEY), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
   return toB64url(new Uint8Array(await crypto.subtle.sign("HMAC", k, new TextEncoder().encode(text))).slice(0, 12));
 }
+// IPv6: uma só ligação recebe um bloco /64 inteiro (milhares de endereços). Contamos o bloco, não o endereço.
+function ipKey(ip) {
+  ip = String(ip || "").trim().toLowerCase();
+  if (!ip.includes(":")) return ip;
+  ip = ip.split("%")[0];
+  const [head, tail] = ip.split("::");
+  const a = head ? head.split(":") : [];
+  const b = tail ? tail.split(":") : [];
+  const groups = ip.includes("::") ? [...a, ...Array(Math.max(0, 8 - a.length - b.length)).fill("0"), ...b] : a;
+  return groups.slice(0, 4).map((g) => (parseInt(g, 16) || 0).toString(16)).join(":") + "::/64";
+}
 async function guardCreate(env, req, n) {
   if (!env.STATS) return;
   const day = new Date().toISOString().slice(0, 10);
-  const ip = req?.headers?.get("CF-Connecting-IP") || "";
+  const ip = ipKey(req?.headers?.get("CF-Connecting-IP"));
   if (ip) {
     // Guardamos só um código irreversível do IP, durante 24 horas, com o número de sorteios e de convites.
     const key = "ip2:" + day + ":" + (await tag(ip + "|" + day, env));
@@ -368,7 +379,7 @@ async function guardCreate(env, req, n) {
 async function guardConfirm(env, req) {
   if (!env.STATS) return;
   const day = new Date().toISOString().slice(0, 10);
-  const ip = req?.headers?.get("CF-Connecting-IP") || "";
+  const ip = ipKey(req?.headers?.get("CF-Connecting-IP"));
   let key = null, used = 0;
   if (ip) {
     key = "ipc:" + day + ":" + (await tag("c|" + ip + "|" + day, env));
@@ -422,4 +433,4 @@ async function stats(req, env, json) {
   return json({ days, oficina: oficina || null });
 }
 
-export { create, confirm, encode, decode, sign, verify, draw, cycle, oneEmailMode };
+export { ipKey, create, confirm, encode, decode, sign, verify, draw, cycle, oneEmailMode };

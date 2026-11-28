@@ -1,7 +1,7 @@
 // Testes locais da API (sem rede, sem Brevo, sem Cloudflare). Correr: node --test tests/
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import worker, { create, confirm, encode, sign, cycle, oneEmailMode } from "../worker/worker.js";
+import worker, { ipKey, create, confirm, encode, sign, cycle, oneEmailMode } from "../worker/worker.js";
 
 function setup() {
   const store = new Map();
@@ -330,3 +330,14 @@ for (const [nome, prep] of [["dia (qc 240)", (s, day) => s.env.STATS.put("qc:" +
     }
   });
 }
+
+test("IPv6: endereços do mesmo bloco /64 contam como um só", async () => {
+  assert.equal(ipKey("2001:db8:0:1::1"), ipKey("2001:DB8:0:1:ffff:1:2:3"));
+  assert.notEqual(ipKey("2001:db8:0:1::1"), ipKey("2001:db8:0:2::1"));
+  assert.equal(ipKey("::1"), "0:0:0:0::/64");
+  assert.equal(ipKey("9.9.9.9"), "9.9.9.9");
+  const { env } = setup();
+  let last;
+  for (let i = 1; i <= 11; i++) last = await worker.fetch(req("/api/create", { g: "G" + i, people: people(["A", "B", "C"]) }, { ...O, "CF-Connecting-IP": "2001:db8:0:1::" + i.toString(16) }), env);
+  assert.equal(last.status, 429);
+});
