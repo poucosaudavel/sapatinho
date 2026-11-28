@@ -64,6 +64,12 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
 .x:hover{color:var(--ember);border-color:var(--ember)}
 .link-btn{align-self:flex-start;background:none;border:0;color:var(--ember);font:600 .95rem var(--body);cursor:pointer;padding:4px 0;min-height:44px}
 .link-btn:hover{text-decoration:underline}
+/* Nota das 30 pessoas (produto, 28 nov): aparece no sítio de «+ Adicionar pessoa» quando a lista chega ao máximo.
+   A caixa existe sempre (vazia) para o aria-live anunciar quando se enche. */
+.maxnote{background:var(--paper-2);border-left:3px solid var(--gold);border-radius:4px;padding:10px 12px;font-size:.9rem;color:var(--ink)}
+.maxnote:empty{padding:0;border:0;background:none;margin-top:-18px} /* vazia: anula o gap de 18px do .panel */
+.maxnote p{margin:0}
+.maxnote a{display:inline-flex;align-items:center;min-height:44px;color:var(--ember-d);font-weight:600}
 .pairs{display:flex;flex-direction:column;gap:10px}
 .pair{display:grid;grid-template-columns:1fr auto 1fr 38px;gap:8px;align-items:center}
 .pair em{font-style:normal;color:var(--muted);font-size:.85rem}
@@ -161,6 +167,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
           </details>
           <div class="people" id="people"></div>
           <button type="button" class="link-btn" id="addP">+ Adicionar pessoa</button>
+          <div class="maxnote" id="maxNote" role="status" aria-live="polite"></div>
         </section>
 
         <section class="card panel">
@@ -254,9 +261,20 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
       '<input id="'+id+'e" type="email" maxlength="120" placeholder="email@exemplo.pt" aria-label="Email" autocomplete="off" inputmode="email" enterkeyhint="next">'+
       '<button type="button" class="x" aria-label="Remover pessoa">×</button>';
     r.querySelector("input").addEventListener("input", refreshPairs);
-    r.querySelector(".x").addEventListener("click", function(){ if (people.children.length > 3){ r.remove(); renumber(); refreshPairs(); } });
-    people.appendChild(r); renumber();
+    r.querySelector(".x").addEventListener("click", function(){ if (people.children.length > 3){ r.remove(); renumber(); refreshPairs(); maxCheck(); } });
+    people.appendChild(r); renumber(); maxCheck();
     return r.querySelector("input");
+  }
+  /* Às 30 pessoas (o máximo, também na API) o botão de acrescentar dá lugar a uma nota.
+     «Porquê 30?» passa por /ir/mais-30/ (contagem sem cookies) e abre noutro separador para não se perder a lista. */
+  var addP = document.getElementById("addP"), maxNote = document.getElementById("maxNote");
+  function maxCheck(){
+    if (!addP) return;
+    var full = people.children.length >= 30;
+    addP.hidden = full;
+    if (full && !maxNote.firstChild) maxNote.innerHTML = '<p>Chegaste ao máximo de 30. Para a empresa toda, faz um sorteio por equipa ou por piso: cada sorteio é independente e grátis.</p>' +
+      '<a href="/ir/mais-30/" target="_blank" rel="noopener">Porquê 30?</a>';
+    else if (!full && maxNote.firstChild) maxNote.textContent = "";
   }
   function options(sel){
     var cur = sel.value, ns = names();
@@ -270,7 +288,7 @@ input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-o
     pairs.appendChild(r); refreshPairs();
   }
   for (var k=0;k<3;k++) addPerson();
-  document.getElementById("addP").addEventListener("click", function(){ addPerson().focus(); });
+  addP.addEventListener("click", function(){ if (people.children.length < 30) addPerson().focus(); });
   document.getElementById("addX").addEventListener("click", addPair);
   document.getElementById("copyAsk").addEventListener("click", function(){ Sap.copy(document.getElementById("askMsg").value, this, "Copiado!"); });
 
