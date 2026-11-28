@@ -1,88 +1,84 @@
 {
   "agentes": {
     "gestor": {
-      "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Amanhã: página inicial para «amigo secreto online» e páginas de notoriedade",
-      "ultimo": "Fecho de 27 nov registado",
-      "atualizado": "2026-11-27T19:55:00+00:00"
+      "estado": "trabalhar",
+      "feitos": 3,
+      "tarefa": "Publicar o site e pedir a indexação da página inicial",
+      "ultimo": "Manhã: 3 trabalhos revistos, juntos e publicados",
+      "atualizado": "2026-11-28T08:35:00+00:00"
     },
     "seo": {
       "estado": "trabalhar",
-      "feitos": 0,
-      "tarefa": "28 nov: página inicial focada em «amigo secreto online»",
-      "ultimo": "Página até 5 € e frase da Black Friday publicadas",
-      "atualizado": "2026-11-27T19:55:00+00:00"
+      "feitos": 1,
+      "tarefa": "29 nov: página de etiquetas para imprimir e título do /criar",
+      "ultimo": "Página inicial focada em «amigo secreto online»",
+      "atualizado": "2026-11-28T08:35:00+00:00"
     },
     "outreach": {
       "estado": "descanso",
-      "feitos": 2,
-      "tarefa": "Lembretes de 1 a 4 dez",
+      "feitos": 0,
+      "tarefa": "1–4 dez: lembretes",
       "ultimo": "2 contactos novos (MoneyLab, Edukar)",
-      "atualizado": "2026-11-27T08:50:00+00:00"
+      "atualizado": "2026-11-28T08:35:00+00:00"
     },
     "social-media": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Ver o agendamento e a caixa do Meta",
-      "ultimo": "Feed de 26 nov saiu; 3 stories do IG falharam",
-      "atualizado": "2026-11-27T08:50:00+00:00"
+      "tarefa": "Almoço: ver as stories do Instagram das 9:00",
+      "ultimo": "Calendário completo até 20 dez, sem erros",
+      "atualizado": "2026-11-28T08:35:00+00:00"
     },
     "analista": {
-      "estado": "trabalhar",
-      "feitos": 1,
-      "tarefa": "Fechos de 28 nov (início → /criar, Black Friday)",
-      "ultimo": "Leitura rápida: início → /criar 46–65 %",
-      "atualizado": "2026-11-27T08:50:00+00:00"
+      "estado": "descanso",
+      "feitos": 2,
+      "tarefa": "29 nov: fecho do rodapé dos emails",
+      "ultimo": "Teste de contagem: as /ir/amazon/* contam",
+      "atualizado": "2026-11-28T08:35:00+00:00"
     },
     "afiliados": {
       "estado": "descanso",
-      "feitos": 0,
-      "tarefa": "Sábado: links partidos e preços",
-      "ultimo": "Black Friday no /r publicada",
-      "atualizado": "2026-11-27T08:50:00+00:00"
+      "feitos": 2,
+      "tarefa": "30 nov: prendas da Amazon no /r acima de 20 €",
+      "ultimo": "Filtro de 15 € no «Gorro ou luvas»; 279 links certos",
+      "atualizado": "2026-11-28T08:35:00+00:00"
     },
     "produto": {
       "estado": "trabalhar",
       "feitos": 2,
-      "tarefa": "«Mais de 30 pessoas?» no /criar (28 nov)",
-      "ultimo": "Reparos do link de organizador e alvos de toque",
-      "atualizado": "2026-11-27T08:50:00+00:00"
+      "tarefa": "29 nov: tirar 3 ligações sem visitas",
+      "ultimo": "Nota «Chegaste ao máximo de 30» no /criar",
+      "atualizado": "2026-11-28T08:35:00+00:00"
     },
     "suporte": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Caixa e site em cada turno",
-      "ultimo": "Caixa limpa, site e API certos, Brevo 97,7 %",
-      "atualizado": "2026-11-27T08:50:00+00:00"
+      "tarefa": "Vigiar a caixa e o Brevo no almoço",
+      "ultimo": "Caixa sem pedidos de ajuda; site e API certos",
+      "atualizado": "2026-11-28T08:35:00+00:00"
     },
     "inovacao": {
       "estado": "descanso",
       "feitos": 2,
-      "tarefa": "Fechos de 28 e 29 nov",
-      "ultimo": "2 ideias novas aprovadas (prazo de encomenda, mais de 30)",
-      "atualizado": "2026-11-27T08:50:00+00:00"
+      "tarefa": "29 nov: ideias novas e fecho do rodapé",
+      "ultimo": "2 ideias novas e 4 fechos",
+      "atualizado": "2026-11-28T08:35:00+00:00"
     },
     "qa": {
       "estado": "descanso",
       "feitos": 1,
-      "tarefa": "Rever a página inicial nova e o teste de contagem do /ir/amazon/* (28 nov)",
-      "ultimo": "Reparos do link de organizador aprovados",
-      "atualizado": "2026-11-27T19:55:00+00:00"
+      "tarefa": "29 nov: rever a página de etiquetas",
+      "ultimo": "Aprovou os 3 trabalhos de hoje",
+      "atualizado": "2026-11-28T08:35:00+00:00"
     }
   },
   "estado": {
     "prioridades": [
-      "Página inicial focada em «amigo secreto online» (seo + qa; pedido do Diogo)",
-      "«Mais de 30 pessoas?» no /criar e fechos de 28 nov com o teste de contagem do /ir/amazon/*",
-      "Afiliados de sábado e preparar a 1.ª página de notoriedade (29 nov)"
+      "Página de etiquetas para imprimir (sem links de venda) e título do /criar",
+      "Tirar as ligações sem visitas e fechar o rodapé dos emails",
+      "Preparar o prazo de encomenda e a Amazon acima de 20 € para 30 nov"
     ],
-    "preciso": "Enviar à mão o formulário do Mogando (tem verificação anti-robô; texto no registo de backlinks).",
+    "preciso": "Pedir a indexação da página inicial no Search Console; decidir «Apoia o Sapatinho» e o anúncio pago (até 1 dez).",
     "diario": [
-      {
-        "quando": "2026-11-21T12:00:00+00:00",
-        "texto": "Almoço: caixas vazias; stories de 20 dez (8:30 e 10:00) agendadas no Facebook e no Instagram."
-      },
       {
         "quando": "2026-11-21T20:40:00+00:00",
         "texto": "Noite: story das 18:00 e feed das 20:30 de 20 dez agendados (Facebook e Instagram). O calendário do Meta está completo até 20 dez. Caixa sem novidades."
@@ -158,6 +154,10 @@
       {
         "quando": "27 nov, 19:44",
         "texto": "Noite: caixa sem novidades; site e API certos; Meta de hoje sem erros; nada por publicar; prioridades de amanhã definidas."
+      },
+      {
+        "quando": "28 nov, 7:44",
+        "texto": "Manhã: 65 sorteios na semana; página inicial nova, «Mais de 30» e filtro do gorro revistos pelo qa e publicados."
       }
     ],
     "recados": [
@@ -212,12 +212,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 59,
+      "sorteios_semana": 65,
       "receita_semana": 0,
-      "cliques_google_semana": 12,
+      "cliques_google_semana": 13,
       "backlinks_publicados": 1,
-      "taxa_sorteio": 71
+      "taxa_sorteio": 73
     },
-    "atualizado": "2026-11-27T19:55:00+00:00"
+    "atualizado": "2026-11-28T08:35:00+00:00"
   }
 }
