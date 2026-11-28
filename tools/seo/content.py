@@ -2359,7 +2359,7 @@ QUICK = {
     ("caderno", "Caderno com uma caneta boa", "8 a 15 €", "Para quem anda sempre a apontar coisas.", "cuaderno tapa dura y boligrafo"),
     ("cartas", "Jogo de cartas", "8 a 15 €", "Para quem gosta de jogar em grupo.", "juego de cartas para grupo"),
     ("vela", "Vela perfumada", "5 a 12 €", "Para quem gosta de estar em casa.", "vela perfumada"),
-    ("gorro", "Gorro ou luvas", "6 a 15 €", "Para quem tem sempre frio.", "gorro y guantes invierno"),
+    ("gorro", "Gorro ou luvas", "6 a 15 €", "Para quem tem sempre frio.", "gorro y guantes invierno", None, 15),
     ("caneca", "Chocolate quente com caneca", "8 a 15 €", "Para as noites frias de dezembro.", "chocolate caliente regalo taza"),
     ("calendario", "Agenda de 2027", "5 a 15 €", "Para quem gosta de ter tudo planeado.", "agenda 2027"),
 ]),
