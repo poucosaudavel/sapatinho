@@ -3,9 +3,9 @@
     "gestor": {
       "estado": "trabalhar",
       "feitos": 3,
-      "tarefa": "Publicar o site e pedir a indexação da página inicial",
-      "ultimo": "Manhã: 3 trabalhos revistos, juntos e publicados",
-      "atualizado": "2026-11-28T08:35:00+00:00"
+      "tarefa": "Turno da noite: fecho do dia e prioridades de domingo",
+      "ultimo": "Almoço: stories das 9:00 confirmadas e /painel verificado",
+      "atualizado": "2026-11-28T12:00:00+00:00"
     },
     "seo": {
       "estado": "trabalhar",
@@ -79,10 +79,6 @@
     ],
     "preciso": "Pedir a indexação da página inicial no Search Console; decidir «Apoia o Sapatinho» e o anúncio pago (até 1 dez).",
     "diario": [
-      {
-        "quando": "2026-11-21T20:40:00+00:00",
-        "texto": "Noite: story das 18:00 e feed das 20:30 de 20 dez agendados (Facebook e Instagram). O calendário do Meta está completo até 20 dez. Caixa sem novidades."
-      },
       {
         "quando": "2026-11-22T08:05:00+00:00",
         "texto": "Manhã: 21 nov com 2 sorteios e 27 convites; semana com 5 sorteios (igual à anterior). Awin fechada: só Amazon. Ideia nova: grupos do Facebook (à espera do Diogo)."
@@ -158,6 +154,10 @@
       {
         "quando": "28 nov, 7:44",
         "texto": "Manhã: 65 sorteios na semana; página inicial nova, «Mais de 30» e filtro do gorro revistos pelo qa e publicados."
+      },
+      {
+        "quando": "28 nov, 11:44",
+        "texto": "Almoço: caixa sem novidades; 4 sorteios hoje até agora; stories das 9:00 publicadas sem erro; site e API certos."
       }
     ],
     "recados": [
@@ -212,12 +212,12 @@
       }
     ],
     "resultados": {
-      "sorteios_semana": 65,
+      "sorteios_semana": 69,
       "receita_semana": 0,
       "cliques_google_semana": 13,
       "backlinks_publicados": 1,
       "taxa_sorteio": 73
     },
-    "atualizado": "2026-11-28T08:35:00+00:00"
+    "atualizado": "2026-11-28T12:00:00+00:00"
   }
 }
