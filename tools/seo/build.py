@@ -343,7 +343,8 @@ HOME_FAQ = [
 ]
 
 # Perguntas com endereço próprio na página inicial (/#<id>): o script da página abre a resposta.
-FAQ_IDS = {"Porque é que às vezes não dá para enviar os convites?": "limite-de-emails"}
+FAQ_IDS = {"Porque é que às vezes não dá para enviar os convites?": "limite-de-emails",
+           "Quantas pessoas podem participar?": "quantas-pessoas"}
 def faq_id(q):
     return f' id="{FAQ_IDS[q]}"' if q in FAQ_IDS else ""
 
@@ -488,6 +489,8 @@ IR = {
     "email": ("/criar", "criar um sorteio"),
     # «Porquê?» na caixa do limite diário de emails no /criar (plano B da quota, 25 nov): conta os dias em que esgotou.
     "quota": ("/#limite-de-emails", "a resposta nas perguntas frequentes"),
+    # «Porquê 30?» na nota que aparece no /criar quando a lista chega às 30 pessoas (28 nov): mede a procura de grupos maiores.
+    "mais-30": ("/#quantas-pessoas", "a resposta nas perguntas frequentes"),
     "email-prendas/ate-5": ("/prendas-amigo-secreto-ate-5-euros/", "prendas até 5 €"),
     "email-prendas/ate-10": ("/prendas-amigo-secreto-ate-10-euros/", "prendas até 10 €"),
     "email-prendas/ate-15": ("/prendas-amigo-secreto-ate-15-euros/", "prendas até 15 €"),
