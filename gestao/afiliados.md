@@ -66,3 +66,11 @@ Feito a partir do shell do PC, sem Chrome (ocupado pelo gestor) e sem git. A Awi
 **Amazon a responder:** sem rede (o `curl -sI` do PC recebe 403 «host is not on the allow list» do proxy para amazon.es; 4 pesquisas tentadas). Preços não revistos hoje; os de 18 nov continuam a valer.
 
 **Problemas:** nenhum. Nada a corrigir.
+
+## Rotina de 28 nov 2026 (sábado, afiliados)
+
+**Correção:** /prendas-ultima-hora-amigo-secreto/, «Gorro ou luvas» (6 a 15 €): a pesquisa `gorro y guantes invierno` passa a ter o filtro `p_36:-1500` (até 15 €), como as outras pesquisas com limite. Os cartões das «Escolhas rápidas» aceitam agora um 7.º campo opcional com o preço máximo dessa pesquisa (`tools/seo/build.py`, `quick_html`).
+
+**Links** (build de hoje; só mudou o link do gorro): 279 links da Amazon em 14 páginas dos guias, todos com `tag=sapatinhonata-21` e `rel="sponsored nofollow noopener"`; 87 com filtro de preço, nenhum acima do limite da página (até 5/10/15/20 €: 11/20/27/25; Black Friday 10/15/20 €; última hora 15 €). /r e /sorteio iguais, 13 páginas /ir/amazon/* com `sapatinhores-21`, `p_36` igual ao escalão e `rel` certo; termos fixos, sem nomes. Redes: `build_cal.py` sem mudanças (`sapatinhoredes-21` desde 11 nov). Worker: nenhum link da Amazon.
+
+**Awin:** painel pediu login (não feito). Recusadas: Worten (6 nov), Douglas (13 nov), Sephora (27 nov). Pendentes: Colvin, PcComponentes, Startselect, Wanapix, Decathlon, Druni.
