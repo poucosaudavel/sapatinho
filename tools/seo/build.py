@@ -331,6 +331,7 @@ HOME_FAQ = [
 ("O que é o amigo secreto?", 'É uma troca de prendas em que cada pessoa tira à sorte o nome de outra e lhe oferece uma única prenda, sem revelar quem lhe saiu até ao dia da troca. Explicamos tudo nas <a href="/regras-do-amigo-secreto/">regras do amigo secreto</a>.'),
 ("Como funciona o amigo secreto online por email?", 'Quem organiza escreve os nomes e os emails do grupo, o limite da prenda e a data. O Sapatinho faz o sorteio e envia a cada pessoa um convite com um link só seu. Cada um abre o link, roda a roleta e vê quem lhe saiu. Normalmente recebe também um segundo email com o nome. Guarda o convite: o link mostra sempre o resultado. <a href="/criar">Criar sorteio</a>.'),
 ("O amigo secreto online é mesmo grátis?", "Sim. Criar o sorteio e enviar os convites não custa nada, não precisa de registo e não há versão paga."),
+("Preciso de instalar alguma aplicação para o sorteio de amigo secreto?", "Não. O sorteio de amigo secreto faz-se no navegador, no telemóvel ou no computador, e os convites chegam por email. Não há nada para instalar nem conta para criar."),
 ("Tem roleta?", 'Tem. Cada pessoa roda a sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a> no telemóvel e descobre o nome em que a roleta pára.'),
 ("Dá para impedir que casais ou irmãos se tirem um ao outro?", "Sim. Ao criar o sorteio, indicas os pares que não se podem tirar e o sorteio respeita-os."),
 ("Posso fazer o sorteio mais do que uma vez?", "Não. O sorteio é feito uma única vez para cada participante. Se voltares a abrir o link, vês o mesmo resultado."),
@@ -341,6 +342,20 @@ HOME_FAQ = [
 ("Porque é que às vezes não dá para enviar os convites?", "O Sapatinho é grátis e envia os emails através de um serviço que tem um limite de emails por dia. Quando os convites de um grupo ultrapassariam esse limite, o sorteio não é feito nesse dia, para não ficar só uma parte do grupo com o convite. O limite recomeça à meia-noite (hora de Portugal): se deixaste a página do sorteio aberta, basta carregar outra vez no botão de enviar depois dessa hora. Também podes copiar a lista do grupo para a teres guardada."),
 ("Quantas pessoas podem participar?", "Entre 3 e 30 pessoas por sorteio. Para grupos maiores, como empresas, faz um sorteio por equipa."),
 ]
+
+HOW_SECTION = """<section id="como-funciona">
+      <div class="section-h">
+        <div class="eyebrow">Como funciona</div>
+        <h2>Sorteio de amigo secreto online em três passos</h2>
+        <p class="how-lead">O Sapatinho faz o sorteio do amigo secreto online, sem papelinhos: grátis, sem registo e sem nada para instalar. Quem organiza escreve os nomes e os emails do grupo, e cada pessoa descobre no seu link quem lhe saiu.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Alguém cria o sorteio</h3><p>Quem organiza escreve os nomes, os emails, o limite da prenda e, se quiser, quem não se pode tirar. O Sapatinho envia os convites.</p></div>
+        <div class="step"><div class="n">2</div><h3>Cada um sorteia</h3><p>Recebes um email com o teu link pessoal, carregas em sortear e a roleta mostra o teu amigo secreto. Ninguém se tira a si próprio.</p></div>
+        <div class="step"><div class="n">3</div><h3>Guardas segredo</h3><p>Guarda o convite: o teu link mostra sempre quem te saiu. Normalmente recebes também um segundo email com o nome. A página de quem organiza não mostra quem tirou quem.</p></div>
+      </div>
+      <p class="how-note">Dá para grupos de 3 a 30 pessoas, com limite da prenda e data da troca. Se houver casais ou irmãos que já trocam prendas entre si, indicas os pares que não se podem tirar e o sorteio respeita-os. Cada pessoa descobre o nome na sua <a href="/roleta-amigo-secreto/">roleta do amigo secreto</a>, no telemóvel ou no computador.</p>
+    </section>"""
 
 # Perguntas com endereço próprio na página inicial (/#<id>): o script da página abre a resposta.
 FAQ_IDS = {"Porque é que às vezes não dá para enviar os convites?": "limite-de-emails"}
@@ -372,8 +387,9 @@ def build_hub():
 def patch_home():
     f = f"{SITE}/index.html"
     h = open(f).read()
-    title = "Amigo secreto online grátis, com roleta e por email | Sapatinho"
-    desc = "Faz o sorteio do amigo secreto online, grátis e sem registo. Cada pessoa recebe por email o seu link pessoal e descobre quem lhe saiu. Ninguém se tira a si próprio."
+    # Título e descrição focados em «amigo secreto online» + «sorteio» (seo, 28 nov, pedido do Diogo).
+    title = "Amigo secreto online: sorteio grátis por email | Sapatinho"
+    desc = "Sorteio do amigo secreto online, grátis e sem registo. Cada pessoa recebe por email o seu link, roda a roleta e descobre quem lhe saiu. Até 30 pessoas."
     graph = [ORG, WEBSITE,
              {"@type": "WebApplication", "@id": BASE + "/#app", "name": "Sapatinho", "url": BASE + "/criar",
               "description": "Sorteio de amigo secreto online, com convites e resultados enviados por email.",
@@ -394,6 +410,12 @@ def patch_home():
     h = re.sub(r'<p class="sub">.*?</p>',
                '<p class="sub">Faz o sorteio do amigo secreto online. Cada pessoa recebe por email o seu link pessoal e descobre quem lhe saiu. A página de quem organiza não mostra quem tirou quem.</p>',
                h, count=1, flags=re.S)
+    # Primeiro bloco abaixo do hero (seo, 28 nov, pedido do Diogo): responde a quem pesquisa «amigo secreto online» e
+    # «sorteio amigo secreto». Os três passos ficam iguais; entram uma frase de abertura e uma nota com o que se pode definir.
+    h = re.sub(r'<section id="como-funciona">.*?</section>', lambda m: HOW_SECTION, h, count=1, flags=re.S)
+    if ".how-lead,.how-note{" not in h:
+        h = h.replace(".section-h h2{font-size:clamp(1.9rem,4vw,2.6rem)}",
+                      ".section-h h2{font-size:clamp(1.9rem,4vw,2.6rem)}\n.how-lead,.how-note{color:var(--soft);max-width:62ch}\n.how-note{margin-top:22px}\n.how-note a{color:var(--paper)}", 1)
     # FAQ rebuilt from HOME_FAQ so it matches the structured data
     faq = email_off("\n".join(f"        <details{faq_id(q)}><summary>{html.escape(q)}</summary><p>{a}</p></details>" for q, a in HOME_FAQ))
     h = re.sub(r'<div class="faq">.*?</div>\n    </section>', '<div class="faq">\n' + faq + '\n      </div>\n    </section>', h, count=1, flags=re.S)
@@ -659,8 +681,11 @@ def build_exemplo():
     os.makedirs(f"{SITE}/exemplo", exist_ok=True)
     open(f"{SITE}/exemplo/index.html", "w").write(page_shell(h, main))
 
+# Data da última mudança de conteúdo da página inicial (28 nov: título, descrição, bloco «Como funciona» e 1 pergunta).
+HOME_MODIFIED = "2026-11-28"
+
 def write_sitemap():
-    urls = [("/", "1.0", "weekly", MODIFIED), ("/criar", "0.9", "monthly", PUBLISHED)]
+    urls = [("/", "1.0", "weekly", HOME_MODIFIED), ("/criar", "0.9", "monthly", PUBLISHED)]
     urls += [(f"/{p['slug']}/", "0.8", "monthly", p.get("modified", p.get("date", PUBLISHED))) for p in PAGES]
     urls += [("/guias/", "0.7", "monthly", MODIFIED), ("/privacidade/", "0.3", "yearly", PUBLISHED)]
     body = "\n".join(f"  <url><loc>{BASE}{u}</loc><lastmod>{lm}</lastmod><changefreq>{c}</changefreq><priority>{pr}</priority></url>" for u, pr, c, lm in urls)
